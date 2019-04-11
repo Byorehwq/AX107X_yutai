@@ -1,0 +1,1363 @@
+##############################################################################
+#                                                                            #
+# IAR 8051 C/C++ Compiler V7.20H/W32                   29/Jun/2018  19:55:13 #
+# Copyright 2004-2006 IAR Systems. All rights reserved.                      #
+#                                                                            #
+#    Core               =  plain                                             #
+#    Code model         =  near                                              #
+#    Data model         =  large                                             #
+#    Calling convention =  extended stack reentrant                          #
+#    Constant location  =  code                                              #
+#    Extended stack     =  enabled                                           #
+#    Dptr setup         =  1,16                                              #
+#    Source file        =  I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\user\user_io.c  #
+#    Command line       =  -I E:\software\8051\INC\ -I                       #
+#                          E:\software\8051\INC\CLIB\ -I                     #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\COMMON\ -I      #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\INC\ -I         #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\config\ -I      #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\api\ -I         #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\fm\ -I          #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\fat\ -I         #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\display\ -I     #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\display\theme_d #
+#                          efault\ -I I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073 #
+#                          A_宇泰_AX1071_xxxxxxxx_20180629_Merlin_1\app\disp #
+#                          lay\led\ -I I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC07 #
+#                          3A_宇泰_AX1071_xxxxxxxx_20180629_Merlin_1\app\dis #
+#                          play\lcd\ -I I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC0 #
+#                          73A_宇泰_AX1071_xxxxxxxx_20180629_Merlin_1\app\ta #
+#                          sk\ -I I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇 #
+#                          泰_AX1071_xxxxxxxx_20180629_Merlin_1\app\user\    #
+#                          -I I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_A #
+#                          X1071_xxxxxxxx_20180629_Merlin_1\app\mem\ -I      #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\module\ -I      #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\key\ -I         #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\startmusic\ -I  #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\spi\ -D         #
+#                          AX107X_TAG -lC I:\a_wangqun\宇泰_睡眠仪_KNP08\18B #
+#                          C073A_宇泰_AX1071_xxxxxxxx_20180629_Merlin_1\app\ #
+#                          Debug\List\ -o I:\a_wangqun\宇泰_睡眠仪_KNP08\18B #
+#                          C073A_宇泰_AX1071_xxxxxxxx_20180629_Merlin_1\app\ #
+#                          Debug\Obj\ -e -z9 --core=plain --dptr=16,1        #
+#                          --data_model=large --code_model=near              #
+#                          --calling_convention=ext_stack_reentrant          #
+#                          --place_constants=code --nr_virtual_regs 20       #
+#                          --extended_stack I:\a_wangqun\宇泰_睡眠仪_KNP08\1 #
+#                          8BC073A_宇泰_AX1071_xxxxxxxx_20180629_Merlin_1\ap #
+#                          p\user\user_io.c                                  #
+#    List file          =  I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\Debug\List\user #
+#                          _io.lst                                           #
+#    Object file        =  I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\Debug\Obj\user_ #
+#                          io.r51                                            #
+#                                                                            #
+#                                                                            #
+##############################################################################
+
+I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX1071_xxxxxxxx_20180629_Merlin_1\app\user\user_io.c
+      1          /*****************************************************************************
+      2           * Module    : User
+      3           * File      : user_io.c
+      4           * Author    : Hanny
+      5           * Email     : coldney@yahoo.com.cn
+      6           * Function  : 用户的IO设置，设备检测等
+      7           *****************************************************************************/
+      8          #include "include.h"
+
+   \                                 In segment SFR_AN, at 0x80
+   \   unsigned char volatile __sfr P0
+   \                     P0:
+   \   000000                DS 1
+
+   \                                 In segment SFR_AN, at 0xba
+   \   unsigned char volatile __sfr P0DIR
+   \                     P0DIR:
+   \   000000                DS 1
+
+   \                                 In segment SFR_AN, at 0xbb
+   \   unsigned char volatile __sfr P1DIR
+   \                     P1DIR:
+   \   000000                DS 1
+
+   \                                 In segment SFR_AN, at 0xbd
+   \   unsigned char volatile __sfr P3DIR
+   \                     P3DIR:
+   \   000000                DS 1
+
+   \                                 In segment SFR_AN, at 0xbe
+   \   unsigned char volatile __sfr P4DIR
+   \                     P4DIR:
+   \   000000                DS 1
+
+   \                                 In segment SFR_AN, at 0xc0
+   \   unsigned char volatile __sfr P4
+   \                     P4:
+   \   000000                DS 1
+      9          #include "task.h"
+     10          
+     11          extern void sd_init(void);
+     12          extern void usb_init(u8 host, u8 dev);
+     13          extern void usb_init_dev_only(u8 host, u8 dev);
+     14          extern void usb_init_std(u8 phy);
+     15          extern void usb_init_dev_only_std(u8 phy);
+
+   \                                 In segment XDATA_I, align 1, keep-with-next
+     16          bool SD_FLAG=1;
+   \                     SD_FLAG:
+   \   000000                DS 1
+   \   000001                REQUIRE `?<Initializer for SD_FLAG>`
+   \   000001                REQUIRE __INIT_XDATA_I
+     17          extern u8 t_pwn_duty1, t_pwn_duty2;   // Duty range from 0x00 to 0xFF
+     18          //IO初始化
+     19          #pragma location="USER_IO_SEG"
+
+   \                                 In segment USER_IO_SEG, align 1, keep-with-next
+     20          void port_init(void)
+   \                     port_init:
+     21          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     22          #if 0  //!USE_SD_CLK_DET
+     23          	//SD检测脚
+     24          	SD_CHECK_DIR |= BIT(SD_CHECK_PIN);  //设为输入
+     25          	SD_CHECK_PU |= BIT(SD_CHECK_PIN);   //上拉设置
+     26          #if SD_DOUBLE_EN
+     27          	//SD检测脚
+     28          	SD1_CHECK_DIR |= BIT(SD1_CHECK_PIN);	//设为输入
+     29          	SD1_CHECK_PU |= BIT(SD1_CHECK_PIN);	//上拉设置
+     30          #endif
+     31          #endif
+     32          	//sd_group_sel(DEVICE_SDMMC);
+     33          	//sd_init();
+     34          #if 0
+     35          #if ((USB_HOST_PHY == USB_DEV_PHY) || (USB_DET != USBDET_OTG))
+     36          #if (USB_DET == USBDET_DEV_ONLY)
+     37          	usb_init_dev_only_std(USB_DEV_PHY);
+     38          #else
+     39          	usb_init_std(USB_HOST_PHY);
+     40          #endif
+     41          #else
+     42          	usb_init(USB_HOST_PHY, USB_DEV_PHY);
+     43          #endif
+     44          #endif
+     45          #if (AUX_DET_EN && !USE_7P7S_LED_AUX_MUX)
+     46          	//LineIn检测
+     47          	AUX_CHECK_DIR |= BIT(AUX_CHECK_PIN);
+     48          	AUX_CHECK_PU |= BIT(AUX_CHECK_PIN);
+     49          #endif
+     50          #if MIC_DET_EN
+     51          	//Mic检测
+     52          	MIC_CHECK_DIR |= BIT(MIC_CHECK_PIN);
+     53          	MIC_CHECK_PU |= BIT(MIC_CHECK_PIN);
+     54          #endif
+     55          #if (HP_DET_EN && !USE_SDCLK_SDDET_PHONE_MUX && !USE_SDCMD_IICCLK_PHONE_MUX)
+     56          	//耳机检测
+     57          	HP_CHECK_DIR |= BIT(HP_CHECK_PIN);	// P01
+     58          	HP_CHECK_PU |= BIT(HP_CHECK_PIN);
+     59          	#if (DAC_BUF_EN)		//HPDECT(use vcmbuf)
+     60          		PIE0 &= ~(BIT(1));	//  Set P01 Digital input disable
+     61          	#endif
+     62          #endif
+     63          #if DCIN_DET_EN
+     64          	//DC检测
+     65          	DCIN_CHECK_DIR |= BIT(DCIN_CHECK_PIN);
+     66          #endif
+     67          
+     68          #if (MUTE_TYPE != MUTE_NO)
+     69          	MUTE_DIR &= ~BIT(MUTE_PIN);     //MUTE控制，开MUTE   由P11改为P00
+   \   000000   53BAFE       ANL     0xba,#0xfe
+     70          	EN_MUTE();
+   \   000003   43BA01       ORL     0xba,#0x1
+     71          #endif
+     72          
+     73          #if PA_MODE_SEL_EN
+     74          	PA_MODE_DIR &= ~BIT(PA_MODE_PIN);
+     75          	PA_MODE_PORT &= ~BIT(PA_MODE_PIN);   //选择AB类功放
+     76          #endif
+     77          
+     78          	P0DIR |= (BIT(1) | BIT(2));						// P01: A1  P02: B1
+   \   000006   43BA06       ORL     0xba,#0x6
+   \   000009   E5BA         MOV     A,0xba
+     79          	PUP0 |= (BIT(1) | BIT(2));
+   \   00000B   903010       MOV     DPTR,#0x3010
+   \   00000E   E0           MOVX    A,@DPTR
+   \   00000F   4406         ORL     A,#0x6
+   \   000011   F0           MOVX    @DPTR,A
+     80          	
+     81          	P1DIR |= (BIT(0) | BIT(1) | BIT(2) | BIT(3));	// P10: A2  P11: B2     P12: A3  P13: B3
+   \   000012   43BB0F       ORL     0xbb,#0xf
+   \   000015   E5BB         MOV     A,0xbb
+     82          	PUP1 |= (BIT(0) | BIT(1) | BIT(2) | BIT(3));
+   \   000017   903011       MOV     DPTR,#0x3011
+   \   00001A   E0           MOVX    A,@DPTR
+   \   00001B   440F         ORL     A,#0xf
+   \   00001D   F0           MOVX    @DPTR,A
+     83          
+     84          
+     85          	LED0_DIR &= ~(BIT(LED0_PIN));					// P04 P05  LED显示
+   \   00001E   53BADF       ANL     0xba,#0xdf
+     86          	LED0_PORT &= ~(BIT(LED0_PIN));
+   \   000021   C285         CLR     0x80.5
+     87          	
+     88          	LED1_DIR &= ~(BIT(LED1_PIN));
+   \   000023   53BAEF       ANL     0xba,#0xef
+     89          	LED1_PORT &= ~(BIT(LED1_PIN));
+   \   000026   C284         CLR     0x80.4
+     90          	t_pwn_duty1 = LED_LIGHT2;								// 初始化亮度  0xAA中等亮度
+   \   000028   747F         MOV     A,#0x7f
+   \   00002A   90....       MOV     DPTR,#t_pwn_duty1
+   \   00002D   F0           MOVX    @DPTR,A
+     91          	t_pwn_duty2 = LED_LIGHT2;
+   \   00002E   90....       MOV     DPTR,#t_pwn_duty2
+   \   000031   F0           MOVX    @DPTR,A
+     92          	
+     93          #if TASK_FLASH_EN
+     94          	spi_port_init();
+   \   000032                ; Setup parameters for call to function spi_port_init
+   \   000032   12....       LCALL   spi_port_init
+     95          #endif
+     96          }
+   \   000035   22           RET
+     97          
+     98          #pragma location="SD_SEG"
+
+   \                                 In segment SD_SEG, align 1, keep-with-next
+     99          void sd_group_sel(u8 sd_group)
+   \                     sd_group_sel:
+    100          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    101          	if(sd_group == DEVICE_SDMMC)
+   \   000000   E9           MOV     A,R1
+   \   000001   6005         JZ      ??sd_group_sel_0
+    102          	{
+    103          		SD_PORT_SEL();
+    104          	}
+    105          	else if(sd_group == DEVICE_SDMMC1)
+   \   000003   7401         MOV     A,#0x1
+   \   000005   69           XRL     A,R1
+   \   000006   7003         JNZ     ??CrossCallReturnLabel_0
+    106          	{
+    107          		SD1_PORT_SEL();
+   \                     ??sd_group_sel_0:
+   \   000008   12....       LCALL   ?Subroutine0
+    108          	}
+    109          	sd_chk.group = sd_group;
+   \                     ??CrossCallReturnLabel_0:
+   \   00000B   E9           MOV     A,R1
+   \   00000C   90....       MOV     DPTR,#sd_chk
+   \   00000F   F0           MOVX    @DPTR,A
+    110          	//printf("sd group:%d\n",sd_chk.group);
+    111          }
+   \   000010   22           RET
+
+   \                                 In segment SD_SEG, align 1, keep-with-next
+   \                     ?Subroutine0:
+   \   000000   903057       MOV     DPTR,#0x3057
+   \   000003   E0           MOVX    A,@DPTR
+   \   000004   D2E0         SETB    0xE0 /* A   */.0
+   \   000006   F0           MOVX    @DPTR,A
+   \   000007   903056       MOV     DPTR,#0x3056
+   \   00000A   E0           MOVX    A,@DPTR
+   \   00000B   D2E7         SETB    0xE0 /* A   */.7
+   \   00000D   F0           MOVX    @DPTR,A
+   \   00000E   E0           MOVX    A,@DPTR
+   \   00000F   C2E6         CLR     0xE0 /* A   */.6
+   \   000011   F0           MOVX    @DPTR,A
+   \   000012   22           RET
+    112          
+    113          //SD PORT初始化
+    114          #if SD_DOUBLE_EN
+    115          #pragma location="SD_SEG"
+    116          void sd_port_init(u8 type)
+    117          {
+    118          	SD_CMD_DIR |= BIT(SD_CMD_PIN);              //CMD
+    119          	SD_DAT0_DIR |= BIT(SD_DAT0_PIN);            //DAT0
+    120          	SD_DAT0_PU |= BIT(SD_DAT0_PIN);             //DAT0上拉
+    121          #if (USE_SDCMD_IICCLK_MIC_MUX || USE_SDCMD_IICCLK_PHONE_MUX)
+    122          	SD_CMD_PU500R_EN();                         //CMD开上拉500R
+    123          #else
+    124          	SD_CMD_PU |= BIT(SD_CMD_PIN);               //CMD上拉10K
+    125          #endif
+    126          
+    127          	SD1_CMD_DIR |= BIT(SD1_CMD_PIN);            //SD1 CMD
+    128          	SD1_DAT0_DIR |= BIT(SD1_DAT0_PIN);          //SD1 DAT0
+    129          	SD1_DAT0_PU |= BIT(SD1_DAT0_PIN);           //SD1 DAT0上拉
+    130          	SD1_CMD_PU |= BIT(SD1_CMD_PIN);             //SD1 CMD上拉10K
+    131          
+    132          #if !USE_SD_CLK_DET
+    133          	SD_CLK_DIR &= ~BIT(SD_CLK_PIN);             //CLK输出
+    134          	SD1_CLK_DIR &= ~BIT(SD1_CLK_PIN);           //SD1 CLK输出
+    135          #else
+    136          	if(sd_chk.group == DEVICE_SDMMC)
+    137          	{
+    138          		if((type == 1)
+    139          #if (/*(!USE_SDCLK_SDDET_PHONE_MUX)&&*/(!USE_SDCMD_IICCLK_PHONE_MUX)&&(!USE_SDCMD_IICCLK_MIC_MUX))
+    140          		        || (type == 3)
+    141          #endif
+    142          		  )
+    143          		{
+    144          			SD_CLK_PU &= ~BIT(SD_CLK_PIN);          //关闭上拉
+    145          			SD_CLK_DIR &= ~BIT(SD_CLK_PIN);         //CLK用于时钟输出
+    146          		}
+    147          		else
+    148          		{
+    149          			SD_CLK_DIR |= BIT(SD_CLK_PIN);          //CLK用于SD0卡检测
+    150          #if !USE_SDCLK_SDDET_PHONE_MUX  //SD0 CLK、SD检测、耳机检测复用，使用外部10K上拉电阻
+    151          			SD_CLK_PU |= BIT(SD_CLK_PIN);           //打开上拉
+    152          #endif
+    153          		}
+    154          		SD1_CLK_DIR |= BIT(SD1_CLK_PIN);            //CLK用于SD1卡检测
+    155          		SD1_CLK_PU |= BIT(SD1_CLK_PIN);             //打开上拉
+    156          	}
+    157          	else if(sd_chk.group == DEVICE_SDMMC1)
+    158          	{
+    159          		if((type == 1)
+    160          #if (/*(!USE_SDCLK_SDDET_PHONE_MUX)&&*/(!USE_SDCMD_IICCLK_PHONE_MUX)&&(!USE_SDCMD_IICCLK_MIC_MUX))
+    161          		        || (type == 3)
+    162          #endif
+    163          		  )
+    164          		{
+    165          			SD1_CLK_PU &= ~BIT(SD1_CLK_PIN);        //关闭上拉
+    166          			SD1_CLK_DIR &= ~BIT(SD1_CLK_PIN);       //CLK用于时钟输出
+    167          		}
+    168          		else
+    169          		{
+    170          			SD1_CLK_DIR |= BIT(SD1_CLK_PIN);        //CLK用于SD1卡检测
+    171          			SD1_CLK_PU |= BIT(SD1_CLK_PIN);         //打开上拉
+    172          		}
+    173          		SD_CLK_DIR |= BIT(SD_CLK_PIN);              //CLK用于SD0卡检测
+    174          #if !USE_SDCLK_SDDET_PHONE_MUX  //SD0 CLK、SD检测、耳机检测复用，使用外部10K上拉电阻
+    175          		SD_CLK_PU |= BIT(SD_CLK_PIN);               //打开上拉
+    176          #endif
+    177          	}
+    178          #endif
+    179          }
+    180          
+    181          #else
+    182          //SD PORT初始化
+    183          #pragma location="SD_SEG"
+
+   \                                 In segment SD_SEG, align 1, keep-with-next
+    184          void sd_port_init(u8 type)
+   \                     sd_port_init:
+    185          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    186          	SD_PORT_SEL();
+   \   000000   12....       LCALL   ?Subroutine0
+    187          
+    188          	SD_CMD_DIR |= BIT(SD_CMD_PIN);              //CMD
+   \                     ??CrossCallReturnLabel_1:
+   \   000003   43BB80       ORL     0xbb,#0x80
+    189          	SD_DAT0_DIR |= BIT(SD_DAT0_PIN);            //DAT0
+   \   000006   43BE08       ORL     0xbe,#0x8
+    190          	SD_DAT0_PU |= BIT(SD_DAT0_PIN);             //DAT0上拉
+   \   000009   903014       MOV     DPTR,#0x3014
+   \   00000C   E0           MOVX    A,@DPTR
+   \   00000D   D2E3         SETB    0xE0 /* A   */.3
+   \   00000F   F0           MOVX    @DPTR,A
+    191          #if (USE_SDCMD_IICCLK_MIC_MUX || USE_SDCMD_IICCLK_PHONE_MUX || USE_SDCMD_IICCLK_SDDET_MUX)
+    192          	SD_CMD_PU500R_EN();                         //CMD开上拉500R
+    193          #else
+    194          	SD_CMD_PU |= BIT(SD_CMD_PIN);               //CMD上拉10K
+   \   000010   903011       MOV     DPTR,#0x3011
+   \   000013   E0           MOVX    A,@DPTR
+   \   000014   D2E7         SETB    0xE0 /* A   */.7
+   \   000016   F0           MOVX    @DPTR,A
+    195          #endif
+    196          
+    197          #if !USE_SD_CLK_DET
+    198          	SD_CLK_DIR &= ~BIT(SD_CLK_PIN);             //CLK输出
+   \   000017   53BEFB       ANL     0xbe,#0xfb
+    199          	SD1_CLK_DIR &= ~BIT(SD1_CLK_PIN);           //SD1 CLK输出
+   \   00001A   53BEFB       ANL     0xbe,#0xfb
+    200          #else
+    201          	if((type == 1)
+    202          #if (/*(!USE_SDCLK_SDDET_PHONE_MUX)&&*/(!USE_SDCMD_IICCLK_PHONE_MUX)&&(!USE_SDCMD_IICCLK_MIC_MUX)&&(!USE_SDCMD_IICCLK_SDDET_MUX))
+    203          	        || (type == 3)
+    204          #endif
+    205          	  )
+    206          	{
+    207          		SD_CLK_PU &= ~BIT(SD_CLK_PIN);          //关闭上拉
+    208          		SD_CLK_DIR &= ~BIT(SD_CLK_PIN);         //CLK用于时钟输出
+    209          	}
+    210          	else
+    211          	{
+    212          		SD_CLK_DIR |= BIT(SD_CLK_PIN);          //CLK用于SD卡检测
+    213          #if !USE_SDCLK_SDDET_PHONE_MUX  //SD CLK、SD检测、耳机检测复用，使用外部10K上拉电阻
+    214          		SD_CLK_PU |= BIT(SD_CLK_PIN);           //打开上拉
+    215          #endif
+    216          	}
+    217          #endif
+    218          }
+   \   00001D   22           RET
+    219          #endif /*END SD_DOUBLE_EN*/
+    220          
+    221          //SD检测, 外接 SD卡
+    222          #pragma location="SD_SEG"
+
+   \                                 In segment SD_SEG, align 1, keep-with-next
+    223          void sd_detect(void)
+   \                     sd_detect:
+    224          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    225          #if USE_SDCLK_SDDET_PHONE_MUX  //SD CLK、SD检测、耳机检测复用，使用外部10K上拉电阻
+    226          	if(0 == (SD_CHECK_DIR & BIT(SD_CHECK_PIN)))
+    227          	{
+    228          		return;   //IO输出状态
+    229          	}
+    230          
+    231          	if((scan_ctl.sddect_val < 115)
+    232          	        || ((scan_ctl.sddect_val > 145) && (scan_ctl.sddect_val < 190)))
+    233          	{
+    234          #else
+    235          
+    236          #if USE_SDCMD_IICCLK_SDDET_MUX
+    237          	if(!(sd_port_sta()))
+    238          	{
+    239          		return;
+    240          	}
+    241          	SD_CMD_PU |= BIT(SD_CMD_PIN);           //CMD开上拉10K
+    242          	SD_CMD_PU500R_DIS();                    //CMD关上拉500R
+    243          	asm("nop");
+    244          	asm("nop");
+    245          	asm("nop");
+    246          	asm("nop");
+    247          	asm("nop");
+    248          	asm("nop");
+    249          	asm("nop");
+    250          	asm("nop");
+    251          #else
+    252          	if(0 == (SD_CHECK_PU & BIT(SD_CHECK_PIN)))
+   \   000000   903014       MOV     DPTR,#0x3014
+   \   000003   E0           MOVX    A,@DPTR
+   \   000004   A2E2         MOV     C,0xE0 /* A   */.2
+   \   000006   502C         JNC     ??sd_detect_0
+    253          	{
+    254          		return;
+    255          	}
+    256          #endif
+    257          	if(0==(SD_CHECK_PORT & BIT(SD_CHECK_PIN)))// SD_FLAG)       //SD卡插入检测IO会被拉低
+   \   000008   A2C2         MOV     C,0xc0.2
+   \   00000A   7900         MOV     R1,#0x0
+   \   00000C   4012         JC      ??sd_detect_1
+    258          	{
+    259          #endif
+    260          		if(device_insert(DEVICE_SDMMC))
+   \   00000E                ; Setup parameters for call to function device_insert
+   \   00000E   12....       LCALL   device_insert
+   \   000011   5021         JNC     ??sd_detect_0
+    261          		{
+    262          			b_sys.dev_change = 1; 
+   \   000013   D2..         SETB    b_sys.0
+    263          			sd_insert();
+   \   000015                ; Setup parameters for call to function sd_insert
+   \   000015   12....       LCALL   sd_insert
+    264          			printf("SD0 IN\n");
+   \   000018                ; Setup parameters for call to function my_printf
+   \   000018   7A..         MOV     R2,#(`?<Constant "SD0 IN\\n">` & 0xff)
+   \   00001A   7B..         MOV     R3,#((`?<Constant "SD0 IN\\n">` >> 8) & 0xff)
+   \   00001C   12....       LCALL   my_printf
+   \   00001F   22           RET
+    265          		}
+    266          	}
+    267          	else
+    268          	{
+    269          		if(device_remove(DEVICE_SDMMC))
+   \                     ??sd_detect_1:
+   \   000020                ; Setup parameters for call to function device_remove
+   \   000020   12....       LCALL   device_remove
+   \   000023   500F         JNC     ??sd_detect_0
+    270          		{
+    271          			if(fs_cur_dev() == DEVICE_SDMMC)
+   \   000025                ; Setup parameters for call to function fs_cur_dev
+   \   000025   12....       LCALL   fs_cur_dev
+   \   000028   E9           MOV     A,R1
+   \   000029   7002         JNZ     ??sd_detect_2
+    272          			{
+    273          				b_sys.dev_change = 1;
+   \   00002B   D2..         SETB    b_sys.0
+    274          			}
+    275          			//sd_remove();
+    276          			printf("SD0 OUT\n");
+   \                     ??sd_detect_2:
+   \   00002D                ; Setup parameters for call to function my_printf
+   \   00002D   7A..         MOV     R2,#(`?<Constant "SD0 OUT\\n">` & 0xff)
+   \   00002F   7B..         MOV     R3,#((`?<Constant "SD0 OUT\\n">` >> 8) & 0xff)
+   \   000031   12....       LCALL   my_printf
+   \                     ??sd_detect_0:
+   \   000034   22           RET
+    277          		}
+    278          	}
+    279          
+    280          #if USE_SDCMD_IICCLK_SDDET_MUX
+    281          	SD_CMD_PU &= ~BIT(SD_CMD_PIN);          //CMD关上拉10K
+    282          	SD_CMD_PU500R_EN();                     //CMD开上拉500R
+    283          #endif
+    284          }
+    285          
+    286          // 内接 SD卡, 如果使用内接SPI-Flash时, 将停用内接 SD卡的侦测
+
+   \                                 In segment NEAR_CODE, align 1, keep-with-next
+    287          void sd1_detect(void)
+   \                     sd1_detect:
+    288          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    289          	if(u_spi.spi_online)
+   \   000000   90....       MOV     DPTR,#(u_spi + 1)
+   \   000003   E0           MOVX    A,@DPTR
+   \   000004   7036         JNZ     ??sd1_detect_0
+    290          	{
+    291          		return;
+    292          	}
+    293          	if(0 == (SD1_CHECK_PU & BIT(SD1_CHECK_PIN)))
+   \   000006   903014       MOV     DPTR,#0x3014
+   \   000009   E0           MOVX    A,@DPTR
+   \   00000A   A2E2         MOV     C,0xE0 /* A   */.2
+   \   00000C   502E         JNC     ??sd1_detect_0
+    294          	{
+    295          		return;
+    296          	}
+    297          	if(!(SD1_CHECK_PORT & BIT(SD1_CHECK_PIN)))        //SD卡插入检测IO会被拉低
+   \   00000E   A2C2         MOV     C,0xc0.2
+   \   000010   7901         MOV     R1,#0x1
+   \   000012   4012         JC      ??sd1_detect_1
+    298          	{
+    299          		if(device_insert(DEVICE_SDMMC1))
+   \   000014                ; Setup parameters for call to function device_insert
+   \   000014   12....       LCALL   device_insert
+   \   000017   5023         JNC     ??sd1_detect_0
+    300          		{
+    301          			b_sys.dev_change = 1;
+   \   000019   D2..         SETB    b_sys.0
+    302          			sd_insert();
+   \   00001B                ; Setup parameters for call to function sd_insert
+   \   00001B   12....       LCALL   sd_insert
+    303          			printf("SD1 IN\n");
+   \   00001E                ; Setup parameters for call to function my_printf
+   \   00001E   7A..         MOV     R2,#(`?<Constant "SD1 IN\\n">` & 0xff)
+   \   000020   7B..         MOV     R3,#((`?<Constant "SD1 IN\\n">` >> 8) & 0xff)
+   \   000022   12....       LCALL   my_printf
+   \   000025   22           RET
+    304          		}
+    305          	}
+    306          	else
+    307          	{
+    308          		if(device_remove(DEVICE_SDMMC1))
+   \                     ??sd1_detect_1:
+   \   000026                ; Setup parameters for call to function device_remove
+   \   000026   12....       LCALL   device_remove
+   \   000029   5011         JNC     ??sd1_detect_0
+    309          		{
+    310          			if(fs_cur_dev() == DEVICE_SDMMC1)
+   \   00002B                ; Setup parameters for call to function fs_cur_dev
+   \   00002B   12....       LCALL   fs_cur_dev
+   \   00002E   E9           MOV     A,R1
+   \   00002F   6401         XRL     A,#0x1
+   \   000031   7002         JNZ     ??sd1_detect_2
+    311          			{
+    312          				b_sys.dev_change = 1;
+   \   000033   D2..         SETB    b_sys.0
+    313          			}
+    314          			printf("SD1 OUT\n");
+   \                     ??sd1_detect_2:
+   \   000035                ; Setup parameters for call to function my_printf
+   \   000035   7A..         MOV     R2,#(`?<Constant "SD1 OUT\\n">` & 0xff)
+   \   000037   7B..         MOV     R3,#((`?<Constant "SD1 OUT\\n">` >> 8) & 0xff)
+   \   000039   12....       LCALL   my_printf
+   \                     ??sd1_detect_0:
+   \   00003C   22           RET
+    315          		}
+    316          	}
+    317          }
+    318          
+    319          //sddect的I/O状态
+    320          #pragma location="SD_SEG"
+
+   \                                 In segment SD_SEG, align 1, keep-with-next
+    321          bool sd_port_sta(void)
+   \                     sd_port_sta:
+    322          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    323          	if(0 == (SD_CHECK_DIR & BIT(SD_CHECK_PIN)))
+   \   000000   E5BE         MOV     A,0xbe
+   \   000002   A2E2         MOV     C,0xE0 /* A   */.2
+   \   000004   4002         JC      ??sd_port_sta_0
+    324          	{
+    325          		return 0;   //IO输出状态
+   \   000006   C3           CLR     C
+   \   000007   22           RET
+    326          	}
+    327          	else
+    328          	{
+    329          		return 1;   //IO输入状态
+   \                     ??sd_port_sta_0:
+   \   000008   D3           SETB    C
+   \   000009   22           RET
+    330          	}
+    331          }
+    332          
+    333          //USB检测函数
+    334          #pragma location="USER_IO_SEG"
+
+   \                                 In segment USER_IO_SEG, align 1, keep-with-next
+    335          void usb_detect(void)
+   \                     usb_detect:
+    336          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    337          #if UDISK_DOUBLE_EN
+    338          	asm("push 0xdc");//USBCON1
+    339          	u8 usb_conn;
+    340          	for(u8 i = 0; i < 2; i++)        //检测PHY0,PHY1上的主从设备
+    341          	{
+    342          		usb_conn = usb_connected(i);
+    343          #if (!UDISK_DOUBLE_EN)
+    344          		if(USB_HOST_PHY == i)       //单UDISK功能
+    345          #endif
+    346          		{
+    347          			if(USB_CONNECTED_UDISK == usb_conn)
+    348          			{
+    349          				if(device_insert(DEVICE_UDISK + i))
+    350          				{
+    351          					b_sys.dev_change = 1;
+    352          					printf("UDISK[%d] IN\n",i);
+    353          				}
+    354          			}
+    355          			else
+    356          			{
+    357          				if(device_remove(DEVICE_UDISK + i))
+    358          				{
+    359          					if(fs_cur_dev() == DEVICE_UDISK+i)
+    360          					{
+    361          						b_sys.dev_change = 1;
+    362          					}
+    363          					printf("UDISK[%d] OUT\n",i);
+    364          				}
+    365          			}
+    366          		}
+    367          
+    368          #if TASK_USBDEV_EN
+    369          		if(USB_DEV_PHY == i)                    //指定一组作为DEVICE
+    370          		{
+    371          			//printf("usb_conn:%d  ",usb_conn);
+    372          			if(USB_CONNECTED_PC == usb_conn)
+    373          			{
+    374          				if(device_insert(DEVICE_PC))
+    375          				{
+    376          					printf("PC IN\n");
+    377          				}
+    378          			}
+    379          			else
+    380          			{
+    381          				if(device_remove(DEVICE_PC))
+    382          				{
+    383          					printf("PC OUT\n");
+    384          				}
+    385          			}
+    386          		}
+    387          #endif
+    388          	}
+    389          
+    390          
+    391          	asm("pop 0xdc");
+    392          #else
+    393          #if ((USB_HOST_PHY == USB_DEV_PHY) || (USB_DET != USBDET_OTG))
+    394          	asm("push 0xdc");//USBCON1
+   \   000000   C0DC         push 0xdc
+    395          	u8 usb_conn = usb_connected(USB_HOST_PHY);
+    396          
+    397          #if (USB_DET != USBDET_DEV_ONLY)
+    398          	if(USB_CONNECTED_UDISK == usb_conn)
+   \   000002                ; Setup parameters for call to function usb_connected
+   \   000002   7901         MOV     R1,#0x1
+   \   000004   12....       LCALL   usb_connected
+   \   000007   E9           MOV     A,R1
+   \   000008   6402         XRL     A,#0x2
+   \   00000A   7902         MOV     R1,#0x2
+   \   00000C   7009         JNZ     ??usb_detect_0
+    399          	{
+    400          		if(device_insert(DEVICE_UDISK))
+   \   00000E                ; Setup parameters for call to function device_insert
+   \   00000E   12....       LCALL   device_insert
+   \   000011   5011         JNC     ??usb_detect_1
+    401          		{
+    402          			b_sys.dev_change = 1;
+   \                     ??usb_detect_2:
+   \   000013   D2..         SETB    b_sys.0
+   \   000015   800D         SJMP    ??usb_detect_1
+    403          			//printf("UDISK IN\n");
+    404          		}
+    405          	}
+    406          	else
+    407          	{
+    408          		if(device_remove(DEVICE_UDISK))
+   \                     ??usb_detect_0:
+   \   000017                ; Setup parameters for call to function device_remove
+   \   000017   12....       LCALL   device_remove
+   \   00001A   5008         JNC     ??usb_detect_1
+    409          		{
+    410          			if(fs_cur_dev() == DEVICE_UDISK)
+   \   00001C                ; Setup parameters for call to function fs_cur_dev
+   \   00001C   12....       LCALL   fs_cur_dev
+   \   00001F   E9           MOV     A,R1
+   \   000020   6402         XRL     A,#0x2
+   \   000022   60EF         JZ      ??usb_detect_2
+    411          			{
+    412          				b_sys.dev_change = 1;
+    413          			}
+    414          			//printf("UDISK OUT\n");
+    415          		}
+    416          	}
+    417          #endif
+    418          #if TASK_USBDEV_EN
+    419          	if(USB_CONNECTED_PC == usb_conn)
+    420          	{
+    421          		if(device_insert(DEVICE_PC))
+    422          		{
+    423          			printf("PC IN\n");
+    424          		}
+    425          	}
+    426          	else
+    427          	{
+    428          		if(device_remove(DEVICE_PC))
+    429          		{
+    430          			printf("PC OUT\n");
+    431          		}
+    432          	}
+    433          #endif
+    434          #else
+    435          	//USB DEVICE与HOST用的PHY不同
+    436          	u8 usb_conn = usb_connected(USB_DEV_PHY);
+    437          #if TASK_USBDEV_EN
+    438          	if(USB_CONNECTED_PC == usb_conn)
+    439          	{
+    440          		if(device_insert(DEVICE_PC))
+    441          		{
+    442          			printf("PC IN\n");
+    443          		}
+    444          	}
+    445          	else
+    446          	{
+    447          		if(device_remove(DEVICE_PC))
+    448          		{
+    449          			printf("PC OUT\n");
+    450          		}
+    451          	}
+    452          #endif
+    453          	usb_conn = usb_connected(USB_HOST_PHY);
+    454          	if(USB_CONNECTED_UDISK == usb_conn)
+    455          	{
+    456          		if(device_insert(DEVICE_UDISK))
+    457          		{
+    458          			b_sys.dev_change = 1;
+    459          			//printf("UDISK IN\n");
+    460          		}
+    461          	}
+    462          	else
+    463          	{
+    464          		if(device_remove(DEVICE_UDISK))
+    465          		{
+    466          			if(fs_cur_dev() == DEVICE_UDISK)
+    467          			{
+    468          				b_sys.dev_change = 1;
+    469          			}
+    470          			//printf("UDISK OUT\n");
+    471          		}
+    472          	}
+    473          #endif
+    474          	asm("pop 0xdc");
+   \                     ??usb_detect_1:
+   \   000024   D0DC         pop 0xdc
+    475          #endif
+    476          }
+   \   000026   22           RET
+    477          
+    478          #if AUX_DET_EN
+    479          //LineIn检测函数
+    480          #pragma location="USER_IO_SEG"
+    481          void aux_detect(void)
+    482          {
+    483          	if(!(AUX_CHECK_PORT & BIT(AUX_CHECK_PIN)))
+    484          	{
+    485          		if(device_insert(DEVICE_LINEIN))
+    486          		{
+    487          			//printf("AUX IN\n");
+    488          		}
+    489          	}
+    490          	else
+    491          	{
+    492          		if(device_remove(DEVICE_LINEIN))
+    493          		{
+    494          			//printf("AUX OUT\n");
+    495          		}
+    496          	}
+    497          }
+    498          #endif
+    499          
+    500          #if MIC_DET_EN
+    501          //Mic检测函数
+    502          #pragma location="USER_IO_SEG"
+    503          void mic_detect(void)
+    504          {
+    505          #if USE_SDCMD_IICCLK_MIC_MUX
+    506          	if(!(sd_port_sta()))
+    507          	{
+    508          		return;
+    509          	}
+    510          	SD_CMD_PU |= BIT(SD_CMD_PIN);           //CMD开上拉10K
+    511          	SD_CMD_PU500R_DIS();                    //CMD关上拉500R
+    512          	asm("nop");
+    513          	asm("nop");
+    514          	asm("nop");
+    515          	asm("nop");
+    516          	asm("nop");
+    517          	asm("nop");
+    518          	asm("nop");
+    519          	asm("nop");
+    520          
+    521          #else
+    522          	if((0 == (MIC_CHECK_PU & BIT(MIC_CHECK_PIN)))
+    523          	        || (0 == (MIC_CHECK_DIR & BIT(MIC_CHECK_PIN))))
+    524          	{
+    525          		return;
+    526          	}
+    527          #endif
+    528          
+    529          	if(!(MIC_CHECK_PORT & BIT(MIC_CHECK_PIN)))
+    530          	{
+    531          		if(device_insert(DEVICE_MIC))
+    532          		{
+    533          			//printf("MIC IN\n");
+    534          		}
+    535          	}
+    536          	else
+    537          	{
+    538          		if(device_remove(DEVICE_MIC))
+    539          		{
+    540          			//printf("MIC OUT\n");
+    541          		}
+    542          	}
+    543          
+    544          #if USE_SDCMD_IICCLK_MIC_MUX
+    545          	SD_CMD_PU &= ~BIT(SD_CMD_PIN);          //CMD关上拉10K
+    546          	SD_CMD_PU500R_EN();                     //CMD开上拉500R
+    547          #endif
+    548          }
+    549          #endif
+    550          
+    551          #if HP_DET_EN
+    552          //Headphone检测函数
+    553          #pragma location="USER_IO_SEG"
+    554          void headphone_detect(void)
+    555          {
+    556          #if USE_SDCLK_SDDET_PHONE_MUX               //SD CLK、SD检测、耳机检测复用
+    557          	if(0 == (SD_CHECK_DIR & BIT(SD_CHECK_PIN)))
+    558          	{
+    559          		return;   //IO输出状态
+    560          	}
+    561          
+    562          	if(scan_ctl.sddect_val < 145)
+    563          
+    564          //#elif DAC_BUF_EN             //使用VCM BUF时ADC检测，开内部上拉10K
+    565          #elif DAC_BUF_EN             //使用VCM BUF时ADC检测，开内部上拉10K
+    566          
+    567          	if(scan_ctl.hpdect_val < 200)
+    568          
+    569          #else
+    570          #if USE_SDCMD_IICCLK_PHONE_MUX              //复用SDCMD/IICCLK进行耳机检测
+    571          	if(!(sd_port_sta()))
+    572          	{
+    573          		return;
+    574          	}
+    575          	SD_CMD_PU |= BIT(SD_CMD_PIN);           //CMD开上拉10K
+    576          	SD_CMD_PU500R_DIS();                    //CMD关上拉500R
+    577          	asm("nop");
+    578          	asm("nop");
+    579          	asm("nop");
+    580          	asm("nop");
+    581          	asm("nop");
+    582          	asm("nop");
+    583          	asm("nop");
+    584          	asm("nop");
+    585          #endif
+    586          	if((HP_CHECK_PORT & BIT(HP_CHECK_PIN)))
+    587          #endif
+    588          	{
+    589          		if(device_insert(DEVICE_HP))
+    590          		{
+    591          			printf("HP IN\n");
+    592          		}
+    593          		//mute_enable();
+    594          		MUTE_EN();
+    595          	}
+    596          	else
+    597          	{
+    598          		if(device_remove(DEVICE_HP))
+    599          		{
+    600          			printf("HP OUT\n");
+    601          			//mute_disable();
+    602          			if(sys_ctl.volume !=0)
+    603          				UN_MUTE();
+    604          		}
+    605          	}
+    606          
+    607          #if USE_SDCMD_IICCLK_PHONE_MUX
+    608          	SD_CMD_PU &= ~BIT(SD_CMD_PIN);          //CMD关上拉10K
+    609          	SD_CMD_PU500R_EN();                     //CMD开上拉500R
+    610          #endif
+    611          
+    612          #if 0
+    613          #if (MUTE_TYPE != MUTE_NO)
+    614          	if(device_is_online(DEVICE_HP))
+    615          	{
+    616          		MUTE_EN();
+    617          	}
+    618          	else if(device_remove(DEVICE_HP))
+    619          	{
+    620          		if((!b_dac.mute_en)
+    621          #if DAC_POWER_SPEED
+    622          		        && (dac_init_ctl.sta == DAC_INIT_END)
+    623          #endif
+    624          		  )
+    625          		{
+    626          			UN_MUTE();
+    627          		}
+    628          	}
+    629          #endif
+    630          #endif
+    631          }
+    632          #endif
+    633          
+    634          #if DCIN_DET_EN
+    635          //dcin检测函数
+    636          #pragma location="USER_IO_SEG"
+    637          void dcin_detect(void)
+    638          {
+    639          	static u8 cnt_in = 0,cnt_out = 0;
+    640          	if((DCIN_CHECK_PORT & BIT(DCIN_CHECK_PIN)))
+    641          	{
+    642          		cnt_out = 0;
+    643          		if(cnt_in < 20)
+    644          		{
+    645          			cnt_in++;
+    646          			poweroff_ctl.dc_in_sta = DC_UNSTABLE;
+    647          		}
+    648          		else if(cnt_in == 20)
+    649          		{
+    650          			cnt_in = 30;
+    651          			poweroff_ctl.dc_in_sta = DC_IN;
+    652          			printf("dc in...\n");
+    653          		}
+    654          	}
+    655          	else
+    656          	{
+    657          		cnt_in = 0;
+    658          		if(cnt_out < 20)
+    659          		{
+    660          			cnt_out++;
+    661          			poweroff_ctl.dc_in_sta = DC_UNSTABLE;
+    662          		}
+    663          		else if(cnt_out == 20)
+    664          		{
+    665          			cnt_out = 30;
+    666          			poweroff_ctl.dc_in_sta = DC_OUT;
+    667          			printf("dc out...\n");
+    668          		}
+    669          	}
+    670          }
+    671          #endif
+    672          
+    673          #pragma location="USER_IO_SEG"
+
+   \                                 In segment USER_IO_SEG, align 1, keep-with-next
+    674          void mute_init(void)
+   \                     mute_init:
+    675          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    676          	MUTE_PORT_OUTPUT;
+   \   000000   53BAFE       ANL     0xba,#0xfe
+    677          	EN_MUTE();
+   \   000003   43BA01       ORL     0xba,#0x1
+    678          }
+   \   000006   22           RET
+    679          
+    680          
+    681          //开MUTE函数, 停止声音输出
+    682          #pragma location="USER_IO_SEG"
+
+   \                                 In segment USER_IO_SEG, align 1, keep-with-next
+    683          void MUTE_EN(void)
+   \                     MUTE_EN:
+    684          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    685          #if (MUTE_TYPE != MUTE_NO)
+    686          	EN_MUTE();
+   \   000000   43BA01       ORL     0xba,#0x1
+    687          #endif
+    688          	//printf("mute\n");
+    689          }
+   \   000003   22           RET
+    690          
+    691          
+    692          //关MUTE函数, 输出声音
+    693          #pragma location="USER_IO_SEG"
+
+   \                                 In segment USER_IO_SEG, align 1, keep-with-next
+    694          void UN_MUTE(void)
+   \                     UN_MUTE:
+    695          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    696          #if (MUTE_TYPE != MUTE_NO)
+    697          	DIS_MUTE();
+   \   000000   53BAFE       ANL     0xba,#0xfe
+   \   000003   C280         CLR     0x80.0
+    698          #endif
+    699          	//printf("mute\n");
+    700          }
+   \   000005   22           RET
+    701          
+    702          //开MUTE函数, 停止声音输出
+    703          #pragma location="USER_IO_SEG"
+
+   \                                 In segment USER_IO_SEG, align 1, keep-with-next
+    704          void mute_enable(void)
+   \                     mute_enable:
+    705          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    706          	if(!b_dac.mute_en)
+   \   000000   A2..         MOV     C,b_dac.1
+   \   000002   4008         JC      ??mute_enable_0
+    707          	{
+    708          		b_dac.mute_en = 1;
+   \   000004   D2..         SETB    b_dac.1
+    709          		mute_status_change = true;
+   \   000006   7401         MOV     A,#0x1
+   \   000008   90....       MOV     DPTR,#mute_status_change
+   \   00000B   F0           MOVX    @DPTR,A
+    710          	}
+    711          #if 0
+    712          #if (MUTE_TYPE != MUTE_NO)
+    713          	//EN_MUTE();
+    714          	MUTE_PORT_LOW;
+    715          #endif
+    716          #endif
+    717          	//printf("mute\n");
+    718          }
+   \                     ??mute_enable_0:
+   \   00000C   22           RET
+    719          
+    720          
+    721          //关MUTE函数, 让声音出来
+    722          #pragma location="USER_IO_SEG"
+
+   \                                 In segment USER_IO_SEG, align 1, keep-with-next
+    723          void mute_disable(void)
+   \                     mute_disable:
+    724          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    725          	if(b_dac.mute_en)
+   \   000000   A2..         MOV     C,b_dac.1
+   \   000002   5008         JNC     ??mute_disable_0
+    726          	{
+    727          		b_dac.mute_en = 0;
+   \   000004   C2..         CLR     b_dac.1
+    728          		mute_status_change = true;
+   \   000006   7401         MOV     A,#0x1
+   \   000008   90....       MOV     DPTR,#mute_status_change
+   \   00000B   F0           MOVX    @DPTR,A
+    729          	}
+    730          #if 0
+    731          #if (MUTE_TYPE != MUTE_NO)
+    732          	DIS_MUTE();
+    733          #endif
+    734          #endif
+    735          	//printf("unmute\n");
+    736          }
+   \                     ??mute_disable_0:
+   \   00000C   22           RET
+    737          
+    738          #pragma location="USER_IO_SEG"
+
+   \                                 In segment USER_IO_SEG, align 1, keep-with-next
+    739          void mute_ctl_auto(void)
+   \                     mute_ctl_auto:
+    740          {	// running by 5mSec
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    741          	static u8 cnt = 0;
+    742          
+    743          	if(mute_status_change)
+   \   000000   90....       MOV     DPTR,#mute_status_change
+   \   000003   E0           MOVX    A,@DPTR
+   \   000004   601C         JZ      ??mute_ctl_auto_0
+    744          	{
+    745          		if(b_dac.mute_en)
+   \   000006   A2..         MOV     C,b_dac.1
+   \   000008   5006         JNC     ??mute_ctl_auto_1
+    746          		{
+    747          			MUTE_EN();
+   \   00000A   43BA01       ORL     0xba,#0x1
+    748          			mute_status_change = false;
+   \   00000D   E4           CLR     A
+   \   00000E   F0           MOVX    @DPTR,A
+   \   00000F   22           RET
+    749          		}
+    750          		else
+    751          		{
+    752          			if(cnt == 0)
+   \                     ??mute_ctl_auto_1:
+   \   000010   90....       MOV     DPTR,#??cnt
+   \   000013   E0           MOVX    A,@DPTR
+   \   000014   7009         JNZ     ??mute_ctl_auto_2
+    753          			{
+    754          				UN_MUTE();
+   \   000016                ; Setup parameters for call to function UN_MUTE
+   \   000016   12....       LCALL   UN_MUTE
+    755          				mute_status_change = false;
+   \   000019   E4           CLR     A
+   \   00001A   90....       MOV     DPTR,#mute_status_change
+   \   00001D   F0           MOVX    @DPTR,A
+   \   00001E   22           RET
+    756          			}
+    757          			else
+    758          			{
+    759          				cnt--;
+   \                     ??mute_ctl_auto_2:
+   \   00001F   14           DEC     A
+   \   000020   F0           MOVX    @DPTR,A
+   \   000021   22           RET
+    760          			}
+    761          		}
+    762          	}
+    763          	else
+    764          	{
+    765          		cnt = 0;
+   \                     ??mute_ctl_auto_0:
+   \   000022   E4           CLR     A
+   \   000023   90....       MOV     DPTR,#??cnt
+   \   000026   F0           MOVX    @DPTR,A
+    766          	}
+    767          }
+   \   000027   22           RET
+
+   \                                 In segment XDATA_Z, align 1, keep-with-next
+   \   000000                REQUIRE __INIT_XDATA_Z
+   \                     ??cnt:
+   \   000000                DS 1
+    768          
+    769          
+    770          #pragma location="USER_IO_SEG"
+
+   \                                 In segment USER_IO_SEG, align 1, keep-with-next
+    771          void io_output_clk_start(void)
+   \                     io_output_clk_start:
+    772          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    773          #if (FM_CLOCK == USE_IO_32KHZ_CLK)
+    774          	CLKCON2 &= ~BIT(7);      //RTCC clock source select XOSC
+    775          	//CLKCON2 |= BIT(7);       //RTCC clock source select RC32K
+    776          	CLKCON3 |= BIT(6);       //output clk 32.768KHz
+    777          
+    778          #elif (FM_CLOCK == USE_IO_12MHZ_CLK)
+    779          	CLKCON3 &= ~(BIT(7) | BIT(6));
+    780          #endif
+    781          
+    782          	AIPCON8 &= ~(BIT(2) | BIT(1) | BIT(0));
+   \   000000   903058       MOV     DPTR,#0x3058
+   \   000003   E0           MOVX    A,@DPTR
+   \   000004   54F8         ANL     A,#0xf8
+   \   000006   F0           MOVX    @DPTR,A
+    783          	AIPCON8 |= FM_CLK_IO;
+   \   000007   E0           MOVX    A,@DPTR
+   \   000008   4406         ORL     A,#0x6
+   \   00000A   F0           MOVX    @DPTR,A
+    784          
+    785          #if (FM_CLK_IO == CLK_P16)
+    786          	P1DIR &= ~BIT(6);
+    787          #elif (FM_CLK_IO == CLK_P15)
+    788          	P1DIR &= ~BIT(5);
+    789          #elif (FM_CLK_IO == CLK_P06)
+    790          	P0DIR &= ~BIT(6);
+    791          #elif (FM_CLK_IO == CLK_P32)
+    792          	P3DIR &= ~BIT(2);
+    793          #elif (FM_CLK_IO == CLK_P33)
+    794          	P3DIR &= ~BIT(3);
+    795          #elif (FM_CLK_IO == CLK_P34)
+    796          	P3DIR &= ~BIT(4);
+   \   00000B   53BDEF       ANL     0xbd,#0xef
+    797          #elif (FM_CLK_IO == CLK_P35)
+    798          	P3DIR &= ~BIT(5);
+    799          #else
+    800          #error "请选择提供时钟的IO"
+    801          #endif
+    802          }
+   \   00000E   22           RET
+    803          
+    804          #pragma location="USER_IO_SEG"
+
+   \                                 In segment USER_IO_SEG, align 1, keep-with-next
+    805          void io_output_clk_stop(void)
+   \                     io_output_clk_stop:
+    806          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    807          #if (FM_CLK_IO == CLK_P16)
+    808          	P1DIR |= BIT(6);
+    809          #elif (FM_CLK_IO == CLK_P15)
+    810          	P1DIR |= BIT(5);
+    811          #elif (FM_CLK_IO == CLK_P06)
+    812          	P0DIR |= BIT(6);
+    813          #elif (FM_CLK_IO == CLK_P32)
+    814          	P3DIR |= BIT(2);
+    815          #elif (FM_CLK_IO == CLK_P33)
+    816          	P3DIR |= BIT(3);
+    817          #elif (FM_CLK_IO == CLK_P34)
+    818          	P3DIR |= BIT(4);
+   \   000000   43BD10       ORL     0xbd,#0x10
+    819          #elif (FM_CLK_IO == CLK_P35)
+    820          	P3DIR |= BIT(5);
+    821          #endif
+    822          }
+   \   000003   22           RET
+
+   \                                 In segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for SD_FLAG>`:
+   \   000000   01           DB 1
+
+   \                                 In segment CODE_C, align 1
+   \                     `?<Constant "SD0 IN\\n">`:
+   \   000000   53443020     DB "SD0 IN\012"
+   \            494E0A00
+
+   \                                 In segment CODE_C, align 1
+   \                     `?<Constant "SD0 OUT\\n">`:
+   \   000000   53443020     DB "SD0 OUT\012"
+   \            4F55540A
+   \            00      
+
+   \                                 In segment CODE_C, align 1
+   \                     `?<Constant "SD1 IN\\n">`:
+   \   000000   53443120     DB "SD1 IN\012"
+   \            494E0A00
+
+   \                                 In segment CODE_C, align 1
+   \                     `?<Constant "SD1 OUT\\n">`:
+   \   000000   53443120     DB "SD1 OUT\012"
+   \            4F55540A
+   \            00      
+
+   Maximum stack usage in bytes:
+
+     Function            EXT_STACK PSTACK XSTACK
+     --------            --------- ------ ------
+     MUTE_EN                    0      0      0
+     UN_MUTE                    0      0      0
+     io_output_clk_start        0      0      0
+     io_output_clk_stop         0      0      0
+     mute_ctl_auto              0      0      0
+       -> UN_MUTE               0      0      0
+     mute_disable               0      0      0
+     mute_enable                0      0      0
+     mute_init                  0      0      0
+     port_init                  0      0      0
+       -> spi_port_init         0      0      0
+     sd1_detect                 0      0      0
+       -> device_insert         0      0      0
+       -> sd_insert             0      0      0
+       -> my_printf             0      0      0
+       -> device_remove         0      0      0
+       -> fs_cur_dev            0      0      0
+       -> my_printf             0      0      0
+     sd_detect                  0      0      0
+       -> device_insert         0      0      0
+       -> sd_insert             0      0      0
+       -> my_printf             0      0      0
+       -> device_remove         0      0      0
+       -> fs_cur_dev            0      0      0
+       -> my_printf             0      0      0
+     sd_group_sel               0      0      0
+     sd_port_init               0      0      0
+     sd_port_sta                0      0      0
+     usb_detect                 0      0      0
+       -> usb_connected         0      0      0
+       -> device_insert         0      0      0
+       -> device_remove         0      0      0
+       -> fs_cur_dev            0      0      0
+
+
+   Segment part sizes:
+
+     Function/Label             Bytes
+     --------------             -----
+     P0                            1
+     P0DIR                         1
+     P1DIR                         1
+     P3DIR                         1
+     P4DIR                         1
+     P4                            1
+     SD_FLAG                       1
+     port_init                    54
+     sd_group_sel                 17
+     ?Subroutine0                 19
+     sd_port_init                 30
+     sd_detect                    53
+     sd1_detect                   61
+     sd_port_sta                  10
+     usb_detect                   39
+     mute_init                     7
+     MUTE_EN                       4
+     UN_MUTE                       6
+     mute_enable                  13
+     mute_disable                 13
+     mute_ctl_auto                40
+     cnt                           1
+     io_output_clk_start          15
+     io_output_clk_stop            4
+     ?<Initializer for SD_FLAG>    1
+     ?<Constant "SD0 IN\n">        8
+     ?<Constant "SD0 OUT\n">       9
+     ?<Constant "SD1 IN\n">        8
+     ?<Constant "SD1 OUT\n">       9
+
+ 
+  34 bytes in segment CODE_C
+  61 bytes in segment NEAR_CODE
+ 129 bytes in segment SD_SEG
+   6 bytes in segment SFR_AN
+ 195 bytes in segment USER_IO_SEG
+   1 byte  in segment XDATA_I
+   1 byte  in segment XDATA_ID
+   1 byte  in segment XDATA_Z
+ 
+ 420 bytes of CODE  memory
+   0 bytes of DATA  memory (+ 6 bytes shared)
+   2 bytes of XDATA memory
+
+Errors: none
+Warnings: none

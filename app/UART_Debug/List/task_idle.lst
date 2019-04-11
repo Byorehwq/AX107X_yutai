@@ -1,0 +1,225 @@
+##############################################################################
+#                                                                            #
+# IAR 8051 C/C++ Compiler V7.20H/W32                   10/Sep/2015  19:03:29 #
+# Copyright 2004-2006 IAR Systems. All rights reserved.                      #
+#                                                                            #
+#    Core               =  plain                                             #
+#    Code model         =  near                                              #
+#    Data model         =  large                                             #
+#    Calling convention =  extended stack reentrant                          #
+#    Constant location  =  code                                              #
+#    Extended stack     =  enabled                                           #
+#    Dptr setup         =  1,16                                              #
+#    Source file        =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\task\task_idle.c                      #
+#    Command line       =  -I "C:\Program Files\IAR Systems\Embedded         #
+#                          Workbench 4.05 Evaluation version\8051\INC\" -I   #
+#                          "C:\Program Files\IAR Systems\Embedded Workbench  #
+#                          4.05 Evaluation version\8051\INC\CLIB\" -I        #
+#                          "C:\Documents and Settings\Administrator\×ÀÃæ\lil #
+#                          y\15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX1 #
+#                          070_20150908\COMMON\" -I "C:\Documents and        #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\INC\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\config\" -I "C:\Documents and    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\api\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\fm\" -I "C:\Documents and        #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\fat\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\display\" -I "C:\Documents and   #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\displ #
+#                          ay\led\" -I "C:\Documents and                     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\displ #
+#                          ay\lcd\" -I "C:\Documents and                     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\task\ #
+#                          " -I "C:\Documents and Settings\Administrator\×ÀÃ #
+#                          æ\lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lil #
+#                          y_AX1070_20150908\user\" -I "C:\Documents and     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\mem\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\module\" -I "C:\Documents and    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\modul #
+#                          e\kedir\" -I "C:\Documents and                    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\key\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\startmusic\" -D UART_DEBUG -D    #
+#                          AX207X_TAG -lC "C:\Documents and                  #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\UART_ #
+#                          Debug\List\" -o "C:\Documents and                 #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\UART_ #
+#                          Debug\Obj\" -e -z9 --debug --core=plain           #
+#                          --dptr=16,1 --data_model=large --code_model=near  #
+#                          --calling_convention=ext_stack_reentrant          #
+#                          --place_constants=code --nr_virtual_regs 20       #
+#                          --extended_stack "C:\Documents and                #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\task\ #
+#                          task_idle.c"                                      #
+#    List file          =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\UART_Debug\List\task_idle.lst         #
+#    Object file        =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\UART_Debug\Obj\task_idle.r51          #
+#                                                                            #
+#                                                                            #
+##############################################################################
+
+C:\Documents and Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX1070_20150908\task\task_idle.c
+      1          /*****************************************************************************
+      2           * Module    : Task
+      3           * File      : task_idle.c
+      4           * Author    : Hanny
+      5           * Email     : coldney@yahoo.com.cn
+      6           * Function  : ¿ÕÏÐÈÎÎñ
+      7           *****************************************************************************/
+      8          #include "include.h"
+      9          
+     10          #if TASK_IDLE_EN
+     11          
+     12          void task_idle_display(void);
+     13          
+     14          //ÈÎÎñ³õÊ¼»¯
+     15          #pragma location="TASK_IDLE_SEG"
+     16          static void task_idle_enter(void)
+     17          {
+     18          #if (DISP_TYPE==DISP_LED)
+     19          	ocx.led_sta = LED_STA_ON;
+     20          #endif
+     21          
+     22          #if KEY_VOICE_EN
+     23          	AMUX_AIN_EN();
+     24          	mute_disable();
+     25          #endif
+     26          }
+     27          
+     28          //ÈÎÎñÍË³ö
+     29          #pragma location="TASK_IDLE_SEG"
+     30          static void task_idle_exit(void)
+     31          {
+     32          }
+     33          
+     34          //ÈÎÎñÏûÏ¢´¦Àí
+     35          #pragma location="TASK_IDLE_SEG"
+     36          static void task_idle_deal_msg(u8 msg)
+     37          {
+     38          	switch(msg)
+     39          	{
+     40          	case KU_VOL_UP:
+     41          	case KH_VOL_UP:
+     42          	case KU_VOL_DOWN:
+     43          	case KH_VOL_DOWN:
+     44          		break;
+     45          	default:
+     46          		deal_msg(msg);
+     47          		break;
+     48          	}
+     49          }
+     50          
+     51          //ÈÎÎñÖ÷Á÷³Ì
+     52          #pragma location="TASK_IDLE_SEG"
+
+   \                                 In segment TASK_IDLE_SEG, align 1, keep-with-next
+     53          void task_idle(void)
+   \                     task_idle:
+     54          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     55          	printf("task_idle\n");
+   \   000000                ; Setup parameters for call to function my_printf
+   \   000000   7A..         MOV     R2,#(`?<Constant "task_idle\\n">` & 0xff)
+   \   000002   7B..         MOV     R3,#((`?<Constant "task_idle\\n">` >> 8) & 0xff)
+   \   000004   12....       LCALL   my_printf
+     56          	task_idle_enter();
+   \   000007   801E         SJMP    ??task_idle_0
+     57          	while(task_ctl.work_sta == TASK_IDLE)
+     58          	{
+     59          		comm_event(1);
+   \                     ??task_idle_1:
+   \   000009                ; Setup parameters for call to function comm_event
+   \   000009   7901         MOV     R1,#0x1
+   \   00000B   12....       LCALL   comm_event
+     60          		task_idle_deal_msg(get_msg());
+   \   00000E                ; Setup parameters for call to function get_msg
+   \   00000E   12....       LCALL   get_msg
+   \   000011   E9           MOV     A,R1
+   \   000012   12....       LCALL   ?UC_SWITCH_SPARSE
+   \                     `?<Jumptable for task_idle>_0`:
+   \   000015   02           DB        2
+   \   000016   84           DB        132
+   \   000017   85           DB        133
+   \   000018   ....         DW        ??task_idle_2
+   \   00001A   E4           DB        228
+   \   00001B   E5           DB        229
+   \   00001C   ....         DW        ??task_idle_2
+   \   00001E   00           DB        0
+   \   00001F   ....         DW        ??task_idle_3
+   \                     ??task_idle_3:
+   \   000021                ; Setup parameters for call to function deal_msg
+   \   000021   12....       LCALL   deal_msg
+     61          		task_idle_display();
+   \                     ??task_idle_2:
+   \   000024                ; Setup parameters for call to function task_idle_display
+   \   000024   12....       LCALL   task_idle_display
+     62          	}
+   \                     ??task_idle_0:
+   \   000027   7408         MOV     A,#0x8
+   \   000029   65..         XRL     A,task_ctl
+   \   00002B   60DC         JZ      ??task_idle_1
+     63          	task_idle_exit();
+     64          }
+   \   00002D   22           RET
+
+   \                                 In segment CODE_C, align 1
+   \                     `?<Constant "task_idle\\n">`:
+   \   000000   7461736B     DB "task_idle\012"
+   \            5F69646C
+   \            650A00  
+     65          
+     66          #endif
+
+   Maximum stack usage in bytes:
+
+     Function               EXT_STACK PSTACK XSTACK
+     --------               --------- ------ ------
+     task_idle                     0      0      0
+       -> my_printf                0      0      0
+       -> comm_event               0      0      0
+       -> get_msg                  0      0      0
+       -> deal_msg                 0      0      0
+       -> task_idle_display        0      0      0
+
+
+   Segment part sizes:
+
+     Function/Label            Bytes
+     --------------            -----
+     task_idle                   46
+     ?<Constant "task_idle\n">   11
+
+ 
+ 11 bytes in segment CODE_C
+ 46 bytes in segment TASK_IDLE_SEG
+ 
+ 57 bytes of CODE memory
+
+Errors: none
+Warnings: none

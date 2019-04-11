@@ -1,0 +1,197 @@
+##############################################################################
+#                                                                            #
+# IAR 8051 C/C++ Compiler V7.20H/W32                   10/Sep/2015  19:03:30 #
+# Copyright 2004-2006 IAR Systems. All rights reserved.                      #
+#                                                                            #
+#    Core               =  plain                                             #
+#    Code model         =  near                                              #
+#    Data model         =  large                                             #
+#    Calling convention =  extended stack reentrant                          #
+#    Constant location  =  code                                              #
+#    Extended stack     =  enabled                                           #
+#    Dptr setup         =  1,16                                              #
+#    Source file        =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\display\theme_default\theme_fm.c      #
+#    Command line       =  -I "C:\Program Files\IAR Systems\Embedded         #
+#                          Workbench 4.05 Evaluation version\8051\INC\" -I   #
+#                          "C:\Program Files\IAR Systems\Embedded Workbench  #
+#                          4.05 Evaluation version\8051\INC\CLIB\" -I        #
+#                          "C:\Documents and Settings\Administrator\×ÀÃæ\lil #
+#                          y\15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX1 #
+#                          070_20150908\COMMON\" -I "C:\Documents and        #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\INC\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\config\" -I "C:\Documents and    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\api\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\fm\" -I "C:\Documents and        #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\fat\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\display\" -I "C:\Documents and   #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\displ #
+#                          ay\led\" -I "C:\Documents and                     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\displ #
+#                          ay\lcd\" -I "C:\Documents and                     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\task\ #
+#                          " -I "C:\Documents and Settings\Administrator\×ÀÃ #
+#                          æ\lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lil #
+#                          y_AX1070_20150908\user\" -I "C:\Documents and     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\mem\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\module\" -I "C:\Documents and    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\modul #
+#                          e\kedir\" -I "C:\Documents and                    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\key\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\startmusic\" -D UART_DEBUG -D    #
+#                          AX207X_TAG -lC "C:\Documents and                  #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\UART_ #
+#                          Debug\List\" -o "C:\Documents and                 #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\UART_ #
+#                          Debug\Obj\" -e -z9 --debug --core=plain           #
+#                          --dptr=16,1 --data_model=large --code_model=near  #
+#                          --calling_convention=ext_stack_reentrant          #
+#                          --place_constants=code --nr_virtual_regs 20       #
+#                          --extended_stack "C:\Documents and                #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\displ #
+#                          ay\theme_default\theme_fm.c"                      #
+#    List file          =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\UART_Debug\List\theme_fm.lst          #
+#    Object file        =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\UART_Debug\Obj\theme_fm.r51           #
+#                                                                            #
+#                                                                            #
+##############################################################################
+
+C:\Documents and Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX1070_20150908\display\theme_default\theme_fm.c
+      1          /*****************************************************************************
+      2           * Module    : Theme
+      3           * File      : led_default_tomcat.c
+      4           * Author    : Hanny
+      5           * Email     : coldney@yahoo.com.cn
+      6           * Function  : ÌÀÄ·Ã¨ÈÎÎñÏÔÊ¾Ö÷Ìâ
+      7           *****************************************************************************/
+      8          #include "include.h"
+      9          
+     10          
+     11          #pragma location="DISP_FM_SEG"
+
+   \                                 In segment DISP_FM_SEG, align 1, keep-with-next
+     12          void task_fm_display(void)
+   \                     task_fm_display:
+     13          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     14          #if ((DISP_TYPE != DISP_LED) && (DISP_TYPE != DISP_NO))
+     15          	ocx_event();
+   \   000000                ; Setup parameters for call to function ocx_event
+   \   000000   12....       LCALL   ocx_event
+     16          
+     17          	ocx_freq_set(fm_ctl.fm_freq);
+   \   000003                ; Setup parameters for call to function ocx_freq_set
+   \   000003   90....       MOV     DPTR,#(fm_ctl + 28)
+   \   000006   E0           MOVX    A,@DPTR
+   \   000007   FA           MOV     R2,A
+   \   000008   A3           INC     DPTR
+   \   000009   E0           MOVX    A,@DPTR
+   \   00000A   FB           MOV     R3,A
+   \   00000B   12....       LCALL   ocx_freq_set
+     18          #if ENERGY_DISP_EN
+     19          	ocx_energy_set(tbl_energy_amux);
+     20          #endif
+     21          
+     22          	if(disp.update == 0)
+   \   00000E   A2..         MOV     C,disp.0
+   \   000010   500E         JNC     ??task_fm_display_0
+     23          	{
+     24          		return;
+     25          	}
+     26          	disp.update = 0;
+   \   000012   C2..         CLR     disp.0
+     27          
+     28          	//Ë¢ÐÂÏÔÊ¾½çÃæ
+     29          	if(ocx.disp_status == OCX_NULL)
+   \   000014   78..         MOV     R0,#(ocx + 3)
+   \   000016   E6           MOV     A,@R0
+   \   000017   7004         JNZ     ??task_fm_display_1
+     30          	{
+     31          #if ENERGY_DISP_EN
+     32          		if(ocx.disp_energy)
+     33          		{
+     34          			disp_energy();
+     35          		}
+     36          		else
+     37          #endif
+     38          		{
+     39          			disp_freq();
+   \   000019                ; Setup parameters for call to function led_5c7s_disp_freq
+   \   000019   12....       LCALL   led_5c7s_disp_freq
+   \   00001C   22           RET
+     40          		}
+     41          	}
+     42          #if USE_IR_NUM
+     43          	else if(ocx.disp_status == OCX_NUMSELBOX)
+     44          	{
+     45          		disp_numsel(ocx.number);
+     46          	}
+     47          #endif
+     48          	else
+     49          	{
+     50          		ocx_display();
+   \                     ??task_fm_display_1:
+   \   00001D                ; Setup parameters for call to function ocx_display
+   \   00001D   12....       LCALL   ocx_display
+   \                     ??task_fm_display_0:
+   \   000020   22           RET
+     51          	}
+     52          #endif
+     53          
+     54          #if ((DISP_TYPE == DISP_LED) && (USE_IR_NUM))
+     55          	ocx_event();
+     56          #endif
+     57          }
+
+   Maximum stack usage in bytes:
+
+     Function                EXT_STACK PSTACK XSTACK
+     --------                --------- ------ ------
+     task_fm_display                0      0      0
+       -> ocx_event                 0      0      0
+       -> ocx_freq_set              0      0      0
+       -> led_5c7s_disp_freq        0      0      0
+       -> ocx_display               0      0      0
+
+
+   Segment part sizes:
+
+     Function/Label  Bytes
+     --------------  -----
+     task_fm_display   33
+
+ 
+ 33 bytes in segment DISP_FM_SEG
+ 
+ 33 bytes of CODE memory
+
+Errors: none
+Warnings: none

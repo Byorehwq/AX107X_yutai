@@ -1,0 +1,499 @@
+##############################################################################
+#                                                                            #
+# IAR 8051 C/C++ Compiler V7.20H/W32                   10/Sep/2015  19:03:28 #
+# Copyright 2004-2006 IAR Systems. All rights reserved.                      #
+#                                                                            #
+#    Core               =  plain                                             #
+#    Code model         =  near                                              #
+#    Data model         =  large                                             #
+#    Calling convention =  extended stack reentrant                          #
+#    Constant location  =  code                                              #
+#    Extended stack     =  enabled                                           #
+#    Dptr setup         =  1,16                                              #
+#    Source file        =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\main.c                                #
+#    Command line       =  -I "C:\Program Files\IAR Systems\Embedded         #
+#                          Workbench 4.05 Evaluation version\8051\INC\" -I   #
+#                          "C:\Program Files\IAR Systems\Embedded Workbench  #
+#                          4.05 Evaluation version\8051\INC\CLIB\" -I        #
+#                          "C:\Documents and Settings\Administrator\×ÀÃæ\lil #
+#                          y\15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX1 #
+#                          070_20150908\COMMON\" -I "C:\Documents and        #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\INC\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\config\" -I "C:\Documents and    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\api\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\fm\" -I "C:\Documents and        #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\fat\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\display\" -I "C:\Documents and   #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\displ #
+#                          ay\led\" -I "C:\Documents and                     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\displ #
+#                          ay\lcd\" -I "C:\Documents and                     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\task\ #
+#                          " -I "C:\Documents and Settings\Administrator\×ÀÃ #
+#                          æ\lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lil #
+#                          y_AX1070_20150908\user\" -I "C:\Documents and     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\mem\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\module\" -I "C:\Documents and    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\modul #
+#                          e\kedir\" -I "C:\Documents and                    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\key\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\startmusic\" -D UART_DEBUG -D    #
+#                          AX207X_TAG -lC "C:\Documents and                  #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\UART_ #
+#                          Debug\List\" -o "C:\Documents and                 #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\UART_ #
+#                          Debug\Obj\" -e -z9 --debug --core=plain           #
+#                          --dptr=16,1 --data_model=large --code_model=near  #
+#                          --calling_convention=ext_stack_reentrant          #
+#                          --place_constants=code --nr_virtual_regs 20       #
+#                          --extended_stack "C:\Documents and                #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\main. #
+#                          c"                                                #
+#    List file          =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\UART_Debug\List\main.lst              #
+#    Object file        =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\UART_Debug\Obj\main.r51               #
+#                                                                            #
+#                                                                            #
+##############################################################################
+
+C:\Documents and Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX1070_20150908\main.c
+      1          /*****************************************************************************
+      2           * Module    : MAIN
+      3           * File      : main.c
+      4           * Author    : jingfa
+      5           * Email     :
+      6           * Function  : Ö÷Á÷³Ì
+      7           *****************************************************************************/
+      8          #include "include.h"
+
+   \                                 In segment SFR_AN, at 0xc2
+   \   unsigned char volatile __sfr TMR2CON1
+   \                     TMR2CON1:
+   \   000000                DS 1
+
+   \                                 In segment SFR_AN, at 0xf7
+   \   unsigned char volatile __sfr WDTCON
+   \                     WDTCON:
+   \   000000                DS 1
+      9          #include "user_io.h"
+     10          
+     11          extern u8 SPI_wait_timeout;
+     12          
+     13          //1ms¶¨Ê±Æ÷ÑÓÊ±
+     14          #pragma location="SYS_DELAY"
+
+   \                                 In segment SYS_DELAY, align 1, keep-with-next
+     15          void delay_1ms(u8 cnt)
+   \                     delay_1ms:
+     16          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     17          #ifdef AX207X_TAG
+     18          	if(sys_fix.usb_init_fix)
+   \   000000   90....       MOV     DPTR,#sys_fix
+   \   000003   E0           MOVX    A,@DPTR
+   \   000004   6003         JZ      ??delay_1ms_0
+     19          	{
+     20          		sys_fix.usb_init_fix = 0;
+   \   000006   E4           CLR     A
+   \   000007   F0           MOVX    @DPTR,A
+     21          		return;
+   \   000008   22           RET
+     22          	}
+     23          #endif
+     24          
+     25          	/*IE_EAºÍIE_TM2ÖÐ¶Ï,¶¼ÒÑ´ò¿ªÊ±£¬Ê¹ÓÃÍâ²¿´úÂë£»
+     26          	  IE_EA»òIE_TM2ÖÐ¶Ï,Ã»´ò¿ªÊ±£¬Ê¹ÓÃmaskromÖÐ´úÂë;
+     27          	*/
+     28          	if((IE0 & BIT(7)) && (IE0 & BIT(3)))
+   \                     ??delay_1ms_0:
+   \   000009   A2AF         MOV     C,0xa8.7
+   \   00000B   500F         JNC     ??delay_1ms_1
+   \   00000D   A2AB         MOV     C,0xa8.3
+   \   00000F   500B         JNC     ??delay_1ms_1
+     29          	{
+     30          		sys_ctl.delay_cnt = cnt + 1;
+   \   000011   7401         MOV     A,#0x1
+   \   000013   29           ADD     A,R1
+   \   000014   90....       MOV     DPTR,#(sys_ctl + 7)
+   \   000017   F0           MOVX    @DPTR,A
+     31          		while(sys_ctl.delay_cnt);
+   \                     ??delay_1ms_2:
+   \   000018   E0           MOVX    A,@DPTR
+   \   000019   70FD         JNZ     ??delay_1ms_2
+   \   00001B   22           RET
+     32          	}
+     33          	else
+     34          	{
+     35          		delay_m(cnt);
+   \                     ??delay_1ms_1:
+   \   00001C                ; Setup parameters for call to function delay_m
+   \   00001C   12....       LCALL   delay_m
+   \   00001F   22           RET
+     36          	}
+     37          }
+     38          
+     39          /*----------------------------------------------------------------------------*/
+     40          /**@brief  timer2ÖÐ¶Ï
+     41             @param  ÎÞ
+     42             @return ÎÞ
+     43             @note   1msÖÐ¶Ï
+     44          */
+     45          /*----------------------------------------------------------------------------*/
+     46          #pragma vector = VECTOR_OFFSET(TIMER2_INT)
+     47          #pragma register_bank=2
+     48          #pragma location="INTERRUPT"
+
+   \                                 In segment INTERRUPT, align 1, keep-with-next
+     49          __interrupt void timer2_isr(void)
+   \                     timer2_isr:
+   \   000000                REQUIRE __REG_BANK_2
+     50          {
+   \   000000   C0E0         PUSH    A
+   \   000002   C0D0         PUSH    PSW
+   \   000004   75D010       MOV     PSW,#0x10
+   \   000007   C082         PUSH    DPL
+   \   000009   C083         PUSH    DPH
+   \   00000B   C0F0         PUSH    B
+   \   00000D                ; Saved register size: 5
+   \   00000D                ; Auto size: 0
+     51          	ISR_ENTER();
+   \   00000D   C08B         push 0x8b
+   \   00000F   C086         push 0x86
+   \   000011   5386C0       anl 0x86, #0xc0
+   \   000014   C084         push 0x84
+   \   000016   C085         push 0x85
+     52          	TMR2CON1 &= ~BIT(7);    //clear pending
+   \   000018   53C27F       ANL     0xc2,#0x7f
+     53          
+     54          	static u8 __data counter_5ms, counter_1ms;
+     55          
+     56          #if LED_7P7S_SCAN_HALF_MS
+     57          	static u8 __data counter_half_ms;
+     58          	counter_half_ms++;
+     59          	disp_scan();
+     60          	if((counter_half_ms%2) == 0)
+     61          	{
+     62          		counter_1ms++;
+     63          		counter_half_ms = 0;
+     64          	}
+     65          	else
+     66          	{
+     67          		goto timer2_exit;
+     68          	}
+     69          #else
+     70          	counter_1ms++;
+   \   00001B   05..         INC     ??counter_1ms
+     71          #endif
+     72          
+     73          	if(sys_ctl.delay_cnt > 0)
+   \   00001D   90....       MOV     DPTR,#(sys_ctl + 7)
+   \   000020   E0           MOVX    A,@DPTR
+   \   000021   6003         JZ      ??timer2_isr_0
+     74          	{
+     75          		sys_ctl.delay_cnt--;
+   \   000023   E0           MOVX    A,@DPTR
+   \   000024   14           DEC     A
+   \   000025   F0           MOVX    @DPTR,A
+     76          	}
+     77          
+     78          	if((counter_1ms%2) == 0)
+   \                     ??timer2_isr_0:
+   \   000026   E5..         MOV     A,??counter_1ms
+   \   000028   A2E0         MOV     C,0xE0 /* A   */.0
+   \   00002A   4003         JC      ??timer2_isr_1
+     79          	{
+     80          #if (DISP_TYPE != DISP_LED_7P7S)
+     81          		disp_scan();
+   \   00002C                ; Setup parameters for call to function led_5c7s_scan
+   \   00002C   12....       LCALL   led_5c7s_scan
+     82          #endif
+     83          #if DAC_POWER_SPEED
+     84          		if(dac_init_ctl.sta < DAC_INIT_END)
+     85          		{
+     86          			dac_init_process();
+     87          		}
+     88          #endif
+     89          	}
+     90          #if DAC_FADE_EN
+     91          	if((counter_1ms & 0x01) == 0)
+   \                     ??timer2_isr_1:
+   \   00002F   E5..         MOV     A,??counter_1ms
+   \   000031   A2E0         MOV     C,0xE0 /* A   */.0
+   \   000033   4003         JC      ??timer2_isr_2
+     92          		dac_fade_auto();	// ¸ÄÎª 2mSec
+   \   000035                ; Setup parameters for call to function dac_fade_auto
+   \   000035   12....       LCALL   dac_fade_auto
+     93          #endif
+     94          
+     95          	/*5ms  ¶¨Ê±****************************************************/
+     96          	if((counter_1ms%5) == 0)
+   \                     ??timer2_isr_2:
+   \   000038   E5..         MOV     A,??counter_1ms
+   \   00003A   75F005       MOV     B,#0x5
+   \   00003D   84           DIV     AB
+   \   00003E   E5F0         MOV     A,B
+   \   000040   7040         JNZ     ??timer2_isr_3
+     97          	{
+     98          
+     99          		if(sys.delay_cnt > 0)
+   \   000042   E5..         MOV     A,(sys + 1)
+   \   000044   6004         JZ      ??timer2_isr_4
+    100          		{
+    101          			sys.delay_cnt--;
+   \   000046   15..         DEC     (sys + 1)
+   \   000048   E5..         MOV     A,(sys + 1)
+    102          		}
+    103          #if ( ((DISP_TYPE != DISP_LED)&&(DISP_TYPE != DISP_NO)) || ((DISP_TYPE == DISP_LED)&&(USE_IR_NUM)) )
+    104          		ocx_delay();
+   \                     ??timer2_isr_4:
+   \   00004A                ; Setup parameters for call to function ocx_delay
+   \   00004A   12....       LCALL   ocx_delay
+    105          #endif
+    106          		sd_detect();        //sd¼ì²â, Íâ½ÓSD¿¨¼ì²â
+   \   00004D                ; Setup parameters for call to function sd_detect
+   \   00004D   12....       LCALL   sd_detect
+    107          #if SD_DOUBLE_EN
+    108          		sd1_detect();       //sd1¼ì²â, ÄÚ½ÓSD¿¨¼ì²â
+   \   000050                ; Setup parameters for call to function sd1_detect
+   \   000050   12....       LCALL   sd1_detect
+    109          #endif
+    110          		usb_detect();       //usb¼ì²â
+   \   000053                ; Setup parameters for call to function usb_detect
+   \   000053   12....       LCALL   usb_detect
+    111          #if (AUX_DET_EN && !USE_7P7S_LED_AUX_MUX)
+    112          		aux_detect();       //lienin¼ì²â
+    113          #endif
+    114          #if MIC_DET_EN
+    115          		mic_detect();       //mic¼ì²â
+    116          #endif
+    117          #if HP_DET_EN
+    118          		headphone_detect(); //headphone¼ì²â
+    119          #endif
+    120          #if DCIN_DET_EN
+    121          		dcin_detect();
+    122          #endif
+    123          		key_scan();         //°´¼üÉ¨Ãè
+   \   000056                ; Setup parameters for call to function key_scan
+   \   000056   12....       LCALL   key_scan
+    124          #if 0// DAC_FADE_EN
+    125          		dac_fade_auto();	// ÓÉ 5mSec ¸ÄÖÁ 2mSec
+    126          #endif
+    127          		mute_ctl_auto();
+   \   000059                ; Setup parameters for call to function mute_ctl_auto
+   \   000059   12....       LCALL   mute_ctl_auto
+    128          #if KEY_VOICE_EN
+    129          		user_chk_kv();
+    130          #endif
+    131          		counter_5ms++;
+   \   00005C   05..         INC     ??counter_5ms
+    132          		/*10ms ¶¨Ê±****************************************************/
+    133          		if((counter_5ms%2) == 0x00)
+   \   00005E   E5..         MOV     A,??counter_5ms
+   \   000060   A2E0         MOV     C,0xE0 /* A   */.0
+   \   000062   4006         JC      ??timer2_isr_5
+    134          		{
+    135          			counter_1ms = 0;
+   \   000064   75..00       MOV     ??counter_1ms,#0x0
+    136          
+    137          #if USB_HID_SUPPORT
+    138          			usb_hid_delay();
+    139          			if(sys_ctl.hid_vol_delay_cnt > 0)
+    140          			{
+    141          				sys_ctl.hid_vol_delay_cnt--;
+    142          			}
+    143          #endif
+    144          #if USB_MASS_SUPPORT
+    145          			usb_mass_delay();
+    146          #endif
+    147          #if ALARM_EN
+    148          			t_alarm.delay_10ms_cnt++;
+    149          #endif
+    150          #if TASK_FM_EN
+    151          			fm_init_process();
+    152          #endif
+    153          			mem_time_set();
+   \   000067                ; Setup parameters for call to function mem_time_set
+   \   000067   12....       LCALL   mem_time_set
+    154          		}
+    155          		/*500ms¶¨Ê±****************************************************/
+    156          #if 1//TASK_RTC_EN
+    157          		if((counter_5ms%100) == 0x00)
+   \                     ??timer2_isr_5:
+   \   00006A   E5..         MOV     A,??counter_5ms
+   \   00006C   75F064       MOV     B,#0x64
+   \   00006F   84           DIV     AB
+   \   000070   E5F0         MOV     A,B
+   \   000072   7005         JNZ     ??timer2_isr_6
+    158          		{
+    159          			put_msg(QSYSTEM_500MS);
+   \   000074                ; Setup parameters for call to function put_msg
+   \   000074   797E         MOV     R1,#0x7e
+   \   000076   12....       LCALL   put_msg
+    160          		}
+    161          #endif
+    162          		/*1s   ¶¨Ê±****************************************************/
+    163          		if(counter_5ms == 200)
+   \                     ??timer2_isr_6:
+   \   000079   74C8         MOV     A,#-0x38
+   \   00007B   65..         XRL     A,??counter_5ms
+   \   00007D   7003         JNZ     ??timer2_isr_3
+    164          		{
+    165          			counter_5ms = 0;//´Ë´¦±ØÐëÇåÁã£¬ÖØÐÂÑ­»·
+   \   00007F   75..00       MOV     ??counter_5ms,#0x0
+    166          
+    167          #if ALARM_EN
+    168          			t_alarm.delay_1s_cnt++;
+    169          #endif
+    170          #if USE_TOUCH_KEY
+    171          			touch_key_rest();
+    172          #endif
+    173          			/*if(device_set_testready()) {
+    174          			    b_sys.dev_change = 1;
+    175          			}*/
+    176          		}
+    177          	}
+    178          #if LED_7P7S_SCAN_HALF_MS
+    179          timer2_exit:
+    180          #endif
+    181          	ISR_EXIT();
+   \                     ??timer2_isr_3:
+   \   000082   D085         pop 0x85
+   \   000084   D084         pop 0x84
+   \   000086   D086         pop 0x86
+   \   000088   D08B         pop 0x8b
+    182          }
+   \   00008A   D0F0         POP     B
+   \   00008C   D083         POP     DPH
+   \   00008E   D082         POP     DPL
+   \   000090   D0D0         POP     PSW
+   \   000092   D0E0         POP     A
+   \   000094   32           RETI
+
+   \                                 In segment DATA_Z, align 1, keep-with-next
+   \   000000                REQUIRE __INIT_DATA_Z
+   \                     ??counter_5ms:
+   \   000000                DS 1
+
+   \                                 In segment DATA_Z, align 1, keep-with-next
+   \   000000                REQUIRE __INIT_DATA_Z
+   \                     ??counter_1ms:
+   \   000000                DS 1
+    183          
+    184          /*----------------------------------------------------------------------------*/
+    185          /**@brief Ö÷Á÷³Ì
+    186             @param ÎÞ
+    187             @return ÎÞ
+    188             @note
+    189          */
+    190          /*----------------------------------------------------------------------------*/
+    191          #pragma location="SYS_INIT"
+
+   \                                 In segment SYS_INIT, align 1, keep-with-next
+    192          void main(void)
+   \                     main:
+    193          {
+   \   000000                ; Auto size: 0
+    194          	/*
+    195          	¡¾×¢Òâ¡¿Îª±ÜÃâÐÂ¶¨ÒåµÄ±äÁ¿ÔÚ³õÊ¼»¯²Ù×÷Ç°±»Ê¹ÓÃ¶ø²úÉúÎÊÌâ£¬
+    196          	ÏµÍ³Æô¶¯ºó£¬ÒÑ½«dataÇø0x1308-0x13FFµÄ248byte(³ýR0-R7µÄ8byte),
+    197          	ºÍxdataÇøµÄ0x0000-0x0FFFµÄ4096byteÈ«²¿Çå0¡£
+    198          	*/
+    199          	WATCHDOG_CLR();                 //ÏµÍ³ÉÏµçºóÄ¬ÈÏ´ò¿ªWatchdog£¬¶¨Ê±2048ms¡£
+   \   000000   43F720       ORL     0xf7,#0x20
+    200          	system_init();                  //ÏµÍ³³õÊ¼»¯
+   \   000003                ; Setup parameters for call to function system_init
+   \   000003   12....       LCALL   system_init
+    201          	run_task();                     //ÔËÐÐÈÎÎñ
+   \   000006                ; Setup parameters for call to function run_task
+   \   000006   12....       LCALL   run_task
+    202          	while(1);
+   \                     ??main_0:
+   \   000009   80FE         SJMP    ??main_0
+    203          }
+
+   \                                 In segment INTVEC, offset 0x1b, root
+   \                     `timer2_isr??INTVEC 27`:
+   \   00001B   02....       LJMP       (timer2_isr)
+
+   \                                 In segment SFR_AN, at 0xa8
+   \   union <unnamed> volatile __sfr _A_IE0
+   \                     _A_IE0:
+   \   000000                DS 1
+
+   Maximum stack usage in bytes:
+
+     Function           EXT_STACK PSTACK XSTACK
+     --------           --------- ------ ------
+     delay_1ms                 0      0      0
+       -> delay_m              0      0      0
+     main                      0      0      0
+       -> system_init          0      0      0
+       -> run_task             0      0      0
+     timer2_isr                5      0      0
+       -> led_5c7s_scan       10      0      0
+       -> dac_fade_auto       10      0      0
+       -> ocx_delay           10      0      0
+       -> sd_detect           10      0      0
+       -> sd1_detect          10      0      0
+       -> usb_detect          10      0      0
+       -> key_scan            10      0      0
+       -> mute_ctl_auto       10      0      0
+       -> mem_time_set        10      0      0
+       -> put_msg             10      0      0
+
+
+   Segment part sizes:
+
+     Function/Label        Bytes
+     --------------        -----
+     TMR2CON1                 1
+     WDTCON                   1
+     delay_1ms               32
+     timer2_isr             149
+     counter_5ms              1
+     counter_1ms              1
+     main                    11
+     timer2_isr??INTVEC 27    3
+     _A_IE0                   1
+
+ 
+   2 bytes in segment DATA_Z
+ 149 bytes in segment INTERRUPT
+   3 bytes in segment INTVEC
+   3 bytes in segment SFR_AN
+  32 bytes in segment SYS_DELAY
+  11 bytes in segment SYS_INIT
+ 
+ 192 bytes of CODE memory (+ 3 bytes shared)
+   2 bytes of DATA memory (+ 3 bytes shared)
+
+Errors: none
+Warnings: none

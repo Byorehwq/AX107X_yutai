@@ -1,0 +1,327 @@
+##############################################################################
+#                                                                            #
+# IAR 8051 C/C++ Compiler V7.20H/W32                   10/Sep/2015  19:03:28 #
+# Copyright 2004-2006 IAR Systems. All rights reserved.                      #
+#                                                                            #
+#    Core               =  plain                                             #
+#    Code model         =  near                                              #
+#    Data model         =  large                                             #
+#    Calling convention =  extended stack reentrant                          #
+#    Constant location  =  code                                              #
+#    Extended stack     =  enabled                                           #
+#    Dptr setup         =  1,16                                              #
+#    Source file        =  C:\Documents and Settings\Administrator\◊¿√Ê\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\key\kedir.c                           #
+#    Command line       =  -I "C:\Program Files\IAR Systems\Embedded         #
+#                          Workbench 4.05 Evaluation version\8051\INC\" -I   #
+#                          "C:\Program Files\IAR Systems\Embedded Workbench  #
+#                          4.05 Evaluation version\8051\INC\CLIB\" -I        #
+#                          "C:\Documents and Settings\Administrator\◊¿√Ê\lil #
+#                          y\15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX1 #
+#                          070_20150908\COMMON\" -I "C:\Documents and        #
+#                          Settings\Administrator\◊¿√Ê\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\INC\" #
+#                           -I "C:\Documents and Settings\Administrator\◊¿√Ê #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\config\" -I "C:\Documents and    #
+#                          Settings\Administrator\◊¿√Ê\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\api\" #
+#                           -I "C:\Documents and Settings\Administrator\◊¿√Ê #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\fm\" -I "C:\Documents and        #
+#                          Settings\Administrator\◊¿√Ê\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\fat\" #
+#                           -I "C:\Documents and Settings\Administrator\◊¿√Ê #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\display\" -I "C:\Documents and   #
+#                          Settings\Administrator\◊¿√Ê\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\displ #
+#                          ay\led\" -I "C:\Documents and                     #
+#                          Settings\Administrator\◊¿√Ê\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\displ #
+#                          ay\lcd\" -I "C:\Documents and                     #
+#                          Settings\Administrator\◊¿√Ê\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\task\ #
+#                          " -I "C:\Documents and Settings\Administrator\◊¿√ #
+#                          Ê\lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lil #
+#                          y_AX1070_20150908\user\" -I "C:\Documents and     #
+#                          Settings\Administrator\◊¿√Ê\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\mem\" #
+#                           -I "C:\Documents and Settings\Administrator\◊¿√Ê #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\module\" -I "C:\Documents and    #
+#                          Settings\Administrator\◊¿√Ê\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\modul #
+#                          e\kedir\" -I "C:\Documents and                    #
+#                          Settings\Administrator\◊¿√Ê\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\key\" #
+#                           -I "C:\Documents and Settings\Administrator\◊¿√Ê #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\startmusic\" -D UART_DEBUG -D    #
+#                          AX207X_TAG -lC "C:\Documents and                  #
+#                          Settings\Administrator\◊¿√Ê\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\UART_ #
+#                          Debug\List\" -o "C:\Documents and                 #
+#                          Settings\Administrator\◊¿√Ê\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\UART_ #
+#                          Debug\Obj\" -e -z9 --debug --core=plain           #
+#                          --dptr=16,1 --data_model=large --code_model=near  #
+#                          --calling_convention=ext_stack_reentrant          #
+#                          --place_constants=code --nr_virtual_regs 20       #
+#                          --extended_stack "C:\Documents and                #
+#                          Settings\Administrator\◊¿√Ê\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\key\k #
+#                          edir.c"                                           #
+#    List file          =  C:\Documents and Settings\Administrator\◊¿√Ê\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\UART_Debug\List\kedir.lst             #
+#    Object file        =  C:\Documents and Settings\Administrator\◊¿√Ê\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\UART_Debug\Obj\kedir.r51              #
+#                                                                            #
+#                                                                            #
+##############################################################################
+
+C:\Documents and Settings\Administrator\◊¿√Ê\lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX1070_20150908\key\kedir.c
+      1          #include "include.h"
+      2          #include "kedir.h"
+      3          #include "ir.h"
+      4          
+      5          
+      6          
+      7          #if USE_KEDIR
+      8          
+      9          
+     10          #if (!USE_IR || USE_HW_IR)
+     11          
+     12          #pragma optimize=no_inline
+     13          bool kedir_pause(void)
+     14          {
+     15          	LED_PAUSE = 1;
+     16          	return LED_PAUSE & 0x01;
+     17          }
+     18          
+     19          #pragma optimize=no_inline
+     20          // !!! ¥À∫Øîµ»Ùﬂ^Ï∂èÕÎs, ’àreturn 2 !!!
+     21          void kedir_resume(void)
+     22          {
+     23          	LED_PAUSE = 0;
+     24          }
+     25          
+     26          #else //!USE_HW_IR
+     27          #if USE_KEDIR && ((USE_KEDIR_TYPE == KEDIR_KEY_IR_LED) || (USE_KEDIR_TYPE == KEDIR_KEY_IR))
+     28          #pragma optimize=no_inline
+     29          bool kedir_pause(void)
+     30          {
+     31          	bool tmp;
+     32          	tmp = ir_state;
+     33          	return tmp;
+     34          }
+     35          
+     36          #pragma optimize=no_inline
+     37          // !!! ¥À∫Øîµ»Ùﬂ^Ï∂èÕÎs, ’àreturn 2 !!!
+     38          void kedir_resume(void)
+     39          {
+     40          
+     41          }
+     42          #else
+     43          #pragma optimize=no_inline
+     44          bool kedir_pause(void)
+     45          {
+     46          	bool tmp;
+     47          	//KEDIR_LED_ON();
+     48          	IE_EA = 0;
+     49          	tmp = (ir_state & 0x3F) == 0;
+     50          	if(tmp)
+     51          		ir_state |= 0x80;
+     52          	IE_EA = 1;
+     53          	return tmp;
+     54          }
+     55          
+     56          #pragma optimize=no_inline
+     57          // !!! ¥À∫Øîµ»Ùﬂ^Ï∂èÕÎs, ’àreturn 2 !!!
+     58          void kedir_resume(void)
+     59          {
+     60          	//KEDIR_LED_OFF();
+     61          	ir_state &= ~0x80;
+     62          }
+     63          #endif
+     64          #endif
+     65          
+     66          
+     67          #pragma location="SCAN_COM"
+     68          void key_keidr_scan(void)
+     69          {
+     70          #if 1 //USE_TOPKEY
+     71          	if(kedir_pause())
+     72          	{
+     73          		scan_ctl.kedir_ch = ADC_TOP;
+     74          		KEDIR_ENABLE_EOC();
+     75          #if ((USE_KEDIR_TYPE == KEDIR_KEY_IR_LED) || (USE_KEDIR_TYPE == KEDIR_KEY_LED)|| (USE_KEDIR_TYPE == KEDIR_IR_LED))
+     76          #ifdef AX207X_TAG
+     77          		if(DCN == 0x00)
+     78          		{
+     79          			KEDIR_SCAN_TOPB_1();
+     80          		}
+     81          		else
+     82          #endif
+     83          		{
+     84          			KEDIR_SCAN_TOPB();
+     85          		}
+     86          #else
+     87          #ifdef AX207X_TAG
+     88          		if(DCN == 0x00)
+     89          		{
+     90          			KEDIR_SCAN_TOPO_1();
+     91          		}
+     92          		else
+     93          #endif
+     94          		{
+     95          			KEDIR_SCAN_TOPO();
+     96          		}
+     97          #endif
+     98          	}
+     99          	else
+    100          #endif
+    101          	{
+    102          		scan_ctl.kedir_ch = ADC_BIG;
+    103          		KEDIR_ENABLE_EOC();
+    104          	}
+    105          }
+    106          
+    107          void kedir_init(void)
+    108          {
+    109          	KEDIR_PDIR &= ~BIT(KEDIR_BIT);
+    110          	KEDIR_P &= ~BIT(KEDIR_BIT);
+    111          
+    112          	LEDCYCLE = 0x31; //20k
+    113          	LEDADC   = 5;
+    114          	LEDHIGH  = 0x18; //high pulse
+    115          	ADCBAUD = 11;                            //KEDIR“™«ÛÀŸ∂»∫‹øÏ,µ´µ»”⁄2 ±ª·”∞œÏADKEY
+    116          	ADCCON = BIT(3) | ADKEDIR_CHAN;         //ADC_CONV, ADC_EN;
+    117          	LEDCON2 = 0x04 | (KEDIR_PORT << 3);     //mix IO, AMUX enable
+    118          
+    119          	LEDTRIM &= ~(BIT(6) | BIT(5) | BIT(4));
+    120          #if SRAM_DEBUG
+    121          	LEDTRIM |= (LED_TRIM & 0x70);
+    122          #else
+    123          	LEDTRIM |= (*(u8 __code *)(0x7ff7) & 0x70);
+    124          #endif
+    125          
+    126          	KEDIR_DISABLE_TOP();
+    127          #ifdef AX207X_TAG
+    128          	if(DCN == 0x00)
+    129          	{
+    130          		KEDIR_DISABLE_BIG_1();
+    131          		KEDIR_DISABLE_TINY_1();
+    132          	}
+    133          	else
+    134          #endif
+    135          	{
+    136          		KEDIR_DISABLE_BIG();
+    137          		KEDIR_DISABLE_TINY();
+    138          	}
+    139          
+    140          	KEDIR_ENABLE_EOC();
+    141          	asm("setb 0xBA");
+    142          	IE_TM1 = 1;                             // EOC≈cTimer1èÕ”√÷–î‡
+    143          	KEDIR_ADCGO();
+    144          
+    145          	KEDIR_CLEAR();
+    146          	KEDIR_ENABLE_KEY();
+    147          #if ((USE_KEDIR_TYPE == KEDIR_KEY_IR_LED) || (USE_KEDIR_TYPE == KEDIR_KEY_LED) || (USE_KEDIR_TYPE == KEDIR_IR_LED))
+    148          	KEDIR_ENABLE_LED();
+    149          #else
+    150          	KEDIR_LED_OFF();
+    151          #endif
+    152          
+    153          }
+    154          
+    155          #endif
+    156          
+    157          #if USE_KEDIR || USE_IR
+    158          #pragma vector = VECTOR_OFFSET(TIMER1_INT)
+    159          #pragma register_bank=2
+    160          #pragma location="INTERRUPT"
+    161          __interrupt void timer1_kedir_isr(void)
+    162          {
+    163          	ISR_ENTER();
+    164          
+    165          #if USE_IR
+    166          #if USE_HW_IR
+    167          	if(IRCON & BIT(2))
+    168          	{
+    169          		IRCON &= ~BIT(2);
+    170          		ir_key_sta = 1;
+    171          		if(IRCON & BIT(3))
+    172          		{
+    173          			if(repeat_cnt<255)   //÷ÿ∏¥¬Î
+    174          			{
+    175          				repeat_cnt++;
+    176          			}
+    177          		}
+    178          		else
+    179          		{
+    180          			repeat_cnt = 0;
+    181          		}
+    182          
+    183          		if(repeat_cnt != 1)      //Ω” ’µΩµ⁄“ª∏ˆ÷ÿ∏¥¬Î≤ª∂¡»° ˝æ›
+    184          		{
+    185          			ir_cnt = 0;
+    186          			ir_data = IRDAT2;
+    187          			ir_code = IRDAT1;
+    188          			u8 temp = IRDAT0;
+    189          			ir_code = (ir_code<<8) | temp;
+    190          		}
+    191          		else if(ir_cnt == IR_TIMEOUT_CNT)   //µ±Ãß∆“ª∏ˆº¸¬Ì…œ∞¥œ¬¡ÌÕ‚“ª∏ˆº¸ ±£¨»Ù»´¬Î ˝æ›¥ÌŒÛ£¨∫Û√Êµƒ÷ÿ∏¥¬Î»´≤ø≤ª¥¶¿Ì
+    192          		{
+    193          			repeat_cnt = 0;
+    194          		}
+    195          	}
+    196          #else
+    197          	if(TMR1CON1 & 0xc0)
+    198          	{
+    199          		ir_cap_isr();
+    200          	}
+    201          #endif
+    202          #endif
+    203          
+    204          
+    205          #if USE_KEDIR
+    206          	if(LEDCON1 & BIT(3))    //ADC sample finish pending
+    207          	{
+    208          		LEDCON1 &= ~BIT(3);
+    209          
+    210          #if SRAM_DEBUG
+    211          		scan_ctl.kedir_ch = kedir_process_sram(scan_ctl.kedir_ch);
+    212          #else
+    213          		scan_ctl.kedir_ch = kedir_process(scan_ctl.kedir_ch);
+    214          #ifdef AX107X_TAG
+    215          #if ((USE_KEDIR_TYPE == KEDIR_KEY)||(USE_KEDIR_TYPE == KEDIR_KEY_IR))
+    216          		if(scan_ctl.kedir_ch == ADC_BIG)
+    217          		{
+    218          			KEDIR_ENABLE_BIG();
+    219          		}
+    220          #endif
+    221          #endif
+    222          #endif
+    223          	}
+    224          #endif
+    225          
+    226          	ISR_EXIT();
+    227          }
+    228          #endif
+
+
+   Segment part sizes:
+
+     Function/Label Bytes
+     -------------- -----
+
+ 
+ 
+ 0 bytes of memory
+
+Errors: none
+Warnings: none

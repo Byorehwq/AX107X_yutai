@@ -1,0 +1,1596 @@
+##############################################################################
+#                                                                            #
+# IAR 8051 C/C++ Compiler V7.20H/W32                   10/Sep/2015  19:03:27 #
+# Copyright 2004-2006 IAR Systems. All rights reserved.                      #
+#                                                                            #
+#    Core               =  plain                                             #
+#    Code model         =  near                                              #
+#    Data model         =  large                                             #
+#    Calling convention =  extended stack reentrant                          #
+#    Constant location  =  code                                              #
+#    Extended stack     =  enabled                                           #
+#    Dptr setup         =  1,16                                              #
+#    Source file        =  C:\Documents and Settings\Administrator\◊¿√Ê\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\module\dac.c                          #
+#    Command line       =  -I "C:\Program Files\IAR Systems\Embedded         #
+#                          Workbench 4.05 Evaluation version\8051\INC\" -I   #
+#                          "C:\Program Files\IAR Systems\Embedded Workbench  #
+#                          4.05 Evaluation version\8051\INC\CLIB\" -I        #
+#                          "C:\Documents and Settings\Administrator\◊¿√Ê\lil #
+#                          y\15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX1 #
+#                          070_20150908\COMMON\" -I "C:\Documents and        #
+#                          Settings\Administrator\◊¿√Ê\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\INC\" #
+#                           -I "C:\Documents and Settings\Administrator\◊¿√Ê #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\config\" -I "C:\Documents and    #
+#                          Settings\Administrator\◊¿√Ê\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\api\" #
+#                           -I "C:\Documents and Settings\Administrator\◊¿√Ê #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\fm\" -I "C:\Documents and        #
+#                          Settings\Administrator\◊¿√Ê\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\fat\" #
+#                           -I "C:\Documents and Settings\Administrator\◊¿√Ê #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\display\" -I "C:\Documents and   #
+#                          Settings\Administrator\◊¿√Ê\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\displ #
+#                          ay\led\" -I "C:\Documents and                     #
+#                          Settings\Administrator\◊¿√Ê\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\displ #
+#                          ay\lcd\" -I "C:\Documents and                     #
+#                          Settings\Administrator\◊¿√Ê\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\task\ #
+#                          " -I "C:\Documents and Settings\Administrator\◊¿√ #
+#                          Ê\lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lil #
+#                          y_AX1070_20150908\user\" -I "C:\Documents and     #
+#                          Settings\Administrator\◊¿√Ê\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\mem\" #
+#                           -I "C:\Documents and Settings\Administrator\◊¿√Ê #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\module\" -I "C:\Documents and    #
+#                          Settings\Administrator\◊¿√Ê\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\modul #
+#                          e\kedir\" -I "C:\Documents and                    #
+#                          Settings\Administrator\◊¿√Ê\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\key\" #
+#                           -I "C:\Documents and Settings\Administrator\◊¿√Ê #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\startmusic\" -D UART_DEBUG -D    #
+#                          AX207X_TAG -lC "C:\Documents and                  #
+#                          Settings\Administrator\◊¿√Ê\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\UART_ #
+#                          Debug\List\" -o "C:\Documents and                 #
+#                          Settings\Administrator\◊¿√Ê\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\UART_ #
+#                          Debug\Obj\" -e -z9 --debug --core=plain           #
+#                          --dptr=16,1 --data_model=large --code_model=near  #
+#                          --calling_convention=ext_stack_reentrant          #
+#                          --place_constants=code --nr_virtual_regs 20       #
+#                          --extended_stack "C:\Documents and                #
+#                          Settings\Administrator\◊¿√Ê\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\modul #
+#                          e\dac.c"                                          #
+#    List file          =  C:\Documents and Settings\Administrator\◊¿√Ê\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\UART_Debug\List\dac.lst               #
+#    Object file        =  C:\Documents and Settings\Administrator\◊¿√Ê\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\UART_Debug\Obj\dac.r51                #
+#                                                                            #
+#                                                                            #
+##############################################################################
+
+C:\Documents and Settings\Administrator\◊¿√Ê\lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX1070_20150908\module\dac.c
+      1          /*****************************************************************************
+      2           * Module    : Module
+      3           * File      : dac.c
+      4           * Author    : jingfa
+      5           * Email     :
+      6           * Function  : DACœ‡πÿ≈‰÷√
+      7           *****************************************************************************/
+      8          #include "include.h"
+
+   \                                 In segment SFR_AN, at 0xb1
+   \   unsigned char volatile __sfr KVCCON
+   \                     KVCCON:
+   \   000000                DS 1
+
+   \                                 In segment SFR_AN, at 0xb2
+   \   unsigned char volatile __sfr KVCCON2
+   \                     KVCCON2:
+   \   000000                DS 1
+
+   \                                 In segment SFR_AN, at 0xb3
+   \   unsigned char volatile __sfr KVCADR
+   \                     KVCADR:
+   \   000000                DS 1
+
+   \                                 In segment SFR_AN, at 0xc9
+   \   unsigned char volatile __sfr PCON1
+   \                     PCON1:
+   \   000000                DS 1
+
+   \                                 In segment SFR_AN, at 0xd9
+   \   unsigned char volatile __sfr AUCON10
+   \                     AUCON10:
+   \   000000                DS 1
+
+   \                                 In segment SFR_AN, at 0xe8
+   \   unsigned char volatile __sfr AUCON0
+   \                     AUCON0:
+   \   000000                DS 1
+
+   \                                 In segment SFR_AN, at 0xed
+   \   unsigned char volatile __sfr AUCON5
+   \                     AUCON5:
+   \   000000                DS 1
+
+   \                                 In segment SFR_AN, at 0xef
+   \   unsigned char volatile __sfr AUCON7
+   \                     AUCON7:
+   \   000000                DS 1
+
+   \                                 In segment SFR_AN, at 0xf7
+   \   unsigned char volatile __sfr WDTCON
+   \                     WDTCON:
+   \   000000                DS 1
+      9          #include "dac.h"
+     10          
+     11          #pragma constseg="USER_SETTING_CONST"
+     12          #ifdef AX207X_TAG
+
+   \                                 In segment USER_SETTING_CONST, align 1
+     13          IAR_CONST u8 tbl_anlvol[VOLUME_MAX+1] =
+   \                     tbl_anlvol:
+   \   000000   00111C22     DB 0, 17, 28, 34, 38, 40, 43, 46, 48, 49, 50, 52, 53, 55, 57, 60, 61
+   \            26282B2E
+   \            30313234
+   \            3537393C
+   \            3D      
+     14          {
+     15          	//»°÷µ∑∂Œß£∫(60-60) ~ (60+5),π≤66∏ˆ÷µ;
+     16          	//Àµ√˜£∫÷µ(60-60)∂‘”¶“Ù¡ø-60dB; 60∂‘”¶“Ù¡ø0dB;
+     17          	60-60, 60-43, 60-32, 60-26, 60-22, 60-20, 60-17, 60-14,
+     18          	60-12, 60-11, 60-10, 60-8, 60-7,   60-5,  60-3,  60,    60+1
+     19          };
+     20          #else
+     21          IAR_CONST u8 tbl_anlvol[VOLUME_MAX+1] =
+     22          {
+     23          	//»°÷µ∑∂Œß£∫(60-60) ~ (60+5),π≤66∏ˆ÷µ;
+     24          	//Àµ√˜£∫÷µ(60-60)∂‘”¶“Ù¡ø-60dB; 60∂‘”¶“Ù¡ø0dB;
+     25          	60-60, 60-42, 60-31, 60-25, 60-21, 60-19, 60-16, 60-13,
+     26          	60-11, 60-10, 60-9, 60-7, 60-6,   60-4,  60-2,  60+1,    60+2
+     27          };
+     28          #endif
+     29          #pragma constseg=default
+     30          
+     31          
+     32          #if DAC_POWER_SPEED
+     33          
+     34          IAR_DATA_A type_dac_init_ctl dac_init_ctl;
+     35          //DACƒ£ƒ‚≤ø∑÷≥ı ºªØ∫Ø ˝£¨÷–∂œ÷–∑÷≤ΩÕÍ≥…DAC≥ı ºªØ£¨…œµÁÀŸ∂»Ã·…˝
+     36          #pragma location="DAC_INIT"
+     37          void dac_init_process(void)
+     38          {
+     39          	u8 i;
+     40          
+     41          	switch(dac_init_ctl.sta)
+     42          	{
+     43          	case DAC_INIT_START:
+     44          #if (DAC_INIT_TYPE == DAC_SIMPLE)
+     45          #if VDDHP_VDDIO_SHT
+     46          		//VDDHP∫ÕVDDIO∂ÃΩ” ±
+     47          		DACACON3 = 0x2A;             //en VCMIR(bit3)
+     48          		DACACON2 = 0x63;             //dis VDDHP POWER(bit7)
+     49          		DACACON1 = 0x4C;
+     50          #else
+     51          		DACACON1 = 0x4C;
+     52          		DACACON2 = 0xe3;
+     53          		DACACON3 = 0x22;
+     54          #endif
+     55          		DACACON5=0xF8;
+     56          #if USE_MULTI_BIT_DAC
+     57          		DACACON7 |= BIT(0);
+     58          		at_write(DACCFG, 0x09);
+     59          #else
+     60          		at_write(DACCFG, 0x01);
+     61          #endif
+     62          		at_write(DACVCON, 0x07);    //dig_vol step 8
+     63          		at_write(DACVOLH, 0x00);
+     64          		at_write(DACVOLL, 0x00);
+     65          
+     66          		DACACON1 |= BIT(4);         //enable DACTCMP
+     67          #else
+     68          #if VDDHP_VDDIO_SHT
+     69          		//VDDHP∫ÕVDDIO∂ÃΩ” ±
+     70          		DACACON3 |=BIT(3);          //en VCMIR(bit3)
+     71          		DACACON2 = 0x62;            //dis VDDHP(bit7)
+     72          		DACACON1 = 0x4C;
+     73          #else
+     74          		DACACON1 = 0x4C;
+     75          		DACACON2 = 0xe2;
+     76          #endif
+     77          		//DACACON3 &= ~(BIT(5) | BIT(4));            //DTC=00
+     78          		DACACON4 |= BIT(3);         //enalble VCM_INT
+     79          #if USE_MULTI_BIT_DAC
+     80          		DACACON7 |= BIT(0);
+     81          #if (DAC_INIT_TYPE == DAC_VCM_NO_CAP)
+     82          		DACACON7 |= BIT(1);
+     83          		DACACON3 |=BIT(3);          //en VCMIR(bit3)
+     84          		DACACON4 |=BIT(2);
+     85          		/*DACACON4[2] «”√¿¥—°‘ÒVCMµÁ—πµƒ£¨µ±DACACON3[3]÷√1 ±£¨
+     86          		»Áπ˚DACACON4[2]=0£¨‘ÚVCM~=1.29£ª
+     87          		»Áπ˚DACACON4[2]=1£¨‘ÚVCM~=1.365£ª
+     88          		Œ™¡ÀÃ·∏ﬂDACµƒ ‰≥ˆ∑˘∂»∫Õ–‘ƒ‹£¨ø…“‘Ω´’‚“ªbit…Ë1£¨
+     89          		Œ™¡ÀΩµµÕ◊ÓµÕø…π§◊˜µÁ—π£¨ø…“‘Ω´’‚“ªbit…Ë0. */
+     90          #endif
+     91          		at_write(DACCFG, 0x09);
+     92          #else
+     93          		at_write(DACCFG, 0x01);
+     94          #endif
+     95          		AUCON10 = 0x10;            //32 samples
+     96          		AUCON0 = 0x06;
+     97          		for(i=0; i<68; i++)
+     98          		{
+     99          			while(!(AUCON7 & 0x80));
+    100          			AUCON5 = 0xff;
+    101          			AUCON5 = 0x7f;
+    102          		}
+    103          #endif
+    104          		dac_init_ctl.sta++;
+    105          		break;
+    106          
+    107          	case 1:
+    108          #if (DAC_INIT_TYPE == DAC_SIMPLE)
+    109          		dac_init_ctl.delay_count++;
+    110          		if(dac_init_ctl.delay_count == 125)
+    111          		{
+    112          			at_write(TRIMCON1, 0x05);  //decrease 1 step 1 sample
+    113          			at_write(TRIMCON2, 0x01);
+    114          			dac_init_ctl.sta++;
+    115          		}
+    116          #else
+    117          		DACACON2 |= BIT(2);         //enalble EN_PD
+    118          		at_write(DACVCON, 0x05);    //dig_vol step 2
+    119          		at_write(DACVOLH, 0x00);
+    120          		at_write(DACVOLL, 0x00);
+    121          		dac_init_ctl.sta++;
+    122          #endif
+    123          		break;
+    124          
+    125          	case 2:
+    126          #if (DAC_INIT_TYPE == DAC_SIMPLE)
+    127          		if(at_read(TRIMCON2)&BIT(1))
+    128          		{
+    129          			DACACON1 &= ~BIT(4);         //disable DACTCMP
+    130          #ifdef AX207X_TAG
+    131          			dac_get_trim();
+    132          #endif
+    133          			//fade out anl_vol & mute
+    134          			b_dac.digvol_en = 0;
+    135          			dac_ctl.anl_volcur = 65;
+    136          #if DAC_FADE_EN
+    137          			dac_fade_out();
+    138          #endif
+    139          			dac_init_ctl.sta = 10;
+    140          			//dac_init_ctl.sta = DAC_INIT_END;
+    141          		}
+    142          #else
+    143          		if(at_read(DACVOLL) & 0x80)
+    144          		{
+    145          			AUCON10 = 0x10;            //32 samples
+    146          			AUCON0 = 0x06;
+    147          			for(i=0; i<68; i++)
+    148          			{
+    149          				while(!(AUCON7 & 0x80));
+    150          				AUCON5 = 0x00;
+    151          				AUCON5 = 0x80;
+    152          			}
+    153          
+    154          			dac_init_ctl.sta++;
+    155          		}
+    156          #endif
+    157          		break;
+    158          #if (DAC_INIT_TYPE != DAC_SIMPLE)
+    159          	case 3:
+    160          		at_write(DACVCON, 0x05);    //dig_vol step 2
+    161          		at_write(DACVOLH, 0xFF);
+    162          		at_write(DACVOLL, 0x7F);
+    163          
+    164          		dac_init_ctl.sta++;
+    165          		break;
+    166          
+    167          	case 4:
+    168          		if(at_read(DACVOLL) & 0x80)
+    169          		{
+    170          			dac_init_ctl.delay_count = 0;
+    171          
+    172          			dac_init_ctl.sta++;
+    173          		}
+    174          		break;
+    175          
+    176          	case 5:
+    177          		dac_init_ctl.delay_count++;
+    178          		if(dac_init_ctl.delay_count == 25)      //25*2ms=50ms
+    179          		{
+    180          			//tie output to ground
+    181          			DACACON2 |= BIT(3);         //enable EN_POPS
+    182          			DACACON4 &= ~BIT(3);        //disable VCM_INT
+    183          
+    184          #if (DAC_INIT_TYPE == DAC_VCM_WITH_CAP)
+    185          			//for VCM with external cap
+    186          			DACACON2 &= ~BIT(2);         //disalble EN_PD
+    187          			AUCON10 = 0x10;            //32 samples
+    188          			AUCON0 = 0x06;
+    189          			for(i=0; i<68; i++)
+    190          			{
+    191          				while(!(AUCON7 & 0x80));
+    192          				AUCON5 = 0x00;
+    193          				AUCON5 = 0x00;
+    194          			}
+    195          			DACACON2 &= ~BIT(5); //disable VCM
+    196          			DACACON2 &= ~BIT(1); //disable LPF
+    197          
+    198          			dac_init_ctl.sta = 16;
+    199          #else
+    200          			//for no VCM cap
+    201          			DACACON5=0xfd;              //anl_vol
+    202          			DACACON2 &= ~BIT(2);        //disable EN_PD
+    203          			dac_init_ctl.sta++;
+    204          #endif
+    205          		}
+    206          		break;
+    207          
+    208          #if (DAC_INIT_TYPE == DAC_VCM_WITH_CAP)
+    209          	case 16:
+    210          		DACACON1 &= ~BIT(6); //disable DAC
+    211          		DACACON1 |= BIT(7); //enable HP MUTE
+    212          		DACACON2 |= BIT(0); //enable HP
+    213          
+    214          		dac_init_ctl.delay_count = 0;
+    215          		dac_init_ctl.sta++;
+    216          		break;
+    217          
+    218          	case 17:
+    219          		dac_init_ctl.delay_count++;
+    220          		if(dac_init_ctl.delay_count == 5)
+    221          		{
+    222          			DACACON2 &= ~BIT(3);        //disable EN_POPS
+    223          			DACACON2 |= BIT(5); //enable VCM
+    224          
+    225          			dac_init_ctl.delay_count = 0;
+    226          			dac_init_ctl.sta++;
+    227          		}
+    228          		break;
+    229          
+    230          	case 18:
+    231          		dac_init_ctl.delay_count++;
+    232          		if(dac_init_ctl.delay_count == 125)
+    233          		{
+    234          			DACACON1 |= BIT(6); //enable DAC
+    235          			DACACON2 |= BIT(1); //ensable LPF
+    236          			DACACON1 |= BIT(4);         //enable DACTCMP
+    237          
+    238          			dac_init_ctl.sta++;
+    239          		}
+    240          		break;
+    241          
+    242          	case 19:
+    243          		at_write(TRIMCON1, 0x05);  //decrease 1 step 1 sample
+    244          		at_write(TRIMCON2, 0x01);
+    245          
+    246          		dac_init_ctl.sta = 9;
+    247          		break;
+    248          #else
+    249          	case 6:
+    250          		DACACON2 |= BIT(0);         //enalble EN_HP
+    251          		DACACON1 |= BIT(4);         //enable DACTCMP
+    252          
+    253          		dac_init_ctl.sta++;
+    254          		break;
+    255          
+    256          	case 7:
+    257          		DACACON2 &= ~BIT(3);        //disable EN_POPS
+    258          
+    259          		at_write(DACVCON, 0x07);    //dig_vol step 8
+    260          		at_write(DACVOLH, 0x00);
+    261          		at_write(DACVOLL, 0x00);
+    262          
+    263          		dac_init_ctl.sta++;
+    264          		break;
+    265          
+    266          	case 8:
+    267          		if(at_read(DACVOLL) & 0x80)
+    268          		{
+    269          			at_write(TRIMCON1, 0x05);  //decrease 1 step 1 sample
+    270          			at_write(TRIMCON2, 0x01);
+    271          
+    272          			dac_init_ctl.sta++;
+    273          		}
+    274          		break;
+    275          #endif
+    276          
+    277          	case 9:
+    278          		if(at_read(TRIMCON2)&BIT(1))
+    279          		{
+    280          			DACACON1 &= ~BIT(4);         //disable DACTCMP
+    281          #ifdef AX207X_TAG
+    282          			dac_get_trim();
+    283          #endif
+    284          			//fade out anl_vol & mute
+    285          			b_dac.digvol_en = 0;
+    286          			dac_ctl.anl_volcur = 65;
+    287          #if DAC_FADE_EN
+    288          			dac_fade_out();
+    289          #endif
+    290          			dac_init_ctl.sta++;
+    291          		}
+    292          		break;
+    293          #endif
+    294          
+    295          	case 10:
+    296          #if DAC_FADE_EN
+    297          		if(!dac_fade_busy())
+    298          #endif
+    299          		{
+    300          			dac_init_ctl.sta = DAC_INIT_END;
+    301          		}
+    302          		break;
+    303          	default:
+    304          		break;
+    305          	}
+    306          #if (USER_SEL == USER_AX2075_DEMO)
+    307          	//”“…˘µ¿ªÏ∫œµΩ◊Û…˘µ¿ ‰≥ˆ
+    308          	at_write(DACLRMIX0, 64);
+    309          	at_write(DACLRMIX1, 64);
+    310          #else
+    311          #if DACR_ONLY
+    312          	/*DAC right channel output only,
+    313          	meanwhile,left channel can be used as GPIO controlled by P45*/
+    314          	if(dac_init_ctl.sta == DAC_INIT_END)
+    315          	{
+    316          #ifdef AX207X_TAG
+    317          		dac_channel_disconnect();
+    318          #endif
+    319          		DACACON4 |= BIT(1);//DACROUTONLY
+    320          
+    321          		at_write(DACLRMIX2, 64);
+    322          		at_write(DACLRMIX3, 64);
+    323          	}
+    324          #endif
+    325          #endif
+    326          }
+    327          
+    328          #else
+    329          
+    330          #pragma location="DAC_INIT"
+
+   \                                 In segment DAC_INIT, align 1, keep-with-next
+    331          void outbuf_trim_dac(u16 dig_vol)
+   \                     outbuf_trim_dac:
+    332          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    333          	u8 i;
+    334          	AUCON10 = 0x10;            //32 samples
+   \   000000   75D910       MOV     0xd9,#0x10
+    335          	AUCON0 = 0x06;
+   \   000003   75E806       MOV     0xe8,#0x6
+    336          	for(i=0; i<68; i++)
+   \   000006   7C44         MOV     R4,#0x44
+    337          	{
+    338          		while(!(AUCON7 & 0x80));
+   \                     ??outbuf_trim_dac_0:
+   \   000008   E5EF         MOV     A,0xef
+   \   00000A   A2E7         MOV     C,0xE0 /* A   */.7
+   \   00000C   50FA         JNC     ??outbuf_trim_dac_0
+    339          		AUCON5 = (u8)dig_vol;
+   \   00000E   EA           MOV     A,R2
+   \   00000F   F5ED         MOV     0xed,A
+    340          		AUCON5 = (u8)(dig_vol >> 8);
+   \   000011   EB           MOV     A,R3
+   \   000012   F5ED         MOV     0xed,A
+    341          	}
+   \   000014   1C           DEC     R4
+   \   000015   EC           MOV     A,R4
+   \   000016   70F0         JNZ     ??outbuf_trim_dac_0
+    342          	delay_5ms(1);
+   \   000018                ; Setup parameters for call to function delay_5ms
+   \   000018                REQUIRE ?Subroutine9
+   \   000018                ; // Fall through to label ?Subroutine9
+    343          }
+
+   \                                 In segment DAC_INIT, align 1, keep-with-next
+   \                     ?Subroutine9:
+   \   000000   7901         MOV     R1,#0x1
+   \   000002   12....       LCALL   delay_5ms
+   \   000005   22           RET
+    344          
+    345          //DAC…œµÁ≥ı ºªØ≈‰÷√,—” ±µ»¥˝DAC≥ı ºªØÕÍ≥…£¨”∞œÏ…œµÁ ±º‰£¨µ´ °¥˙¬Î
+    346          #pragma location="DAC_INIT"
+
+   \                                 In segment DAC_INIT, align 1, keep-with-next
+    347          void dac_power_on(void)
+   \                     dac_power_on:
+    348          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    349          #if (DAC_INIT_TYPE == DAC_SIMPLE)
+    350          #if VDDHP_VDDIO_SHT
+    351          	//VDDHP∫ÕVDDIO∂ÃΩ” ±
+    352          	DACACON3 = 0x2A;             //en VCMIR(bit3)
+    353          	DACACON2 = 0x63;             //dis VDDHP POWER(bit7)
+    354          	DACACON1 = 0x4C;
+    355          #else
+    356          	DACACON1 = 0x4C;
+    357          	DACACON2 = 0xe3;
+    358          	DACACON3 = 0x22;
+    359          #endif
+    360          	DACACON5 = 0xF8;
+    361          #if USE_MULTI_BIT_DAC
+    362          	DACACON7 |= BIT(0);
+    363          	at_write(DACCFG, 0x09);
+    364          #else
+    365          	at_write(DACCFG, 0x01);
+    366          #endif
+    367          	at_write(DACVCON, 0x07);    //dig_vol step 2
+    368          	at_write(DACVOLH, 0x00);
+    369          	at_write(DACVOLL, 0x00);
+    370          	DACACON1 |= BIT(4);         //enable DACTCMP
+    371          	delay_5ms(50);
+    372          	at_write(TRIMCON1, 0x05);   //decrease 1 step 1 sample
+    373          	at_write(TRIMCON2, 0x01);
+    374          	while(!(at_read(TRIMCON2) & BIT(1)));
+    375          	DACACON1 &= ~BIT(4);         //disable DACTCMP
+    376          #ifdef AX207X_TAG
+    377          	dac_get_trim();
+    378          #endif
+    379          	//fade out anl_vol & mute
+    380          	b_dac.digvol_en = 0;
+    381          	dac_ctl.anl_volcur = 65;
+    382          #if DAC_FADE_EN
+    383          	dac_fade_out();
+    384          	dac_fade_wait();
+    385          #endif
+    386          #else
+    387          #if VDDHP_VDDIO_SHT
+    388          	//VDDHP∫ÕVDDIO∂ÃΩ” ±
+    389          	DACACON3 |=BIT(3);          //en VCMIR(bit3)
+    390          	DACACON2 = 0x62;            //dis VDDHP(bit7)
+    391          	DACACON1 = 0x4C;
+    392          #else
+    393          	DACACON1 = 0x4C;
+   \   000000   744C         MOV     A,#0x4c
+   \   000002   903052       MOV     DPTR,#0x3052
+   \   000005   F0           MOVX    @DPTR,A
+    394          	DACACON2 = 0xe2;
+   \   000006   74E2         MOV     A,#-0x1e
+   \   000008   903053       MOV     DPTR,#0x3053
+   \   00000B   F0           MOVX    @DPTR,A
+    395          #endif
+    396          	//DACACON3 &= ~(BIT(5) | BIT(4));            //DTC=00
+    397          	DACACON4 |= BIT(3);         //enalble VCM_INT
+   \   00000C   903059       MOV     DPTR,#0x3059
+   \   00000F   E0           MOVX    A,@DPTR
+   \   000010   D2E3         SETB    0xE0 /* A   */.3
+   \   000012   12....       LCALL   ?Subroutine5
+    398          #if USE_MULTI_BIT_DAC
+    399          	DACACON7 |= BIT(0);
+    400          #if (DAC_INIT_TYPE == DAC_VCM_NO_CAP)
+    401          	DACACON7 |= BIT(1);
+    402          	DACACON3 |=BIT(3);          //en VCMIR(bit3)
+    403          	DACACON4 |=BIT(2);
+    404          	/*DACACON4[2] «”√¿¥—°‘ÒVCMµÁ—πµƒ£¨µ±DACACON3[3]÷√1 ±£¨
+    405          	»Áπ˚DACACON4[2]=0£¨‘ÚVCM~=1.29£ª
+    406          	»Áπ˚DACACON4[2]=1£¨‘ÚVCM~=1.365£ª
+    407          	Œ™¡ÀÃ·∏ﬂDACµƒ ‰≥ˆ∑˘∂»∫Õ–‘ƒ‹£¨ø…“‘Ω´’‚“ªbit…Ë1£¨
+    408          	Œ™¡ÀΩµµÕ◊ÓµÕø…π§◊˜µÁ—π£¨ø…“‘Ω´’‚“ªbit…Ë0. */
+    409          #endif
+    410          	at_write(DACCFG, 0x09);
+    411          #else
+    412          	at_write(DACCFG, 0x01);
+    413          #endif
+    414          	outbuf_trim_dac(0x7fff);
+   \                     ??CrossCallReturnLabel_4:
+   \   000015                ; Setup parameters for call to function outbuf_trim_dac
+   \   000015   7AFF         MOV     R2,#-0x1
+   \   000017   7B7F         MOV     R3,#0x7f
+   \   000019   12....       LCALL   outbuf_trim_dac
+    415          
+    416          	DACACON2 |= BIT(2);         //enalble EN_PD
+   \   00001C   903053       MOV     DPTR,#0x3053
+   \   00001F   E0           MOVX    A,@DPTR
+   \   000020   D2E2         SETB    0xE0 /* A   */.2
+   \   000022   F0           MOVX    @DPTR,A
+    417          
+    418          	at_write(DACVCON, 0x05);    //dig_vol step 2
+   \   000023                ; Setup parameters for call to function at_write
+   \   000023   7A05         MOV     R2,#0x5
+   \   000025   12....       LCALL   ?Subroutine0
+    419          	at_write(DACVOLH, 0x00);
+    420          	at_write(DACVOLL, 0x00);
+    421          	while(!(at_read(DACVOLL) & 0x80));
+   \                     ??CrossCallReturnLabel_0:
+   \   000028                ; Setup parameters for call to function at_read
+   \   000028   12....       LCALL   ?Subroutine6
+   \                     ??CrossCallReturnLabel_6:
+   \   00002B   50FB         JNC     ??CrossCallReturnLabel_0
+    422          
+    423          	outbuf_trim_dac(0x8000);
+   \   00002D                ; Setup parameters for call to function outbuf_trim_dac
+   \   00002D   7A00         MOV     R2,#0x0
+   \   00002F   7B80         MOV     R3,#-0x80
+   \   000031   12....       LCALL   outbuf_trim_dac
+    424          
+    425          	at_write(DACVCON, 0x05);    //dig_vol step 2
+   \   000034                ; Setup parameters for call to function at_write
+   \   000034   7A05         MOV     R2,#0x5
+   \   000036   7904         MOV     R1,#0x4
+   \   000038   12....       LCALL   at_write
+    426          	at_write(DACVOLH, 0xFF);
+   \   00003B                ; Setup parameters for call to function at_write
+   \   00003B   7AFF         MOV     R2,#-0x1
+   \   00003D   7903         MOV     R1,#0x3
+   \   00003F   12....       LCALL   at_write
+    427          	at_write(DACVOLL, 0x7F);
+   \   000042                ; Setup parameters for call to function at_write
+   \   000042   7A7F         MOV     R2,#0x7f
+   \   000044   7902         MOV     R1,#0x2
+   \   000046   12....       LCALL   at_write
+    428          	while(!(at_read(DACVOLL) & 0x80));
+   \                     ??dac_power_on_0:
+   \   000049                ; Setup parameters for call to function at_read
+   \   000049   12....       LCALL   ?Subroutine6
+   \                     ??CrossCallReturnLabel_7:
+   \   00004C   50FB         JNC     ??dac_power_on_0
+    429          
+    430          	delay_5ms(11);
+   \   00004E                ; Setup parameters for call to function delay_5ms
+   \   00004E   790B         MOV     R1,#0xb
+   \   000050   12....       LCALL   ?Subroutine2
+    431          	DACACON2 |= BIT(3);         //enable EN_POPS
+   \                     ??CrossCallReturnLabel_15:
+   \   000053   D2E3         SETB    0xE0 /* A   */.3
+   \   000055   F0           MOVX    @DPTR,A
+    432          	DACACON4 &= ~BIT(3);        //disable VCM_INT
+   \   000056   903059       MOV     DPTR,#0x3059
+   \   000059   E0           MOVX    A,@DPTR
+   \   00005A   C2E3         CLR     0xE0 /* A   */.3
+   \   00005C   12....       LCALL   ??Subroutine3_0
+    433          #if (DAC_INIT_TYPE == DAC_VCM_WITH_CAP)
+    434          	//for VCM with external cap
+    435          	DACACON2 &= ~BIT(2);         //disalble EN_PD
+   \                     ??CrossCallReturnLabel_20:
+   \   00005F   C2E2         CLR     0xE0 /* A   */.2
+   \   000061   F0           MOVX    @DPTR,A
+    436          
+    437          	outbuf_trim_dac(0x0000);
+   \   000062                ; Setup parameters for call to function outbuf_trim_dac
+   \   000062   7A00         MOV     R2,#0x0
+   \   000064   7B00         MOV     R3,#0x0
+   \   000066   12....       LCALL   outbuf_trim_dac
+    438          
+    439          	DACACON2 &= ~BIT(5); //disable VCM
+   \   000069   903053       MOV     DPTR,#0x3053
+   \   00006C   E0           MOVX    A,@DPTR
+   \   00006D   C2E5         CLR     0xE0 /* A   */.5
+   \   00006F   F0           MOVX    @DPTR,A
+    440          	DACACON2 &= ~BIT(1); //disable LPF
+   \   000070   E0           MOVX    A,@DPTR
+   \   000071   C2E1         CLR     0xE0 /* A   */.1
+   \   000073   F0           MOVX    @DPTR,A
+    441          	delay_5ms(1);
+   \   000074                ; Setup parameters for call to function delay_5ms
+   \   000074   7901         MOV     R1,#0x1
+   \   000076   12....       LCALL   delay_5ms
+    442          	DACACON1 &= ~BIT(6); //disable DAC
+   \   000079   903052       MOV     DPTR,#0x3052
+   \   00007C   E0           MOVX    A,@DPTR
+   \   00007D   C2E6         CLR     0xE0 /* A   */.6
+   \   00007F   F0           MOVX    @DPTR,A
+    443          	DACACON1 |= BIT(7); //enable HP MUTE
+   \   000080   E0           MOVX    A,@DPTR
+   \   000081   D2E7         SETB    0xE0 /* A   */.7
+   \   000083   12....       LCALL   ??Subroutine3_0
+    444          	DACACON2 |= BIT(0); //enable HP
+   \                     ??CrossCallReturnLabel_21:
+   \   000086   D2E0         SETB    0xE0 /* A   */.0
+   \   000088   F0           MOVX    @DPTR,A
+    445          	delay_5ms(3);
+   \   000089                ; Setup parameters for call to function delay_5ms
+   \   000089   7903         MOV     R1,#0x3
+   \   00008B   12....       LCALL   ?Subroutine2
+    446          	DACACON2 &= ~BIT(3);        //disable EN_POPS
+   \                     ??CrossCallReturnLabel_16:
+   \   00008E   C2E3         CLR     0xE0 /* A   */.3
+   \   000090   F0           MOVX    @DPTR,A
+    447          	DACACON2 |= BIT(5); //enable VCM
+   \   000091   E0           MOVX    A,@DPTR
+   \   000092   D2E5         SETB    0xE0 /* A   */.5
+   \   000094   F0           MOVX    @DPTR,A
+    448          	delay_5ms(52);
+   \   000095                ; Setup parameters for call to function delay_5ms
+   \   000095   7934         MOV     R1,#0x34
+   \   000097   12....       LCALL   delay_5ms
+    449          	DACACON1 |= BIT(6); //enable DAC
+   \   00009A   12....       LCALL   ?Subroutine3
+    450          	DACACON2 |= BIT(1); //ensable LPF
+   \                     ??CrossCallReturnLabel_18:
+   \   00009D   D2E1         SETB    0xE0 /* A   */.1
+   \   00009F   12....       LCALL   ?Subroutine1
+    451          	DACACON1 |= BIT(4);         //enable DACTCMP
+    452          	delay_5ms(1);
+    453          	at_write(TRIMCON1, 0x05);  //decrease 1 step 1 sample
+   \                     ??CrossCallReturnLabel_13:
+   \   0000A2                ; Setup parameters for call to function at_write
+   \   0000A2   12....       LCALL   ?Subroutine4
+    454          	at_write(TRIMCON2, 0x01);
+    455          #else
+    456          	//for no VCM cap
+    457          	DACACON5=0xfd;              //anl_vol
+    458          	DACACON2 &= ~BIT(2);        //disable EN_PD
+    459          	delay_5ms(1);
+    460          	DACACON2 |= BIT(0);         //enalble EN_HP
+    461          	DACACON1 |= BIT(4);         //enable DACTCMP
+    462          	delay_5ms(1);
+    463          	DACACON2 &= ~BIT(3);        //disable EN_POPS
+    464          	at_write(DACVCON, 0x07);    //dig_vol step 2
+    465          	at_write(DACVOLH, 0x00);
+    466          	at_write(DACVOLL, 0x00);
+    467          	while(!(at_read(DACVOLL) & 0x80));
+    468          	at_write(TRIMCON1, 0x05);  //decrease 1 step 1 sample
+    469          	at_write(TRIMCON2, 0x01);
+    470          #endif
+    471          	while(!(at_read(TRIMCON2)&BIT(1)));
+   \                     ??CrossCallReturnLabel_2:
+   \   0000A5                ; Setup parameters for call to function at_read
+   \   0000A5   7906         MOV     R1,#0x6
+   \   0000A7   12....       LCALL   at_read
+   \   0000AA   E9           MOV     A,R1
+   \   0000AB   A2E1         MOV     C,0xE0 /* A   */.1
+   \   0000AD   50F6         JNC     ??CrossCallReturnLabel_2
+    472          	DACACON1 &= ~BIT(4);         //disable DACTCMP
+   \   0000AF   903052       MOV     DPTR,#0x3052
+   \   0000B2   E0           MOVX    A,@DPTR
+   \   0000B3   C2E4         CLR     0xE0 /* A   */.4
+   \   0000B5   F0           MOVX    @DPTR,A
+    473          
+    474          #ifdef AX207X_TAG
+    475          	dac_get_trim();
+   \   0000B6                ; Setup parameters for call to function dac_get_trim
+   \   0000B6   12....       LCALL   dac_get_trim
+    476          #endif
+    477          	//fade out anl_vol & mute
+    478          	b_dac.digvol_en = 0;
+   \   0000B9   C2..         CLR     b_dac.3
+    479          	dac_ctl.anl_volcur = 65;
+   \   0000BB   7441         MOV     A,#0x41
+   \   0000BD   90....       MOV     DPTR,#(dac_ctl + 1)
+   \   0000C0   F0           MOVX    @DPTR,A
+    480          #if DAC_FADE_EN
+    481          	dac_fade_out();
+   \   0000C1                ; Setup parameters for call to function dac_fade_out
+   \   0000C1   12....       LCALL   dac_fade_out
+    482          	dac_fade_wait();
+   \   0000C4                ; Setup parameters for call to function dac_fade_wait
+   \   0000C4   12....       LCALL   dac_fade_wait
+    483          #endif
+    484          #endif
+    485          
+    486          #if DACR_ONLY
+    487          	/*DAC right channel output only,
+    488          	meanwhile,left channel can be used as GPIO controlled by P45*/
+    489          #ifdef AX207X_TAG
+    490          	dac_channel_disconnect();
+    491          #endif
+    492          
+    493          	DACACON4 |= BIT(1);//DACROUTONLY
+    494          
+    495          	at_write(DACLRMIX2, 64);
+    496          	at_write(DACLRMIX3, 64);
+    497          #endif
+    498          
+    499          #ifdef AX207X_TAG
+    500          	dac_clr_trim();
+   \   0000C7                ; Setup parameters for call to function dac_clr_trim
+   \   0000C7   12....       LCALL   dac_clr_trim
+    501          #endif
+    502          }
+   \   0000CA   22           RET
+
+   \                                 In segment DAC_INIT, align 1, keep-with-next
+   \                     ?Subroutine6:
+   \   000000   7902         MOV     R1,#0x2
+   \   000002   12....       LCALL   at_read
+   \   000005   E9           MOV     A,R1
+   \   000006   A2E7         MOV     C,0xE0 /* A   */.7
+   \   000008   22           RET
+
+   \                                 In segment DAC_INIT, align 1, keep-with-next
+   \                     ?Subroutine5:
+   \   000000   F0           MOVX    @DPTR,A
+   \   000001                ; Setup parameters for call to function at_write
+   \   000001                ; Setup parameters for call to function at_write
+   \   000001   7A01         MOV     R2,#0x1
+   \   000003   7900         MOV     R1,#0x0
+   \   000005   12....       LCALL   at_write
+   \   000008   22           RET
+
+   \                                 In segment DAC_INIT, align 1, keep-with-next
+   \                     ?Subroutine4:
+   \   000000   7A05         MOV     R2,#0x5
+   \   000002   7905         MOV     R1,#0x5
+   \   000004   12....       LCALL   at_write
+   \   000007                ; Setup parameters for call to function at_write
+   \   000007                ; Setup parameters for call to function at_write
+   \   000007   7A01         MOV     R2,#0x1
+   \   000009   7906         MOV     R1,#0x6
+   \   00000B   12....       LCALL   at_write
+   \   00000E   22           RET
+
+   \                                 In segment DAC_INIT, align 1, keep-with-next
+   \                     ?Subroutine3:
+   \   000000   903052       MOV     DPTR,#0x3052
+   \   000003   E0           MOVX    A,@DPTR
+   \   000004   D2E6         SETB    0xE0 /* A   */.6
+   \                     ??Subroutine3_0:
+   \   000006   F0           MOVX    @DPTR,A
+   \   000007                REQUIRE ?Subroutine10
+   \   000007                ; // Fall through to label ?Subroutine10
+
+   \                                 In segment DAC_INIT, align 1, keep-with-next
+   \                     ?Subroutine10:
+   \   000000   903053       MOV     DPTR,#0x3053
+   \   000003   E0           MOVX    A,@DPTR
+   \   000004   22           RET
+
+   \                                 In segment DAC_INIT, align 1, keep-with-next
+   \                     ?Subroutine2:
+   \   000000   12....       LCALL   delay_5ms
+   \   000003   80..         SJMP    ?Subroutine10
+
+   \                                 In segment DAC_INIT, align 1, keep-with-next
+   \                     ?Subroutine1:
+   \   000000   F0           MOVX    @DPTR,A
+   \   000001   903052       MOV     DPTR,#0x3052
+   \   000004   E0           MOVX    A,@DPTR
+   \   000005   D2E4         SETB    0xE0 /* A   */.4
+   \   000007   F0           MOVX    @DPTR,A
+   \   000008                ; Setup parameters for call to function delay_5ms
+   \   000008                ; Setup parameters for call to function delay_5ms
+   \   000008   02....       LJMP    ?Subroutine9
+
+   \                                 In segment DAC_INIT, align 1, keep-with-next
+   \                     ?Subroutine0:
+   \   000000   7904         MOV     R1,#0x4
+   \   000002   12....       LCALL   at_write
+   \   000005                ; Setup parameters for call to function at_write
+   \   000005                ; Setup parameters for call to function at_write
+   \   000005   7A00         MOV     R2,#0x0
+   \   000007   7903         MOV     R1,#0x3
+   \   000009   12....       LCALL   at_write
+   \   00000C                ; Setup parameters for call to function at_write
+   \   00000C                ; Setup parameters for call to function at_write
+   \   00000C   7A00         MOV     R2,#0x0
+   \   00000E   7902         MOV     R1,#0x2
+   \   000010   12....       LCALL   at_write
+   \   000013   22           RET
+    503          #endif /*END DAC_POWER_SPEED∫Í*/
+    504          
+    505          // π”√vcm buf≥ı ºªØ
+    506          #pragma location="DAC_INIT"
+
+   \                                 In segment DAC_INIT, align 1, keep-with-next
+    507          void dac_init_vcmbuf(void)
+   \                     dac_init_vcmbuf:
+    508          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    509          	DACACON1 |= BIT(7)|BIT(3);  //mute, DACBIAS
+   \   000000   903052       MOV     DPTR,#0x3052
+   \   000003   E0           MOVX    A,@DPTR
+   \   000004   4488         ORL     A,#0x88
+   \   000006   12....       LCALL   ?Subroutine5
+    510          #if USE_MULTI_BIT_DAC
+    511          	DACACON7 |= BIT(0);
+    512          #if (DAC_INIT_TYPE == DAC_VCM_NO_CAP)
+    513          	DACACON7 |= BIT(1);
+    514          	DACACON3 |=BIT(3);          //en VCMIR(bit3)
+    515          	DACACON4 |=BIT(2);
+    516          	/*DACACON4[2] «”√¿¥—°‘ÒVCMµÁ—πµƒ£¨µ±DACACON3[3]÷√1 ±£¨
+    517          	»Áπ˚DACACON4[2]=0£¨‘ÚVCM~=1.29£ª
+    518          	»Áπ˚DACACON4[2]=1£¨‘ÚVCM~=1.365£ª
+    519          	Œ™¡ÀÃ·∏ﬂDACµƒ ‰≥ˆ∑˘∂»∫Õ–‘ƒ‹£¨ø…“‘Ω´’‚“ªbit…Ë1£¨
+    520          	Œ™¡ÀΩµµÕ◊ÓµÕø…π§◊˜µÁ—π£¨ø…“‘Ω´’‚“ªbit…Ë0. */
+    521          #endif
+    522          	at_write(DACCFG, 0x09);
+    523          #else
+    524          	at_write(DACCFG, 0x01);
+    525          #endif
+    526          	DACACON3 |= BIT(3);         //SET_VCMIR
+   \                     ??CrossCallReturnLabel_5:
+   \   000009   903054       MOV     DPTR,#0x3054
+   \   00000C   E0           MOVX    A,@DPTR
+   \   00000D   D2E3         SETB    0xE0 /* A   */.3
+   \   00000F   12....       LCALL   ??Subroutine3_0
+    527          	DACACON2 |= BIT(6)|BIT(5);  //EN_VDDDAC, EN_VCM
+   \                     ??CrossCallReturnLabel_22:
+   \   000012   4460         ORL     A,#0x60
+   \   000014   F0           MOVX    @DPTR,A
+    528          
+    529          #if (DAC_INIT_TYPE == DAC_VCM_WITH_CAP)  //”–VCMµÁ»›£¨”–HP
+    530          	DACACON2 |= BIT(7);        //EN_VDDHP
+   \   000015   E0           MOVX    A,@DPTR
+   \   000016   D2E7         SETB    0xE0 /* A   */.7
+   \   000018   F0           MOVX    @DPTR,A
+    531          	delay_5ms(60);             //µ»¥˝VCMµÁ»›(105)Ω®¡¢
+   \   000019                ; Setup parameters for call to function delay_5ms
+   \   000019   793C         MOV     R1,#0x3c
+   \   00001B   12....       LCALL   ?Subroutine2
+    532          #else
+    533          	delay_5ms(1);
+    534          #endif
+    535          	DACACON2 |= BIT(4)|BIT(1);  //EN_VCMBUF, EN_LPF
+   \                     ??CrossCallReturnLabel_17:
+   \   00001E   4412         ORL     A,#0x12
+   \   000020   F0           MOVX    @DPTR,A
+    536          	DACACON1 |= BIT(6);         //EN_DAC
+   \   000021   12....       LCALL   ?Subroutine3
+    537          	DACACON2 |= BIT(0)|BIT(4);  //EN_HP, EN_VCMBUF
+   \                     ??CrossCallReturnLabel_19:
+   \   000024   4411         ORL     A,#0x11
+   \   000026   12....       LCALL   ?Subroutine1
+    538          
+    539          	//trim dac
+    540          	DACACON1 |= BIT(4);         //enable DACTCMP
+    541          	delay_5ms(1);
+    542          	DACACON3 |= BIT(6);         //low power£¨∑≈‘⁄—” ±÷Æ∫Ûø…ºı–°ø™ª˙‘Î…˘
+   \                     ??CrossCallReturnLabel_14:
+   \   000029   903054       MOV     DPTR,#0x3054
+   \   00002C   E0           MOVX    A,@DPTR
+   \   00002D   D2E6         SETB    0xE0 /* A   */.6
+   \   00002F   F0           MOVX    @DPTR,A
+    543          
+    544          	at_write(TRIMCON1, 0x05);   //decrease 1 step 1 sample
+   \   000030                ; Setup parameters for call to function at_write
+   \   000030   12....       LCALL   ?Subroutine4
+    545          	at_write(TRIMCON2, 0x01);
+    546          	while(!(at_read(TRIMCON2)&BIT(1)));
+   \                     ??CrossCallReturnLabel_3:
+   \   000033                ; Setup parameters for call to function at_read
+   \   000033   7906         MOV     R1,#0x6
+   \   000035   12....       LCALL   at_read
+   \   000038   E9           MOV     A,R1
+   \   000039   A2E1         MOV     C,0xE0 /* A   */.1
+   \   00003B   50F6         JNC     ??CrossCallReturnLabel_3
+    547          	DACACON1 &= ~BIT(4);        //disable DACTCMP
+   \   00003D   903052       MOV     DPTR,#0x3052
+   \   000040   E0           MOVX    A,@DPTR
+   \   000041   C2E4         CLR     0xE0 /* A   */.4
+   \   000043   F0           MOVX    @DPTR,A
+    548          
+    549          	at_write(DACVCON, 0x07);
+   \   000044                ; Setup parameters for call to function at_write
+   \   000044   7A07         MOV     R2,#0x7
+   \   000046   12....       LCALL   ?Subroutine0
+    550          	at_write(DACVOLH, 0x00);
+    551          	at_write(DACVOLL, 0x00);
+    552          	while(!(at_read(DACVOLL) & 0x80));
+   \                     ??CrossCallReturnLabel_1:
+   \   000049                ; Setup parameters for call to function at_read
+   \   000049   12....       LCALL   ?Subroutine6
+   \                     ??CrossCallReturnLabel_8:
+   \   00004C   50FB         JNC     ??CrossCallReturnLabel_1
+    553          
+    554          #ifdef AX207X_TAG
+    555          	dac_get_trim();
+   \   00004E                ; Setup parameters for call to function dac_get_trim
+   \   00004E   12....       LCALL   dac_get_trim
+    556          #endif
+    557          
+    558          }
+   \   000051   22           RET
+    559          
+    560          
+    561          #pragma location="DAC_INIT"
+
+   \                                 In segment DAC_INIT, align 1, keep-with-next
+    562          void dac_init(void)
+   \                     dac_init:
+    563          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    564          	PCON1 &= ~BIT(7);
+   \   000000   53C97F       ANL     0xc9,#0x7f
+    565          #if EQ_MODIFY_FILTER_EN
+    566          	music_eq_init();   //eq¬À≤®∆˜œµ ˝“ª∂®“™‘⁄¥Úø™dac clk÷Æ∫Û£¨enable dac÷Æ«∞≈‰÷√
+    567          #else
+    568          	music_eq_init_m();   //eq¬À≤®∆˜œµ ˝“ª∂®“™‘⁄¥Úø™dac clk÷Æ∫Û£¨enable dac÷Æ«∞≈‰÷√
+   \   000003                ; Setup parameters for call to function music_eq_init_m
+   \   000003   12....       LCALL   music_eq_init_m
+    569          #endif
+    570          
+    571          #if DAC_BUF_EN
+    572          	dac_init_vcmbuf();
+    573          #else
+    574          #if DAC_POWER_SPEED
+    575          	dac_init_ctl.sta = DAC_INIT_START;
+    576          #else
+    577          	dac_power_on();
+   \   000006                ; Setup parameters for call to function dac_power_on
+   \   000006   12....       LCALL   dac_power_on
+    578          #endif
+    579          #endif
+    580          }
+   \   000009   22           RET
+    581          
+    582          //µ»¥˝DAC≥ı ºªØÕÍ≥…
+    583          #pragma location="DAC_INIT"
+
+   \                                 In segment DAC_INIT, align 1, keep-with-next
+    584          void dac_init_wait(void)
+   \                     dac_init_wait:
+    585          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+   \   000000   8003         SJMP    ??dac_init_wait_0
+    586          	while(dac_init_ctl.sta < DAC_INIT_END)
+    587          	{
+    588          		WATCHDOG_CLR();
+   \                     ??dac_init_wait_1:
+   \   000002   43F720       ORL     0xf7,#0x20
+    589          	}
+   \                     ??dac_init_wait_0:
+   \   000005   E5..         MOV     A,dac_init_ctl
+   \   000007   C3           CLR     C
+   \   000008   9420         SUBB    A,#0x20
+   \   00000A   40F6         JC      ??dac_init_wait_1
+    590          #ifdef AX207X_TAG
+    591          	dac_clr_trim();
+   \   00000C                ; Setup parameters for call to function dac_clr_trim
+   \   00000C   12....       LCALL   dac_clr_trim
+    592          #endif
+    593          }
+   \   00000F   22           RET
+    594          
+    595          #if DACR_ONLY
+    596          //µ•…˘µ¿ ‰≥ˆ ±£¨∂œø™DACR”ÎDACL÷Æº‰µƒ¡¨Ω”
+    597          #pragma location="DAC_INIT"
+    598          void dac_channel_disconnect(void)
+    599          {
+    600          	AIPCON10 |= BIT(5) | BIT(4);
+    601          	//bit5:MCSW,close the switch to output MCOx
+    602          	//bit4:LPMT,mute the mic LPF
+    603          	AUADCCON0 = 0x02;    //bit1:mic analog enable
+    604          }
+    605          #endif
+    606          
+    607          
+    608          //…Ë÷√DAC“Ù¡ø
+    609          #pragma location="DAC_SEG"
+
+   \                                 In segment DAC_SEG, align 1, keep-with-next
+    610          void dac_set_volume(u8 vol)
+   \                     dac_set_volume:
+    611          {
+   \   000000   C0..         PUSH    ?V0 + 0
+   \   000002   C0..         PUSH    ?V0 + 1
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+    612          	b_dac.fade_en = 0;
+   \   000004   C2..         CLR     b_dac.0
+    613          
+    614          #ifdef AX207X_TAG
+    615          	dac_ctl.dig_vol = 0x7200;           // ˝◊÷“Ù¡ø£®∑∂Œß:0x0000 - 0x7fff£©
+   \   000006   90....       MOV     DPTR,#(dac_ctl + 4)
+   \   000009   E4           CLR     A
+   \   00000A   F0           MOVX    @DPTR,A
+   \   00000B   A3           INC     DPTR
+   \   00000C   7472         MOV     A,#0x72
+   \   00000E   F0           MOVX    @DPTR,A
+    616          #else
+    617          	dac_ctl.dig_vol = 0x7800;           // ˝◊÷“Ù¡ø£®∑∂Œß:0x0000 - 0x7fff£©
+    618          #endif
+    619          	dac_ctl.anl_vol = tbl_anlvol[vol];
+   \   00000F   E9           MOV     A,R1
+   \   000010   12....       LCALL   ?Subroutine8
+   \                     ??CrossCallReturnLabel_11:
+   \   000013   90....       MOV     DPTR,#(dac_ctl + 3)
+   \   000016   F0           MOVX    @DPTR,A
+    620          
+    621          	dac_volume_fade_set();
+   \   000017                ; Setup parameters for call to function dac_volume_fade_set
+   \   000017   12....       LCALL   dac_volume_fade_set
+    622          
+    623          	b_dac.fade_en = 1;
+   \   00001A   D2..         SETB    b_dac.0
+    624          }
+   \   00001C                REQUIRE ?Subroutine11
+   \   00001C                ; // Fall through to label ?Subroutine11
+
+   \                                 In segment DAC_SEG, align 1, keep-with-next
+   \                     ?Subroutine11:
+   \   000000   D0..         POP     ?V0 + 1
+   \   000002   D0..         POP     ?V0 + 0
+   \   000004   22           RET
+
+   \                                 In segment DAC_SEG, align 1, keep-with-next
+   \                     ?Subroutine8:
+   \   000000   24..         ADD     A,#(tbl_anlvol & 0xff)
+   \   000002   F582         MOV     DPL,A
+   \   000004   E4           CLR     A
+   \   000005   34..         ADDC    A,#((tbl_anlvol >> 8) & 0xff)
+   \   000007   F583         MOV     DPH,A
+   \   000009   E4           CLR     A
+   \   00000A   93           MOVC    A,@A+DPTR
+   \   00000B   22           RET
+    625          
+    626          //…Ë÷√DAC“Ù¡ø(÷±Ω”≈‰÷√£¨≤ªµ≠»Î)
+    627          #pragma location="DAC_SEG"
+
+   \                                 In segment DAC_SEG, align 1, keep-with-next
+    628          void dac_set_volume_direct(u8 vol)
+   \                     dac_set_volume_direct:
+    629          {
+   \   000000   C0..         PUSH    ?V0 + 0
+   \   000002   C0..         PUSH    ?V0 + 1
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+   \   000004   89..         MOV     ?V0 + 0,R1
+    630          #ifdef AX207X_TAG
+    631          	dac_set_trim();
+   \   000006                ; Setup parameters for call to function dac_set_trim
+   \   000006   12....       LCALL   dac_set_trim
+    632          #endif
+    633          
+    634          	if(b_dac.digvol_en)
+   \   000009   A2..         MOV     C,b_dac.3
+   \   00000B   5007         JNC     ??dac_set_volume_direct_0
+    635          	{
+    636          #ifdef AX207X_TAG
+    637          		dac_set_digvol(0x7200);             // ˝◊÷“Ù¡ø£®∑∂Œß:0x0000 - 0x7fff£©
+   \   00000D                ; Setup parameters for call to function dac_set_digvol
+   \   00000D   7A00         MOV     R2,#0x0
+   \   00000F   7B72         MOV     R3,#0x72
+   \   000011   12....       LCALL   dac_set_digvol
+    638          #else
+    639          		dac_set_digvol(0x7800);             // ˝◊÷“Ù¡ø£®∑∂Œß:0x0000 - 0x7fff£©
+    640          #endif
+    641          	}
+    642          
+    643          	dac_ctl.anl_vol = tbl_anlvol[vol];
+   \                     ??dac_set_volume_direct_0:
+   \   000014   E5..         MOV     A,?V0 + 0
+   \   000016   12....       LCALL   ?Subroutine8
+   \                     ??CrossCallReturnLabel_12:
+   \   000019   F9           MOV     R1,A
+   \   00001A   90....       MOV     DPTR,#(dac_ctl + 3)
+   \   00001D   F0           MOVX    @DPTR,A
+    644          	dac_set_anlvol(dac_ctl.anl_vol);
+   \   00001E                ; Setup parameters for call to function dac_set_anlvol
+   \   00001E   12....       LCALL   dac_set_anlvol
+    645          
+    646          #ifdef AX207X_TAG
+    647          	dac_clr_trim();
+   \   000021                ; Setup parameters for call to function dac_clr_trim
+   \   000021   12....       LCALL   dac_clr_trim
+    648          #endif
+    649          }
+   \   000024   80..         SJMP    ?Subroutine11
+    650          
+    651          #pragma constseg="DAC_INIT_CONST"
+
+   \                                 In segment DAC_INIT_CONST, align 1
+    652          IAR_CONST u8 dac_sprcon_sf[] =
+   \                     dac_sprcon_sf:
+   \   000000   0A060201     DB 10, 6, 2, 1, 0, 11, 15, 14, 13, 12
+   \            000B0F0E
+   \            0D0C    
+    653          {
+    654          	//DAC≤…—˘¬ 
+    655          	0x0a, 0x06, 0x02, 0x01, 0x00, 0x0b, 0x0f, 0x0e, 0x0d, 0x0c
+    656          };
+    657          
+
+   \                                 In segment DAC_INIT_CONST, align 1
+    658          IAR_CONST u8 dac_pcm_buf[96] =
+   \                     dac_pcm_buf:
+   \   000000   00000000     DB 0, 0, 0, 0, 251, 48, 252, 48, 129, 90, 129, 90, 64, 118, 65, 118
+   \            FB30FC30
+   \            815A815A
+   \            40764176
+   \   000010   FF7FFF7F     DB 255, 127, 255, 127, 65, 118, 65, 118, 130, 90, 129, 90, 251, 48, 251
+   \            41764176
+   \            825A815A
+   \            FB30FB  
+   \   00001F   30000000     DB 48, 0, 0, 0, 0, 5, 207, 5, 207, 126, 165, 127, 165, 191, 137, 191
+   \            0005CF05
+   \            CF7EA57F
+   \            A5BF89BF
+   \   00002F   89018001     DB 137, 1, 128, 1, 128, 191, 137, 191, 137, 126, 165, 127, 165, 5, 207
+   \            80BF89BF
+   \            897EA57F
+   \            A505CF  
+   \   00003E   05CF0000     DB 5, 207, 0, 0, 0, 0, 251, 48, 251, 48, 130, 90, 130, 90, 64, 118, 65
+   \            0000FB30
+   \            FB30825A
+   \            825A4076
+   \            41      
+   \   00004F   76FF7FFE     DB 118, 255, 127, 254, 127, 65, 118, 65, 118, 130, 90, 130, 90, 251, 48
+   \            7F417641
+   \            76825A82
+   \            5AFB30  
+   \   00005E   FB30         DB 251, 48
+    659          {
+    660          	//÷±Õ∆DAC≤‚ ‘ ˝æ›£®’˝œ“≤®£©,16khz 0DB
+    661          	0x00, 0x00, 0x00, 0x00, 0xFB, 0x30, 0xFC, 0x30, 0x81, 0x5A, 0x81, 0x5A, 0x40, 0x76, 0x41, 0x76,
+    662          	0xFF, 0x7F, 0xFF, 0x7F, 0x41, 0x76, 0x41, 0x76, 0x82, 0x5A, 0x81, 0x5A, 0xFB, 0x30, 0xFB, 0x30,
+    663          	0x00, 0x00, 0x00, 0x00, 0x05, 0xCF, 0x05, 0xCF, 0x7E, 0xA5, 0x7F, 0xA5, 0xBF, 0x89, 0xBF, 0x89,
+    664          	0x01, 0x80, 0x01, 0x80, 0xBF, 0x89, 0xBF, 0x89, 0x7E, 0xA5, 0x7F, 0xA5, 0x05, 0xCF, 0x05, 0xCF,
+    665          	0x00, 0x00, 0x00, 0x00, 0xFB, 0x30, 0xFB, 0x30, 0x82, 0x5A, 0x82, 0x5A, 0x40, 0x76, 0x41, 0x76,
+    666          	0xFF, 0x7F, 0xFE, 0x7F, 0x41, 0x76, 0x41, 0x76, 0x82, 0x5A, 0x82, 0x5A, 0xFB, 0x30, 0xFB, 0x30
+    667          };
+    668          #pragma constseg=default
+    669          
+    670          //pcm ˝æ›÷±Ω”Õ∆dacµƒ≥ı ºªØ∫Ø ˝
+    671          #pragma location="DAC_INIT"
+
+   \                                 In segment DAC_INIT, align 1, keep-with-next
+    672          void dac_out_init(u8 spr_sf)
+   \                     dac_out_init:
+    673          {
+   \   000000   C0..         PUSH    ?V0 + 0
+   \   000002   C0..         PUSH    ?V0 + 1
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+   \   000004   89..         MOV     ?V0 + 0,R1
+    674          #if USE_MULTI_BIT_DAC
+    675          	at_write(DACCFG, 0x09);
+    676          #else
+    677          	at_write(DACCFG, 0x01);                     //dac digital enable
+   \   000006                ; Setup parameters for call to function at_write
+   \   000006   7A01         MOV     R2,#0x1
+   \   000008   7900         MOV     R1,#0x0
+   \   00000A   12....       LCALL   at_write
+    678          #endif
+    679          	at_write(DACSPR, dac_sprcon_sf[spr_sf]);    //dac sample rate
+   \   00000D                ; Setup parameters for call to function at_write
+   \   00000D   E5..         MOV     A,?V0 + 0
+   \   00000F   24..         ADD     A,#(dac_sprcon_sf & 0xff)
+   \   000011   F582         MOV     DPL,A
+   \   000013   E4           CLR     A
+   \   000014   34..         ADDC    A,#((dac_sprcon_sf >> 8) & 0xff)
+   \   000016   F583         MOV     DPH,A
+   \   000018   E4           CLR     A
+   \   000019   93           MOVC    A,@A+DPTR
+   \   00001A   FA           MOV     R2,A
+   \   00001B   7901         MOV     R1,#0x1
+   \   00001D   12....       LCALL   at_write
+    680          	AUCON0 = 0x06;                              //normal mode, sync with dac
+   \   000020   75E806       MOV     0xe8,#0x6
+    681          	AUCON10 = 0x02;                             //OUTBUF,768byte, usbaudio÷ªƒ‹”√768∫Õ1280
+   \   000023   75D902       MOV     0xd9,#0x2
+    682          }
+   \   000026   D0..         POP     ?V0 + 1
+   \   000028   D0..         POP     ?V0 + 0
+   \   00002A   22           RET
+    683          
+    684          //÷±Õ∆DAC≤‚ ‘
+    685          #pragma location="DAC_INIT"
+
+   \                                 In segment DAC_INIT, align 1, keep-with-next
+    686          void task_dac_test(void)
+   \                     task_dac_test:
+    687          {
+   \   000000   C0..         PUSH    ?V0 + 0
+   \   000002   C0..         PUSH    ?V0 + 1
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+    688          	printf("dac_out\n");
+   \   000004                ; Setup parameters for call to function my_printf
+   \   000004   7A..         MOV     R2,#(`?<Constant "dac_out\\n">` & 0xff)
+   \   000006   7B..         MOV     R3,#((`?<Constant "dac_out\\n">` >> 8) & 0xff)
+   \   000008   12....       LCALL   my_printf
+    689          	dac_out_init(DAC_SPA_16K);
+   \   00000B                ; Setup parameters for call to function dac_out_init
+   \   00000B   7901         MOV     R1,#0x1
+   \   00000D   12....       LCALL   dac_out_init
+    690          	user_set_volume(10);
+   \   000010                ; Setup parameters for call to function user_set_volume
+   \   000010   790A         MOV     R1,#0xa
+   \   000012   12....       LCALL   user_set_volume
+    691          #if DAC_FADE_EN
+    692          	dac_fade_in(1);
+   \   000015                ; Setup parameters for call to function dac_fade_in
+   \   000015   D2F0         SETB    B.0
+   \   000017   12....       LCALL   dac_fade_in
+    693          #endif
+    694          	WDTCON = 0;
+   \   00001A   75F700       MOV     0xf7,#0x0
+    695          	while(1)
+    696          	{
+    697          		u8 i;
+    698          		for(i=0; i<64;)
+   \                     ??task_dac_test_0:
+   \   00001D   7A00         MOV     R2,#0x0
+    699          		{
+    700          			while(!(AUCON7 & BIT(7)));
+   \                     ??task_dac_test_1:
+   \   00001F   E5EF         MOV     A,0xef
+   \   000021   A2E7         MOV     C,0xE0 /* A   */.7
+   \   000023   50FA         JNC     ??task_dac_test_1
+    701          			AUCON5 = dac_pcm_buf[i++];
+   \   000025   8A..         MOV     ?V0 + 0,R2
+   \   000027   E5..         MOV     A,?V0 + 0
+   \   000029   12....       LCALL   ?Subroutine7
+    702          			AUCON5 = dac_pcm_buf[i++];
+   \                     ??CrossCallReturnLabel_9:
+   \   00002C   12....       LCALL   ?Subroutine7
+    703          		}
+   \                     ??CrossCallReturnLabel_10:
+   \   00002F   C3           CLR     C
+   \   000030   9440         SUBB    A,#0x40
+   \   000032   50E9         JNC     ??task_dac_test_0
+   \   000034   80E9         SJMP    ??task_dac_test_1
+    704          	}
+    705          }
+
+   \                                 In segment DAC_INIT, align 1, keep-with-next
+   \                     ?Subroutine7:
+   \   000000   24..         ADD     A,#(dac_pcm_buf & 0xff)
+   \   000002   F582         MOV     DPL,A
+   \   000004   E4           CLR     A
+   \   000005   34..         ADDC    A,#((dac_pcm_buf >> 8) & 0xff)
+   \   000007   F583         MOV     DPH,A
+   \   000009   E4           CLR     A
+   \   00000A   93           MOVC    A,@A+DPTR
+   \   00000B   F5ED         MOV     0xed,A
+   \   00000D   0A           INC     R2
+   \   00000E   EA           MOV     A,R2
+   \   00000F   22           RET
+    706          
+    707          
+    708          //∞¥º¸“Ù±Ì(±ÿ–Î“™256byte∂‘∆Î)
+    709          #pragma data_alignment=256
+    710          #pragma constseg="KEY_VOICE_TBL"
+
+   \                                 In segment KEY_VOICE_TBL, align 256
+    711          const u8 keyvoice_44100[] =
+   \                     keyvoice_44100:
+   \   000000   0035617B     DB 0, 53, 97, 123, 127, 108, 70, 19, 221, 173, 140, 128, 139, 171, 218
+   \            7F6C4613
+   \            DDAD8C80
+   \            8BABDA  
+   \   00000F   10446B7E     DB 16, 68, 107, 126, 123, 98, 56, 3, 205, 161, 134, 129, 147, 184, 234
+   \            7B623803
+   \            CDA18681
+   \            93B8EA  
+   \   00001E   2051737F     DB 32, 81, 115, 127, 118, 87, 40, 242, 191, 151, 130, 132, 156, 198
+   \            765728F2
+   \            BF978284
+   \            9CC6    
+   \   00002C   00000000     DB 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \            00000000
+   \            00000000
+   \            00000000
+   \   00003C   00000000     DB 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \            00000000
+   \            00000000
+   \            00000000
+   \   00004C   00000000     DB 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \            00000000
+   \            00000000
+   \            00000000
+   \   00005C   00000000     DB 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \            00000000
+   \            00000000
+   \            00000000
+   \   00006C   00000000     DB 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \            00000000
+   \            00000000
+   \            00000000
+   \   00007C   00000000     DB 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \            00000000
+   \            00000000
+   \            00000000
+   \   00008C   00000000     DB 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \            00000000
+   \            00000000
+   \            00000000
+   \   00009C   00000000     DB 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \            00000000
+   \            00000000
+   \            00000000
+   \   0000AC   00000000     DB 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \            00000000
+   \            00000000
+   \            00000000
+   \   0000BC   00000000     DB 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \            00000000
+   \            00000000
+   \            00000000
+   \   0000CC   00000000     DB 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \            00000000
+   \            00000000
+   \            00000000
+   \   0000DC   00000000     DB 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \            00000000
+   \            00000000
+   \            00000000
+   \   0000EC   00000000     DB 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \            00000000
+   \            00000000
+   \            00000000
+   \            00000000
+    712          {
+    713          #if 1
+    714          	//3k
+    715          	0x00, 0x35, 0x61, 0x7B, 0x7F, 0x6C, 0x46, 0x13, 0xDD, 0xAD, 0x8C, 0x80, 0x8B, 0xAB, 0xDA, 0x10,
+    716          	0x44, 0x6B, 0x7E, 0x7B, 0x62, 0x38, 0x03, 0xCD, 0xA1, 0x86, 0x81, 0x93, 0xB8, 0xEA, 0x20, 0x51,
+    717          	0x73, 0x7F, 0x76, 0x57, 0x28, 0xF2, 0xBF, 0x97, 0x82, 0x84, 0x9C, 0xC6
+    718          #else
+    719          	//1k
+    720          	0x00, 0x12, 0x24, 0x35, 0x45, 0x54, 0x61, 0x6C, 0x74, 0x7B, 0x7F, 0x7F, 0x7F, 0x7B, 0x75, 0x6C,
+    721          	0x61, 0x54, 0x46, 0x36, 0x25, 0x13, 0x01, 0xEF, 0xDD, 0xCC, 0xBC, 0xAD, 0xA0, 0x95, 0x8C, 0x86,
+    722          	0x81, 0x80, 0x81, 0x85, 0x8B, 0x93, 0x9E, 0xAB, 0xB9, 0xC9, 0xDA, 0xEC
+    723          #endif
+    724          };
+    725          #pragma constseg=default
+    726          
+    727          //∞¥º¸“Ù≥ı ºªØ
+    728          #pragma location="KEY_VOICE"
+
+   \                                 In segment KEY_VOICE, align 1, keep-with-next
+    729          void key_voice_init(void)
+   \                     key_voice_init:
+    730          {
+   \   000000                ; Saved register size: 2
+   \   000000                ; Auto size: 0
+    731          	u16 keyv_tbl = (u16)keyvoice_44100;
+    732          	KVCCON = (keyv_tbl>>6) | 0x02;                   //key voice dma high address & enable MP3 play
+   \   000000   74..         MOV     A,#((keyvoice_44100 >> 6) & 0xff)
+   \   000002   4402         ORL     A,#0x2
+   \   000004   F5B1         MOV     0xb1,A
+    733          	KVCADR = keyv_tbl;                               //key voice dma low start address
+   \   000006   7A..         MOV     R2,#(keyvoice_44100 & 0xff)
+   \   000008   8AB3         MOV     0xb3,R2
+    734          	KVCADR = keyv_tbl + sizeof(keyvoice_44100) - 1;  //end address
+   \   00000A   742B         MOV     A,#0x2b
+   \   00000C   24..         ADD     A,#(keyvoice_44100 & 0xff)
+   \   00000E   F5B3         MOV     0xb3,A
+    735          	KVCCON2 = (0x0a<<3)|0x02;                        //play cycle a & volume 0db/32
+   \   000010   75B252       MOV     0xb2,#0x52
+    736          }
+   \   000013   22           RET
+
+   \                                 In segment CODE_C, align 1
+   \                     `?<Constant "dac_out\\n">`:
+   \   000000   6461635F     DB "dac_out\012"
+   \            6F75740A
+   \            00      
+
+   Maximum stack usage in bytes:
+
+     Function                 EXT_STACK PSTACK XSTACK
+     --------                 --------- ------ ------
+     dac_init                        0      0      0
+       -> music_eq_init_m            0      0      0
+       -> dac_power_on               0      0      0
+     dac_init_vcmbuf                 0      0      0
+       -> at_write                   0      0      0
+       -> delay_5ms                  0      0      0
+       -> delay_5ms                  0      0      0
+       -> at_write                   0      0      0
+       -> at_write                   0      0      0
+       -> at_read                    0      0      0
+       -> at_write                   0      0      0
+       -> at_write                   0      0      0
+       -> at_write                   0      0      0
+       -> at_read                    0      0      0
+       -> dac_get_trim               0      0      0
+     dac_init_wait                   0      0      0
+       -> dac_clr_trim               0      0      0
+     dac_out_init                    4      0      0
+       -> at_write                   4      0      0
+       -> at_write                   4      0      0
+     dac_power_on                    0      0      0
+       -> at_write                   0      0      0
+       -> outbuf_trim_dac            0      0      0
+       -> at_write                   0      0      0
+       -> at_write                   0      0      0
+       -> at_write                   0      0      0
+       -> at_read                    0      0      0
+       -> outbuf_trim_dac            0      0      0
+       -> at_write                   0      0      0
+       -> at_write                   0      0      0
+       -> at_write                   0      0      0
+       -> at_read                    0      0      0
+       -> delay_5ms                  0      0      0
+       -> outbuf_trim_dac            0      0      0
+       -> delay_5ms                  0      0      0
+       -> delay_5ms                  0      0      0
+       -> delay_5ms                  0      0      0
+       -> delay_5ms                  0      0      0
+       -> at_write                   0      0      0
+       -> at_write                   0      0      0
+       -> at_read                    0      0      0
+       -> dac_get_trim               0      0      0
+       -> dac_fade_out               0      0      0
+       -> dac_fade_wait              0      0      0
+       -> dac_clr_trim               0      0      0
+     dac_set_volume                  2      0      0
+       -> dac_volume_fade_set        4      0      0
+     dac_set_volume_direct           2      0      0
+       -> dac_set_trim               4      0      0
+       -> dac_set_digvol             4      0      0
+       -> dac_set_anlvol             4      0      0
+       -> dac_clr_trim               4      0      0
+     key_voice_init                  2      0      0
+     outbuf_trim_dac                 0      0      0
+       -> delay_5ms                  0      0      0
+     task_dac_test                   2      0      0
+       -> my_printf                  4      0      0
+       -> dac_out_init               4      0      0
+       -> user_set_volume            4      0      0
+       -> dac_fade_in                4      0      0
+
+
+   Segment part sizes:
+
+     Function/Label          Bytes
+     --------------          -----
+     KVCCON                     1
+     KVCCON2                    1
+     KVCADR                     1
+     PCON1                      1
+     AUCON10                    1
+     AUCON0                     1
+     AUCON5                     1
+     AUCON7                     1
+     WDTCON                     1
+     tbl_anlvol                17
+     outbuf_trim_dac           24
+     ?Subroutine9               6
+     dac_power_on             203
+     ?Subroutine6               9
+     ?Subroutine5               9
+     ?Subroutine4              15
+     ?Subroutine3               7
+     ?Subroutine10              5
+     ?Subroutine2               5
+     ?Subroutine1              11
+     ?Subroutine0              20
+     dac_init_vcmbuf           82
+     dac_init                  10
+     dac_init_wait             16
+     dac_set_volume            28
+     ?Subroutine11              5
+     ?Subroutine8              12
+     dac_set_volume_direct     38
+     dac_sprcon_sf             10
+     dac_pcm_buf               96
+     dac_out_init              43
+     task_dac_test             54
+     ?Subroutine7              16
+     keyvoice_44100           256
+     key_voice_init            20
+     ?<Constant "dac_out\n">    9
+
+ 
+   9 bytes in segment CODE_C
+ 535 bytes in segment DAC_INIT
+ 106 bytes in segment DAC_INIT_CONST
+  83 bytes in segment DAC_SEG
+  20 bytes in segment KEY_VOICE
+ 256 bytes in segment KEY_VOICE_TBL
+   9 bytes in segment SFR_AN
+  17 bytes in segment USER_SETTING_CONST
+ 
+ 1 026 bytes of CODE memory
+     0 bytes of DATA memory (+ 9 bytes shared)
+
+Errors: none
+Warnings: none

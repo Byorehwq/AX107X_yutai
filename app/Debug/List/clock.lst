@@ -1,0 +1,693 @@
+##############################################################################
+#                                                                            #
+# IAR 8051 C/C++ Compiler V7.20H/W32                   29/Jun/2018  19:55:07 #
+# Copyright 2004-2006 IAR Systems. All rights reserved.                      #
+#                                                                            #
+#    Core               =  plain                                             #
+#    Code model         =  near                                              #
+#    Data model         =  large                                             #
+#    Calling convention =  extended stack reentrant                          #
+#    Constant location  =  code                                              #
+#    Extended stack     =  enabled                                           #
+#    Dptr setup         =  1,16                                              #
+#    Source file        =  I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\module\clock.c  #
+#    Command line       =  -I E:\software\8051\INC\ -I                       #
+#                          E:\software\8051\INC\CLIB\ -I                     #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\COMMON\ -I      #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\INC\ -I         #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\config\ -I      #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\api\ -I         #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\fm\ -I          #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\fat\ -I         #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\display\ -I     #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\display\theme_d #
+#                          efault\ -I I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073 #
+#                          A_宇泰_AX1071_xxxxxxxx_20180629_Merlin_1\app\disp #
+#                          lay\led\ -I I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC07 #
+#                          3A_宇泰_AX1071_xxxxxxxx_20180629_Merlin_1\app\dis #
+#                          play\lcd\ -I I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC0 #
+#                          73A_宇泰_AX1071_xxxxxxxx_20180629_Merlin_1\app\ta #
+#                          sk\ -I I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇 #
+#                          泰_AX1071_xxxxxxxx_20180629_Merlin_1\app\user\    #
+#                          -I I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_A #
+#                          X1071_xxxxxxxx_20180629_Merlin_1\app\mem\ -I      #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\module\ -I      #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\key\ -I         #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\startmusic\ -I  #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\spi\ -D         #
+#                          AX107X_TAG -lC I:\a_wangqun\宇泰_睡眠仪_KNP08\18B #
+#                          C073A_宇泰_AX1071_xxxxxxxx_20180629_Merlin_1\app\ #
+#                          Debug\List\ -o I:\a_wangqun\宇泰_睡眠仪_KNP08\18B #
+#                          C073A_宇泰_AX1071_xxxxxxxx_20180629_Merlin_1\app\ #
+#                          Debug\Obj\ -e -z9 --core=plain --dptr=16,1        #
+#                          --data_model=large --code_model=near              #
+#                          --calling_convention=ext_stack_reentrant          #
+#                          --place_constants=code --nr_virtual_regs 20       #
+#                          --extended_stack I:\a_wangqun\宇泰_睡眠仪_KNP08\1 #
+#                          8BC073A_宇泰_AX1071_xxxxxxxx_20180629_Merlin_1\ap #
+#                          p\module\clock.c                                  #
+#    List file          =  I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\Debug\List\cloc #
+#                          k.lst                                             #
+#    Object file        =  I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\Debug\Obj\clock #
+#                          .r51                                              #
+#                                                                            #
+#                                                                            #
+##############################################################################
+
+I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX1071_xxxxxxxx_20180629_Merlin_1\app\module\clock.c
+      1          /*****************************************************************************
+      2           * Module    : Module
+      3           * File      : clock.c
+      4           * Author    : jingfa
+      5           * Email     :
+      6           * Function  : 系统时钟的相关配置
+      7           *****************************************************************************/
+      8          #include "include.h"
+
+   \                                 In segment SFR_AN, at 0xa3
+   \   unsigned char volatile __sfr IRTCON1
+   \                     IRTCON1:
+   \   000000                DS 1
+
+   \                                 In segment SFR_AN, at 0xba
+   \   unsigned char volatile __sfr P0DIR
+   \                     P0DIR:
+   \   000000                DS 1
+
+   \                                 In segment SFR_AN, at 0xc2
+   \   unsigned char volatile __sfr TMR2CON1
+   \                     TMR2CON1:
+   \   000000                DS 1
+
+   \                                 In segment SFR_AN, at 0xc5
+   \   unsigned char volatile __sfr UARTBAUD
+   \                     UARTBAUD:
+   \   000000                DS 1
+
+   \                                 In segment SFR_AN, at 0xc6
+   \   unsigned char volatile __sfr UARTBAUDH
+   \                     UARTBAUDH:
+   \   000000                DS 1
+
+   \                                 In segment SFR_AN, at 0xcb
+   \   unsigned char volatile __sfr CLKCON
+   \                     CLKCON:
+   \   000000                DS 1
+
+   \                                 In segment SFR_AN, at 0xcd
+   \   unsigned char volatile __sfr CLKCON2
+   \                     CLKCON2:
+   \   000000                DS 1
+
+   \                                 In segment SFR_AN, at 0xce
+   \   unsigned char volatile __sfr CLKCON3
+   \                     CLKCON3:
+   \   000000                DS 1
+
+   \                                 In segment SFR_AN, at 0xcf
+   \   unsigned char volatile __sfr CLKCON4
+   \                     CLKCON4:
+   \   000000                DS 1
+
+   \                                 In segment SFR_AN, at 0xe2
+   \   unsigned char volatile __sfr TMR1CON1
+   \                     TMR1CON1:
+   \   000000                DS 1
+      9          
+     10          /*
+     11          1、rc2m上电时使能并计算出实际偏差，因为功耗较低，而且作为WDT时钟源，在切时钟时不关闭，
+     12             所以切PLL分频前，可以先切到rc2m；
+     13          2、若使用xosc，因为使能延时较长（约500ms），上电时使能一次，切时钟时不关闭；
+     14          3、rc10m上电时用作为PLL时钟源，初始化DAC，然后根据时钟选择，可以动态开关；
+     15          4、系统只会使用一种xosc，所以选定xosc时，就把其他xosc关掉；
+     16          */
+     17          
+     18          void Pllset(void);
+     19          u16 cal_rc2m(void);                         //计算rc2m实际频率，系统时钟必须为24M
+     20          void pll_clk_x32k(void);                    //使用xosc32k作为pll时钟源
+     21          void pll_clk_x4m(void);                     //使用xosc4m作为pll时钟源
+     22          void pll_clk_x12m(void);                    //使用xosc12m作为pll时钟源
+     23          void pll_clk_x24m(void);                    //使用xosc24m作为pll时钟源
+     24          void pll_clk_rc10m(void);                   //使用rc12m作为pll时钟源
+     25          void sys_clk_pll(u8 sys_div);               //使用pll作为系统时钟
+     26          void pll_clk_rc10m_sram(u8 pll_intl,u8 pll_fracl,u8 pll_frach);
+     27          
+
+   \                                 In segment CODE_C, align 1
+     28          IAR_CONST u8 pll_v_s[] = {0, 1, 1, 2};
+   \                     pll_v_s:
+   \   000000   00010102     DB 0, 1, 1, 2
+     29          
+     30          //输出系统时钟
+     31          #pragma location="CLK_SEG"
+
+   \                                 In segment CLK_SEG, align 1, keep-with-next
+     32          void sysclk_output(void)
+   \                     sysclk_output:
+     33          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     34          	CLKCON3 |= BIT(7);
+   \   000000   43CE80       ORL     0xce,#0x80
+     35          	CLKCON3 &= ~BIT(6);
+   \   000003   53CEBF       ANL     0xce,#0xbf
+     36          	AIPCON8 |= (1<<1) | (1<<0);
+   \   000006   903058       MOV     DPTR,#0x3058
+   \   000009   E0           MOVX    A,@DPTR
+   \   00000A   4403         ORL     A,#0x3
+   \   00000C   F0           MOVX    @DPTR,A
+     37          	AIPCON8 &= ~(1<<3);
+   \   00000D   E0           MOVX    A,@DPTR
+   \   00000E   C2E3         CLR     0xE0 /* A   */.3
+   \   000010   80..         SJMP    ??Subroutine0_0
+     38          	P0DIR &= ~(1<<6);
+     39          }
+
+   \                                 In segment CLK_SEG, align 1, keep-with-next
+   \                     ?Subroutine0:
+   \   000000   903058       MOV     DPTR,#0x3058
+   \   000003   E0           MOVX    A,@DPTR
+   \   000004   4403         ORL     A,#0x3
+   \                     ??Subroutine0_0:
+   \   000006   F0           MOVX    @DPTR,A
+   \   000007   53BABF       ANL     0xba,#0xbf
+   \   00000A   22           RET
+     40          
+     41          //输出RTC时钟
+     42          #pragma location="CLK_SEG"
+
+   \                                 In segment CLK_SEG, align 1, keep-with-next
+     43          void rtcclk_output(void)
+   \                     rtcclk_output:
+     44          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     45          	CLKCON2 |= BIT(7);
+   \   000000   43CD80       ORL     0xcd,#0x80
+     46          	CLKCON3 |= BIT(6);
+   \   000003   43CE40       ORL     0xce,#0x40
+     47          	AIPCON8 |= BIT(1) | BIT(0); //clock output IO select P06
+   \   000006                REQUIRE ?Subroutine0
+   \   000006                ; // Fall through to label ?Subroutine0
+     48          	P0DIR &= ~BIT(6);
+     49          }
+     50          
+     51          //输出PLL参考时钟(如晶振时钟、RC时钟)
+     52          #pragma location="CLK_SEG"
+
+   \                                 In segment CLK_SEG, align 1, keep-with-next
+     53          void pllrefclk_output(void)
+   \                     pllrefclk_output:
+     54          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     55          	CLKCON4 |= BIT(4);          //pll test signal enable
+   \   000000   43CF10       ORL     0xcf,#0x10
+     56          	CLKCON2 &= ~BIT(2);         //output pll reference clock
+   \   000003   53CDFB       ANL     0xcd,#0xfb
+     57          	AIPCON8 |= BIT(1) | BIT(0); //clock output IO select P06
+   \   000006   80..         SJMP    ?Subroutine0
+     58          	P0DIR &= ~BIT(6);
+     59          }
+     60          
+     61          /*----------------------------------------------------------------------------*/
+     62          /**@brief 系统时钟初始化
+     63             @param 无
+     64             @return 无
+     65             @note 上电默认PLL使用RC10M，SYS=PLL=24M
+     66          */
+     67          /*----------------------------------------------------------------------------*/
+     68          #pragma location="CLK_SEG"
+
+   \                                 In segment CLK_SEG, align 1, keep-with-next
+     69          void sysclk_set(void)
+   \                     sysclk_set:
+     70          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     71          	IRTCON1 |= BIT(2);          //IRTCC POR reset system enable(VDDRTC通过电阻短接到地可复位芯片)
+   \   000000   43A304       ORL     0xa3,#0x4
+     72          
+     73          	RC_CON |= BIT(5)|BIT(4);                //trim_clk tie to 0
+   \   000003   903064       MOV     DPTR,#0x3064
+   \   000006   E0           MOVX    A,@DPTR
+   \   000007   4430         ORL     A,#0x30
+   \   000009   F0           MOVX    @DPTR,A
+     74          
+     75          	/*
+     76          	    sysclk_output();            //输出系统时钟
+     77          	    rtcclk_output();            //输出RTC时钟
+     78          	    pllrefclk_output();         //输出PLL参考时钟(如晶振时钟、RC时钟)
+     79          	*/
+     80          
+     81          #if (CRY_PIN_NUM == CRY_1PIN)
+     82          	CLKCON3 |= BIT(5);          //xosc select one pin mode
+     83          #endif
+     84          #ifdef UART_DEBUG
+     85          	DPCON &= 0x3F;
+     86          	DPCON |= BIT(6);
+     87          #ifdef AX207X_TAG
+     88          	select_irom1();
+     89          	Pllset();
+     90          	restore_mem();
+     91          #endif
+     92          	sys.delay_sys = 48;                         //上电默认是24M
+     93          	sys.clk_mode = SYS_24M;
+     94          #else   //UART_DEBUG
+     95          #if ((SYS_CRY == CRY_32K) || (SYS_CRY == CRY_AUTO))
+     96          	irtc_write_cmd(CFG3_WR, 0x07);              //drive sel 加快xosc起振时间但会增加功耗 起振完后要把驱动改回默认值以节省功耗
+   \   00000A                ; Setup parameters for call to function irtc_write_cmd
+   \   00000A   7A07         MOV     R2,#0x7
+   \   00000C   7959         MOV     R1,#0x59
+   \   00000E   12....       LCALL   irtc_write_cmd
+     97          	CLKCON |= BIT(7)|BIT(4);                    //enable xosc32k, rc2m
+   \   000011   43CB90       ORL     0xcb,#0x90
+   \   000014   E5CB         MOV     A,0xcb
+     98          	CLKCON &= ~(BIT(6)|BIT(2));                 //disable xosc12m, xosc select 32k
+   \   000016   53CBBB       ANL     0xcb,#0xbb
+   \   000019   E5CB         MOV     A,0xcb
+     99          #elif ((SYS_CRY == CRY_24M) || (SYS_CRY == CRY_12M) || (SYS_CRY == CRY_4M))
+    100          	CLKCON |= BIT(6)|BIT(4)|BIT(2);             //enable xosc12m, rc2m, xosc select 12m
+    101          	CLKCON &= ~BIT(7);                          //disable xosc32k
+    102          #endif
+    103          	sys.delay_sys = 5;                          //上电默认是512k
+   \   00001B   75..05       MOV     sys,#0x5
+    104          
+    105          #if SRAM_DEBUG
+    106          	pll_clk_rc10m_sram(PLL_INTL,PLL_FRACL,PLL_FRACH);
+    107          #else
+    108          	pll_clk_rc10m();
+   \   00001E                ; Setup parameters for call to function pll_clk_rc10m
+   \   00001E   12....       LCALL   pll_clk_rc10m
+    109          #endif
+    110          
+    111          	sys_clk_pll(1);
+   \   000021                ; Setup parameters for call to function sys_clk_pll
+   \   000021   7901         MOV     R1,#0x1
+   \   000023   12....       LCALL   sys_clk_pll
+    112          	sys.delay_sys = 48;
+   \   000026   75..30       MOV     sys,#0x30
+    113          	sys.clk_mode = SYS_24M;
+   \   000029   75..00       MOV     (sys + 2),#0x0
+    114          #endif
+    115          
+    116          #if TASK_LOWPOWER_EN
+    117          	sys_ctl.rc2m = cal_rc2m();                  //计算rc2m实际频率
+    118          #endif
+    119          }
+   \   00002C   22           RET
+    120          
+    121          /*----------------------------------------------------------------------------*/
+    122          /**@brief 外部晶振初始化
+    123             @param 无
+    124             @return 无
+    125             @note 有晶振时，系统时钟由RC+PLL切换到XOSC+PLL；无晶振时，不切换
+    126          */
+    127          /*----------------------------------------------------------------------------*/
+    128          #pragma location="CLK_SEG"
+
+   \                                 In segment CLK_SEG, align 1, keep-with-next
+    129          void sys_pll_xosc(void)
+   \                     sys_pll_xosc:
+    130          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    131          #ifndef UART_DEBUG
+    132          
+    133          #if (SYS_CRY == CRY_AUTO)
+    134          	irtc_write_cmd(CFG3_WR, 0x04); //因为起振要一段时间 起振后在此处把xosc的驱动改回默认值以节省功耗
+    135          	if(!b_sys.xosc_flag)
+    136          	{
+    137          		return;                    //自动判断模式，无晶振，不切换
+    138          	}
+    139          	pll_clk_x32k();
+    140          #elif (SYS_CRY == CRY_32K)
+    141          #if (CRY_PIN_NUM == CRY_1PIN)    //单脚晶振起振慢
+    142          	if(sys_ctl.irtc_poweron)
+    143          	{
+    144          		delay_5ms(70);
+    145          		WATCHDOG_CLR();
+    146          	}
+    147          #endif
+    148          	irtc_write_cmd(CFG3_WR, 0x04); //因为起振要一段时间 起振后在此处把xosc的驱动改回默认值以节省功耗
+   \   000000                ; Setup parameters for call to function irtc_write_cmd
+   \   000000   7A04         MOV     R2,#0x4
+   \   000002   7959         MOV     R1,#0x59
+   \   000004   12....       LCALL   irtc_write_cmd
+    149          	pll_clk_x32k();
+   \   000007                ; Setup parameters for call to function pll_clk_x32k
+   \   000007   12....       LCALL   pll_clk_x32k
+    150          #elif (SYS_CRY == CRY_4M)
+    151          	pll_clk_x4m();
+    152          #elif (SYS_CRY == CRY_12M)
+    153          	pll_clk_x12m();
+    154          #elif (SYS_CRY == CRY_24M)
+    155          	pll_clk_x24m();
+    156          #elif (SYS_CRY == CRY_RC)
+    157          #else
+    158          #error "请选择一种时钟源"
+    159          #endif
+    160          	sys_clk_pll(1);
+   \   00000A                ; Setup parameters for call to function sys_clk_pll
+   \   00000A   7901         MOV     R1,#0x1
+   \   00000C   12....       LCALL   sys_clk_pll
+    161          
+    162          	CLKCON &= ~BIT(5);                  //disable rc12m
+   \   00000F   53CBDF       ANL     0xcb,#0xdf
+    163          #endif
+    164          }
+   \   000012   22           RET
+    165          
+    166          /*----------------------------------------------------------------------------*/
+    167          /**@brief 切换系统时钟
+    168             @param 无
+    169             @return 无
+    170             @note
+    171          */
+    172          /*----------------------------------------------------------------------------*/
+    173          #pragma location="SET_SYS_CLK_SEG"
+
+   \                                 In segment SET_SYS_CLK_SEG, align 1, keep-with-next
+    174          void set_sys_clk(u8 mode)
+   \                     set_sys_clk:
+    175          {
+   \   000000   7402         MOV     A,#0x2
+   \   000002   12....       LCALL   ?FUNC_ENTER_SP
+   \   000005                ; Saved register size: 5
+   \   000005                ; Auto size: 0
+    176          	u8 pll_v, sys_v;
+    177          	if(sys.clk_mode == mode)
+   \   000005   E5..         MOV     A,(sys + 2)
+   \   000007   69           XRL     A,R1
+   \   000008   6073         JZ      ??set_sys_clk_0
+    178          	{
+    179          		return;
+    180          	}
+    181          	sys.clk_mode = mode;
+   \   00000A   89..         MOV     (sys + 2),R1
+    182          #if 0// PRINTF_EN
+    183          	while((UARTCON & BIT(4)) && (UARTSTA & BIT(4)) == 0);           //等待串口打印完毕
+    184          #endif
+    185          
+    186          	bool tmp_ea = IE_EA;
+   \   00000C   A2AF         MOV     C,0xa8.7
+   \   00000E   5004         JNC     ??set_sys_clk_1
+   \   000010   D2..         SETB    ?VB.0
+   \   000012   8002         SJMP    ??set_sys_clk_2
+   \                     ??set_sys_clk_1:
+   \   000014   C2..         CLR     ?VB.0
+    187          	IE_EA = 0;
+   \                     ??set_sys_clk_2:
+   \   000016   C2AF         CLR     0xa8.7
+    188          
+    189          	switch(mode)
+   \   000018   E9           MOV     A,R1
+   \   000019   12....       LCALL   ?UC_SWITCH_DENSE
+   \                     `?<Jumptable for set_sys_clk>_0`:
+   \   00001C   00           DB        0
+   \   00001D   00           DB        0
+   \   00001E   ....         DW        ??set_sys_clk_3
+   \   000020   ....         DW        ??set_sys_clk_4
+    190          	{
+    191          #if (FM_CLOCK == USE_SD_IO_32KHZ_CLK)
+    192          	case SYS_12M:
+    193          		pll_v = 0;              //PLL = 48M
+    194          		sys_v = 2;              //SYS = 12M
+    195          		break;
+    196          #endif
+    197          	case SYS_24M:
+    198          		pll_v = 0;              //PLL = 48M
+   \                     ??set_sys_clk_4:
+   \   000022   8E..         MOV     ?V0 + 0,R6
+    199          		sys_v = 1;              //SYS = 24M
+   \   000024   0E           INC     R6
+    200          		break;
+    201          
+    202          #if WAV_SUPPORT                 //目前只有WAV用到了48M
+    203          	case SYS_48M:
+    204          		pll_v = 0;              //PLL = 48M
+    205          		sys_v = 0;              //SYS = 48M
+    206          #ifdef AX107X_TAG
+    207          		MEMCON |= BIT(7);       //otp_clk = sys_clk/2
+    208          #endif
+    209          		break;
+    210          #endif
+    211          
+    212          #if TASK_LOWPOWER_EN
+    213          	case SYS_RC_1M:
+    214          		CLKCON |= BIT(4);                   //enable rc2m
+    215          		delay_1ms(1);                       //delay >2us ????
+    216          		CLKCON = (CLKCON & 0xfc) | BIT(0);  //sysclk select rc2m
+    217          		CLKCON1 = (CLKCON1 & 0xf3);         //sysclk no div
+    218          		CLKCON &= ~BIT(5);                  //disable rc12m
+    219          		CLKCON3 &= ~(BIT(0)|BIT(4));        //disable pll, rc_sys_clk select rc2m
+    220          		CLKCON2 = (CLKCON2 & 0xfc) | BIT(0);//rc_sys_clk div 4
+    221          		CLKCON &= ~BIT(3);                  //mux_clk select rc_sys_clk
+    222          		CLKCON = (CLKCON & 0xfc);           //sysclk select mux_clk
+    223          
+    224          		TMR2PRH = (u8)(sys_ctl.rc2m>>9);
+    225          		TMR2PRL = (u8)(sys_ctl.rc2m>>1);
+    226          		TMR2CON1 = (TMR2CON1 & 0xf8);       //定时器
+    227          #if PRINTF_EN
+    228          		UARTBAUD = sys_ctl.rc2m*10/2/1152;  //UART
+    229          		UARTBAUDH = 0;
+    230          #endif
+    231          		sd_set_rate(0);                     //sd
+    232          		IE_EA = tmp_ea;
+    233          		return;
+    234          #endif
+    235          
+    236          		/*
+    237          		    case SYS_RC_2M:
+    238          		        CLKCON |= BIT(4);                   //enable rc2m
+    239          		        delay_1ms(1);                       //delay >2us ????
+    240          		        CLKCON = (CLKCON & 0xfc) | BIT(0);  //sysclk select rc2m
+    241          		        CLKCON1 = (CLKCON1 & 0xf3);         //sysclk no div
+    242          		        CLKCON &= ~BIT(5);                  //disable rc12m
+    243          		        CLKCON3 &= ~BIT(0);                 //disable pll
+    244          
+    245          		        TMR2PRH = (u8)(sys_ctl.rc2m>>8);
+    246          		        TMR2PRL = (u8)(sys_ctl.rc2m);
+    247          		        TMR2CON1 = (TMR2CON1 & 0xf8);       //定时器
+    248          		#if PRINTF_EN
+    249          		        UARTBAUD = sys_ctl.rc2m*10/1152;    //UART
+    250          		        UARTBAUDH = 0;
+    251          		#endif
+    252          		        sd_set_rate(0);                     //sd
+    253          		        IE_EA = tmp_ea;
+    254          		        return;
+    255          		*/
+    256          	}
+    257          
+    258          	//设置pll
+    259          	if((CLKCON3 & BIT(0)) == 0)
+   \                     ??set_sys_clk_3:
+   \   000025   E5CE         MOV     A,0xce
+   \   000027   A2E0         MOV     C,0xE0 /* A   */.0
+   \   000029   4003         JC      ??set_sys_clk_5
+    260          	{
+    261          #if (SYS_CRY == CRY_AUTO)
+    262          		if(b_sys.xosc_flag)
+    263          		{
+    264          			pll_clk_x32k();
+    265          		}
+    266          		else
+    267          		{
+    268          #if SRAM_DEBUG
+    269          			pll_clk_rc10m_sram(PLL_INTL,PLL_FRACL,PLL_FRACH);
+    270          #else
+    271          			pll_clk_rc10m();
+    272          #endif
+    273          		}
+    274          #elif (SYS_CRY == CRY_32K)
+    275          		pll_clk_x32k();
+   \   00002B                ; Setup parameters for call to function pll_clk_x32k
+   \   00002B   12....       LCALL   pll_clk_x32k
+    276          #elif (SYS_CRY == CRY_4M)
+    277          		pll_clk_x4m();
+    278          #elif (SYS_CRY == CRY_12M)
+    279          		pll_clk_x12m();
+    280          #elif (SYS_CRY == CRY_24M)
+    281          		pll_clk_x24m();
+    282          #elif (SYS_CRY == CRY_RC)
+    283          #else
+    284          #error "请选择一种时钟源"
+    285          #endif
+    286          	}
+    287          
+    288          	//设置系统时钟
+    289          	sys_clk_pll(sys_v);
+   \                     ??set_sys_clk_5:
+   \   00002E                ; Setup parameters for call to function sys_clk_pll
+   \   00002E   EE           MOV     A,R6
+   \   00002F   F9           MOV     R1,A
+   \   000030   12....       LCALL   sys_clk_pll
+    290          
+    291          #ifdef AX107X_TAG
+    292          #if WAV_SUPPORT     //目前只有WAV用到了48M
+    293          	if(mode != SYS_48M)
+    294          	{
+    295          		MEMCON &= ~BIT(7);       //otp_clk = sys_clk
+    296          	}
+    297          #endif
+    298          #endif
+    299          
+    300          	//设置模块时钟
+    301          	sys_v += pll_v_s[pll_v & 0x03];
+   \   000033   7403         MOV     A,#0x3
+   \   000035   55..         ANL     A,?V0 + 0
+   \   000037   7900         MOV     R1,#0x0
+   \   000039   24..         ADD     A,#(pll_v_s & 0xff)
+   \   00003B   F582         MOV     DPL,A
+   \   00003D   E4           CLR     A
+   \   00003E   34..         ADDC    A,#((pll_v_s >> 8) & 0xff)
+   \   000040   F583         MOV     DPH,A
+   \   000042   E4           CLR     A
+   \   000043   93           MOVC    A,@A+DPTR
+   \   000044   2E           ADD     A,R6
+   \   000045   FE           MOV     R6,A
+    302          #if LED_7P7S_SCAN_HALF_MS
+    303          	TMR2PRH = 0x00;
+   \   000046   E4           CLR     A
+   \   000047   903029       MOV     DPTR,#0x3029
+   \   00004A   F0           MOVX    @DPTR,A
+    304          	TMR2PRL = 0x2f;      // 0x005d为0.125ms
+   \   00004B   742F         MOV     A,#0x2f
+   \   00004D   903028       MOV     DPTR,#0x3028
+   \   000050   F0           MOVX    @DPTR,A
+    305          	//TMR2PRH = 0x00;
+    306          	//TMR2PRL = 0xBA;      // 0x00BA为0.5ms
+    307          #else
+    308          	TMR2PRH = 0x01;
+    309          	TMR2PRL = 0x77;      // 0x0752为5ms, 0x177为1ms
+    310          #endif
+    311          	TMR1CON1 = (TMR1CON1 & 0xf8) | (7-sys_v);   //定时器
+   \   000051   7407         MOV     A,#0x7
+   \   000053   C3           CLR     C
+   \   000054   9E           SUBB    A,R6
+   \   000055   FA           MOV     R2,A
+   \   000056   74F8         MOV     A,#-0x8
+   \   000058   55E2         ANL     A,0xe2
+   \   00005A   4A           ORL     A,R2
+   \   00005B   F5E2         MOV     0xe2,A
+    312          	TMR2CON1 = (TMR2CON1 & 0xf8) | (7-sys_v);   //定时器
+   \   00005D   74F8         MOV     A,#-0x8
+   \   00005F   55C2         ANL     A,0xc2
+   \   000061   4A           ORL     A,R2
+   \   000062   F5C2         MOV     0xc2,A
+    313          #if PRINTF_EN
+    314          	UARTBAUD = 0x33 >> sys_v;                   //UART
+   \   000064   75..33       MOV     ?V0 + 0,#0x33
+   \   000067   89..         MOV     ?V0 + 1,R1
+   \   000069   EE           MOV     A,R6
+   \   00006A   78..         MOV     R0,#?V0 + 0
+   \   00006C   12....       LCALL   ?SS_SHR
+   \   00006F   E5..         MOV     A,?V0 + 0
+   \   000071   F5C5         MOV     0xc5,A
+    315          	UARTBAUDH = 0x70;
+   \   000073   75C670       MOV     0xc6,#0x70
+    316          #endif
+    317          	sd_set_rate(0);                             //sd, 系统在12M时跑6M，其余为12M
+   \   000076                ; Setup parameters for call to function sd_set_rate
+   \   000076   12....       LCALL   sd_set_rate
+    318          
+    319          	IE_EA = tmp_ea;
+   \   000079   A2..         MOV     C,?VB.0
+   \   00007B   92AF         MOV     0xa8.7,C
+    320          }
+   \                     ??set_sys_clk_0:
+   \   00007D   7F02         MOV     R7,#0x2
+   \   00007F   02....       LJMP    ?FUNC_LEAVE_SP
+    321          
+    322          //获取系统时钟
+    323          #pragma location="CLK_SEG"
+
+   \                                 In segment CLK_SEG, align 1, keep-with-next
+    324          u8 get_sys_clk(void)
+   \                     get_sys_clk:
+    325          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    326          	return sys.clk_mode;
+   \   000000   A9..         MOV     R1,(sys + 2)
+   \   000002   22           RET
+    327          }
+
+   \                                 In segment SFR_AN, at 0xa8
+   \   union <unnamed> volatile __sfr _A_IE0
+   \                     _A_IE0:
+   \   000000                DS 1
+
+   Maximum stack usage in bytes:
+
+     Function            EXT_STACK PSTACK XSTACK
+     --------            --------- ------ ------
+     get_sys_clk                0      0      0
+     pllrefclk_output           0      0      0
+     rtcclk_output              0      0      0
+     set_sys_clk                5      0      0
+       -> pll_clk_x32k         10      0      0
+       -> sys_clk_pll          10      0      0
+       -> sd_set_rate          10      0      0
+     sys_pll_xosc               0      0      0
+       -> irtc_write_cmd        0      0      0
+       -> pll_clk_x32k          0      0      0
+       -> sys_clk_pll           0      0      0
+     sysclk_output              0      0      0
+     sysclk_set                 0      0      0
+       -> irtc_write_cmd        0      0      0
+       -> pll_clk_rc10m         0      0      0
+       -> sys_clk_pll           0      0      0
+
+
+   Segment part sizes:
+
+     Function/Label   Bytes
+     --------------   -----
+     IRTCON1             1
+     P0DIR               1
+     TMR2CON1            1
+     UARTBAUD            1
+     UARTBAUDH           1
+     CLKCON              1
+     CLKCON2             1
+     CLKCON3             1
+     CLKCON4             1
+     TMR1CON1            1
+     pll_v_s             4
+     sysclk_output      18
+     ?Subroutine0       11
+     rtcclk_output       6
+     pllrefclk_output    8
+     sysclk_set         45
+     sys_pll_xosc       19
+     set_sys_clk       130
+     get_sys_clk         3
+     _A_IE0              1
+
+ 
+ 110 bytes in segment CLK_SEG
+   4 bytes in segment CODE_C
+ 130 bytes in segment SET_SYS_CLK_SEG
+  11 bytes in segment SFR_AN
+ 
+ 244 bytes of CODE memory
+   0 bytes of DATA memory (+ 11 bytes shared)
+
+Errors: none
+Warnings: none

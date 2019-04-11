@@ -1,0 +1,545 @@
+##############################################################################
+#                                                                            #
+# IAR 8051 C/C++ Compiler V7.20H/W32                   10/Sep/2015  19:03:28 #
+# Copyright 2004-2006 IAR Systems. All rights reserved.                      #
+#                                                                            #
+#    Core               =  plain                                             #
+#    Code model         =  near                                              #
+#    Data model         =  large                                             #
+#    Calling convention =  extended stack reentrant                          #
+#    Constant location  =  code                                              #
+#    Extended stack     =  enabled                                           #
+#    Dptr setup         =  1,16                                              #
+#    Source file        =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\fm\kt0830.c                           #
+#    Command line       =  -I "C:\Program Files\IAR Systems\Embedded         #
+#                          Workbench 4.05 Evaluation version\8051\INC\" -I   #
+#                          "C:\Program Files\IAR Systems\Embedded Workbench  #
+#                          4.05 Evaluation version\8051\INC\CLIB\" -I        #
+#                          "C:\Documents and Settings\Administrator\×ÀÃæ\lil #
+#                          y\15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX1 #
+#                          070_20150908\COMMON\" -I "C:\Documents and        #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\INC\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\config\" -I "C:\Documents and    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\api\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\fm\" -I "C:\Documents and        #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\fat\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\display\" -I "C:\Documents and   #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\displ #
+#                          ay\led\" -I "C:\Documents and                     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\displ #
+#                          ay\lcd\" -I "C:\Documents and                     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\task\ #
+#                          " -I "C:\Documents and Settings\Administrator\×ÀÃ #
+#                          æ\lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lil #
+#                          y_AX1070_20150908\user\" -I "C:\Documents and     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\mem\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\module\" -I "C:\Documents and    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\modul #
+#                          e\kedir\" -I "C:\Documents and                    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\key\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\startmusic\" -D UART_DEBUG -D    #
+#                          AX207X_TAG -lC "C:\Documents and                  #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\UART_ #
+#                          Debug\List\" -o "C:\Documents and                 #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\UART_ #
+#                          Debug\Obj\" -e -z9 --debug --core=plain           #
+#                          --dptr=16,1 --data_model=large --code_model=near  #
+#                          --calling_convention=ext_stack_reentrant          #
+#                          --place_constants=code --nr_virtual_regs 20       #
+#                          --extended_stack "C:\Documents and                #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\fm\kt #
+#                          0830.c"                                           #
+#    List file          =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\UART_Debug\List\kt0830.lst            #
+#    Object file        =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\UART_Debug\Obj\kt0830.r51             #
+#                                                                            #
+#                                                                            #
+##############################################################################
+
+C:\Documents and Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX1070_20150908\fm\kt0830.c
+      1          /*--------------------------------------------------------------------------*/
+      2          /**@file KT0830.C
+      3             @brief FMÄ£¿éQN8035Çý¶¯
+      4             @details FMÄ£¿éQN8035µÄÇý¶¯º¯Êý
+      5             @author LZZ
+      6             @date 2010-08-17
+      7             @note Í¨¹ýºê¶¨ÒåÀ´Ñ¡ÔñÇý¶¯·½Ê½
+      8          */
+      9          /*----------------------------------------------------------------------------*/
+     10          
+     11          #include "include.h"
+     12          #include "kt0830.h"
+     13          
+     14          #if FM_KT0830_EN
+     15          
+     16          #ifdef ISD_DEBUG
+     17          //·ÅÔÚÈ«¾Ö±äÁ¿£¬¿ÉÊ¡Ò»µã¿Õ¼ä
+     18          s8 afc[3];				//AFC value for previous, current and next channels
+     19          u16 freq[3];			//frequency values for previous, current and next channels
+     20          #ifdef SEEK_WITH_SNR
+     21          u8 snr[3];				//SNR for previous, current and next channels
+     22          #endif
+     23          #endif /* ISD_DEBUG */
+     24          
+     25          __no_init u8 mem_vol;//@"FM_BUF";				//Rememberred volume before mute
+     26          __no_init char mem_afc[3];//@"FM_BUF";			//Rememberred afc values for previous, current and next stations
+     27          __no_init u16 mem_freq[3];//@"FM_BUF";			//Rememberred channel frequencies for previous, current and next stations
+     28          #ifdef SEEK_WITH_SNR
+     29          __no_init u8 mem_snr[3];//@"FM_BUF";			  //Rememberred SNR values for previous, current and next stations
+     30          #endif
+     31          
+     32          
+     33          #pragma location="KT0830EG"
+     34          void KT0830_Write(u8 adrres,u16 dat)
+     35          {
+     36          	fm_i2c_start();
+     37          
+     38          	fm_i2c_send_byte(KT0837_WR);			//Ð´ÃüÁî
+     39          	fm_i2c_recv_ack();
+     40          
+     41          	fm_i2c_send_byte(adrres);
+     42          	fm_i2c_recv_ack();
+     43          
+     44          	fm_i2c_send_byte((u8)(dat>>8));
+     45          	fm_i2c_recv_ack();
+     46          
+     47          	fm_i2c_send_byte((u8)(dat));
+     48          	fm_i2c_recv_ack();
+     49          
+     50          	fm_i2c_stop();
+     51          }
+     52          
+     53          #pragma location="KT0830EG"
+     54          u16 KT0830_Read(u8 adrres)
+     55          {
+     56          	u16 value = 0;
+     57          
+     58          	fm_i2c_start();
+     59          	fm_i2c_send_byte(KT0837_WR); 			//Ð´ÃüÁî
+     60          	fm_i2c_recv_ack();
+     61          
+     62          	fm_i2c_send_byte(0x00);
+     63          	fm_i2c_recv_ack();
+     64          
+     65          	fm_i2c_start();
+     66          	fm_i2c_send_byte(KT0837_RD); 			//Ð´ÃüÁî
+     67          	fm_i2c_recv_ack();
+     68          	for(; adrres>0; adrres--)
+     69          	{
+     70          		fm_i2c_read_byte();
+     71          		fm_i2c_send_ack();
+     72          
+     73          		fm_i2c_read_byte();
+     74          		fm_i2c_send_ack();
+     75          	}
+     76          	value = (u16)fm_i2c_read_byte();
+     77          	fm_i2c_send_ack();
+     78          
+     79          	value <<= 8;
+     80          	value += (u16)fm_i2c_read_byte();
+     81          	fm_i2c_send_nack();
+     82          
+     83          	fm_i2c_stop();
+     84          
+     85          	return (value);
+     86          }
+     87          
+     88          #ifdef ISD_DEBUG
+     89          #pragma location="KT0830EG"
+     90          void KT0830_Modify(u8 adrres, u16 and, u16 or)
+     91          {
+     92          	u16 reg;
+     93          	reg = KT0830_Read(adrres) & and;
+     94          	KT0830_Write(adrres, reg|or);
+     95          }
+     96          #endif
+     97          
+     98          
+     99          /*
+    100          #pragma location="FmFun"
+    101          void kt0830_AntTuneOn(void)
+    102          {
+    103          	u16 Buf;
+    104          
+    105          	Buf = KT0830_Read(0x23);
+    106          	KT0830_Write(0x23, Buf | 0x0004);
+    107          	Buf = KT0830_Read(0x1D);
+    108          	KT0830_Write(0x1D, (Buf & 0xff7f)|((3-INDUCTOR_Q)<<5));	 		//Write MUTE_B bit to 0
+    109          }
+    110          //The antenna tuning function will be turn off and certain amount of caps will be connected to RFIN
+    111          //The unit of parameter cap is fF. The capactior value is range from 0fF to 49750fF.
+    112          u8 KT_FMAntTuneOff(u16 cap)@"FmFun"
+    113          {
+    114          	u16 regx,capindex;
+    115          	if (cap<2000)
+    116          	{
+    117          	    regx = KT0830_Read(0x23);
+    118          		//deg("regx_nxz= %2x\n",regx );
+    119          		KT0830_Write(0x23, regx & 0xfffb);								//antenna tunning disable
+    120          	    regx = KT0830_Read(0x1D);
+    121          		KT0830_Write(0x1D, (regx & 0x00ff) | 0x0080);					//cali loop disable =1 capindex=0
+    122          	}
+    123          	else
+    124          	{
+    125          		regx = KT0830_Read(0x23);
+    126          		KT0830_Write(0x23, regx | 0x0004);								//antenna tuning enable
+    127          		capindex=(cap-2000)/250;
+    128          		if (capindex>0xBF)
+    129          		capindex=0xBF;
+    130          	        regx = KT0830_Read(0x1D);
+    131          		KT0830_Write(0x1D, (regx & 0x00ff) | 0x0080 | (capindex<<8));	//cali loop disable =1 capindex
+    132          	}
+    133          	return(1);
+    134          }
+    135          
+    136          #pragma location="FmFun"
+    137          void KT_FMTune(u16 Frequency)      //87.5MHz-->Frequency=8750; Mute the chip and Tune to Frequency
+    138          {
+    139          	u16 channel;
+    140          	//u16 tmp_freq,tmp_cap;
+    141          	channel=(Frequency*10-6400)/5;
+    142          
+    143          #ifdef ULTRA_LOW_Q
+    144          //	if (ant_type_global==SHORT_ANT)
+    145          //	{
+    146          		tmp_freq=(Frequency*10+50)/100;
+    147          		tmp_cap=25330/tmp_freq;
+    148          		tmp_cap*=100;tmp_cap=tmp_cap/tmp_freq;
+    149          		tmp_cap*=100;tmp_cap=tmp_cap/IND_MATCH;
+    150          		tmp_cap*=100;tmp_cap-=CEXT_MATCH;
+    151          		KT_FMAntTuneOff(tmp_cap);
+    152          //	}else KT_FMAntTuneOff(LONG_ANT_CAP);
+    153          #endif
+    154          
+    155          	KT0830_Write(0x03, 0x8800 | channel);	//set tune bit to 1
+    156          	DELAY_MS(3);//50);   //++ changed, SO @ 2010-08-27, faster seeking time
+    157          
+    158          }
+    159          */
+    160          
+    161          #pragma location="KT0830EG"
+    162          u8 KT_FMValidStation(u16 Frequency) //0-->False Station 1-->Good Station //check AFC_DELTA only
+    163          {
+    164          	u8 i,j;
+    165          	u8 snr2,snr3;
+    166          	u16 nextfreq;
+    167          
+    168          #ifndef ISD_DEBUG
+    169          	s8 afc[3];				//AFC value for previous, current and next channels
+    170          	u16 freq[3];			//frequency values for previous, current and next channels
+    171          #ifdef SEEK_WITH_SNR
+    172          	u8 snr[3];				//SNR for previous, current and next channels
+    173          #endif
+    174          #endif /* ISD_DEBUG */
+    175          
+    176          	//afc[0]=0;afc[1]=0;afc[2]=0;		//initialize
+    177          	//freq[0]=0;freq[1]=0;freq[2]=0;	//initialize
+    178          	my_memset(afc, 0, 3);
+    179          	my_memset(freq, 0, 6);
+    180          #ifdef SEEK_WITH_SNR
+    181          	//snr[0]=0;snr[1]=0;snr[2]=0;		//initialize
+    182          	my_memset(snr, 0, 3);
+    183          #endif
+    184          
+    185          	nextfreq=Frequency-CHANNEL_STEP;
+    186          	//Get AFC values of previous, current and next channels
+    187          	for(i=0; i<3; i++)
+    188          	{
+    189          		//get AFC values for the last station's information
+    190          		for(j=0; j<3; j++)
+    191          		{
+    192          			if(mem_freq[j]==nextfreq)
+    193          			{
+    194          				afc[i]=mem_afc[j];
+    195          				freq[i]=mem_freq[j];
+    196          #ifdef SEEK_WITH_SNR
+    197          				snr[i]=mem_snr[j];
+    198          #endif
+    199          			}
+    200          		}
+    201          		//get new AFC value if the station information is not investigated in the last run
+    202          		if(!freq[i])
+    203          		{
+    204          			kt0830_set_freq(nextfreq);
+    205          			afc[i]=KT_FMGetAFC();
+    206          #ifdef SEEK_WITH_SNR
+    207          			snr[i]=KT_FMGetSNR();
+    208          #endif
+    209          			freq[i]=nextfreq;
+    210          		}
+    211          		nextfreq+=CHANNEL_STEP;
+    212          	}
+    213          
+    214          	//Record AFC values
+    215          	//mem_afc[0]=afc[0];mem_afc[1]=afc[1];mem_afc[2]=afc[2];
+    216          	//mem_freq[0]=freq[0];mem_freq[1]=freq[1];mem_freq[2]=freq[2];
+    217          	smemcpy(mem_afc, afc, 3);
+    218          	smemcpy(mem_freq, freq, 6);
+    219          #ifdef SEEK_WITH_SNR
+    220          	//mem_snr[0]=snr[0];mem_snr[1]=snr[1];mem_snr[2]=snr[2];
+    221          	smemcpy(mem_snr, snr, 3);
+    222          #endif
+    223          
+    224          	//Determine the validation of current station
+    225          	//changed, 27-2-2011 if ((afc[0]<afc[1]) && (afc[1]<afc[2])&& (afc[0]<-AFCTH_PREV) && (afc[1]>-AFCTH) && (afc[1]<AFCTH) && (afc[2]>AFCTH_NEXT))
+    226          	if((afc[0]<afc[1]) && (afc[1]<afc[2]) && (afc[0]<(32-AFCTH_PREV)) && (afc[1]>(32-AFCTH)) && (afc[1]<(AFCTH+32)) && (afc[2]>(AFCTH_NEXT+32)))
+    227          	{
+    228          #ifdef SEEK_WITH_SNR
+    229          		kt0830_set_freq(Frequency);
+    230          		snr2=KT_FMGetSNR();
+    231          		if((snr[1]>=SNR_TH) && (snr2>=SNR_TH))  //-- changed, SO @ 2010-08-25
+    232          //		if ((snr[1]>=*pR1) && (snr2>=*pR1))     //++, nxz
+    233          //		if ((snr[1]>=0x30) && (snr2>=0x30))     //++
+    234          		{
+    235          			//deg("snr1=%d,snr2=%d\n",snr[1],snr2);
+    236          			return(1);
+    237          		}
+    238          		if((snr[1]<SNR_TH) && (snr2<SNR_TH))    //-- changed, SO @ 2010-08-25
+    239          //		if ((snr[1]<*pR1) && (snr2<*pR1))       //++, nxz
+    240          //		if ((snr[1]<0x30) && (snr2<0x30))       //++
+    241          		{
+    242          			return(0);
+    243          		}
+    244          		DELAY_MS(5);
+    245          		snr3=KT_FMGetSNR();
+    246          		if(snr3>=SNR_TH)    //-- changed, SO @ 2010-08-25
+    247          //		if (snr3>=*pR1)     //++, nxz
+    248          //		if (snr3>=0x30)     //++
+    249          		{
+    250          			//deg("snr1=%d,snr2=%d,snr3=%d\n",snr[1],snr2,snr3);
+    251          			return(1);
+    252          		}
+    253          		else
+    254          		{
+    255          			return(0);
+    256          		}
+    257          #else
+    258          		return(1);
+    259          #endif
+    260          	}
+    261          	else
+    262          		return(0);
+    263          }
+    264          
+    265          
+    266          /*
+    267          void KT0830E_UnSoftMute(void)@"FmFun"
+    268          {
+    269          	u16 Buf;
+    270          
+    271          	Buf = Read_KT0830E(0x04);
+    272          	Write_KT0830E(0x04, Buf | 0x8000);	 		//Write MUTE_B bit to 0
+    273          	DELAY_MS(10);
+    274          }
+    275          
+    276          void KT0830E_SoftMute(void)@"FmFun"
+    277          {
+    278          	u16 Buf;
+    279          
+    280          	Buf = Read_KT0830E(0x04);
+    281          	Write_KT0830E(0x04, Buf & 0x7FFF);	 		//Write MUTE_B bit to 0
+    282          	DELAY_MS(10);
+    283          }
+    284          */
+    285          
+    286          #pragma location="KT0830EG"
+    287          char KT_FMGetAFC(void)							// returned value's range is from -127 to 127, unit is KHz
+    288          {
+    289          #if 0
+    290          	//changed, 27-2-2011
+    291          	u8 afc_delta;
+    292          	u16 reg14;
+    293          	reg14 = KT0830_Read(0x14);					// AFC_DELTAF
+    294          	afc_delta = reg14 & 0x003f;
+    295          	if(afc_delta & 0x20)
+    296          		afc_delta=afc_delta-32;
+    297          	else
+    298          		afc_delta=afc_delta+32;
+    299          	return (afc_delta);
+    300          #else
+    301          	u8 afc_delta;
+    302          	afc_delta = KT0830_Read(0x14);				// AFC_DELTAF
+    303          	afc_delta &= 0x3f;
+    304          	afc_delta ^= 0x20;							//¿É½ÚÊ¡Ò»µã¿Õ¼ä
+    305          	return (afc_delta);
+    306          #endif
+    307          }
+    308          
+    309          #pragma location="KT0830EG"
+    310          u8 KT_FMGetSNR(void)
+    311          {
+    312          	return (KT0830_Read(0x1F) & 0x00FF);
+    313          }
+    314          
+    315          #pragma location="KT0830EG"
+    316          u8 kt0830_online(void)
+    317          {
+    318          	return (KT0830_Read(0x01) == 0x0440)? true : false;
+    319          }
+    320          
+    321          #pragma location="KT0830EG"
+    322          void kt0830_init(void)
+    323          {
+    324          	u8 i = INIT_FAIL_TH;
+    325          	u16 Buf;
+    326          
+    327          	KT0830_Write(0x0f, 0x8a00);
+    328          
+    329          #if (FM_CLOCK == USE_MODULE_CRYSTAL)
+    330          	KT0830_Write(0x23, 0x0001);		//internal 32.768k
+    331          #elif (FM_CLOCK == SHARE_CRYSTAL_24MHz)
+    332          	KT0830_Write(0x23, 0x1701);		//external 24M
+    333          #elif (FM_CLOCK == SHARE_CRYSTAL_12MHz) || (FM_CLOCK == USE_IO_12MHZ_CLK) || (FM_CLOCK == USE_SD_IO_12MHZ_CLK))
+    334          	KT0830_Write(0x23, 0x1301);		//external 12M
+    335          #elif (FM_CLOCK == SHARE_CRYSTAL_32KHz)|| (FM_CLOCK == USE_IO_32KHZ_CLK) || (FM_CLOCK == USE_SD_IO_32KHZ_CLK))
+    336          	KT0830_Write(0x23, 0x1001);		//external 32.768k
+    337          #else
+    338          #error "KT0830: ÇëÑ¡ÔñFMÊ±ÖÓÔ´"
+    339          #endif
+    340          
+    341          	kt0830_mute();
+    342          	KT0830_Write(0x0f, 0x8a00);
+    343          
+    344          	while(i--)
+    345          	{
+    346          		DELAY_MS(10);
+    347          		Buf = KT0830_Read(0x12);		  			//Read power-up indicator
+    348          		Buf >>= 8;
+    349          		if((Buf&0x88) != 0x88)
+    350          			break;
+    351          	}
+    352          
+    353          	KT0830_Write(0x0a, 0x0000); 				//Turn On AFC function
+    354          	KT0830_Write(0x02, 0x2207); 				//Write Frequency Space to 100KHz
+    355          
+    356          #ifndef ISD_DEBUG
+    357          	Buf = KT0830_Read(0x22); 					//
+    358          	KT0830_Write(0x22, Buf|0x1000);				//Configure RFAGC parameter of agc_filter_dis=1
+    359          	Buf = KT0830_Read(0x21); 					//
+    360          	KT0830_Write(0x21, (Buf&0xfff8)|0x0003);	//Configure RFAGC parameter of peaklowth=60mV
+    361          	Buf = KT0830_Read(0x09); 					//
+    362          	KT0830_Write(0x09, (Buf&0x1fff)|0x2000);	//Configure RFAGC parameter of peakhighth=90mV
+    363          	Buf = KT0830_Read(0x0A);
+    364          	KT0830_Write(0x0A, Buf | 0x0400);			//loldo_ctrl=highest
+    365          
+    366          	//kt0830_AntTuneOn();
+    367          	Buf = KT0830_Read(0x23);
+    368          	KT0830_Write(0x23, Buf | 0x0004);
+    369          	Buf = KT0830_Read(0x1D);
+    370          	KT0830_Write(0x1D, (Buf & 0xff7f)|((3-INDUCTOR_Q)<<5));	 		//Write MUTE_B bit to 0
+    371          #else
+    372          	KT0830_Modify(0x22, 0xffff, 0x1000);
+    373          	KT0830_Modify(0x21, 0xfff8, 0x0003);
+    374          	KT0830_Modify(0x09, 0x1fff, 0x2000);
+    375          	KT0830_Modify(0x0A, 0xffff, 0x0400);
+    376          
+    377          	KT0830_Modify(0x23, 0xffff, 0x0004);
+    378          	KT0830_Modify(0x1D, 0xff7f, ((3-INDUCTOR_Q)<<5));
+    379          #endif
+    380          }
+    381          
+    382          #pragma location="KT0830EG"
+    383          void kt0830_set_freq(u16 freq)
+    384          {
+    385          #if 0
+    386          	KT_FMTune(freq);
+    387          #else
+    388          	u16 channel;
+    389          	channel=(freq*10-6400)/5;
+    390          	KT0830_Write(0x03, 0x8800 | channel);	//set tune bit to 1
+    391          	DELAY_MS(3);//50);   //++ changed, SO @ 2010-08-27, faster seeking time
+    392          #endif
+    393          }
+    394          
+    395          #pragma location="KT0830EG"
+    396          void kt0830_set_vol(u8 vol)
+    397          {
+    398          	if(vol > 15)
+    399          		vol = 15;
+    400          
+    401          #ifdef ISD_DEBUG
+    402          	KT0830_Modify(0x04, 0xfff0, vol | 0x4000);
+    403          #else
+    404          
+    405          	u16 Buf;
+    406          	Buf = KT0830_Read(0x04);
+    407          	KT0830_Write(0x04, (Buf & 0xfff0) | vol | 0x4000);
+    408          #endif
+    409          }
+    410          
+    411          #pragma location="KT0830EG"
+    412          void kt0830_off(void)
+    413          {
+    414          	kt0830_mute();
+    415          	KT0830_Write(0x0F, 0x9A00);      			//Write Standby bit to 1
+    416          }
+    417          
+    418          #pragma location="KT0830EG"
+    419          u8 kt0830_seek(u16 freq)
+    420          {
+    421          	return KT_FMValidStation(freq);
+    422          }
+    423          
+    424          #pragma location="KT0830EG"
+    425          void kt0830_unmute(void)
+    426          {
+    427          	u16 Buf;
+    428          
+    429          	Buf = KT0830_Read(0x04);
+    430          	KT0830_Write(0x04, Buf | 0x4000); 			//Write MUTE_B bit to 1
+    431          	DELAY_MS(5);
+    432          }
+    433          
+    434          #pragma location="KT0830EG"
+    435          void kt0830_mute(void)
+    436          {
+    437          	u16 Buf;
+    438          
+    439          	Buf = KT0830_Read(0x04);
+    440          	KT0830_Write(0x04, Buf & 0xBFFF);	 		//Write MUTE_B bit to 0
+    441          	DELAY_MS(5);
+    442          }
+    443          
+    444          #endif
+    445          
+    446          
+
+
+   Segment part sizes:
+
+     Function/Label Bytes
+     -------------- -----
+
+ 
+ 
+ 0 bytes of memory
+
+Errors: none
+Warnings: none

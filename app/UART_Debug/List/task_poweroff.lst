@@ -1,0 +1,345 @@
+##############################################################################
+#                                                                            #
+# IAR 8051 C/C++ Compiler V7.20H/W32                   10/Sep/2015  19:03:30 #
+# Copyright 2004-2006 IAR Systems. All rights reserved.                      #
+#                                                                            #
+#    Core               =  plain                                             #
+#    Code model         =  near                                              #
+#    Data model         =  large                                             #
+#    Calling convention =  extended stack reentrant                          #
+#    Constant location  =  code                                              #
+#    Extended stack     =  enabled                                           #
+#    Dptr setup         =  1,16                                              #
+#    Source file        =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\task\task_poweroff.c                  #
+#    Command line       =  -I "C:\Program Files\IAR Systems\Embedded         #
+#                          Workbench 4.05 Evaluation version\8051\INC\" -I   #
+#                          "C:\Program Files\IAR Systems\Embedded Workbench  #
+#                          4.05 Evaluation version\8051\INC\CLIB\" -I        #
+#                          "C:\Documents and Settings\Administrator\×ÀÃæ\lil #
+#                          y\15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX1 #
+#                          070_20150908\COMMON\" -I "C:\Documents and        #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\INC\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\config\" -I "C:\Documents and    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\api\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\fm\" -I "C:\Documents and        #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\fat\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\display\" -I "C:\Documents and   #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\displ #
+#                          ay\led\" -I "C:\Documents and                     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\displ #
+#                          ay\lcd\" -I "C:\Documents and                     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\task\ #
+#                          " -I "C:\Documents and Settings\Administrator\×ÀÃ #
+#                          æ\lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lil #
+#                          y_AX1070_20150908\user\" -I "C:\Documents and     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\mem\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\module\" -I "C:\Documents and    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\modul #
+#                          e\kedir\" -I "C:\Documents and                    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\key\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\startmusic\" -D UART_DEBUG -D    #
+#                          AX207X_TAG -lC "C:\Documents and                  #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\UART_ #
+#                          Debug\List\" -o "C:\Documents and                 #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\UART_ #
+#                          Debug\Obj\" -e -z9 --debug --core=plain           #
+#                          --dptr=16,1 --data_model=large --code_model=near  #
+#                          --calling_convention=ext_stack_reentrant          #
+#                          --place_constants=code --nr_virtual_regs 20       #
+#                          --extended_stack "C:\Documents and                #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\task\ #
+#                          task_poweroff.c"                                  #
+#    List file          =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\UART_Debug\List\task_poweroff.lst     #
+#    Object file        =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\UART_Debug\Obj\task_poweroff.r51      #
+#                                                                            #
+#                                                                            #
+##############################################################################
+
+C:\Documents and Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX1070_20150908\task\task_poweroff.c
+      1          /*****************************************************************************
+      2           * Module    : Task
+      3           * File      : task_poweroff.c
+      4           * Author    : Hanny
+      5           * Email     : coldney@yahoo.com.cn
+      6           * Function  : ¹Ø»úÈÎÎñÁ÷³Ì
+      7           *****************************************************************************/
+      8          #include "include.h"
+      9          
+     10          #if TASK_POWEROFF_EN
+     11          
+     12          void task_poweroff_display(void);
+     13          
+     14          #if SOFT_POWEROFF_EN
+     15          
+     16          type_poweroff_ctl poweroff_ctl;
+     17          
+     18          __root void osc_delay(u16 cnt);
+     19          #pragma location="TASK_POWEROFF_SEG"
+     20          void soft_poweroff(void)
+     21          {
+     22          	while(1)
+     23          	{
+     24          		irtc_write_cmd(PWR_WR, 0x01);//diable VDDCORE
+     25          		WDTCON = 0x3d;
+     26          		osc_delay(0x2000);             //delay 100ms
+     27          	}
+     28          }
+     29          
+     30          #pragma location="TASK_POWEROFF_SEG"
+     31          void soft_poweroff_enter(void)
+     32          {
+     33          	if((sys_ctl.bat_sta == VOL_INIT)               //Î´Íê³ÉµçÑ¹¼ì²â
+     34          	        || (sys_ctl.bat_sta == VOL_GREATER_44V)     //µçÑ¹¸ßÓÚ4.4VÊ±²»ÄÜÈí¹Ø»ú£¬·ñÔò»áËð»µÐ¾Æ¬
+     35          #if DCIN_DET_EN
+     36          	        || (poweroff_ctl.dc_in_sta == DC_IN)        //³äµçÊ±²»½øÈí¹Ø»ú
+     37          #endif
+     38          	  )
+     39          	{
+     40          		return;
+     41          	}
+     42          
+     43          	printf("soft_powerdown\n");
+     44          #if (CRY_PIN_NUM == CRY_1PIN)
+     45          	irtc_write_cmd(CFG_WR,0xac);//enable 32Khz,choose 1pin osc
+     46          #else
+     47          	irtc_write_cmd(CFG_WR,0x8c);//enable 32Khz
+     48          #endif
+     49          	CLKCON |= BIT(4);           //enable rc2m
+     50          	IE_EA =0;                   //disable IE
+     51          
+     52          	//´ò¿ª2mAºÍ8mA¸ºÔØ£¬ÒÔ¼Ó¿ìVDDCORE·Åµç
+     53          	AIPCON8 |= BIT(6) | BIT(5);
+     54          
+     55          	//´ò¿ªP2ÄÚ²¿500RÉÏÀ­µç×èÇÒÊä³ö0£¬ÒÔ¼Ó¿ìVDDCORE·Åµç
+     56          	//¡¾×¢Òâ¡¿Çë¸ù¾ÝÍâ²¿µçÂ·Çé¿öÅäÖÃºÏÊÊµÄIO×´Ì¬
+     57          	disp_port_init();
+     58          
+     59          	PUP2 = 0xff;
+     60          	PUP2L = 0xff;
+     61          	P2 = 0x00;
+     62          	P2DIR = 0x00;
+     63          
+     64          
+     65          	/*°Ñº¯Êýhold_func¿½±´µ½iram*/
+     66          	void (*funpt)();
+     67          	funpt = (void ( *)())0x0000;
+     68          	u8 const   __code *otp_tbl;
+     69          	u8 *ram_tbl;
+     70          	u8 i;
+     71          	otp_tbl = (u8 const __code *)((u16)soft_poweroff);
+     72          	ram_tbl = (u8 *)0x0000;
+     73          	for(i = 0; i < 20; i++)
+     74          	{
+     75          		*ram_tbl = *otp_tbl;
+     76          		ram_tbl++;
+     77          		otp_tbl++;
+     78          	}
+     79          
+     80          	CLKCON = (CLKCON & 0xfc) | BIT(0);  //sysclk select rc2m
+     81          	CLKCON1 = (CLKCON1 & 0xf3);         //sysclk no div
+     82          
+     83          	(*funpt)();
+     84          }
+     85          
+     86          #pragma location="TASK_POWEROFF_SEG"
+     87          void wko_init(void)
+     88          {
+     89          	u8 wkocon_val = irtc_read_cmd(WKO_RD);
+     90          	wkocon_val |= BIT(6) | BIT(4) | BIT(3) | BIT(2);
+     91          	//bit6-FITEN:WKO 1ms filter enable
+     92          	//bit4-WKOEN:WKO PIN enable
+     93          	//bit3-WKOUTEN:WKO PIN output enable
+     94          	//bit2-WKOINEN:WKO PIN input enable
+     95          	wkocon_val &= ~BIT(7);
+     96          	//bit7-WKPIN_STA:wake up pin output 0,´ò¿ªÄÚ²¿ÏÂÀ­µç×è
+     97          	irtc_write_cmd(WKO_WR,wkocon_val);
+     98          
+     99          #if SRAM_DEBUG
+    100          	//¡¾×¢Òâ¡¿ÔÚSRAM°åÉÏµ÷ÊÔÊ±£¬ÇëÊ¹ÓÃµç³Ø¹©µç£¬²»ÒªÁ¬½Ó5VµçÔ´
+    101          	irtc_write_cmd(VCL_WR,0x06);//Ê¹ÄÜHVD²¢°ÑHVD¼¶±ðÉèÖÃÎª4.2v(·ÀÖ¹Á¬½Ó5VµçÔ´Ê±Ê¹ÓÃÈí¹Ø»ú°ÑÐ¾Æ¬ÉÕµô)
+    102          #endif
+    103          }
+    104          
+    105          #pragma location="TASK_POWEROFF_SEG"
+    106          void soft_poweroff_init(void)
+    107          {
+    108          	u8 poweron_cnt;
+    109          
+    110          	while(poweroff_ctl.power_key_sta == POWERKEY_INIT)     //µÈ´ýÈ·ÈÏpower keyµÄ×´Ì¬
+    111          	{
+    112          		WATCHDOG_CLR();
+    113          	}
+    114          #if DCIN_DET_EN
+    115          	while((poweroff_ctl.dc_in_sta == DC_INIT)
+    116          	        || (poweroff_ctl.dc_in_sta == DC_UNSTABLE))              //µÈ´ýÈ·ÈÏDC_IN³äµçÏßµÄ×´Ì¬
+    117          	{
+    118          		WATCHDOG_CLR();
+    119          	}
+    120          #endif
+    121          
+    122          #if POWERON_LONG_KEY
+    123          	poweron_cnt = 100;    //100*5ms = 500ms,³¤°´POWER¼ü¿ª»ú
+    124          #else
+    125          	poweron_cnt = 10;     //10*5ms = 50ms,¶Ì°´POWER¼ü¿ª»ú
+    126          #endif
+    127          
+    128          	for(u8 i = 0; i < poweron_cnt; i++)
+    129          	{
+    130          		if((poweroff_ctl.power_key_sta == POWERKEY_DOWN)   //power key°´ÏÂ»òDC IN
+    131          #if DCIN_DET_EN
+    132          		        &&(poweroff_ctl.dc_in_sta == DC_OUT)
+    133          #endif
+    134          		  )         //³äµçÏß°Î³ö×´Ì¬
+    135          		{
+    136          			delay_5ms(1);
+    137          			WATCHDOG_CLR();
+    138          		}
+    139          		else
+    140          		{
+    141          			poweroff_ctl.flag = 0;        //ÓÃÓÚÇø·ÖÊÇ´Ó³õÊ¼»¯ÖÐ¹Ø»ú£¬»¹ÊÇ´ÓÆäËüÄ£Ê½ÖÐ¹Ø»ú
+    142          			task_ctl.work_sta = TASK_POWEROFF;
+    143          			task_poweroff();              //¼ÌÐø¹Ø»ú
+    144          			break;
+    145          		}
+    146          	}
+    147          
+    148          	poweroff_ctl.flag = 1;                //ÓÃÓÚÇø·ÖÊÇ´Ó³õÊ¼»¯ÖÐ¹Ø»ú£¬»¹ÊÇ´ÓÆäËüÄ£Ê½ÖÐ¹Ø»ú
+    149          
+    150          	printf("power on...\n");
+    151          	showhello();
+    152          }
+    153          #endif
+    154          
+    155          //ÈÎÎñÊÂ¼þ
+    156          #pragma location="TASK_POWEROFF_SEG"
+    157          void task_poweroff_event(void)
+    158          {
+    159          	WATCHDOG_CLR();
+    160          
+    161          	mem_event();
+    162          
+    163          #if SOFT_POWEROFF_EN
+    164          	soft_poweroff_enter();
+    165          #endif
+    166          }
+    167          
+    168          //ÈÎÎñÏûÏ¢´¦Àí
+    169          #pragma location="TASK_POWEROFF_SEG"
+    170          void task_poweroff_deal_msg(u8 msg)
+    171          {
+    172          	switch(msg)
+    173          	{
+    174          	case KU_POWER:
+    175          #if SOFT_POWEROFF_EN
+    176          #if POWERON_LONG_KEY
+    177          	case KL_SOFT_POWER:    //³¤°´¿ª»ú
+    178          #else
+    179          	case KU_SOFT_POWER:    //¶Ì°´¿ª»ú
+    180          #endif
+    181          #endif
+    182          		task_ctl.work_sta = task_ctl.last_work;
+    183          		break;
+    184          	default:
+    185          		break;
+    186          	}
+    187          }
+    188          
+    189          /*****************************************************************************
+    190           * Module    : ¹Ø»úÈÎÎñÈë¿Ú
+    191           *****************************************************************************/
+    192          //ÈÎÎñ³õÊ¼»¯
+    193          #pragma location="TASK_POWEROFF_SEG"
+    194          void task_poweroff_enter(void)
+    195          {
+    196          	PCON0 |= BIT(2);
+    197          #if (DISP_TYPE==DISP_LED)
+    198          	ocx.led_sta = LED_STA_ON;
+    199          #endif
+    200          
+    201          #if ALARM_WAKEUP_EN
+    202          	u8 wkocon_val = irtc_read_cmd(WKO_RD);
+    203          	wkocon_val &= ~BIT(7);
+    204          	wkocon_val |= BIT(5);  //enable alarm output update wko output
+    205          	irtc_write_cmd(WKO_WR, wkocon_val);
+    206          #endif
+    207          
+    208          #if SOFT_POWEROFF_EN
+    209          	if(poweroff_ctl.flag)
+    210          	{
+    211          #endif
+    212          		showoff();
+    213          		delay_5ms(100);
+    214          		WATCHDOG_CLR();
+    215          #if SOFT_POWEROFF_EN
+    216          	}
+    217          	else
+    218          	{
+    219          		disp_clear();
+    220          	}
+    221          #endif
+    222          }
+    223          
+    224          //ÈÎÎñÍË³ö
+    225          #pragma location="TASK_POWEROFF_SEG"
+    226          void task_poweroff_exit(void)
+    227          {
+    228          }
+    229          
+    230          //ÈÎÎñÖ÷Á÷³Ì
+    231          #pragma location="TASK_POWEROFF_SEG"
+    232          void task_poweroff(void)
+    233          {
+    234          	printf("task_poweroff\n");
+    235          	task_poweroff_enter();
+    236          	while(task_ctl.work_sta == TASK_POWEROFF)
+    237          	{
+    238          		task_poweroff_deal_msg(get_msg());
+    239          		task_poweroff_display();
+    240          		task_poweroff_event();
+    241          	}
+    242          	task_poweroff_exit();
+    243          }
+    244          #endif
+    245          
+    246          
+
+
+   Segment part sizes:
+
+     Function/Label Bytes
+     -------------- -----
+
+ 
+ 
+ 0 bytes of memory
+
+Errors: none
+Warnings: none

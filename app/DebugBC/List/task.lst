@@ -1,0 +1,1074 @@
+##############################################################################
+#                                                                            #
+# IAR 8051 C/C++ Compiler V7.20H/W32                   27/Jun/2018  22:48:35 #
+# Copyright 2004-2006 IAR Systems. All rights reserved.                      #
+#                                                                            #
+#    Core               =  plain                                             #
+#    Code model         =  near                                              #
+#    Data model         =  large                                             #
+#    Calling convention =  extended stack reentrant                          #
+#    Constant location  =  code                                              #
+#    Extended stack     =  enabled                                           #
+#    Dptr setup         =  1,16                                              #
+#    Source file        =  task/task.c                                       #
+#    Command line       =  -f option_c51.cfg (-ICOMMON\ -IINC\ -Iconfig\     #
+#                          -Iapi\ -Ifm\ -Ifat\ -Idisplay\                    #
+#                          -Idisplay\theme_default\ -Idisplay\led\           #
+#                          -Idisplay\lcd\ -Itask\ -Iuser\ -Imem\ -Imodule\   #
+#                          -Ikey\ -Istartmusic\ -Ispi\ -e -z9 --core=plain   #
+#                          --dptr=16,1 --data_model=large --code_model=near  #
+#                          --calling_convention=ext_stack_reentrant          #
+#                          --place_constants=code --nr_virtual_regs 20       #
+#                          --extended_stack) -DAX207X_TAG --debug -lC        #
+#                          DebugBC/List -o DebugBC/Obj/task.r51 task/task.c  #
+#    List file          =  DebugBC/List/task.lst                             #
+#    Object file        =  DebugBC/Obj/task.r51                              #
+#                                                                            #
+#                                                                            #
+##############################################################################
+
+R:\18BC073A_宇泰_AX1071_xxxxxxxx_20180627\app\task\task.c
+      1          /*****************************************************************************
+      2          * Module    : Task
+      3          * File      : task.c
+      4          * Author    : Hanny
+      5          * Email     : coldney@yahoo.com.cn
+      6          * Function  : 任务控制器
+      7          *****************************************************************************/
+      8          #include "include.h"
+
+   \                                 In segment SFR_AN, at 0xf7
+   \   unsigned char volatile __sfr WDTCON
+   \                     WDTCON:
+   \   000000                DS 1
+      9          #include "user_key.h"
+
+   \                                 In segment XDATA_Z, align 1, keep-with-next
+   \   000000                REQUIRE __INIT_XDATA_Z
+     10          u8 device_chg = 0;
+   \                     device_chg:
+   \   000000                DS 1
+     11          #define device_music	0
+     12          #define device_flash	1
+     13          
+
+   \                                 In segment XDATA_Z, align 1, keep-with-next
+   \   000000                REQUIRE __INIT_XDATA_Z
+     14          bool Timer1_flag = false;   //设置定时标志位
+   \                     Timer1_flag:
+   \   000000                DS 1
+     15          
+
+   \                                 In segment XDATA_Z, align 1, keep-with-next
+   \   000000                REQUIRE __INIT_XDATA_Z
+     16          u8 Timer_flag = 0;
+   \                     Timer_flag:
+   \   000000                DS 1
+     17          
+
+   \                                 In segment XDATA_Z, align 1, keep-with-next
+   \   000000                REQUIRE __INIT_XDATA_Z
+     18          bool mute_status_change = false;
+   \                     mute_status_change:
+   \   000000                DS 1
+
+   \                                 In segment XDATA_Z, align 1, keep-with-next
+   \   000000                REQUIRE __INIT_XDATA_Z
+     19          u16 main_loop_count;
+   \                     main_loop_count:
+   \   000000                DS 2
+
+   \                                 In segment XDATA_Z, align 1, keep-with-next
+   \   000000                REQUIRE __INIT_XDATA_Z
+     20          bool f_Clear_WDT;       // 1: set by timer interrupt for clear WDT, 0: clear by main program
+   \                     f_Clear_WDT:
+   \   000000                DS 1
+     21          
+
+   \                                 In segment DATA_N, align 1, root
+     22          IAR_DATA_A type_task_ctl task_ctl;
+   \                     task_ctl:
+   \   000000                DS 3
+     23          
+     24          //清除、还原默认的设置
+     25          #pragma location="TASK_SEG"
+     26          static void task_clear(void)
+     27          {
+     28          #if ( ((DISP_TYPE != DISP_LED)&&(DISP_TYPE != DISP_NO)) || ((DISP_TYPE == DISP_LED)&&(USE_IR_NUM)) )
+     29          	ocx_clear();
+     30          #endif
+     31          #if DAC_FADE_EN
+     32          	dac_fade_wait();
+     33          #endif
+     34          	mute_enable();
+     35          	b_dac.dac_stop = 0;                 //使切换模式，以及假关机能解除静音
+     36          }
+     37          
+     38          //执行任务
+     39          #pragma location="TASK_SEG"
+
+   \                                 In segment TASK_SEG, align 1, keep-with-next
+     40          void run_task(void)
+   \                     run_task:
+     41          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+   \   000000   8003         SJMP    ??run_task_0
+     42          #if TASK_TIPS_EN
+     43          	u8 fs_cur_dev_bak=DEVICE_INVALID;
+     44          #endif
+     45          
+     46          	//printf("run_task\n");
+     47          	//task_ctl.work_sta = TASK_MUSIC;
+     48              //task_ctl.work_sta = TASK_FLASH;
+     49          
+     50          	while(1)
+     51          	{
+     52          		task_clear();
+     53          		if((task_ctl.work_sta < TASK_EXIT)
+     54          #if ALARM_EN
+     55          		        && (task_ctl.work_sta != TASK_ALARM)
+     56          #endif
+     57          #if TASK_POWEROFF_EN
+     58          		        && (task_ctl.work_sta != TASK_POWEROFF)
+     59          #endif
+     60          		  )
+     61          		{
+     62          			/*printf("sys_ctl.irtc_poweron: %d\n", sys_ctl.irtc_poweron);
+     63          			if(sys_ctl.irtc_poweron == 0)    //当不是第一次上电时，插上电源进入关机模式
+     64          		    {
+     65          		       task_ctl.work_sta = TASK_POWEROFF;
+     66          		       sys_ctl.irtc_poweron = 1;
+     67          			   uart_putc('*');
+     68          			}*/
+     69          			task_ctl.last_work = task_ctl.work_sta;
+     70          		}
+     71          
+     72          		//printf("Y:%d,%d,%d\n",u_spi.spi_online,fs_cur_dev(),t_fat.dev_new);
+     73                  //printf("work_sta0:%d\n",task_ctl.work_sta);
+     74          		switch(task_ctl.work_sta)
+     75          		{
+     76          /*
+     77          		case TASK_MUSIC:
+     78          			task_music();
+     79          			//printf("work_sta1:%d\n",task_ctl.work_sta);
+     80          			break;
+     81          */ 
+     82          #if TASK_AUX_EN
+     83          		case TASK_AUX:
+     84          			task_aux();
+     85          			break;
+     86          #endif
+     87          
+     88          #if ALARM_EN
+     89          		case TASK_ALARM:
+     90          			task_alarm();
+     91          			break;
+     92          #endif
+     93          
+     94          #if TASK_SPEAKER_EN
+     95          		case TASK_SPEAKER:
+     96          			task_speaker();
+     97          			break;
+     98          #endif
+     99          
+    100          #if TASK_RTC_EN
+    101          		case TASK_RTC:
+    102          			task_rtc();
+    103          			break;
+    104          #endif
+    105          
+    106          #if TASK_FM_EN
+    107          		case TASK_FM:
+    108          			task_fm();
+    109          			break;
+    110          #endif
+    111          
+    112          #if TASK_USBDEV_EN
+    113          		case TASK_USBDEV:
+    114          			task_usbdev();
+    115          			break;
+    116          #endif
+    117          
+    118          #if TASK_FLASH_EN
+    119          		case TASK_FLASH:
+    120          			task_flash_music();
+   \                     ??run_task_1:
+   \   000002                ; Setup parameters for call to function task_flash_music
+   \   000002   12....       LCALL   task_flash_music
+   \                     ??run_task_0:
+   \   000005                ; Setup parameters for call to function ocx_clear
+   \   000005   12....       LCALL   ocx_clear
+   \   000008                ; Setup parameters for call to function dac_fade_wait
+   \   000008   12....       LCALL   dac_fade_wait
+   \   00000B                ; Setup parameters for call to function mute_enable
+   \   00000B   12....       LCALL   mute_enable
+   \   00000E   C2..         CLR     b_dac.2
+   \   000010   E5..         MOV     A,task_ctl
+   \   000012   C3           CLR     C
+   \   000013   940C         SUBB    A,#0xc
+   \   000015   5009         JNC     ??run_task_2
+   \   000017   7409         MOV     A,#0x9
+   \   000019   65..         XRL     A,task_ctl
+   \   00001B   6003         JZ      ??run_task_2
+   \   00001D   85....       MOV     (task_ctl + 1),task_ctl
+   \                     ??run_task_2:
+   \   000020   E5..         MOV     A,task_ctl
+   \   000022   12....       LCALL   ?UC_SWITCH_DENSE
+   \                     `?<Jumptable for run_task>_0`:
+   \   000025   06           DB        6
+   \   000026   03           DB        3
+   \   000027   ....         DW        ??run_task_3
+   \   000029   ....         DW        ??run_task_1
+   \   00002B   ....         DW        ??run_task_3
+   \   00002D   ....         DW        ??run_task_4
+   \   00002F   ....         DW        ??run_task_5
+    121          			break;
+    122          #endif
+    123          
+    124          #if TASK_POWEROFF_EN
+    125          		case TASK_POWEROFF:
+    126          			task_poweroff();
+   \                     ??run_task_5:
+   \   000031                ; Setup parameters for call to function task_poweroff
+   \   000031   12....       LCALL   task_poweroff
+   \   000034   80CF         SJMP    ??run_task_0
+    127          			break;
+    128          #endif
+    129          
+    130          #if TASK_LOWPOWER_EN
+    131          		case TASK_LOWPOWER:
+    132          			task_lowpower();
+    133          			break;
+    134          #endif
+    135          
+    136          #if TASK_IDLE_EN
+    137          		case TASK_IDLE:
+    138          			task_idle();
+   \                     ??run_task_4:
+   \   000036                ; Setup parameters for call to function task_idle
+   \   000036   12....       LCALL   task_idle
+   \   000039   80CA         SJMP    ??run_task_0
+    139          			break;
+    140          #endif
+    141          
+    142          #if TASK_FMAM_DETECT_EN
+    143          		case TASK_FMAM_DETECT:
+    144          			task_fmam_detect();
+    145          			break;
+    146          #endif
+    147          
+    148          #if TASK_TIPS_EN
+    149          		case TASK_TIPS:
+    150          /*播放OTP里的音乐,选到别的设备去,
+    151          因为播放OTP音乐的时候，音乐初始化里会对当前设备(USB)状态做些处理，
+    152          所以播放OTP里音乐之前需选到另外的设备去,播放完了之后恢复到原来的设备状态即可，
+    153          以防止影响当前设备的一些信息(如激活状态等)，目前是新增了一个设备"DEVICE_OTP"*/
+    154          			sys_ctl.prv_volume = sys_ctl.volume;
+    155          			user_set_volume(VOLUME_MAX);
+    156          			fs_cur_dev_bak=fs_cur_dev();
+    157          			fs_sel(DEVICE_OTP);
+    158          			startmusic_play();
+    159          			fs_sel(fs_cur_dev_bak);
+    160          			task_ctl.work_sta=task_ctl.pre_sta;
+    161          			user_set_volume(sys_ctl.prv_volume);
+    162          			break;
+    163          #endif
+    164          			//case TASK_EXIT:
+    165          		default:                                              //退出无效的菜单
+    166                      //printf("...\n");
+    167          			task_exit();
+   \                     ??run_task_3:
+   \   00003B   E5..         MOV     A,(task_ctl + 1)
+   \   00003D   12....       LCALL   ?UC_SWITCH_DENSE
+   \                     `?<Jumptable for run_task>_1`:
+   \   000040   00           DB        0
+   \   000041   00           DB        0
+   \   000042   ....         DW        ??run_task_6
+   \   000044   ....         DW        ??run_task_7
+   \                     ??run_task_7:
+   \   000046   90....       MOV     DPTR,#(u_spi + 1)
+   \   000049   E0           MOVX    A,@DPTR
+   \   00004A   6005         JZ      ??run_task_6
+   \   00004C   75..06       MOV     task_ctl,#0x6
+   \   00004F   80B4         SJMP    ??run_task_0
+   \                     ??run_task_6:
+   \   000051   75..00       MOV     task_ctl,#0x0
+   \   000054   80AF         SJMP    ??run_task_0
+    168          			break;
+    169          		}
+    170          	}
+    171          }
+    172          
+    173          //检查，并加载设备
+    174          #pragma location="TASK_SEG"
+
+   \                                 In segment TASK_SEG, align 1, keep-with-next
+    175          u8 device_change(void)
+   \                     device_change:
+    176          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    177          	if(!b_sys.dev_change)
+   \   000000   A2..         MOV     C,b_sys.0
+   \   000002   4003         JC      ??device_change_0
+    178          	{
+    179          		return DEVICE_IDLE;             //设备正常
+   \   000004   7900         MOV     R1,#0x0
+   \   000006   22           RET
+    180          	}
+    181          
+    182          	b_sys.dev_change = 0;
+   \                     ??device_change_0:
+   \   000007   C2..         CLR     b_sys.0
+    183          	return device_change_check();
+   \   000009                ; Setup parameters for call to function device_change_check
+   \   000009   12....       LCALL   device_change_check
+   \   00000C   22           RET
+    184          }
+    185          
+    186          //退出任务，返回到其它任务去
+    187          #pragma location="TASK_SEG"
+    188          static void task_exit(void)
+    189          {
+    190          	//如果没有主菜单，则切换到下一个任务
+    191          	switch(task_ctl.last_work)
+    192          	{
+    193          	case TASK_MUSIC:
+    194          #if TASK_FM_EN
+    195          		task_ctl.work_sta = TASK_FM;
+    196          		break;
+    197          
+    198          	case TASK_FM:
+    199          #endif
+    200          #if TASK_SPEAKER_EN
+    201          		task_ctl.work_sta = TASK_SPEAKER;
+    202          		break;
+    203          
+    204          	case TASK_SPEAKER:
+    205          #endif
+    206          #if TASK_AUX_EN
+    207          		task_ctl.work_sta = TASK_AUX;
+    208          		break;
+    209          
+    210          	case TASK_AUX:
+    211          #endif
+    212          #if TASK_RTC_EN
+    213          		task_ctl.work_sta = TASK_RTC;
+    214          		break;
+    215          
+    216          	case TASK_RTC:
+    217          #endif
+    218          #if TASK_USBDEV_EN
+    219          		task_ctl.work_sta = TASK_USBDEV;
+    220          		break;
+    221          
+    222          	case TASK_USBDEV:
+    223          #endif
+    224          #if TASK_FLASH_EN
+    225          	#if 1
+    226          		if(u_spi.spi_online)  
+    227          		{  
+    228          			//uart_putc('B');
+    229          			task_ctl.work_sta = TASK_FLASH;}
+    230          		else
+    231          			task_ctl.work_sta = TASK_MUSIC;
+    232          	#else
+    233          		if((SD1_CHECK_PORT & BIT(SD1_CHECK_PIN)))		  //SD卡插入检测IO会被拉低
+    234          		{	// IO 为 High, 无插入内置 SD卡
+    235          			spi_sd_mux_enter();
+    236          			spi_port_init();
+    237          			u_spi.spi_online = spi_flash_init();
+    238          			spi_sd_mux_exit();
+    239          			sd_port_init(1);
+    240          			if(u_spi.spi_online)
+    241          			{
+    242          				//uart_putc('A');
+    243          				task_ctl.work_sta = TASK_FLASH;}
+    244          			else
+    245          			{
+    246          				task_ctl.work_sta = TASK_MUSIC;
+    247          			}
+    248          		}
+    249          		else
+    250          		{	// IO 为 Low, 有插入内置 SD卡
+    251          			task_ctl.work_sta = TASK_MUSIC;
+    252          		}
+    253          	#endif
+    254          		break;
+    255          
+    256          	case TASK_FLASH:
+    257          #endif
+    258          		task_ctl.work_sta = TASK_MUSIC;
+    259          		break;
+    260          
+    261          	default:
+    262          #if TASK_IDLE_EN
+    263          		task_ctl.work_sta = TASK_MUSIC;         //切到空闲模式
+    264          #endif 
+    265                  //uart_putc('+');
+    266          		break;
+    267          	}
+    268          }
+    269          
+    270          #pragma location="TASK_SEG"
+
+   \                                 In segment TASK_SEG, align 1, keep-with-next
+    271          void deal_vol_msg(void)
+   \                     deal_vol_msg:
+    272          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    273          	showvol();
+   \   000000                ; Setup parameters for call to function ocx_showvol
+   \   000000   12....       LCALL   ocx_showvol
+    274          	//使用VOL+,VOL-能解除静音
+    275          //	if(b_dac.mute_en)
+    276          //	{
+    277          //		user_set_mute();
+    278          //	}
+    279          #if(TASK_AUX_EN || TASK_FM_EN)
+    280          	//设置amux音量
+    281          	amux_volume_set();
+    282          #endif
+    283          }
+   \   000003   22           RET
+    284          
+
+   \                                 In segment XDATA_Z, align 1, keep-with-next
+   \   000000                REQUIRE __INIT_XDATA_Z
+    285          u8 power_key_cnt;
+   \                     power_key_cnt:
+   \   000000                DS 1
+    286          
+    287          //所有任务的公共消息处理函数
+    288          #pragma location="TASK_SEG"
+
+   \                                 In segment TASK_SEG, align 1, keep-with-next
+    289          void deal_msg(u8 msg)
+   \                     deal_msg:
+    290          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    291          	
+    292          	switch(msg)
+   \   000000   90....       MOV     DPTR,#(sys_ctl + 2)
+   \   000003   E0           MOVX    A,@DPTR
+   \   000004   FA           MOV     R2,A
+   \   000005   E9           MOV     A,R1
+   \   000006   12....       LCALL   ?UC_SWITCH_SPARSE
+   \                     `?<Jumptable for deal_msg>_0`:
+   \   000009   01           DB        1
+   \   00000A   AE           DB        174
+   \   00000B   AF           DB        175
+   \   00000C   ....         DW        ??deal_msg_0
+   \   00000E   0A           DB        10
+   \   00000F   86           DB        134
+   \   000010   ....         DW        ??deal_msg_1
+   \   000012   8A           DB        138
+   \   000013   ....         DW        ??deal_msg_2
+   \   000015   8F           DB        143
+   \   000016   ....         DW        ??deal_msg_3
+   \   000018   A6           DB        166
+   \   000019   ....         DW        ??deal_msg_1
+   \   00001B   B1           DB        177
+   \   00001C   ....         DW        ??deal_msg_1
+   \   00001E   CF           DB        207
+   \   00001F   ....         DW        ??deal_msg_0
+   \   000021   E1           DB        225
+   \   000022   ....         DW        ??deal_msg_4
+   \   000024   E3           DB        227
+   \   000025   ....         DW        ??deal_msg_5
+   \   000027   EA           DB        234
+   \   000028   ....         DW        ??deal_msg_4
+   \   00002A   EB           DB        235
+   \   00002B   ....         DW        ??deal_msg_5
+   \   00002D   ....         DW        ??deal_msg_6
+    293          	{
+    294          #if MUSIC_PLAYMODE
+    295          		case KU_PLAYMODE:
+    296          #if (PLAYMODE_NUM == PLAYMODE_FOUR)
+    297          		if(sys_ctl.mode_play < ITEM_LOOP_FOLDER)
+    298          		{
+    299          			sys_ctl.mode_play++;
+    300          		}
+    301          		else
+    302          		{
+    303          			sys_ctl.mode_play = 0;
+    304          		}
+    305          
+    306          #else
+    307          		if(sys_ctl.mode_play == ITEM_LOOP_ALL)
+    308          		{
+    309          			sys_ctl.mode_play = ITEM_LOOP_SINGLE;
+    310          			printf("singal\n");
+    311          		}
+    312          		else
+    313          		{
+    314          			sys_ctl.mode_play = ITEM_LOOP_ALL;
+    315          			printf("loop\n");
+    316          		}
+    317          #endif
+    318          		irtc_write_ram(RTCRAM_PLAY_MODE, (u8 *)&sys_ctl.mode_play, 1);
+    319          		show_playmode();
+    320          #if TASK_TIPS_EN
+    321          		task_ctl.work_sta = TASK_TIPS;
+    322          #endif
+    323          		break;
+    324          #endif
+    325          #if 1	// 2015/09/08 Merlin 使用Volum控制功能,
+    326          		//音量减、音量加 (Prev)
+    327          	//case KL_PREV:	// 改为音量加调整 Merlin 2015/09/08
+    328          	case KH_PREV:	// 改为音量加调整 Merlin 2015/09/08
+    329          	case KH_PREV_VOL_DOWN:
+    330          			user_set_volume(sys_ctl.volume - 1);
+   \                     ??deal_msg_4:
+   \   00002F                ; Setup parameters for call to function user_set_volume
+   \   00002F   74FF         MOV     A,#-0x1
+   \   000031   12....       LCALL   ?Subroutine0
+    331          			deal_vol_msg();
+    332          			if(sys_ctl.volume == 0)
+   \                     ??CrossCallReturnLabel_0:
+   \   000034   90....       MOV     DPTR,#(sys_ctl + 2)
+   \   000037   E0           MOVX    A,@DPTR
+   \   000038   7003         JNZ     ??deal_msg_7
+    333          				MUTE_EN();
+   \   00003A                ; Setup parameters for call to function MUTE_EN
+   \   00003A   12....       LCALL   MUTE_EN
+    334          		printf("v-\n");
+   \                     ??deal_msg_7:
+   \   00003D                ; Setup parameters for call to function my_printf
+   \   00003D   7A..         MOV     R2,#(`?<Constant "v-\\n">` & 0xff)
+   \   00003F   7B..         MOV     R3,#((`?<Constant "v-\\n">` >> 8) & 0xff)
+   \   000041   801B         SJMP    ??deal_msg_8
+    335          		break;
+    336          	//case KL_NEXT:	// 改为音量减调整 Merlin 2015/09/08
+    337          	case KH_NEXT:	// 改为音量减调整 Merlin 2015/09/08
+    338          	case KH_NEXT_VOL_UP:
+    339          			user_set_volume(sys_ctl.volume + 1);
+   \                     ??deal_msg_5:
+   \   000043                ; Setup parameters for call to function user_set_volume
+   \   000043   7401         MOV     A,#0x1
+   \   000045   12....       LCALL   ?Subroutine0
+    340          			deal_vol_msg();
+    341          			if(scan_ctl.hpdect_val < 200)	//耳机没有插入
+   \                     ??CrossCallReturnLabel_1:
+   \   000048   90....       MOV     DPTR,#(scan_ctl + 6)
+   \   00004B   E0           MOVX    A,@DPTR
+   \   00004C   C3           CLR     C
+   \   00004D   94C8         SUBB    A,#-0x38
+   \   00004F   5009         JNC     ??deal_msg_9
+    342          			//if(HP_CHECK_PORT & BIT(HP_CHECK_PIN))	//耳机没有插入
+    343          			{
+    344          				if(sys_ctl.volume >= 1)
+   \   000051   90....       MOV     DPTR,#(sys_ctl + 2)
+   \   000054   E0           MOVX    A,@DPTR
+   \   000055   6003         JZ      ??deal_msg_9
+    345          					UN_MUTE();
+   \   000057                ; Setup parameters for call to function UN_MUTE
+   \   000057   12....       LCALL   UN_MUTE
+    346          			}
+    347          		printf("v+\n");
+   \                     ??deal_msg_9:
+   \   00005A                ; Setup parameters for call to function my_printf
+   \   00005A   7A..         MOV     R2,#(`?<Constant "v+\\n">` & 0xff)
+   \   00005C   7B..         MOV     R3,#((`?<Constant "v+\\n">` >> 8) & 0xff)
+   \                     ??deal_msg_8:
+   \   00005E   12....       LCALL   my_printf
+   \   000061   22           RET
+    348          		break;
+    349          #endif
+    350          		//按模式键进行切换
+    351          	case KU_MODE:
+    352          	case KL_MODE:
+    353          	case KL_PLAY_AND_MODE:
+    354          		task_ctl.work_sta = TASK_EXIT;
+   \                     ??deal_msg_1:
+   \   000062   75..0C       MOV     task_ctl,#0xc
+   \   000065   22           RET
+    355          		break;
+    356          
+    357          		//静音
+    358          	case KU_MUTE:
+    359          		user_set_mute();
+   \                     ??deal_msg_2:
+   \   000066                ; Setup parameters for call to function user_set_mute
+   \   000066   12....       LCALL   user_set_mute
+   \   000069   22           RET
+    360          		break;
+    361          
+    362          		//关机
+    363          #if TASK_POWEROFF_EN
+    364          	case KL_POWER:
+    365          	case KLU_POWER:
+    366          		task_ctl.work_sta = TASK_POWEROFF;
+   \                     ??deal_msg_0:
+   \   00006A   75..09       MOV     task_ctl,#0x9
+    367          		sys_ctl.user_power_down_flag = 1;
+   \   00006D   7401         MOV     A,#0x1
+   \   00006F   90....       MOV     DPTR,#(sys_ctl + 11)
+   \   000072   F0           MOVX    @DPTR,A
+   \   000073   22           RET
+    368          		break;
+    369          #endif
+    370          
+    371              case KU_POWER:
+    372          		power_key_cnt++;
+   \                     ??deal_msg_3:
+   \   000074   90....       MOV     DPTR,#power_key_cnt
+   \   000077   E0           MOVX    A,@DPTR
+   \   000078   04           INC     A
+   \   000079   F0           MOVX    @DPTR,A
+    373          		if( (Timer_flag == 0) && (power_key_cnt != 4) )
+   \   00007A   90....       MOV     DPTR,#Timer_flag
+   \   00007D   E0           MOVX    A,@DPTR
+   \   00007E   700E         JNZ     ??deal_msg_10
+   \   000080   90....       MOV     DPTR,#power_key_cnt
+   \   000083   E0           MOVX    A,@DPTR
+   \   000084   6404         XRL     A,#0x4
+   \   000086   6006         JZ      ??deal_msg_10
+    374          		{
+    375          			Timer_flag = 1;
+   \   000088   7401         MOV     A,#0x1
+   \   00008A   90....       MOV     DPTR,#Timer_flag
+   \   00008D   F0           MOVX    @DPTR,A
+    376          			}
+    377          		printf("power_key_cnt:%d \n", power_key_cnt);
+   \                     ??deal_msg_10:
+   \   00008E                ; Setup parameters for call to function my_printf
+   \   00008E   90....       MOV     DPTR,#power_key_cnt
+   \   000091   E0           MOVX    A,@DPTR
+   \   000092   F582         MOV     DPL,A
+   \   000094   758300       MOV     DPH,#0x0
+   \   000097   C082         PUSH    DPL
+   \   000099   C083         PUSH    DPH
+   \   00009B   7A..         MOV     R2,#(`?<Constant "power_key_cnt:%d \\n">` & 0xff)
+   \   00009D   7B..         MOV     R3,#((`?<Constant "power_key_cnt:%d \\n">` >> 8) & 0xff)
+   \   00009F   12....       LCALL   my_printf
+   \   0000A2   D0E0         POP     A
+   \   0000A4   D0E0         POP     A
+    378          		if(power_key_cnt == 1)
+   \   0000A6   90....       MOV     DPTR,#power_key_cnt
+   \   0000A9   E0           MOVX    A,@DPTR
+   \   0000AA   6401         XRL     A,#0x1
+   \   0000AC   7008         JNZ     ??deal_msg_11
+    379          		{ 
+    380          			disp.led1 = 1;
+   \   0000AE   75..01       MOV     (disp + 1),#0x1
+    381          			disp.led2 = 0;
+   \   0000B1   75..00       MOV     (disp + 2),#0x0
+    382          			disp.led3 = 0;
+   \   0000B4   800B         SJMP    ??deal_msg_12
+    383          		} 
+    384          		else if (power_key_cnt == 2)
+   \                     ??deal_msg_11:
+   \   0000B6   E0           MOVX    A,@DPTR
+   \   0000B7   6402         XRL     A,#0x2
+   \   0000B9   700A         JNZ     ??deal_msg_13
+    385          		{
+    386          			disp.led1 = 0;
+   \   0000BB   75..00       MOV     (disp + 1),#0x0
+    387          			disp.led2 = 1;
+   \   0000BE   75..01       MOV     (disp + 2),#0x1
+    388          			disp.led3 = 0;
+   \                     ??deal_msg_12:
+   \   0000C1   75..00       MOV     (disp + 3),#0x0
+   \   0000C4   22           RET
+    389          		}
+    390          		else if (power_key_cnt == 3)
+   \                     ??deal_msg_13:
+   \   0000C5   E0           MOVX    A,@DPTR
+   \   0000C6   6403         XRL     A,#0x3
+   \   0000C8   700A         JNZ     ??deal_msg_14
+    391          		{			
+    392          			disp.led1 = 0;
+   \   0000CA   75..00       MOV     (disp + 1),#0x0
+    393          			disp.led2 = 0;
+   \   0000CD   75..00       MOV     (disp + 2),#0x0
+    394          			disp.led3 = 1;
+   \   0000D0   75..01       MOV     (disp + 3),#0x1
+   \   0000D3   22           RET
+    395          		}
+    396          		else if (power_key_cnt == 4)
+   \                     ??deal_msg_14:
+   \   0000D4   E0           MOVX    A,@DPTR
+   \   0000D5   6404         XRL     A,#0x4
+   \   0000D7   7012         JNZ     ??deal_msg_6
+    397          		{
+    398          			disp.led1 = 0;
+   \   0000D9   75..00       MOV     (disp + 1),#0x0
+    399          			disp.led2 = 0;
+   \   0000DC   75..00       MOV     (disp + 2),#0x0
+    400          			disp.led3 = 0;
+   \   0000DF   75..00       MOV     (disp + 3),#0x0
+    401          
+    402          			Timer_flag = 0;
+   \   0000E2   E4           CLR     A
+   \   0000E3   90....       MOV     DPTR,#Timer_flag
+   \   0000E6   F0           MOVX    @DPTR,A
+    403          			power_key_cnt = 0;
+   \   0000E7   90....       MOV     DPTR,#power_key_cnt
+   \   0000EA   F0           MOVX    @DPTR,A
+    404          		}
+    405          		
+    406          		break;
+    407          
+    408          		//软关机
+    409          #if SOFT_POWEROFF_EN
+    410          	case KL_SOFT_POWER:
+    411          		//printf("--");
+    412          		task_ctl.work_sta = TASK_POWEROFF;
+    413          		sys_ctl.user_power_down_flag = 1;
+    414          		break;
+    415          #endif
+    416          		//500ms消息
+    417          #if ALARM_EN
+    418          	case QSYSTEM_500MS:
+    419          		task_alarm_check();
+    420          		break;
+    421          #endif
+    422          	}
+    423          }
+   \                     ??deal_msg_6:
+   \   0000EB   22           RET
+
+   \                                 In segment TASK_SEG, align 1, keep-with-next
+   \                     ?Subroutine0:
+   \   000000   2A           ADD     A,R2
+   \   000001   F9           MOV     R1,A
+   \   000002   12....       LCALL   user_set_volume
+   \   000005                ; Setup parameters for call to function ocx_showvol
+   \   000005                ; Setup parameters for call to function ocx_showvol
+   \   000005   12....       LCALL   ocx_showvol
+   \   000008   22           RET
+    424          
+    425          #pragma location="TASK_SEG"
+
+   \                                 In segment TASK_SEG, align 1, keep-with-next
+    426          void device_check_stop(u8 dev_num)
+   \                     device_check_stop:
+    427          {
+   \   000000   EE           MOV     A,R6
+   \   000001   C0E0         PUSH    A
+   \   000003                ; Saved register size: 1
+   \   000003                ; Auto size: 0
+   \   000003   E9           MOV     A,R1
+   \   000004   FE           MOV     R6,A
+    428          	if(fs_cur_dev() == dev_num)
+   \   000005                ; Setup parameters for call to function fs_cur_dev
+   \   000005   12....       LCALL   fs_cur_dev
+   \   000008   E9           MOV     A,R1
+   \   000009   6E           XRL     A,R6
+   \   00000A   7003         JNZ     ??device_check_stop_0
+    429          	{
+    430          		music_stop();
+   \   00000C                ; Setup parameters for call to function music_stop
+   \   00000C   12....       LCALL   music_stop
+    431          	}
+    432          }
+   \                     ??device_check_stop_0:
+   \   00000F   D0E0         POP     A
+   \   000011   FE           MOV     R6,A
+   \   000012   22           RET
+    433          
+    434          //所有任务的公共事件处理
+    435          #pragma location="TASK_SEG"
+
+   \                                 In segment TASK_SEG, align 1, keep-with-next
+    436          void comm_event(u8 enable)
+   \                     comm_event:
+    437          {
+   \   000000   EE           MOV     A,R6
+   \   000001   C0E0         PUSH    A
+   \   000003                ; Saved register size: 1
+   \   000003                ; Auto size: 0
+   \   000003   E9           MOV     A,R1
+   \   000004   FE           MOV     R6,A
+    438              if(f_Clear_WDT)
+   \   000005   90....       MOV     DPTR,#f_Clear_WDT
+   \   000008   E0           MOVX    A,@DPTR
+   \   000009   6005         JZ      ??comm_event_0
+    439              {
+    440          		f_Clear_WDT = false;
+   \   00000B   E4           CLR     A
+   \   00000C   F0           MOVX    @DPTR,A
+    441          		WATCHDOG_CLR();
+   \   00000D   43F720       ORL     0xf7,#0x20
+    442              }
+    443          	mem_event();
+   \                     ??comm_event_0:
+   \   000010                ; Setup parameters for call to function mem_event
+   \   000010   12....       LCALL   mem_event
+    444          	
+    445          	//ocx.timeh = 0x0B;
+    446          	//ocx.timel = 0x3B;
+    447          
+    448              IE_EA = 0;                  // Disable interrupt
+   \   000013   C2AF         CLR     0xa8.7
+    449              main_loop_count++;
+   \   000015   90....       MOV     DPTR,#main_loop_count
+   \   000018   E0           MOVX    A,@DPTR
+   \   000019   2401         ADD     A,#0x1
+   \   00001B   F0           MOVX    @DPTR,A
+   \   00001C   A3           INC     DPTR
+   \   00001D   E0           MOVX    A,@DPTR
+   \   00001E   3400         ADDC    A,#0x0
+   \   000020   F0           MOVX    @DPTR,A
+    450              IE_EA = 1;                  // Enable interrupt
+   \   000021   D2AF         SETB    0xa8.7
+    451          
+    452          
+    453          	if(sys_ctl.alarm_cnt == 1)
+   \   000023   90....       MOV     DPTR,#(sys_ctl + 13)
+   \   000026   E0           MOVX    A,@DPTR
+   \   000027   6401         XRL     A,#0x1
+   \   000029   7006         JNZ     ??comm_event_1
+    454          	{	
+    455          		task_ctl.last_work = task_ctl.work_sta;
+   \   00002B   85....       MOV     (task_ctl + 1),task_ctl
+    456          		task_ctl.work_sta = TASK_FLASH;
+   \   00002E   75..06       MOV     task_ctl,#0x6
+    457          	}
+    458          
+    459          
+    460          #if TASK_USBDEV_EN
+    461          	if(device_need_activate(DEVICE_PC))      //PC检测
+    462          	{
+    463          		if(device_activate(DEVICE_PC))
+    464          		{
+    465          			task_ctl.work_sta = TASK_USBDEV;
+    466          			return;
+    467          		}
+    468          	}
+    469          #endif
+    470          
+    471          #if AUX_DET_EN
+    472          	if(device_need_activate(DEVICE_LINEIN))     //LineIn检测
+    473          	{
+    474          		if(device_activate(DEVICE_LINEIN))
+    475          		{
+    476          			task_ctl.pre_sta = task_ctl.work_sta;
+    477          			task_ctl.work_sta = TASK_AUX;
+    478          			return;
+    479          		}
+    480          	}
+    481          #endif
+    482          
+    483          #if MIC_DET_EN
+    484          	if(device_need_activate(DEVICE_MIC))     //Mic检测
+    485          	{
+    486          		if(device_activate(DEVICE_MIC))
+    487          		{
+    488          #if KARAOKE_EN
+    489          			if(task_ctl.work_sta == TASK_MUSIC)
+    490          			{
+    491          				mic_enable();
+    492          				b_sys.karaoke_flag = 1;
+    493          				b_dac.sound_en = 0;                //在MIC打开时不开动态降噪
+    494          				msc_ctl.mscfade_en = 0;            //音乐播放模式的切换不需要淡入淡出
+    495          #if DAC_FADE_EN
+    496          				dac_fade_in(1);                    //在音乐暂停后插入mic需要重新淡入
+    497          #endif
+    498          			}
+    499          #else
+    500          			task_ctl.pre_sta = task_ctl.work_sta;
+    501          			task_ctl.work_sta = TASK_SPEAKER;
+    502          #endif
+    503          			return;
+    504          		}
+    505          	}
+    506          #if KARAOKE_EN
+    507          	if((!device_activate(DEVICE_MIC)) && (task_ctl.work_sta == TASK_MUSIC))
+    508          	{
+    509          		mic_disable();
+    510          		if(b_sys.karaoke_flag)
+    511          		{
+    512          			b_sys.karaoke_flag = 0;
+    513          			b_dac.sound_en = 1;
+    514          			msc_ctl.mscfade_en = 1;
+    515          		}
+    516          	}
+    517          #endif
+    518          #endif
+    519          
+    520          #if HP_DET_EN
+    521          	if(device_need_activate(DEVICE_HP))     //HeadPhone检测
+    522          	{
+    523          		if(device_activate(DEVICE_HP))
+    524          		{
+    525          		}
+    526          	}
+    527          #endif
+    528          
+    529          	if(enable == 1)
+   \                     ??comm_event_1:
+   \   000031   7401         MOV     A,#0x1
+   \   000033   6E           XRL     A,R6
+   \   000034   7019         JNZ     ??comm_event_2
+    530          	{
+    531          		//有几个模式不需要在这里进行扫描
+    532          		u8 f_change = device_change();
+   \   000036                ; Setup parameters for call to function device_change
+   \   000036   12....       LCALL   device_change
+   \   000039   E9           MOV     A,R1
+   \   00003A   FA           MOV     R2,A
+    533          		if(DEVICE_CHANGE == f_change)
+   \   00003B   7401         MOV     A,#0x1
+   \   00003D   6A           XRL     A,R2
+   \   00003E   7005         JNZ     ??comm_event_3
+    534          		{
+    535          			task_ctl.work_sta = TASK_MUSIC;     //任意状态下，插入设备，进入音乐播放模式
+   \                     ??comm_event_4:
+   \   000040   75..00       MOV     task_ctl,#0x0
+   \   000043   8028         SJMP    ??comm_event_5
+    536          		}
+    537          		else if(DEVICE_REMOVE == f_change)
+   \                     ??comm_event_3:
+   \   000045   7402         MOV     A,#0x2
+   \   000047   6A           XRL     A,R2
+   \   000048   7023         JNZ     ??comm_event_5
+    538          		{
+    539          			fs_sel_new();                       //拔出设备，切换到另外一个
+   \   00004A                ; Setup parameters for call to function fs_sel_new
+   \   00004A   12....       LCALL   fs_sel_new
+   \   00004D   801E         SJMP    ??comm_event_5
+    540          		}
+    541          	}
+    542          	else if(enable == 2)
+   \                     ??comm_event_2:
+   \   00004F   7402         MOV     A,#0x2
+   \   000051   6E           XRL     A,R6
+   \   000052   7019         JNZ     ??comm_event_5
+    543          	{    //printf("ppp\n");
+    544          		if((b_sys.dev_change) &&
+    545          		        (device_need_activate(DEVICE_SDMMC)||device_need_activate(DEVICE_UDISK))||\
+    546          		        (device_need_activate(DEVICE_SDMMC1)
+    547          #if UDISK_DOUBLE_EN
+    548          		         || device_need_activate(DEVICE_UDISK1)
+    549          #endif
+    550          		        )
+    551          		  )
+   \   000054   A2..         MOV     C,b_sys.0
+   \   000056   500E         JNC     ??comm_event_6
+   \   000058                ; Setup parameters for call to function device_need_activate
+   \   000058   7900         MOV     R1,#0x0
+   \   00005A   12....       LCALL   device_need_activate
+   \   00005D   40E1         JC      ??comm_event_4
+   \   00005F                ; Setup parameters for call to function device_need_activate
+   \   00005F   7902         MOV     R1,#0x2
+   \   000061   12....       LCALL   device_need_activate
+   \   000064   40DA         JC      ??comm_event_4
+   \                     ??comm_event_6:
+   \   000066                ; Setup parameters for call to function device_need_activate
+   \   000066   7901         MOV     R1,#0x1
+   \   000068   12....       LCALL   device_need_activate
+   \   00006B   40D3         JC      ??comm_event_4
+    552          		{
+    553          			task_ctl.work_sta = TASK_MUSIC; 
+    554          		}
+    555          	}
+    556          }
+   \                     ??comm_event_5:
+   \   00006D   D0E0         POP     A
+   \   00006F   FE           MOV     R6,A
+   \   000070   22           RET
+
+   \                                 In segment CODE_C, align 1
+   \                     `?<Constant "v-\\n">`:
+   \   000000   762D0A00     DB "v-\012"
+
+   \                                 In segment CODE_C, align 1
+   \                     `?<Constant "v+\\n">`:
+   \   000000   762B0A00     DB "v+\012"
+
+   \                                 In segment CODE_C, align 1
+   \                     `?<Constant "power_key_cnt:%d \\n">`:
+   \   000000   706F7765     DB "power_key_cnt:%d \012"
+   \            725F6B65
+   \            795F636E
+   \            743A2564
+   \            200A00  
+
+   \                                 In segment SFR_AN, at 0xa8
+   \   union <unnamed> volatile __sfr _A_IE0
+   \                     _A_IE0:
+   \   000000                DS 1
+    557          
+
+   Maximum stack usage in bytes:
+
+     Function                  EXT_STACK PSTACK XSTACK
+     --------                  --------- ------ ------
+     comm_event                       1      0      0
+       -> mem_event                   2      0      0
+       -> device_change               2      0      0
+       -> fs_sel_new                  2      0      0
+       -> device_need_activate        2      0      0
+       -> device_need_activate        2      0      0
+       -> device_need_activate        2      0      0
+     deal_msg                         2      0      0
+       -> user_set_volume             0      0      0
+       -> ocx_showvol                 0      0      0
+       -> MUTE_EN                     0      0      0
+       -> my_printf                   0      0      0
+       -> user_set_volume             0      0      0
+       -> ocx_showvol                 0      0      0
+       -> UN_MUTE                     0      0      0
+       -> my_printf                   0      0      0
+       -> user_set_mute               0      0      0
+       -> my_printf                   4      0      0
+     deal_vol_msg                     0      0      0
+       -> ocx_showvol                 0      0      0
+     device_change                    1      0      0
+       -> device_change_check         0      0      0
+     device_check_stop                1      0      0
+       -> fs_cur_dev                  2      0      0
+       -> music_stop                  2      0      0
+     run_task                         0      0      0
+       -> task_flash_music            0      0      0
+       -> ocx_clear                   0      0      0
+       -> dac_fade_wait               0      0      0
+       -> mute_enable                 0      0      0
+       -> task_poweroff               0      0      0
+       -> task_idle                   0      0      0
+
+
+   Segment part sizes:
+
+     Function/Label                 Bytes
+     --------------                 -----
+     WDTCON                            1
+     device_chg                        1
+     Timer1_flag                       1
+     Timer_flag                        1
+     mute_status_change                1
+     main_loop_count                   2
+     f_Clear_WDT                       1
+     task_ctl                          3
+     run_task                         86
+     device_change                    13
+     deal_vol_msg                      4
+     power_key_cnt                     1
+     deal_msg                        236
+     ?Subroutine0                      9
+     device_check_stop                19
+     comm_event                      113
+     ?<Constant "v-\n">                4
+     ?<Constant "v+\n">                4
+     ?<Constant "power_key_cnt:%d \n">
+                                      19
+     _A_IE0                            1
+
+ 
+  27 bytes in segment CODE_C
+   3 bytes in segment DATA_N
+   2 bytes in segment SFR_AN
+ 480 bytes in segment TASK_SEG
+   8 bytes in segment XDATA_Z
+ 
+ 507 bytes of CODE  memory
+   3 bytes of DATA  memory (+ 2 bytes shared)
+   8 bytes of XDATA memory
+
+Errors: none
+Warnings: none

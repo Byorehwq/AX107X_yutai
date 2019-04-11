@@ -1,0 +1,366 @@
+##############################################################################
+#                                                                            #
+# IAR 8051 C/C++ Compiler V7.20H/W32                   29/Jun/2018  19:55:11 #
+# Copyright 2004-2006 IAR Systems. All rights reserved.                      #
+#                                                                            #
+#    Core               =  plain                                             #
+#    Code model         =  near                                              #
+#    Data model         =  large                                             #
+#    Calling convention =  extended stack reentrant                          #
+#    Constant location  =  code                                              #
+#    Extended stack     =  enabled                                           #
+#    Dptr setup         =  1,16                                              #
+#    Source file        =  I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\task\task_usbde #
+#                          v.c                                               #
+#    Command line       =  -I E:\software\8051\INC\ -I                       #
+#                          E:\software\8051\INC\CLIB\ -I                     #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\COMMON\ -I      #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\INC\ -I         #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\config\ -I      #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\api\ -I         #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\fm\ -I          #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\fat\ -I         #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\display\ -I     #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\display\theme_d #
+#                          efault\ -I I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073 #
+#                          A_”ÓÃ©_AX1071_xxxxxxxx_20180629_Merlin_1\app\disp #
+#                          lay\led\ -I I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC07 #
+#                          3A_”ÓÃ©_AX1071_xxxxxxxx_20180629_Merlin_1\app\dis #
+#                          play\lcd\ -I I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC0 #
+#                          73A_”ÓÃ©_AX1071_xxxxxxxx_20180629_Merlin_1\app\ta #
+#                          sk\ -I I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”Ó #
+#                          Ã©_AX1071_xxxxxxxx_20180629_Merlin_1\app\user\    #
+#                          -I I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_A #
+#                          X1071_xxxxxxxx_20180629_Merlin_1\app\mem\ -I      #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\module\ -I      #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\key\ -I         #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\startmusic\ -I  #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\spi\ -D         #
+#                          AX107X_TAG -lC I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18B #
+#                          C073A_”ÓÃ©_AX1071_xxxxxxxx_20180629_Merlin_1\app\ #
+#                          Debug\List\ -o I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18B #
+#                          C073A_”ÓÃ©_AX1071_xxxxxxxx_20180629_Merlin_1\app\ #
+#                          Debug\Obj\ -e -z9 --core=plain --dptr=16,1        #
+#                          --data_model=large --code_model=near              #
+#                          --calling_convention=ext_stack_reentrant          #
+#                          --place_constants=code --nr_virtual_regs 20       #
+#                          --extended_stack I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\1 #
+#                          8BC073A_”ÓÃ©_AX1071_xxxxxxxx_20180629_Merlin_1\ap #
+#                          p\task\task_usbdev.c                              #
+#    List file          =  I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\Debug\List\task #
+#                          _usbdev.lst                                       #
+#    Object file        =  I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\Debug\Obj\task_ #
+#                          usbdev.r51                                        #
+#                                                                            #
+#                                                                            #
+##############################################################################
+
+I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX1071_xxxxxxxx_20180629_Merlin_1\app\task\task_usbdev.c
+      1          /*****************************************************************************
+      2           * Module    : Task
+      3           * File      : task_usbdev.c
+      4           * Author    : Hanny
+      5           * Email     : coldney@yahoo.com.cn
+      6           * Function  : USB DEVICE»ŒŒÒ¡˜≥Ã
+      7           *****************************************************************************/
+      8          #include "include.h"
+      9          
+     10          #if TASK_USBDEV_EN
+     11          
+     12          bool usbdev_sta;
+     13          #pragma location="TASK_USBDEV_SEG"
+     14          static void task_usbdev_enter(void)
+     15          {
+     16          	SELECT_IROM2();             //USBDEV≥ı ºªØ ±—°IROM2
+     17          	if(!device_is_actived(DEVICE_PC))
+     18          	{
+     19          		task_ctl.work_sta = TASK_EXIT;
+     20          		usbdev_sta = 0;
+     21          		return;
+     22          	}
+     23          	else
+     24          	{
+     25          		usbdev_sta = 1;
+     26          	}
+     27          
+     28          	if(usb_chk.host_phy != usb_chk.dev_phy)
+     29          	{
+     30          		usb_port_init(USB_DEV_PHY);
+     31          		usb_host_enable_testready(0);
+     32          	}
+     33          
+     34          	dac_out_init(DAC_SPA_S48K);
+     35          	user_set_volume((VOLUME_MAX+1)/2);// ˝◊÷“Ù¡ø
+     36          	mute_disable();
+     37          #if DAC_FADE_EN
+     38          	dac_fade_in(1);
+     39          #endif
+     40          
+     41          	fs_unmount();
+     42          
+     43          #if USB_MIC_SUPPORT
+     44          	amux_mic_init(GAIN_27DB);           //≥ı ºªØMICµƒAMUX£¨≤Œ ˝Œ™MICµƒ‘ˆ“Ê
+     45          	auadc_init(CH_SEL_USBMIC);          //≥ı ºªØADC
+     46          #endif
+     47          
+     48          	usb_device_tune_set();
+     49          #if USB_MASS_SUPPORT
+     50          #if UDISK_DOUBLE_EN
+     51          #ifdef AX207X_TAG
+     52          	usbdev_init_double_sd();
+     53          #else
+     54          	usbdev_init();
+     55          #endif
+     56          #else
+     57          	usbdev_init();
+     58          #endif
+     59          #endif
+     60          	usb_device_init();
+     61          	usb_device_reset();
+     62          
+     63          #if ENERGY_DISP_EN
+     64          	energy_init();
+     65          #endif
+     66          #if (DISP_TYPE==DISP_LED)
+     67          	ocx.led_sta = LED_STA_ON;
+     68          #endif
+     69          }
+     70          
+     71          #pragma location="TASK_USBDEV_SEG"
+     72          static void task_usbdev_exit(void)
+     73          {
+     74          	//printf("task_usbdev_exit\n");
+     75          
+     76          	if(!usbdev_sta)
+     77          	{
+     78          		return;
+     79          	}
+     80          
+     81          #if DAC_FADE_EN
+     82          	dac_fade_out();
+     83          	dac_fade_wait();
+     84          #endif
+     85          
+     86          	USBIE_DIS();
+     87          
+     88          #if ENERGY_DISP_EN
+     89          	energy_stop();
+     90          #endif
+     91          #if USB_MASS_SUPPORT
+     92          	usb_mass_exit();
+     93          #endif
+     94          #if USB_MIC_SUPPORT
+     95          	auadc_stop();
+     96          	amux_exit();
+     97          #endif
+     98          
+     99          #if USB_MASS_SUPPORT
+    100          	usbdev_exit();
+    101          #endif
+    102          
+    103          #if (USB_DET == USBDET_DEV_ONLY)
+    104          	usb_switch_otg(USB_DEV_PHY);            //«–ªªªÿIDLE◊¥Ã¨
+    105          #else
+    106          	if(!device_is_actived(DEVICE_PC))
+    107          	{
+    108          		usb_switch_host(USB_DEV_PHY);       //Ω´DPDM«–ªªµΩHOSTºÏ≤‚◊¥Ã¨
+    109          	}
+    110          	else
+    111          	{
+    112          		usb_switch_otg(USB_DEV_PHY);        //«–ªªªÿIDLE◊¥Ã¨
+    113          	}
+    114          #endif
+    115          
+    116          	if(usb_chk.host_phy != usb_chk.dev_phy)
+    117          	{
+    118          		usb_port_init(usb_chk.host_phy);
+    119          		if(usb_host_unactived())
+    120          		{
+    121          			b_sys.dev_change = 1;
+    122          		}
+    123          	}
+    124          #ifndef AX207X_TAG
+    125          	sd_unactived();
+    126          	if(device_is_online(DEVICE_SDMMC)||device_is_online(DEVICE_SDMMC1))
+    127          	{
+    128          		b_sys.dev_change = 1;
+    129          	}
+    130          #endif
+    131          
+    132          #if USB_DOWNLOAD_FLASH
+    133          	spi_sd_mux_exit();
+    134          #endif
+    135          }
+    136          extern void spi_download(void);
+    137          #pragma location="TASK_USBDEV_SEG"
+    138          static void task_usbdev_event(void)
+    139          {
+    140          	WATCHDOG_CLR();
+    141          	mem_event();
+    142          
+    143          	usb_ep0_process();
+    144          #if USB_MASS_SUPPORT
+    145          
+    146          #if USB_DOWNLOAD_FLASH
+    147          	if(device_is_online(DEVICE_SDMMC)||device_is_online(DEVICE_SDMMC1))
+    148          	{
+    149          		usb_mass_process();  //¡¨Ω”sdø®
+    150          	}
+    151          	else
+    152          	{
+    153          		spi_sd_mux_enter();
+    154          		spi_port_init();
+    155          		spi_download();      //¡¨Ω”flash
+    156          	}
+    157          	//spi_download();      //¡¨Ω”flash
+    158          #else
+    159          	usb_mass_process();  //¡¨Ω”sdø®
+    160          #endif
+    161          
+    162          #endif
+    163          #if USB_HID_SUPPORT
+    164          	usb_hid_sta_get();
+    165          #endif
+    166          
+    167          
+    168          	if(!device_is_actived(DEVICE_PC))
+    169          	{
+    170          		task_ctl.work_sta = TASK_EXIT;
+    171          	}
+    172          }
+    173          
+    174          /*----------------------------------------------------------------------------*/
+    175          /**@brief  USBDEVœ˚œ¢¥¶¿Ì
+    176             @param Œﬁ
+    177             @return Œﬁ
+    178             @note
+    179          */
+    180          /*----------------------------------------------------------------------------*/
+    181          #pragma location="TASK_USBDEV_SEG"
+    182          static void task_usbdev_deal_msg(u8 msg)
+    183          {
+    184          	switch(msg)
+    185          	{
+    186          #if USB_HID_SUPPORT
+    187          
+    188          	case KU_MUTE:
+    189          		usb_hid_send(HID_CTL_MUTE);
+    190          		break;
+    191          		/*
+    192          		        case KU_STOP:
+    193          		            usb_hid_key(HID_CTL_STOP);
+    194          		            break;
+    195          		*/
+    196          	case KU_VOL_UP:
+    197          	case KH_VOL_UP:
+    198          	case KH_PLUS:
+    199          		usb_hid_vol(1);
+    200          		showvol();
+    201          		break;
+    202          
+    203          	case KU_VOL_DOWN:
+    204          	case KH_VOL_DOWN:
+    205          	case KH_MINUS:
+    206          		usb_hid_vol(0);
+    207          		showvol();
+    208          		break;
+    209          
+    210          	case QUSBDEV_SET_VOL:
+    211          		showvol();
+    212          		break;
+    213          
+    214          	case KU_NEXT:
+    215          	case KU_PLUS:
+    216          		usb_hid_key(HID_CTL_NEXTFILE);
+    217          		break;
+    218          
+    219          	case KU_PREV:
+    220          	case KU_MINUS:
+    221          		usb_hid_key(HID_CTL_PREFILE);
+    222          		break;
+    223          
+    224          	case KL_NEXT:
+    225          	case KH_NEXT:
+    226          		usb_hid_key(HID_CTL_FASTFORWARD);
+    227          		break;
+    228          
+    229          	case KU_PLAY:
+    230          		usb_hid_key(HID_CTL_PLAYPAUSE);
+    231          		break;
+    232          #else
+    233          	case KU_VOL_UP:
+    234          	case KH_VOL_UP:
+    235          	case KU_VOL_DOWN:
+    236          	case KH_VOL_DOWN:
+    237          		break;
+    238          #endif
+    239          	case KU_EQ:
+    240          		user_set_eq(sys_ctl.eq_num + 1);
+    241          		showeq();
+    242          		break;
+    243          
+    244          #if ENERGY_DISP_EN
+    245          	case KL_PLAYMODE:
+    246          		if(!ocx.disp_energy)
+    247          		{
+    248          			energy_start();
+    249          		}
+    250          		else
+    251          		{
+    252          			energy_close();
+    253          		}
+    254          		disp.update = 1;
+    255          		break;
+    256          #endif
+    257          	case KU_POWER:
+    258          		break;
+    259          
+    260          	default:
+    261          		deal_msg(msg);
+    262          		break;
+    263          	}
+    264          }
+    265          
+    266          #pragma location="TASK_USBDEV_SEG"
+    267          void task_usbdev(void)
+    268          {
+    269          	printf("task_usbdev\n");
+    270          	task_usbdev_enter();
+    271          	while(task_ctl.work_sta == TASK_USBDEV)
+    272          	{
+    273          		task_usbdev_event();
+    274          		task_usbdev_deal_msg(get_msg());
+    275          		task_usbdev_display();
+    276          	}
+    277          	task_usbdev_exit();
+    278          }
+    279          
+    280          #endif
+
+
+   Segment part sizes:
+
+     Function/Label Bytes
+     -------------- -----
+
+ 
+ 
+ 0 bytes of memory
+
+Errors: none
+Warnings: none

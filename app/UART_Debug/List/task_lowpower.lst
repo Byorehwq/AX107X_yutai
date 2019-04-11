@@ -1,0 +1,513 @@
+##############################################################################
+#                                                                            #
+# IAR 8051 C/C++ Compiler V7.20H/W32                   10/Sep/2015  19:03:29 #
+# Copyright 2004-2006 IAR Systems. All rights reserved.                      #
+#                                                                            #
+#    Core               =  plain                                             #
+#    Code model         =  near                                              #
+#    Data model         =  large                                             #
+#    Calling convention =  extended stack reentrant                          #
+#    Constant location  =  code                                              #
+#    Extended stack     =  enabled                                           #
+#    Dptr setup         =  1,16                                              #
+#    Source file        =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\task\task_lowpower.c                  #
+#    Command line       =  -I "C:\Program Files\IAR Systems\Embedded         #
+#                          Workbench 4.05 Evaluation version\8051\INC\" -I   #
+#                          "C:\Program Files\IAR Systems\Embedded Workbench  #
+#                          4.05 Evaluation version\8051\INC\CLIB\" -I        #
+#                          "C:\Documents and Settings\Administrator\×ÀÃæ\lil #
+#                          y\15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX1 #
+#                          070_20150908\COMMON\" -I "C:\Documents and        #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\INC\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\config\" -I "C:\Documents and    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\api\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\fm\" -I "C:\Documents and        #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\fat\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\display\" -I "C:\Documents and   #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\displ #
+#                          ay\led\" -I "C:\Documents and                     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\displ #
+#                          ay\lcd\" -I "C:\Documents and                     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\task\ #
+#                          " -I "C:\Documents and Settings\Administrator\×ÀÃ #
+#                          æ\lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lil #
+#                          y_AX1070_20150908\user\" -I "C:\Documents and     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\mem\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\module\" -I "C:\Documents and    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\modul #
+#                          e\kedir\" -I "C:\Documents and                    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\key\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\startmusic\" -D UART_DEBUG -D    #
+#                          AX207X_TAG -lC "C:\Documents and                  #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\UART_ #
+#                          Debug\List\" -o "C:\Documents and                 #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\UART_ #
+#                          Debug\Obj\" -e -z9 --debug --core=plain           #
+#                          --dptr=16,1 --data_model=large --code_model=near  #
+#                          --calling_convention=ext_stack_reentrant          #
+#                          --place_constants=code --nr_virtual_regs 20       #
+#                          --extended_stack "C:\Documents and                #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\task\ #
+#                          task_lowpower.c"                                  #
+#    List file          =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\UART_Debug\List\task_lowpower.lst     #
+#    Object file        =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\UART_Debug\Obj\task_lowpower.r51      #
+#                                                                            #
+#                                                                            #
+##############################################################################
+
+C:\Documents and Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX1070_20150908\task\task_lowpower.c
+      1          /*****************************************************************************
+      2           * Module    : Task
+      3           * File      : task_lowpower.c
+      4           * Author    :
+      5           * Email     :
+      6           * Function  : µÍ¹¦ºÄÄ£Ê½
+      7           *****************************************************************************/
+      8          #include "include.h"
+      9          #include "task_lowpower.h"
+     10          #include "kedir.h"
+     11          
+     12          #if TASK_LOWPOWER_EN
+     13          
+     14          //ÓÃ»§Ñ¡Ôñ£º
+     15          /***********************
+     16              1.Ñ¡Ôñ×é0/1/2/3£»
+     17              2.Ñ¡ÔñIO;
+     18              3.Ñ¡ÔñÉÏÉý/ÏÂ½µÑØ£»
+     19          ***********************/
+     20          #define USER_WKUP_PIN        WKUP_PIN_2        //Ñ¡Ôñ×é0/1/2/3£»
+     21          #define USER_WKUP_PORT       WKUP_PIN2_P10     //Ñ¡ÔñIO
+     22          #define USER_WKUP_EDGE       WKUP_EDGE_FALLING //Ñ¡ÔñÉÏÉý/ÏÂ½µÑØ
+     23          
+     24          #pragma location="WKUP_SEG"
+     25          void pwkedge_config(void)
+     26          {
+     27          #if (USER_WKUP_EDGE == WKUP_EDGE_RISING)       //ÉÏÉýÑØ
+     28          	PWKEDGE = 0x00;
+     29          #elif (USER_WKUP_EDGE == WKUP_EDGE_FALLING)    //ÏÂ½µÑØ
+     30          	PWKEDGE = 0x00 | BIT(USER_WKUP_PIN);
+     31          #endif
+     32          }
+     33          
+     34          #pragma location="WKUP_SEG"
+     35          void pin0_p00_config(void)
+     36          {
+     37          #if (USER_WKUP_EDGE == WKUP_EDGE_RISING)
+     38          	PDN0 |= BIT(0);
+     39          	PUP0 &= ~BIT(0);
+     40          #elif (USER_WKUP_EDGE == WKUP_EDGE_FALLING)
+     41          	PDN0 &= ~BIT(0);
+     42          	PUP0 |= BIT(0);
+     43          #endif
+     44          }
+     45          
+     46          #pragma location="WKUP_SEG"
+     47          void pin0_3in1_config(void)
+     48          {
+     49          #if (KEDIR_PORT == KEDIR_P10)
+     50          	P1DIR |= BIT(0);            //P10
+     51          	PIE0 &= ~(BIT(5));          //P10
+     52          #elif (KEDIR_PORT == KEDIR_P03)
+     53          	P0DIR |= BIT(3);            //P03
+     54          	PIE0 &= ~(BIT(3));          //P03
+     55          #elif (KEDIR_PORT == KEDIR_P02)
+     56          	P0DIR |= BIT(2);            //P02
+     57          	PIE0 &= ~(BIT(2));          //P02
+     58          #elif (KEDIR_PORT == KEDIR_P27)
+     59          	P2DIR |= BIT(7);            //P27
+     60          	PIE0 &= ~(BIT(0));          //P27
+     61          #endif
+     62          
+     63          	LEDCON &= ~BIT(2);          //2.87V reference voltage
+     64          	KEDIR_LED_OFF();
+     65          
+     66          #if (USER_WKUP_EDGE == WKUP_EDGE_RISING)
+     67          	KEDIR_ENABLE_TOP();         //33K pull down resistance enable
+     68          #ifdef AX207X_TAG
+     69          	if(DCN == 0x00)
+     70          	{
+     71          		KEDIR_DISABLE_BIG_1();  //22k pull up resistance enable
+     72          		KEDIR_DISABLE_TINY_1(); //2.2k pull up resistance disable
+     73          	}
+     74          	else
+     75          #endif
+     76          	{
+     77          		KEDIR_DISABLE_BIG();
+     78          		KEDIR_DISABLE_TINY();
+     79          	}
+     80          #elif (USER_WKUP_EDGE == WKUP_EDGE_FALLING)
+     81          	KEDIR_DISABLE_TOP();           //33K pull down resistance disable
+     82          #ifdef AX207X_TAG
+     83          	if(DCN == 0x00)
+     84          	{
+     85          		KEDIR_ENABLE_BIG_1();      //22k pull up resistance enable
+     86          		KEDIR_DISABLE_TINY_1();    //2.2k pull up resistance disable
+     87          	}
+     88          	else
+     89          #endif
+     90          	{
+     91          		KEDIR_ENABLE_BIG();
+     92          		KEDIR_DISABLE_TINY();
+     93          	}
+     94          #endif
+     95          }
+     96          
+     97          #pragma location="WKUP_SEG"
+     98          void pin0_config(void)
+     99          {
+    100          	LEDCON |= (USER_WKUP_PORT << 1);
+    101          
+    102          #if (USER_WKUP_PORT == WKUP_PIN0_P00)
+    103          	pin0_p00_config();
+    104          #elif (USER_WKUP_PORT == WKUP_PIN0_3IN1)
+    105          	pin0_3in1_config();
+    106          #endif
+    107          }
+    108          
+    109          #pragma location="WKUP_SEG"
+    110          void pin1_p01_config(void)
+    111          {
+    112          	PIE0 |= BIT(1);
+    113          #if (USER_WKUP_EDGE == WKUP_EDGE_RISING)
+    114          	PDN0 |= BIT(1);
+    115          	PUP0 &= ~BIT(1);
+    116          #elif (USER_WKUP_EDGE == WKUP_EDGE_FALLING)
+    117          	PDN0 &= ~BIT(1);
+    118          	PUP0 |= BIT(1);
+    119          #endif
+    120          }
+    121          
+    122          #pragma location="WKUP_SEG"
+    123          void pin1_dp1dm1_config(void)
+    124          {
+    125          	AIPCON7 |= BIT(2);
+    126          	AIPCON7 &= ~BIT(1);
+    127          	USBCON0 = 0xf0;
+    128          	USBCON1 = 0x1f;
+    129          	USBCON2 = 0x04;
+    130          #if (USER_WKUP_EDGE == WKUP_EDGE_RISING)
+    131          	USBDPDM = 0x0A; //DP 15KÏÂÀ­£¬DM 15KÏÂÀ­
+    132          #elif (USER_WKUP_EDGE == WKUP_EDGE_FALLING)
+    133          	USBDPDM = 0x05; //DP 1.5KÉÏÀ­£¬DM 120KÉÏÀ­
+    134          #endif
+    135          }
+    136          
+    137          #pragma location="WKUP_SEG"
+    138          void pin1_config(void)
+    139          {
+    140          	AIPCON6 = (AIPCON6 & (~0x38)) | (USER_WKUP_PORT << 3); //wakeup pin2(AIPCON6[5:3])
+    141          
+    142          #if (USER_WKUP_PORT == WKUP_PIN1_P01)
+    143          	pin1_p01_config();
+    144          #elif ((USER_WKUP_PORT == WKUP_PIN1_DP1) || (USER_WKUP_PORT == WKUP_PIN1_DM1))
+    145          	pin1_dp1dm1_config();
+    146          #endif
+    147          }
+    148          
+    149          #pragma location="WKUP_SEG"
+    150          void pin2_p02_config(void)
+    151          {
+    152          	PIE0 |= BIT(2);
+    153          #if (USER_WKUP_EDGE == WKUP_EDGE_RISING)
+    154          	PDN0 |= BIT(2);
+    155          	PUP0 &= ~BIT(2);
+    156          #elif (USER_WKUP_EDGE == WKUP_EDGE_FALLING)
+    157          	PDN0 &= ~BIT(2);
+    158          	PUP0 |= BIT(2);
+    159          #endif
+    160          }
+    161          
+    162          #pragma location="WKUP_SEG"
+    163          void pin2_p15_config(void)
+    164          {
+    165          	PIE0 |= BIT(6);
+    166          #if (USER_WKUP_EDGE == WKUP_EDGE_RISING)
+    167          	PDN1 |= BIT(5);
+    168          	PUP1 &= ~BIT(5);
+    169          #elif (USER_WKUP_EDGE == WKUP_EDGE_FALLING)
+    170          	PDN1 &= ~BIT(5);
+    171          	PUP1 |= BIT(5);
+    172          #endif
+    173          }
+    174          
+    175          #pragma location="WKUP_SEG"
+    176          void pin2_p10_config(void)
+    177          {
+    178          	PIE0 |= BIT(5);
+    179          #if (USER_WKUP_EDGE == WKUP_EDGE_RISING)
+    180          	PDN1 |= BIT(0);
+    181          	PUP1 &= ~BIT(0);
+    182          #elif (USER_WKUP_EDGE == WKUP_EDGE_FALLING)
+    183          	PDN1 &= ~BIT(0);
+    184          	PUP1 |= BIT(0);
+    185          #endif
+    186          }
+    187          
+    188          #pragma location="WKUP_SEG"
+    189          void pin2_p27_config(void)
+    190          {
+    191          #if (USER_WKUP_EDGE == WKUP_EDGE_RISING)
+    192          	PDN2 |= BIT(7);
+    193          	PUP2 &= ~BIT(7);
+    194          #elif (USER_WKUP_EDGE == WKUP_EDGE_FALLING)
+    195          	PDN2 &= ~BIT(7);
+    196          	PUP2 |= BIT(7);
+    197          #endif
+    198          }
+    199          
+    200          #pragma location="WKUP_SEG"
+    201          void pin2_p12_config(void)
+    202          {
+    203          #if (USER_WKUP_EDGE == WKUP_EDGE_RISING)
+    204          	PDN1 |= BIT(2);
+    205          	PUP1 &= ~BIT(2);
+    206          #elif (USER_WKUP_EDGE == WKUP_EDGE_FALLING)
+    207          	PDN1 &= ~BIT(2);
+    208          	PUP1 |= BIT(2);
+    209          #endif
+    210          }
+    211          
+    212          #pragma location="WKUP_SEG"
+    213          void pin2_p14_config(void)
+    214          {
+    215          	PIE0 |= BIT(4);
+    216          #if (USER_WKUP_EDGE == WKUP_EDGE_RISING)
+    217          	PDN1 |= BIT(4);
+    218          	PUP1 &= ~BIT(4);
+    219          #elif (USER_WKUP_EDGE == WKUP_EDGE_FALLING)
+    220          	PDN1 &= ~BIT(4);
+    221          	PUP1 |= BIT(4);
+    222          #endif
+    223          }
+    224          
+    225          #pragma location="WKUP_SEG"
+    226          void pin2_p11_config(void)
+    227          {
+    228          #if (USER_WKUP_EDGE == WKUP_EDGE_RISING)
+    229          	PDN1 |= BIT(1);
+    230          	PUP1 &= ~BIT(1);
+    231          #elif (USER_WKUP_EDGE == WKUP_EDGE_FALLING)
+    232          	PDN1 &= ~BIT(1);
+    233          	PUP1 |= BIT(1);
+    234          #endif
+    235          }
+    236          
+    237          #pragma location="WKUP_SEG"
+    238          void pin2_dp2dm2_config(void)
+    239          {
+    240          	AIPCON7 &= ~(BIT(2) | BIT(0));
+    241          	USBCON0 = 0xf0;
+    242          	USBCON1 = 0x0f;
+    243          	USBCON2 = 0x04;
+    244          #if (USER_WKUP_EDGE == WKUP_EDGE_RISING)
+    245          	USBDPDM = 0x0A; //DP 15KÏÂÀ­£¬DM 15KÏÂÀ­
+    246          #elif (USER_WKUP_EDGE == WKUP_EDGE_FALLING)
+    247          	USBDPDM = 0x05; //DP 1.5KÉÏÀ­£¬DM 120KÉÏÀ­
+    248          #endif
+    249          }
+    250          
+    251          #pragma location="WKUP_SEG"
+    252          void pin2_config(void)
+    253          {
+    254          	AIPCON6 = (AIPCON6 & (~0x38)) | (USER_WKUP_PORT << 3); //wakeup pin2(AIPCON6[5:3])
+    255          
+    256          #if (USER_WKUP_PORT == WKUP_PIN2_P02)
+    257          	pin2_p02_config();
+    258          #elif (USER_WKUP_PORT == WKUP_PIN2_P15)
+    259          	pin2_p15_config();
+    260          #elif ((USER_WKUP_PORT == WKUP_PIN2_DM2) || (USER_WKUP_PORT == WKUP_PIN2_DP2))
+    261          	pin2_dp2dm2_config();
+    262          #elif (USER_WKUP_PORT == WKUP_PIN2_P10)
+    263          	pin2_p10_config();
+    264          #elif (USER_WKUP_PORT == WKUP_PIN2_P27)
+    265          	pin2_p27_config();
+    266          #elif (USER_WKUP_PORT == WKUP_PIN2_P12)
+    267          	pin2_p12_config();
+    268          #elif (USER_WKUP_PORT == WKUP_PIN2_P14)
+    269          	pin2_p14_config();
+    270          #elif (USER_WKUP_PORT == WKUP_PIN2_P11)
+    271          	pin2_p11_config();
+    272          #endif
+    273          }
+    274          
+    275          
+    276          #pragma location="WKUP_SEG"
+    277          void pin3_p03_config(void)
+    278          {
+    279          	PIE0 |= BIT(3);
+    280          #if (USER_WKUP_EDGE == WKUP_EDGE_RISING)
+    281          	PDN0 |= BIT(3);
+    282          	PUP0 &= ~BIT(3);
+    283          #elif (USER_WKUP_EDGE == WKUP_EDGE_FALLING)
+    284          	PDN0 &= ~BIT(3);
+    285          	PUP0 |= BIT(3);
+    286          #endif
+    287          }
+    288          
+    289          #pragma location="WKUP_SEG"
+    290          void pin3_sdclk_config(void)
+    291          {
+    292          #if (USER_WKUP_EDGE == WKUP_EDGE_RISING)
+    293          #if (SD_PORT == 0)
+    294          	PDN1 |= BIT(6);
+    295          	PUP1 &= ~BIT(6);
+    296          #elif (SD_PORT == 1)
+    297          	PDN1 |= BIT(3);
+    298          	PUP1 &= ~BIT(3);
+    299          #elif (SD_PORT == 2)
+    300          	PDN4 |= BIT(2);
+    301          	PUP4 &= ~BIT(2);
+    302          #elif (SD_PORT == 3)
+    303          	PDN0 |= BIT(6);
+    304          	PUP0 &= ~BIT(6);
+    305          #endif
+    306          #elif (USER_WKUP_EDGE == WKUP_EDGE_FALLING)
+    307          #if (SD_PORT == 0)
+    308          	PDN1 &= ~BIT(6);
+    309          	PUP1 |= BIT(6);
+    310          #elif (SD_PORT == 1)
+    311          	PDN1 &= ~BIT(3);
+    312          	PUP1 |= BIT(3);
+    313          #elif (SD_PORT == 2)
+    314          	PDN4 &= ~BIT(2);
+    315          	PUP4 |= BIT(2);
+    316          #elif (SD_PORT == 3)
+    317          	PDN0 &= ~BIT(6);
+    318          	PUP0 |= BIT(6);
+    319          #endif
+    320          #endif
+    321          }
+    322          
+    323          #pragma location="WKUP_SEG"
+    324          void pin3_config(void)
+    325          {
+    326          	AIPCON6 = (AIPCON6 & (~0x04)) | (USER_WKUP_PORT << 2); //wakeup pin3(AIPCON6[2])
+    327          
+    328          #if (USER_WKUP_PIN3_PORT == WKUP_PIN3_P03)
+    329          	pin3_p03_config();
+    330          #elif (USER_WKUP_PIN3_PORT == WKUP_PIN3_SDCLK)
+    331          	pin3_sdclk_config();
+    332          #endif
+    333          }
+    334          
+    335          //ÈÎÎñ³õÊ¼»¯
+    336          #pragma location="TASK_LOWPOWER_SEG"
+    337          static void task_lowpower_enter(void)
+    338          {
+    339          	printf("enter lowpower.\n");
+    340          
+    341          	WATCHDOG_KILL();
+    342          	IE_EA = 0;
+    343          
+    344          	ADCCON = 0;
+    345          	UARTCON = 0;
+    346          	TMR2CON0 = 0;                       //disable timer2
+    347          
+    348          	USBDPDM = 0;                        //disable usb pu/pd
+    349          	USBCON0 = 0;
+    350          	USBCON1 = 0;
+    351          	AIPCON7 |= 0x03;                    //P4 as gpio
+    352          
+    353          	disp_clear();
+    354          	DACACON2 &= ~(BIT(4)|BIT(1)|BIT(0));//disable en_vcmbuf, en_lpf, en_hp
+    355          	DACACON1 &= ~BIT(6);                //disable dac_anl
+    356          	DACACON1 &= ~(BIT(3)|BIT(2));       //disable dacbias, adckey/pll/rc/touch key biasing
+    357          	DACACON2 &= ~(BIT(6)|BIT(5));
+    358          
+    359          	//IO,Çë¸ù¾ÝÊµ¼ÊÓ²¼þÇé¿öÅäÖÃ
+    360          	P0DIR = 0xff;
+    361          	P1DIR = 0xff;
+    362          	P2DIR = 0xff;
+    363          	P3DIR = 0xff;
+    364          	P4DIR = 0xff;
+    365          
+    366          	PUP2L = 0x00;
+    367          	PDN0 = 0xff;
+    368          	PDN1 = 0xff;
+    369          	PDN2 = 0xff;
+    370          	PDN3 = 0xff;
+    371          	PDN4 = 0xff;
+    372          	PUP0 = 0x00;
+    373          	PUP1 = 0x00;
+    374          	PUP3 = 0x00;
+    375          	PUP4 = 0x00;
+    376          	AIPCON5 &= ~(BIT(4) | BIT(3));  //bit4-P17 500R; bit3-P15 500R
+    377          
+    378          	//»½ÐÑÉèÖÃ
+    379          	pwkedge_config();
+    380          #if (USER_WKUP_PIN == WKUP_PIN_0)
+    381          	pin0_config();
+    382          #elif (USER_WKUP_PIN == WKUP_PIN_1)
+    383          	pin1_config();
+    384          #elif (USER_WKUP_PIN == WKUP_PIN_2)
+    385          	pin2_config();
+    386          #elif (USER_WKUP_PIN == WKUP_PIN_3)
+    387          	pin3_config();
+    388          #endif
+    389          	delay_1ms(10);
+    390          	PWKEN = 0x0F & (~BIT(USER_WKUP_PIN)); //enable PWKEN0/PWKEN1/PWKEN2/PWKEN3 wakeup
+    391          
+    392          	set_sys_clk(SYS_RC_1M);
+    393          
+    394          	PCON0 |= BIT(1);
+    395          }
+    396          
+    397          //ÈÎÎñÍË³ö
+    398          #pragma location="TASK_LOWPOWER_SEG"
+    399          static void task_lowpower_exit(void)
+    400          {
+    401          	WDTCON = 0x18;           //watchdog 2msºóreset
+    402          	while(1);
+    403          }
+    404          
+    405          //ÈÎÎñÖ÷Á÷³Ì
+    406          #pragma location="TASK_LOWPOWER_SEG"
+    407          void task_lowpower(void)
+    408          {
+    409          	printf("task_lowpower\n");
+    410          	task_lowpower_enter();
+    411          	task_lowpower_exit();
+    412          }
+    413          
+    414          #endif
+
+
+   Segment part sizes:
+
+     Function/Label Bytes
+     -------------- -----
+
+ 
+ 
+ 0 bytes of memory
+
+Errors: none
+Warnings: none

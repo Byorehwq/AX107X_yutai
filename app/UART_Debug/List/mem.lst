@@ -1,0 +1,732 @@
+##############################################################################
+#                                                                            #
+# IAR 8051 C/C++ Compiler V7.20H/W32                   10/Sep/2015  19:03:28 #
+# Copyright 2004-2006 IAR Systems. All rights reserved.                      #
+#                                                                            #
+#    Core               =  plain                                             #
+#    Code model         =  near                                              #
+#    Data model         =  large                                             #
+#    Calling convention =  extended stack reentrant                          #
+#    Constant location  =  code                                              #
+#    Extended stack     =  enabled                                           #
+#    Dptr setup         =  1,16                                              #
+#    Source file        =  C:\Documents and Settings\Administrator\◊¿√Ê\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\mem\mem.c                             #
+#    Command line       =  -I "C:\Program Files\IAR Systems\Embedded         #
+#                          Workbench 4.05 Evaluation version\8051\INC\" -I   #
+#                          "C:\Program Files\IAR Systems\Embedded Workbench  #
+#                          4.05 Evaluation version\8051\INC\CLIB\" -I        #
+#                          "C:\Documents and Settings\Administrator\◊¿√Ê\lil #
+#                          y\15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX1 #
+#                          070_20150908\COMMON\" -I "C:\Documents and        #
+#                          Settings\Administrator\◊¿√Ê\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\INC\" #
+#                           -I "C:\Documents and Settings\Administrator\◊¿√Ê #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\config\" -I "C:\Documents and    #
+#                          Settings\Administrator\◊¿√Ê\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\api\" #
+#                           -I "C:\Documents and Settings\Administrator\◊¿√Ê #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\fm\" -I "C:\Documents and        #
+#                          Settings\Administrator\◊¿√Ê\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\fat\" #
+#                           -I "C:\Documents and Settings\Administrator\◊¿√Ê #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\display\" -I "C:\Documents and   #
+#                          Settings\Administrator\◊¿√Ê\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\displ #
+#                          ay\led\" -I "C:\Documents and                     #
+#                          Settings\Administrator\◊¿√Ê\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\displ #
+#                          ay\lcd\" -I "C:\Documents and                     #
+#                          Settings\Administrator\◊¿√Ê\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\task\ #
+#                          " -I "C:\Documents and Settings\Administrator\◊¿√ #
+#                          Ê\lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lil #
+#                          y_AX1070_20150908\user\" -I "C:\Documents and     #
+#                          Settings\Administrator\◊¿√Ê\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\mem\" #
+#                           -I "C:\Documents and Settings\Administrator\◊¿√Ê #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\module\" -I "C:\Documents and    #
+#                          Settings\Administrator\◊¿√Ê\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\modul #
+#                          e\kedir\" -I "C:\Documents and                    #
+#                          Settings\Administrator\◊¿√Ê\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\key\" #
+#                           -I "C:\Documents and Settings\Administrator\◊¿√Ê #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\startmusic\" -D UART_DEBUG -D    #
+#                          AX207X_TAG -lC "C:\Documents and                  #
+#                          Settings\Administrator\◊¿√Ê\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\UART_ #
+#                          Debug\List\" -o "C:\Documents and                 #
+#                          Settings\Administrator\◊¿√Ê\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\UART_ #
+#                          Debug\Obj\" -e -z9 --debug --core=plain           #
+#                          --dptr=16,1 --data_model=large --code_model=near  #
+#                          --calling_convention=ext_stack_reentrant          #
+#                          --place_constants=code --nr_virtual_regs 20       #
+#                          --extended_stack "C:\Documents and                #
+#                          Settings\Administrator\◊¿√Ê\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\mem\m #
+#                          em.c"                                             #
+#    List file          =  C:\Documents and Settings\Administrator\◊¿√Ê\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\UART_Debug\List\mem.lst               #
+#    Object file        =  C:\Documents and Settings\Administrator\◊¿√Ê\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\UART_Debug\Obj\mem.r51                #
+#                                                                            #
+#                                                                            #
+##############################################################################
+
+C:\Documents and Settings\Administrator\◊¿√Ê\lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX1070_20150908\mem\mem.c
+      1          /*****************************************************************************
+      2           * Module    : mem
+      3           * File      : mem.c
+      4           * Author    :
+      5           * Email     :
+      6           * Function  : º«“‰»ŒŒÒ¡˜≥Ã
+      7           *****************************************************************************/
+      8          #include "include.h"
+      9          #include "mem_rtcram.h"
+     10          #include "mem_internal.h"
+     11          #include "mem_eeprom.h"
+     12          #include "mem_device.h"
+     13          
+
+   \                                 In segment XDATA_Z, align 1, keep-with-next
+   \   000000                REQUIRE __INIT_XDATA_Z
+     14          type_mem_ctl mem_ctl;
+   \                     mem_ctl:
+   \   000000                DS 4
+     15          
+     16          
+     17          #pragma location="MEM"
+
+   \                                 In segment MEM, align 1, keep-with-next
+     18          void mem_event(void)
+   \                     mem_event:
+     19          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     20          	if(mem_ctl.delay_time == 1)
+   \   000000   90....       MOV     DPTR,#(mem_ctl + 2)
+   \   000003   E0           MOVX    A,@DPTR
+   \   000004   6401         XRL     A,#0x1
+   \   000006   7010         JNZ     ??mem_event_0
+     21          	{
+     22          		//—” ±µΩ
+     23          		mem_ctl.delay_time = 0;
+   \   000008   E4           CLR     A
+   \   000009   F0           MOVX    @DPTR,A
+     24          
+     25          #if (SYS_MEM == MEM_RTCRAM)
+     26          		rtcram_write_sys_info();
+   \   00000A   90....       MOV     DPTR,#(mem_ctl + 1)
+   \   00000D   E0           MOVX    A,@DPTR
+   \   00000E   A2E1         MOV     C,0xE0 /* A   */.1
+   \   000010   5006         JNC     ??mem_event_0
+   \   000012   C2E1         CLR     0xE0 /* A   */.1
+   \   000014   F0           MOVX    @DPTR,A
+   \   000015                ; Setup parameters for call to function write_volume_rtcram
+   \   000015   12....       LCALL   write_volume_rtcram
+     27          
+     28          #elif (SYS_MEM == MEM_INTERNAL)
+     29          		internal_write_sys_info();
+     30          
+     31          #elif (SYS_MEM == MEM_E2PROM)
+     32          		eep_write_sys_info();
+     33          
+     34          #elif (SYS_MEM == MEM_DEVICE)
+     35          		dev_write_info();
+     36          #endif
+     37          	}
+     38          
+     39          #if (SYS_MEM == MEM_INTERNAL)
+     40          #if USE_BREAK_POINT
+     41          	if(task_ctl.work_sta == TASK_MUSIC)
+     42          	{
+     43          		if(mem_ctl.erase_time == 1)
+     44          		{
+     45          			mem_ctl.erase_time = 0;
+     46          			if(mem_ctl.erase_sta == NEED_RE_ERASE)
+     47          			{
+     48          				mem_ctl.erase_sta = BEING_ERASE;
+     49          			}
+     50          		}
+     51          
+     52          		erase_music_break_internal();
+     53          	}
+     54          	else
+     55          	{
+     56          		mem_ctl.erase_time = 0;
+     57          	}
+     58          #endif
+     59          #endif
+     60          
+     61          	mem_ctl.dev = fs_cur_dev();
+   \                     ??mem_event_0:
+   \   000018                ; Setup parameters for call to function fs_cur_dev
+   \   000018   12....       LCALL   fs_cur_dev
+   \   00001B   E9           MOV     A,R1
+   \   00001C   90....       MOV     DPTR,#mem_ctl
+   \   00001F   F0           MOVX    @DPTR,A
+     62          }
+   \   000020   22           RET
+     63          
+     64          #if ((SYS_MEM == MEM_RTCRAM) || (SYS_MEM == MEM_INTERNAL))
+     65          #pragma location="MEM"
+
+   \                                 In segment MEM, align 1, keep-with-next
+     66          void var_set_default(void)
+   \                     var_set_default:
+     67          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     68          	sys_ctl.volume = VOLUME_MAX;		// Merlin 2015/06/06
+   \   000000   7410         MOV     A,#0x10
+   \   000002   90....       MOV     DPTR,#(sys_ctl + 2)
+   \   000005   F0           MOVX    @DPTR,A
+     69          	sys_ctl.dev_save = DEVICE_SDMMC;	// Merlin 2015/06/29 Õ‚ø®”≈œ»,“ÚŒ™œµÕ≥πÊ∏ÒŒﬁ«–ªª…Ë±∏π¶ƒ‹
+   \   000006   E4           CLR     A
+   \   000007   90....       MOV     DPTR,#(sys_ctl + 6)
+   \   00000A   F0           MOVX    @DPTR,A
+     70          
+     71          #if USE_BREAK_POINT
+     72          	u_msc.music_num = 0;
+   \   00000B   90....       MOV     DPTR,#u_msc
+   \   00000E   F0           MOVX    @DPTR,A
+   \   00000F   A3           INC     DPTR
+   \   000010   F0           MOVX    @DPTR,A
+     73          	mem_ctl.dev = 1; task_music_break_save(0); write_num_rtcram();
+   \   000011   7401         MOV     A,#0x1
+   \   000013   12....       LCALL   ?Subroutine0
+     74          	mem_ctl.dev = 0; task_music_break_save(0); write_num_rtcram();
+   \                     ??CrossCallReturnLabel_0:
+   \   000016   E4           CLR     A
+   \   000017   12....       LCALL   ?Subroutine0
+     75          #endif
+     76          
+     77          #if TASK_FM_EN
+     78          	fm_ctl.ch_total = 1;
+     79          	fm_ctl.ch_cur = 1;
+     80          	fm_ctl.fm_freq = FM_MIN_FREQ;
+     81          	mem_fmbuf_clr();
+     82          	fm_ctl.ch_buf[0] = 0x01;
+     83          #if ((SYS_MEM == MEM_RTCRAM) || (SYS_MEM == MEM_E2PROM))
+     84          	write_fm_info(0);
+     85          #endif
+     86          #endif
+     87          
+     88          #if (SYS_MEM == MEM_RTCRAM)    //µ⁄“ª¥Œ…œµÁ≥ı ºªØRTCRAM
+     89          	write_volume_rtcram();
+   \                     ??CrossCallReturnLabel_1:
+   \   00001A                ; Setup parameters for call to function write_volume_rtcram
+   \   00001A   12....       LCALL   write_volume_rtcram
+     90          	write_device_rtcram();
+   \   00001D                ; Setup parameters for call to function write_device_rtcram
+   \   00001D   12....       LCALL   write_device_rtcram
+     91          #if TASK_FM_EN
+     92          	write_total_channel_rtcram();
+     93          	write_cur_channel_rtcram();
+     94          #endif
+     95          #endif
+     96          
+     97          
+     98          }
+   \   000020   22           RET
+
+   \                                 In segment MEM, align 1, keep-with-next
+   \                     ?Subroutine0:
+   \   000000   90....       MOV     DPTR,#mem_ctl
+   \   000003   F0           MOVX    @DPTR,A
+   \   000004                ; Setup parameters for call to function task_music_break_save
+   \   000004                ; Setup parameters for call to function task_music_break_save
+   \   000004   C2F0         CLR     B.0
+   \   000006   12....       LCALL   task_music_break_save
+   \   000009                ; Setup parameters for call to function write_num_rtcram
+   \   000009                ; Setup parameters for call to function write_num_rtcram
+   \   000009   12....       LCALL   write_num_rtcram
+   \   00000C   22           RET
+     99          #endif
+    100          
+    101          #pragma location="MEM"
+
+   \                                 In segment MEM, align 1, keep-with-next
+    102          void mem_read_init_info(void)
+   \                     mem_read_init_info:
+    103          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    104          #if (SYS_MEM == MEM_RTCRAM)
+    105          	if(!(rtcram_poweron_check()))
+   \   000000                ; Setup parameters for call to function rtcram_poweron_check
+   \   000000   12....       LCALL   rtcram_poweron_check
+   \   000003   5032         JNC     ??mem_read_init_info_0
+    106          	{
+    107          		return;
+    108          	}
+    109          
+    110          	read_volume_rtcram();
+   \   000005                ; Setup parameters for call to function read_volume_rtcram
+   \   000005   12....       LCALL   read_volume_rtcram
+    111          
+    112          #if 0	// «ø÷∆“‘Õ‚ø®Œ™”≈œ», Œﬁ…Ë±∏º«“‰π¶ƒ‹
+    113          	read_device_rtcram();
+    114          #else
+    115          	sys_ctl.dev_save = DEVICE_SDMMC;	// Merlin 2015/06/29 Õ‚ø®”≈œ»,“ÚŒ™œµÕ≥πÊ∏ÒŒﬁ«–ªª…Ë±∏π¶ƒ‹
+   \   000008   E4           CLR     A
+   \   000009   90....       MOV     DPTR,#(sys_ctl + 6)
+   \   00000C   F0           MOVX    @DPTR,A
+    116          #endif
+    117          
+    118          #if TASK_FM_EN
+    119          	read_fm_info_rtcram();
+    120          #endif
+    121          
+    122          #elif (SYS_MEM == MEM_INTERNAL)
+    123          	if(!(internal_poweron_check()))  //≥ˆ¥Ì£¨ π”√ƒ¨»œ÷µ
+    124          	{
+    125          		var_set_default();
+    126          		return;
+    127          	}
+    128          
+    129          	read_volume_internal();
+    130          	read_device_internal();
+    131          #if TASK_FM_EN
+    132          	read_fm_info_internal();
+    133          #endif
+    134          
+    135          #elif (SYS_MEM == MEM_E2PROM)
+    136          	read_volume_eeprom();
+    137          	read_device_eeprom();
+    138          #if TASK_FM_EN
+    139          	read_fm_info_eeprom();
+    140          #endif
+    141          
+    142          #elif (SYS_MEM == MEM_DEVICE)
+    143          	device_mount();
+    144          	dev_read_info();
+    145          #endif
+    146          
+    147          #if 1	// “Ù¡ø÷ª π”√πÃ∂®µƒº∂ ˝, ≤ª◊ˆµ˜’˚
+    148          	sys_ctl.volume = VOLUME_MAX;	// Merlin 2015/06/06
+   \   00000D   7410         MOV     A,#0x10
+   \   00000F   90....       MOV     DPTR,#(sys_ctl + 2)
+   \   000012   F0           MOVX    @DPTR,A
+    149          #else
+    150          	if(sys_ctl.volume > VOLUME_MAX)
+    151          	{
+    152          		sys_ctl.volume = VOLUME_MAX;
+    153          	}
+    154          	else if(sys_ctl.volume < 5)
+    155          	{
+    156          		sys_ctl.volume = 10;
+    157          	}
+    158          #endif
+    159          
+    160          	if(sys_ctl.dev_save >= MEDIA_DEVICE_NUM)
+   \   000013   E4           CLR     A
+   \   000014   C3           CLR     C
+   \   000015   9404         SUBB    A,#0x4
+   \   000017   4006         JC      ??mem_read_init_info_1
+    161          	{
+    162          		sys_ctl.dev_save = DEVICE_INVALID;
+   \   000019   74FF         MOV     A,#-0x1
+   \   00001B   90....       MOV     DPTR,#(sys_ctl + 6)
+   \   00001E   F0           MOVX    @DPTR,A
+    163          	}
+    164          
+    165          	// 2015/06/29 ‘ˆº”—≠ª∑ƒ£ Ωµƒº«“‰π¶ƒ‹
+    166          	rtcram_read_multi(RTCRAM_PLAY_MODE,(u8 *)&sys_ctl.mode_play, 1);	// ∂¡≥ˆ—≠ª∑ƒ£ Ω, ONE/ALL
+   \                     ??mem_read_init_info_1:
+   \   00001F                ; Setup parameters for call to function rtcram_read_multi
+   \   00001F   7C01         MOV     R4,#0x1
+   \   000021   7A..         MOV     R2,#(sys_ctl & 0xff)
+   \   000023   7B..         MOV     R3,#((sys_ctl >> 8) & 0xff)
+   \   000025   7922         MOV     R1,#0x22
+   \   000027   12....       LCALL   rtcram_read_multi
+    167          	if((sys_ctl.mode_play != ITEM_LOOP_SINGLE) && (sys_ctl.mode_play != ITEM_LOOP_ALL))
+   \   00002A   90....       MOV     DPTR,#sys_ctl
+   \   00002D   E0           MOVX    A,@DPTR
+   \   00002E   6402         XRL     A,#0x2
+   \   000030   6005         JZ      ??mem_read_init_info_0
+   \   000032   E0           MOVX    A,@DPTR
+   \   000033   6002         JZ      ??mem_read_init_info_0
+    168          	{
+    169          		sys_ctl.mode_play = ITEM_LOOP_ALL;
+   \   000035   E4           CLR     A
+   \   000036   F0           MOVX    @DPTR,A
+   \                     ??mem_read_init_info_0:
+   \   000037   22           RET
+    170          	}
+    171          
+    172          #if TASK_FM_EN
+    173          	if(fm_ctl.fm_freq > (FM_MAX_FREQ - FM_MIN_FREQ))
+    174          	{
+    175          		fm_ctl.fm_freq = FM_MIN_FREQ;
+    176          	}
+    177          	else
+    178          	{
+    179          		fm_ctl.fm_freq += FM_MIN_FREQ;
+    180          	}
+    181          
+    182          	if(fm_ctl.ch_cur > fm_ctl.ch_total || fm_ctl.ch_cur == 0 || fm_ctl.ch_total > 26*8 /*|| fm_ctl.ch_total == 0 ∂‡”‡≈–∂œ*/)
+    183          	{
+    184          		fm_ctl.ch_cur = 1;
+    185          		fm_ctl.ch_total = 1;
+    186          	}
+    187          #endif
+    188          }
+    189          
+    190          #if (SYS_MEM == MEM_INTERNAL)
+    191          #pragma inline=forced
+    192          #pragma location="MEM"
+    193          void internal_write_sys_info(void)
+    194          {
+    195          	if(mem_ctl.change_flag & BIT(MEM_NUM_BIT))
+    196          	{
+    197          		mem_ctl.change_flag &= ~BIT(MEM_NUM_BIT);
+    198          		write_num_internal();
+    199          	}
+    200          	if((mem_ctl.change_flag & BIT(MEM_VOL_BIT))
+    201          	        ||(mem_ctl.change_flag & BIT(MEM_DEV_BIT)))
+    202          	{
+    203          		mem_ctl.change_flag &= ~(BIT(MEM_VOL_BIT) | BIT(MEM_DEV_BIT));
+    204          		write_volume_device_internal();
+    205          	}
+    206          #if TASK_FM_EN
+    207          	if(mem_ctl.change_flag & BIT(MEM_FRE_BIT))
+    208          	{
+    209          		mem_ctl.change_flag &= ~BIT(MEM_FRE_BIT);
+    210          		write_cur_channel_internal();
+    211          	}
+    212          #endif
+    213          }
+    214          #endif
+    215          
+    216          #if (SYS_MEM == MEM_E2PROM)
+    217          #pragma inline=forced
+    218          #pragma location="MEM"
+    219          void eep_write_sys_info(void)
+    220          {
+    221          	if(mem_ctl.change_flag & BIT(MEM_VOL_BIT))
+    222          	{
+    223          		mem_ctl.change_flag &= ~BIT(MEM_VOL_BIT);
+    224          		write_volume_eeprom();
+    225          	}
+    226          }
+    227          #endif
+    228          
+    229          #if (SYS_MEM == MEM_RTCRAM)
+    230          #pragma inline=forced
+    231          #pragma location="MEM"
+    232          void rtcram_write_sys_info(void)
+    233          {
+    234          	if(mem_ctl.change_flag & BIT(MEM_VOL_BIT))
+    235          	{
+    236          		mem_ctl.change_flag &= ~BIT(MEM_VOL_BIT);
+    237          		write_volume_rtcram();
+    238          	}
+    239          }
+    240          #endif
+    241          	
+    242          #pragma location="MEM"
+
+   \                                 In segment MEM, align 1, keep-with-next
+    243          void mem_write_file_change(void)
+   \                     mem_write_file_change:
+    244          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    245          #if (SYS_MEM == MEM_RTCRAM)
+    246          	write_num_rtcram();                           //«–ªªŒƒº˛≥…π¶∫Û¡¢º¥–¥«˙ƒø
+   \   000000                ; Setup parameters for call to function write_num_rtcram
+   \   000000   12....       LCALL   write_num_rtcram
+    247          
+    248          #elif (SYS_MEM == MEM_INTERNAL)
+    249          	mem_ctl.delay_time = MEM_DELAY;               //internal£¨—” ±º«“‰
+    250          	mem_ctl.change_flag |= BIT(MEM_NUM_BIT);
+    251          
+    252          #elif (SYS_MEM == MEM_E2PROM)
+    253          	write_num_eeprom();                           //«–ªªŒƒº˛≥…π¶∫Û¡¢º¥–¥«˙ƒø
+    254          
+    255          #elif (SYS_MEM == MEM_DEVICE)
+    256          	mem_ctl.delay_time = 0;
+    257          	dev_write_info();                             //U/SD¥Ê¥¢£¨«–Œƒº˛ ±º«“‰
+    258          #endif
+    259          }
+   \   000003   22           RET
+    260          
+    261          #pragma location="MEM"
+
+   \                                 In segment MEM, align 1, keep-with-next
+    262          void mem_read_music_num(void)
+   \                     mem_read_music_num:
+    263          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    264          #if (SYS_MEM == MEM_RTCRAM)
+    265          	read_num_rtcram();
+   \   000000                ; Setup parameters for call to function read_num_rtcram
+   \   000000   12....       LCALL   read_num_rtcram
+    266          
+    267          #elif (SYS_MEM == MEM_INTERNAL)
+    268          	read_num_internal();
+    269          
+    270          #elif (SYS_MEM == MEM_E2PROM)
+    271          	read_num_eeprom();
+    272          
+    273          #elif (SYS_MEM == MEM_DEVICE)
+    274          	dev_read_music_num();
+    275          #endif
+    276          
+    277          	if(u_msc.music_num == 0 || u_msc.music_num > u_msc.music_total)
+   \   000003   90....       MOV     DPTR,#u_msc
+   \   000006   E0           MOVX    A,@DPTR
+   \   000007   7002         JNZ     ??mem_read_music_num_0
+   \   000009   A3           INC     DPTR
+   \   00000A   E0           MOVX    A,@DPTR
+   \                     ??mem_read_music_num_0:
+   \   00000B   6016         JZ      ??mem_read_music_num_1
+   \   00000D   90....       MOV     DPTR,#u_msc
+   \   000010   E0           MOVX    A,@DPTR
+   \   000011   F8           MOV     R0,A
+   \   000012   A3           INC     DPTR
+   \   000013   E0           MOVX    A,@DPTR
+   \   000014   F9           MOV     R1,A
+   \   000015   7583..       MOV     DPH,#(((u_msc + 2) >> 8) & 0xff)
+   \   000018   7582..       MOV     DPL,#((u_msc + 2) & 0xff)
+   \   00001B   C3           CLR     C
+   \   00001C   E0           MOVX    A,@DPTR
+   \   00001D   98           SUBB    A,R0
+   \   00001E   A3           INC     DPTR
+   \   00001F   E0           MOVX    A,@DPTR
+   \   000020   99           SUBB    A,R1
+   \   000021   5009         JNC     ??mem_read_music_num_2
+    278          	{
+    279          		u_msc.music_num = 1;
+   \                     ??mem_read_music_num_1:
+   \   000023   90....       MOV     DPTR,#u_msc
+   \   000026   7401         MOV     A,#0x1
+   \   000028   F0           MOVX    @DPTR,A
+   \   000029   A3           INC     DPTR
+   \   00002A   E4           CLR     A
+   \   00002B   F0           MOVX    @DPTR,A
+    280          	}
+    281          }
+   \                     ??mem_read_music_num_2:
+   \   00002C   22           RET
+    282          
+    283          #pragma location="MEM"
+
+   \                                 In segment MEM, align 1, keep-with-next
+    284          void mem_write_device(void)
+   \                     mem_write_device:
+    285          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    286          
+    287          	if(task_ctl.work_sta == TASK_FLASH)
+   \   000000   7406         MOV     A,#0x6
+   \   000002   65..         XRL     A,task_ctl
+   \   000004   7004         JNZ     ??mem_write_device_0
+    288          	{
+    289          		sys_ctl.dev_save = DEVICE_SDMMC1;
+   \   000006   7401         MOV     A,#0x1
+   \   000008   8004         SJMP    ??mem_write_device_1
+    290          	}
+    291          	else
+    292          	{
+    293          		sys_ctl.dev_save = t_fat.dev_sel;
+   \                     ??mem_write_device_0:
+   \   00000A   90....       MOV     DPTR,#(t_fat + 25)
+   \   00000D   E0           MOVX    A,@DPTR
+   \                     ??mem_write_device_1:
+   \   00000E   90....       MOV     DPTR,#(sys_ctl + 6)
+   \   000011   F0           MOVX    @DPTR,A
+    294          	}
+    295          
+    296          #if (SYS_MEM == MEM_RTCRAM)
+    297          	write_device_rtcram();
+   \   000012                ; Setup parameters for call to function write_device_rtcram
+   \   000012   12....       LCALL   write_device_rtcram
+    298          
+    299          #elif (SYS_MEM == MEM_INTERNAL)
+    300          	mem_ctl.delay_time = MEM_DELAY;               //internal£¨—” ±º«“‰
+    301          	mem_ctl.change_flag |= BIT(MEM_DEV_BIT);
+    302          
+    303          #elif (SYS_MEM == MEM_E2PROM)
+    304          	write_device_eeprom();
+    305          #endif
+    306          }
+   \   000015   22           RET
+    307          
+    308          #if TASK_FM_EN
+    309          //–¥»Î◊‹Ã® ˝°¢µ±«∞µÁÃ®–Ú∫≈°¢µ±«∞∆µ¬ 
+    310          #pragma location="MEM"
+    311          void mem_write_channel(void)
+    312          {
+    313          #if (SYS_MEM == MEM_RTCRAM)
+    314          	write_total_channel_rtcram();
+    315          	write_cur_channel_rtcram();
+    316          
+    317          #elif (SYS_MEM == MEM_INTERNAL)
+    318          	write_total_channel_internal();
+    319          	write_cur_channel_internal();
+    320          
+    321          #elif (SYS_MEM == MEM_E2PROM)
+    322          	write_total_channel_eeprom();
+    323          	write_cur_channel_eeprom();
+    324          
+    325          #elif (SYS_MEM == MEM_DEVICE)
+    326          	mem_ctl.delay_time = 1;
+    327          
+    328          #endif
+    329          }
+    330          
+    331          //–¥»ÎFMµ±«∞µÁÃ®–Ú∫≈∫Õ∆µ¬ 
+    332          void mem_write_cur_channel(void)
+    333          {
+    334          #if (SYS_MEM == MEM_RTCRAM)
+    335          	write_cur_channel_rtcram();
+    336          
+    337          #elif (SYS_MEM == MEM_INTERNAL)
+    338          	mem_ctl.delay_time = MEM_DELAY;               //internal£¨—” ±º«“‰
+    339          	mem_ctl.change_flag |= BIT(MEM_FRE_BIT);
+    340          
+    341          #elif (SYS_MEM == MEM_E2PROM)
+    342          	write_cur_channel_eeprom();
+    343          
+    344          #elif (SYS_MEM == MEM_DEVICE)
+    345          	mem_ctl.delay_time = MEM_DELAY;
+    346          
+    347          #endif
+    348          }
+    349          
+    350          //–¥»ÎFM◊‘∂ØÀ—Ã®–≈œ¢
+    351          #pragma location="MEM"
+    352          void mem_write_fm(void)
+    353          {
+    354          #if FM_SEEK_50K_STEP
+    355          	u16 byte_idx;
+    356          	u8 bit_idx;
+    357          	byte_idx = (fm_ctl.fm_freq - FM_MIN_FREQ)/5;
+    358          	bit_idx = byte_idx % 8;
+    359          	byte_idx = byte_idx / 8;
+    360          
+    361          #else
+    362          	u8 byte_idx, bit_idx;
+    363          	bit_idx = (u8)(fm_ctl.fm_freq - FM_MIN_FREQ);
+    364          
+    365          	byte_idx = bit_idx / 8;
+    366          	bit_idx = bit_idx % 8;
+    367          #endif
+    368          	if(fm_ctl.fm_freq <= FM_MAX_FREQ)
+    369          	{
+    370          		fm_ctl.ch_buf[byte_idx] |= (1<<bit_idx);
+    371          	}
+    372          	//printf("ch_buf[%d] = %02x\n",byte_idx,fm_ctl.ch_buf[byte_idx]);
+    373          
+    374          	write_fm_info(byte_idx);
+    375          }
+    376          
+    377          //«Â≥˝º«“‰ƒ£øÈ£®”…”⁄ƒ⁄÷√º«“‰ƒ£øÈµƒ≤¡–¥ ±º‰≥§£¨≤ª‘⁄’‚¿Ô◊ˆ£©
+    378          #pragma location="MEM"
+    379          void mem_fmbuf_clr(void)
+    380          {
+    381          	memset(fm_ctl.ch_buf,0x00,CH_BUF_MAX);
+    382          #if ((SYS_MEM == MEM_RTCRAM) || (SYS_MEM == MEM_E2PROM))
+    383          	for(u8 i = 0; i < CH_BUF_MAX; i++)
+    384          	{
+    385          		write_fm_info(i);
+    386          	}
+    387          #endif
+    388          }
+    389          #endif
+    390          
+    391          #pragma location="MEM"
+
+   \                                 In segment MEM, align 1, keep-with-next
+    392          void mem_time_set(void)
+   \                     mem_time_set:
+    393          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    394          	if(mem_ctl.delay_time > 1)
+   \   000000   90....       MOV     DPTR,#(mem_ctl + 2)
+   \   000003   E0           MOVX    A,@DPTR
+   \   000004   C3           CLR     C
+   \   000005   9402         SUBB    A,#0x2
+   \   000007   4003         JC      ??mem_time_set_0
+    395          	{
+    396          		mem_ctl.delay_time--;
+   \   000009   E0           MOVX    A,@DPTR
+   \   00000A   14           DEC     A
+   \   00000B   F0           MOVX    @DPTR,A
+    397          	}
+    398          
+    399          #if ((SYS_MEM == MEM_INTERNAL) && USE_BREAK_POINT)
+    400          	if((mem_ctl.erase_time > 1) && (mem_ctl.erase_sta == NEED_RE_ERASE))
+    401          	{
+    402          		mem_ctl.erase_time--;
+    403          	}
+    404          #endif
+    405          }
+   \                     ??mem_time_set_0:
+   \   00000C   22           RET
+
+   Maximum stack usage in bytes:
+
+     Function                   EXT_STACK PSTACK XSTACK
+     --------                   --------- ------ ------
+     mem_event                         0      0      0
+       -> write_volume_rtcram          0      0      0
+       -> fs_cur_dev                   0      0      0
+     mem_read_init_info                0      0      0
+       -> rtcram_poweron_check         0      0      0
+       -> read_volume_rtcram           0      0      0
+       -> rtcram_read_multi            0      0      0
+     mem_read_music_num                2      0      0
+       -> read_num_rtcram              0      0      0
+     mem_time_set                      0      0      0
+     mem_write_device                  0      0      0
+       -> write_device_rtcram          0      0      0
+     mem_write_file_change             0      0      0
+       -> write_num_rtcram             0      0      0
+     var_set_default                   0      0      0
+       -> task_music_break_save        0      0      0
+       -> write_num_rtcram             0      0      0
+       -> task_music_break_save        0      0      0
+       -> write_num_rtcram             0      0      0
+       -> write_volume_rtcram          0      0      0
+       -> write_device_rtcram          0      0      0
+
+
+   Segment part sizes:
+
+     Function/Label        Bytes
+     --------------        -----
+     mem_ctl                  4
+     mem_event               33
+     var_set_default         33
+     ?Subroutine0            13
+     mem_read_init_info      56
+     mem_write_file_change    4
+     mem_read_music_num      45
+     mem_write_device        22
+     mem_time_set            13
+
+ 
+ 219 bytes in segment MEM
+   4 bytes in segment XDATA_Z
+ 
+ 219 bytes of CODE  memory
+   4 bytes of XDATA memory
+
+Errors: none
+Warnings: none

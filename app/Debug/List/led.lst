@@ -1,0 +1,241 @@
+##############################################################################
+#                                                                            #
+# IAR 8051 C/C++ Compiler V7.20H/W32                   29/Jun/2018  19:55:08 #
+# Copyright 2004-2006 IAR Systems. All rights reserved.                      #
+#                                                                            #
+#    Core               =  plain                                             #
+#    Code model         =  near                                              #
+#    Data model         =  large                                             #
+#    Calling convention =  extended stack reentrant                          #
+#    Constant location  =  code                                              #
+#    Extended stack     =  enabled                                           #
+#    Dptr setup         =  1,16                                              #
+#    Source file        =  I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\display\led\led #
+#                          .c                                                #
+#    Command line       =  -I E:\software\8051\INC\ -I                       #
+#                          E:\software\8051\INC\CLIB\ -I                     #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\COMMON\ -I      #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\INC\ -I         #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\config\ -I      #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\api\ -I         #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\fm\ -I          #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\fat\ -I         #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\display\ -I     #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\display\theme_d #
+#                          efault\ -I I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073 #
+#                          A_”ÓÃ©_AX1071_xxxxxxxx_20180629_Merlin_1\app\disp #
+#                          lay\led\ -I I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC07 #
+#                          3A_”ÓÃ©_AX1071_xxxxxxxx_20180629_Merlin_1\app\dis #
+#                          play\lcd\ -I I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC0 #
+#                          73A_”ÓÃ©_AX1071_xxxxxxxx_20180629_Merlin_1\app\ta #
+#                          sk\ -I I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”Ó #
+#                          Ã©_AX1071_xxxxxxxx_20180629_Merlin_1\app\user\    #
+#                          -I I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_A #
+#                          X1071_xxxxxxxx_20180629_Merlin_1\app\mem\ -I      #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\module\ -I      #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\key\ -I         #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\startmusic\ -I  #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\spi\ -D         #
+#                          AX107X_TAG -lC I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18B #
+#                          C073A_”ÓÃ©_AX1071_xxxxxxxx_20180629_Merlin_1\app\ #
+#                          Debug\List\ -o I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18B #
+#                          C073A_”ÓÃ©_AX1071_xxxxxxxx_20180629_Merlin_1\app\ #
+#                          Debug\Obj\ -e -z9 --core=plain --dptr=16,1        #
+#                          --data_model=large --code_model=near              #
+#                          --calling_convention=ext_stack_reentrant          #
+#                          --place_constants=code --nr_virtual_regs 20       #
+#                          --extended_stack I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\1 #
+#                          8BC073A_”ÓÃ©_AX1071_xxxxxxxx_20180629_Merlin_1\ap #
+#                          p\display\led\led.c                               #
+#    List file          =  I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\Debug\List\led. #
+#                          lst                                               #
+#    Object file        =  I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\Debug\Obj\led.r #
+#                          51                                                #
+#                                                                            #
+#                                                                            #
+##############################################################################
+
+I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX1071_xxxxxxxx_20180629_Merlin_1\app\display\led\led.c
+      1          /*****************************************************************************
+      2          * Module    : Display
+      3          * File      : led.c
+      4          * Author    :
+      5          * Email     :
+      6          * Function  : LEDœ‘ æ
+      7          *****************************************************************************/
+      8          #include "include.h"
+
+   \                                 In segment SFR_AN, at 0x80
+   \   unsigned char volatile __sfr P0
+   \                     P0:
+   \   000000                DS 1
+
+   \                                 In segment SFR_AN, at 0xba
+   \   unsigned char volatile __sfr P0DIR
+   \                     P0DIR:
+   \   000000                DS 1
+      9          #include "kedir.h"
+     10          
+     11          //#if (DISP_TYPE==DISP_LED)
+     12          
+     13          void led_init(void) AT(LED_SEG);
+
+   \                                 In segment LED_SEG, align 1, keep-with-next
+     14          void led_init(void)
+   \                     led_init:
+     15          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     16          	ocx.led_sta = LED_STA_OFF;
+   \   000000   78..         MOV     R0,#(ocx + 17)
+   \   000002   7600         MOV     @R0,#0x0
+     17          	LED_INIT();
+   \   000004   53BAFD       ANL     0xba,#0xfd
+   \   000007   903010       MOV     DPTR,#0x3010
+   \   00000A   E0           MOVX    A,@DPTR
+   \   00000B   D2E1         SETB    0xE0 /* A   */.1
+   \   00000D   F0           MOVX    @DPTR,A
+   \   00000E   C281         CLR     0x80.1
+     18          }
+   \   000010   22           RET
+     19          
+     20          
+     21          void led_scan(void) AT(LED_SEG);
+
+   \                                 In segment LED_SEG, align 1, keep-with-next
+     22          void led_scan(void)
+   \                     led_scan:
+     23          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     24          	static u8 scan_cnt = 0;
+     25          	scan_cnt++;
+   \   000000   90....       MOV     DPTR,#??scan_cnt
+   \   000003   E0           MOVX    A,@DPTR
+   \   000004   04           INC     A
+   \   000005   F0           MOVX    @DPTR,A
+     26          
+     27          	switch(ocx.led_sta)
+   \   000006   78..         MOV     R0,#(ocx + 17)
+   \   000008   E6           MOV     A,@R0
+   \   000009   12....       LCALL   ?UC_SWITCH_DENSE
+   \                     `?<Jumptable for led_scan>_0`:
+   \   00000C   01           DB        1
+   \   00000D   02           DB        2
+   \   00000E   ....         DW        ??led_scan_0
+   \   000010   ....         DW        ??led_scan_1
+   \   000012   ....         DW        ??led_scan_2
+   \   000014   ....         DW        ??led_scan_3
+     28          	{
+     29          	case LED_STA_ON:            //¡¡
+     30          		LED_ON();
+   \                     ??led_scan_1:
+   \   000016   53BAFD       ANL     0xba,#0xfd
+   \   000019   D281         SETB    0x80.1
+   \   00001B   22           RET
+     31          		break;
+     32          
+     33          	case LED_STA_FAST_GLITTER:  //øÏ…¡(¡¡200ms£¨√200ms)
+     34          		if(scan_cnt >= 100)
+   \                     ??led_scan_2:
+   \   00001C   90....       MOV     DPTR,#??scan_cnt
+   \   00001F   E0           MOVX    A,@DPTR
+   \   000020   C3           CLR     C
+   \   000021   9464         SUBB    A,#0x64
+   \   000023   8007         SJMP    ??led_scan_4
+     35          		{
+     36          			scan_cnt = 0;
+     37          			LED_GLITTER();
+     38          		}
+     39          		break;
+     40          
+     41          	case LED_STA_SLOW_GLITTER:  //¬˝…¡(¡¡500ms£¨√500ms)
+     42          		if(scan_cnt >= 250)
+   \                     ??led_scan_3:
+   \   000025   90....       MOV     DPTR,#??scan_cnt
+   \   000028   E0           MOVX    A,@DPTR
+   \   000029   C3           CLR     C
+   \   00002A   94FA         SUBB    A,#-0x6
+   \                     ??led_scan_4:
+   \   00002C   4015         JC      ??led_scan_5
+     43          		{
+     44          			scan_cnt = 0;
+   \   00002E   E4           CLR     A
+   \   00002F   F0           MOVX    @DPTR,A
+     45          			LED_GLITTER();
+   \   000030   53BAFD       ANL     0xba,#0xfd
+   \   000033   638002       XRL     0x80,#0x2
+   \   000036   E580         MOV     A,0x80
+   \   000038   22           RET
+     46          		}
+     47          		break;
+     48          
+     49          	case LED_STA_OFF:           //√
+     50          	default:
+     51          		scan_cnt = 0;
+   \                     ??led_scan_0:
+   \   000039   E4           CLR     A
+   \   00003A   90....       MOV     DPTR,#??scan_cnt
+   \   00003D   F0           MOVX    @DPTR,A
+     52          		LED_OFF();
+   \   00003E   53BAFD       ANL     0xba,#0xfd
+   \   000041   C281         CLR     0x80.1
+     53          		break;
+     54          
+     55          	}
+     56          }
+   \                     ??led_scan_5:
+   \   000043   22           RET
+
+   \                                 In segment XDATA_Z, align 1, keep-with-next
+   \   000000                REQUIRE __INIT_XDATA_Z
+   \                     ??scan_cnt:
+   \   000000                DS 1
+     57          //#endif
+     58          
+     59          
+
+   Maximum stack usage in bytes:
+
+     Function EXT_STACK PSTACK XSTACK
+     -------- --------- ------ ------
+     led_init        0      0      0
+     led_scan        0      0      0
+
+
+   Segment part sizes:
+
+     Function/Label Bytes
+     -------------- -----
+     P0                1
+     P0DIR             1
+     led_init         17
+     led_scan         68
+     scan_cnt          1
+
+ 
+ 85 bytes in segment LED_SEG
+  2 bytes in segment SFR_AN
+  1 byte  in segment XDATA_Z
+ 
+ 85 bytes of CODE  memory
+  0 bytes of DATA  memory (+ 2 bytes shared)
+  1 byte  of XDATA memory
+
+Errors: none
+Warnings: none

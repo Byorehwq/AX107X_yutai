@@ -1,0 +1,165 @@
+##############################################################################
+#                                                                            #
+# IAR 8051 C/C++ Compiler V7.20H/W32                   27/Jun/2018  22:48:34 #
+# Copyright 2004-2006 IAR Systems. All rights reserved.                      #
+#                                                                            #
+#    Core               =  plain                                             #
+#    Code model         =  near                                              #
+#    Data model         =  large                                             #
+#    Calling convention =  extended stack reentrant                          #
+#    Constant location  =  code                                              #
+#    Extended stack     =  enabled                                           #
+#    Dptr setup         =  1,16                                              #
+#    Source file        =  key/adckey.c                                      #
+#    Command line       =  -f option_c51.cfg (-ICOMMON\ -IINC\ -Iconfig\     #
+#                          -Iapi\ -Ifm\ -Ifat\ -Idisplay\                    #
+#                          -Idisplay\theme_default\ -Idisplay\led\           #
+#                          -Idisplay\lcd\ -Itask\ -Iuser\ -Imem\ -Imodule\   #
+#                          -Ikey\ -Istartmusic\ -Ispi\ -e -z9 --core=plain   #
+#                          --dptr=16,1 --data_model=large --code_model=near  #
+#                          --calling_convention=ext_stack_reentrant          #
+#                          --place_constants=code --nr_virtual_regs 20       #
+#                          --extended_stack) -DAX207X_TAG --debug -lC        #
+#                          DebugBC/List -o DebugBC/Obj/adckey.r51            #
+#                          key/adckey.c                                      #
+#    List file          =  DebugBC/List/adckey.lst                           #
+#    Object file        =  DebugBC/Obj/adckey.r51                            #
+#                                                                            #
+#                                                                            #
+##############################################################################
+
+R:\18BC073A_宇泰_AX1071_xxxxxxxx_20180627\app\key\adckey.c
+      1          #include "include.h"
+      2          
+      3          #pragma constseg="KEY_CONST_TABLE"
+      4          
+      5          #if USE_ADKEY
+      6          #if (USER_SEL == USER_AX1071_DEMO)
+      7          IAR_CONST type_adc_key tbl_adkey[] =
+      8          {
+      9          	{0x0B, T_KEY_2},            //PLAY      S1
+     10          	{0x1F, T_KEY_17},           //PLAY/MODE S2
+     11          	{0x34, T_KEY_6},            //MODE      S3
+     12          	{0x4A, T_KEY_4},            //VOL-      S4
+     13          	{0x61, T_KEY_5},            //VOL+      S5
+     14          	{0x76, T_KEY_1},            //PREV      S6
+     15          	{0x8B, T_KEY_3},            //NEXT      S7
+     16          	{0xA0, T_KEY_15},           //MINUS     S8
+     17          	{0xB5, T_KEY_16},           //PLUS      S9
+     18          	{0xCA, T_KEY_7},            //EQ        S10
+     19          	{0xDF, T_KEY_8},            //PLAYMODE  S11
+     20          	{0xF4, NO_KEY},             //          S12
+     21          	{0xFF, NO_KEY},             //          END
+     22          };
+     23          #else
+     24          IAR_CONST type_adc_key tbl_adkey[] =
+     25          {
+     26          	{0x0B, NO_KEY},            //PREV S1
+     27          	{0x1F, NO_KEY},            //PLAY S2
+     28          	{0x34, NO_KEY},            //NEXT S3
+     29          	{0x4A, NO_KEY},            //VOL- S4
+     30          	{0x61, NO_KEY},            //VOL+ S5
+     31          	{0x76, NO_KEY},            //MODE S6
+     32          	{0x8B, NO_KEY},            //EQ   S7
+     33          	{0xA0, NO_KEY},            //S8
+     34          	{0xB5, NO_KEY},            //S9
+     35          	{0xCA, NO_KEY},           //S10
+     36          	{0xDF, NO_KEY},             //S11
+     37          	{0xF4, NO_KEY},             //S12
+     38          	{0xFF, NO_KEY},             //END
+     39          };
+     40          #endif
+     41          #endif
+     42          
+     43          #if USE_ADKEY2
+
+   \                                 In segment KEY_CONST_TABLE, align 1
+     44          IAR_CONST type_adc_key tbl_adkey2[] =
+   \                     tbl_adkey2:
+   \   000000   0A023608     DB 10, 2, 54, 8, 72, 10, 100, 11, 120, 15, 255, 0
+   \            480A640B
+   \            780FFF00
+     45          {
+     46          #ifdef AX207X_TAG
+     47          // FOR DEBUG: 0, 15H, 2BH, 40H
+     48          	{0x0A, T_KEY_PLAY},				//PREV S1 AD:0x00
+     49          	{0x36, T_KEY_PLAYMODE},			//NEXT S3 AD:0x2B
+     50          	{0x48, T_KEY_PREV_VOL_DOWN},	//VOL- S4 AD:0x40
+     51          	{0x64, T_KEY_NEXT_VOL_UP},		//VOL+ S5 AD:0x55
+     52          	{0x78, T_KEY_POWER},			//Power S6 AD:0x6B
+     53          	{0xFF, NO_KEY},					//END
+     54          #else
+     55          	// 重新编定阻值范围, 让 POWER的事件不会因为按键的变化过程中产生触发
+     56          	{66, T_KEY_POWER},				// Diode,	0.60v	// 此电压值相当於 2K电阻的使用
+     57          	{107, T_KEY_PLAY},				// 5K1,	1.12v
+     58          	{151, T_KEY_PLAYMODE},			// 10K,	1.65v
+     59          	{192, T_KEY_NEXT_VOL_UP},		// 22K,	2.26v
+     60          	{232, T_KEY_PREV_VOL_DOWN},		// 47K,	2.72v
+     61          	{0xFF, NO_KEY},					//END
+     62          #endif
+     63          };
+     64          #endif
+     65          
+
+   \                                 In segment KEY_CONST_TABLE, align 1
+     66          IAR_CONST type_adc_key tbl_ad_song[] =
+   \                     tbl_ad_song:
+   \   000000   0D002901     DB 13, 0, 41, 1, 70, 2, 98, 3, 126, 4, 154, 5, 183, 6, 211, 7, 239, 8
+   \            46026203
+   \            7E049A05
+   \            B706D307
+   \            EF08    
+   \   000012   FF09FF00     DB 255, 9, 255, 0
+     67          {								//	实际值	中间值
+     68          	{0x0D, NO_KEY},            	//S1   	0	0x0D (13)
+     69          	{0x29, T_KEY_1},            //S2		27	0x29 (41)
+     70          	{0x46, T_KEY_2},            //S3		56	0x46 (70)
+     71          	{0x62, T_KEY_3},            //S4		84	0x62 (98)
+     72          	{0x7E, T_KEY_4},            //S5		112	0x7E (126)
+     73          	{0x9A, T_KEY_5},            //S6		140	0x9A (154)
+     74          	{0xB7, T_KEY_6},            //S7		169	0xB7 (183)
+     75          	{0xD3, T_KEY_7},            //S8		197	0xD3 (211)
+     76          	{0xEF, T_KEY_8},            //S9		225	0xEF (239)
+     77          	{0xFF, T_KEY_9},           	//S10	254	0xFF
+     78          //	{0xFF, T_KEY_10},           //S11
+     79          //	{0xFF, T_KEY_11},           //S12
+     80          	{0xFF, NO_KEY},             //END
+     81          };
+     82          
+
+   \                                 In segment KEY_CONST_TABLE, align 1
+     83          IAR_CONST type_adc_key tbl_ad_sel[] =
+   \                     tbl_ad_sel:
+   \   000000   2A007E0B     DB 42, 0, 126, 11, 211, 12, 254, 13, 255, 0
+   \            D30CFE0D
+   \            FF00    
+     84          {								//	实际值	中间值
+     85          	{0x2A, NO_KEY},            	//S1   	0	0x2A (42)
+     86          	{0x7E, T_KEY_11},           //S2		84	0x7E (126)
+     87          	{0xD3, T_KEY_12},           //S3		169	0xD3 (211)
+     88          	{0xFE, T_KEY_13},           //S4		254	0xFE (254)
+     89          	{0xFF, NO_KEY},             //END
+     90          };
+     91          
+     92          
+     93          #pragma constseg=default
+     94          
+     95          
+     96          
+
+
+   Segment part sizes:
+
+     Function/Label Bytes
+     -------------- -----
+     tbl_adkey2       12
+     tbl_ad_song      22
+     tbl_ad_sel       10
+
+ 
+ 44 bytes in segment KEY_CONST_TABLE
+ 
+ 44 bytes of CODE memory
+
+Errors: none
+Warnings: none

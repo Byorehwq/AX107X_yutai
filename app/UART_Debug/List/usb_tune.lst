@@ -1,0 +1,211 @@
+##############################################################################
+#                                                                            #
+# IAR 8051 C/C++ Compiler V7.20H/W32                   10/Sep/2015  19:03:30 #
+# Copyright 2004-2006 IAR Systems. All rights reserved.                      #
+#                                                                            #
+#    Core               =  plain                                             #
+#    Code model         =  near                                              #
+#    Data model         =  large                                             #
+#    Calling convention =  extended stack reentrant                          #
+#    Constant location  =  code                                              #
+#    Extended stack     =  enabled                                           #
+#    Dptr setup         =  1,16                                              #
+#    Source file        =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\module\usb_tune.c                     #
+#    Command line       =  -I "C:\Program Files\IAR Systems\Embedded         #
+#                          Workbench 4.05 Evaluation version\8051\INC\" -I   #
+#                          "C:\Program Files\IAR Systems\Embedded Workbench  #
+#                          4.05 Evaluation version\8051\INC\CLIB\" -I        #
+#                          "C:\Documents and Settings\Administrator\×ÀÃæ\lil #
+#                          y\15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX1 #
+#                          070_20150908\COMMON\" -I "C:\Documents and        #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\INC\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\config\" -I "C:\Documents and    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\api\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\fm\" -I "C:\Documents and        #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\fat\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\display\" -I "C:\Documents and   #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\displ #
+#                          ay\led\" -I "C:\Documents and                     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\displ #
+#                          ay\lcd\" -I "C:\Documents and                     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\task\ #
+#                          " -I "C:\Documents and Settings\Administrator\×ÀÃ #
+#                          æ\lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lil #
+#                          y_AX1070_20150908\user\" -I "C:\Documents and     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\mem\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\module\" -I "C:\Documents and    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\modul #
+#                          e\kedir\" -I "C:\Documents and                    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\key\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\startmusic\" -D UART_DEBUG -D    #
+#                          AX207X_TAG -lC "C:\Documents and                  #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\UART_ #
+#                          Debug\List\" -o "C:\Documents and                 #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\UART_ #
+#                          Debug\Obj\" -e -z9 --debug --core=plain           #
+#                          --dptr=16,1 --data_model=large --code_model=near  #
+#                          --calling_convention=ext_stack_reentrant          #
+#                          --place_constants=code --nr_virtual_regs 20       #
+#                          --extended_stack "C:\Documents and                #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\modul #
+#                          e\usb_tune.c"                                     #
+#    List file          =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\UART_Debug\List\usb_tune.lst          #
+#    Object file        =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\UART_Debug\Obj\usb_tune.r51           #
+#                                                                            #
+#                                                                            #
+##############################################################################
+
+C:\Documents and Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX1070_20150908\module\usb_tune.c
+      1          #include "include.h"
+      2          
+      3          /*
+      4          extern func
+      5          */
+      6          bool usb_disk_read(void *buf, u32 lba);
+      7          bool sd_disk_read(void *buf, u32 lba);
+      8          bool usb_disk_read_tune(void *buf, u32 lba);
+      9          void host_tune_init(void);
+     10          void devie_tune_init(void);
+     11          
+     12          
+     13          #pragma location="FS_INIT_SEG"
+
+   \                                 In segment FS_INIT_SEG, align 1, keep-with-next
+     14          void usb_disk_func_init(void)
+   \                     usb_disk_func_init:
+     15          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     16          #if PLL_TUNE_EN
+     17          
+     18          #if (SYS_CRY == CRY_RC)
+     19          	fs_hook.disk_read = usb_disk_read_tune;
+     20          #elif(SYS_CRY == CRY_AUTO)
+     21          	if(b_sys.xosc_flag)
+     22          	{
+     23          		fs_hook.disk_read = usb_disk_read;
+     24          	}
+     25          	else
+     26          	{
+     27          		fs_hook.disk_read = usb_disk_read_tune;
+     28          	}
+     29          #else
+     30          	fs_hook.disk_read = usb_disk_read;
+     31          #endif
+     32          
+     33          #else   //PLL_TUNE_EN
+     34          	fs_hook.disk_read = usb_disk_read;
+   \   000000   78..         MOV     R0,#((fs_hook + 5) & 0xff)
+   \   000002   74..         MOV     A,#(usb_disk_read & 0xff)
+   \   000004   F2           MOVX    @R0,A
+   \   000005   08           INC     R0
+   \   000006   74..         MOV     A,#((usb_disk_read >> 8) & 0xff)
+   \   000008   F2           MOVX    @R0,A
+     35          #endif  //PLL_TUNE_EN
+     36          
+     37          	fs_hook.disk_write = usb_host_mass_write;
+   \   000009   08           INC     R0
+   \   00000A   74..         MOV     A,#(usb_host_mass_write & 0xff)
+   \   00000C   F2           MOVX    @R0,A
+   \   00000D   08           INC     R0
+   \   00000E   74..         MOV     A,#((usb_host_mass_write >> 8) & 0xff)
+   \   000010   F2           MOVX    @R0,A
+     38          }
+   \   000011   22           RET
+     39          
+     40          #pragma location="DEVICE_SEG"
+
+   \                                 In segment DEVICE_SEG, align 1, keep-with-next
+     41          void usb_host_tune_set(void)
+   \                     usb_host_tune_set:
+     42          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     43          #if PLL_TUNE_EN
+     44          #if (SYS_CRY == CRY_RC)
+     45          	host_tune_init();
+     46          #elif(SYS_CRY == CRY_AUTO)
+     47          	if(!b_sys.xosc_flag)
+     48          	{
+     49          		host_tune_init();
+     50          	}
+     51          #endif
+     52          #endif
+     53          }
+   \   000000   22           RET
+     54          
+     55          #pragma location="DEVICE_SEG"
+
+   \                                 In segment DEVICE_SEG, align 1, keep-with-next
+     56          void usb_device_tune_set(void)
+   \                     usb_device_tune_set:
+     57          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     58          #if PLL_TUNE_EN
+     59          #if (SYS_CRY == CRY_RC)
+     60          	devie_tune_init();
+     61          #elif(SYS_CRY == CRY_AUTO)
+     62          	if(!b_sys.xosc_flag)
+     63          	{
+     64          		devie_tune_init();
+     65          	}
+     66          #endif
+     67          #endif
+     68          }
+   \   000000   22           RET
+     69          
+
+   Maximum stack usage in bytes:
+
+     Function            EXT_STACK PSTACK XSTACK
+     --------            --------- ------ ------
+     usb_device_tune_set        0      0      0
+     usb_disk_func_init         0      0      0
+     usb_host_tune_set          0      0      0
+
+
+   Segment part sizes:
+
+     Function/Label      Bytes
+     --------------      -----
+     usb_disk_func_init    18
+     usb_host_tune_set      1
+     usb_device_tune_set    1
+
+ 
+  2 bytes in segment DEVICE_SEG
+ 18 bytes in segment FS_INIT_SEG
+ 
+ 20 bytes of CODE memory
+
+Errors: none
+Warnings: none

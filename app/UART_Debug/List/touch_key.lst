@@ -1,0 +1,319 @@
+##############################################################################
+#                                                                            #
+# IAR 8051 C/C++ Compiler V7.20H/W32                   10/Sep/2015  19:03:30 #
+# Copyright 2004-2006 IAR Systems. All rights reserved.                      #
+#                                                                            #
+#    Core               =  plain                                             #
+#    Code model         =  near                                              #
+#    Data model         =  large                                             #
+#    Calling convention =  extended stack reentrant                          #
+#    Constant location  =  code                                              #
+#    Extended stack     =  enabled                                           #
+#    Dptr setup         =  1,16                                              #
+#    Source file        =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\key\touch_key.c                       #
+#    Command line       =  -I "C:\Program Files\IAR Systems\Embedded         #
+#                          Workbench 4.05 Evaluation version\8051\INC\" -I   #
+#                          "C:\Program Files\IAR Systems\Embedded Workbench  #
+#                          4.05 Evaluation version\8051\INC\CLIB\" -I        #
+#                          "C:\Documents and Settings\Administrator\×ÀÃæ\lil #
+#                          y\15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX1 #
+#                          070_20150908\COMMON\" -I "C:\Documents and        #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\INC\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\config\" -I "C:\Documents and    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\api\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\fm\" -I "C:\Documents and        #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\fat\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\display\" -I "C:\Documents and   #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\displ #
+#                          ay\led\" -I "C:\Documents and                     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\displ #
+#                          ay\lcd\" -I "C:\Documents and                     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\task\ #
+#                          " -I "C:\Documents and Settings\Administrator\×ÀÃ #
+#                          æ\lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lil #
+#                          y_AX1070_20150908\user\" -I "C:\Documents and     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\mem\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\module\" -I "C:\Documents and    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\modul #
+#                          e\kedir\" -I "C:\Documents and                    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\key\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\startmusic\" -D UART_DEBUG -D    #
+#                          AX207X_TAG -lC "C:\Documents and                  #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\UART_ #
+#                          Debug\List\" -o "C:\Documents and                 #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\UART_ #
+#                          Debug\Obj\" -e -z9 --debug --core=plain           #
+#                          --dptr=16,1 --data_model=large --code_model=near  #
+#                          --calling_convention=ext_stack_reentrant          #
+#                          --place_constants=code --nr_virtual_regs 20       #
+#                          --extended_stack "C:\Documents and                #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\key\t #
+#                          ouch_key.c"                                       #
+#    List file          =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\UART_Debug\List\touch_key.lst         #
+#    Object file        =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\UART_Debug\Obj\touch_key.r51          #
+#                                                                            #
+#                                                                            #
+##############################################################################
+
+C:\Documents and Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX1070_20150908\key\touch_key.c
+      1          #include "include.h"
+      2          
+      3          #if USE_TOUCH_KEY
+      4          
+      5          #define TOUCH_KEY_RESET_CNT     15      //reset¼ä¸ôÊ±¼ä
+      6          
+      7          IAR_XDATA_A u8 touch_key_reset_flag;
+      8          IAR_XDATA_A u8 touch_key_reset_cnt;
+      9          
+     10          #pragma constseg="TOUCH_KEY_TABLE"
+     11          IAR_CONST u8 tbl_touch_key[][2] =
+     12          {
+     13          	{0x01, T_KEY_PREV},
+     14          	{0x02, T_KEY_NEXT},
+     15          	{0x03, T_KEY_PLAY},
+     16          	{0x04, T_KEY_VOL_UP},
+     17          	{0x06, T_KEY_VOL_DOWN},
+     18          	{0x08, NO_KEY},
+     19          	{0x0C, NO_KEY},
+     20          	{0x10, T_KEY_MODE},
+     21          	{0x18, NO_KEY},
+     22          	{0x20, NO_KEY},
+     23          	{0x21, NO_KEY},
+     24          	{0x30, NO_KEY},
+     25          };
+     26          
+     27          //µ¥°´¼üµÄãÐÖµÉèÖÃ
+     28          IAR_CONST u16 tbl_touch_key_thres[][2] =
+     29          {
+     30          	{0x01, 0x81C0},     //TKTHC0 = 0x0B
+     31          	{0x02, 0x81C0},     //TKTHC1 = 0x0B
+     32          	{0x04, 0x8180},     //TKTHC2 = 0x0A
+     33          	{0x08, 0x8100},     //TKTHC3 = 0x08
+     34          	{0x10, 0x8140},     //TKTHC4 = 0x09
+     35          	{0x20, 0x81C0},     //TKTHC5 = 0x0B
+     36          };
+     37          #pragma constseg=default
+     38          
+     39          #pragma location="TOUCH_KEY_SEG"
+     40          u16 touch_timer1_cap(u8 psr)
+     41          {
+     42          	u16 tmp;
+     43          	TMR1CNTH = 0;
+     44          	TMR1CNTL = 0;
+     45          	TMR1PRH = 0xFF;
+     46          	TMR1PRL = 0xFF;
+     47          	TMR1PWMH = 0;
+     48          	TMR1PWML = 0;
+     49          
+     50          	TMR1CON1 = psr;
+     51          	TMR1CON0 = 0x37;
+     52          
+     53          	while((TMR1CON1 & 0x40) != 0x40);
+     54          	TMR1CON1 &= ~0xC0;
+     55          	TMR1CNTH = 0;
+     56          	TMR1CNTL = 0;
+     57          
+     58          	while((TMR1CON1 & 0x40) != 0x40);
+     59          	TMR1CON1 = 0;
+     60          	TMR1CON0 = 0;
+     61          	u8 pwml = TMR1PWML;
+     62          	tmp = (TMR1PWMH << 8) | pwml;
+     63          
+     64          	return tmp;
+     65          }
+     66          
+     67          #pragma location="TOUCH_KEY_SEG"
+     68          void touch_baud_calc(void)
+     69          {
+     70          	u16 tmp, cnt;
+     71          	u8 tmp2;
+     72          
+     73          	tmp2 = 0x03;
+     74          	tmp = touch_timer1_cap(tmp2);
+     75          	cnt = 24000;
+     76          
+     77          	while(tmp >= 256)
+     78          	{
+     79          		tmp2++;
+     80          		cnt = cnt >> 1;
+     81          		tmp = touch_timer1_cap(tmp2);
+     82          	}
+     83          	TKBAUD = cnt / (tmp & 0xff) - 1;
+     84          	//printf("TKBAUD=%02x\n", TKBAUD);
+     85          }
+     86          
+     87          #pragma location="TOUCH_KEY_SEG"
+     88          void touch_key_init(void)
+     89          {
+     90          #if (SYS_CRY == CRY_RC)
+     91          	//touch_baud_calc();
+     92          	TKBAUD = 124;       //²»×¼È·£¬ÓÐ´ýÍêÉÆ
+     93          	TKCCC = (0x09<<4) | (0x0E<<0);  //³ä·ÅµçÖÜÆÚÎª48,RC 10M
+     94          #else
+     95          	TKBAUD = 124;
+     96          	TKCCC = (0x09<<4) | (0x0C<<0);  //³ä·ÅµçÖÜÆÚÎª48,24·ÖÆµ
+     97          #endif
+     98          	TKTCC = (0x01<<6) | (0x03<<3) | (0x02<<0);  //»ù×¼µçÈÝ¼ÆËãÊ±¼ä2s,°´¼üÓÐÐ§·À¶¶µãÊý=12point,°´¼üÎÞÐ§·À¶¶µãÊý=8point
+     99          	TKPND = 0;      //clear pending
+    100          	TKAPC = 0x25;
+    101          	TKENC = 0;
+    102          
+    103          	//¸ù¾Ý¸´ºÏ°´¼üÉè¶¨³õÊ¼ãÐÖµ
+    104          #if TOUCH_KEY_0_EN
+    105          	TKENC |= 0x01;  //TK0
+    106          	TKTHC0 = 0x08;
+    107          	TKAC0 = 0x77;
+    108          #endif
+    109          #if TOUCH_KEY_1_EN
+    110          	TKENC |= 0x02;  //TK1
+    111          	TKTHC1 = 0x08;
+    112          	TKAC1 = 0x77;
+    113          #endif
+    114          #if TOUCH_KEY_2_EN
+    115          	TKENC |= 0x04;  //TK2
+    116          	TKTHC2 = 0x07;
+    117          	TKAC2 = 0x77;
+    118          #endif
+    119          #if TOUCH_KEY_3_EN
+    120          	TKENC |= 0x08;  //TK3
+    121          	TKTHC3 = 0x05;
+    122          	TKAC3 = 0x77;
+    123          #endif
+    124          #if TOUCH_KEY_4_EN
+    125          	TKENC |= 0x10;  //TK4
+    126          	TKTHC4 = 0x06;
+    127          	TKAC4 = 0x77;
+    128          #endif
+    129          #if TOUCH_KEY_5_EN
+    130          	TKENC |= 0x20;  //TK5
+    131          	TKTHC5 = 0x06;
+    132          	TKAC5 = 0x77;
+    133          #endif
+    134          
+    135          	touch_key_reset_flag = 0;
+    136          	touch_key_reset_cnt = 0;
+    137          }
+    138          
+    139          #pragma location="TOUCH_KEY_SEG"
+    140          void touch_key_start(void)
+    141          {
+    142          	TKCON = 0xa1;
+    143          }
+    144          
+    145          #pragma location="TOUCH_KEY_SEG"
+    146          u8 touch_key_scan(void)
+    147          {
+    148          	u8 knum = 0;
+    149          	u8 cnt = 0;
+    150          	u16 *ptr = (u16 *)0x1400;
+    151          
+    152          	touch_key_reset_flag = 0;
+    153          	if(TKPND & 0xBF)
+    154          	{
+    155          		TKPND &= ~0x80;
+    156          		//printf("TKPND=%02x\n", TKPND);
+    157          		while(TKPND != tbl_touch_key_thres[cnt][0])     //cnt=6Îª¸´ºÏ°´¼ü£¬cnt<6³õ²½ÈÏÎªÊÇµ¥°´¼ü
+    158          		{
+    159          			cnt++;
+    160          			if(cnt == 6)
+    161          			{
+    162          				break;
+    163          			}
+    164          		}
+    165          		if(cnt != 6)        //µ¥°´¼üÐèÒª¸ù¾Ýtbl_touch_key_thresÉèÖÃµÄãÐÖµÔÙ´ÎÅÐ¶Ï
+    166          		{
+    167          			u16 thres = ptr[cnt*8+1];
+    168          			u16 thres_cur = ptr[cnt*8];
+    169          			u16 thres_new;
+    170          			thres_new = (u16)((u32)tbl_touch_key_thres[cnt][1] * thres >> 15);
+    171          			//printf("thres=%04x cur=%04x new=%04x\n", thres, thres_cur, thres_new);
+    172          			if(thres_cur < thres_new)
+    173          			{
+    174          				return NO_KEY;
+    175          			}
+    176          		}
+    177          		touch_key_reset_flag = 1;
+    178          	}
+    179          	else
+    180          	{
+    181          		return NO_KEY;
+    182          	}
+    183          	//printf("TKPND=%02x\n", TKPND);
+    184          	while(TKPND != tbl_touch_key[knum][0])
+    185          	{
+    186          		knum++;
+    187          		if(knum > 10)
+    188          		{
+    189          			return NO_KEY;
+    190          		}
+    191          	}
+    192          	//printf("knum=%d\n", knum);
+    193          	return tbl_touch_key[knum][1];
+    194          }
+    195          
+    196          #pragma location="TOUCH_KEY_SEG"
+    197          void touch_key_rest(void)
+    198          {
+    199          	if(touch_key_reset_flag)
+    200          	{
+    201          		touch_key_reset_cnt++;
+    202          		//printf("cnt=%d\n", touch_key_reset_cnt);
+    203          	}
+    204          	else
+    205          	{
+    206          		touch_key_reset_cnt = 0;
+    207          	}
+    208          	if(touch_key_reset_cnt >= TOUCH_KEY_RESET_CNT)
+    209          	{
+    210          		touch_key_reset_flag = 0;
+    211          		touch_key_reset_cnt = 0;
+    212          		TKCON &= ~BIT(0);   //disable touch key
+    213          		asm("nop");         //±ØÐëÑÓÊ±
+    214          		asm("nop");
+    215          		asm("nop");
+    216          		TKCON |= BIT(0);    //enable touch key
+    217          		printf("reset\n");
+    218          	}
+    219          }
+    220          #endif
+
+
+   Segment part sizes:
+
+     Function/Label Bytes
+     -------------- -----
+
+ 
+ 
+ 0 bytes of memory
+
+Errors: none
+Warnings: none

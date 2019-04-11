@@ -1,0 +1,102 @@
+##############################################################################
+#                                                                            #
+# IAR 8051 C/C++ Compiler V7.20H/W32                   27/Jun/2018  22:48:34 #
+# Copyright 2004-2006 IAR Systems. All rights reserved.                      #
+#                                                                            #
+#    Core               =  plain                                             #
+#    Code model         =  near                                              #
+#    Data model         =  large                                             #
+#    Calling convention =  extended stack reentrant                          #
+#    Constant location  =  code                                              #
+#    Extended stack     =  enabled                                           #
+#    Dptr setup         =  1,16                                              #
+#    Source file        =  display/theme_default/theme_rtc.c                 #
+#    Command line       =  -f option_c51.cfg (-ICOMMON\ -IINC\ -Iconfig\     #
+#                          -Iapi\ -Ifm\ -Ifat\ -Idisplay\                    #
+#                          -Idisplay\theme_default\ -Idisplay\led\           #
+#                          -Idisplay\lcd\ -Itask\ -Iuser\ -Imem\ -Imodule\   #
+#                          -Ikey\ -Istartmusic\ -Ispi\ -e -z9 --core=plain   #
+#                          --dptr=16,1 --data_model=large --code_model=near  #
+#                          --calling_convention=ext_stack_reentrant          #
+#                          --place_constants=code --nr_virtual_regs 20       #
+#                          --extended_stack) -DAX207X_TAG --debug -lC        #
+#                          DebugBC/List -o DebugBC/Obj/theme_rtc.r51         #
+#                          display/theme_default/theme_rtc.c                 #
+#    List file          =  DebugBC/List/theme_rtc.lst                        #
+#    Object file        =  DebugBC/Obj/theme_rtc.r51                         #
+#                                                                            #
+#                                                                            #
+##############################################################################
+
+R:\18BC073A_宇泰_AX1071_xxxxxxxx_20180627\app\display\theme_default\theme_rtc.c
+      1          /*****************************************************************************
+      2           * Module    : Theme
+      3           * File      : lcd_default_idle.c
+      4           * Author    : Hanny
+      5           * Email     : coldney@yahoo.com.cn
+      6           * Function  : RTC任务显示主题
+      7           *****************************************************************************/
+      8          #include "include.h"
+      9          
+     10          #pragma location="DISP_RTC_SEG"
+
+   \                                 In segment DISP_RTC_SEG, align 1, keep-with-next
+     11          void task_rtc_display(void)
+   \                     task_rtc_display:
+     12          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     13          	ocx_event();
+   \   000000                ; Setup parameters for call to function ocx_event
+   \   000000   12....       LCALL   ocx_event
+     14          	ocx_time_set(t_time.hour, t_time.minute);
+   \   000003                ; Setup parameters for call to function ocx_time_set
+   \   000003   78..         MOV     R0,#(t_time + 1)
+   \   000005   E6           MOV     A,@R0
+   \   000006   FA           MOV     R2,A
+   \   000007   08           INC     R0
+   \   000008   E6           MOV     A,@R0
+   \   000009   F9           MOV     R1,A
+   \   00000A   12....       LCALL   ocx_time_set
+     15          
+     16          	if(disp.update == 0)
+   \   00000D   A2..         MOV     C,disp.0
+   \   00000F   5005         JNC     ??task_rtc_display_0
+     17          	{
+     18          		return;
+     19          	}
+     20          	disp.update = 0;
+   \   000011   C2..         CLR     disp.0
+     21          
+     22          	disp_time();
+   \   000013                ; Setup parameters for call to function led_7p7s_disp_time
+   \   000013   12....       LCALL   led_7p7s_disp_time
+     23          }
+   \                     ??task_rtc_display_0:
+   \   000016   22           RET
+     24          
+     25          
+
+   Maximum stack usage in bytes:
+
+     Function                EXT_STACK PSTACK XSTACK
+     --------                --------- ------ ------
+     task_rtc_display               0      0      0
+       -> ocx_event                 0      0      0
+       -> ocx_time_set              0      0      0
+       -> led_7p7s_disp_time        0      0      0
+
+
+   Segment part sizes:
+
+     Function/Label   Bytes
+     --------------   -----
+     task_rtc_display   23
+
+ 
+ 23 bytes in segment DISP_RTC_SEG
+ 
+ 23 bytes of CODE memory
+
+Errors: none
+Warnings: none

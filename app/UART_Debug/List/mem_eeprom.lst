@@ -1,0 +1,272 @@
+##############################################################################
+#                                                                            #
+# IAR 8051 C/C++ Compiler V7.20H/W32                   10/Sep/2015  19:03:28 #
+# Copyright 2004-2006 IAR Systems. All rights reserved.                      #
+#                                                                            #
+#    Core               =  plain                                             #
+#    Code model         =  near                                              #
+#    Data model         =  large                                             #
+#    Calling convention =  extended stack reentrant                          #
+#    Constant location  =  code                                              #
+#    Extended stack     =  enabled                                           #
+#    Dptr setup         =  1,16                                              #
+#    Source file        =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\mem\mem_eeprom.c                      #
+#    Command line       =  -I "C:\Program Files\IAR Systems\Embedded         #
+#                          Workbench 4.05 Evaluation version\8051\INC\" -I   #
+#                          "C:\Program Files\IAR Systems\Embedded Workbench  #
+#                          4.05 Evaluation version\8051\INC\CLIB\" -I        #
+#                          "C:\Documents and Settings\Administrator\×ÀÃæ\lil #
+#                          y\15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX1 #
+#                          070_20150908\COMMON\" -I "C:\Documents and        #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\INC\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\config\" -I "C:\Documents and    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\api\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\fm\" -I "C:\Documents and        #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\fat\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\display\" -I "C:\Documents and   #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\displ #
+#                          ay\led\" -I "C:\Documents and                     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\displ #
+#                          ay\lcd\" -I "C:\Documents and                     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\task\ #
+#                          " -I "C:\Documents and Settings\Administrator\×ÀÃ #
+#                          æ\lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lil #
+#                          y_AX1070_20150908\user\" -I "C:\Documents and     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\mem\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\module\" -I "C:\Documents and    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\modul #
+#                          e\kedir\" -I "C:\Documents and                    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\key\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\startmusic\" -D UART_DEBUG -D    #
+#                          AX207X_TAG -lC "C:\Documents and                  #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\UART_ #
+#                          Debug\List\" -o "C:\Documents and                 #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\UART_ #
+#                          Debug\Obj\" -e -z9 --debug --core=plain           #
+#                          --dptr=16,1 --data_model=large --code_model=near  #
+#                          --calling_convention=ext_stack_reentrant          #
+#                          --place_constants=code --nr_virtual_regs 20       #
+#                          --extended_stack "C:\Documents and                #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\mem\m #
+#                          em_eeprom.c"                                      #
+#    List file          =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\UART_Debug\List\mem_eeprom.lst        #
+#    Object file        =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\UART_Debug\Obj\mem_eeprom.r51         #
+#                                                                            #
+#                                                                            #
+##############################################################################
+
+C:\Documents and Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX1070_20150908\mem\mem_eeprom.c
+      1          /*****************************************************************************
+      2           * Module    : mem
+      3           * File      : mem_eeprom.c
+      4           * Author    :
+      5           * Email     :
+      6           * Function  : EEPROM¼ÇÒäÈÎÎñÁ÷³Ì
+      7           *****************************************************************************/
+      8          #include "include.h"
+      9          #include "mem_eeprom.h"
+     10          
+     11          #if (SYS_MEM == MEM_E2PROM)
+     12          
+     13          #pragma location="MEMEEP"
+     14          bool eeprom_check(void)
+     15          {
+     16          	u8 temp;
+     17          
+     18          	temp = 0xAA;
+     19          	i2c_write(126, &temp , 1);
+     20          	delay_5ms(2);
+     21          	temp = i2c_read(126);
+     22          
+     23          	if(temp != 0xAA)
+     24          	{
+     25          		return 0;
+     26          	}
+     27          	else
+     28          	{
+     29          		return 1;
+     30          	}
+     31          }
+     32          
+     33          
+     34          #pragma location="MEMEEP"
+     35          void eeprom_read_multi(u8 addr, u8 *value, u8 num)
+     36          {
+     37          	for(u8 i = 0; i < num; i++)
+     38          	{
+     39          		*(value + i) = eeprom_read(addr + i);
+     40          	}
+     41          }
+     42          
+     43          //Ê¹ÓÃ¸Ãº¯ÊýÐ´eeprom¿ÉÒÔ±ÜÃâ¿çÒ³ÎÊÌâ£¬µ«Õ¼ÓÃ¿Õ¼ä
+     44          #pragma location="MEMEEP"
+     45          void eeprom_write_multi(u8 addr, u8 *buf, u8 num)
+     46          {
+     47          	u8 page, cnt;
+     48          
+     49          	cnt = (addr%8 >num)? num : addr%8;
+     50          	if(cnt)
+     51          	{
+     52          		i2c_write(addr, buf, cnt);
+     53          		delay_hook(2);          //¿çÒ³Ê±ÒªÑÓÊ±2ms
+     54          		addr += cnt;
+     55          		buf += cnt;
+     56          		num -= cnt;
+     57          	}
+     58          
+     59          	page = num/8;
+     60          	cnt = num%8;
+     61          
+     62          	while(page--)
+     63          	{
+     64          		i2c_write(addr, buf, 8);
+     65          		delay_hook(2);          //¿çÒ³Ê±ÒªÑÓÊ±2ms
+     66          		addr += 8;
+     67          		buf += 8;
+     68          	}
+     69          
+     70          	if(cnt)
+     71          	{
+     72          		i2c_write(addr, buf, cnt);
+     73          		delay_hook(2);          //Ð´ÍêÒªÑÓÊ±2ms
+     74          	}
+     75          }
+     76          
+     77          #pragma location="MEMEEP"
+     78          void write_volume_eeprom(void)
+     79          {
+     80          	u8 volume = sys_ctl.volume;
+     81          	eeprom_write(PARAM_VOLUME,&volume,1);
+     82          }
+     83          
+     84          #pragma location="MEMEEP"
+     85          void read_volume_eeprom(void)
+     86          {
+     87          	sys_ctl.volume = eeprom_read(PARAM_VOLUME);
+     88          }
+     89          
+     90          #pragma location="MEMEEP"
+     91          void write_num_eeprom(void)
+     92          {
+     93          	eeprom_write((mem_ctl.dev * EEPROM_OFFSET + PARAM_MUSIC_NUM_SD), (u8 *)&u_msc.music_num, 2);
+     94          }
+     95          
+     96          #pragma location="MEMEEP"
+     97          void read_num_eeprom(void)
+     98          {
+     99          	eeprom_read_multi((mem_ctl.dev * EEPROM_OFFSET + PARAM_MUSIC_NUM_SD), (u8 *)&u_msc.music_num, 2);
+    100          }
+    101          
+    102          #pragma location="MEMEEP"
+    103          void write_device_eeprom(void)
+    104          {
+    105          	eeprom_write(PARAM_ACTIVE_DEVICE,&t_fat.dev_sel,1);
+    106          }
+    107          
+    108          #pragma location="MEMEEP"
+    109          void read_device_eeprom(void)
+    110          {
+    111          	sys_ctl.dev_save = eeprom_read(PARAM_ACTIVE_DEVICE);
+    112          }
+    113          
+    114          #if USE_BREAK_POINT
+    115          #pragma location="MEMEEP"
+    116          void write_music_break_eeprom(void)
+    117          {
+    118          	u8 addr;
+    119          
+    120          	addr = PARAM_MUSIC_POS_SD + mem_ctl.dev * EEPROM_OFFSET;
+    121          
+    122          	eeprom_write(addr,(u8 *)&u_msc.break_point.pos,4);
+    123          	eeprom_write(addr+4,(u8 *)&u_msc.break_point.frame,4);
+    124          	eeprom_write(addr+8, (u8 *)&u_msc.filename_checksum,2);
+    125          }
+    126          
+    127          #pragma location="MEMEEP"
+    128          void read_music_break_eeprom(void)
+    129          {
+    130          	u8 addr;
+    131          
+    132          	addr = PARAM_MUSIC_POS_SD + mem_ctl.dev * EEPROM_OFFSET;
+    133          
+    134          	eeprom_read_multi(addr,(u8 *)&u_msc.break_point.pos,4);
+    135          	eeprom_read_multi(addr+4,(u8 *)&u_msc.break_point.frame,4);
+    136          	eeprom_read_multi(addr+8, (u8 *)&u_msc.filename_checksum,2);
+    137          }
+    138          #endif
+    139          
+    140          #pragma location="MEMEEP"
+    141          void write_total_channel_eeprom(void)
+    142          {
+    143          	eeprom_write(EEPROM_FM_TOTAL_CHANNEL,&fm_ctl.ch_total,1);
+    144          }
+    145          
+    146          #pragma location="MEMEEP"
+    147          void write_cur_channel_eeprom(void)
+    148          {
+    149          	eeprom_write(EEPROM_CUR_CHANNEL,&fm_ctl.ch_cur,1);
+    150          
+    151          	u8 freq = fm_ctl.fm_freq - FM_MIN_FREQ;
+    152          	eeprom_write(PARAM_FREQUENCY,&freq,1);
+    153          }
+    154          
+    155          #pragma location="MEMEEP"
+    156          void write_fm_info_eeprom(u8 byte_value)
+    157          {
+    158          	eeprom_write(EEPROM_FREQUENCY_BUF+byte_value,&fm_ctl.ch_buf[byte_value],1);
+    159          }
+    160          
+    161          #pragma location="MEMEEP"
+    162          void read_fm_info_eeprom(void)
+    163          {
+    164          	/*for(u8 i=0; i < CH_BUF_MAX;i++) {
+    165          	    fm_ctl.ch_buf[i] = eeprom_read(EEPROM_FREQUENCY_BUF+i);
+    166          	}*/
+    167          	eeprom_read_multi(EEPROM_FREQUENCY_BUF, fm_ctl.ch_buf, CH_BUF_MAX);
+    168          
+    169          	fm_ctl.ch_total = eeprom_read(EEPROM_FM_TOTAL_CHANNEL);
+    170          	fm_ctl.ch_cur = eeprom_read(EEPROM_CUR_CHANNEL);
+    171          	fm_ctl.fm_freq = eeprom_read(PARAM_FREQUENCY);
+    172          }
+    173          #endif
+
+
+   Segment part sizes:
+
+     Function/Label Bytes
+     -------------- -----
+
+ 
+ 
+ 0 bytes of memory
+
+Errors: none
+Warnings: none

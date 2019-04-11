@@ -1,0 +1,2370 @@
+##############################################################################
+#                                                                            #
+# IAR 8051 C/C++ Compiler V7.20H/W32                   29/Jun/2018  19:55:14 #
+# Copyright 2004-2006 IAR Systems. All rights reserved.                      #
+#                                                                            #
+#    Core               =  plain                                             #
+#    Code model         =  near                                              #
+#    Data model         =  large                                             #
+#    Calling convention =  extended stack reentrant                          #
+#    Constant location  =  code                                              #
+#    Extended stack     =  enabled                                           #
+#    Dptr setup         =  1,16                                              #
+#    Source file        =  I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\user\user_key.c #
+#    Command line       =  -I E:\software\8051\INC\ -I                       #
+#                          E:\software\8051\INC\CLIB\ -I                     #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\COMMON\ -I      #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\INC\ -I         #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\config\ -I      #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\api\ -I         #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\fm\ -I          #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\fat\ -I         #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\display\ -I     #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\display\theme_d #
+#                          efault\ -I I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073 #
+#                          A_宇泰_AX1071_xxxxxxxx_20180629_Merlin_1\app\disp #
+#                          lay\led\ -I I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC07 #
+#                          3A_宇泰_AX1071_xxxxxxxx_20180629_Merlin_1\app\dis #
+#                          play\lcd\ -I I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC0 #
+#                          73A_宇泰_AX1071_xxxxxxxx_20180629_Merlin_1\app\ta #
+#                          sk\ -I I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇 #
+#                          泰_AX1071_xxxxxxxx_20180629_Merlin_1\app\user\    #
+#                          -I I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_A #
+#                          X1071_xxxxxxxx_20180629_Merlin_1\app\mem\ -I      #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\module\ -I      #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\key\ -I         #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\startmusic\ -I  #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\spi\ -D         #
+#                          AX107X_TAG -lC I:\a_wangqun\宇泰_睡眠仪_KNP08\18B #
+#                          C073A_宇泰_AX1071_xxxxxxxx_20180629_Merlin_1\app\ #
+#                          Debug\List\ -o I:\a_wangqun\宇泰_睡眠仪_KNP08\18B #
+#                          C073A_宇泰_AX1071_xxxxxxxx_20180629_Merlin_1\app\ #
+#                          Debug\Obj\ -e -z9 --core=plain --dptr=16,1        #
+#                          --data_model=large --code_model=near              #
+#                          --calling_convention=ext_stack_reentrant          #
+#                          --place_constants=code --nr_virtual_regs 20       #
+#                          --extended_stack I:\a_wangqun\宇泰_睡眠仪_KNP08\1 #
+#                          8BC073A_宇泰_AX1071_xxxxxxxx_20180629_Merlin_1\ap #
+#                          p\user\user_key.c                                 #
+#    List file          =  I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\Debug\List\user #
+#                          _key.lst                                          #
+#    Object file        =  I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\Debug\Obj\user_ #
+#                          key.r51                                           #
+#                                                                            #
+#                                                                            #
+##############################################################################
+
+I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX1071_xxxxxxxx_20180629_Merlin_1\app\user\user_key.c
+      1          /*****************************************************************************
+      2          * Module    : User
+      3          * File      : user_key.c
+      4          * Author    : Hanny
+      5          * Email     : coldney@yahoo.com.cn
+      6          * Function  : 用户按键定义
+      7          *****************************************************************************/
+      8          #include "include.h"
+
+   \                                 In segment SFR_AN, at 0x80
+   \   unsigned char volatile __sfr P0
+   \                     P0:
+   \   000000                DS 1
+
+   \                                 In segment SFR_AN, at 0x90
+   \   unsigned char volatile __sfr P1
+   \                     P1:
+   \   000000                DS 1
+
+   \                                 In segment SFR_AN, at 0xba
+   \   unsigned char volatile __sfr P0DIR
+   \                     P0DIR:
+   \   000000                DS 1
+
+   \                                 In segment SFR_AN, at 0xd1
+   \   unsigned char volatile __sfr ADCCON
+   \                     ADCCON:
+   \   000000                DS 1
+
+   \                                 In segment SFR_AN, at 0xd2
+   \   unsigned char volatile __sfr ADCMODE
+   \                     ADCMODE:
+   \   000000                DS 1
+
+   \                                 In segment SFR_AN, at 0xd4
+   \   unsigned char volatile __sfr ADCDATAH
+   \                     ADCDATAH:
+   \   000000                DS 1
+
+   \                                 In segment SFR_AN, at 0xf7
+   \   unsigned char volatile __sfr WDTCON
+   \                     WDTCON:
+   \   000000                DS 1
+      9          #include "touch_key.h"
+     10          #include "ir.h"
+     11          #include "kedir.h"
+     12          
+     13          
+     14          extern IAR_CONST type_adc_key tbl_adkey[];
+     15          extern IAR_CONST type_adc_key tbl_adkey2[];
+     16          extern IAR_CONST type_adc_key tbl_ad_song[];
+     17          extern IAR_CONST type_adc_key tbl_ad_sel[];
+     18          extern bool vol_less_34V_blink;
+     19          extern bool alarm_flag;
+     20          extern u8 power_key_cnt;
+     21          extern bool Timer1_flag;
+
+   \                                 In segment XDATA_N, align 1, root
+     22          IAR_XDATA_A type_key_ctl key_ctl;
+   \                     key_ctl:
+   \   000000                DS 6
+
+   \                                 In segment XDATA_N, align 1, root
+     23          IAR_XDATA_A type_scan_ctl scan_ctl;
+   \                     scan_ctl:
+   \   000000                DS 18
+     24          
+
+   \                                 In segment XDATA_Z, align 1, keep-with-next
+   \   000000                REQUIRE __INIT_XDATA_Z
+     25          u8 vol_less_power_warning_flag =0;//低电压提示后关机标志
+   \                     vol_less_power_warning_flag:
+   \   000000                DS 1
+
+   \                                 In segment XDATA_Z, align 1, keep-with-next
+   \   000000                REQUIRE __INIT_XDATA_Z
+     26          u8 vol_less_33V_flag =0;         //电压3.3v标志
+   \                     vol_less_33V_flag:
+   \   000000                DS 1
+
+   \                                 In segment XDATA_Z, align 1, keep-with-next
+   \   000000                REQUIRE __INIT_XDATA_Z
+     27          u8 vol_less_34V_flag =0;         //电压3.4v标志
+   \                     vol_less_34V_flag:
+   \   000000                DS 1
+     28          
+     29          #if (USE_MIXIO_AD || USE_ADKEY2)
+     30          //使用三合一IO做普通IO，并AD采样(USE_KEDIR为0时有效，FPGA上可用)
+     31          #pragma location="KEY_INIT"
+
+   \                                 In segment KEY_INIT, align 1, keep-with-next
+     32          void mixio_adinit(void)
+   \                     mixio_adinit:
+     33          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     34          	//PIE05:P10; PIE03-P03; PIE02-P02; PIE00-P27;
+     35          #if (KEDIR_PORT == KEDIR_P10)
+     36          	P1DIR |= BIT(0);            //P10
+     37          	PIE0 &= ~(BIT(5));          //P10
+     38          #elif (KEDIR_PORT == KEDIR_P03)
+     39          	//P0DIR |= BIT(3);            //P03
+     40          	//PIE0 &= ~(BIT(3));          //P03
+     41          #elif (KEDIR_PORT == KEDIR_P02)
+     42          	P0DIR |= BIT(2);            //P02
+     43          	PIE0 &= ~(BIT(2));          //P02
+     44          #elif (KEDIR_PORT == KEDIR_P27)
+     45          	P2DIR |= BIT(7);            //P27
+     46          	PIE0 &= ~(BIT(0));          //P27
+     47          #else
+     48          #error "请选择AD采样的IO"
+     49          #endif
+     50          
+     51          	KEDIR_DISABLE_TOP();        //33K pull down resistance disable
+   \   000000   90304C       MOV     DPTR,#0x304c
+   \   000003   E0           MOVX    A,@DPTR
+   \   000004   C2E2         CLR     0xE0 /* A   */.2
+   \   000006   F0           MOVX    @DPTR,A
+     52          #ifdef AX207X_TAG
+     53          	if(DCN == 0x00)
+     54          	{
+     55          		KEDIR_DISABLE_BIG_1();  //22k,2.2k pull up resistance disable
+     56          		KEDIR_DISABLE_TINY_1();
+     57          	}
+     58          	else
+     59          #endif
+     60          	{
+     61          		KEDIR_DISABLE_BIG();
+   \   000007   E0           MOVX    A,@DPTR
+   \   000008   C2E1         CLR     0xE0 /* A   */.1
+   \   00000A   F0           MOVX    @DPTR,A
+     62          		KEDIR_DISABLE_TINY();
+   \   00000B   E0           MOVX    A,@DPTR
+   \   00000C   C2E0         CLR     0xE0 /* A   */.0
+   \   00000E   F0           MOVX    @DPTR,A
+     63          	}
+     64          	LEDCON2 = BIT(2) | (KEDIR_PORT << 3);//select mix IO, AMUX enable.00:P10; 01:P03; 10:P02; 11:P27
+   \   00000F   740C         MOV     A,#0xc
+   \   000011   90304F       MOV     DPTR,#0x304f
+   \   000014   F0           MOVX    @DPTR,A
+     65          
+     66          	ADCCON = BIT(7) | BIT(3) | ADKEDIR_CHAN;
+   \   000015   75D188       MOV     0xd1,#-0x78
+     67          }
+   \   000018   22           RET
+     68          #endif
+     69          
+     70          #if USE_ADKEY2
+     71          //第二组AD按键初始化函数
+     72          #pragma location="KEY_INIT"
+
+   \                                 In segment KEY_INIT, align 1, keep-with-next
+     73          void adkey2_init(void)
+   \                     adkey2_init:
+     74          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     75          	mixio_adinit();  //三合一作为普遍ADKEY IO
+   \   000000                ; Setup parameters for call to function mixio_adinit
+   \   000000   12....       LCALL   mixio_adinit
+     76          }
+   \   000003   22           RET
+     77          #endif
+     78          
+     79          #pragma location="KEY_INIT"
+
+   \                                 In segment KEY_INIT, align 1, keep-with-next
+     80          void iokey_init(void)
+   \                     iokey_init:
+     81          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     82          	S1_DIR |= BIT(S1_BIT);					// P03  IO KEY  初始化
+   \   000000   43BA08       ORL     0xba,#0x8
+     83          	S2_DIR |= BIT(S2_BIT);					// P06
+   \   000003   43BA40       ORL     0xba,#0x40
+     84          	S1_PU|= BIT(S1_BIT)|BIT(S2_BIT);		// 开上拉
+   \   000006   903010       MOV     DPTR,#0x3010
+   \   000009   E0           MOVX    A,@DPTR
+   \   00000A   4448         ORL     A,#0x48
+   \   00000C   F0           MOVX    @DPTR,A
+     85          }
+   \   00000D   22           RET
+     86          
+     87          //按键初始化函数
+     88          #pragma location="KEY_INIT"
+
+   \                                 In segment KEY_INIT, align 1, keep-with-next
+     89          void key_init(void)
+   \                     key_init:
+     90          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     91          	memset(&scan_ctl, 0, sizeof(scan_ctl));
+   \   000000                ; Setup parameters for call to function my_memset
+   \   000000   7C12         MOV     R4,#0x12
+   \   000002   7D00         MOV     R5,#0x0
+   \   000004   7900         MOV     R1,#0x0
+   \   000006   7A..         MOV     R2,#(scan_ctl & 0xff)
+   \   000008   7B..         MOV     R3,#((scan_ctl >> 8) & 0xff)
+   \   00000A   12....       LCALL   my_memset
+     92          	memset(&key_ctl, 0, sizeof(key_ctl));
+   \   00000D                ; Setup parameters for call to function my_memset
+   \   00000D   7C06         MOV     R4,#0x6
+   \   00000F   7D00         MOV     R5,#0x0
+   \   000011   7900         MOV     R1,#0x0
+   \   000013   7A..         MOV     R2,#(key_ctl & 0xff)
+   \   000015   7B..         MOV     R3,#((key_ctl >> 8) & 0xff)
+   \   000017   12....       LCALL   my_memset
+     93          
+     94          	ADCBAUD = 0x24;
+   \   00001A   7424         MOV     A,#0x24
+   \   00001C   90300C       MOV     DPTR,#0x300c
+   \   00001F   F0           MOVX    @DPTR,A
+     95          #if USE_KEDIR
+     96          	kedir_init();
+     97          #if (USE_KEDIR_TYPE != KEDIR_IR_LED)
+     98          	scan_ctl.kedir_ch = ADC_TINY;
+     99          	scan_ctl.adc_ch = ADC_KEDIR;
+    100          #else
+    101          	//三合一使用IR & LED
+    102          	key_keidr_scan();
+    103          	ADCCON = BIT(3) | ADKEDIR_CHAN;
+    104          	KEDIR_ADCGO();
+    105          	scan_ctl.adc_ch = ADC_NULL;
+    106          #endif
+    107          
+    108          #endif
+    109          #if 0    //use iokey   20170609  wq
+    110              //P4DIR |= BIT(2) | BIT(3);	// P42, P43 input
+    111          	//PUP4 |= BIT(2) | BIT(3);	// P42, P3 enable pull-up
+    112          
+    113          	P2DIR |= BIT(0) | BIT(1) | BIT(2) | BIT(7);	// P20, P21, P22, P27 input
+    114          	PUP2 |= BIT(0) | BIT(1) | BIT(2) | BIT(7);	// P20, P21, P22, P27 enable pull-up
+    115          #endif
+    116          
+    117          #if USE_ADKEY
+    118          #if (USER_SEL == USER_AX1071_DEMO)
+    119          	P4DIR |= BIT(2);                        //P42
+    120          	AIPCON7 |= BIT(6);                      //P42设为模拟
+    121          	ADCCON = BIT(7) | BIT(3) | ADKEDIR_CHAN; //ADC_CONV, ADC_EN;
+    122          	ADCMODE |= BIT(5);                      //P42 ADC
+    123          #else
+    124          	P0DIR |= BIT(1);                        //P01
+    125          	PIE0 &= ~(BIT(1));                      //P01
+    126          	ADCCON = BIT(7) | BIT(3) | ADKEDIR_CHAN; //ADC_CONV, ADC_EN;
+    127          #endif
+    128          	scan_ctl.adc_ch = ADC_KEY;
+    129          #endif
+    130          
+    131          #ifdef AX207X_TAG
+    132          #if 0 //SOFT_POWEROFF_EN
+    133          	P0DIR |= BIT(1);                        //P01
+    134          	PIE0 &= ~(BIT(1));                      //P01
+    135          	ADCCON = BIT(7) | BIT(3) | ADKEY_POWER_CHAN; //ADC_CONV, ADC_EN;
+    136          	scan_ctl.adc_ch = ADC_KEYPOWER;
+    137          #endif
+    138          #endif
+    139          
+    140          #if (BATTERY_CHECK || SOFT_POWEROFF_EN)
+    141          	AIPCON0 |= BIT(6);  //LDO EN
+   \   000020   903050       MOV     DPTR,#0x3050
+   \   000023   E0           MOVX    A,@DPTR
+   \   000024   D2E6         SETB    0xE0 /* A   */.6
+   \   000026   F0           MOVX    @DPTR,A
+    142          	AIPCON6 |= BIT(0);  //BAND GAP EN
+   \   000027   903056       MOV     DPTR,#0x3056
+   \   00002A   E0           MOVX    A,@DPTR
+   \   00002B   D2E0         SETB    0xE0 /* A   */.0
+   \   00002D   F0           MOVX    @DPTR,A
+    143          	ADCCON = BIT(7) | BIT(3) | ADBAT_CHAN;
+   \   00002E   75D18D       MOV     0xd1,#-0x73
+    144          	scan_ctl.adc_ch = ADC_BAT;
+   \   000031   7404         MOV     A,#0x4
+   \   000033   90....       MOV     DPTR,#scan_ctl
+   \   000036   F0           MOVX    @DPTR,A
+    145          #endif
+    146          
+    147          #if USE_ADKEY2
+    148          	adkey2_init();
+   \   000037                ; Setup parameters for call to function mixio_adinit
+   \   000037   12....       LCALL   mixio_adinit
+    149          	scan_ctl.adc_ch = ADC_KEY2;
+   \   00003A   7402         MOV     A,#0x2
+   \   00003C   90....       MOV     DPTR,#scan_ctl
+   \   00003F   F0           MOVX    @DPTR,A
+    150          #endif
+    151          
+    152          	iokey_init();	// P03 P06 初始化
+   \   000040                ; Setup parameters for call to function iokey_init
+   \   000040   12....       LCALL   iokey_init
+    153          
+    154          	//P4DIR |= BIT(1) | BIT(0);			// P42, P43 input
+    155          	//AIPCON7 |= BIT(6) | BIT(7);			//P42 , P43 设为模拟；  BIT(0) : 使用GPIO
+    156          
+    157          }
+   \   000043   22           RET
+    158          #pragma location="SCAN_COM"
+
+   \                                 In segment SCAN_COM, align 1, keep-with-next
+    159          u8 get_pwrkey_adcval(void)
+   \                     get_pwrkey_adcval:
+    160          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    161               WATCHDOG_CLR();
+   \   000000   43F720       ORL     0xf7,#0x20
+    162               ADCCON = BIT(7) | BIT(3) | ADKEDIR_CHAN;
+   \   000003   75D188       MOV     0xd1,#-0x78
+    163               while (ADCCON & BIT(7));  //等待采集完成.
+   \                     ??get_pwrkey_adcval_0:
+   \   000006   E5D1         MOV     A,0xd1
+   \   000008   A2E7         MOV     C,0xE0 /* A   */.7
+   \   00000A   40FA         JC      ??get_pwrkey_adcval_0
+    164               return ADCDATAH;
+   \   00000C   A9D4         MOV     R1,0xd4
+   \   00000E   22           RET
+    165          }
+    166          
+    167          //获取ADC的值
+    168          //#pragma inline=forced
+    169          #pragma location="SCAN_COM"
+
+   \                                 In segment SCAN_COM, align 1, keep-with-next
+    170          bool adc_get(void)
+   \                     adc_get:
+    171          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    172          	if(ADCCON & BIT(7))
+   \   000000   E5D1         MOV     A,0xd1
+   \   000002   A2E7         MOV     C,0xE0 /* A   */.7
+   \   000004   5023         JNC     ??adc_get_0
+    173          	{
+    174          		printf("adc_ch: %d\n",scan_ctl.adc_ch);
+   \   000006                ; Setup parameters for call to function my_printf
+   \   000006   90....       MOV     DPTR,#scan_ctl
+   \   000009   E0           MOVX    A,@DPTR
+   \   00000A   F582         MOV     DPL,A
+   \   00000C   758300       MOV     DPH,#0x0
+   \   00000F   C082         PUSH    DPL
+   \   000011   C083         PUSH    DPH
+   \   000013   7A..         MOV     R2,#(`?<Constant "adc_ch: %d\\n">` & 0xff)
+   \   000015   7B..         MOV     R3,#((`?<Constant "adc_ch: %d\\n">` >> 8) & 0xff)
+   \   000017   12....       LCALL   my_printf
+   \   00001A   D0E0         POP     A
+   \   00001C   D0E0         POP     A
+    175          		ADC_CH_KEY2_NEXT();
+   \   00001E   7404         MOV     A,#0x4
+   \   000020   90....       MOV     DPTR,#scan_ctl
+   \   000023   F0           MOVX    @DPTR,A
+   \   000024   75D18D       MOV     0xd1,#-0x73
+    176          		return false;
+   \   000027   C3           CLR     C
+   \   000028   22           RET
+    177          	}
+    178          	scan_ctl.adc_val = ADCDATAH;
+   \                     ??adc_get_0:
+   \   000029   E5D4         MOV     A,0xd4
+   \   00002B   90....       MOV     DPTR,#(scan_ctl + 1)
+   \   00002E   F0           MOVX    @DPTR,A
+    179          
+    180          #if USE_KEDIR
+    181          	LEDCON1 &= ~BIT(3);  //clear ADC sample fininsh pending
+    182          #endif
+    183          
+    184          	return true;
+   \   00002F   D3           SETB    C
+   \   000030   22           RET
+    185          }
+    186          
+    187          //根据ADKey检测按键值
+    188          #pragma location="SCAN_COM"
+
+   \                                 In segment SCAN_COM, align 1, keep-with-next
+    189          u8 kedir_get(void)
+   \                     kedir_get:
+    190          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    191          	u8 knum = scan_ctl.kedir_ch * kedir_group_num();
+   \   000000                ; Setup parameters for call to function kedir_group_num
+   \   000000   12....       LCALL   kedir_group_num
+   \   000003   90....       MOV     DPTR,#(scan_ctl + 2)
+   \   000006   E0           MOVX    A,@DPTR
+   \   000007   F5F0         MOV     B,A
+   \   000009   E9           MOV     A,R1
+   \   00000A   A4           MUL     AB
+   \   00000B   FA           MOV     R2,A
+    192          	u8 adc_val = scan_ctl.adc_val;
+   \   00000C   90....       MOV     DPTR,#(scan_ctl + 1)
+   \   00000F   E0           MOVX    A,@DPTR
+   \   000010   FB           MOV     R3,A
+   \   000011   8001         SJMP    ??kedir_get_0
+    193          
+    194          	while(adc_val > tbl_key1[knum].adc_val)
+    195          	{
+    196          		knum++;
+   \                     ??kedir_get_1:
+   \   000013   0A           INC     R2
+    197          	}
+   \                     ??kedir_get_0:
+   \   000014   EA           MOV     A,R2
+   \   000015   C3           CLR     C
+   \   000016   33           RLC     A
+   \   000017   F8           MOV     R0,A
+   \   000018   E4           CLR     A
+   \   000019   33           RLC     A
+   \   00001A   F9           MOV     R1,A
+   \   00001B   E8           MOV     A,R0
+   \   00001C   24..         ADD     A,#(tbl_key1 & 0xff)
+   \   00001E   F582         MOV     DPL,A
+   \   000020   E9           MOV     A,R1
+   \   000021   34..         ADDC    A,#((tbl_key1 >> 8) & 0xff)
+   \   000023   F583         MOV     DPH,A
+   \   000025   E4           CLR     A
+   \   000026   93           MOVC    A,@A+DPTR
+   \   000027   C3           CLR     C
+   \   000028   9B           SUBB    A,R3
+   \   000029   40E8         JC      ??kedir_get_1
+    198          	return tbl_key1[knum].key_code;
+   \   00002B                REQUIRE ?Subroutine4
+   \   00002B                ; // Fall through to label ?Subroutine4
+    199          }
+
+   \                                 In segment SCAN_COM, align 1, keep-with-next
+   \                     ?Subroutine4:
+   \   000000   A3           INC     DPTR
+   \   000001   E4           CLR     A
+   \   000002   93           MOVC    A,@A+DPTR
+   \   000003   F9           MOV     R1,A
+   \   000004   22           RET
+    200          
+    201          #pragma location="SCAN_COM"
+
+   \                                 In segment SCAN_COM, align 1, keep-with-next
+    202          u8 adkey_get(void)
+   \                     adkey_get:
+    203          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    204          	u8 knum = 0;
+   \   000000   7A00         MOV     R2,#0x0
+    205          	u8 adc_val = scan_ctl.adc_val;
+   \   000002   90....       MOV     DPTR,#(scan_ctl + 1)
+   \   000005   E0           MOVX    A,@DPTR
+   \   000006   FB           MOV     R3,A
+   \   000007   8001         SJMP    ??adkey_get_0
+    206          
+    207          	while(adc_val > tbl_adkey[knum].adc_val)
+    208          	{
+    209          		knum++;
+   \                     ??adkey_get_1:
+   \   000009   0A           INC     R2
+    210          	}
+   \                     ??adkey_get_0:
+   \   00000A   EA           MOV     A,R2
+   \   00000B   C3           CLR     C
+   \   00000C   33           RLC     A
+   \   00000D   F8           MOV     R0,A
+   \   00000E   E4           CLR     A
+   \   00000F   33           RLC     A
+   \   000010   F9           MOV     R1,A
+   \   000011   E8           MOV     A,R0
+   \   000012   24..         ADD     A,#(tbl_adkey & 0xff)
+   \   000014   F582         MOV     DPL,A
+   \   000016   E9           MOV     A,R1
+   \   000017   34..         ADDC    A,#((tbl_adkey >> 8) & 0xff)
+   \   000019   F583         MOV     DPH,A
+   \   00001B   E4           CLR     A
+   \   00001C   93           MOVC    A,@A+DPTR
+   \   00001D   C3           CLR     C
+   \   00001E   9B           SUBB    A,R3
+   \   00001F   40E8         JC      ??adkey_get_1
+    211          	return tbl_adkey[knum].key_code;
+   \   000021   80..         SJMP    ?Subroutine4
+    212          }
+    213          
+    214          
+    215          #pragma location="SCAN_COM"
+
+   \                                 In segment SCAN_COM, align 1, keep-with-next
+    216          u8 iokey_get(void)
+   \                     iokey_get:
+    217          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    218              u8 key;
+    219          
+    220          	if(!(S1_PORT & BIT(S1_BIT)))		//  P03
+   \   000000   A283         MOV     C,0x80.3
+   \   000002   4003         JC      ??iokey_get_0
+    221          	{
+    222          		key = T_KEY_SET_LIGHT;
+   \   000004   790C         MOV     R1,#0xc
+   \   000006   22           RET
+    223          	}
+    224          	else if(!(S2_PORT & BIT(S2_BIT)))	//  P06
+   \                     ??iokey_get_0:
+   \   000007   A286         MOV     C,0x80.6
+   \   000009   4003         JC      ??iokey_get_1
+    225          	{
+    226          		key = T_KEY_SET_TIMER;
+   \   00000B   7907         MOV     R1,#0x7
+   \   00000D   22           RET
+    227          	}
+    228          	else
+    229          	{
+    230          		key = NO_KEY;
+   \                     ??iokey_get_1:
+   \   00000E   7900         MOV     R1,#0x0
+    231          	}
+    232          	return key;
+   \   000010   22           RET
+    233          }
+    234          
+    235          #pragma location="SCAN_COM"
+
+   \                                 In segment SCAN_COM, align 1, keep-with-next
+    236          void OTHER_ADC_CHECK(void)
+   \                     OTHER_ADC_CHECK:
+    237          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    238          	u8 adc_val = scan_ctl.adc_val;
+   \   000000   90....       MOV     DPTR,#(scan_ctl + 1)
+   \   000003   E0           MOVX    A,@DPTR
+   \   000004   FA           MOV     R2,A
+    239          	if(adc_val < 0x20)			// no charger  0
+   \   000005   C3           CLR     C
+   \   000006   9420         SUBB    A,#0x20
+   \   000008   500F         JNC     ??OTHER_ADC_CHECK_0
+    240          	{
+    241          		sys_ctl.bat_charger_sta = 0;
+   \   00000A   E4           CLR     A
+   \   00000B   90....       MOV     DPTR,#(sys_ctl + 14)
+   \   00000E   F0           MOVX    @DPTR,A
+    242          		if(sys_ctl.bat_charger_cnt == 0)
+   \   00000F   90....       MOV     DPTR,#(sys_ctl + 15)
+   \   000012   E0           MOVX    A,@DPTR
+   \   000013   7030         JNZ     ??OTHER_ADC_CHECK_1
+    243          			sys_ctl.bat_charger_cnt = 0xFF;
+   \   000015   74FF         MOV     A,#-0x1
+   \   000017   F0           MOVX    @DPTR,A
+   \   000018   22           RET
+    244          
+    245          	}else if((adc_val < 0xA0) && (sys_ctl.bat_charger_sta != 1))	// chargering   1.67V  0x80
+   \                     ??OTHER_ADC_CHECK_0:
+   \   000019   90....       MOV     DPTR,#(sys_ctl + 14)
+   \   00001C   E0           MOVX    A,@DPTR
+   \   00001D   FB           MOV     R3,A
+   \   00001E   EA           MOV     A,R2
+   \   00001F   C3           CLR     C
+   \   000020   94A0         SUBB    A,#-0x60
+   \   000022   500E         JNC     ??OTHER_ADC_CHECK_2
+   \   000024   7401         MOV     A,#0x1
+   \   000026   6B           XRL     A,R3
+   \   000027   601C         JZ      ??OTHER_ADC_CHECK_1
+    246          	{
+    247          		sys_ctl.bat_charger_sta = 1;
+   \   000029   7401         MOV     A,#0x1
+   \   00002B   F0           MOVX    @DPTR,A
+    248          		sys_ctl.bat_charger_cnt = 0x00;
+   \   00002C   E4           CLR     A
+   \   00002D   90....       MOV     DPTR,#(sys_ctl + 15)
+   \   000030   F0           MOVX    @DPTR,A
+   \   000031   22           RET
+    249          	}else if((adc_val > 0xB0) && (sys_ctl.bat_charger_sta != 2))	// chargered   2.5V  0xC1
+   \                     ??OTHER_ADC_CHECK_2:
+   \   000032   EA           MOV     A,R2
+   \   000033   C3           CLR     C
+   \   000034   94B1         SUBB    A,#-0x4f
+   \   000036   400D         JC      ??OTHER_ADC_CHECK_1
+   \   000038   7402         MOV     A,#0x2
+   \   00003A   6B           XRL     A,R3
+   \   00003B   6008         JZ      ??OTHER_ADC_CHECK_1
+    250          	{
+    251          		sys_ctl.bat_charger_sta = 2;
+   \   00003D   7402         MOV     A,#0x2
+   \   00003F   F0           MOVX    @DPTR,A
+    252          		sys_ctl.bat_charger_cnt = 0x00;
+   \   000040   E4           CLR     A
+   \   000041   90....       MOV     DPTR,#(sys_ctl + 15)
+   \   000044   F0           MOVX    @DPTR,A
+    253          	}
+    254          	//printf("%d ",sys_ctl.bat_charger_sta);
+    255          }
+   \                     ??OTHER_ADC_CHECK_1:
+   \   000045   22           RET
+    256          
+    257          
+    258          #pragma location="SCAN_COM"
+
+   \                                 In segment SCAN_COM, align 1, keep-with-next
+    259          u8 adkey2_get(void)
+   \                     adkey2_get:
+    260          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    261          	u8 knum = 0;
+   \   000000   7A00         MOV     R2,#0x0
+    262          	u8 adc_val = scan_ctl.adc_val;
+   \   000002   90....       MOV     DPTR,#(scan_ctl + 1)
+   \   000005   E0           MOVX    A,@DPTR
+   \   000006   FB           MOV     R3,A
+   \   000007   8001         SJMP    ??adkey2_get_0
+    263          
+    264          	while(adc_val > tbl_adkey2[knum].adc_val)
+    265          	{
+    266          		knum++;
+   \                     ??adkey2_get_1:
+   \   000009   0A           INC     R2
+    267          	}
+   \                     ??adkey2_get_0:
+   \   00000A   EA           MOV     A,R2
+   \   00000B   C3           CLR     C
+   \   00000C   33           RLC     A
+   \   00000D   F8           MOV     R0,A
+   \   00000E   E4           CLR     A
+   \   00000F   33           RLC     A
+   \   000010   F9           MOV     R1,A
+   \   000011   E8           MOV     A,R0
+   \   000012   24..         ADD     A,#(tbl_adkey2 & 0xff)
+   \   000014   F582         MOV     DPL,A
+   \   000016   E9           MOV     A,R1
+   \   000017   34..         ADDC    A,#((tbl_adkey2 >> 8) & 0xff)
+   \   000019   F583         MOV     DPH,A
+   \   00001B   E4           CLR     A
+   \   00001C   93           MOVC    A,@A+DPTR
+   \   00001D   C3           CLR     C
+   \   00001E   9B           SUBB    A,R3
+   \   00001F   40E8         JC      ??adkey2_get_1
+    268          	return tbl_adkey2[knum].key_code;
+   \   000021   02....       LJMP    ?Subroutine4
+    269          }
+    270          
+    271          #if SOFT_POWEROFF_EN
+    272          //根据ADC检测
+    273          #pragma location="SCAN_COM"
+
+   \                                 In segment SCAN_COM, align 1, keep-with-next
+    274          u8 powerkey_get(void)
+   \                     powerkey_get:
+    275          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    276          	u8 key;
+    277          
+    278          	/*AX2070与AX1070的软开关模块不同：
+    279          	AX2070上需要P01的AD采样来获取power键状态，
+    280          	AX1070上WKORTC可以直接获取power键状态；*/
+    281          #ifdef   AX207X_TAG	// for test only
+    282          	//uart_putc('#');
+    283          	//if(scan_ctl.adc_val > 80)
+    284          	P0DIR |= BIT(7);	// P07 input
+    285          	PUP0 |= BIT(7);		// P07 enable pull-up
+    286          	//PUP0 &= ~BIT(7);      //pull-down
+    287          	if((P0 & BIT(7)) == 0)	// :0 have key, :1 no press key
+    288          #else	// for AX1070 used by WKO
+    289          	if(irtc_read_cmd(CFG_RD) & BIT(1))
+   \   000000                ; Setup parameters for call to function irtc_read_cmd
+   \   000000   7954         MOV     R1,#0x54
+   \   000002   12....       LCALL   irtc_read_cmd
+   \   000005   E9           MOV     A,R1
+   \   000006   A2E1         MOV     C,0xE0 /* A   */.1
+   \   000008   5014         JNC     ??powerkey_get_0
+    290          #endif
+    291          	{
+    292          		//uart_putc('.');
+    293          
+    294          		poweroff_ctl.power_key_sta = POWERKEY_DOWN;
+   \   00000A   7401         MOV     A,#0x1
+   \   00000C   90....       MOV     DPTR,#poweroff_ctl
+   \   00000F   F0           MOVX    @DPTR,A
+    295          		 //key = T_KEY_SOFT_POWER;
+    296          		key = T_KEY_POWER;		// change by Merlin for power even   20170509
+   \   000010   790F         MOV     R1,#0xf
+    297          		if(poweroff_ctl.wait_powerkey_up == 0)
+   \   000012   90....       MOV     DPTR,#(poweroff_ctl + 1)
+   \   000015   E0           MOVX    A,@DPTR
+   \   000016   FA           MOV     R2,A
+   \   000017   7012         JNZ     ??powerkey_get_1
+    298          		{
+    299          			poweroff_ctl.wait_powerkey_up = 1;     //开机前就是按着键的
+   \   000019   7401         MOV     A,#0x1
+   \   00001B   F0           MOVX    @DPTR,A
+   \   00001C   8012         SJMP    ??powerkey_get_2
+    300          		}
+    301          		//uart_putc('0'+poweroff_ctl.wait_powerkey_up);
+    302          	}
+    303          	else
+    304          	{
+    305          		poweroff_ctl.power_key_sta = POWERKEY_UP;
+   \                     ??powerkey_get_0:
+   \   00001E   7402         MOV     A,#0x2
+   \   000020   90....       MOV     DPTR,#poweroff_ctl
+   \   000023   F0           MOVX    @DPTR,A
+    306          		poweroff_ctl.wait_powerkey_up = 2;         //按键放开
+   \   000024   90....       MOV     DPTR,#(poweroff_ctl + 1)
+   \   000027   F0           MOVX    @DPTR,A
+    307          		key = NO_KEY;
+   \   000028   7900         MOV     R1,#0x0
+   \   00002A   22           RET
+    308          	}
+    309          	if((poweroff_ctl.wait_powerkey_up == 1)        //不处理开机按键消息
+    310          #if DCIN_DET_EN
+    311          	        || (poweroff_ctl.dc_in_sta == DC_UNSTABLE)  //不处理同按键的DCIN插入消息
+    312          #endif
+    313          	  )
+   \                     ??powerkey_get_1:
+   \   00002B   7401         MOV     A,#0x1
+   \   00002D   6A           XRL     A,R2
+   \   00002E   7002         JNZ     ??powerkey_get_3
+    314          	{
+    315          		key = NO_KEY;
+   \                     ??powerkey_get_2:
+   \   000030   7900         MOV     R1,#0x0
+    316          	}
+    317          	return key;
+   \                     ??powerkey_get_3:
+   \   000032   22           RET
+    318          }
+    319          #endif
+    320          
+    321          #pragma location="SCAN_COM"
+
+   \                                 In segment SCAN_COM, align 1, keep-with-next
+    322          u8 double_click_filter(u8 key_val)	//2MS
+   \                     double_click_filter:
+    323          {	
+   \   000000   EE           MOV     A,R6
+   \   000001   C0E0         PUSH    A
+   \   000003                ; Saved register size: 1
+   \   000003                ; Auto size: 0
+   \   000003   E9           MOV     A,R1
+   \   000004   FE           MOV     R6,A
+    324          	static u8 ms_2_cnt = 0;
+    325          	static u8 key_click_cnt = 0;
+    326          	
+    327                  if (ms_2_cnt > 0)
+   \   000005   90....       MOV     DPTR,#??ms_2_cnt
+   \   000008   E0           MOVX    A,@DPTR
+   \   000009   602B         JZ      ??double_click_filter_0
+    328          	{  //双击超时计时.
+    329                       ms_2_cnt--;
+   \   00000B   14           DEC     A
+   \   00000C   F0           MOVX    @DPTR,A
+    330          	        if(1 == ms_2_cnt)
+   \   00000D   6401         XRL     A,#0x1
+   \   00000F   7025         JNZ     ??double_click_filter_0
+    331          		{
+    332          //		printf("kc=%d\n",key_click_cnt);
+    333          			if(key_click_cnt == 1)
+   \   000011   90....       MOV     DPTR,#??key_click_cnt
+   \   000014   E0           MOVX    A,@DPTR
+   \   000015   6401         XRL     A,#0x1
+   \   000017   7004         JNZ     ??double_click_filter_1
+    334          			{
+    335          		          key_val = KU_LIGHT;
+   \   000019   7E8C         MOV     R6,#-0x74
+   \   00001B   800E         SJMP    ??double_click_filter_2
+    336          			}
+    337          			else
+    338          			{
+    339          				 if(key_click_cnt & 0x01)
+   \                     ??double_click_filter_1:
+   \   00001D   E0           MOVX    A,@DPTR
+   \   00001E   A2E0         MOV     C,0xE0 /* A   */.0
+   \   000020   5009         JNC     ??double_click_filter_2
+    340          				 {
+    341          		           // key_val = KU_PREV; // printf(",");
+    342          				   	key_val = KU_LED_OFF;  printf(".");
+   \   000022   7E81         MOV     R6,#-0x7f
+   \   000024                ; Setup parameters for call to function my_printf
+   \   000024   7A..         MOV     R2,#(`?<Constant ".">` & 0xff)
+   \   000026   7B..         MOV     R3,#((`?<Constant ".">` >> 8) & 0xff)
+   \   000028   12....       LCALL   my_printf
+    343          				 }
+    344          				 else
+    345          				 {
+    346          					//key_val = KU_LED_OFF;  printf(".");
+    347          				 }
+    348          			}
+    349          			key_click_cnt = 0;
+   \                     ??double_click_filter_2:
+   \   00002B   E4           CLR     A
+   \   00002C   90....       MOV     DPTR,#??key_click_cnt
+   \   00002F   F0           MOVX    @DPTR,A
+    350          			return key_val;
+    351          	        }
+    352                  }
+    353          
+    354                  if(KU_LIGHT == key_val)
+    355          	{
+    356          		key_click_cnt++;
+    357          		ms_2_cnt = 200;  //延时400ms,判断双击
+    358          //		printf(".");
+    359          		return NO_KEY;
+    360                  }
+    361             	return key_val;
+   \                     ??double_click_filter_3:
+   \   000030   EE           MOV     A,R6
+   \   000031   F9           MOV     R1,A
+   \                     ??double_click_filter_4:
+   \   000032   D0E0         POP     A
+   \   000034   FE           MOV     R6,A
+   \   000035   22           RET
+   \                     ??double_click_filter_0:
+   \   000036   748C         MOV     A,#-0x74
+   \   000038   6E           XRL     A,R6
+   \   000039   70F5         JNZ     ??double_click_filter_3
+   \   00003B   90....       MOV     DPTR,#??key_click_cnt
+   \   00003E   E0           MOVX    A,@DPTR
+   \   00003F   04           INC     A
+   \   000040   F0           MOVX    @DPTR,A
+   \   000041   74C8         MOV     A,#-0x38
+   \   000043   90....       MOV     DPTR,#??ms_2_cnt
+   \   000046   F0           MOVX    @DPTR,A
+   \   000047   7900         MOV     R1,#0x0
+   \   000049   80E7         SJMP    ??double_click_filter_4
+    362          }
+
+   \                                 In segment XDATA_Z, align 1, keep-with-next
+   \   000000                REQUIRE __INIT_XDATA_Z
+   \                     ??ms_2_cnt:
+   \   000000                DS 1
+
+   \                                 In segment XDATA_Z, align 1, keep-with-next
+   \   000000                REQUIRE __INIT_XDATA_Z
+   \                     ??key_click_cnt:
+   \   000000                DS 1
+    363          
+    364          
+    365          //按键事件
+    366          #pragma location="SCAN_COM"
+
+   \                                 In segment SCAN_COM, align 1, keep-with-next
+    367          u8 key_deal(u8 key_val)
+   \                     key_deal:
+    368          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+   \   000000   E9           MOV     A,R1
+   \   000001   FC           MOV     R4,A
+    369          	u8 key_return = NO_KEY;
+   \   000002   7900         MOV     R1,#0x0
+    370          	u8 key_return_val = NO_KEY;
+   \   000004   7A00         MOV     R2,#0x0
+    371          	if(key_val == NO_KEY || key_val != key_ctl.key_val)
+   \   000006   6007         JZ      ??key_deal_0
+   \   000008   90....       MOV     DPTR,#key_ctl
+   \   00000B   E0           MOVX    A,@DPTR
+   \   00000C   6C           XRL     A,R4
+   \   00000D   6047         JZ      ??key_deal_1
+    372          	{
+    373          		if(key_ctl.key_up < KEY_UP_TIMES)
+   \                     ??key_deal_0:
+   \   00000F   90....       MOV     DPTR,#(key_ctl + 3)
+   \   000012   E0           MOVX    A,@DPTR
+   \   000013   C3           CLR     C
+   \   000014   9405         SUBB    A,#0x5
+   \   000016   5006         JNC     ??key_deal_2
+    374          		{
+    375          			key_ctl.key_up++;
+   \   000018   E0           MOVX    A,@DPTR
+   \   000019   04           INC     A
+   \                     ??key_deal_3:
+   \   00001A   F0           MOVX    @DPTR,A
+   \   00001B   02....       LJMP    ??key_deal_4
+    376          		}
+    377          		else
+    378          		{
+    379          			if(key_ctl.key_cnt >= KEY_LONG_TIMES)                   //长按抬键
+   \                     ??key_deal_2:
+   \   00001E   90....       MOV     DPTR,#(key_ctl + 1)
+   \   000021   E0           MOVX    A,@DPTR
+   \   000022   FA           MOV     R2,A
+   \   000023   A3           INC     DPTR
+   \   000024   E0           MOVX    A,@DPTR
+   \   000025   FB           MOV     R3,A
+   \   000026   C3           CLR     C
+   \   000027   EA           MOV     A,R2
+   \   000028   9490         SUBB    A,#-0x70
+   \   00002A   EB           MOV     A,R3
+   \   00002B   9401         SUBB    A,#0x1
+   \   00002D   4008         JC      ??key_deal_5
+    380          			{
+    381          				key_return = key_ctl.key_val | T_KEY_LONG_UP;
+   \   00002F   90....       MOV     DPTR,#key_ctl
+   \   000032   E0           MOVX    A,@DPTR
+   \   000033   44C0         ORL     A,#0xc0
+   \   000035   800F         SJMP    ??key_deal_6
+    382          			}
+    383          			else if(key_ctl.key_cnt >= KEY_SCAN_TIMES)              //短按抬键
+   \                     ??key_deal_5:
+   \   000037   C3           CLR     C
+   \   000038   EA           MOV     A,R2
+   \   000039   9408         SUBB    A,#0x8
+   \   00003B   EB           MOV     A,R3
+   \   00003C   9400         SUBB    A,#0x0
+   \   00003E   4007         JC      ??key_deal_7
+    384          			{
+    385          				key_return = key_ctl.key_val | T_KEY_SHORT_UP;
+   \   000040   90....       MOV     DPTR,#key_ctl
+   \   000043   E0           MOVX    A,@DPTR
+   \   000044   4480         ORL     A,#0x80
+   \                     ??key_deal_6:
+   \   000046   F9           MOV     R1,A
+    386          			}
+    387          			key_return_val = key_ctl.key_val;
+   \                     ??key_deal_7:
+   \   000047   90....       MOV     DPTR,#key_ctl
+   \   00004A   E0           MOVX    A,@DPTR
+   \   00004B   FA           MOV     R2,A
+    388          			key_ctl.key_val = key_val;
+   \   00004C   EC           MOV     A,R4
+   \   00004D   F0           MOVX    @DPTR,A
+    389          			key_ctl.key_cnt = 0;
+   \   00004E   90....       MOV     DPTR,#(key_ctl + 1)
+   \   000051   E4           CLR     A
+   \   000052   F0           MOVX    @DPTR,A
+   \   000053   A3           INC     DPTR
+   \   000054   80C4         SJMP    ??key_deal_3
+    390          		}
+    391          	}
+    392          	else
+    393          	{
+    394          		key_ctl.key_cnt++;
+   \                     ??key_deal_1:
+   \   000056   90....       MOV     DPTR,#(key_ctl + 1)
+   \   000059   E0           MOVX    A,@DPTR
+   \   00005A   2401         ADD     A,#0x1
+   \   00005C   F0           MOVX    @DPTR,A
+   \   00005D   A3           INC     DPTR
+   \   00005E   E0           MOVX    A,@DPTR
+   \   00005F   3400         ADDC    A,#0x0
+   \   000061   F0           MOVX    @DPTR,A
+    395          		if(key_ctl.key_cnt == KEY_SCAN_TIMES)                       //去抖
+   \   000062   90....       MOV     DPTR,#(key_ctl + 1)
+   \   000065   E0           MOVX    A,@DPTR
+   \   000066   FA           MOV     R2,A
+   \   000067   A3           INC     DPTR
+   \   000068   E0           MOVX    A,@DPTR
+   \   000069   FB           MOV     R3,A
+   \   00006A   7408         MOV     A,#0x8
+   \   00006C   6A           XRL     A,R2
+   \   00006D   7001         JNZ     ??key_deal_8
+   \   00006F   EB           MOV     A,R3
+   \                     ??key_deal_8:
+   \   000070   700C         JNZ     ??key_deal_9
+    396          		{
+    397          			key_ctl.key_up = 0;
+   \   000072   E4           CLR     A
+   \   000073   90....       MOV     DPTR,#(key_ctl + 3)
+   \   000076   F0           MOVX    @DPTR,A
+    398          			key_return = key_ctl.key_val;
+   \   000077   90....       MOV     DPTR,#key_ctl
+   \   00007A   E0           MOVX    A,@DPTR
+   \                     ??key_deal_10:
+   \   00007B   F9           MOV     R1,A
+   \   00007C   802D         SJMP    ??key_deal_11
+    399          		}
+    400          		else if(key_ctl.key_cnt == KEY_LONG_TIMES)                  //长按
+   \                     ??key_deal_9:
+   \   00007E   7490         MOV     A,#-0x70
+   \   000080   6A           XRL     A,R2
+   \   000081   7003         JNZ     ??key_deal_12
+   \   000083   7401         MOV     A,#0x1
+   \   000085   6B           XRL     A,R3
+   \                     ??key_deal_12:
+   \   000086   7008         JNZ     ??key_deal_13
+    401          		{
+    402          			key_return = key_ctl.key_val | T_KEY_LONG;
+   \   000088   90....       MOV     DPTR,#key_ctl
+   \   00008B   E0           MOVX    A,@DPTR
+   \   00008C   44A0         ORL     A,#0xa0
+   \   00008E   80EB         SJMP    ??key_deal_10
+    403          		}
+    404          		else if(key_ctl.key_cnt == KEY_LONG_HOLD_TIMES)             //连按
+   \                     ??key_deal_13:
+   \   000090   74AE         MOV     A,#-0x52
+   \   000092   6A           XRL     A,R2
+   \   000093   7003         JNZ     ??key_deal_14
+   \   000095   7401         MOV     A,#0x1
+   \   000097   6B           XRL     A,R3
+   \                     ??key_deal_14:
+   \   000098   7011         JNZ     ??key_deal_11
+    405          		{
+    406          			key_return = key_ctl.key_val | T_KEY_HOLD;
+   \   00009A   90....       MOV     DPTR,#key_ctl
+   \   00009D   E0           MOVX    A,@DPTR
+   \   00009E   44E0         ORL     A,#0xe0
+   \   0000A0   F9           MOV     R1,A
+    407          			key_ctl.key_cnt = KEY_LONG_TIMES;
+   \   0000A1   90....       MOV     DPTR,#(key_ctl + 1)
+   \   0000A4   7490         MOV     A,#-0x70
+   \   0000A6   F0           MOVX    @DPTR,A
+   \   0000A7   A3           INC     DPTR
+   \   0000A8   7401         MOV     A,#0x1
+   \   0000AA   F0           MOVX    @DPTR,A
+    408          		}
+    409          		key_return_val = key_ctl.key_val;
+   \                     ??key_deal_11:
+   \   0000AB   90....       MOV     DPTR,#key_ctl
+   \   0000AE   E0           MOVX    A,@DPTR
+   \   0000AF   FA           MOV     R2,A
+    410          	}
+    411          	if((key_return_val & 0x60) && (key_return & 0x80))                  //32-127这些键值不支持长按
+   \                     ??key_deal_4:
+   \   0000B0   7460         MOV     A,#0x60
+   \   0000B2   5A           ANL     A,R2
+   \   0000B3   6007         JZ      ??key_deal_15
+   \   0000B5   E9           MOV     A,R1
+   \   0000B6   A2E7         MOV     C,0xE0 /* A   */.7
+   \   0000B8   5002         JNC     ??key_deal_15
+    412          	{
+    413          		return NO_KEY;
+   \   0000BA   7900         MOV     R1,#0x0
+    414          	}
+    415          #if USE_KEDIR
+    416          	if(!b_sys.kedir_flag)           //等待系统稳定后再响应三合一按键消息
+    417          	{
+    418          		return NO_KEY;
+    419          	}
+    420          #endif
+    421          	return key_return;
+   \                     ??key_deal_15:
+   \   0000BC   22           RET
+    422          }
+    423          
+    424          //扫描按键
+    425          #pragma optimize=2
+    426          #pragma location="SCAN_COM"
+
+   \                                 In segment SCAN_COM, align 1, keep-with-next
+    427          void key_scan(void)
+   \                     key_scan:
+    428          {
+   \   000000   EE           MOV     A,R6
+   \   000001   C0E0         PUSH    A
+   \   000003   C0..         PUSH    ?V0 + 0
+   \   000005   C0..         PUSH    ?V0 + 1
+   \   000007                ; Saved register size: 3
+   \   000007                ; Auto size: 0
+    429          	u8 key_val = NO_KEY;
+   \   000007   7E00         MOV     R6,#0x0
+    430          //	static bool key_scan_flag = true;	// Merlin 移除, 原因是这里不用 AD功能, 没有冲突问题
+    431          
+    432          //	if(key_scan_flag)
+    433          //	{
+    434          //		key_val = iokey_get();
+    435          //		if(key_val == NO_KEY)
+    436          //			key_scan_flag = false;
+    437          //	}
+    438          //	else
+    439          #if 0
+    440          	if(key_val == NO_KEY)
+    441          	{
+    442          		u8 key_val = NO_KEY;
+    443          		key_val = iokey_get();
+    444          		key_val = key_deal(key_val);
+    445          		if(key_val != NO_KEY)
+    446          		{
+    447          			//printf("%d ",key_val);
+    448          			if(key_val == 0x8E)
+    449          			{
+    450          				if(ocx.timeh < 23){
+    451          					ocx.timeh++;
+    452          				}else {
+    453          					ocx.timeh = 0;
+    454          				}
+    455          			}else if(key_val == 0x8F)
+    456          			{
+    457          				if(ocx.timel < 59){
+    458          					ocx.timel++;
+    459          				}else {
+    460          					ocx.timel = 0;
+    461          					ocx.timeh += 1;
+    462          				}
+    463          			}
+    464          			return;
+    465          		}
+    466          		key_val = NO_KEY;
+    467          	}
+    468          #endif
+    469          
+    470          //	if(key_val == NO_KEY)
+    471          //	{
+    472          //
+    473          //		else
+    474          	if(adc_get())
+   \   000009                ; Setup parameters for call to function adc_get
+   \   000009   12....       LCALL   adc_get
+   \   00000C   5069         JNC     ??key_scan_0
+    475          	{
+    476          		//uart_putc('0'+scan_ctl.adc_ch);
+    477          		//printf("  %d_%d",scan_ctl.adc_ch,scan_ctl.adc_val);
+    478          		switch(scan_ctl.adc_ch)
+   \   00000E   90....       MOV     DPTR,#scan_ctl
+   \   000011   E0           MOVX    A,@DPTR
+   \   000012   12....       LCALL   ?UC_SWITCH_DENSE
+   \                     `?<Jumptable for key_scan>_0`:
+   \   000015   02           DB        2
+   \   000016   03           DB        3
+   \   000017   ....         DW        ??key_scan_0
+   \   000019   ....         DW        ??key_scan_1
+   \   00001B   ....         DW        ??key_scan_2
+   \   00001D   ....         DW        ??key_scan_3
+   \   00001F   ....         DW        ??key_scan_4
+    479          		{
+    480          #if (USE_KEDIR && (USE_KEDIR_TYPE != KEDIR_IR_LED))
+    481          		case ADC_KEDIR:
+    482          			key_val = kedir_get();
+    483          			if(key_val == NO_KEY)
+    484          			{
+    485          #ifdef AX207X_TAG
+    486          				if(DCN == 0x00)
+    487          				{
+    488          					KEDIR_SCAN_BIG_1();
+    489          				}
+    490          				else
+    491          #endif
+    492          				{
+    493          					KEDIR_SCAN_BIG();
+    494          				}
+    495          				kedir_resume();
+    496          				ADC_CH_KEDIR_NEXT();
+    497          			}
+    498          			else
+    499          			{
+    500          				ADC_CH_KEDIR_KICK();
+    501          			}
+    502          			break;
+    503          #endif
+    504          
+    505          #if USE_ADKEY
+    506          		case ADC_KEY:
+    507          			//if(ir_key_sta)
+    508          			//{
+    509          			//	break;
+    510          			//}
+    511          			printf("%d ",scan_ctl.adc_val);
+    512          			if(key_val == NO_KEY)
+    513          			{
+    514          				ADC_CH_KEY_NEXT();
+    515          			}
+    516          			else
+    517          			{
+    518          				ADC_CH_KEY_KICK();
+    519          			}
+    520          			break;
+    521          #endif
+    522          
+    523          #if USE_ADKEY2
+    524          		case ADC_KEY2:
+    525          			OTHER_ADC_CHECK();
+   \                     ??key_scan_1:
+   \   000021                ; Setup parameters for call to function OTHER_ADC_CHECK
+   \   000021   12....       LCALL   OTHER_ADC_CHECK
+    526          			//ADC_CH_KEY2_NEXT();
+    527          			scan_ctl.adc_ch = ADC_BAT;
+   \   000024   7404         MOV     A,#0x4
+   \   000026   90....       MOV     DPTR,#scan_ctl
+   \   000029   F0           MOVX    @DPTR,A
+    528                      ADCCON = BIT(7) | BIT(3) | ADBAT_CHAN;
+   \   00002A   75D18D       MOV     0xd1,#-0x73
+   \   00002D   8048         SJMP    ??key_scan_0
+    529          			break;
+    530          #endif
+    531          
+    532          #if (BATTERY_CHECK || SOFT_POWEROFF_EN)
+    533          		case ADC_BAT:
+    534          			scan_ctl.bat_val = scan_ctl.adc_val;
+   \                     ??key_scan_3:
+   \   00002F   90....       MOV     DPTR,#(scan_ctl + 1)
+   \   000032   E0           MOVX    A,@DPTR
+   \   000033   90....       MOV     DPTR,#(scan_ctl + 4)
+   \   000036   F0           MOVX    @DPTR,A
+    535          			//ADC_CH_BAT_NEXT();
+    536          			scan_ctl.adc_ch = ADC_BAND_GAP;
+   \   000037   7405         MOV     A,#0x5
+   \   000039   90....       MOV     DPTR,#scan_ctl
+   \   00003C   F0           MOVX    @DPTR,A
+    537                      ADCCON = BIT(7) | BIT(3) | ADBAND_GAP_CHAN;
+   \   00003D   75D18E       MOV     0xd1,#-0x72
+   \   000040   8035         SJMP    ??key_scan_0
+    538          			break;
+    539          		case ADC_BAND_GAP:
+    540          			scan_ctl.band_gap_val = scan_ctl.adc_val;
+   \                     ??key_scan_4:
+   \   000042   90....       MOV     DPTR,#(scan_ctl + 1)
+   \   000045   E0           MOVX    A,@DPTR
+   \   000046   90....       MOV     DPTR,#(scan_ctl + 5)
+   \   000049   F0           MOVX    @DPTR,A
+    541          			//ADC_CH_BAND_NEXT();
+    542          			scan_ctl.adc_ch = ADC_KEYPOWER;
+   \   00004A   7403         MOV     A,#0x3
+   \   00004C   90....       MOV     DPTR,#scan_ctl
+   \   00004F   F0           MOVX    @DPTR,A
+    543                      ADCCON = BIT(7) | BIT(3) | ADKEY_POWER_CHAN;
+   \   000050   75D189       MOV     0xd1,#-0x77
+    544          			task_battery_check();
+   \   000053                ; Setup parameters for call to function task_battery_check
+   \   000053   12....       LCALL   task_battery_check
+   \   000056   801F         SJMP    ??key_scan_0
+    545          			break;
+    546          #endif
+    547          
+    548          #if USE_SDCLK_SDDET_PHONE_MUX
+    549          		case ADC_SD_DECT:
+    550          			scan_ctl.sddect_val = scan_ctl.adc_val;
+    551          			ADC_CH_SDDECT_NEXT();
+    552          			return;
+    553          #endif
+    554          
+    555          #if (HP_DET_EN)// && DAC_BUF_EN)         //HPDECT(use vcmbuf)
+    556          		case ADC_HP_DECT:
+    557          			scan_ctl.hpdect_val = scan_ctl.adc_val;
+    558          		//	ADC_CH_HPDECT_NEXT();	// original
+    559          			ADC_CH_KEY_NEXT();
+    560          			return;
+    561          #endif
+    562          
+    563          //#ifdef AX207X_TAG
+    564          #if SOFT_POWEROFF_EN
+    565          		case ADC_KEYPOWER:
+    566          			key_val = powerkey_get();
+   \                     ??key_scan_2:
+   \   000058                ; Setup parameters for call to function powerkey_get
+   \   000058   12....       LCALL   powerkey_get
+   \   00005B   E9           MOV     A,R1
+   \   00005C   FE           MOV     R6,A
+    567          
+    568          		//	uart_putc(key_val == NO_KEY ? 'm' : '*');
+    569          			if(key_val != NO_KEY)
+   \   00005D   EE           MOV     A,R6
+   \   00005E   600B         JZ      ??key_scan_5
+    570          			{
+    571          				//ADC_CH_BAND_NEXT();
+    572          				scan_ctl.adc_ch = ADC_KEYPOWER;
+   \   000060   7403         MOV     A,#0x3
+   \   000062   90....       MOV     DPTR,#scan_ctl
+   \   000065   F0           MOVX    @DPTR,A
+    573                          ADCCON = BIT(7) | BIT(3) | ADKEY_POWER_CHAN;
+   \   000066   75D189       MOV     0xd1,#-0x77
+   \   000069   800C         SJMP    ??key_scan_0
+    574          			}
+    575          			else
+    576          			{
+    577          				scan_ctl.adc_ch = ADC_KEY2;
+   \                     ??key_scan_5:
+   \   00006B   7402         MOV     A,#0x2
+   \   00006D   90....       MOV     DPTR,#scan_ctl
+   \   000070   F0           MOVX    @DPTR,A
+    578          				ADCMODE &= ~BIT(5);
+   \   000071   53D2DF       ANL     0xd2,#0xdf
+    579                      	ADCCON = BIT(7) | BIT(3) | ADKEDIR_CHAN;
+   \   000074   75D188       MOV     0xd1,#-0x78
+    580          			}
+    581          			break;
+    582          #endif
+    583          //#endif
+    584          
+    585          		}
+    586          
+    587          	}
+    588          
+    589          #if USE_IR
+    590          		u8 ir_val;
+    591          		if(key_val == NO_KEY || (scan_ctl.adc_val>0xE1 && scan_ctl.adc_val<0xF7))
+    592          		{
+    593          			ir_val = ir_process();
+    594          			if(ir_val != NO_KEY)
+    595          			{
+    596          				key_val = ir_val;
+    597          			}
+    598          		}
+    599          #endif
+    600          
+    601          #if 1
+    602          	if(key_val == NO_KEY)
+   \                     ??key_scan_0:
+   \   000077   EE           MOV     A,R6
+   \   000078   7005         JNZ     ??key_scan_6
+    603          	{
+    604          		//printf(".");
+    605          		key_val = iokey_get();
+   \   00007A                ; Setup parameters for call to function iokey_get
+   \   00007A   12....       LCALL   iokey_get
+   \   00007D   E9           MOV     A,R1
+   \   00007E   FE           MOV     R6,A
+    606          	}
+    607          #endif
+    608          
+    609          	key_val = key_deal(key_val);                            //处理按键值
+   \                     ??key_scan_6:
+   \   00007F                ; Setup parameters for call to function key_deal
+   \   00007F   EE           MOV     A,R6
+   \   000080   F9           MOV     R1,A
+   \   000081   12....       LCALL   key_deal
+   \   000084   E9           MOV     A,R1
+    610          	
+    611          	key_val = double_click_filter(key_val);
+   \   000085                ; Setup parameters for call to function double_click_filter
+   \   000085   F9           MOV     R1,A
+   \   000086   12....       LCALL   double_click_filter
+   \   000089   E9           MOV     A,R1
+   \   00008A   FE           MOV     R6,A
+    612          
+    613          	if(key_val != NO_KEY)
+   \   00008B   EE           MOV     A,R6
+   \   00008C   602A         JZ      ??key_scan_7
+    614          	{
+    615          		printf("%02x_",key_val);
+   \   00008E                ; Setup parameters for call to function my_printf
+   \   00008E   8E..         MOV     ?V0 + 0,R6
+   \   000090   75..00       MOV     ?V0 + 1,#0x0
+   \   000093   C0..         PUSH    ?V0 + 0
+   \   000095   C0..         PUSH    ?V0 + 1
+   \   000097   7A..         MOV     R2,#(`?<Constant "%02x_">` & 0xff)
+   \   000099   7B..         MOV     R3,#((`?<Constant "%02x_">` >> 8) & 0xff)
+   \   00009B   12....       LCALL   my_printf
+   \   00009E   D0E0         POP     A
+   \   0000A0   D0E0         POP     A
+    616          		put_msg(key_val);
+   \   0000A2                ; Setup parameters for call to function put_msg
+   \   0000A2   EE           MOV     A,R6
+   \   0000A3   F9           MOV     R1,A
+   \   0000A4   12....       LCALL   put_msg
+    617          
+    618          		if((sys_ctl.bat_charger_sta != 0) && (key_val == KU_POWER))  // 电源键按下时显示10s按键状态，后恢复充电状态
+   \   0000A7   90....       MOV     DPTR,#(sys_ctl + 14)
+   \   0000AA   E0           MOVX    A,@DPTR
+   \   0000AB   600B         JZ      ??key_scan_7
+   \   0000AD   748F         MOV     A,#-0x71
+   \   0000AF   6E           XRL     A,R6
+   \   0000B0   7006         JNZ     ??key_scan_7
+    619          			sys_ctl.bat_charger_cnt = 10;
+   \   0000B2   740A         MOV     A,#0xa
+   \   0000B4   90....       MOV     DPTR,#(sys_ctl + 15)
+   \   0000B7   F0           MOVX    @DPTR,A
+    620          
+    621          #if KEY_VOICE_EN
+    622          		if((key_val != KL_PLAY) && (key_val != KL_MODE) && (key_val != KL_EQ) && (key_val != KL_PLAYMODE))      //无功能按键不响应按键音
+    623          		{
+    624          			if((key_val & 0x80) && !(key_val & 0x40))       //长按时只有一次按键音
+    625          			{
+    626          				user_kick_kv();
+    627          			}
+    628          		}
+    629          #endif
+    630          	}
+    631          }
+   \                     ??key_scan_7:
+   \   0000B8   D0..         POP     ?V0 + 1
+   \   0000BA   D0..         POP     ?V0 + 0
+   \   0000BC   D0E0         POP     A
+   \   0000BE   FE           MOV     R6,A
+   \   0000BF   22           RET
+    632          
+    633          #if Emcode_Enable
+    634          
+    635          // 编码开关的分析程式
+    636          // 1. 左旋事件触发
+    637          // 2. 右旋事件触发
+    638          //
+
+   \                                 In segment XDATA_Z, align 1, keep-with-next
+   \   000000                REQUIRE __INIT_XDATA_Z
+    639          s8 SW1_WHIRL_cnt;	// A1B1 的计数旋转值, 正转与反转数, 搭配事件 T_KEY_SW1_WHIRL 操作
+   \                     SW1_WHIRL_cnt:
+   \   000000                DS 1
+
+   \                                 In segment XDATA_Z, align 1, keep-with-next
+   \   000000                REQUIRE __INIT_XDATA_Z
+    640          s8 SW2_WHIRL_cnt;	// A2B2 的计数旋转值, 正转与反转数, 搭配事件 T_KEY_SW2_WHIRL 操作
+   \                     SW2_WHIRL_cnt:
+   \   000000                DS 1
+
+   \                                 In segment XDATA_Z, align 1, keep-with-next
+   \   000000                REQUIRE __INIT_XDATA_Z
+    641          s8 SW3_WHIRL_cnt;	// A3B3 的计数旋转值, 正转与反转数, 搭配事件 T_KEY_SW3_WHIRL 操作
+   \                     SW3_WHIRL_cnt:
+   \   000000                DS 1
+    642          
+
+   \                                 In segment CODE_C, align 1
+    643          const s8 SW_AB_Whire_DIR[16] =
+   \                     SW_AB_Whire_DIR:
+   \   000000   00010000     DB 0, 1, 0, 0, 255, 0, 0, 0, 0, 0, 0, 255, 0, 0, 1, 0
+   \            FF000000
+   \            000000FF
+   \            00000100
+    644          {//	累加值,			// 本次AB, 上次AB
+    645          	Whire_None,		// 00, 00
+    646          	Whire_Right,	// 00, 01
+    647          Whire_None,//	Whire_Left,		// 00, 10		// 2步加1
+    648          	Whire_None,		// 00, 11
+    649          	Whire_Left,		// 01, 00
+    650          	Whire_None,		// 01, 01
+    651          	Whire_None,		// 01, 10
+    652          Whire_None,//	Whire_Right,	// 01, 11
+    653          Whire_None,//	Whire_Right,	// 10, 00
+    654          	Whire_None,		// 10, 01
+    655          	Whire_None,		// 10, 10
+    656          	Whire_Left,		// 10, 11
+    657          	Whire_None,		// 11, 00
+    658          Whire_None,//	Whire_Left,		// 11, 01
+    659          	Whire_Right, 	// 11, 10
+    660          	Whire_None,		// 11, 11
+    661          //	 t-n		...  t   ... 		t+n
+    662          //	A 0001111110000000000001111111000
+    663          //	B 0000001111110000001111110000000
+    664          //	正0001001001001000000000000000000
+    665          //	反0000000000000000001001001000100
+    666          };
+    667          
+
+   \                                 In segment NEAR_CODE, align 1, keep-with-next
+    668          void KEY_Whire1(void)
+   \                     KEY_Whire1:
+    669          {
+   \   000000   C0..         PUSH    ?V0 + 0
+   \   000002   C0..         PUSH    ?V0 + 1
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+    670          	static u8 Key3;			// Bit32 B3A3本次, Bit10 B3A3上次,
+    671          
+    672          	u8 ABAB;
+    673          
+    674          	
+    675          	Key3 &= 0x03;	// 清除本次数据
+   \   000004   90....       MOV     DPTR,#??Key3
+   \   000007   E0           MOVX    A,@DPTR
+   \   000008   5403         ANL     A,#0x3
+   \   00000A   F0           MOVX    @DPTR,A
+    676          	if(P1 & BIT(3)) Key3 |= 0x08;	// 更新本次B3
+   \   00000B   A293         MOV     C,0x90.3
+   \   00000D   5003         JNC     ??KEY_Whire1_0
+   \   00000F   D2E3         SETB    0xE0 /* A   */.3
+   \   000011   F0           MOVX    @DPTR,A
+    677          	if(P1 & BIT(2)) Key3 |= 0x04;	// 更新本次A3
+   \                     ??KEY_Whire1_0:
+   \   000012   A292         MOV     C,0x90.2
+   \   000014   5004         JNC     ??KEY_Whire1_1
+   \   000016   E0           MOVX    A,@DPTR
+   \   000017   D2E2         SETB    0xE0 /* A   */.2
+   \   000019   F0           MOVX    @DPTR,A
+    678          
+    679          	// 分析 B3A3的旋转方向
+    680          	ABAB = Key3 & 0x0f;		// 选择曲目
+   \                     ??KEY_Whire1_1:
+   \   00001A   12....       LCALL   ?Subroutine0
+    681          	if(SW_AB_Whire_DIR[ABAB] != Whire_None)
+   \                     ??CrossCallReturnLabel_0:
+   \   00001D   6028         JZ      ??KEY_Whire1_2
+    682          	{
+    683          		scan_ctl.disp_song_flag = true;
+   \   00001F   7401         MOV     A,#0x1
+   \   000021   90....       MOV     DPTR,#(scan_ctl + 10)
+   \   000024   12....       LCALL   ?Subroutine2
+    684          		scan_ctl.disp_cnt = Disp_Timer;
+    685          		
+    686          		SW3_WHIRL_cnt += SW_AB_Whire_DIR[ABAB];
+   \                     ??CrossCallReturnLabel_6:
+   \   000027   90....       MOV     DPTR,#SW3_WHIRL_cnt
+   \   00002A   E0           MOVX    A,@DPTR
+   \   00002B   2A           ADD     A,R2
+   \   00002C   F0           MOVX    @DPTR,A
+    687          		put_msg(T_KEY_SW3_WHIRL);
+   \   00002D                ; Setup parameters for call to function put_msg
+   \   00002D   790D         MOV     R1,#0xd
+   \   00002F   12....       LCALL   put_msg
+    688          		printf("S3:%d\n",SW3_WHIRL_cnt);
+   \   000032                ; Setup parameters for call to function my_printf
+   \   000032   90....       MOV     DPTR,#SW3_WHIRL_cnt
+   \   000035   12....       LCALL   ?Subroutine1
+   \                     ??CrossCallReturnLabel_3:
+   \   000038   C082         PUSH    DPL
+   \   00003A   C083         PUSH    DPH
+   \   00003C   7A..         MOV     R2,#(`?<Constant "S3:%d\\n">` & 0xff)
+   \   00003E   7B..         MOV     R3,#((`?<Constant "S3:%d\\n">` >> 8) & 0xff)
+   \   000040   12....       LCALL   my_printf
+   \   000043   D0E0         POP     A
+   \   000045   D0E0         POP     A
+    689          	}
+    690          
+    691          	// 保存给下一次分析使用
+    692          	Key3 >>= 2;
+   \                     ??KEY_Whire1_2:
+   \   000047   90....       MOV     DPTR,#??Key3
+   \   00004A                REQUIRE ?Subroutine5
+   \   00004A                ; // Fall through to label ?Subroutine5
+    693          }
+
+   \                                 In segment NEAR_CODE, align 1, keep-with-next
+   \                     ?Subroutine5:
+   \   000000   E0           MOVX    A,@DPTR
+   \   000001   13           RRC     A
+   \   000002   13           RRC     A
+   \   000003   543F         ANL     A,#0x3f
+   \   000005   F0           MOVX    @DPTR,A
+   \   000006   D0..         POP     ?V0 + 1
+   \   000008   D0..         POP     ?V0 + 0
+   \   00000A   22           RET
+
+   \                                 In segment NEAR_CODE, align 1, keep-with-next
+   \                     ?Subroutine0:
+   \   000000   E0           MOVX    A,@DPTR
+   \                     ??Subroutine0_0:
+   \   000001   540F         ANL     A,#0xf
+   \   000003   24..         ADD     A,#(SW_AB_Whire_DIR & 0xff)
+   \   000005   F582         MOV     DPL,A
+   \   000007   E4           CLR     A
+   \   000008   34..         ADDC    A,#((SW_AB_Whire_DIR >> 8) & 0xff)
+   \   00000A   F583         MOV     DPH,A
+   \   00000C   E4           CLR     A
+   \   00000D   93           MOVC    A,@A+DPTR
+   \   00000E   FA           MOV     R2,A
+   \   00000F   22           RET
+
+   \                                 In segment NEAR_CODE, align 1, keep-with-next
+   \                     ?Subroutine2:
+   \   000000   F0           MOVX    @DPTR,A
+   \   000001   7402         MOV     A,#0x2
+   \   000003   90....       MOV     DPTR,#(scan_ctl + 7)
+   \   000006   F0           MOVX    @DPTR,A
+   \   000007   22           RET
+
+   \                                 In segment NEAR_CODE, align 1, keep-with-next
+   \                     ?Subroutine1:
+   \   000000   E0           MOVX    A,@DPTR
+   \   000001   F582         MOV     DPL,A
+   \   000003   33           RLC     A
+   \   000004   95E0         SUBB    A,0xE0 /* A   */
+   \   000006   F583         MOV     DPH,A
+   \   000008   22           RET
+
+   \                                 In segment XDATA_Z, align 1, keep-with-next
+   \   000000                REQUIRE __INIT_XDATA_Z
+   \                     ??Key3:
+   \   000000                DS 1
+    694          
+
+   \                                 In segment NEAR_CODE, align 1, keep-with-next
+    695          void KEY_Whire2(void)
+   \                     KEY_Whire2:
+    696          {
+   \   000000   C0..         PUSH    ?V0 + 0
+   \   000002   C0..         PUSH    ?V0 + 1
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+    697          	static u8 Key21;		// Bit76 B2A2本次, Bit54 B2A2上次,
+    698          							// Bit32 B1A1本次, Bit10 B1A1上次,
+    699          	u8 ABAB;
+    700          
+    701          	Key21 &= 0x33;	// 清除本次数据
+   \   000004   90....       MOV     DPTR,#??Key21
+   \   000007   E0           MOVX    A,@DPTR
+   \   000008   5433         ANL     A,#0x33
+   \   00000A   F0           MOVX    @DPTR,A
+    702          	if(P1 & BIT(1)) Key21 |= 0x80;	// 更新本次B2
+   \   00000B   A291         MOV     C,0x90.1
+   \   00000D   5003         JNC     ??KEY_Whire2_0
+   \   00000F   D2E7         SETB    0xE0 /* A   */.7
+   \   000011   F0           MOVX    @DPTR,A
+    703          	if(P1 & BIT(0)) Key21 |= 0x40;	// 更新本次A2
+   \                     ??KEY_Whire2_0:
+   \   000012   A290         MOV     C,0x90.0
+   \   000014   5004         JNC     ??KEY_Whire2_1
+   \   000016   E0           MOVX    A,@DPTR
+   \   000017   D2E6         SETB    0xE0 /* A   */.6
+   \   000019   F0           MOVX    @DPTR,A
+    704          	if(P0 & BIT(2)) Key21 |= 0x08;	// 更新本次B1
+   \                     ??KEY_Whire2_1:
+   \   00001A   A282         MOV     C,0x80.2
+   \   00001C   5004         JNC     ??KEY_Whire2_2
+   \   00001E   E0           MOVX    A,@DPTR
+   \   00001F   D2E3         SETB    0xE0 /* A   */.3
+   \   000021   F0           MOVX    @DPTR,A
+    705          	if(P0 & BIT(1)) Key21 |= 0x04;	// 更新本次A1
+   \                     ??KEY_Whire2_2:
+   \   000022   A281         MOV     C,0x80.1
+   \   000024   5004         JNC     ??KEY_Whire2_3
+   \   000026   E0           MOVX    A,@DPTR
+   \   000027   D2E2         SETB    0xE0 /* A   */.2
+   \   000029   F0           MOVX    @DPTR,A
+    706          	
+    707          	// 分析 B1A1的旋转方向
+    708          	ABAB = Key21 & 0x0f;	// 选择音量
+   \                     ??KEY_Whire2_3:
+   \   00002A   12....       LCALL   ?Subroutine0
+    709          	if(SW_AB_Whire_DIR[ABAB] != Whire_None)
+   \                     ??CrossCallReturnLabel_1:
+   \   00002D   602E         JZ      ??KEY_Whire2_4
+    710          	{
+    711          		if(scan_ctl.disp_light_set_flag == 0){		// 非设置音量模式时启用
+   \   00002F   90....       MOV     DPTR,#(scan_ctl + 12)
+   \   000032   E0           MOVX    A,@DPTR
+   \   000033   7008         JNZ     ??CrossCallReturnLabel_7
+    712          			scan_ctl.disp_volume_flag = true;
+   \   000035   7401         MOV     A,#0x1
+   \   000037   90....       MOV     DPTR,#(scan_ctl + 9)
+   \   00003A   12....       LCALL   ?Subroutine2
+    713          			scan_ctl.disp_cnt = Disp_Timer;
+    714          		}
+    715          		
+    716          		SW1_WHIRL_cnt += SW_AB_Whire_DIR[ABAB];
+   \                     ??CrossCallReturnLabel_7:
+   \   00003D   90....       MOV     DPTR,#SW1_WHIRL_cnt
+   \   000040   E0           MOVX    A,@DPTR
+   \   000041   2A           ADD     A,R2
+   \   000042   F0           MOVX    @DPTR,A
+    717          		put_msg(T_KEY_SW1_WHIRL);
+   \   000043                ; Setup parameters for call to function put_msg
+   \   000043   7909         MOV     R1,#0x9
+   \   000045   12....       LCALL   put_msg
+    718          		printf("S1%d\n",SW1_WHIRL_cnt);
+   \   000048                ; Setup parameters for call to function my_printf
+   \   000048   90....       MOV     DPTR,#SW1_WHIRL_cnt
+   \   00004B   12....       LCALL   ?Subroutine1
+   \                     ??CrossCallReturnLabel_4:
+   \   00004E   C082         PUSH    DPL
+   \   000050   C083         PUSH    DPH
+   \   000052   7A..         MOV     R2,#(`?<Constant "S1%d\\n">` & 0xff)
+   \   000054   7B..         MOV     R3,#((`?<Constant "S1%d\\n">` >> 8) & 0xff)
+   \   000056   12....       LCALL   my_printf
+   \   000059   D0E0         POP     A
+   \   00005B   D0E0         POP     A
+    719          	}
+    720          
+    721          	// 分析 B2A2的旋转方向
+    722          	ABAB = Key21 >> 4;		// 选择定时
+   \                     ??KEY_Whire2_4:
+   \   00005D   90....       MOV     DPTR,#??Key21
+   \   000060   E0           MOVX    A,@DPTR
+   \   000061   C4           SWAP    A
+   \   000062   12....       LCALL   ??Subroutine0_0
+    723          	if(SW_AB_Whire_DIR[ABAB] != Whire_None)
+   \                     ??CrossCallReturnLabel_2:
+   \   000065   602E         JZ      ??KEY_Whire2_5
+    724          	{
+    725          		if(scan_ctl.disp_clock_set_flag == 0){		// 非设置时钟模式时启用
+   \   000067   90....       MOV     DPTR,#(scan_ctl + 11)
+   \   00006A   E0           MOVX    A,@DPTR
+   \   00006B   7008         JNZ     ??CrossCallReturnLabel_8
+    726          			scan_ctl.disp_timer_flag = true;
+   \   00006D   7401         MOV     A,#0x1
+   \   00006F   90....       MOV     DPTR,#(scan_ctl + 8)
+   \   000072   12....       LCALL   ?Subroutine2
+    727          			scan_ctl.disp_cnt = Disp_Timer;
+    728          		}
+    729          		
+    730          		SW2_WHIRL_cnt += SW_AB_Whire_DIR[ABAB];
+   \                     ??CrossCallReturnLabel_8:
+   \   000075   90....       MOV     DPTR,#SW2_WHIRL_cnt
+   \   000078   E0           MOVX    A,@DPTR
+   \   000079   2A           ADD     A,R2
+   \   00007A   F0           MOVX    @DPTR,A
+    731          		put_msg(T_KEY_SW2_WHIRL);
+   \   00007B                ; Setup parameters for call to function put_msg
+   \   00007B   790B         MOV     R1,#0xb
+   \   00007D   12....       LCALL   put_msg
+    732          		printf("S2:%d\n",SW2_WHIRL_cnt);
+   \   000080                ; Setup parameters for call to function my_printf
+   \   000080   90....       MOV     DPTR,#SW2_WHIRL_cnt
+   \   000083   12....       LCALL   ?Subroutine1
+   \                     ??CrossCallReturnLabel_5:
+   \   000086   C082         PUSH    DPL
+   \   000088   C083         PUSH    DPH
+   \   00008A   7A..         MOV     R2,#(`?<Constant "S2:%d\\n">` & 0xff)
+   \   00008C   7B..         MOV     R3,#((`?<Constant "S2:%d\\n">` >> 8) & 0xff)
+   \   00008E   12....       LCALL   my_printf
+   \   000091   D0E0         POP     A
+   \   000093   D0E0         POP     A
+    733          	}
+    734          
+    735          	// 保存给下一次分析使用
+    736          	Key21 >>= 2;
+   \                     ??KEY_Whire2_5:
+   \   000095   90....       MOV     DPTR,#??Key21
+   \   000098   02....       LJMP    ?Subroutine5
+    737          }
+
+   \                                 In segment XDATA_Z, align 1, keep-with-next
+   \   000000                REQUIRE __INIT_XDATA_Z
+   \                     ??Key21:
+   \   000000                DS 1
+    738          
+    739          
+    740          #endif
+    741          
+    742          #if (BATTERY_CHECK || SOFT_POWEROFF_EN)
+    743          //电池电量检测
+    744          #pragma location="BAT_CHECK"
+
+   \                                 In segment BAT_CHECK, align 1, keep-with-next
+    745          void task_battery_check(void)
+   \                     task_battery_check:
+    746          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    747          	static u8  bat_count1 = 0,bat_count = 0;
+    748          	static u16 r = 1000,z = 0;
+    749          	static u8 bat_sta = VOL_INIT,bat_sta_bakeup = 0;
+    750          
+    751          	if(scan_ctl.bat_val > z)
+   \   000000   90....       MOV     DPTR,#(scan_ctl + 4)
+   \   000003   E0           MOVX    A,@DPTR
+   \   000004   F8           MOV     R0,A
+   \   000005   90....       MOV     DPTR,#??z
+   \   000008   C3           CLR     C
+   \   000009   E0           MOVX    A,@DPTR
+   \   00000A   98           SUBB    A,R0
+   \   00000B   A3           INC     DPTR
+   \   00000C   E0           MOVX    A,@DPTR
+   \   00000D   9400         SUBB    A,#0x0
+   \   00000F   5008         JNC     ??task_battery_check_0
+    752          	{
+    753          		z = scan_ctl.bat_val;
+   \   000011   90....       MOV     DPTR,#??z
+   \   000014   E8           MOV     A,R0
+   \   000015   F0           MOVX    @DPTR,A
+   \   000016   A3           INC     DPTR
+   \   000017   E4           CLR     A
+   \   000018   F0           MOVX    @DPTR,A
+    754          	}
+    755          	if(scan_ctl.band_gap_val < r)
+   \                     ??task_battery_check_0:
+   \   000019   90....       MOV     DPTR,#(scan_ctl + 5)
+   \   00001C   E0           MOVX    A,@DPTR
+   \   00001D   FA           MOV     R2,A
+   \   00001E   90....       MOV     DPTR,#??r
+   \   000021   E0           MOVX    A,@DPTR
+   \   000022   F8           MOV     R0,A
+   \   000023   A3           INC     DPTR
+   \   000024   E0           MOVX    A,@DPTR
+   \   000025   F9           MOV     R1,A
+   \   000026   C3           CLR     C
+   \   000027   EA           MOV     A,R2
+   \   000028   98           SUBB    A,R0
+   \   000029   E4           CLR     A
+   \   00002A   99           SUBB    A,R1
+   \   00002B   5008         JNC     ??task_battery_check_1
+    756          	{
+    757          		r = scan_ctl.band_gap_val;
+   \   00002D   90....       MOV     DPTR,#??r
+   \   000030   EA           MOV     A,R2
+   \   000031   F0           MOVX    @DPTR,A
+   \   000032   A3           INC     DPTR
+   \   000033   E4           CLR     A
+   \   000034   F0           MOVX    @DPTR,A
+    758          	}
+    759          	bat_count++;
+   \                     ??task_battery_check_1:
+   \   000035   90....       MOV     DPTR,#??bat_count
+   \   000038   E0           MOVX    A,@DPTR
+   \   000039   04           INC     A
+   \   00003A   F0           MOVX    @DPTR,A
+    760          	if(bat_count >= 50)
+   \   00003B   C3           CLR     C
+   \   00003C   9432         SUBB    A,#0x32
+   \   00003E   5003         JNC     $+5
+   \   000040   02....       LJMP    ??task_battery_check_2
+    761          	{
+    762          #ifdef AX207X_TAG
+    763          			if(z * 123 < r * VOL_AD_32V)		  		//小于3.2V	关机     20180410
+    764          			{
+    765          				bat_sta = VOL_LESS_33V;
+    766          				vol_less_33V_flag = 1;
+    767          				vol_less_34V_flag = 1;
+    768          				ocx.led_sta = LED_STA_FAST_GLITTER;
+    769          			}
+    770          			else if(z * 123 < r * VOL_AD_34V)		  	//小于3.4V 	低压报警
+    771          			{
+    772          				bat_sta = VOL_LESS_36V;
+    773          				sys_ctl.bat_sta_flag = 1;
+    774          				if(sys_ctl.alarm_cnt == 0xFF)
+    775          				{
+    776          					sys_ctl.alarm_cnt = 0x1E;     		// 30s
+    777          				}
+    778          			}
+    779          
+    780          #endif
+    781          
+    782          #ifdef AX107X_TAG
+    783          			if(z * 123 < r * VOL_AD_30V)		  		//小于3.2V   关机	20180410
+   \   000043   90....       MOV     DPTR,#??z
+   \   000046   E0           MOVX    A,@DPTR
+   \   000047   F8           MOV     R0,A
+   \   000048   A3           INC     DPTR
+   \   000049   E0           MOVX    A,@DPTR
+   \   00004A   F9           MOV     R1,A
+   \   00004B   E8           MOV     A,R0
+   \   00004C   75F07B       MOV     B,#0x7b
+   \   00004F   A4           MUL     AB
+   \   000050   F8           MOV     R0,A
+   \   000051   AAF0         MOV     R2,B
+   \   000053   75F07B       MOV     B,#0x7b
+   \   000056   E9           MOV     A,R1
+   \   000057   A4           MUL     AB
+   \   000058   2A           ADD     A,R2
+   \   000059   F9           MOV     R1,A
+   \   00005A   12....       LCALL   ?Subroutine3
+   \                     ??CrossCallReturnLabel_9:
+   \   00005D   75F096       MOV     B,#-0x6a
+   \   000060   A4           MUL     AB
+   \   000061   FA           MOV     R2,A
+   \   000062   ACF0         MOV     R4,B
+   \   000064   75F096       MOV     B,#-0x6a
+   \   000067   EB           MOV     A,R3
+   \   000068   A4           MUL     AB
+   \   000069   2C           ADD     A,R4
+   \   00006A   FB           MOV     R3,A
+   \   00006B   C3           CLR     C
+   \   00006C   E8           MOV     A,R0
+   \   00006D   9A           SUBB    A,R2
+   \   00006E   E9           MOV     A,R1
+   \   00006F   9B           SUBB    A,R3
+   \   000070   5017         JNC     ??task_battery_check_3
+    784          			{
+    785          				bat_sta = VOL_LESS_33V;
+   \   000072   7404         MOV     A,#0x4
+   \   000074   90....       MOV     DPTR,#??bat_sta
+   \   000077   F0           MOVX    @DPTR,A
+    786          				vol_less_33V_flag = 1;
+   \   000078   7401         MOV     A,#0x1
+   \   00007A   90....       MOV     DPTR,#vol_less_33V_flag
+   \   00007D   F0           MOVX    @DPTR,A
+    787          				vol_less_34V_flag = 1;
+   \   00007E   90....       MOV     DPTR,#vol_less_34V_flag
+   \   000081   F0           MOVX    @DPTR,A
+    788          				ocx.led_sta = LED_STA_FAST_GLITTER;
+   \   000082   78..         MOV     R0,#(ocx + 17)
+   \   000084   7602         MOV     @R0,#0x2
+   \   000086   02....       LJMP    ??task_battery_check_4
+    789          			}else if(z * 123 < r * VOL_AD_32V)		  	//小于3.4V	 低压报警
+   \                     ??task_battery_check_3:
+   \   000089   12....       LCALL   ?Subroutine3
+   \                     ??CrossCallReturnLabel_10:
+   \   00008C   75F0A0       MOV     B,#-0x60
+   \   00008F   A4           MUL     AB
+   \   000090   FA           MOV     R2,A
+   \   000091   ACF0         MOV     R4,B
+   \   000093   75F0A0       MOV     B,#-0x60
+   \   000096   EB           MOV     A,R3
+   \   000097   A4           MUL     AB
+   \   000098   2C           ADD     A,R4
+   \   000099   FB           MOV     R3,A
+   \   00009A   C3           CLR     C
+   \   00009B   E8           MOV     A,R0
+   \   00009C   9A           SUBB    A,R2
+   \   00009D   E9           MOV     A,R1
+   \   00009E   9B           SUBB    A,R3
+   \   00009F   5018         JNC     ??task_battery_check_5
+    790          			{
+    791          				bat_sta = VOL_LESS_36V;
+   \   0000A1   7407         MOV     A,#0x7
+   \   0000A3   90....       MOV     DPTR,#??bat_sta
+   \   0000A6   F0           MOVX    @DPTR,A
+    792          				sys_ctl.bat_sta_flag = 1;
+   \   0000A7   7401         MOV     A,#0x1
+   \   0000A9   90....       MOV     DPTR,#(sys_ctl + 12)
+   \   0000AC   F0           MOVX    @DPTR,A
+    793          				if(sys_ctl.alarm_cnt == 0xFF)
+   \   0000AD   90....       MOV     DPTR,#(sys_ctl + 13)
+   \   0000B0   E0           MOVX    A,@DPTR
+   \   0000B1   64FF         XRL     A,#0xff
+   \   0000B3   7056         JNZ     ??task_battery_check_4
+    794          				{
+    795          					sys_ctl.alarm_cnt = 0x1E;     		// 30s
+   \   0000B5   741E         MOV     A,#0x1e
+   \   0000B7   8051         SJMP    ??task_battery_check_6
+    796          				}
+    797          			}
+    798          #endif
+    799          
+    800          		//	else if(z * 123 < r * VOL_AD_32V)		  //小于3.2V
+    801          		//	{
+    802          		//		bat_sta = VOL_LESS_32V;
+    803          		//	}
+    804          #if SOFT_POWEROFF_EN
+    805          			else if(z * 123 > r * VOL_AD_44V)	 //大于4.4V
+   \                     ??task_battery_check_5:
+   \   0000B9   12....       LCALL   ?Subroutine3
+   \                     ??CrossCallReturnLabel_11:
+   \   0000BC   75F0DC       MOV     B,#-0x24
+   \   0000BF   A4           MUL     AB
+   \   0000C0   FA           MOV     R2,A
+   \   0000C1   ACF0         MOV     R4,B
+   \   0000C3   75F0DC       MOV     B,#-0x24
+   \   0000C6   EB           MOV     A,R3
+   \   0000C7   A4           MUL     AB
+   \   0000C8   2C           ADD     A,R4
+   \   0000C9   FB           MOV     R3,A
+   \   0000CA   C3           CLR     C
+   \   0000CB   EA           MOV     A,R2
+   \   0000CC   98           SUBB    A,R0
+   \   0000CD   EB           MOV     A,R3
+   \   0000CE   99           SUBB    A,R1
+   \   0000CF   5007         JNC     ??task_battery_check_7
+    806          			{
+    807          				bat_sta = VOL_GREATER_44V;
+   \   0000D1   7410         MOV     A,#0x10
+   \   0000D3   90....       MOV     DPTR,#??bat_sta
+   \   0000D6   8032         SJMP    ??task_battery_check_6
+    808          			}
+    809          #endif
+    810          			else //大于3.6v
+    811          			{
+    812          				bat_sta = VOL_OTHER;
+   \                     ??task_battery_check_7:
+   \   0000D8   7401         MOV     A,#0x1
+   \   0000DA   90....       MOV     DPTR,#??bat_sta
+   \   0000DD   F0           MOVX    @DPTR,A
+    813          				sys_ctl.alarm_cnt = 0xFF;
+   \   0000DE   74FF         MOV     A,#-0x1
+   \   0000E0   90....       MOV     DPTR,#(sys_ctl + 13)
+   \   0000E3   F0           MOVX    @DPTR,A
+    814          				sys_ctl.bat_sta_flag = 0;
+   \   0000E4   E4           CLR     A
+   \   0000E5   90....       MOV     DPTR,#(sys_ctl + 12)
+   \   0000E8   F0           MOVX    @DPTR,A
+    815          				if(vol_less_34V_flag ==1)//等于1，是电压低于3.1v后充电
+   \   0000E9   90....       MOV     DPTR,#vol_less_34V_flag
+   \   0000EC   E0           MOVX    A,@DPTR
+   \   0000ED   6401         XRL     A,#0x1
+   \   0000EF   700C         JNZ     ??task_battery_check_8
+    816          				{
+    817          					if(b_msc.pause == 1)
+   \   0000F1   A2..         MOV     C,b_msc.1
+   \   0000F3   78..         MOV     R0,#(ocx + 17)
+   \   0000F5   5004         JNC     ??task_battery_check_9
+    818          					{
+    819          						ocx.led_sta = LED_STA_SLOW_GLITTER;
+   \   0000F7   7603         MOV     @R0,#0x3
+   \   0000F9   8002         SJMP    ??task_battery_check_8
+    820          					}
+    821          					else
+    822          					{
+    823          						ocx.led_sta = LED_STA_ON;
+   \                     ??task_battery_check_9:
+   \   0000FB   7601         MOV     @R0,#0x1
+    824          					}
+    825          
+    826          				}
+    827          				vol_less_34V_flag = 0;
+   \                     ??task_battery_check_8:
+   \   0000FD   E4           CLR     A
+   \   0000FE   F0           MOVX    @DPTR,A
+    828          				vol_less_33V_flag = 0;
+   \   0000FF   90....       MOV     DPTR,#vol_less_33V_flag
+   \   000102   F0           MOVX    @DPTR,A
+    829          				vol_less_power_warning_flag=0;
+   \   000103   90....       MOV     DPTR,#vol_less_power_warning_flag
+   \   000106   F0           MOVX    @DPTR,A
+    830          				vol_less_34V_blink =0;
+   \   000107   90....       MOV     DPTR,#vol_less_34V_blink
+   \                     ??task_battery_check_6:
+   \   00010A   F0           MOVX    @DPTR,A
+    831          
+    832          			}
+    833          
+    834          			r = 1000;
+   \                     ??task_battery_check_4:
+   \   00010B   90....       MOV     DPTR,#??r
+   \   00010E   74E8         MOV     A,#-0x18
+   \   000110   F0           MOVX    @DPTR,A
+   \   000111   A3           INC     DPTR
+   \   000112   7403         MOV     A,#0x3
+   \   000114   F0           MOVX    @DPTR,A
+    835          			z = 0;
+   \   000115   90....       MOV     DPTR,#??z
+   \   000118   E4           CLR     A
+   \   000119   F0           MOVX    @DPTR,A
+   \   00011A   A3           INC     DPTR
+   \   00011B   F0           MOVX    @DPTR,A
+    836          			bat_count = 0;
+   \   00011C   90....       MOV     DPTR,#??bat_count
+   \   00011F   F0           MOVX    @DPTR,A
+    837          
+    838          			if(bat_sta_bakeup != bat_sta)
+   \   000120   90....       MOV     DPTR,#??bat_sta_bakeup
+   \   000123   E0           MOVX    A,@DPTR
+   \   000124   FA           MOV     R2,A
+   \   000125   90....       MOV     DPTR,#??bat_sta
+   \   000128   E0           MOVX    A,@DPTR
+   \   000129   6A           XRL     A,R2
+   \   00012A   600B         JZ      ??task_battery_check_10
+    839          			{
+    840          				bat_sta_bakeup = bat_sta;
+   \   00012C   E0           MOVX    A,@DPTR
+   \   00012D   90....       MOV     DPTR,#??bat_sta_bakeup
+   \   000130   F0           MOVX    @DPTR,A
+    841          				bat_count1 = 0;
+   \   000131   E4           CLR     A
+   \   000132   90....       MOV     DPTR,#??bat_count1
+   \   000135   8005         SJMP    ??task_battery_check_11
+    842          			}
+    843          			else
+    844          			{
+    845          				bat_count1++;
+   \                     ??task_battery_check_10:
+   \   000137   90....       MOV     DPTR,#??bat_count1
+   \   00013A   E0           MOVX    A,@DPTR
+   \   00013B   04           INC     A
+   \                     ??task_battery_check_11:
+   \   00013C   F0           MOVX    @DPTR,A
+    846          			}
+    847          #if SOFT_POWEROFF_EN
+    848          			if(sys_ctl.bat_sta == VOL_INIT) 	//上电第一次
+   \   00013D   90....       MOV     DPTR,#(sys_ctl + 6)
+   \   000140   E0           MOVX    A,@DPTR
+   \   000141   7009         JNZ     ??task_battery_check_12
+    849          			{
+    850          				sys_ctl.bat_sta = bat_sta;
+   \   000143   90....       MOV     DPTR,#??bat_sta
+   \   000146   E0           MOVX    A,@DPTR
+   \   000147   90....       MOV     DPTR,#(sys_ctl + 6)
+   \   00014A   F0           MOVX    @DPTR,A
+    851          				return;
+   \   00014B   22           RET
+    852          			}
+    853          #endif
+    854          			if(bat_count1 >= 5)
+   \                     ??task_battery_check_12:
+   \   00014C   90....       MOV     DPTR,#??bat_count1
+   \   00014F   E0           MOVX    A,@DPTR
+   \   000150   C3           CLR     C
+   \   000151   9405         SUBB    A,#0x5
+   \   000153   400A         JC      ??task_battery_check_13
+    855          			{
+    856          				bat_count1 = 0;
+   \   000155   E4           CLR     A
+   \   000156   F0           MOVX    @DPTR,A
+    857          				sys_ctl.bat_sta = bat_sta;
+   \   000157   90....       MOV     DPTR,#??bat_sta
+   \   00015A   E0           MOVX    A,@DPTR
+   \   00015B   90....       MOV     DPTR,#(sys_ctl + 6)
+   \   00015E   F0           MOVX    @DPTR,A
+    858          			}
+    859          		//	printf("bat_sta=%d\n",sys_ctl.bat_sta);
+    860          #if TASK_POWEROFF_EN
+    861          			if(sys_ctl.bat_sta == VOL_LESS_33V)
+   \                     ??task_battery_check_13:
+   \   00015F   90....       MOV     DPTR,#(sys_ctl + 6)
+   \   000162   E0           MOVX    A,@DPTR
+   \   000163   6404         XRL     A,#0x4
+   \   000165   701E         JNZ     ??task_battery_check_2
+    862          			{
+    863          				if(vol_less_power_warning_flag==1)
+   \   000167   90....       MOV     DPTR,#vol_less_power_warning_flag
+   \   00016A   E0           MOVX    A,@DPTR
+   \   00016B   6401         XRL     A,#0x1
+   \   00016D   7016         JNZ     ??task_battery_check_2
+    864          				{
+    865          					if(task_ctl.work_sta != TASK_POWEROFF)
+   \   00016F   7409         MOV     A,#0x9
+   \   000171   65..         XRL     A,task_ctl
+   \   000173   6010         JZ      ??task_battery_check_2
+    866          					{
+    867          						task_ctl.work_sta = TASK_POWEROFF;	 //低电关机
+   \   000175   75..09       MOV     task_ctl,#0x9
+    868          						sys_ctl.user_power_down_flag = 1;
+   \   000178   7401         MOV     A,#0x1
+   \   00017A   90....       MOV     DPTR,#(sys_ctl + 11)
+   \   00017D   F0           MOVX    @DPTR,A
+    869          						printf("低电关机.\n");
+   \   00017E                ; Setup parameters for call to function my_printf
+   \   00017E   7A..         MOV     R2,#(`?<Constant "\\265\\315\\265\\347\\271\\330\\273\\372.\\` & 0xff)
+   \   000180   7B..         MOV     R3,#((`?<Constant "\\265\\315\\265\\347\\271\\330\\273\\372.\\` >> 8) & 0xff)
+   \   000182   12....       LCALL   my_printf
+   \                     ??task_battery_check_2:
+   \   000185   22           RET
+    870          
+    871          					}
+    872          				}
+    873          
+    874          			}
+    875          #endif
+    876          
+    877          	}
+    878          }
+
+   \                                 In segment BAT_CHECK, align 1, keep-with-next
+   \                     ?Subroutine3:
+   \   000000   90....       MOV     DPTR,#??r
+   \   000003   E0           MOVX    A,@DPTR
+   \   000004   FA           MOV     R2,A
+   \   000005   A3           INC     DPTR
+   \   000006   E0           MOVX    A,@DPTR
+   \   000007   FB           MOV     R3,A
+   \   000008   EA           MOV     A,R2
+   \   000009   22           RET
+
+   \                                 In segment XDATA_Z, align 1, keep-with-next
+   \   000000                REQUIRE __INIT_XDATA_Z
+   \                     ??bat_count1:
+   \   000000                DS 1
+
+   \                                 In segment XDATA_Z, align 1, keep-with-next
+   \   000000                REQUIRE __INIT_XDATA_Z
+   \                     ??bat_count:
+   \   000000                DS 1
+
+   \                                 In segment XDATA_I, align 1, keep-with-next
+   \                     ??r:
+   \   000000                DS 2
+   \   000002                REQUIRE `?<Initializer for r>`
+   \   000002                REQUIRE __INIT_XDATA_I
+
+   \                                 In segment XDATA_Z, align 1, keep-with-next
+   \   000000                REQUIRE __INIT_XDATA_Z
+   \                     ??z:
+   \   000000                DS 2
+
+   \                                 In segment XDATA_Z, align 1, keep-with-next
+   \   000000                REQUIRE __INIT_XDATA_Z
+   \                     ??bat_sta:
+   \   000000                DS 1
+
+   \                                 In segment XDATA_Z, align 1, keep-with-next
+   \   000000                REQUIRE __INIT_XDATA_Z
+   \                     ??bat_sta_bakeup:
+   \   000000                DS 1
+
+   \                                 In segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for r>`:
+   \   000000   E803         DW 1000
+
+   \                                 In segment CODE_C, align 1
+   \                     `?<Constant "adc_ch: %d\\n">`:
+   \   000000   6164635F     DB "adc_ch: %d\012"
+   \            63683A20
+   \            25640A00
+
+   \                                 In segment CODE_C, align 1
+   \                     `?<Constant "S3:%d\\n">`:
+   \   000000   53333A25     DB "S3:%d\012"
+   \            640A00  
+
+   \                                 In segment CODE_C, align 1
+   \                     `?<Constant "S1%d\\n">`:
+   \   000000   53312564     DB "S1%d\012"
+   \            0A00    
+
+   \                                 In segment CODE_C, align 1
+   \                     `?<Constant "S2:%d\\n">`:
+   \   000000   53323A25     DB "S2:%d\012"
+   \            640A00  
+
+   \                                 In segment CODE_C, align 1
+   \                     `?<Constant "\\265\\315\\265\\347\\271\\330\\273\\372.\\`:
+   \   000000   B5CDB5E7     DB "\265\315\265\347\271\330\273\372.\012"
+   \            B9D8BBFA
+   \            2E0A00  
+
+   \                                 In segment CODE_C, align 1
+   \                     `?<Constant ".">`:
+   \   000000   2E00         DB "."
+
+   \                                 In segment CODE_C, align 1
+   \                     `?<Constant "%02x_">`:
+   \   000000   25303278     DB "%02x_"
+   \            5F00    
+    879          #endif
+
+   Maximum stack usage in bytes:
+
+     Function                 EXT_STACK PSTACK XSTACK
+     --------                 --------- ------ ------
+     KEY_Whire1                      4      0      0
+       -> put_msg                    4      0      0
+       -> my_printf                  8      0      0
+     KEY_Whire2                      4      0      0
+       -> put_msg                    4      0      0
+       -> my_printf                  8      0      0
+       -> put_msg                    4      0      0
+       -> my_printf                  8      0      0
+     OTHER_ADC_CHECK                 3      0      0
+     adc_get                         5      0      0
+       -> my_printf                  4      0      0
+     adkey2_get                      0      0      0
+     adkey2_init                     0      0      0
+       -> mixio_adinit               0      0      0
+     adkey_get                       0      0      0
+     double_click_filter             4      0      0
+       -> my_printf                  2      0      0
+     get_pwrkey_adcval               0      0      0
+     iokey_get                       3      0      0
+     iokey_init                      0      0      0
+     kedir_get                       1      0      0
+       -> kedir_group_num            0      0      0
+     key_deal                        3      0      0
+     key_init                        0      0      0
+       -> my_memset                  0      0      0
+       -> my_memset                  0      0      0
+       -> mixio_adinit               0      0      0
+       -> iokey_init                 0      0      0
+     key_scan                        5      0      0
+       -> adc_get                    6      0      0
+       -> OTHER_ADC_CHECK            6      0      0
+       -> task_battery_check         6      0      0
+       -> powerkey_get               6      0      0
+       -> iokey_get                  6      0      0
+       -> key_deal                   6      0      0
+       -> double_click_filter        6      0      0
+       -> my_printf                 10      0      0
+       -> put_msg                    6      0      0
+     mixio_adinit                    0      0      0
+     powerkey_get                    3      0      0
+       -> irtc_read_cmd              0      0      0
+     task_battery_check              3      0      0
+       -> my_printf                  0      0      0
+
+
+   Segment part sizes:
+
+     Function/Label                 Bytes
+     --------------                 -----
+     P0                                1
+     P1                                1
+     P0DIR                             1
+     ADCCON                            1
+     ADCMODE                           1
+     ADCDATAH                          1
+     WDTCON                            1
+     key_ctl                           6
+     scan_ctl                         18
+     vol_less_power_warning_flag       1
+     vol_less_33V_flag                 1
+     vol_less_34V_flag                 1
+     mixio_adinit                     25
+     adkey2_init                       4
+     iokey_init                       14
+     key_init                         68
+     get_pwrkey_adcval                15
+     adc_get                          49
+     kedir_get                        43
+     ?Subroutine4                      5
+     adkey_get                        35
+     iokey_get                        17
+     OTHER_ADC_CHECK                  70
+     adkey2_get                       36
+     powerkey_get                     51
+     double_click_filter              75
+     ms_2_cnt                          1
+     key_click_cnt                     1
+     key_deal                        189
+     key_scan                        192
+     SW1_WHIRL_cnt                     1
+     SW2_WHIRL_cnt                     1
+     SW3_WHIRL_cnt                     1
+     SW_AB_Whire_DIR                  16
+     KEY_Whire1                       74
+     ?Subroutine5                     11
+     ?Subroutine0                     16
+     ?Subroutine2                      8
+     ?Subroutine1                      9
+     Key3                              1
+     KEY_Whire2                      155
+     Key21                             1
+     task_battery_check              390
+     ?Subroutine3                     10
+     bat_count1                        1
+     bat_count                         1
+     r                                 2
+     z                                 2
+     bat_sta                           1
+     bat_sta_bakeup                    1
+     ?<Initializer for r>              2
+     ?<Constant "adc_ch: %d\n">       12
+     ?<Constant "S3:%d\n">             7
+     ?<Constant "S1%d\n">              6
+     ?<Constant "S2:%d\n">             7
+     ?<Constant "\265\315\265\347\271\330\273\372.\
+                                      11
+     ?<Constant ".">                   2
+     ?<Constant "%02x_">               6
+
+ 
+ 400 bytes in segment BAT_CHECK
+  67 bytes in segment CODE_C
+ 111 bytes in segment KEY_INIT
+ 273 bytes in segment NEAR_CODE
+ 777 bytes in segment SCAN_COM
+   7 bytes in segment SFR_AN
+   2 bytes in segment XDATA_I
+   2 bytes in segment XDATA_ID
+  24 bytes in segment XDATA_N
+  16 bytes in segment XDATA_Z
+ 
+ 1 630 bytes of CODE  memory
+     0 bytes of DATA  memory (+ 7 bytes shared)
+    42 bytes of XDATA memory
+
+Errors: none
+Warnings: none

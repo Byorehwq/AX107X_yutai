@@ -1,0 +1,1638 @@
+##############################################################################
+#                                                                            #
+# IAR 8051 C/C++ Compiler V7.20H/W32                   29/Jun/2018  19:55:09 #
+# Copyright 2004-2006 IAR Systems. All rights reserved.                      #
+#                                                                            #
+#    Core               =  plain                                             #
+#    Code model         =  near                                              #
+#    Data model         =  large                                             #
+#    Calling convention =  extended stack reentrant                          #
+#    Constant location  =  code                                              #
+#    Extended stack     =  enabled                                           #
+#    Dptr setup         =  1,16                                              #
+#    Source file        =  I:\a_wangqun\ÓîÌ©_Ë¯ÃßÒÇ_KNP08\18BC073A_ÓîÌ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\display\led\led #
+#                          _7p7s.c                                           #
+#    Command line       =  -I E:\software\8051\INC\ -I                       #
+#                          E:\software\8051\INC\CLIB\ -I                     #
+#                          I:\a_wangqun\ÓîÌ©_Ë¯ÃßÒÇ_KNP08\18BC073A_ÓîÌ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\COMMON\ -I      #
+#                          I:\a_wangqun\ÓîÌ©_Ë¯ÃßÒÇ_KNP08\18BC073A_ÓîÌ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\INC\ -I         #
+#                          I:\a_wangqun\ÓîÌ©_Ë¯ÃßÒÇ_KNP08\18BC073A_ÓîÌ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\config\ -I      #
+#                          I:\a_wangqun\ÓîÌ©_Ë¯ÃßÒÇ_KNP08\18BC073A_ÓîÌ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\api\ -I         #
+#                          I:\a_wangqun\ÓîÌ©_Ë¯ÃßÒÇ_KNP08\18BC073A_ÓîÌ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\fm\ -I          #
+#                          I:\a_wangqun\ÓîÌ©_Ë¯ÃßÒÇ_KNP08\18BC073A_ÓîÌ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\fat\ -I         #
+#                          I:\a_wangqun\ÓîÌ©_Ë¯ÃßÒÇ_KNP08\18BC073A_ÓîÌ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\display\ -I     #
+#                          I:\a_wangqun\ÓîÌ©_Ë¯ÃßÒÇ_KNP08\18BC073A_ÓîÌ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\display\theme_d #
+#                          efault\ -I I:\a_wangqun\ÓîÌ©_Ë¯ÃßÒÇ_KNP08\18BC073 #
+#                          A_ÓîÌ©_AX1071_xxxxxxxx_20180629_Merlin_1\app\disp #
+#                          lay\led\ -I I:\a_wangqun\ÓîÌ©_Ë¯ÃßÒÇ_KNP08\18BC07 #
+#                          3A_ÓîÌ©_AX1071_xxxxxxxx_20180629_Merlin_1\app\dis #
+#                          play\lcd\ -I I:\a_wangqun\ÓîÌ©_Ë¯ÃßÒÇ_KNP08\18BC0 #
+#                          73A_ÓîÌ©_AX1071_xxxxxxxx_20180629_Merlin_1\app\ta #
+#                          sk\ -I I:\a_wangqun\ÓîÌ©_Ë¯ÃßÒÇ_KNP08\18BC073A_Óî #
+#                          Ì©_AX1071_xxxxxxxx_20180629_Merlin_1\app\user\    #
+#                          -I I:\a_wangqun\ÓîÌ©_Ë¯ÃßÒÇ_KNP08\18BC073A_ÓîÌ©_A #
+#                          X1071_xxxxxxxx_20180629_Merlin_1\app\mem\ -I      #
+#                          I:\a_wangqun\ÓîÌ©_Ë¯ÃßÒÇ_KNP08\18BC073A_ÓîÌ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\module\ -I      #
+#                          I:\a_wangqun\ÓîÌ©_Ë¯ÃßÒÇ_KNP08\18BC073A_ÓîÌ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\key\ -I         #
+#                          I:\a_wangqun\ÓîÌ©_Ë¯ÃßÒÇ_KNP08\18BC073A_ÓîÌ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\startmusic\ -I  #
+#                          I:\a_wangqun\ÓîÌ©_Ë¯ÃßÒÇ_KNP08\18BC073A_ÓîÌ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\spi\ -D         #
+#                          AX107X_TAG -lC I:\a_wangqun\ÓîÌ©_Ë¯ÃßÒÇ_KNP08\18B #
+#                          C073A_ÓîÌ©_AX1071_xxxxxxxx_20180629_Merlin_1\app\ #
+#                          Debug\List\ -o I:\a_wangqun\ÓîÌ©_Ë¯ÃßÒÇ_KNP08\18B #
+#                          C073A_ÓîÌ©_AX1071_xxxxxxxx_20180629_Merlin_1\app\ #
+#                          Debug\Obj\ -e -z9 --core=plain --dptr=16,1        #
+#                          --data_model=large --code_model=near              #
+#                          --calling_convention=ext_stack_reentrant          #
+#                          --place_constants=code --nr_virtual_regs 20       #
+#                          --extended_stack I:\a_wangqun\ÓîÌ©_Ë¯ÃßÒÇ_KNP08\1 #
+#                          8BC073A_ÓîÌ©_AX1071_xxxxxxxx_20180629_Merlin_1\ap #
+#                          p\display\led\led_7p7s.c                          #
+#    List file          =  I:\a_wangqun\ÓîÌ©_Ë¯ÃßÒÇ_KNP08\18BC073A_ÓîÌ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\Debug\List\led_ #
+#                          7p7s.lst                                          #
+#    Object file        =  I:\a_wangqun\ÓîÌ©_Ë¯ÃßÒÇ_KNP08\18BC073A_ÓîÌ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\Debug\Obj\led_7 #
+#                          p7s.r51                                           #
+#                                                                            #
+#                                                                            #
+##############################################################################
+
+I:\a_wangqun\ÓîÌ©_Ë¯ÃßÒÇ_KNP08\18BC073A_ÓîÌ©_AX1071_xxxxxxxx_20180629_Merlin_1\app\display\led\led_7p7s.c
+      1          /* Author    : Hanny
+      2           * Email     : coldney@yahoo.com.cn
+      3           * Function  : LED7½ÅÏÔÊ¾ÆÁµÄÇý¶¯
+      4           *****************************************************************************/
+      5          #include "include.h"
+
+   \                                 In segment SFR_AN, at 0xa0
+   \   unsigned char volatile __sfr P2
+   \                     P2:
+   \   000000                DS 1
+
+   \                                 In segment SFR_AN, at 0xbc
+   \   unsigned char volatile __sfr P2DIR
+   \                     P2DIR:
+   \   000000                DS 1
+      6          
+      7          #if (DISP_TYPE == DISP_LED_7P7S)
+      8          
+
+   \                                 In segment DATA_N, align 1, root
+      9          IAR_DATA_A u8 dispbuf[5];
+   \                     dispbuf:
+   \   000000                DS 5
+
+   \                                 In segment DATA_N, align 1, root
+     10          IAR_DATA_A u8 p_dispbuff[7];
+   \                     p_dispbuff:
+   \   000000                DS 7
+
+   \                                 In segment XDATA_N, align 1, root
+     11          IAR_XDATA_A u8 COM_T;
+   \                     COM_T:
+   \   000000                DS 1
+     12          
+     13          #pragma constseg="LED_DISP_TBL"
+
+   \                                 In segment LED_DISP_TBL, align 1
+     14          IAR_CONST u8 tbl_led_num[10] =
+   \                     tbl_led_num:
+   \   000000   3F065B4F     DB 63, 6, 91, 79, 102, 109, 125, 7, 127, 111
+   \            666D7D07
+   \            7F6F    
+     15          {
+     16              LED_7P7S_0, LED_7P7S_1, LED_7P7S_2, LED_7P7S_3, LED_7P7S_4,
+     17              LED_7P7S_5, LED_7P7S_6, LED_7P7S_7, LED_7P7S_8, LED_7P7S_9,
+     18          };
+     19          
+
+   \                                 In segment LED_DISP_TBL, align 1
+     20          IAR_CONST u8 tbl_led_alpha[26] = {
+   \                     tbl_led_alpha:
+   \   000000   777C395E     DB 119, 124, 57, 94, 121, 113, 111, 118, 6, 30, 112, 56, 84, 55, 63
+   \            79716F76
+   \            061E7038
+   \            54373F  
+   \   00000F   7367506D     DB 115, 103, 80, 109, 120, 62, 62, 28, 54, 110, 91
+   \            783E3E1C
+   \            366E5B  
+     21              LED_7P7S_A, LED_7P7S_b, LED_7P7S_C, LED_7P7S_d, LED_7P7S_E,
+     22              LED_7P7S_F, LED_7P7S_g, LED_7P7S_H, LED_7P7S_I, LED_7P7S_J,
+     23              LED_7P7S_K, LED_7P7S_L, LED_7P7S_m, LED_7P7S_n, LED_7P7S_O,
+     24              LED_7P7S_P, LED_7P7S_q, LED_7P7S_r, LED_7P7S_S, LED_7P7S_t,
+     25              LED_7P7S_U, LED_7P7S_V, LED_7P7S_w, LED_7P7S_X, LED_7P7S_y,
+     26              LED_7P7S_Z
+     27          };
+     28          
+
+   \                                 In segment LED_DISP_TBL, align 1
+     29          IAR_CONST u8 tbl_led_energy[3] = {
+   \                     tbl_led_energy:
+   \   000000   30393F       DB 48, 57, 63
+     30              (BIT_E | BIT_F), LED_7P7S_C, LED_7P7S_0,
+     31          };
+     32          
+     33          #pragma constseg=default
+     34          
+     35          //ÏÔÊ¾ -, 0~9, a~zµÄ×Ö·û´®(³£Á¿)
+     36          #pragma location="LED_DISP_SEG"
+
+   \                                 In segment LED_DISP_SEG, align 1, keep-with-next
+     37          void led_7p7s_disp_str(const char __code *str)
+   \                     led_7p7s_disp_str:
+     38          {
+   \   000000   7404         MOV     A,#0x4
+   \   000002   12....       LCALL   ?FUNC_ENTER_SP
+   \   000005                ; Saved register size: 7
+   \   000005                ; Auto size: 0
+     39              u8 i;
+     40              u8 ch;
+     41          
+     42              for (i=0; i!=4; i++) {
+     43                  ch = str[i];
+   \                     ??led_7p7s_disp_str_0:
+   \   000005   8E..         MOV     ?V0 + 0,R6
+   \   000007   EA           MOV     A,R2
+   \   000008   25..         ADD     A,?V0 + 0
+   \   00000A   F582         MOV     DPL,A
+   \   00000C   EB           MOV     A,R3
+   \   00000D   3400         ADDC    A,#0x0
+   \   00000F   F583         MOV     DPH,A
+   \   000011   E4           CLR     A
+   \   000012   93           MOVC    A,@A+DPTR
+   \   000013   F5..         MOV     ?V0 + 0,A
+     44                  if (ch >= '0' && ch <= '9') {
+   \   000015   74..         MOV     A,#dispbuf
+   \   000017   2E           ADD     A,R6
+   \   000018   F8           MOV     R0,A
+   \   000019   E5..         MOV     A,?V0 + 0
+   \   00001B   C3           CLR     C
+   \   00001C   9430         SUBB    A,#0x30
+   \   00001E   4017         JC      ??led_7p7s_disp_str_1
+   \   000020   E5..         MOV     A,?V0 + 0
+   \   000022   C3           CLR     C
+   \   000023   943A         SUBB    A,#0x3a
+   \   000025   5010         JNC     ??led_7p7s_disp_str_1
+     45                      dispbuf[i] = tbl_led_num[ch - '0'];
+   \   000027   E5..         MOV     A,?V0 + 0
+   \   000029   24..         ADD     A,#((tbl_led_num + 208) & 0xff)
+   \   00002B   F582         MOV     DPL,A
+   \   00002D   E4           CLR     A
+   \   00002E   34..         ADDC    A,#(((tbl_led_num - 48) >> 8) & 0xff)
+   \                     ??led_7p7s_disp_str_2:
+   \   000030   F583         MOV     DPH,A
+   \   000032   E4           CLR     A
+   \   000033   93           MOVC    A,@A+DPTR
+   \   000034   F6           MOV     @R0,A
+   \   000035   8043         SJMP    ??led_7p7s_disp_str_3
+     46                  } else if (ch >= 'A' && ch <= 'Z') {
+   \                     ??led_7p7s_disp_str_1:
+   \   000037   85....       MOV     ?V0 + 2,?V0 + 0
+   \   00003A   E5..         MOV     A,?V0 + 2
+   \   00003C   24..         ADD     A,#(tbl_led_alpha & 0xff)
+   \   00003E   FC           MOV     R4,A
+   \   00003F   E4           CLR     A
+   \   000040   34..         ADDC    A,#((tbl_led_alpha >> 8) & 0xff)
+   \   000042   FD           MOV     R5,A
+   \   000043   E5..         MOV     A,?V0 + 0
+   \   000045   C3           CLR     C
+   \   000046   9441         SUBB    A,#0x41
+   \   000048   4011         JC      ??led_7p7s_disp_str_4
+   \   00004A   E5..         MOV     A,?V0 + 0
+   \   00004C   C3           CLR     C
+   \   00004D   945B         SUBB    A,#0x5b
+   \   00004F   500A         JNC     ??led_7p7s_disp_str_4
+     47                      dispbuf[i] = tbl_led_alpha[ch - 'A'];
+   \   000051   EC           MOV     A,R4
+   \   000052   24BF         ADD     A,#-0x41
+   \                     ??led_7p7s_disp_str_5:
+   \   000054   F582         MOV     DPL,A
+   \   000056   ED           MOV     A,R5
+   \   000057   34FF         ADDC    A,#-0x1
+   \   000059   80D5         SJMP    ??led_7p7s_disp_str_2
+     48                  } else if (ch >= 'a' && ch <= 'z') {
+   \                     ??led_7p7s_disp_str_4:
+   \   00005B   E5..         MOV     A,?V0 + 0
+   \   00005D   C3           CLR     C
+   \   00005E   9461         SUBB    A,#0x61
+   \   000060   400C         JC      ??led_7p7s_disp_str_6
+   \   000062   E5..         MOV     A,?V0 + 0
+   \   000064   C3           CLR     C
+   \   000065   947B         SUBB    A,#0x7b
+   \   000067   500F         JNC     ??led_7p7s_disp_str_7
+     49                      dispbuf[i] = tbl_led_alpha[ch - 'a'];
+   \   000069   EC           MOV     A,R4
+   \   00006A   249F         ADD     A,#-0x61
+   \   00006C   80E6         SJMP    ??led_7p7s_disp_str_5
+     50                  } else if (ch == ' ') {
+   \                     ??led_7p7s_disp_str_6:
+   \   00006E   7420         MOV     A,#0x20
+   \   000070   65..         XRL     A,?V0 + 0
+   \   000072   7004         JNZ     ??led_7p7s_disp_str_7
+     51                      dispbuf[i] = 0;
+   \   000074   7600         MOV     @R0,#0x0
+   \   000076   8002         SJMP    ??led_7p7s_disp_str_3
+     52                  } else {
+     53                      dispbuf[i] = LED_7P7S__;
+   \                     ??led_7p7s_disp_str_7:
+   \   000078   7640         MOV     @R0,#0x40
+     54                  }
+     55              }
+   \                     ??led_7p7s_disp_str_3:
+   \   00007A   0E           INC     R6
+   \   00007B   7404         MOV     A,#0x4
+   \   00007D   6E           XRL     A,R6
+   \   00007E   7085         JNZ     ??led_7p7s_disp_str_0
+     56              dispbuf[4] = 0;
+   \   000080   75..00       MOV     (dispbuf + 4),#0x0
+     57          }
+   \   000083   7F04         MOV     R7,#0x4
+   \   000085   02....       LJMP    ?FUNC_LEAVE_SP
+     58          
+     59          void led_7p7s_io_init(void) AT(LED_7P7S_INIT);
+
+   \                                 In segment LED_7P7S_INIT, align 1, keep-with-next
+     60          void led_7p7s_io_init(void)
+   \                     led_7p7s_io_init:
+     61          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     62          #if ((USER_SEL == USER_AX1070_DEMO) || (USER_SEL == USER_AX1076_DEMO)|| (USER_SEL == USER_AX2070_DEMO))
+     63              LED_7C7S_S0_DIR |= BIT(LED_7C7S_S0_PIN);	// P34
+   \   000000   43BC02       ORL     0xbc,#0x2
+     64              LED_7C7S_S1_DIR |= BIT(LED_7C7S_S1_PIN);	// P33
+   \   000003   43BC04       ORL     0xbc,#0x4
+     65              LED_7C7S_S2_DIR |= BIT(LED_7C7S_S2_PIN);	// P31
+   \   000006   43BC08       ORL     0xbc,#0x8
+     66              LED_7C7S_S3_DIR |= BIT(LED_7C7S_S3_PIN);	// P27
+   \   000009   43BC10       ORL     0xbc,#0x10
+     67              LED_7C7S_S4_DIR |= BIT(LED_7C7S_S4_PIN);	// P22
+   \   00000C   43BC20       ORL     0xbc,#0x20
+     68              LED_7C7S_S5_DIR |= BIT(LED_7C7S_S5_PIN);	// P21
+   \   00000F   43BC40       ORL     0xbc,#0x40
+     69              LED_7C7S_S6_DIR |= BIT(LED_7C7S_S6_PIN);	// P20
+   \   000012   43BC80       ORL     0xbc,#0x80
+     70          
+     71          #else
+     72              P2 &= ~0x7F;
+     73              P2DIR |= 0x7F;           //P20-P26
+     74          #endif
+     75          }
+   \   000015   22           RET
+     76          
+     77          //LED³õÊ¼»¯º¯Êý£¬²»ÏÔÊ¾
+     78          void led_7p7s_init(void) AT(LED_7P7S_INIT);
+
+   \                                 In segment LED_7P7S_INIT, align 1, keep-with-next
+     79          void led_7p7s_init(void)
+   \                     led_7p7s_init:
+     80          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     81              led_7p7s_io_init();
+   \   000000                ; Setup parameters for call to function led_7p7s_io_init
+   \   000000   12....       LCALL   led_7p7s_io_init
+     82              COM_T = 0;
+   \   000003   E4           CLR     A
+   \   000004   90....       MOV     DPTR,#COM_T
+   \   000007   F0           MOVX    @DPTR,A
+     83          }
+   \   000008   22           RET
+     84          
+     85          //LED Çå³ýÏÔÊ¾»º´æ
+     86          void led_7p7s_clear(void) AT(LED_7P7S_INIT);
+
+   \                                 In segment LED_7P7S_INIT, align 1, keep-with-next
+     87          void led_7p7s_clear(void)
+   \                     led_7p7s_clear:
+     88          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     89              smemset_i(dispbuf, 0, 5);
+   \   000000                ; Setup parameters for call to function smemset_i
+   \   000000   7B05         MOV     R3,#0x5
+   \   000002   7A00         MOV     R2,#0x0
+   \   000004   79..         MOV     R1,#dispbuf
+   \   000006   12....       LCALL   smemset_i
+     90          }
+   \   000009   22           RET
+     91          
+     92          //7p7sÉÁË¸¿ØÖÆ
+     93          void led_7p7s_blink(void) AT(LED_7P7S_INIT);
+
+   \                                 In segment LED_7P7S_INIT, align 1, keep-with-next
+     94          void led_7p7s_blink(void)
+   \                     led_7p7s_blink:
+     95          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     96              if (ocx.blink_sta) {
+   \   000000   78..         MOV     R0,#(ocx + 5)
+   \   000002   E6           MOV     A,@R0
+   \   000003   08           INC     R0
+   \   000004   6024         JZ      ??led_7p7s_blink_0
+     97                  dispbuf[4] |= ocx.blink_icon;
+   \   000006   E6           MOV     A,@R0
+   \   000007   45..         ORL     A,(dispbuf + 4)
+   \   000009   F5..         MOV     (dispbuf + 4),A
+     98                  if(ocx.blink_num & 0x0c) {
+   \   00000B   08           INC     R0
+   \   00000C   E6           MOV     A,@R0
+   \   00000D   FA           MOV     R2,A
+   \   00000E   740C         MOV     A,#0xc
+   \   000010   5A           ANL     A,R2
+   \   000011   6009         JZ      ??led_7p7s_blink_1
+     99                      CHAR_HOURH = ocx.blink_numh;
+   \   000013   08           INC     R0
+   \   000014   E6           MOV     A,@R0
+   \   000015   F5..         MOV     dispbuf,A
+    100                      CHAR_HOURL = ocx.blink_numl;
+   \   000017   08           INC     R0
+   \   000018   E6           MOV     A,@R0
+   \   000019   F5..         MOV     (dispbuf + 1),A
+   \   00001B   22           RET
+    101                  } else if(ocx.blink_num & 0x03) {
+   \                     ??led_7p7s_blink_1:
+   \   00001C   7403         MOV     A,#0x3
+   \   00001E   5A           ANL     A,R2
+   \   00001F   6029         JZ      ??led_7p7s_blink_2
+    102                      CHAR_MINH = ocx.blink_numh;
+   \   000021   08           INC     R0
+   \   000022   E6           MOV     A,@R0
+   \   000023   F5..         MOV     (dispbuf + 2),A
+    103                      CHAR_MINL = ocx.blink_numl;
+   \   000025   08           INC     R0
+   \   000026   E6           MOV     A,@R0
+   \   000027   F5..         MOV     (dispbuf + 3),A
+   \   000029   22           RET
+    104                  }
+    105              } else {
+    106                  dispbuf[4] &= ~ocx.blink_icon;
+   \                     ??led_7p7s_blink_0:
+   \   00002A   E6           MOV     A,@R0
+   \   00002B   F4           CPL     A
+   \   00002C   55..         ANL     A,(dispbuf + 4)
+   \   00002E   F5..         MOV     (dispbuf + 4),A
+    107                  if(ocx.blink_num & 0x0c) {
+   \   000030   08           INC     R0
+   \   000031   E6           MOV     A,@R0
+   \   000032   FA           MOV     R2,A
+   \   000033   740C         MOV     A,#0xc
+   \   000035   5A           ANL     A,R2
+   \   000036   6007         JZ      ??led_7p7s_blink_3
+    108                      CHAR_HOURH = 0;
+   \   000038   75..00       MOV     dispbuf,#0x0
+    109                      CHAR_HOURL = 0;
+   \   00003B   75..00       MOV     (dispbuf + 1),#0x0
+   \   00003E   22           RET
+    110                  } else if(ocx.blink_num & 0x03) {
+   \                     ??led_7p7s_blink_3:
+   \   00003F   7403         MOV     A,#0x3
+   \   000041   5A           ANL     A,R2
+   \   000042   6006         JZ      ??led_7p7s_blink_2
+    111                      CHAR_MINH = 0;
+   \   000044   75..00       MOV     (dispbuf + 2),#0x0
+    112                      CHAR_MINL = 0;
+   \   000047   75..00       MOV     (dispbuf + 3),#0x0
+    113                  }
+    114              }
+    115          }
+   \                     ??led_7p7s_blink_2:
+   \   00004A   22           RET
+    116          
+    117          //LEDÉ¨Ãèº¯Êý
+    118          void led_7p7s_scan(void) AT(LED_7P7S_SEG);
+
+   \                                 In segment LED_7P7S_SEG, align 1, keep-with-next
+    119          void led_7p7s_scan(void)
+   \                     led_7p7s_scan:
+    120          {
+   \   000000   7402         MOV     A,#0x2
+   \   000002   12....       LCALL   ?FUNC_ENTER_SP
+   \   000005                ; Saved register size: 5
+   \   000005                ; Auto size: 0
+    121              static u8 count = 0;
+    122              u8 dis_seg = 0,dir_temp = 0,out_temp = 0;
+    123          
+    124              if (count > 6) {
+   \   000005   90....       MOV     DPTR,#??count
+   \   000008   E0           MOVX    A,@DPTR
+   \   000009   C3           CLR     C
+   \   00000A   9407         SUBB    A,#0x7
+   \   00000C   4008         JC      ??led_7p7s_scan_0
+    125                  count = 0;
+   \   00000E   E4           CLR     A
+   \   00000F   F0           MOVX    @DPTR,A
+    126                  COM_T++;
+   \   000010   90....       MOV     DPTR,#COM_T
+   \   000013   E0           MOVX    A,@DPTR
+   \   000014   04           INC     A
+   \   000015   F0           MOVX    @DPTR,A
+    127              }
+    128          
+    129          #if (AUX_DET_EN && USE_7P7S_LED_AUX_MUX)
+    130              if (COM_T > 7) {
+    131                  COM_T = 0;
+    132              } else if (COM_T == 7) {
+    133                  if (count == 0) {
+    134                      AUX_CHECK_DIR |= BIT(AUX_CHECK_PIN);  //ÏÈÉèÖÃÎªÊäÈë0.5msºó½øÐÐ¼ì²â
+    135                      count = 1;
+    136                      return;
+    137                  }
+    138                  aux_detect();                             //lienin¼ì²â
+    139                  count = 7;
+    140                  return;
+    141              }
+    142          #else
+    143              if (COM_T > 6) {
+   \                     ??led_7p7s_scan_0:
+   \   000016   90....       MOV     DPTR,#COM_T
+   \   000019   E0           MOVX    A,@DPTR
+   \   00001A   C3           CLR     C
+   \   00001B   9407         SUBB    A,#0x7
+   \   00001D   4002         JC      ??led_7p7s_scan_1
+    144                  COM_T = 0;
+   \   00001F   E4           CLR     A
+   \   000020   F0           MOVX    @DPTR,A
+    145              }
+    146          #endif
+    147          
+    148              led_7p7s_blink();
+   \                     ??led_7p7s_scan_1:
+   \   000021                ; Setup parameters for call to function led_7p7s_blink
+   \   000021   12....       LCALL   led_7p7s_blink
+    149          
+    150              led_7p7s_value_set();
+   \   000024                ; Setup parameters for call to function led_7p7s_value_set
+   \   000024   12....       LCALL   led_7p7s_value_set
+    151          	
+    152              dis_seg = p_dispbuff[COM_T];
+    153              if( (count == COM_T) )//|| ((COM_T == 1) && (count == 4)) )  {   //Ìø¹ý²»´æÔÚ×éºÏÇé¿ö
+   \   000027   90....       MOV     DPTR,#??count
+   \   00002A   E0           MOVX    A,@DPTR
+   \   00002B   FA           MOV     R2,A
+   \   00002C   90....       MOV     DPTR,#COM_T
+   \   00002F   E0           MOVX    A,@DPTR
+   \   000030   6A           XRL     A,R2
+   \   000031   7006         JNZ     ??led_7p7s_scan_2
+    154              {
+    155          		count += 1;
+   \   000033   90....       MOV     DPTR,#??count
+   \   000036   E0           MOVX    A,@DPTR
+   \   000037   04           INC     A
+   \   000038   F0           MOVX    @DPTR,A
+    156              }
+    157              dis_seg = dis_seg & BIT(count);
+    158          
+    159          #if((USER_SEL == USER_AX1070_DEMO) || (USER_SEL == USER_AX1076_DEMO)|| (USER_SEL == USER_AX2070_DEMO))
+    160              dir_temp = ((1 << COM_T) | dis_seg);
+   \                     ??led_7p7s_scan_2:
+   \   000039   75..01       MOV     ?V0 + 0,#0x1
+   \   00003C   8E..         MOV     ?V0 + 1,R6
+   \   00003E   90....       MOV     DPTR,#COM_T
+   \   000041   E0           MOVX    A,@DPTR
+   \   000042   78..         MOV     R0,#?V0 + 0
+   \   000044   12....       LCALL   ?S_SHL
+   \   000047   AA..         MOV     R2,?V0 + 0
+   \   000049   75..01       MOV     ?V0 + 0,#0x1
+   \   00004C   F5..         MOV     ?V0 + 1,A
+   \   00004E   90....       MOV     DPTR,#??count
+   \   000051   E0           MOVX    A,@DPTR
+   \   000052   78..         MOV     R0,#?V0 + 0
+   \   000054   12....       LCALL   ?S_SHL
+   \   000057   90....       MOV     DPTR,#COM_T
+   \   00005A   E0           MOVX    A,@DPTR
+   \   00005B   24..         ADD     A,#p_dispbuff
+   \   00005D   F8           MOV     R0,A
+   \   00005E   E5..         MOV     A,?V0 + 0
+   \   000060   56           ANL     A,@R0
+   \   000061   4A           ORL     A,R2
+   \   000062   FE           MOV     R6,A
+    161              out_temp |= BIT(COM_T);
+   \   000063   EA           MOV     A,R2
+   \   000064   FF           MOV     R7,A
+    162              led_7p7s_io_init();
+   \   000065                ; Setup parameters for call to function led_7p7s_io_init
+   \   000065   12....       LCALL   led_7p7s_io_init
+    163              if (dir_temp & BIT(0)) {
+   \   000068   EE           MOV     A,R6
+   \   000069   A2E0         MOV     C,0xE0 /* A   */.0
+   \   00006B   500E         JNC     ??led_7p7s_scan_3
+    164                  if(out_temp & BIT(0)) {
+   \   00006D   EF           MOV     A,R7
+   \   00006E   A2E0         MOV     C,0xE0 /* A   */.0
+   \   000070   5004         JNC     ??led_7p7s_scan_4
+    165                      LED_7C7S_S0_PORT |= BIT(LED_7C7S_S0_PIN);
+   \   000072   D2A1         SETB    0xa0.1
+   \   000074   8002         SJMP    ??led_7p7s_scan_5
+    166                  } else{
+    167                      LED_7C7S_S0_PORT &= ~BIT(LED_7C7S_S0_PIN);
+   \                     ??led_7p7s_scan_4:
+   \   000076   C2A1         CLR     0xa0.1
+    168                  }
+    169                  LED_7C7S_S0_DIR &= ~BIT(LED_7C7S_S0_PIN);
+   \                     ??led_7p7s_scan_5:
+   \   000078   53BCFD       ANL     0xbc,#0xfd
+    170              }
+    171              if (dir_temp & BIT(1)) {
+   \                     ??led_7p7s_scan_3:
+   \   00007B   EE           MOV     A,R6
+   \   00007C   A2E1         MOV     C,0xE0 /* A   */.1
+   \   00007E   500E         JNC     ??led_7p7s_scan_6
+    172                  if(out_temp & BIT(1)) {
+   \   000080   EF           MOV     A,R7
+   \   000081   A2E1         MOV     C,0xE0 /* A   */.1
+   \   000083   5004         JNC     ??led_7p7s_scan_7
+    173                      LED_7C7S_S1_PORT |= BIT(LED_7C7S_S1_PIN);
+   \   000085   D2A2         SETB    0xa0.2
+   \   000087   8002         SJMP    ??led_7p7s_scan_8
+    174                  } else{
+    175                      LED_7C7S_S1_PORT &= ~BIT(LED_7C7S_S1_PIN);
+   \                     ??led_7p7s_scan_7:
+   \   000089   C2A2         CLR     0xa0.2
+    176                  }
+    177                  LED_7C7S_S1_DIR &= ~BIT(LED_7C7S_S1_PIN);
+   \                     ??led_7p7s_scan_8:
+   \   00008B   53BCFB       ANL     0xbc,#0xfb
+    178              }
+    179              if (dir_temp & BIT(2)) {
+   \                     ??led_7p7s_scan_6:
+   \   00008E   EE           MOV     A,R6
+   \   00008F   A2E2         MOV     C,0xE0 /* A   */.2
+   \   000091   500E         JNC     ??led_7p7s_scan_9
+    180                  if(out_temp & BIT(2)) {
+   \   000093   EF           MOV     A,R7
+   \   000094   A2E2         MOV     C,0xE0 /* A   */.2
+   \   000096   5004         JNC     ??led_7p7s_scan_10
+    181                      LED_7C7S_S2_PORT |= BIT(LED_7C7S_S2_PIN);
+   \   000098   D2A3         SETB    0xa0.3
+   \   00009A   8002         SJMP    ??led_7p7s_scan_11
+    182                  } else{
+    183                      LED_7C7S_S2_PORT &= ~BIT(LED_7C7S_S2_PIN);
+   \                     ??led_7p7s_scan_10:
+   \   00009C   C2A3         CLR     0xa0.3
+    184                  }
+    185                  LED_7C7S_S2_DIR &= ~BIT(LED_7C7S_S2_PIN);
+   \                     ??led_7p7s_scan_11:
+   \   00009E   53BCF7       ANL     0xbc,#0xf7
+    186              }
+    187              if (dir_temp & BIT(3)) {
+   \                     ??led_7p7s_scan_9:
+   \   0000A1   EE           MOV     A,R6
+   \   0000A2   A2E3         MOV     C,0xE0 /* A   */.3
+   \   0000A4   500E         JNC     ??led_7p7s_scan_12
+    188                  if(out_temp & BIT(3)) {
+   \   0000A6   EF           MOV     A,R7
+   \   0000A7   A2E3         MOV     C,0xE0 /* A   */.3
+   \   0000A9   5004         JNC     ??led_7p7s_scan_13
+    189                      LED_7C7S_S3_PORT |= BIT(LED_7C7S_S3_PIN);
+   \   0000AB   D2A4         SETB    0xa0.4
+   \   0000AD   8002         SJMP    ??led_7p7s_scan_14
+    190                  } else{
+    191                      LED_7C7S_S3_PORT &= ~BIT(LED_7C7S_S3_PIN);
+   \                     ??led_7p7s_scan_13:
+   \   0000AF   C2A4         CLR     0xa0.4
+    192                  }
+    193                  LED_7C7S_S3_DIR &= ~BIT(LED_7C7S_S3_PIN);
+   \                     ??led_7p7s_scan_14:
+   \   0000B1   53BCEF       ANL     0xbc,#0xef
+    194              }
+    195              if (dir_temp & BIT(4)) {
+   \                     ??led_7p7s_scan_12:
+   \   0000B4   EE           MOV     A,R6
+   \   0000B5   A2E4         MOV     C,0xE0 /* A   */.4
+   \   0000B7   500E         JNC     ??led_7p7s_scan_15
+    196                  if(out_temp & BIT(4)) {
+   \   0000B9   EF           MOV     A,R7
+   \   0000BA   A2E4         MOV     C,0xE0 /* A   */.4
+   \   0000BC   5004         JNC     ??led_7p7s_scan_16
+    197                      LED_7C7S_S4_PORT |= BIT(LED_7C7S_S4_PIN);
+   \   0000BE   D2A5         SETB    0xa0.5
+   \   0000C0   8002         SJMP    ??led_7p7s_scan_17
+    198                  } else{
+    199                      LED_7C7S_S4_PORT &= ~BIT(LED_7C7S_S4_PIN);
+   \                     ??led_7p7s_scan_16:
+   \   0000C2   C2A5         CLR     0xa0.5
+    200                  }
+    201                  LED_7C7S_S4_DIR &= ~BIT(LED_7C7S_S4_PIN);
+   \                     ??led_7p7s_scan_17:
+   \   0000C4   53BCDF       ANL     0xbc,#0xdf
+    202              }
+    203              if (dir_temp & BIT(5)) {
+   \                     ??led_7p7s_scan_15:
+   \   0000C7   EE           MOV     A,R6
+   \   0000C8   A2E5         MOV     C,0xE0 /* A   */.5
+   \   0000CA   500E         JNC     ??led_7p7s_scan_18
+    204                  if(out_temp & BIT(5)) {
+   \   0000CC   EF           MOV     A,R7
+   \   0000CD   A2E5         MOV     C,0xE0 /* A   */.5
+   \   0000CF   5004         JNC     ??led_7p7s_scan_19
+    205                      LED_7C7S_S5_PORT |= BIT(LED_7C7S_S5_PIN);
+   \   0000D1   D2A6         SETB    0xa0.6
+   \   0000D3   8002         SJMP    ??led_7p7s_scan_20
+    206                  } else{
+    207                      LED_7C7S_S5_PORT &= ~BIT(LED_7C7S_S5_PIN);
+   \                     ??led_7p7s_scan_19:
+   \   0000D5   C2A6         CLR     0xa0.6
+    208                  }
+    209                  LED_7C7S_S5_DIR &= ~BIT(LED_7C7S_S5_PIN);
+   \                     ??led_7p7s_scan_20:
+   \   0000D7   53BCBF       ANL     0xbc,#0xbf
+    210              }
+    211          
+    212              if (dir_temp & BIT(6)) {
+   \                     ??led_7p7s_scan_18:
+   \   0000DA   EE           MOV     A,R6
+   \   0000DB   A2E6         MOV     C,0xE0 /* A   */.6
+   \   0000DD   500E         JNC     ??led_7p7s_scan_21
+    213                  if(out_temp & BIT(6)) {
+   \   0000DF   EF           MOV     A,R7
+   \   0000E0   A2E6         MOV     C,0xE0 /* A   */.6
+   \   0000E2   5004         JNC     ??led_7p7s_scan_22
+    214                      LED_7C7S_S6_PORT |= BIT(LED_7C7S_S6_PIN);
+   \   0000E4   D2A7         SETB    0xa0.7
+   \   0000E6   8002         SJMP    ??led_7p7s_scan_23
+    215                  } else{
+    216                      LED_7C7S_S6_PORT &= ~BIT(LED_7C7S_S6_PIN);
+   \                     ??led_7p7s_scan_22:
+   \   0000E8   C2A7         CLR     0xa0.7
+    217                  }
+    218                  LED_7C7S_S6_DIR &= ~BIT(LED_7C7S_S6_PIN);
+   \                     ??led_7p7s_scan_23:
+   \   0000EA   53BC7F       ANL     0xbc,#0x7f
+    219              }
+    220          
+    221          #else
+    222              out_temp = LED_7P7S_PORT;
+    223              dir_temp = LED_7P7S_DIR;
+    224              dir_temp |= 0x7F;                           //P27±£³Ö²»±ä
+    225              dir_temp &= ~((1 << COM_T) | dis_seg);
+    226              out_temp &= 0x80;                           //P27±£³Ö²»±ä
+    227              out_temp |= (1 << COM_T);
+    228              LED_7P7S_PORT = out_temp;
+    229              LED_7P7S_DIR = dir_temp;                     //µãÁÁÒ»¶Î
+    230          #endif
+    231              count++;
+   \                     ??led_7p7s_scan_21:
+   \   0000ED   90....       MOV     DPTR,#??count
+   \   0000F0   E0           MOVX    A,@DPTR
+   \   0000F1   04           INC     A
+   \   0000F2   F0           MOVX    @DPTR,A
+    232             // if ((COM_T >= 4) && (count == 4)) {     //Ìø¹ý²»´æÔÚ×éºÏÇé¿ö
+    233             //     count = 7;
+    234             // }
+    235             //if(((COM_T <= 2) && (count == 4))||((COM_T == 5) && (count == 5))){
+    236          	//	count = 6;
+    237             //}
+    238          }
+   \   0000F3   7F02         MOV     R7,#0x2
+   \   0000F5   02....       LJMP    ?FUNC_LEAVE_SP
+
+   \                                 In segment XDATA_Z, align 1, keep-with-next
+   \   000000                REQUIRE __INIT_XDATA_Z
+   \                     ??count:
+   \   000000                DS 1
+    239          
+    240          //¸ù¾Ý7½ÅLEDµÄÕæÖµ±í½øÐÐÓ³Éä£¨Ã¿¶ÎÊä³ö¸ßµÄIO¼ÇÎªCOM¶Ë 7*7£©COM:0~6  SEG:0~6
+    241          void led_7p7s_value_set(void) AT(LED_7P7S_SEG);
+
+   \                                 In segment LED_7P7S_SEG, align 1, keep-with-next
+    242          void led_7p7s_value_set(void)
+   \                     led_7p7s_value_set:
+    243          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    244              IE_EA = 0;
+   \   000000   C2AF         CLR     0xa8.7
+    245              smemset_i(p_dispbuff, 0, 7);
+   \   000002                ; Setup parameters for call to function smemset_i
+   \   000002   7B07         MOV     R3,#0x7
+   \   000004   7A00         MOV     R2,#0x0
+   \   000006   79..         MOV     R1,#p_dispbuff
+   \   000008   12....       LCALL   smemset_i
+    246          
+    247          	//p_dispbuff[6] |= BIT(7);
+    248          /*
+    249          dispbuf 0			1				2			3
+    250          
+    251              --A65---	  ---56---		---43---	 ---34---
+    252              |		|	  | 	 |		|	   |	 |		|
+    253             F60    B64	  06	46		31	  42	 13    24
+    254              |		|	  | 	 |	25	|	   |	 |		|
+    255              --G54---	  ---45---		---30---	 ---03---
+    256              |		|	  | 	 |	15	|	   |	 |		|
+    257             E61    C63	  16	36		32	  41	 23    14
+    258              |		|	  | 	 |		|	   |	 |		|
+    259              --D62--- xx  ---26--- xx	---40--- xx  ---04--- xx
+    260          
+    261                           Pin    6 5 4 3 2 1 0
+    262          
+    263          */
+    264          
+    265          if(((scan_ctl.disp_clock_set_flag == 1) && (scan_ctl.count_KU_TIMER == 0)) || (scan_ctl.disp_clock_set_flag == 0))
+   \   00000B   90....       MOV     DPTR,#(scan_ctl + 11)
+   \   00000E   E0           MOVX    A,@DPTR
+   \   00000F   6009         JZ      ??led_7p7s_value_set_0
+   \   000011   90....       MOV     DPTR,#(scan_ctl + 17)
+   \   000014   E0           MOVX    A,@DPTR
+   \   000015   6003         JZ      $+5
+   \   000017   02....       LJMP    ??led_7p7s_value_set_1
+    266          {
+    267          	 if(disp.display_led_flag == 0)
+   \                     ??led_7p7s_value_set_0:
+   \   00001A   E5..         MOV     A,(disp + 3)
+   \   00001C   7066         JNZ     ??led_7p7s_value_set_2
+    268          	 {	
+    269          		if(dispbuf[0] & BIT_A)     p_dispbuff[5] |= BIT(6);
+   \   00001E   E5..         MOV     A,dispbuf
+   \   000020   A2E0         MOV     C,0xE0 /* A   */.0
+   \   000022   5003         JNC     ??led_7p7s_value_set_3
+   \   000024   43..40       ORL     (p_dispbuff + 5),#0x40
+    270          	    if(dispbuf[0] & BIT_B)     p_dispbuff[4] |= BIT(6);
+   \                     ??led_7p7s_value_set_3:
+   \   000027   A2E1         MOV     C,0xE0 /* A   */.1
+   \   000029   5003         JNC     ??led_7p7s_value_set_4
+   \   00002B   43..40       ORL     (p_dispbuff + 4),#0x40
+    271          	    if(dispbuf[0] & BIT_C)     p_dispbuff[3] |= BIT(6);
+   \                     ??led_7p7s_value_set_4:
+   \   00002E   A2E2         MOV     C,0xE0 /* A   */.2
+   \   000030   5003         JNC     ??led_7p7s_value_set_5
+   \   000032   43..40       ORL     (p_dispbuff + 3),#0x40
+    272          	    if(dispbuf[0] & BIT_D)     p_dispbuff[2] |= BIT(6);
+   \                     ??led_7p7s_value_set_5:
+   \   000035   A2E3         MOV     C,0xE0 /* A   */.3
+   \   000037   5003         JNC     ??led_7p7s_value_set_6
+   \   000039   43..40       ORL     (p_dispbuff + 2),#0x40
+    273          	    if(dispbuf[0] & BIT_E)     p_dispbuff[1] |= BIT(6);
+   \                     ??led_7p7s_value_set_6:
+   \   00003C   A2E4         MOV     C,0xE0 /* A   */.4
+   \   00003E   5003         JNC     ??led_7p7s_value_set_7
+   \   000040   43..40       ORL     (p_dispbuff + 1),#0x40
+    274          	    if(dispbuf[0] & BIT_F)     p_dispbuff[0] |= BIT(6);
+   \                     ??led_7p7s_value_set_7:
+   \   000043   A2E5         MOV     C,0xE0 /* A   */.5
+   \   000045   5003         JNC     ??led_7p7s_value_set_8
+   \   000047   43..40       ORL     p_dispbuff,#0x40
+    275          	    if(dispbuf[0] & BIT_G)     p_dispbuff[4] |= BIT(5);
+   \                     ??led_7p7s_value_set_8:
+   \   00004A   A2E6         MOV     C,0xE0 /* A   */.6
+   \   00004C   5003         JNC     ??led_7p7s_value_set_9
+   \   00004E   43..20       ORL     (p_dispbuff + 4),#0x20
+    276          
+    277          	    if(dispbuf[1] & BIT_A)     p_dispbuff[6] |= BIT(5);
+   \                     ??led_7p7s_value_set_9:
+   \   000051   E5..         MOV     A,(dispbuf + 1)
+   \   000053   A2E0         MOV     C,0xE0 /* A   */.0
+   \   000055   5003         JNC     ??led_7p7s_value_set_10
+   \   000057   43..20       ORL     (p_dispbuff + 6),#0x20
+    278          	    if(dispbuf[1] & BIT_B)     p_dispbuff[6] |= BIT(4);
+   \                     ??led_7p7s_value_set_10:
+   \   00005A   A2E1         MOV     C,0xE0 /* A   */.1
+   \   00005C   5003         JNC     ??led_7p7s_value_set_11
+   \   00005E   43..10       ORL     (p_dispbuff + 6),#0x10
+    279          	    if(dispbuf[1] & BIT_C)     p_dispbuff[6] |= BIT(3);
+   \                     ??led_7p7s_value_set_11:
+   \   000061   A2E2         MOV     C,0xE0 /* A   */.2
+   \   000063   5003         JNC     ??led_7p7s_value_set_12
+   \   000065   43..08       ORL     (p_dispbuff + 6),#0x8
+    280          	    if(dispbuf[1] & BIT_D)     p_dispbuff[6] |= BIT(2);
+   \                     ??led_7p7s_value_set_12:
+   \   000068   A2E3         MOV     C,0xE0 /* A   */.3
+   \   00006A   5003         JNC     ??led_7p7s_value_set_13
+   \   00006C   43..04       ORL     (p_dispbuff + 6),#0x4
+    281          	    if(dispbuf[1] & BIT_E)     p_dispbuff[6] |= BIT(1);
+   \                     ??led_7p7s_value_set_13:
+   \   00006F   A2E4         MOV     C,0xE0 /* A   */.4
+   \   000071   5003         JNC     ??led_7p7s_value_set_14
+   \   000073   43..02       ORL     (p_dispbuff + 6),#0x2
+    282          	    if(dispbuf[1] & BIT_F)     p_dispbuff[6] |= BIT(0);
+   \                     ??led_7p7s_value_set_14:
+   \   000076   A2E5         MOV     C,0xE0 /* A   */.5
+   \   000078   5003         JNC     ??led_7p7s_value_set_15
+   \   00007A   43..01       ORL     (p_dispbuff + 6),#0x1
+    283          	    if(dispbuf[1] & BIT_G)     p_dispbuff[5] |= BIT(4);
+   \                     ??led_7p7s_value_set_15:
+   \   00007D   A2E6         MOV     C,0xE0 /* A   */.6
+   \   00007F   5003         JNC     ??led_7p7s_value_set_2
+   \   000081   43..10       ORL     (p_dispbuff + 5),#0x10
+    284          	 }
+    285          	 	if(dispbuf[2] & BIT_A)     p_dispbuff[3] |= BIT(4);
+   \                     ??led_7p7s_value_set_2:
+   \   000084   E5..         MOV     A,(dispbuf + 2)
+   \   000086   A2E0         MOV     C,0xE0 /* A   */.0
+   \   000088   5003         JNC     ??led_7p7s_value_set_16
+   \   00008A   43..10       ORL     (p_dispbuff + 3),#0x10
+    286          	    if(dispbuf[2] & BIT_B)     p_dispbuff[2] |= BIT(4);
+   \                     ??led_7p7s_value_set_16:
+   \   00008D   A2E1         MOV     C,0xE0 /* A   */.1
+   \   00008F   5003         JNC     ??led_7p7s_value_set_17
+   \   000091   43..10       ORL     (p_dispbuff + 2),#0x10
+    287          	    if(dispbuf[2] & BIT_C)     p_dispbuff[1] |= BIT(4);
+   \                     ??led_7p7s_value_set_17:
+   \   000094   A2E2         MOV     C,0xE0 /* A   */.2
+   \   000096   5003         JNC     ??led_7p7s_value_set_18
+   \   000098   43..10       ORL     (p_dispbuff + 1),#0x10
+    288          	    if(dispbuf[2] & BIT_D)     p_dispbuff[0] |= BIT(4);
+   \                     ??led_7p7s_value_set_18:
+   \   00009B   A2E3         MOV     C,0xE0 /* A   */.3
+   \   00009D   5003         JNC     ??led_7p7s_value_set_19
+   \   00009F   43..10       ORL     p_dispbuff,#0x10
+    289          	    if(dispbuf[2] & BIT_E)     p_dispbuff[2] |= BIT(3);
+   \                     ??led_7p7s_value_set_19:
+   \   0000A2   A2E4         MOV     C,0xE0 /* A   */.4
+   \   0000A4   5003         JNC     ??led_7p7s_value_set_20
+   \   0000A6   43..08       ORL     (p_dispbuff + 2),#0x8
+    290          	    if(dispbuf[2] & BIT_F)     p_dispbuff[1] |= BIT(3);
+   \                     ??led_7p7s_value_set_20:
+   \   0000A9   A2E5         MOV     C,0xE0 /* A   */.5
+   \   0000AB   5003         JNC     ??led_7p7s_value_set_21
+   \   0000AD   43..08       ORL     (p_dispbuff + 1),#0x8
+    291          	    if(dispbuf[2] & BIT_G)     p_dispbuff[0] |= BIT(3);
+   \                     ??led_7p7s_value_set_21:
+   \   0000B0   A2E6         MOV     C,0xE0 /* A   */.6
+   \   0000B2   5003         JNC     ??led_7p7s_value_set_22
+   \   0000B4   43..08       ORL     p_dispbuff,#0x8
+    292          
+    293          	    if(dispbuf[3] & BIT_A)     p_dispbuff[4] |= BIT(3);
+   \                     ??led_7p7s_value_set_22:
+   \   0000B7   E5..         MOV     A,(dispbuf + 3)
+   \   0000B9   A2E0         MOV     C,0xE0 /* A   */.0
+   \   0000BB   5003         JNC     ??led_7p7s_value_set_23
+   \   0000BD   43..08       ORL     (p_dispbuff + 4),#0x8
+    294          	    if(dispbuf[3] & BIT_B)     p_dispbuff[4] |= BIT(2);
+   \                     ??led_7p7s_value_set_23:
+   \   0000C0   A2E1         MOV     C,0xE0 /* A   */.1
+   \   0000C2   5003         JNC     ??led_7p7s_value_set_24
+   \   0000C4   43..04       ORL     (p_dispbuff + 4),#0x4
+    295          	    if(dispbuf[3] & BIT_C)     p_dispbuff[4] |= BIT(1);
+   \                     ??led_7p7s_value_set_24:
+   \   0000C7   A2E2         MOV     C,0xE0 /* A   */.2
+   \   0000C9   5003         JNC     ??led_7p7s_value_set_25
+   \   0000CB   43..02       ORL     (p_dispbuff + 4),#0x2
+    296          	    if(dispbuf[3] & BIT_D)     p_dispbuff[4] |= BIT(0);
+   \                     ??led_7p7s_value_set_25:
+   \   0000CE   A2E3         MOV     C,0xE0 /* A   */.3
+   \   0000D0   5003         JNC     ??led_7p7s_value_set_26
+   \   0000D2   43..01       ORL     (p_dispbuff + 4),#0x1
+    297          	    if(dispbuf[3] & BIT_E)     p_dispbuff[3] |= BIT(2);
+   \                     ??led_7p7s_value_set_26:
+   \   0000D5   A2E4         MOV     C,0xE0 /* A   */.4
+   \   0000D7   5003         JNC     ??led_7p7s_value_set_27
+   \   0000D9   43..04       ORL     (p_dispbuff + 3),#0x4
+    298          	    if(dispbuf[3] & BIT_F)     p_dispbuff[3] |= BIT(1);
+   \                     ??led_7p7s_value_set_27:
+   \   0000DC   A2E5         MOV     C,0xE0 /* A   */.5
+   \   0000DE   5003         JNC     ??led_7p7s_value_set_28
+   \   0000E0   43..02       ORL     (p_dispbuff + 3),#0x2
+    299          	    if(dispbuf[3] & BIT_G)     p_dispbuff[3] |= BIT(0);
+   \                     ??led_7p7s_value_set_28:
+   \   0000E3   A2E6         MOV     C,0xE0 /* A   */.6
+   \   0000E5   5003         JNC     ??led_7p7s_value_set_1
+   \   0000E7   43..01       ORL     (p_dispbuff + 3),#0x1
+    300          }
+    301          if(((scan_ctl.disp_clock_set_flag == 1) && (scan_ctl.count_KU_TIMER == 1)) || (scan_ctl.disp_clock_set_flag == 0))
+   \                     ??led_7p7s_value_set_1:
+   \   0000EA   90....       MOV     DPTR,#(scan_ctl + 11)
+   \   0000ED   E0           MOVX    A,@DPTR
+   \   0000EE   600B         JZ      ??led_7p7s_value_set_29
+   \   0000F0   90....       MOV     DPTR,#(scan_ctl + 17)
+   \   0000F3   E0           MOVX    A,@DPTR
+   \   0000F4   6401         XRL     A,#0x1
+   \   0000F6   6003         JZ      $+5
+   \   0000F8   02....       LJMP    ??led_7p7s_value_set_30
+    302          {
+    303          		if(dispbuf[0] & BIT_A)     p_dispbuff[5] |= BIT(6);
+   \                     ??led_7p7s_value_set_29:
+   \   0000FB   E5..         MOV     A,dispbuf
+   \   0000FD   A2E0         MOV     C,0xE0 /* A   */.0
+   \   0000FF   5003         JNC     ??led_7p7s_value_set_31
+   \   000101   43..40       ORL     (p_dispbuff + 5),#0x40
+    304          	    if(dispbuf[0] & BIT_B)     p_dispbuff[4] |= BIT(6);
+   \                     ??led_7p7s_value_set_31:
+   \   000104   A2E1         MOV     C,0xE0 /* A   */.1
+   \   000106   5003         JNC     ??led_7p7s_value_set_32
+   \   000108   43..40       ORL     (p_dispbuff + 4),#0x40
+    305          	    if(dispbuf[0] & BIT_C)     p_dispbuff[3] |= BIT(6);
+   \                     ??led_7p7s_value_set_32:
+   \   00010B   A2E2         MOV     C,0xE0 /* A   */.2
+   \   00010D   5003         JNC     ??led_7p7s_value_set_33
+   \   00010F   43..40       ORL     (p_dispbuff + 3),#0x40
+    306          	    if(dispbuf[0] & BIT_D)     p_dispbuff[2] |= BIT(6);
+   \                     ??led_7p7s_value_set_33:
+   \   000112   A2E3         MOV     C,0xE0 /* A   */.3
+   \   000114   5003         JNC     ??led_7p7s_value_set_34
+   \   000116   43..40       ORL     (p_dispbuff + 2),#0x40
+    307          	    if(dispbuf[0] & BIT_E)     p_dispbuff[1] |= BIT(6);
+   \                     ??led_7p7s_value_set_34:
+   \   000119   A2E4         MOV     C,0xE0 /* A   */.4
+   \   00011B   5003         JNC     ??led_7p7s_value_set_35
+   \   00011D   43..40       ORL     (p_dispbuff + 1),#0x40
+    308          	    if(dispbuf[0] & BIT_F)     p_dispbuff[0] |= BIT(6);
+   \                     ??led_7p7s_value_set_35:
+   \   000120   A2E5         MOV     C,0xE0 /* A   */.5
+   \   000122   5003         JNC     ??led_7p7s_value_set_36
+   \   000124   43..40       ORL     p_dispbuff,#0x40
+    309          	    if(dispbuf[0] & BIT_G)     p_dispbuff[4] |= BIT(5);
+   \                     ??led_7p7s_value_set_36:
+   \   000127   A2E6         MOV     C,0xE0 /* A   */.6
+   \   000129   5003         JNC     ??led_7p7s_value_set_37
+   \   00012B   43..20       ORL     (p_dispbuff + 4),#0x20
+    310          
+    311          	    if(dispbuf[1] & BIT_A)     p_dispbuff[6] |= BIT(5);
+   \                     ??led_7p7s_value_set_37:
+   \   00012E   E5..         MOV     A,(dispbuf + 1)
+   \   000130   A2E0         MOV     C,0xE0 /* A   */.0
+   \   000132   5003         JNC     ??led_7p7s_value_set_38
+   \   000134   43..20       ORL     (p_dispbuff + 6),#0x20
+    312          	    if(dispbuf[1] & BIT_B)     p_dispbuff[6] |= BIT(4);
+   \                     ??led_7p7s_value_set_38:
+   \   000137   A2E1         MOV     C,0xE0 /* A   */.1
+   \   000139   5003         JNC     ??led_7p7s_value_set_39
+   \   00013B   43..10       ORL     (p_dispbuff + 6),#0x10
+    313          	    if(dispbuf[1] & BIT_C)     p_dispbuff[6] |= BIT(3);
+   \                     ??led_7p7s_value_set_39:
+   \   00013E   A2E2         MOV     C,0xE0 /* A   */.2
+   \   000140   5003         JNC     ??led_7p7s_value_set_40
+   \   000142   43..08       ORL     (p_dispbuff + 6),#0x8
+    314          	    if(dispbuf[1] & BIT_D)     p_dispbuff[6] |= BIT(2);
+   \                     ??led_7p7s_value_set_40:
+   \   000145   A2E3         MOV     C,0xE0 /* A   */.3
+   \   000147   5003         JNC     ??led_7p7s_value_set_41
+   \   000149   43..04       ORL     (p_dispbuff + 6),#0x4
+    315          	    if(dispbuf[1] & BIT_E)     p_dispbuff[6] |= BIT(1);
+   \                     ??led_7p7s_value_set_41:
+   \   00014C   A2E4         MOV     C,0xE0 /* A   */.4
+   \   00014E   5003         JNC     ??led_7p7s_value_set_42
+   \   000150   43..02       ORL     (p_dispbuff + 6),#0x2
+    316          	    if(dispbuf[1] & BIT_F)     p_dispbuff[6] |= BIT(0);
+   \                     ??led_7p7s_value_set_42:
+   \   000153   A2E5         MOV     C,0xE0 /* A   */.5
+   \   000155   5003         JNC     ??led_7p7s_value_set_43
+   \   000157   43..01       ORL     (p_dispbuff + 6),#0x1
+    317          	    if(dispbuf[1] & BIT_G)     p_dispbuff[5] |= BIT(4);
+   \                     ??led_7p7s_value_set_43:
+   \   00015A   A2E6         MOV     C,0xE0 /* A   */.6
+   \   00015C   5003         JNC     ??led_7p7s_value_set_44
+   \   00015E   43..10       ORL     (p_dispbuff + 5),#0x10
+    318          	 if(disp.display_led_flag == 0)
+   \                     ??led_7p7s_value_set_44:
+   \   000161   E5..         MOV     A,(disp + 3)
+   \   000163   7066         JNZ     ??led_7p7s_value_set_30
+    319          	 {
+    320          	    if(dispbuf[2] & BIT_A)     p_dispbuff[3] |= BIT(4);
+   \   000165   E5..         MOV     A,(dispbuf + 2)
+   \   000167   A2E0         MOV     C,0xE0 /* A   */.0
+   \   000169   5003         JNC     ??led_7p7s_value_set_45
+   \   00016B   43..10       ORL     (p_dispbuff + 3),#0x10
+    321          	    if(dispbuf[2] & BIT_B)     p_dispbuff[2] |= BIT(4);
+   \                     ??led_7p7s_value_set_45:
+   \   00016E   A2E1         MOV     C,0xE0 /* A   */.1
+   \   000170   5003         JNC     ??led_7p7s_value_set_46
+   \   000172   43..10       ORL     (p_dispbuff + 2),#0x10
+    322          	    if(dispbuf[2] & BIT_C)     p_dispbuff[1] |= BIT(4);
+   \                     ??led_7p7s_value_set_46:
+   \   000175   A2E2         MOV     C,0xE0 /* A   */.2
+   \   000177   5003         JNC     ??led_7p7s_value_set_47
+   \   000179   43..10       ORL     (p_dispbuff + 1),#0x10
+    323          	    if(dispbuf[2] & BIT_D)     p_dispbuff[0] |= BIT(4);
+   \                     ??led_7p7s_value_set_47:
+   \   00017C   A2E3         MOV     C,0xE0 /* A   */.3
+   \   00017E   5003         JNC     ??led_7p7s_value_set_48
+   \   000180   43..10       ORL     p_dispbuff,#0x10
+    324          	    if(dispbuf[2] & BIT_E)     p_dispbuff[2] |= BIT(3);
+   \                     ??led_7p7s_value_set_48:
+   \   000183   A2E4         MOV     C,0xE0 /* A   */.4
+   \   000185   5003         JNC     ??led_7p7s_value_set_49
+   \   000187   43..08       ORL     (p_dispbuff + 2),#0x8
+    325          	    if(dispbuf[2] & BIT_F)     p_dispbuff[1] |= BIT(3);
+   \                     ??led_7p7s_value_set_49:
+   \   00018A   A2E5         MOV     C,0xE0 /* A   */.5
+   \   00018C   5003         JNC     ??led_7p7s_value_set_50
+   \   00018E   43..08       ORL     (p_dispbuff + 1),#0x8
+    326          	    if(dispbuf[2] & BIT_G)     p_dispbuff[0] |= BIT(3);
+   \                     ??led_7p7s_value_set_50:
+   \   000191   A2E6         MOV     C,0xE0 /* A   */.6
+   \   000193   5003         JNC     ??led_7p7s_value_set_51
+   \   000195   43..08       ORL     p_dispbuff,#0x8
+    327          
+    328          	    if(dispbuf[3] & BIT_A)     p_dispbuff[4] |= BIT(3);
+   \                     ??led_7p7s_value_set_51:
+   \   000198   E5..         MOV     A,(dispbuf + 3)
+   \   00019A   A2E0         MOV     C,0xE0 /* A   */.0
+   \   00019C   5003         JNC     ??led_7p7s_value_set_52
+   \   00019E   43..08       ORL     (p_dispbuff + 4),#0x8
+    329          	    if(dispbuf[3] & BIT_B)     p_dispbuff[4] |= BIT(2);
+   \                     ??led_7p7s_value_set_52:
+   \   0001A1   A2E1         MOV     C,0xE0 /* A   */.1
+   \   0001A3   5003         JNC     ??led_7p7s_value_set_53
+   \   0001A5   43..04       ORL     (p_dispbuff + 4),#0x4
+    330          	    if(dispbuf[3] & BIT_C)     p_dispbuff[4] |= BIT(1);
+   \                     ??led_7p7s_value_set_53:
+   \   0001A8   A2E2         MOV     C,0xE0 /* A   */.2
+   \   0001AA   5003         JNC     ??led_7p7s_value_set_54
+   \   0001AC   43..02       ORL     (p_dispbuff + 4),#0x2
+    331          	    if(dispbuf[3] & BIT_D)     p_dispbuff[4] |= BIT(0);
+   \                     ??led_7p7s_value_set_54:
+   \   0001AF   A2E3         MOV     C,0xE0 /* A   */.3
+   \   0001B1   5003         JNC     ??led_7p7s_value_set_55
+   \   0001B3   43..01       ORL     (p_dispbuff + 4),#0x1
+    332          	    if(dispbuf[3] & BIT_E)     p_dispbuff[3] |= BIT(2);
+   \                     ??led_7p7s_value_set_55:
+   \   0001B6   A2E4         MOV     C,0xE0 /* A   */.4
+   \   0001B8   5003         JNC     ??led_7p7s_value_set_56
+   \   0001BA   43..04       ORL     (p_dispbuff + 3),#0x4
+    333          	    if(dispbuf[3] & BIT_F)     p_dispbuff[3] |= BIT(1);
+   \                     ??led_7p7s_value_set_56:
+   \   0001BD   A2E5         MOV     C,0xE0 /* A   */.5
+   \   0001BF   5003         JNC     ??led_7p7s_value_set_57
+   \   0001C1   43..02       ORL     (p_dispbuff + 3),#0x2
+    334          	    if(dispbuf[3] & BIT_G)     p_dispbuff[3] |= BIT(0);
+   \                     ??led_7p7s_value_set_57:
+   \   0001C4   A2E6         MOV     C,0xE0 /* A   */.6
+   \   0001C6   5003         JNC     ??led_7p7s_value_set_30
+   \   0001C8   43..01       ORL     (p_dispbuff + 3),#0x1
+    335          	 }
+    336          }
+    337          	if(scan_ctl.disp_cnt > 0)	// µ±ÏÔÊ¾ÒôÁ¿¡¢ÇúÄ¿¡¢¶¨Ê±Ê±£¬ÒþÈ¥Ã°ºÅÏÔÊ¾
+   \                     ??led_7p7s_value_set_30:
+   \   0001CB   90....       MOV     DPTR,#(scan_ctl + 7)
+   \   0001CE   E0           MOVX    A,@DPTR
+   \   0001CF   7007         JNZ     ??led_7p7s_value_set_58
+    338          	{
+    339          
+    340          	}else{
+    341          		if(disp.display_dp_flag == 0)
+   \   0001D1   E5..         MOV     A,(disp + 2)
+   \   0001D3   7003         JNZ     ??led_7p7s_value_set_58
+    342          		{
+    343          			p_dispbuff[5] |= BIT(2);
+    344          			p_dispbuff[5] |= BIT(1);
+   \   0001D5   43..06       ORL     (p_dispbuff + 5),#0x6
+    345          		}
+    346          	}
+    347          
+    348              IE_EA = 1;
+   \                     ??led_7p7s_value_set_58:
+   \   0001D8   D2AF         SETB    0xa8.7
+    349          }
+   \   0001DA   22           RET
+    350          
+    351          //ÏÔÊ¾Êý×Ö
+    352          void led_7p7s_dispnum(u16 num) AT(LED_7P7S_SEG);
+
+   \                                 In segment LED_7P7S_SEG, align 1, keep-with-next
+    353          void led_7p7s_dispnum(u16 num)
+   \                     led_7p7s_dispnum:
+    354          {
+   \   000000   EE           MOV     A,R6
+   \   000001   C0E0         PUSH    A
+   \   000003   C0..         PUSH    ?V0 + 0
+   \   000005   C0..         PUSH    ?V0 + 1
+   \   000007                ; Saved register size: 3
+   \   000007                ; Auto size: 0
+   \   000007   EA           MOV     A,R2
+   \   000008   FC           MOV     R4,A
+   \   000009   EB           MOV     A,R3
+   \   00000A   FD           MOV     R5,A
+    355              u8 i;
+    356              for (i=2; i!=0xff; i--) {
+   \   00000B   7E02         MOV     R6,#0x2
+    357                  dispbuf[i] = tbl_led_num[num % 10];
+   \                     ??led_7p7s_dispnum_0:
+   \   00000D   EC           MOV     A,R4
+   \   00000E   F8           MOV     R0,A
+   \   00000F   ED           MOV     A,R5
+   \   000010   F9           MOV     R1,A
+   \   000011   7A0A         MOV     R2,#0xa
+   \   000013   7B00         MOV     R3,#0x0
+   \   000015   12....       LCALL   ?US_DIV_MOD
+   \   000018   EA           MOV     A,R2
+   \   000019   24..         ADD     A,#(tbl_led_num & 0xff)
+   \   00001B   F582         MOV     DPL,A
+   \   00001D   EB           MOV     A,R3
+   \   00001E   34..         ADDC    A,#((tbl_led_num >> 8) & 0xff)
+   \   000020   F583         MOV     DPH,A
+   \   000022   E4           CLR     A
+   \   000023   93           MOVC    A,@A+DPTR
+   \   000024   C0E0         PUSH    A
+   \   000026   74..         MOV     A,#dispbuf
+   \   000028   2E           ADD     A,R6
+   \   000029   F8           MOV     R0,A
+   \   00002A   D0E0         POP     A
+   \   00002C   F6           MOV     @R0,A
+    358                  num /= 10;
+   \   00002D   EC           MOV     A,R4
+   \   00002E   F8           MOV     R0,A
+   \   00002F   ED           MOV     A,R5
+   \   000030   F9           MOV     R1,A
+   \   000031   7A0A         MOV     R2,#0xa
+   \   000033   7B00         MOV     R3,#0x0
+   \   000035   12....       LCALL   ?US_DIV_MOD
+   \   000038   88..         MOV     ?V0 + 0,R0
+   \   00003A   89..         MOV     ?V0 + 1,R1
+   \   00003C   AC..         MOV     R4,?V0 + 0
+   \   00003E   AD..         MOV     R5,?V0 + 1
+    359              }
+   \   000040   1E           DEC     R6
+   \   000041   74FF         MOV     A,#-0x1
+   \   000043   6E           XRL     A,R6
+   \   000044   70C7         JNZ     ??led_7p7s_dispnum_0
+    360              dispbuf[3] = 0;
+   \   000046   75..00       MOV     (dispbuf + 3),#0x0
+    361          }
+   \   000049   D0..         POP     ?V0 + 1
+   \   00004B   D0..         POP     ?V0 + 0
+   \   00004D   D0E0         POP     A
+   \   00004F   FE           MOV     R6,A
+   \   000050   22           RET
+    362          
+    363          //ÏÔÊ¾ÒôÁ¿
+    364          void led_7p7s_disp_vol(void) AT(LED_7P7S_SEG);
+
+   \                                 In segment LED_7P7S_SEG, align 1, keep-with-next
+    365          void led_7p7s_disp_vol(void)
+   \                     led_7p7s_disp_vol:
+    366          {
+   \   000000   C0..         PUSH    ?V0 + 0
+   \   000002                ; Saved register size: 1
+   \   000002                ; Auto size: 0
+    367              disp_numsel(sys_ctl.volume);
+   \   000002                ; Setup parameters for call to function led_7p7s_dispnum
+   \   000002   90....       MOV     DPTR,#(sys_ctl + 2)
+   \   000005   E0           MOVX    A,@DPTR
+   \   000006   FA           MOV     R2,A
+   \   000007   7B00         MOV     R3,#0x0
+   \   000009   12....       LCALL   led_7p7s_dispnum
+    368              dispbuf[0] = 0;
+   \   00000C   75..00       MOV     dispbuf,#0x0
+    369              //dispbuf[0] = LED_7P7S_V;
+    370          }
+   \   00000F   D0..         POP     ?V0 + 0
+   \   000011   22           RET
+    371          
+
+   \                                 In segment NEAR_CODE, align 1, keep-with-next
+    372          void led_7p7s_disp_timer(void)
+   \                     led_7p7s_disp_timer:
+    373          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    374          	if(scan_ctl.timer_flag == 1){
+   \   000000   90....       MOV     DPTR,#(scan_ctl + 14)
+   \   000003   E0           MOVX    A,@DPTR
+   \   000004   FA           MOV     R2,A
+   \   000005   7401         MOV     A,#0x1
+   \   000007   6A           XRL     A,R2
+   \   000008   7009         JNZ     ??led_7p7s_disp_timer_0
+    375              	disp_numsel(15);
+   \   00000A                ; Setup parameters for call to function led_7p7s_dispnum
+   \   00000A   7A0F         MOV     R2,#0xf
+   \                     ??led_7p7s_disp_timer_1:
+   \   00000C   7B00         MOV     R3,#0x0
+   \   00000E   12....       LCALL   led_7p7s_dispnum
+   \   000011   801D         SJMP    ??led_7p7s_disp_timer_2
+    376          	}else if(scan_ctl.timer_flag == 2){
+   \                     ??led_7p7s_disp_timer_0:
+   \   000013   7402         MOV     A,#0x2
+   \   000015   6A           XRL     A,R2
+   \   000016   7004         JNZ     ??led_7p7s_disp_timer_3
+    377              	disp_numsel(30);
+   \   000018                ; Setup parameters for call to function led_7p7s_dispnum
+   \   000018   7A1E         MOV     R2,#0x1e
+   \   00001A   80F0         SJMP    ??led_7p7s_disp_timer_1
+    378          	}else if(scan_ctl.timer_flag == 3){
+   \                     ??led_7p7s_disp_timer_3:
+   \   00001C   7403         MOV     A,#0x3
+   \   00001E   6A           XRL     A,R2
+   \   00001F   7004         JNZ     ??led_7p7s_disp_timer_4
+    379              	disp_numsel(60);
+   \   000021                ; Setup parameters for call to function led_7p7s_dispnum
+   \   000021   7A3C         MOV     R2,#0x3c
+   \   000023   80E7         SJMP    ??led_7p7s_disp_timer_1
+    380          	}else if(scan_ctl.timer_flag == 4){
+   \                     ??led_7p7s_disp_timer_4:
+   \   000025   7404         MOV     A,#0x4
+   \   000027   6A           XRL     A,R2
+   \   000028   7006         JNZ     ??led_7p7s_disp_timer_2
+    381              	dispbuf[1] = 7;
+   \   00002A   75..07       MOV     (dispbuf + 1),#0x7
+    382              	dispbuf[2] = LED_7P7S_H;
+   \   00002D   75..76       MOV     (dispbuf + 2),#0x76
+    383          	}
+    384              dispbuf[0] = 0;
+   \                     ??led_7p7s_disp_timer_2:
+   \   000030   75..00       MOV     dispbuf,#0x0
+    385          }
+   \   000033   22           RET
+    386          
+
+   \                                 In segment NEAR_CODE, align 1, keep-with-next
+    387          void led_7p7s_disp_clock(void)
+   \                     led_7p7s_disp_clock:
+    388          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    389          	
+    390          	led_7p7s_disp_time();
+   \   000000                ; Setup parameters for call to function led_7p7s_disp_time
+   \   000000   12....       LCALL   led_7p7s_disp_time
+    391          	
+    392          }
+   \   000003   22           RET
+    393          
+
+   \                                 In segment NEAR_CODE, align 1, keep-with-next
+    394          void led_7p7s_disp_song(void)
+   \                     led_7p7s_disp_song:
+    395          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    396              disp_numsel(u_msc.music_num+1);
+   \   000000                ; Setup parameters for call to function led_7p7s_dispnum
+   \   000000   90....       MOV     DPTR,#u_msc
+   \   000003   E0           MOVX    A,@DPTR
+   \   000004   2401         ADD     A,#0x1
+   \   000006   FA           MOV     R2,A
+   \   000007   A3           INC     DPTR
+   \   000008   E0           MOVX    A,@DPTR
+   \   000009   3400         ADDC    A,#0x0
+   \   00000B   FB           MOV     R3,A
+   \   00000C   12....       LCALL   led_7p7s_dispnum
+    397              dispbuf[0] = 0;
+   \   00000F   75..00       MOV     dispbuf,#0x0
+    398          }
+   \   000012   22           RET
+    399          
+    400          //ÏÔÊ¾Ê±¼ä
+    401          void led_7p7s_disp_time(void) AT(LED_7P7S_SEG);
+
+   \                                 In segment LED_7P7S_SEG, align 1, keep-with-next
+    402          void led_7p7s_disp_time(void)
+   \                     led_7p7s_disp_time:
+    403          {
+   \   000000   C0..         PUSH    ?VB
+   \   000002                ; Saved register size: 1
+   \   000002                ; Auto size: 0
+    404              bool ie_ea = IE_EA;
+   \   000002   A2AF         MOV     C,0xa8.7
+   \   000004   5004         JNC     ??led_7p7s_disp_time_0
+   \   000006   D2..         SETB    ?VB.0
+   \   000008   8002         SJMP    ??led_7p7s_disp_time_1
+   \                     ??led_7p7s_disp_time_0:
+   \   00000A   C2..         CLR     ?VB.0
+    405              IE_EA = 0;
+   \                     ??led_7p7s_disp_time_1:
+   \   00000C   C2AF         CLR     0xa8.7
+    406          
+    407              dispbuf[0] = tbl_led_num[ocx.timeh / 10];
+   \   00000E   75F00A       MOV     B,#0xa
+   \   000011   78..         MOV     R0,#(ocx + 11)
+   \   000013   E6           MOV     A,@R0
+   \   000014   84           DIV     AB
+   \   000015   12....       LCALL   ??Subroutine0_0
+   \                     ??CrossCallReturnLabel_0:
+   \   000018   F5..         MOV     dispbuf,A
+    408              dispbuf[1] = tbl_led_num[ocx.timeh % 10];
+   \   00001A   12....       LCALL   ?Subroutine0
+   \                     ??CrossCallReturnLabel_1:
+   \   00001D   FA           MOV     R2,A
+   \   00001E   8A..         MOV     (dispbuf + 1),R2
+    409              dispbuf[2] = tbl_led_num[ocx.timel / 10];
+   \   000020   75F00A       MOV     B,#0xa
+   \   000023   08           INC     R0
+   \   000024   E6           MOV     A,@R0
+   \   000025   84           DIV     AB
+   \   000026   12....       LCALL   ??Subroutine0_0
+   \                     ??CrossCallReturnLabel_2:
+   \   000029   FB           MOV     R3,A
+   \   00002A   8B..         MOV     (dispbuf + 2),R3
+    410              dispbuf[3] = tbl_led_num[ocx.timel % 10];
+   \   00002C   12....       LCALL   ?Subroutine0
+   \                     ??CrossCallReturnLabel_3:
+   \   00002F   FC           MOV     R4,A
+   \   000030   8C..         MOV     (dispbuf + 3),R4
+    411              dispbuf[4] = LED_7P7S_DDOT;
+   \   000032   75..10       MOV     (dispbuf + 4),#0x10
+    412          
+    413              if(ocx.blink_num & 0x0c) {
+   \   000035   78..         MOV     R0,#(ocx + 7)
+   \   000037   E6           MOV     A,@R0
+   \   000038   FD           MOV     R5,A
+   \   000039   740C         MOV     A,#0xc
+   \   00003B   5D           ANL     A,R5
+   \   00003C   6007         JZ      ??led_7p7s_disp_time_2
+    414                  ocx.blink_numh = CHAR_HOURH;
+   \   00003E   08           INC     R0
+   \   00003F   A6..         MOV     @R0,dispbuf+0x0
+    415                  ocx.blink_numl = CHAR_HOURL;
+   \   000041   08           INC     R0
+   \   000042   EA           MOV     A,R2
+   \   000043   800A         SJMP    ??led_7p7s_disp_time_3
+    416              } else if(ocx.blink_num & 0x03) {
+   \                     ??led_7p7s_disp_time_2:
+   \   000045   7403         MOV     A,#0x3
+   \   000047   5D           ANL     A,R5
+   \   000048   6006         JZ      ??led_7p7s_disp_time_4
+    417                  ocx.blink_numh = CHAR_MINH;
+   \   00004A   08           INC     R0
+   \   00004B   EB           MOV     A,R3
+   \   00004C   F6           MOV     @R0,A
+    418                  ocx.blink_numl = CHAR_MINL;
+   \   00004D   08           INC     R0
+   \   00004E   EC           MOV     A,R4
+   \                     ??led_7p7s_disp_time_3:
+   \   00004F   F6           MOV     @R0,A
+    419              }
+    420          
+    421              IE_EA = ie_ea;
+   \                     ??led_7p7s_disp_time_4:
+   \   000050   A2..         MOV     C,?VB.0
+   \   000052   92AF         MOV     0xa8.7,C
+    422          }
+   \   000054   D0..         POP     ?VB
+   \   000056   22           RET
+
+   \                                 In segment LED_7P7S_SEG, align 1, keep-with-next
+   \                     ?Subroutine0:
+   \   000000   E6           MOV     A,@R0
+   \   000001   75F00A       MOV     B,#0xa
+   \   000004   84           DIV     AB
+   \   000005   E5F0         MOV     A,B
+   \                     ??Subroutine0_0:
+   \   000007   24..         ADD     A,#(tbl_led_num & 0xff)
+   \   000009   F582         MOV     DPL,A
+   \   00000B   E4           CLR     A
+   \   00000C   34..         ADDC    A,#((tbl_led_num >> 8) & 0xff)
+   \   00000E   F583         MOV     DPH,A
+   \   000010   E4           CLR     A
+   \   000011   93           MOVC    A,@A+DPTR
+   \   000012   22           RET
+    423          
+    424          //ÏÔÊ¾µ±Ç°Éè±¸
+    425          void led_7p7s_disp_device(void) AT(LED_7P7S_SEG);
+
+   \                                 In segment LED_7P7S_SEG, align 1, keep-with-next
+    426          void led_7p7s_disp_device(void)
+   \                     led_7p7s_disp_device:
+    427          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    428              if (fs_cur_dev() == DEVICE_SDMMC) {
+   \   000000                ; Setup parameters for call to function fs_cur_dev
+   \   000000   12....       LCALL   fs_cur_dev
+   \   000003   E9           MOV     A,R1
+   \   000004   7004         JNZ     ??led_7p7s_disp_device_0
+    429                  dispbuf[4] |= LED_7P7S_SD;
+   \   000006   43..08       ORL     (dispbuf + 4),#0x8
+   \   000009   22           RET
+    430              } else if (fs_cur_dev() == DEVICE_UDISK) {
+   \                     ??led_7p7s_disp_device_0:
+   \   00000A                ; Setup parameters for call to function fs_cur_dev
+   \   00000A   12....       LCALL   fs_cur_dev
+   \   00000D   E9           MOV     A,R1
+   \   00000E   6402         XRL     A,#0x2
+   \   000010   7003         JNZ     ??led_7p7s_disp_device_1
+    431                  dispbuf[4] |= LED_7P7S_USB;
+   \   000012   43..04       ORL     (dispbuf + 4),#0x4
+    432              }
+    433          }
+   \                     ??led_7p7s_disp_device_1:
+   \   000015   22           RET
+    434          
+    435          //ÏÔÊ¾²¥·Å½çÃæ
+    436          void led_7p7s_disp_play_pause(void) AT(LED_7P7S_SEG);
+
+   \                                 In segment LED_7P7S_SEG, align 1, keep-with-next
+    437          void led_7p7s_disp_play_pause(void)
+   \                     led_7p7s_disp_play_pause:
+    438          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    439              disp_time();
+   \   000000                ; Setup parameters for call to function led_7p7s_disp_time
+   \   000000   12....       LCALL   led_7p7s_disp_time
+    440              dispbuf[4] = LED_7P7S_DDOT | LED_7P7S_MP3 | (b_msc.pause ? LED_7P7S_PAUSE : LED_7P7S_PLAY);
+   \   000003   A2..         MOV     C,b_msc.1
+   \   000005   5004         JNC     ??led_7p7s_disp_play_pause_0
+   \   000007   7802         MOV     R0,#0x2
+   \   000009   8002         SJMP    ??led_7p7s_disp_play_pause_1
+   \                     ??led_7p7s_disp_play_pause_0:
+   \   00000B   7801         MOV     R0,#0x1
+   \                     ??led_7p7s_disp_play_pause_1:
+   \   00000D   E8           MOV     A,R0
+   \   00000E   4450         ORL     A,#0x50
+   \   000010   F5..         MOV     (dispbuf + 4),A
+    441              disp_device();
+   \   000012                ; Setup parameters for call to function led_7p7s_disp_device
+   \   000012   12....       LCALL   led_7p7s_disp_device
+    442          }
+   \   000015   22           RET
+    443          
+    444          //ÏÔÊ¾²¥·Å½çÃæ
+    445          void led_7p7s_disp_numsel_icon(void) AT(LED_7P7S_SEG);
+
+   \                                 In segment LED_7P7S_SEG, align 1, keep-with-next
+    446          void led_7p7s_disp_numsel_icon(void)
+   \                     led_7p7s_disp_numsel_icon:
+    447          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    448              dispbuf[4] = LED_7P7S_MP3;
+   \   000000   75..40       MOV     (dispbuf + 4),#0x40
+    449              disp_device();
+   \   000003                ; Setup parameters for call to function led_7p7s_disp_device
+   \   000003   12....       LCALL   led_7p7s_disp_device
+    450          }
+   \   000006   22           RET
+    451          
+    452          //ÏÔÊ¾FMÆµµÀ
+    453          void led_7p7s_disp_ch(u8 ch) AT(LED_7P7S_SEG);
+
+   \                                 In segment LED_7P7S_SEG, align 1, keep-with-next
+    454          void led_7p7s_disp_ch(u8 ch)
+   \                     led_7p7s_disp_ch:
+    455          {
+   \   000000   C0..         PUSH    ?V0 + 0
+   \   000002                ; Saved register size: 1
+   \   000002                ; Auto size: 0
+    456              disp_numsel(ch);
+   \   000002                ; Setup parameters for call to function led_7p7s_dispnum
+   \   000002   E9           MOV     A,R1
+   \   000003   FA           MOV     R2,A
+   \   000004   7B00         MOV     R3,#0x0
+   \   000006   12....       LCALL   led_7p7s_dispnum
+    457              dispbuf[0] = LED_7P7S_C;
+   \   000009   75..39       MOV     dispbuf,#0x39
+    458              dispbuf[1] = LED_7P7S_H;
+   \   00000C   75..76       MOV     (dispbuf + 1),#0x76
+    459          }
+   \   00000F   D0..         POP     ?V0 + 0
+   \   000011   22           RET
+    460          
+    461          //ÏÔÊ¾FMÆµµã
+    462          void led_7p7s_disp_freq(void) AT(LED_7P7S_SEG);
+
+   \                                 In segment LED_7P7S_SEG, align 1, keep-with-next
+    463          void led_7p7s_disp_freq(void)
+   \                     led_7p7s_disp_freq:
+    464          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    465              disp_numsel(ocx.freq);
+   \   000000                ; Setup parameters for call to function led_7p7s_dispnum
+   \   000000   78..         MOV     R0,#(ocx + 15)
+   \   000002   E6           MOV     A,@R0
+   \   000003   FA           MOV     R2,A
+   \   000004   08           INC     R0
+   \   000005   E6           MOV     A,@R0
+   \   000006   FB           MOV     R3,A
+   \   000007   12....       LCALL   led_7p7s_dispnum
+    466              if (dispbuf[0] == LED_7P7S_0) {
+   \   00000A   743F         MOV     A,#0x3f
+   \   00000C   65..         XRL     A,dispbuf
+   \   00000E   7003         JNZ     ??led_7p7s_disp_freq_0
+    467                  dispbuf[0] = 0;
+   \   000010   75..00       MOV     dispbuf,#0x0
+    468              }
+    469              dispbuf[4] = LED_7P7S_FM;
+   \                     ??led_7p7s_disp_freq_0:
+   \   000013   75..20       MOV     (dispbuf + 4),#0x20
+    470          }
+   \   000016   22           RET
+
+   \                                 In segment SFR_AN, at 0xa8
+   \   union <unnamed> volatile __sfr _A_IE0
+   \                     _A_IE0:
+   \   000000                DS 1
+    471          
+    472          //ÄÜÁ¿ÏÔÊ¾
+    473          #if ENERGY_DISP_EN
+    474          void led_7p7s_disp_energy(void) AT(LED_7P7S_SEG);
+    475          void led_7p7s_disp_energy(void)
+    476          {
+    477              u8 num1, num2, i;
+    478          
+    479              num1 = ocx.energy_cnt / 3;
+    480              num2 = ocx.energy_cnt % 3;
+    481              //printf("num1=%dx num2=%d\n", num1, num2);
+    482              for (i=0; i!=5; i++) {
+    483                  if (i < num1) {
+    484                      dispbuf[i] = tbl_led_energy[2];
+    485                  } else if (i == num1) {
+    486                      dispbuf[i] = tbl_led_energy[num2];
+    487                  } else {
+    488                      dispbuf[i] = 0;
+    489                  }
+    490              }
+    491          }
+    492          #endif
+    493          #endif /*(DISP_TYPE == DISP_LED_7P7S)*/
+    494          
+
+   Maximum stack usage in bytes:
+
+     Function                  EXT_STACK PSTACK XSTACK
+     --------                  --------- ------ ------
+     led_7p7s_blink                   5      0      0
+     led_7p7s_clear                   0      0      0
+       -> smemset_i                   0      0      0
+     led_7p7s_disp_ch                 1      0      0
+       -> led_7p7s_dispnum            2      0      0
+     led_7p7s_disp_clock              0      0      0
+       -> led_7p7s_disp_time          0      0      0
+     led_7p7s_disp_device             0      0      0
+       -> fs_cur_dev                  0      0      0
+       -> fs_cur_dev                  0      0      0
+     led_7p7s_disp_freq               0      0      0
+       -> led_7p7s_dispnum            0      0      0
+     led_7p7s_disp_numsel_icon        0      0      0
+       -> led_7p7s_disp_device        0      0      0
+     led_7p7s_disp_play_pause         0      0      0
+       -> led_7p7s_disp_time          0      0      0
+       -> led_7p7s_disp_device        0      0      0
+     led_7p7s_disp_song               0      0      0
+       -> led_7p7s_dispnum            0      0      0
+     led_7p7s_disp_str                8      0      0
+     led_7p7s_disp_time               1      0      0
+     led_7p7s_disp_timer              0      0      0
+       -> led_7p7s_dispnum            0      0      0
+       -> led_7p7s_dispnum            0      0      0
+       -> led_7p7s_dispnum            0      0      0
+     led_7p7s_disp_vol                1      0      0
+       -> led_7p7s_dispnum            2      0      0
+     led_7p7s_dispnum                 5      0      0
+     led_7p7s_init                    0      0      0
+       -> led_7p7s_io_init            0      0      0
+     led_7p7s_io_init                 5      0      0
+     led_7p7s_scan                    6      0      0
+       -> led_7p7s_blink             10      0      0
+       -> led_7p7s_value_set         10      0      0
+       -> led_7p7s_io_init           10      0      0
+     led_7p7s_value_set               5      0      0
+       -> smemset_i                   0      0      0
+
+
+   Segment part sizes:
+
+     Function/Label            Bytes
+     --------------            -----
+     P2                           1
+     P2DIR                        1
+     dispbuf                      5
+     p_dispbuff                   7
+     COM_T                        1
+     tbl_led_num                 10
+     tbl_led_alpha               26
+     tbl_led_energy               3
+     led_7p7s_disp_str          136
+     led_7p7s_io_init            22
+     led_7p7s_init                9
+     led_7p7s_clear              10
+     led_7p7s_blink              75
+     led_7p7s_scan              248
+     count                        1
+     led_7p7s_value_set         475
+     led_7p7s_dispnum            81
+     led_7p7s_disp_vol           18
+     led_7p7s_disp_timer         52
+     led_7p7s_disp_clock          4
+     led_7p7s_disp_song          19
+     led_7p7s_disp_time          87
+     ?Subroutine0                19
+     led_7p7s_disp_device        22
+     led_7p7s_disp_play_pause    22
+     led_7p7s_disp_numsel_icon    7
+     led_7p7s_disp_ch            18
+     led_7p7s_disp_freq          23
+     _A_IE0                       1
+
+ 
+    12 bytes in segment DATA_N
+   116 bytes in segment LED_7P7S_INIT
+ 1 020 bytes in segment LED_7P7S_SEG
+   136 bytes in segment LED_DISP_SEG
+    39 bytes in segment LED_DISP_TBL
+    75 bytes in segment NEAR_CODE
+     3 bytes in segment SFR_AN
+     1 byte  in segment XDATA_N
+     1 byte  in segment XDATA_Z
+ 
+ 1 386 bytes of CODE  memory
+    12 bytes of DATA  memory (+ 3 bytes shared)
+     2 bytes of XDATA memory
+
+Errors: none
+Warnings: none

@@ -1,0 +1,894 @@
+##############################################################################
+#                                                                            #
+# IAR 8051 C/C++ Compiler V7.20H/W32                   29/Jun/2018  19:55:13 #
+# Copyright 2004-2006 IAR Systems. All rights reserved.                      #
+#                                                                            #
+#    Core               =  plain                                             #
+#    Code model         =  near                                              #
+#    Data model         =  large                                             #
+#    Calling convention =  extended stack reentrant                          #
+#    Constant location  =  code                                              #
+#    Extended stack     =  enabled                                           #
+#    Dptr setup         =  1,16                                              #
+#    Source file        =  I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\user\user_init. #
+#                          c                                                 #
+#    Command line       =  -I E:\software\8051\INC\ -I                       #
+#                          E:\software\8051\INC\CLIB\ -I                     #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\COMMON\ -I      #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\INC\ -I         #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\config\ -I      #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\api\ -I         #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\fm\ -I          #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\fat\ -I         #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\display\ -I     #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\display\theme_d #
+#                          efault\ -I I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073 #
+#                          A_宇泰_AX1071_xxxxxxxx_20180629_Merlin_1\app\disp #
+#                          lay\led\ -I I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC07 #
+#                          3A_宇泰_AX1071_xxxxxxxx_20180629_Merlin_1\app\dis #
+#                          play\lcd\ -I I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC0 #
+#                          73A_宇泰_AX1071_xxxxxxxx_20180629_Merlin_1\app\ta #
+#                          sk\ -I I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇 #
+#                          泰_AX1071_xxxxxxxx_20180629_Merlin_1\app\user\    #
+#                          -I I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_A #
+#                          X1071_xxxxxxxx_20180629_Merlin_1\app\mem\ -I      #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\module\ -I      #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\key\ -I         #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\startmusic\ -I  #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\spi\ -D         #
+#                          AX107X_TAG -lC I:\a_wangqun\宇泰_睡眠仪_KNP08\18B #
+#                          C073A_宇泰_AX1071_xxxxxxxx_20180629_Merlin_1\app\ #
+#                          Debug\List\ -o I:\a_wangqun\宇泰_睡眠仪_KNP08\18B #
+#                          C073A_宇泰_AX1071_xxxxxxxx_20180629_Merlin_1\app\ #
+#                          Debug\Obj\ -e -z9 --core=plain --dptr=16,1        #
+#                          --data_model=large --code_model=near              #
+#                          --calling_convention=ext_stack_reentrant          #
+#                          --place_constants=code --nr_virtual_regs 20       #
+#                          --extended_stack I:\a_wangqun\宇泰_睡眠仪_KNP08\1 #
+#                          8BC073A_宇泰_AX1071_xxxxxxxx_20180629_Merlin_1\ap #
+#                          p\user\user_init.c                                #
+#    List file          =  I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\Debug\List\user #
+#                          _init.lst                                         #
+#    Object file        =  I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\Debug\Obj\user_ #
+#                          init.r51                                          #
+#                                                                            #
+#                                                                            #
+##############################################################################
+
+I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX1071_xxxxxxxx_20180629_Merlin_1\app\user\user_init.c
+      1          /*****************************************************************************
+      2           * Module    : User
+      3           * File      : user_init.c
+      4           * Author    : jingfa
+      5           * Email     :
+      6           * Function  : 初始化流程
+      7           *****************************************************************************/
+      8          #include "include.h"
+
+   \                                 In segment SFR_AN, at 0x80
+   \   unsigned char volatile __sfr P0
+   \                     P0:
+   \   000000                DS 1
+
+   \                                 In segment SFR_AN, at 0x88
+   \   unsigned char volatile __sfr SDCON0
+   \                     SDCON0:
+   \   000000                DS 1
+
+   \                                 In segment SFR_AN, at 0xa9
+   \   unsigned char volatile __sfr IE1
+   \                     IE1:
+   \   000000                DS 1
+
+   \                                 In segment SFR_AN, at 0xb9
+   \   unsigned char volatile __sfr IP1
+   \                     IP1:
+   \   000000                DS 1
+
+   \                                 In segment SFR_AN, at 0xba
+   \   unsigned char volatile __sfr P0DIR
+   \                     P0DIR:
+   \   000000                DS 1
+
+   \                                 In segment SFR_AN, at 0xf1
+   \   unsigned char volatile __sfr TMR3CON
+   \                     TMR3CON:
+   \   000000                DS 1
+
+   \                                 In segment SFR_AN, at 0xf7
+   \   unsigned char volatile __sfr WDTCON
+   \                     WDTCON:
+   \   000000                DS 1
+      9          
+
+   \                                 In segment XDATA_Z, align 1, keep-with-next
+   \   000000                REQUIRE __INIT_XDATA_Z
+     10          u8 rtc_flag;
+   \                     rtc_flag:
+   \   000000                DS 1
+     11          
+     12          #ifdef UART_DEBUG
+     13          
+     14          void __program_start(void);
+     15          void __reset_vector(void)
+     16          {
+     17          	__program_start();
+     18          }
+     19          
+     20          #else //UART_DEBUG
+     21          
+     22          #pragma constseg="CODE_TBL"
+
+   \                                 In segment CODE_TBL, align 1, root
+     23          __root const u8 __code code_tbl[8] = {0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff};
+   \                     code_tbl:
+   \   000000   FFFFFFFF     DB 255, 255, 255, 255, 255, 255, 255, 255
+   \            FFFFFFFF
+     24          #pragma constseg=default
+     25          
+     26          #endif //UART_DEBUG
+     27          
+     28          #define MSG_POOL_DEPTH      16          //消息池深度
+
+   \                                 In segment MSG_POOL, align 1, root
+   \   000000                REQUIRE ?RESET_PDATA_BANK
+     29          IAR_PDATA_A u8 msg_pool[MSG_POOL_DEPTH] AT(MSG_POOL);
+   \                     msg_pool:
+   \   000000                DS 16
+     30          
+     31          
+     32          /*----------------------------------------------------------------------------*/
+     33          /**@brief 系统变量初始化
+     34             @param 无
+     35             @return 无
+     36             @note
+     37          */
+     38          /*----------------------------------------------------------------------------*/
+     39          #pragma inline=forced
+     40          #pragma location="SYS_INIT"
+     41          void sysvar_init(void)
+     42          {
+     43          	libvar_init();
+     44          	dac_ctl_init();
+     45          #if DAC_POWER_SPEED
+     46          	dac_init_ctl.sta = DAC_INIT_IDLE;
+     47          #endif
+     48          	msg_init(msg_pool, MSG_POOL_DEPTH);
+     49          #if ((DISP_TYPE != DISP_LED) && (DISP_TYPE != DISP_NO))
+     50          	ocx_clear();
+     51          #endif
+     52          
+     53          	b_dac.all = 0;
+     54          	b_sys.all = 0;
+     55          #if DAC_FADE_EN
+     56          	fade_ctl.en = 1;
+     57          #else
+     58          	fade_ctl.en = 0;
+     59          #endif
+     60          #if (BATTERY_CHECK || SOFT_POWEROFF_EN)
+     61          	sys_ctl.bat_sta = VOL_INIT;
+     62          #endif
+     63          	sys_ctl.eq_num = 0;
+     64          #if TASK_SPEAKER_EN
+     65          	sys_ctl.mix_step = ECHO_MAX;
+     66          #endif
+     67          	t_fat.dev_new = DEVICE_SDMMC1;//DEVICE_INVALID;
+     68          	t_fat.dev_sel = DEVICE_SDMMC1;//DEVICE_INVALID;
+     69          	task_ctl.last_work = 0;
+     70          #if ENERGY_DISP_EN
+     71          	ocx.disp_energy = 0;
+     72          	auadc_ctl.auadc_process = dummy_void;
+     73          #endif
+     74          	mem_ctl.delay_time = 0;
+     75          #if ((SYS_MEM == MEM_INTERNAL) && USE_BREAK_POINT)
+     76          	mem_ctl.erase_time = 0;
+     77          #endif
+     78          	t_msc.poweron = 0;
+     79          #if SOFT_POWEROFF_EN
+     80          	poweroff_ctl.power_key_sta = POWERKEY_INIT;
+     81          	poweroff_ctl.wait_powerkey_up = 0;
+     82          #if DCIN_DET_EN
+     83          	poweroff_ctl.dc_in_sta = DC_INIT;
+     84          #endif
+     85          #endif
+     86          
+     87          #if ((((FM_CLOCK == USE_SD_IO_32KHZ_CLK) || (FM_CLOCK == USE_SD_IO_12MHZ_CLK)) && (TASK_FM_EN)) || FM_CLK_IO_MUX_SDCLK)
+     88          	fm_ctl.fm_mode_flag = 0;
+     89          #endif
+     90          #if TASK_FLASH_EN
+     91          	u_spi.spi_music_flag = 0;
+     92          #endif
+     93          
+     94          	memset(&u_spi,0,sizeof(u_spi));
+     95          }
+     96          
+     97          
+     98          #pragma inline=forced
+     99          #pragma location="SYS_INIT"
+    100          void timer3_init()		// 1ms timer
+    101          {
+    102          	IE1 &= ~BIT(4);		// Enable timer3 interrupt
+    103          	//asm("ORL 0xB9,#0x10");
+    104          	IP1 |= BIT(4);		// Set interrupt level to high level
+    105          
+    106          	// Sysclock 128 div, Time mode, Rising Edge         sysclock   24M 
+    107          	TMR3CON =  BIT(4) | BIT(2) | BIT(1)  | BIT(0) ;
+    108          
+    109          	TMR3CNTH = 0;	
+    110          	TMR3CNTL = 0;
+    111          
+    112          	TMR3PRH = 0x00;				// 	Timer3 period
+    113          	TMR3PRL = 0x09; 			// 	48 uSec = 9*(1/24)*128 (uSec),	1/48= 2.08%
+    114          
+    115          //	TMR3PRL = 0Xbb;   		// 	1ms
+    116          //	TMR3PRL = 0x17;     		// 	122 uSec = 23*(1/24)*128 (uSec),	1/48= 2.08%
+    117          //	TMR3PRL = 0x12;     		// 	96 uSec = 9*(1/24)*128 (uSec),	1/48= 2.08%
+    118          //	TMR3PRL = 0x06;     		//  32 uSec = 6*(1/24)*128 (uSec)		, 1/32= 3.125%
+    119          
+    120          	IE1 |= BIT(4);		// Enable timer3 interrupt
+    121          }
+    122          
+    123          #pragma inline=forced
+    124          #pragma location="SYS_INIT"
+    125          void sd_logic_init(void)
+    126          {
+    127          	SDCON0 |= BIT(1);   //keeping clk out
+    128          	delay_m(1);
+    129          	SDCON0 = 0;
+    130          }
+    131          
+    132          //判断IRTC是否第一次上电
+    133          #pragma location="SYS_INIT"
+
+   \                                 In segment SYS_INIT, align 1, keep-with-next
+    134          void irtc_poweron(void)
+   \                     irtc_poweron:
+    135          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    136          	u8 rtccon_val = irtc_read_cmd(CFG_RD);
+   \   000000                ; Setup parameters for call to function irtc_read_cmd
+   \   000000   7954         MOV     R1,#0x54
+   \   000002   12....       LCALL   irtc_read_cmd
+   \   000005   E9           MOV     A,R1
+   \   000006   FA           MOV     R2,A
+    137          	rtc_flag = 0;
+   \   000007   E4           CLR     A
+   \   000008   90....       MOV     DPTR,#rtc_flag
+   \   00000B   F0           MOVX    @DPTR,A
+    138          	if(rtccon_val & BIT(4))
+   \   00000C   EA           MOV     A,R2
+   \   00000D   A2E4         MOV     C,0xE0 /* A   */.4
+   \   00000F   5025         JNC     ??irtc_poweron_0
+    139          	{
+    140          		rtccon_val &= ~BIT(4);
+    141          		irtc_write_cmd(CFG_WR, rtccon_val);
+   \   000011                ; Setup parameters for call to function irtc_write_cmd
+   \   000011   74EF         MOV     A,#-0x11
+   \   000013   5A           ANL     A,R2
+   \   000014   FA           MOV     R2,A
+   \   000015   7955         MOV     R1,#0x55
+   \   000017   12....       LCALL   irtc_write_cmd
+    142          		sys_ctl.irtc_poweron = 1;
+   \   00001A   7401         MOV     A,#0x1
+   \   00001C   90....       MOV     DPTR,#(sys_ctl + 10)
+   \   00001F   F0           MOVX    @DPTR,A
+    143          		printf("irtc power on\n");
+   \   000020                ; Setup parameters for call to function my_printf
+   \   000020   7A..         MOV     R2,#(`?<Constant "irtc power on\\n">` & 0xff)
+   \   000022   7B..         MOV     R3,#((`?<Constant "irtc power on\\n">` >> 8) & 0xff)
+   \   000024   12....       LCALL   my_printf
+    144          
+    145          		rtc_flag = 1;
+   \   000027   7401         MOV     A,#0x1
+   \   000029   90....       MOV     DPTR,#rtc_flag
+   \   00002C   F0           MOVX    @DPTR,A
+    146          		
+    147          #ifdef AX107X_TAG		
+    148                 task_ctl.work_sta = TASK_POWEROFF;   //2070需屏蔽，1070、1171打开
+   \   00002D   75..09       MOV     task_ctl,#0x9
+    149          #endif
+    150                 //sys_ctl.irtc_poweron = 1;
+    151          	   uart_putc('*');			
+   \   000030                ; Setup parameters for call to function uart_putc
+   \   000030   792A         MOV     R1,#0x2a
+   \   000032   12....       LCALL   uart_putc
+   \   000035   22           RET
+    152          	}
+    153          	else
+    154          	{
+    155          		sys_ctl.irtc_poweron = 0;
+   \                     ??irtc_poweron_0:
+   \   000036   E4           CLR     A
+   \   000037   90....       MOV     DPTR,#(sys_ctl + 10)
+   \   00003A   F0           MOVX    @DPTR,A
+    156          	}
+    157          	//sys_ctl.irtc_poweron = 1;	// 测试用
+    158          }
+   \   00003B   22           RET
+    159          
+    160          /*----------------------------------------------------------------------------*/
+    161          /**@brief 系统初始化
+    162             @param 无
+    163             @return 无
+    164             @note
+    165          */
+    166          /*----------------------------------------------------------------------------*/
+    167          #pragma location="SYS_INIT"
+
+   \                                 In segment SYS_INIT, align 1, keep-with-next
+    168          void system_init(void)
+   \                     system_init:
+    169          {
+   \   000000   EE           MOV     A,R6
+   \   000001   C0E0         PUSH    A
+   \   000003                ; Saved register size: 1
+   \   000003                ; Auto size: 0
+    170          
+    171          	sysclk_set();
+   \   000003                ; Setup parameters for call to function sysclk_set
+   \   000003   12....       LCALL   sysclk_set
+    172          #ifndef UART_DEBUG
+    173          #if PRINTF_EN
+    174          	uart_init();        //uart_tx:P35, baud rate:115200
+   \   000006                ; Setup parameters for call to function uart_init
+   \   000006   12....       LCALL   uart_init
+    175          #if SRAM_DEBUG
+    176          	DBGCON |= BIT(1);   //SRAM板上使用uart调试专用IO
+    177          #endif
+    178          #endif
+    179          #endif
+    180          
+    181          	printf("start\n");
+   \   000009                ; Setup parameters for call to function my_printf
+   \   000009   7A..         MOV     R2,#(`?<Constant "start\\n">` & 0xff)
+   \   00000B   7B..         MOV     R3,#((`?<Constant "start\\n">` >> 8) & 0xff)
+   \   00000D   12....       LCALL   my_printf
+    182          
+    183          	sd_logic_init();
+   \   000010   D289         SETB    0x88.1
+   \   000012                ; Setup parameters for call to function delay_m
+   \   000012   7901         MOV     R1,#0x1
+   \   000014   12....       LCALL   delay_m
+   \   000017   758800       MOV     0x88,#0x0
+    184          	sysvar_init();
+   \   00001A                ; Setup parameters for call to function libvar_init
+   \   00001A   12....       LCALL   libvar_init
+   \   00001D                ; Setup parameters for call to function dac_ctl_init
+   \   00001D   12....       LCALL   dac_ctl_init
+   \   000020                ; Setup parameters for call to function msg_init
+   \   000020   7A10         MOV     R2,#0x10
+   \   000022   79..         MOV     R1,#(msg_pool & 0xff)
+   \   000024   12....       LCALL   msg_init
+   \   000027                ; Setup parameters for call to function ocx_clear
+   \   000027   12....       LCALL   ocx_clear
+   \   00002A   75..00       MOV     b_dac,#0x0
+   \   00002D   75..00       MOV     b_sys,#0x0
+   \   000030   7401         MOV     A,#0x1
+   \   000032   90....       MOV     DPTR,#fade_ctl
+   \   000035   F0           MOVX    @DPTR,A
+   \   000036   E4           CLR     A
+   \   000037   90....       MOV     DPTR,#(sys_ctl + 6)
+   \   00003A   F0           MOVX    @DPTR,A
+   \   00003B   90....       MOV     DPTR,#(sys_ctl + 1)
+   \   00003E   F0           MOVX    @DPTR,A
+   \   00003F   7401         MOV     A,#0x1
+   \   000041   90....       MOV     DPTR,#(t_fat + 26)
+   \   000044   F0           MOVX    @DPTR,A
+   \   000045   90....       MOV     DPTR,#(t_fat + 25)
+   \   000048   F0           MOVX    @DPTR,A
+   \   000049   75..00       MOV     (task_ctl + 1),#0x0
+   \   00004C   E4           CLR     A
+   \   00004D   90....       MOV     DPTR,#(mem_ctl + 2)
+   \   000050   F0           MOVX    @DPTR,A
+   \   000051   90....       MOV     DPTR,#t_msc
+   \   000054   F0           MOVX    @DPTR,A
+   \   000055   90....       MOV     DPTR,#poweroff_ctl
+   \   000058   F0           MOVX    @DPTR,A
+   \   000059   90....       MOV     DPTR,#(poweroff_ctl + 1)
+   \   00005C   F0           MOVX    @DPTR,A
+   \   00005D   90....       MOV     DPTR,#u_spi
+   \   000060   F0           MOVX    @DPTR,A
+   \   000061                ; Setup parameters for call to function my_memset
+   \   000061   7C03         MOV     R4,#0x3
+   \   000063   FD           MOV     R5,A
+   \   000064   F9           MOV     R1,A
+   \   000065   7A..         MOV     R2,#(u_spi & 0xff)
+   \   000067   7B..         MOV     R3,#((u_spi >> 8) & 0xff)
+   \   000069   12....       LCALL   my_memset
+    185          	mute_init();           //mute 初始化，P00设为输出口，且输出高电平
+   \   00006C                ; Setup parameters for call to function mute_init
+   \   00006C   12....       LCALL   mute_init
+    186          	timer2_init();
+   \   00006F                ; Setup parameters for call to function timer2_init
+   \   00006F   12....       LCALL   timer2_init
+    187          	ocx.timeh = 0x00;	// 时钟显示初始化
+   \   000072   78..         MOV     R0,#(ocx + 11)
+   \   000074   7600         MOV     @R0,#0x0
+    188          	ocx.timel = 0x00;
+   \   000076   08           INC     R0
+   \   000077   7600         MOV     @R0,#0x0
+    189          	
+    190          #if LED_7P7S_SCAN_HALF_MS
+    191          	//TMR2PRH = 0x00;
+    192          	//TMR2PRL = 0xBA;   // 0x00BA为0.5ms
+    193          	TMR2PRH = 0x00;
+   \   000079   E4           CLR     A
+   \   00007A   903029       MOV     DPTR,#0x3029
+   \   00007D   F0           MOVX    @DPTR,A
+    194          	TMR2PRL = 0x2f;      // 0x002f为0.125ms
+   \   00007E   742F         MOV     A,#0x2f
+   \   000080   903028       MOV     DPTR,#0x3028
+   \   000083   F0           MOVX    @DPTR,A
+    195          #endif
+    196          
+    197          #if (TASK_RTC_EN || (SYS_MEM == MEM_RTCRAM) || \
+    198              ((SYS_CRY == CRY_32K)&&(CRY_PIN_NUM == CRY_1PIN)) )
+    199          	irtc_poweron();
+   \   000084                ; Setup parameters for call to function irtc_poweron
+   \   000084   12....       LCALL   irtc_poweron
+    200          #endif
+    201          #if (TASK_RTC_EN || (SYS_MEM == MEM_RTCRAM))
+    202          	irtc_init();                //使用IRTC时钟、IRTCRAM记忆需要初始化
+   \   000087                ; Setup parameters for call to function irtc_init
+   \   000087   12....       LCALL   irtc_init
+    203          #endif
+    204          
+    205          	sys_ctl.alarm_cnt = 0xFF;	// 低压报警计时器初始化为0xFF   
+   \   00008A   74FF         MOV     A,#-0x1
+   \   00008C   90....       MOV     DPTR,#(sys_ctl + 13)
+   \   00008F   F0           MOVX    @DPTR,A
+    206          	disp.display_timer = 0x0a;  // 充电期间有按键触发显示定时信息时长   10s
+   \   000090   75..0A       MOV     (disp + 1),#0xa
+    207          	sys_ctl.bat_charger_cnt = 0xFF;	// 充电计时器初始化为0xFF，即默认不在充电
+   \   000093   90....       MOV     DPTR,#(sys_ctl + 15)
+   \   000096   F0           MOVX    @DPTR,A
+    208          
+    209          	port_init();
+   \   000097                ; Setup parameters for call to function port_init
+   \   000097   12....       LCALL   port_init
+    210          	timer3_init();
+   \   00009A   53A9EF       ANL     0xa9,#0xef
+   \   00009D   43B910       ORL     0xb9,#0x10
+   \   0000A0   75F117       MOV     0xf1,#0x17
+   \   0000A3   E4           CLR     A
+   \   0000A4   90309C       MOV     DPTR,#0x309c
+   \   0000A7   F0           MOVX    @DPTR,A
+   \   0000A8   90309B       MOV     DPTR,#0x309b
+   \   0000AB   F0           MOVX    @DPTR,A
+   \   0000AC   90309A       MOV     DPTR,#0x309a
+   \   0000AF   F0           MOVX    @DPTR,A
+   \   0000B0   7409         MOV     A,#0x9
+   \   0000B2   903099       MOV     DPTR,#0x3099
+   \   0000B5   F0           MOVX    @DPTR,A
+   \   0000B6   43A910       ORL     0xa9,#0x10
+    211          	
+    212          	disp_init();
+   \   0000B9                ; Setup parameters for call to function disp_init
+   \   0000B9   12....       LCALL   disp_init
+    213          	key_init();
+   \   0000BC                ; Setup parameters for call to function key_init
+   \   0000BC   12....       LCALL   key_init
+    214          	//while(1);
+    215          	
+    216          #if USE_TOUCH_KEY
+    217          	touch_key_init();           //要放在ir初始化之前
+    218          #endif
+    219          #if USE_IR
+    220          	ir_init();                  //一定要在按键初始化之后
+    221          #endif
+    222          #if SOFT_POWEROFF_EN
+    223          	wko_init();                 //要放在开总中断前
+   \   0000BF                ; Setup parameters for call to function wko_init
+   \   0000BF   12....       LCALL   wko_init
+    224          #endif
+    225          
+    226          #ifdef AX107X_TAG
+    227          #if 0
+    228          	u16 key_dn_cnt = 0;
+    229          	u8 key_adcval = 0;
+    230              SOFT_POWER_CTL_INIT();//IRTCWKO_Output_Init();
+    231              SOFT_POWER_CTL_OFF();//IRTCWKO_Output_0();
+    232              while(1){
+    233                  delay_1ms(1);
+    234                  LED_OFF();
+    235          		ocx.led_sta = LED_STA_OFF;
+    236          		key_adcval = get_pwrkey_adcval();
+    237          	//	printf(" %02x ",key_adcval);
+    238                  if((key_adcval>0x0b) && (key_adcval<0x4a)){//if(sys_ctl.bPowerKeydownFlag){//if((key_adcval>0x0b) && (key_adcval>0x4a)){//
+    239                      if(key_dn_cnt++ > 600){
+    240                          break;
+    241                      }
+    242                  } else {
+    243          	    	key_dn_cnt =0; 
+    244                  }
+    245              }
+    246              
+    247              SOFT_POWER_CTL_ON();//IRTCWKO_Output_1();
+    248            //  printf("123456");
+    249          #endif
+    250          #endif
+    251          
+    252          #if TASK_FLASH_EN
+    253          	spi_sd_mux_enter();
+   \   0000C2                ; Setup parameters for call to function spi_sd_mux_enter
+   \   0000C2   12....       LCALL   spi_sd_mux_enter
+    254          	spi_port_init();
+   \   0000C5                ; Setup parameters for call to function spi_port_init
+   \   0000C5   12....       LCALL   spi_port_init
+    255          	u_spi.spi_online = spi_flash_init();  //系统初始化时已经做好spi_flash_init检测
+   \   0000C8                ; Setup parameters for call to function spi_flash_init
+   \   0000C8   12....       LCALL   spi_flash_init
+   \   0000CB   E4           CLR     A
+   \   0000CC   92E0         MOV     0xE0 /* A   */.0,C
+   \   0000CE   90....       MOV     DPTR,#(u_spi + 1)
+   \   0000D1   F0           MOVX    @DPTR,A
+    256          	//printf("u_spi.spi_online: %d \n",u_spi.spi_online);
+    257          	spi_sd_mux_exit();
+   \   0000D2                ; Setup parameters for call to function spi_sd_mux_exit
+   \   0000D2   12....       LCALL   spi_sd_mux_exit
+    258          #endif
+    259          
+    260          	device_init();
+   \   0000D5                ; Setup parameters for call to function device_init
+   \   0000D5   12....       LCALL   device_init
+    261          
+    262          	IE_EA = 1;                  //开总中断
+   \   0000D8   D2AF         SETB    0xa8.7
+    263          #if (SYS_MEM == MEM_RTCRAM)	//开机上电，清掉断点。让关机之前的播放曲目从头开始播放
+    264          	mem_ctl.dev = 1; task_music_break_save(0);
+   \   0000DA   7401         MOV     A,#0x1
+   \   0000DC   90....       MOV     DPTR,#mem_ctl
+   \   0000DF   F0           MOVX    @DPTR,A
+   \   0000E0                ; Setup parameters for call to function task_music_break_save
+   \   0000E0   C2F0         CLR     B.0
+   \   0000E2   12....       LCALL   task_music_break_save
+    265          	mem_ctl.dev = 0; task_music_break_save(0);
+   \   0000E5   E4           CLR     A
+   \   0000E6   90....       MOV     DPTR,#mem_ctl
+   \   0000E9   F0           MOVX    @DPTR,A
+   \   0000EA                ; Setup parameters for call to function task_music_break_save
+   \   0000EA   C2F0         CLR     B.0
+   \   0000EC   12....       LCALL   task_music_break_save
+    266          #endif
+    267          #if SOFT_POWEROFF_EN
+    268          #if (SYS_MEM == MEM_RTCRAM)
+    269          	rtcram_poweron_check();
+   \   0000EF                ; Setup parameters for call to function rtcram_poweron_check
+   \   0000EF   12....       LCALL   rtcram_poweron_check
+    270          #endif
+    271              //printf("A\n");
+    272          
+    273          	soft_poweroff_init();
+   \   0000F2                ; Setup parameters for call to function soft_poweroff_init
+   \   0000F2   12....       LCALL   soft_poweroff_init
+    274          #endif
+    275          	SOFT_POWER_CTL_INIT();
+   \   0000F5   53BAFE       ANL     0xba,#0xfe
+   \   0000F8   C280         CLR     0x80.0
+    276          	SOFT_POWER_CTL_ON();
+   \   0000FA   53BAFE       ANL     0xba,#0xfe
+   \   0000FD   D280         SETB    0x80.0
+    277          	dac_init();                 //DAC初始化开始
+   \   0000FF                ; Setup parameters for call to function dac_init
+   \   0000FF   12....       LCALL   dac_init
+    278             	//printf("B\n");
+    279             
+    280          
+    281          #if KEY_VOICE_EN
+    282          	key_voice_init();
+    283          #endif
+    284              //printf("C\n");
+    285          
+    286          	WATCHDOG_CLR();
+   \   000102   43F720       ORL     0xf7,#0x20
+    287          #if ((DAC_POWER_SPEED) || (DAC_INIT_TYPE == DAC_SIMPLE))
+    288          	delay_5ms(30); 			   //wait for device stable
+    289          #endif
+    290          
+    291          #if (SYS_CRY == CRY_AUTO)
+    292          	b_sys.xosc_flag = auto_check_x32k();
+    293          #endif
+    294          
+    295          
+    296             // printf("D\n");
+    297          #if DAC_POWER_SPEED
+    298          	dac_init_wait();            //等待DAC初始化完成
+    299          #endif
+    300          
+    301          #if (SYS_CRY != CRY_RC)
+    302          	sys_pll_xosc();             //若有外部晶振，则选用外部晶振
+   \   000105                ; Setup parameters for call to function sys_pll_xosc
+   \   000105   12....       LCALL   sys_pll_xosc
+    303          #endif
+    304          
+    305          #if ((FM_CLOCK == SHARE_CRYSTAL_32KHz) && (TASK_FM_EN))
+    306          	if(fm_ctl.fm_type != FM_NO)
+    307          	{
+    308          		irtc_write_cmd(CFG3_WR, 0x06); //共晶振，增加晶振驱动能力
+    309          	}
+    310          #endif
+    311          
+    312          	for(u8 i=0; i<7; i++)
+   \   000108   7E07         MOV     R6,#0x7
+    313          	{
+    314          		//printf(".");
+    315          		comm_event(1);          //激活设备
+   \                     ??system_init_0:
+   \   00010A                ; Setup parameters for call to function comm_event
+   \   00010A   7901         MOV     R1,#0x1
+   \   00010C   12....       LCALL   comm_event
+    316          	}
+   \   00010F   1E           DEC     R6
+   \   000110   EE           MOV     A,R6
+   \   000111   70F7         JNZ     ??system_init_0
+    317          
+    318          	mem_read_init_info();       //读取记忆信息
+   \   000113                ; Setup parameters for call to function mem_read_init_info
+   \   000113   12....       LCALL   mem_read_init_info
+    319          	//task_ctl.work_sta = TASK_MUSIC;
+    320          
+    321          #if USE_TOUCH_KEY
+    322          	touch_key_start();          //等待系统稳定后打开TouchKey，否则上电时一段时间内按键无效
+    323          #endif
+    324          
+    325          #if TASK_USBDEV_EN
+    326          	if(device_is_actived(DEVICE_PC))
+    327          	{
+    328          		task_ctl.work_sta = TASK_USBDEV;
+    329          	}
+    330          	else
+    331          #endif
+    332          	ocx.led_sta = LED_STA_ON;
+   \   000116   78..         MOV     R0,#(ocx + 17)
+   \   000118   7601         MOV     @R0,#0x1
+    333          		
+    334          
+    335          #if TASK_FLASH_EN
+    336          	if(u_spi.spi_online && (rtc_flag != 1))
+   \   00011A   90....       MOV     DPTR,#(u_spi + 1)
+   \   00011D   E0           MOVX    A,@DPTR
+   \   00011E   6014         JZ      ??system_init_1
+   \   000120   90....       MOV     DPTR,#rtc_flag
+   \   000123   E0           MOVX    A,@DPTR
+   \   000124   6401         XRL     A,#0x1
+   \   000126   600C         JZ      ??system_init_1
+    337          	{
+    338          		printf("not frist\n");		
+   \   000128                ; Setup parameters for call to function my_printf
+   \   000128   7A..         MOV     R2,#(`?<Constant "not frist\\n">` & 0xff)
+   \   00012A   7B..         MOV     R3,#((`?<Constant "not frist\\n">` >> 8) & 0xff)
+   \   00012C   12....       LCALL   my_printf
+    339          		task_ctl.work_sta = TASK_FLASH;
+   \   00012F   75..06       MOV     task_ctl,#0x6
+   \   000132   8015         SJMP    ??system_init_2
+    340          		t_msc.poweron = 1;
+    341          			
+    342          	}
+    343          	else
+    344          #endif
+    345          	if(device_is_actived(DEVICE_UDISK)
+    346          #if UDISK_DOUBLE_EN
+    347          	        || device_is_actived(DEVICE_UDISK1)
+    348          #endif
+    349          	        || device_is_actived(DEVICE_SDMMC) || device_is_actived(DEVICE_SDMMC1))
+   \                     ??system_init_1:
+   \   000134                ; Setup parameters for call to function device_is_actived
+   \   000134   7902         MOV     R1,#0x2
+   \   000136   12....       LCALL   device_is_actived
+   \   000139   400E         JC      ??system_init_2
+   \   00013B                ; Setup parameters for call to function device_is_actived
+   \   00013B   7900         MOV     R1,#0x0
+   \   00013D   12....       LCALL   device_is_actived
+   \   000140   4007         JC      ??system_init_2
+   \   000142                ; Setup parameters for call to function device_is_actived
+   \   000142   7901         MOV     R1,#0x1
+   \   000144   12....       LCALL   device_is_actived
+   \   000147   5006         JNC     ??system_init_3
+    350          	{
+    351          		//task_ctl.work_sta = TASK_MUSIC;
+    352          		t_msc.poweron = 1;
+   \                     ??system_init_2:
+   \   000149   7401         MOV     A,#0x1
+   \   00014B   90....       MOV     DPTR,#t_msc
+   \   00014E   F0           MOVX    @DPTR,A
+    353          	}
+    354          	else
+    355          #if MIC_DET_EN
+    356          	if(device_is_actived(DEVICE_MIC))
+    357          	{
+    358          		task_ctl.work_sta = TASK_SPEAKER;
+    359          	}
+    360          	else
+    361          #endif
+    362          #if AUX_DET_EN
+    363          	if(device_is_actived(DEVICE_LINEIN))
+    364          	{
+    365          		task_ctl.work_sta = TASK_AUX;
+    366          	}
+    367          	else
+    368          #endif
+    369          #if TASK_FM_EN
+    370          	if(fm_ctl.fm_type != FM_NO)
+    371          	{
+    372          		task_ctl.work_sta = TASK_FM;
+    373          	}
+    374          	else
+    375          #endif
+    376          	{
+    377          		//task_ctl.work_sta = TASK_AUX;
+    378          	}
+    379          	//sys_ctl.volume = VOLUME_MAX/2+9;
+    380          	//sys_ctl.mode_play = ITEM_LOOP_ALL;
+    381          	sys_ctl.volume = VOLUME_MAX;    //初始化把音量设置为最大
+   \                     ??system_init_3:
+   \   00014F   7432         MOV     A,#0x32
+   \   000151   90....       MOV     DPTR,#(sys_ctl + 2)
+   \   000154   F0           MOVX    @DPTR,A
+    382          	user_change_volume(sys_ctl.volume);     //设置系统音量
+   \   000155                ; Setup parameters for call to function user_change_volume
+   \   000155   F9           MOV     R1,A
+   \   000156   12....       LCALL   user_change_volume
+    383          	user_change_eq(sys_ctl.eq_num);         //设置系统EQ
+   \   000159                ; Setup parameters for call to function user_change_eq
+   \   000159   90....       MOV     DPTR,#(sys_ctl + 1)
+   \   00015C   E0           MOVX    A,@DPTR
+   \   00015D   F9           MOV     R1,A
+   \   00015E   12....       LCALL   user_change_eq
+    384          	printf("sys_ctl.volume: %d\n",sys_ctl.volume);
+   \   000161                ; Setup parameters for call to function my_printf
+   \   000161   90....       MOV     DPTR,#(sys_ctl + 2)
+   \   000164   E0           MOVX    A,@DPTR
+   \   000165   F582         MOV     DPL,A
+   \   000167   758300       MOV     DPH,#0x0
+   \   00016A   C082         PUSH    DPL
+   \   00016C   C083         PUSH    DPH
+   \   00016E   7A..         MOV     R2,#(`?<Constant "sys_ctl.volume: %d\\n">` & 0xff)
+   \   000170   7B..         MOV     R3,#((`?<Constant "sys_ctl.volume: %d\\n">` >> 8) & 0xff)
+   \   000172   12....       LCALL   my_printf
+   \   000175   D0E0         POP     A
+   \   000177   D0E0         POP     A
+    385          //	printf("sys_ctl.mode_play =%d\n",sys_ctl.mode_play);
+    386          #if PLAY_STARTMUSIC
+    387          	//startmusic_play();
+    388          #endif
+    389          #if USE_KEDIR
+    390          	b_sys.kedir_flag = 1;
+    391          #endif
+    392          }
+   \   000179   D0E0         POP     A
+   \   00017B   FE           MOV     R6,A
+   \   00017C   22           RET
+
+   \                                 In segment CODE_C, align 1
+   \                     `?<Constant "irtc power on\\n">`:
+   \   000000   69727463     DB "irtc power on\012"
+   \            20706F77
+   \            6572206F
+   \            6E0A00  
+
+   \                                 In segment CODE_C, align 1
+   \                     `?<Constant "start\\n">`:
+   \   000000   73746172     DB "start\012"
+   \            740A00  
+
+   \                                 In segment CODE_C, align 1
+   \                     `?<Constant "not frist\\n">`:
+   \   000000   6E6F7420     DB "not frist\012"
+   \            66726973
+   \            740A00  
+
+   \                                 In segment CODE_C, align 1
+   \                     `?<Constant "sys_ctl.volume: %d\\n">`:
+   \   000000   7379735F     DB "sys_ctl.volume: %d\012"
+   \            63746C2E
+   \            766F6C75
+   \            6D653A20
+   \            25640A00
+
+   \                                 In segment SFR_AN, at 0xa8
+   \   union <unnamed> volatile __sfr _A_IE0
+   \                     _A_IE0:
+   \   000000                DS 1
+
+   Maximum stack usage in bytes:
+
+     Function                   EXT_STACK PSTACK XSTACK
+     --------                   --------- ------ ------
+     irtc_poweron                      1      0      0
+       -> irtc_read_cmd                0      0      0
+       -> irtc_write_cmd               0      0      0
+       -> my_printf                    0      0      0
+       -> uart_putc                    0      0      0
+     system_init                       3      0      0
+       -> sysclk_set                   2      0      0
+       -> uart_init                    2      0      0
+       -> my_printf                    2      0      0
+       -> delay_m                      2      0      0
+       -> libvar_init                  2      0      0
+       -> dac_ctl_init                 2      0      0
+       -> msg_init                     2      0      0
+       -> ocx_clear                    2      0      0
+       -> my_memset                    2      0      0
+       -> mute_init                    2      0      0
+       -> timer2_init                  2      0      0
+       -> irtc_poweron                 2      0      0
+       -> irtc_init                    2      0      0
+       -> port_init                    2      0      0
+       -> disp_init                    2      0      0
+       -> key_init                     2      0      0
+       -> wko_init                     2      0      0
+       -> spi_sd_mux_enter             2      0      0
+       -> spi_port_init                2      0      0
+       -> spi_flash_init               2      0      0
+       -> spi_sd_mux_exit              2      0      0
+       -> device_init                  2      0      0
+       -> task_music_break_save        2      0      0
+       -> task_music_break_save        2      0      0
+       -> rtcram_poweron_check         2      0      0
+       -> soft_poweroff_init           2      0      0
+       -> dac_init                     2      0      0
+       -> sys_pll_xosc                 2      0      0
+       -> comm_event                   2      0      0
+       -> mem_read_init_info           2      0      0
+       -> my_printf                    2      0      0
+       -> device_is_actived            2      0      0
+       -> device_is_actived            2      0      0
+       -> device_is_actived            2      0      0
+       -> user_change_volume           2      0      0
+       -> user_change_eq               2      0      0
+       -> my_printf                    6      0      0
+
+
+   Segment part sizes:
+
+     Function/Label                 Bytes
+     --------------                 -----
+     P0                                1
+     SDCON0                            1
+     IE1                               1
+     IP1                               1
+     P0DIR                             1
+     TMR3CON                           1
+     WDTCON                            1
+     rtc_flag                          1
+     code_tbl                          8
+     msg_pool                         16
+     irtc_poweron                     60
+     system_init                     381
+     ?<Constant "irtc power on\n">    15
+     ?<Constant "start\n">             7
+     ?<Constant "not frist\n">        11
+     ?<Constant "sys_ctl.volume: %d\n">
+                                      20
+     _A_IE0                            1
+
+ 
+  53 bytes in segment CODE_C
+   8 bytes in segment CODE_TBL
+  16 bytes in segment MSG_POOL
+   8 bytes in segment SFR_AN
+ 441 bytes in segment SYS_INIT
+   1 byte  in segment XDATA_Z
+ 
+ 502 bytes of CODE  memory
+   0 bytes of DATA  memory (+ 8 bytes shared)
+  17 bytes of XDATA memory
+
+Errors: none
+Warnings: none

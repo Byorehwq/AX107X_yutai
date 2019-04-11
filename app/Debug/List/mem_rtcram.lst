@@ -1,0 +1,554 @@
+##############################################################################
+#                                                                            #
+# IAR 8051 C/C++ Compiler V7.20H/W32                   29/Jun/2018  19:55:09 #
+# Copyright 2004-2006 IAR Systems. All rights reserved.                      #
+#                                                                            #
+#    Core               =  plain                                             #
+#    Code model         =  near                                              #
+#    Data model         =  large                                             #
+#    Calling convention =  extended stack reentrant                          #
+#    Constant location  =  code                                              #
+#    Extended stack     =  enabled                                           #
+#    Dptr setup         =  1,16                                              #
+#    Source file        =  I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\mem\mem_rtcram. #
+#                          c                                                 #
+#    Command line       =  -I E:\software\8051\INC\ -I                       #
+#                          E:\software\8051\INC\CLIB\ -I                     #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\COMMON\ -I      #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\INC\ -I         #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\config\ -I      #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\api\ -I         #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\fm\ -I          #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\fat\ -I         #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\display\ -I     #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\display\theme_d #
+#                          efault\ -I I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073 #
+#                          A_”ÓÃ©_AX1071_xxxxxxxx_20180629_Merlin_1\app\disp #
+#                          lay\led\ -I I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC07 #
+#                          3A_”ÓÃ©_AX1071_xxxxxxxx_20180629_Merlin_1\app\dis #
+#                          play\lcd\ -I I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC0 #
+#                          73A_”ÓÃ©_AX1071_xxxxxxxx_20180629_Merlin_1\app\ta #
+#                          sk\ -I I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”Ó #
+#                          Ã©_AX1071_xxxxxxxx_20180629_Merlin_1\app\user\    #
+#                          -I I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_A #
+#                          X1071_xxxxxxxx_20180629_Merlin_1\app\mem\ -I      #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\module\ -I      #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\key\ -I         #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\startmusic\ -I  #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\spi\ -D         #
+#                          AX107X_TAG -lC I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18B #
+#                          C073A_”ÓÃ©_AX1071_xxxxxxxx_20180629_Merlin_1\app\ #
+#                          Debug\List\ -o I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18B #
+#                          C073A_”ÓÃ©_AX1071_xxxxxxxx_20180629_Merlin_1\app\ #
+#                          Debug\Obj\ -e -z9 --core=plain --dptr=16,1        #
+#                          --data_model=large --code_model=near              #
+#                          --calling_convention=ext_stack_reentrant          #
+#                          --place_constants=code --nr_virtual_regs 20       #
+#                          --extended_stack I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\1 #
+#                          8BC073A_”ÓÃ©_AX1071_xxxxxxxx_20180629_Merlin_1\ap #
+#                          p\mem\mem_rtcram.c                                #
+#    List file          =  I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\Debug\List\mem_ #
+#                          rtcram.lst                                        #
+#    Object file        =  I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\Debug\Obj\mem_r #
+#                          tcram.r51                                         #
+#                                                                            #
+#                                                                            #
+##############################################################################
+
+I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX1071_xxxxxxxx_20180629_Merlin_1\app\mem\mem_rtcram.c
+      1          /*****************************************************************************
+      2           * Module    : mem
+      3           * File      : mem_rtcram.c
+      4           * Author    :
+      5           * Email     :
+      6           * Function  : RTCRAMº«“‰»ŒŒÒ¡˜≥Ã
+      7           *****************************************************************************/
+      8          #include "include.h"
+      9          #include "mem_rtcram.h"
+     10          
+     11          #if (SYS_MEM == MEM_RTCRAM)
+     12          
+     13          #pragma location="MEMRTCRAM"
+
+   \                                 In segment MEMRTCRAM, align 1, keep-with-next
+     14          bool rtcram_poweron_check(void)
+   \                     rtcram_poweron_check:
+     15          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     16          	if(mem_ctl.rtcram_poweron)
+   \   000000   90....       MOV     DPTR,#(mem_ctl + 3)
+   \   000003   E0           MOVX    A,@DPTR
+   \   000004   6011         JZ      ??rtcram_poweron_check_0
+     17          	{
+     18          		printf("FPON\n");
+   \   000006                ; Setup parameters for call to function my_printf
+   \   000006   7A..         MOV     R2,#(`?<Constant "FPON\\n">` & 0xff)
+   \   000008   7B..         MOV     R3,#((`?<Constant "FPON\\n">` >> 8) & 0xff)
+   \   00000A   12....       LCALL   my_printf
+     19          		mem_ctl.rtcram_poweron = 0;//RTCµÙµÁ∫Û π”√ƒ¨»œ÷µ
+   \   00000D   E4           CLR     A
+   \   00000E   90....       MOV     DPTR,#(mem_ctl + 3)
+   \   000011   F0           MOVX    @DPTR,A
+     20          		var_set_default();
+   \   000012                ; Setup parameters for call to function var_set_default
+   \   000012   12....       LCALL   var_set_default
+     21          		return 0;
+   \   000015   C3           CLR     C
+   \   000016   22           RET
+     22          	}
+     23          	return 1;
+   \                     ??rtcram_poweron_check_0:
+   \   000017   D3           SETB    C
+   \   000018   22           RET
+     24          }
+     25          
+     26          #pragma location="MEMRTCRAM"
+
+   \                                 In segment MEMRTCRAM, align 1, keep-with-next
+     27          void write_playmode_rtcram(void)
+   \                     write_playmode_rtcram:
+     28          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     29          	rtcram_write_byte(RTCRAM_PLAY_MODE, sys_ctl.mode_play);
+   \   000000                ; Setup parameters for call to function rtcram_write_byte
+   \   000000   90....       MOV     DPTR,#sys_ctl
+   \   000003   E0           MOVX    A,@DPTR
+   \   000004   FA           MOV     R2,A
+   \   000005   7922         MOV     R1,#0x22
+   \   000007   12....       LCALL   rtcram_write_byte
+     30          }
+   \   00000A   22           RET
+     31          
+     32          #pragma location="MEMRTCRAM"
+
+   \                                 In segment MEMRTCRAM, align 1, keep-with-next
+     33          void write_volume_rtcram(void)
+   \                     write_volume_rtcram:
+     34          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     35          	rtcram_write_byte(RTCRAM_VOLUME, sys_ctl.volume);
+   \   000000                ; Setup parameters for call to function rtcram_write_byte
+   \   000000   90....       MOV     DPTR,#(sys_ctl + 2)
+   \   000003   E0           MOVX    A,@DPTR
+   \   000004   FA           MOV     R2,A
+   \   000005   7921         MOV     R1,#0x21
+   \   000007   12....       LCALL   rtcram_write_byte
+     36          }
+   \   00000A   22           RET
+     37          
+     38          #pragma location="MEMRTCRAM"
+
+   \                                 In segment MEMRTCRAM, align 1, keep-with-next
+     39          void read_volume_rtcram(void)
+   \                     read_volume_rtcram:
+     40          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     41          	sys_ctl.volume = irtc_read_ram(RTCRAM_VOLUME);
+   \   000000                ; Setup parameters for call to function irtc_read_ram
+   \   000000   7921         MOV     R1,#0x21
+   \   000002   12....       LCALL   irtc_read_ram
+   \   000005   E9           MOV     A,R1
+   \   000006   90....       MOV     DPTR,#(sys_ctl + 2)
+   \   000009   F0           MOVX    @DPTR,A
+     42          }
+   \   00000A   22           RET
+     43          
+     44          #pragma location="MEMRTCRAM"
+
+   \                                 In segment MEMRTCRAM, align 1, keep-with-next
+     45          void write_num_rtcram(void)
+   \                     write_num_rtcram:
+     46          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     47          #if UDISK_DOUBLE_EN
+     48          	if(mem_ctl.dev != DEVICE_UDISK1)
+     49          	{
+     50          		irtc_write_ram((mem_ctl.dev * RTCRAM_OFFSET + RTCRAM_MUSIC_POS_SD + 8), (u8 *)&u_msc.music_num, 2);
+     51          	}
+     52          	else
+     53          	{
+     54          		irtc_write_ram(RTCRAM_MUSIC_NUM_USB1, (u8 *)&u_msc.music_num, 2);
+     55          	}
+     56          #else
+     57          /*	if(mem_ctl.dev == DEVICE_UDISK1)	// Merlin Õ£”√
+     58          	{
+     59          		irtc_write_ram(RTCRAM_MUSIC_POS_USB, (u8 *)&u_msc.music_num, 2);
+     60          	}
+     61          	else */
+     62          	{
+     63          		irtc_write_ram((mem_ctl.dev * RTCRAM_OFFSET + RTCRAM_MUSIC_NUM_SD), (u8 *)&u_msc.music_num, 2);
+   \   000000                ; Setup parameters for call to function irtc_write_ram
+   \   000000   7C02         MOV     R4,#0x2
+   \   000002   7A..         MOV     R2,#(u_msc & 0xff)
+   \   000004   7B..         MOV     R3,#((u_msc >> 8) & 0xff)
+   \   000006   75F00A       MOV     B,#0xa
+   \   000009   90....       MOV     DPTR,#mem_ctl
+   \   00000C   E0           MOVX    A,@DPTR
+   \   00000D   A4           MUL     AB
+   \   00000E   2408         ADD     A,#0x8
+   \   000010   F9           MOV     R1,A
+   \   000011   12....       LCALL   irtc_write_ram
+     64          	}
+     65          #endif
+     66          }
+   \   000014   22           RET
+     67          
+     68          #pragma location="MEMRTCRAM"
+
+   \                                 In segment MEMRTCRAM, align 1, keep-with-next
+     69          void read_num_rtcram(void)
+   \                     read_num_rtcram:
+     70          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     71          #if UDISK_DOUBLE_EN
+     72          	if(mem_ctl.dev != DEVICE_UDISK1)
+     73          	{
+     74          		rtcram_read_multi((mem_ctl.dev * RTCRAM_OFFSET + RTCRAM_MUSIC_POS_SD + 8), (u8 *)&u_msc.music_num, 2);
+     75          	}
+     76          	else
+     77          	{
+     78          		rtcram_read_multi(RTCRAM_MUSIC_NUM_USB1, (u8 *)&u_msc.music_num, 2);
+     79          	}
+     80          #else
+     81          /*	if(mem_ctl.dev == DEVICE_UDISK1)	// Merlin Õ£”√
+     82          	{
+     83          		rtcram_read_multi(RTCRAM_MUSIC_POS_USB, (u8 *)&u_msc.music_num, 2);
+     84          	}
+     85          	else */
+     86          	{
+     87          		rtcram_read_multi((mem_ctl.dev * RTCRAM_OFFSET + RTCRAM_MUSIC_NUM_SD), (u8 *)&u_msc.music_num, 2);
+   \   000000                ; Setup parameters for call to function rtcram_read_multi
+   \   000000   7C02         MOV     R4,#0x2
+   \   000002   7A..         MOV     R2,#(u_msc & 0xff)
+   \   000004   7B..         MOV     R3,#((u_msc >> 8) & 0xff)
+   \   000006   75F00A       MOV     B,#0xa
+   \   000009   90....       MOV     DPTR,#mem_ctl
+   \   00000C   E0           MOVX    A,@DPTR
+   \   00000D   A4           MUL     AB
+   \   00000E   2408         ADD     A,#0x8
+   \   000010   F9           MOV     R1,A
+   \   000011   12....       LCALL   rtcram_read_multi
+     88          	}
+     89          #endif
+     90          }
+   \   000014   22           RET
+     91          
+     92          #if TASK_FLASH_EN
+     93          #pragma location="MEMRTCRAM"
+
+   \                                 In segment MEMRTCRAM, align 1, keep-with-next
+     94          void write_flash_num_rtcram(void)
+   \                     write_flash_num_rtcram:
+     95          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     96          //	printf("write=%02x num=%04x\n", RTCRAM_MUSIC_NUM_SD1, u_msc.music_num);
+     97          	irtc_write_ram(RTCRAM_MUSIC_NUM_SD1, (u8 *)&u_msc.music_num, 2);
+   \   000000                ; Setup parameters for call to function irtc_write_ram
+   \   000000   7C02         MOV     R4,#0x2
+   \   000002   7A..         MOV     R2,#(u_msc & 0xff)
+   \   000004   7B..         MOV     R3,#((u_msc >> 8) & 0xff)
+   \   000006   7912         MOV     R1,#0x12
+   \   000008   12....       LCALL   irtc_write_ram
+     98          }
+   \   00000B   22           RET
+     99          	
+    100          #pragma location="MEMRTCRAM"
+
+   \                                 In segment MEMRTCRAM, align 1, keep-with-next
+    101          void read_flash_num_rtcram(void)
+   \                     read_flash_num_rtcram:
+    102          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    103          	rtcram_read_multi(RTCRAM_MUSIC_NUM_SD1, (u8 *)&u_msc.music_num, 2);
+   \   000000                ; Setup parameters for call to function rtcram_read_multi
+   \   000000   7C02         MOV     R4,#0x2
+   \   000002   7A..         MOV     R2,#(u_msc & 0xff)
+   \   000004   7B..         MOV     R3,#((u_msc >> 8) & 0xff)
+   \   000006   7912         MOV     R1,#0x12
+   \   000008   12....       LCALL   rtcram_read_multi
+    104          //	printf("read=%02x num=%04x\n", RTCRAM_MUSIC_NUM_SD1, u_msc.music_num);
+    105          }
+   \   00000B   22           RET
+    106          #endif
+    107          
+    108          
+    109          #pragma location="MEMRTCRAM"
+
+   \                                 In segment MEMRTCRAM, align 1, keep-with-next
+    110          void write_device_rtcram(void)
+   \                     write_device_rtcram:
+    111          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    112          	rtcram_write_byte(RTCRAM_ACTIVE_DEVICE, sys_ctl.dev_save);
+   \   000000                ; Setup parameters for call to function rtcram_write_byte
+   \   000000   90....       MOV     DPTR,#(sys_ctl + 7)
+   \   000003   E0           MOVX    A,@DPTR
+   \   000004   FA           MOV     R2,A
+   \   000005   7920         MOV     R1,#0x20
+   \   000007   12....       LCALL   rtcram_write_byte
+    113          }
+   \   00000A   22           RET
+    114          
+    115          #pragma location="MEMRTCRAM"
+
+   \                                 In segment MEMRTCRAM, align 1, keep-with-next
+    116          void read_device_rtcram(void)
+   \                     read_device_rtcram:
+    117          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    118          	sys_ctl.dev_save = irtc_read_ram(RTCRAM_ACTIVE_DEVICE);
+   \   000000                ; Setup parameters for call to function irtc_read_ram
+   \   000000   7920         MOV     R1,#0x20
+   \   000002   12....       LCALL   irtc_read_ram
+   \   000005   E9           MOV     A,R1
+   \   000006   90....       MOV     DPTR,#(sys_ctl + 7)
+   \   000009   F0           MOVX    @DPTR,A
+    119          }
+   \   00000A   22           RET
+    120          
+    121          #if USE_BREAK_POINT
+    122          #pragma location="MEMRTCRAM"
+
+   \                                 In segment MEMRTCRAM, align 1, keep-with-next
+    123          void write_music_break_rtcram(void)
+   \                     write_music_break_rtcram:
+    124          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    125          	u8 addr;
+    126          #if UDISK_DOUBLE_EN
+    127          #if SD_DOUBLE_EN
+    128          	if(mem_ctl.dev != DEVICE_UDISK1)             //RTCRAMø’º‰≤ªπª£¨‘›≤ª±£¥ÊUDISK1≤•∑≈∂œµ„
+    129          	{
+    130          		addr = RTCRAM_MUSIC_POS_SD + mem_ctl.dev * RTCRAM_OFFSET;
+    131          		irtc_write_ram(addr,(u8 *)&u_msc.break_point, 8);
+    132          	}
+    133          #else
+    134          	if(mem_ctl.dev != DEVICE_UDISK1)
+    135          	{
+    136          		addr = RTCRAM_MUSIC_POS_SD + mem_ctl.dev * RTCRAM_OFFSET;
+    137          	}
+    138          	else
+    139          	{
+    140          		addr = RTCRAM_MUSIC_POS_SD1;            //ŒﬁÀ´ø®π¶ƒ‹ ±£¨∏¥”√SD1µƒ±£¥Êµÿ÷∑
+    141          	}
+    142          	irtc_write_ram(addr,(u8 *)&u_msc.break_point, 8);
+    143          #endif
+    144          #else
+    145          	if(mem_ctl.dev == DEVICE_UDISK1)
+   \   000000   90....       MOV     DPTR,#mem_ctl
+   \   000003   E0           MOVX    A,@DPTR
+   \   000004   6403         XRL     A,#0x3
+   \   000006   7004         JNZ     ??write_music_break_rtcram_0
+    146          	{
+    147          		addr = RTCRAM_MUSIC_POS_USB;
+   \   000008   7914         MOV     R1,#0x14
+   \   00000A   8006         SJMP    ??write_music_break_rtcram_1
+    148          	}
+    149          	else
+    150          	{
+    151          		addr = RTCRAM_MUSIC_POS_SD + mem_ctl.dev * RTCRAM_OFFSET;
+   \                     ??write_music_break_rtcram_0:
+   \   00000C   75F00A       MOV     B,#0xa
+   \   00000F   E0           MOVX    A,@DPTR
+   \   000010   A4           MUL     AB
+   \   000011   F9           MOV     R1,A
+    152          	}
+    153          	irtc_write_ram(addr,(u8 *)&u_msc.break_point, 8);
+   \                     ??write_music_break_rtcram_1:
+   \   000012                ; Setup parameters for call to function irtc_write_ram
+   \   000012   7C08         MOV     R4,#0x8
+   \   000014   7A..         MOV     R2,#((u_msc + 9) & 0xff)
+   \   000016   7B..         MOV     R3,#(((u_msc + 9) >> 8) & 0xff)
+   \   000018   12....       LCALL   irtc_write_ram
+    154          #endif
+    155          }
+   \   00001B   22           RET
+    156          
+    157          #pragma location="MEMRTCRAM"
+
+   \                                 In segment MEMRTCRAM, align 1, keep-with-next
+    158          void read_music_break_rtcram(void)
+   \                     read_music_break_rtcram:
+    159          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    160          	u8 addr;
+    161          #if UDISK_DOUBLE_EN
+    162          #if SD_DOUBLE_EN
+    163          	if(mem_ctl.dev != DEVICE_UDISK1)
+    164          	{
+    165          		addr = RTCRAM_MUSIC_POS_SD + mem_ctl.dev * RTCRAM_OFFSET;
+    166          		rtcram_read_multi(addr,(u8 *)&u_msc.break_point, 8);
+    167          	}
+    168          	else
+    169          	{
+    170          		u_msc.break_point.pos = 0;               //RTCRAMø’º‰≤ªπª£¨‘›≤ª±£¥ÊUDISK1≤•∑≈∂œµ„
+    171          		u_msc.break_point.frame = 0;
+    172          	}
+    173          	//printf("read pos:%ld,frame:%ld\n",u_msc.break_point.pos,u_msc.break_point.frame);
+    174          #else
+    175          	if(mem_ctl.dev != DEVICE_UDISK1)
+    176          	{
+    177          		addr = RTCRAM_MUSIC_POS_SD + mem_ctl.dev * RTCRAM_OFFSET;
+    178          	}
+    179          	else
+    180          	{
+    181          		addr = RTCRAM_MUSIC_POS_SD1;           //ŒﬁÀ´ø®π¶ƒ‹ ±£¨∏¥”√SD1µƒ±£¥Êµÿ÷∑
+    182          	}
+    183          	rtcram_read_multi(addr,(u8 *)&u_msc.break_point, 8);
+    184          #endif
+    185          #else
+    186          	if(mem_ctl.dev == DEVICE_UDISK1)
+   \   000000   90....       MOV     DPTR,#mem_ctl
+   \   000003   E0           MOVX    A,@DPTR
+   \   000004   6403         XRL     A,#0x3
+   \   000006   7004         JNZ     ??read_music_break_rtcram_0
+    187          	{
+    188          		addr = RTCRAM_MUSIC_POS_USB;
+   \   000008   7914         MOV     R1,#0x14
+   \   00000A   8006         SJMP    ??read_music_break_rtcram_1
+    189          	}
+    190          	else
+    191          	{
+    192          		addr = RTCRAM_MUSIC_POS_SD + mem_ctl.dev * RTCRAM_OFFSET;
+   \                     ??read_music_break_rtcram_0:
+   \   00000C   75F00A       MOV     B,#0xa
+   \   00000F   E0           MOVX    A,@DPTR
+   \   000010   A4           MUL     AB
+   \   000011   F9           MOV     R1,A
+    193          	}
+    194          	rtcram_read_multi(addr,(u8 *)&u_msc.break_point, 8);
+   \                     ??read_music_break_rtcram_1:
+   \   000012                ; Setup parameters for call to function rtcram_read_multi
+   \   000012   7C08         MOV     R4,#0x8
+   \   000014   7A..         MOV     R2,#((u_msc + 9) & 0xff)
+   \   000016   7B..         MOV     R3,#(((u_msc + 9) >> 8) & 0xff)
+   \   000018   12....       LCALL   rtcram_read_multi
+    195          #endif
+    196          }
+   \   00001B   22           RET
+
+   \                                 In segment CODE_C, align 1
+   \                     `?<Constant "FPON\\n">`:
+   \   000000   46504F4E     DB "FPON\012"
+   \            0A00    
+    197          #endif /*END USE_BREAK_POINT*/
+    198          
+    199          
+    200          #if TASK_FM_EN
+    201          #pragma location="MEMRTCRAM"
+    202          void write_total_channel_rtcram(void)
+    203          {
+    204          	rtcram_write_byte(RTCRAM_FM_TOTAL_CHANNEL, fm_ctl.ch_total);
+    205          }
+    206          
+    207          #pragma location="MEMRTCRAM"
+    208          void write_cur_channel_rtcram(void)
+    209          {
+    210          	rtcram_write_byte(RTCRAM_CUR_CHANNEL, fm_ctl.ch_cur);
+    211          
+    212          	rtcram_write_byte(RTCRAM_FREQUENCY, fm_ctl.fm_freq - FM_MIN_FREQ);
+    213          }
+    214          
+    215          #pragma location="MEMRTCRAM"
+    216          void write_fm_info_rtcram(u8 byte_value)
+    217          {
+    218          	rtcram_write_byte(RTCRAM_FREQUENCY_BUF+byte_value, fm_ctl.ch_buf[byte_value]);
+    219          }
+    220          
+    221          #pragma location="MEMRTCRAM"
+    222          void read_fm_info_rtcram(void)
+    223          {
+    224          	rtcram_read_multi(RTCRAM_FREQUENCY_BUF, fm_ctl.ch_buf, CH_BUF_MAX);
+    225          
+    226          	fm_ctl.ch_total = irtc_read_ram(RTCRAM_FM_TOTAL_CHANNEL);
+    227          	fm_ctl.ch_cur = irtc_read_ram(RTCRAM_CUR_CHANNEL);
+    228          	fm_ctl.fm_freq = irtc_read_ram(RTCRAM_FREQUENCY);
+    229          }
+    230          #endif
+    231          
+    232          #endif
+
+   Maximum stack usage in bytes:
+
+     Function                 EXT_STACK PSTACK XSTACK
+     --------                 --------- ------ ------
+     read_device_rtcram              0      0      0
+       -> irtc_read_ram              0      0      0
+     read_flash_num_rtcram           0      0      0
+       -> rtcram_read_multi          0      0      0
+     read_music_break_rtcram         0      0      0
+       -> rtcram_read_multi          0      0      0
+     read_num_rtcram                 0      0      0
+       -> rtcram_read_multi          0      0      0
+     read_volume_rtcram              0      0      0
+       -> irtc_read_ram              0      0      0
+     rtcram_poweron_check            0      0      0
+       -> my_printf                  0      0      0
+       -> var_set_default            0      0      0
+     write_device_rtcram             0      0      0
+       -> rtcram_write_byte          0      0      0
+     write_flash_num_rtcram          0      0      0
+       -> irtc_write_ram             0      0      0
+     write_music_break_rtcram        0      0      0
+       -> irtc_write_ram             0      0      0
+     write_num_rtcram                0      0      0
+       -> irtc_write_ram             0      0      0
+     write_playmode_rtcram           0      0      0
+       -> rtcram_write_byte          0      0      0
+     write_volume_rtcram             0      0      0
+       -> rtcram_write_byte          0      0      0
+
+
+   Segment part sizes:
+
+     Function/Label           Bytes
+     --------------           -----
+     rtcram_poweron_check       25
+     write_playmode_rtcram      11
+     write_volume_rtcram        11
+     read_volume_rtcram         11
+     write_num_rtcram           21
+     read_num_rtcram            21
+     write_flash_num_rtcram     12
+     read_flash_num_rtcram      12
+     write_device_rtcram        11
+     read_device_rtcram         11
+     write_music_break_rtcram   28
+     read_music_break_rtcram    28
+     ?<Constant "FPON\n">        6
+
+ 
+   6 bytes in segment CODE_C
+ 202 bytes in segment MEMRTCRAM
+ 
+ 208 bytes of CODE memory
+
+Errors: none
+Warnings: none

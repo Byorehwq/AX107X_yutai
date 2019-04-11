@@ -1,0 +1,761 @@
+##############################################################################
+#                                                                            #
+# IAR 8051 C/C++ Compiler V7.20H/W32                   27/Jun/2018  22:48:34 #
+# Copyright 2004-2006 IAR Systems. All rights reserved.                      #
+#                                                                            #
+#    Core               =  plain                                             #
+#    Code model         =  near                                              #
+#    Data model         =  large                                             #
+#    Calling convention =  extended stack reentrant                          #
+#    Constant location  =  code                                              #
+#    Extended stack     =  enabled                                           #
+#    Dptr setup         =  1,16                                              #
+#    Source file        =  display/display.c                                 #
+#    Command line       =  -f option_c51.cfg (-ICOMMON\ -IINC\ -Iconfig\     #
+#                          -Iapi\ -Ifm\ -Ifat\ -Idisplay\                    #
+#                          -Idisplay\theme_default\ -Idisplay\led\           #
+#                          -Idisplay\lcd\ -Itask\ -Iuser\ -Imem\ -Imodule\   #
+#                          -Ikey\ -Istartmusic\ -Ispi\ -e -z9 --core=plain   #
+#                          --dptr=16,1 --data_model=large --code_model=near  #
+#                          --calling_convention=ext_stack_reentrant          #
+#                          --place_constants=code --nr_virtual_regs 20       #
+#                          --extended_stack) -DAX207X_TAG --debug -lC        #
+#                          DebugBC/List -o DebugBC/Obj/display.r51           #
+#                          display/display.c                                 #
+#    List file          =  DebugBC/List/display.lst                          #
+#    Object file        =  DebugBC/Obj/display.r51                           #
+#                                                                            #
+#                                                                            #
+##############################################################################
+
+R:\18BC073A_宇泰_AX1071_xxxxxxxx_20180627\app\display\display.c
+      1          #include "include.h"
+      2          #include "led_5c7s.h"
+      3          #include "led_7p7s.h"
+      4          #include "Display.h"
+      5          
+      6          
+      7          
+
+   \                                 In segment IDATA_N, align 1, root
+      8          IAR_IDATA_A type_ocx_ctl ocx;
+   \                     ocx:
+   \   000000                DS 18
+
+   \                                 In segment BDATA_N, align 1, root
+      9          IAR_BDATA_A type_disp_flag disp;
+   \                     disp:
+   \   000000                DS 6
+     10          
+     11          
+     12          
+     13          #pragma constseg="LED_DISP_TBL"
+
+   \                                 In segment LED_DISP_TBL, align 1
+     14          IAR_CONST char led_eq_str[6][5] =
+   \                     led_eq_str:
+   \   000000   20302000     DB " 0 "
+   \   000004   00           DB 0
+   \   000005   20312000     DB " 1 "
+   \   000009   00           DB 0
+   \   00000A   20322000     DB " 2 "
+   \   00000E   00           DB 0
+   \   00000F   20332000     DB " 3 "
+   \   000013   00           DB 0
+   \   000014   20342000     DB " 4 "
+   \   000018   00           DB 0
+   \   000019   20352000     DB " 5 "
+   \   00001D   00           DB 0
+     15          {
+     16          /*
+     17          	" nor",
+     18          	" pop",
+     19          	" roc",
+     20          	" jaz",
+     21          	" cla",
+     22          	" cou",
+     23          */
+     24          	" 0 ",
+     25          	" 1 ",
+     26          	" 2 ",
+     27          	" 3 ",
+     28          	" 4 ",
+     29          	" 5 ",
+     30          };
+     31          
+
+   \                                 In segment LED_DISP_TBL, align 1
+     32          IAR_CONST char led_playmode_str[4][5] =
+   \                     led_playmode_str:
+   \   000000   616C6C00     DB "all"
+   \   000004   00           DB 0
+   \   000005   72646F00     DB "rdo"
+   \   000009   00           DB 0
+   \   00000A   6F6E6500     DB "one"
+   \   00000E   00           DB 0
+   \   00000F   666F6400     DB "fod"
+   \   000013   00           DB 0
+     33          {
+     34          	"all",
+     35          	"rdo",
+     36          	"one",
+     37          	"fod",
+     38          };
+     39          #pragma constseg=default
+     40          
+     41          //数字框
+     42          #pragma location="LED_DISP_SEG"
+
+   \                                 In segment LED_DISP_SEG, align 1, keep-with-next
+     43          void ocx_shownum(u16 number)
+   \                     ocx_shownum:
+     44          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     45          	ocx.number = number;
+   \   000000   78..         MOV     R0,#(ocx + 13)
+   \   000002   EA           MOV     A,R2
+   \   000003   F6           MOV     @R0,A
+   \   000004   08           INC     R0
+   \   000005   EB           MOV     A,R3
+   \   000006   F6           MOV     @R0,A
+     46          	ocx.status = OCX_NUMBOX;
+   \   000007   78..         MOV     R0,#(ocx + 2)
+   \   000009   7601         MOV     @R0,#0x1
+     47          	ocx.show_time = 300;
+   \   00000B                REQUIRE ?Subroutine0
+   \   00000B                ; // Fall through to label ?Subroutine0
+     48          	disp.update = 1;
+     49          }
+
+   \                                 In segment LED_DISP_SEG, align 1, keep-with-next
+   \                     ?Subroutine0:
+   \   000000   18           DEC     R0
+   \   000001   18           DEC     R0
+   \   000002   762C         MOV     @R0,#0x2c
+   \   000004   08           INC     R0
+   \   000005   7601         MOV     @R0,#0x1
+   \   000007   D2..         SETB    disp.0
+   \   000009   22           RET
+     50          
+     51          
+     52          
+     53          //设备字符
+     54          #pragma location="LED_DISP_SEG"
+
+   \                                 In segment LED_DISP_SEG, align 1, keep-with-next
+     55          void ocx_show_device(void)
+   \                     ocx_show_device:
+     56          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     57          	if(fs_cur_dev() == DEVICE_SDMMC)
+   \   000000                ; Setup parameters for call to function fs_cur_dev
+   \   000000   12....       LCALL   fs_cur_dev
+   \   000003   E9           MOV     A,R1
+   \   000004   600F         JZ      ??ocx_show_device_0
+     58          	{
+     59          #if DISP_Show_Device
+     60          		ocx_msgbox("-2-");
+     61          #endif
+     62          	}
+     63          	else if(fs_cur_dev() == DEVICE_SDMMC1)
+   \   000006                ; Setup parameters for call to function fs_cur_dev
+   \   000006   12....       LCALL   fs_cur_dev
+   \   000009   E9           MOV     A,R1
+   \   00000A   6401         XRL     A,#0x1
+   \   00000C   6007         JZ      ??ocx_show_device_0
+     64          	{	// 内置 TF卡 或内置 Flash
+     65          #if DISP_Show_Device
+     66          		ocx_msgbox("-1-");
+     67          #endif
+     68          	}
+     69          	else
+     70          	{
+     71          		ocx_msgbox("---");
+   \   00000E                ; Setup parameters for call to function ocx_msgbox
+   \   00000E   7A..         MOV     R2,#(`?<Constant "---">` & 0xff)
+   \   000010   7B..         MOV     R3,#((`?<Constant "---">` >> 8) & 0xff)
+   \   000012   12....       LCALL   ocx_msgbox
+     72          	}
+     73          
+     74          }
+   \                     ??ocx_show_device_0:
+   \   000015   22           RET
+     75          
+     76          
+     77          //数择框
+     78          #pragma location="LED_DISP_SEG"
+
+   \                                 In segment LED_DISP_SEG, align 1, keep-with-next
+     79          void ocx_shownumsel(u8 number)
+   \                     ocx_shownumsel:
+     80          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     81          #if USE_IR_NUM
+     82          	if(ocx.status != OCX_NUMSELBOX || ocx.number > 999)
+     83          	{
+     84          		ocx.number = number;
+     85          		ocx.status = OCX_NUMSELBOX;
+     86          	}
+     87          	else
+     88          	{
+     89          		ocx.number = (ocx.number * 10) + number;
+     90          	}
+     91          	ocx.show_time = 300;
+     92          	disp.update = 1;
+     93          #endif
+     94          }
+   \   000000   22           RET
+     95          
+     96          //音量框
+     97          #pragma location="LED_DISP_SEG"
+
+   \                                 In segment LED_DISP_SEG, align 1, keep-with-next
+     98          void ocx_showvol(void)
+   \                     ocx_showvol:
+     99          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    100          	ocx.status = OCX_VOLBOX;
+   \   000000   78..         MOV     R0,#(ocx + 2)
+   \   000002   7603         MOV     @R0,#0x3
+    101          	ocx.show_time = 300;
+   \   000004   80..         SJMP    ?Subroutine0
+    102          	disp.update = 1;
+    103          }
+    104          
+    105          //消息框
+    106          #pragma location="LED_DISP_SEG"
+
+   \                                 In segment LED_DISP_SEG, align 1, keep-with-next
+    107          void ocx_msgbox(const char __code *str)
+   \                     ocx_msgbox:
+    108          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    109          	disp_str(str);
+   \   000000                ; Setup parameters for call to function led_7p7s_disp_str
+   \   000000   12....       LCALL   led_7p7s_disp_str
+    110          	ocx.status = OCX_MSGBOX;
+   \   000003   78..         MOV     R0,#(ocx + 2)
+   \   000005   7604         MOV     @R0,#0x4
+    111          	ocx.show_time = 300;
+   \   000007   80..         SJMP    ?Subroutine0
+    112          	disp.update = 1;
+    113          }
+    114          
+    115          //播放模式框
+    116          #pragma location="LED_DISP_SEG"
+
+   \                                 In segment LED_DISP_SEG, align 1, keep-with-next
+    117          void ocx_show_playmode(void)
+   \                     ocx_show_playmode:
+    118          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    119          	ocx_msgbox(led_playmode_str[sys_ctl.mode_play]);
+   \   000000                ; Setup parameters for call to function ocx_msgbox
+   \   000000   90....       MOV     DPTR,#sys_ctl
+   \   000003   E0           MOVX    A,@DPTR
+   \   000004   75F005       MOV     B,#0x5
+   \   000007   A4           MUL     AB
+   \   000008   24..         ADD     A,#(led_playmode_str & 0xff)
+   \   00000A   FA           MOV     R2,A
+   \   00000B   E5F0         MOV     A,B
+   \   00000D   34..         ADDC    A,#((led_playmode_str >> 8) & 0xff)
+   \   00000F                REQUIRE ?Subroutine1
+   \   00000F                ; // Fall through to label ?Subroutine1
+    120          }
+
+   \                                 In segment LED_DISP_SEG, align 1, keep-with-next
+   \                     ?Subroutine1:
+   \   000000   FB           MOV     R3,A
+   \   000001   12....       LCALL   ocx_msgbox
+   \   000004   22           RET
+    121          
+    122          //EQ框
+    123          #pragma location="LED_DISP_SEG"
+
+   \                                 In segment LED_DISP_SEG, align 1, keep-with-next
+    124          void ocx_showeq(void)
+   \                     ocx_showeq:
+    125          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    126          	ocx_msgbox(led_eq_str[sys_ctl.eq_num]);
+   \   000000                ; Setup parameters for call to function ocx_msgbox
+   \   000000   90....       MOV     DPTR,#(sys_ctl + 1)
+   \   000003   E0           MOVX    A,@DPTR
+   \   000004   75F005       MOV     B,#0x5
+   \   000007   A4           MUL     AB
+   \   000008   24..         ADD     A,#(led_eq_str & 0xff)
+   \   00000A   FA           MOV     R2,A
+   \   00000B   E5F0         MOV     A,B
+   \   00000D   34..         ADDC    A,#((led_eq_str >> 8) & 0xff)
+   \   00000F   80..         SJMP    ?Subroutine1
+    127          }
+    128          
+    129          //FM频道框
+    130          #pragma location="LED_DISP_SEG"
+
+   \                                 In segment LED_DISP_SEG, align 1, keep-with-next
+    131          void ocx_showch(u8 ch)
+   \                     ocx_showch:
+    132          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    133          	disp_channel(ch);
+   \   000000                ; Setup parameters for call to function led_7p7s_disp_ch
+   \   000000   12....       LCALL   led_7p7s_disp_ch
+    134          	ocx.status = OCX_MSGBOX;
+   \   000003   78..         MOV     R0,#(ocx + 2)
+   \   000005   7604         MOV     @R0,#0x4
+    135          	ocx.show_time = 200;
+   \   000007   18           DEC     R0
+   \   000008   18           DEC     R0
+   \   000009   76C8         MOV     @R0,#-0x38
+   \   00000B   08           INC     R0
+   \   00000C   7600         MOV     @R0,#0x0
+    136          	disp.update = 1;
+   \   00000E   D2..         SETB    disp.0
+    137          }
+   \   000010   22           RET
+    138          
+    139          //频率设置
+    140          #pragma location="DISP_OCX_SEG"
+
+   \                                 In segment DISP_OCX_SEG, align 1, keep-with-next
+    141          void ocx_freq_set(u16 freq)
+   \                     ocx_freq_set:
+    142          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    143          	if(ocx.disp_status != OCX_NULL)
+   \   000000   78..         MOV     R0,#(ocx + 3)
+   \   000002   E6           MOV     A,@R0
+   \   000003   7014         JNZ     ??ocx_freq_set_0
+    144          	{
+    145          		return;
+    146          	}
+    147          	if(ocx.freq == freq)
+   \   000005   78..         MOV     R0,#(ocx + 15)
+   \   000007   EA           MOV     A,R2
+   \   000008   66           XRL     A,@R0
+   \   000009   7003         JNZ     ??ocx_freq_set_1
+   \   00000B   08           INC     R0
+   \   00000C   EB           MOV     A,R3
+   \   00000D   66           XRL     A,@R0
+   \                     ??ocx_freq_set_1:
+   \   00000E   6009         JZ      ??ocx_freq_set_0
+    148          	{
+    149          		return;
+    150          	}
+    151          	ocx.freq = freq;
+   \   000010   78..         MOV     R0,#(ocx + 15)
+   \   000012   EA           MOV     A,R2
+   \   000013   F6           MOV     @R0,A
+   \   000014   08           INC     R0
+   \   000015   EB           MOV     A,R3
+   \   000016   F6           MOV     @R0,A
+    152          	disp.update = 1;            //设置更新标志
+   \   000017   D2..         SETB    disp.0
+    153          }
+   \                     ??ocx_freq_set_0:
+   \   000019   22           RET
+    154          
+    155          //时间显示设置
+    156          #pragma location="DISP_OCX_SEG"
+
+   \                                 In segment DISP_OCX_SEG, align 1, keep-with-next
+    157          void ocx_time_set(u8 timeh, u8 timel)
+   \                     ocx_time_set:
+    158          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    159          #if (DISP_TYPE != DISP_LED)
+    160          	if(ocx.disp_status != OCX_NULL)
+   \   000000   78..         MOV     R0,#(ocx + 3)
+   \   000002   E6           MOV     A,@R0
+   \   000003   7014         JNZ     ??ocx_time_set_0
+    161          	{
+    162          		return;
+    163          	}
+    164          	if(ocx.timeh == timeh && ocx.timel == timel)
+   \   000005   78..         MOV     R0,#(ocx + 11)
+   \   000007   E6           MOV     A,@R0
+   \   000008   69           XRL     A,R1
+   \   000009   7005         JNZ     ??ocx_time_set_1
+   \   00000B   08           INC     R0
+   \   00000C   E6           MOV     A,@R0
+   \   00000D   6A           XRL     A,R2
+   \   00000E   6009         JZ      ??ocx_time_set_0
+    165          	{
+    166          		return;
+    167          	}
+    168          	ocx.timeh = timeh;
+   \                     ??ocx_time_set_1:
+   \   000010   78..         MOV     R0,#(ocx + 11)
+   \   000012   E9           MOV     A,R1
+   \   000013   F6           MOV     @R0,A
+    169          	ocx.timel = timel;
+   \   000014   08           INC     R0
+   \   000015   EA           MOV     A,R2
+   \   000016   F6           MOV     @R0,A
+    170          	disp.update = 1;            //设置更新标志
+   \   000017   D2..         SETB    disp.0
+    171          #endif
+    172          }
+   \                     ??ocx_time_set_0:
+   \   000019   22           RET
+    173          
+    174          //能量显示设置
+    175          #if ENERGY_DISP_EN
+    176          #pragma location="DISP_OCX_SEG"
+    177          void ocx_energy_set(const u16 __code *tbl)
+    178          {
+    179          	energy_calc(tbl);
+    180          	if(ocx.energy_cnt == energy_cnt)
+    181          	{
+    182          		return;
+    183          	}
+    184          	ocx.energy_cnt = energy_cnt;
+    185          	disp.update = 1;            //设置更新标志
+    186          }
+    187          #endif
+    188          
+    189          //闪烁控制
+    190          #pragma location="DISP_OCX_SEG"
+
+   \                                 In segment DISP_OCX_SEG, align 1, keep-with-next
+    191          void ocx_blink_set(u8 icon, u8 num)
+   \                     ocx_blink_set:
+    192          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    193          #if (DISP_TYPE != DISP_LED)
+    194          	ocx.blink_icon = icon;
+   \   000000   78..         MOV     R0,#(ocx + 6)
+   \   000002   E9           MOV     A,R1
+   \   000003   F6           MOV     @R0,A
+    195          	if(ocx.blink_num != num)
+   \   000004   08           INC     R0
+   \   000005   E6           MOV     A,@R0
+   \   000006   6A           XRL     A,R2
+   \   000007   6005         JZ      ??ocx_blink_set_0
+    196          	{
+    197          		ocx.blink_num = num;
+   \   000009   EA           MOV     A,R2
+   \   00000A   F6           MOV     @R0,A
+    198          		disp_time();
+   \   00000B                ; Setup parameters for call to function led_7p7s_disp_time
+   \   00000B   12....       LCALL   led_7p7s_disp_time
+    199          	}
+    200          	disp.update = 1;            //设置更新标志
+   \                     ??ocx_blink_set_0:
+   \   00000E   D2..         SETB    disp.0
+    201          #endif
+    202          }
+   \   000010   22           RET
+    203          
+    204          //控件延时，5ms调用一次
+    205          #pragma location="DISP_OCX_SEG"
+
+   \                                 In segment DISP_OCX_SEG, align 1, keep-with-next
+    206          void ocx_delay(void)
+   \                     ocx_delay:
+    207          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    208          #if ((DISP_TYPE != DISP_LED) && (DISP_TYPE != DISP_NO))
+    209          	if(ocx.show_time != 0)
+   \   000000   78..         MOV     R0,#ocx
+   \   000002   E6           MOV     A,@R0
+   \   000003   7002         JNZ     ??ocx_delay_0
+   \   000005   08           INC     R0
+   \   000006   E6           MOV     A,@R0
+   \                     ??ocx_delay_0:
+   \   000007   600B         JZ      ??ocx_delay_1
+    210          	{
+    211          		ocx.show_time--;
+   \   000009   78..         MOV     R0,#ocx
+   \   00000B   E6           MOV     A,@R0
+   \   00000C   24FF         ADD     A,#-0x1
+   \   00000E   F6           MOV     @R0,A
+   \   00000F   08           INC     R0
+   \   000010   E6           MOV     A,@R0
+   \   000011   34FF         ADDC    A,#-0x1
+   \   000013   F6           MOV     @R0,A
+    212          	}
+    213          
+    214          	if(ocx.blink_time != 0)
+   \                     ??ocx_delay_1:
+   \   000014   78..         MOV     R0,#(ocx + 4)
+   \   000016   E6           MOV     A,@R0
+   \   000017   600A         JZ      ??ocx_delay_2
+    215          	{
+    216          		ocx.blink_time--;
+   \   000019   16           DEC     @R0
+    217          		if(ocx.blink_time == BLINK_TIME)
+   \   00001A   E6           MOV     A,@R0
+   \   00001B   6464         XRL     A,#0x64
+   \   00001D   7009         JNZ     ??ocx_delay_3
+    218          		{
+    219          			ocx.blink_sta = 0;
+   \   00001F   08           INC     R0
+   \   000020   7600         MOV     @R0,#0x0
+   \   000022   22           RET
+    220          		}
+    221          	}
+    222          	else
+    223          	{
+    224          		ocx.blink_time = (BLINK_TIME * 2);
+   \                     ??ocx_delay_2:
+   \   000023   76C8         MOV     @R0,#-0x38
+    225          		ocx.blink_sta = 1;
+   \   000025   08           INC     R0
+   \   000026   7601         MOV     @R0,#0x1
+    226          	}
+    227          #endif
+    228          
+    229          #if ((DISP_TYPE == DISP_LED) && (USE_IR_NUM))
+    230          	if(ocx.show_time != 0)
+    231          	{
+    232          		ocx.show_time--;
+    233          	}
+    234          #endif
+    235          }
+   \                     ??ocx_delay_3:
+   \   000028   22           RET
+    236          
+    237          #pragma location="DISP_OCX_SEG"
+
+   \                                 In segment DISP_OCX_SEG, align 1, keep-with-next
+    238          void ocx_clear(void)
+   \                     ocx_clear:
+    239          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    240          #if ((DISP_TYPE != DISP_LED) && (DISP_TYPE != DISP_NO))
+    241          	ocx.blink_sta = 0;
+   \   000000   78..         MOV     R0,#(ocx + 5)
+   \   000002   7600         MOV     @R0,#0x0
+    242          	ocx.blink_icon = 0;
+   \   000004   08           INC     R0
+   \   000005   7600         MOV     @R0,#0x0
+    243          	ocx.blink_num = 0;
+   \   000007   08           INC     R0
+   \   000008   7600         MOV     @R0,#0x0
+    244          	ocx.status = OCX_NULL;
+   \   00000A   78..         MOV     R0,#(ocx + 2)
+   \   00000C   7600         MOV     @R0,#0x0
+    245          	disp.update = 1;    //设置更新标志
+   \   00000E   D2..         SETB    disp.0
+    246          #endif
+    247          
+    248          #if ((DISP_TYPE == DISP_LED) && (USE_IR_NUM))
+    249          	ocx.status = OCX_NULL;
+    250          #endif
+    251          }
+   \   000010   22           RET
+    252          
+    253          //控件事件
+    254          #pragma location="DISP_OCX_SEG"
+
+   \                                 In segment DISP_OCX_SEG, align 1, keep-with-next
+    255          void ocx_event(void)
+   \                     ocx_event:
+    256          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    257          #if ((DISP_TYPE != DISP_LED) && (DISP_TYPE != DISP_NO))
+    258          	if(ocx.show_time == 0)
+   \   000000   78..         MOV     R0,#ocx
+   \   000002   E6           MOV     A,@R0
+   \   000003   7002         JNZ     ??ocx_event_0
+   \   000005   08           INC     R0
+   \   000006   E6           MOV     A,@R0
+   \                     ??ocx_event_0:
+   \   000007   700F         JNZ     ??ocx_event_1
+    259          	{
+    260          		if(ocx.status == OCX_NUMSELBOX)
+   \   000009   78..         MOV     R0,#(ocx + 2)
+   \   00000B   E6           MOV     A,@R0
+   \   00000C   6402         XRL     A,#0x2
+   \   00000E   7004         JNZ     ??ocx_event_2
+    261          		{
+    262          			ocx.event = 1;
+   \   000010   78..         MOV     R0,#(ocx + 10)
+   \   000012   7601         MOV     @R0,#0x1
+    263          		}
+    264          		ocx.status = OCX_NULL;
+   \                     ??ocx_event_2:
+   \   000014   78..         MOV     R0,#(ocx + 2)
+   \   000016   7600         MOV     @R0,#0x0
+    265          	}
+    266          	if(ocx.status != ocx.disp_status)
+   \                     ??ocx_event_1:
+   \   000018   78..         MOV     R0,#(ocx + 2)
+   \   00001A   E6           MOV     A,@R0
+   \   00001B   FA           MOV     R2,A
+   \   00001C   08           INC     R0
+   \   00001D   E6           MOV     A,@R0
+   \   00001E   6A           XRL     A,R2
+   \   00001F   6004         JZ      ??ocx_event_3
+    267          	{
+    268          		ocx.disp_status = ocx.status;
+   \   000021   EA           MOV     A,R2
+   \   000022   F6           MOV     @R0,A
+    269          		disp.update = 1;            //设置更新标志
+   \   000023   D2..         SETB    disp.0
+    270          	}
+    271          #endif
+    272          
+    273          #if ((DISP_TYPE == DISP_LED) && (USE_IR_NUM))
+    274          	if(ocx.show_time == 0)
+    275          	{
+    276          		if(ocx.status == OCX_NUMSELBOX)
+    277          		{
+    278          			ocx.event = 1;
+    279          		}
+    280          		ocx.status = OCX_NULL;
+    281          	}
+    282          #endif
+    283          }
+   \                     ??ocx_event_3:
+   \   000025   22           RET
+    284          
+    285          //显示控件
+    286          #pragma location="DISP_OCX_SEG"
+
+   \                                 In segment DISP_OCX_SEG, align 1, keep-with-next
+    287          void ocx_display(void)
+   \                     ocx_display:
+    288          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    289          	switch(ocx.disp_status)
+   \   000000   78..         MOV     R0,#(ocx + 3)
+   \   000002   E6           MOV     A,@R0
+   \   000003   12....       LCALL   ?UC_SWITCH_DENSE
+   \                     `?<Jumptable for ocx_display>_0`:
+   \   000006   03           DB        3
+   \   000007   00           DB        0
+   \   000008   ....         DW        ??ocx_display_0
+   \   00000A   ....         DW        ??ocx_display_1
+    290          	{
+    291          		//case OCX_MSGBOX:
+    292          		//    break;
+    293          	case OCX_VOLBOX:
+    294          		disp_vol();
+   \                     ??ocx_display_1:
+   \   00000C                ; Setup parameters for call to function led_7p7s_disp_vol
+   \   00000C   12....       LCALL   led_7p7s_disp_vol
+    295          		break;
+    296          	}
+    297          }
+   \                     ??ocx_display_0:
+   \   00000F   22           RET
+    298          
+    299          //显示初始化
+    300          #pragma location="DISP_OCX_SEG"
+
+   \                                 In segment DISP_OCX_SEG, align 1, keep-with-next
+    301          void disp_init(void)
+   \                     disp_init:
+    302          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    303          	disp_port_init();
+   \   000000                ; Setup parameters for call to function led_7p7s_init
+   \   000000   12....       LCALL   led_7p7s_init
+    304          #if SOFT_POWEROFF_EN
+    305          	disp_clear();
+   \   000003                ; Setup parameters for call to function led_7p7s_clear
+   \   000003   12....       LCALL   led_7p7s_clear
+    306          #else
+    307          	showhello();
+    308          #endif
+    309          }
+   \   000006   22           RET
+
+   \                                 In segment CODE_C, align 1
+   \                     `?<Constant "---">`:
+   \   000000   2D2D2D00     DB "---"
+
+   Maximum stack usage in bytes:
+
+     Function                EXT_STACK PSTACK XSTACK
+     --------                --------- ------ ------
+     disp_init                      0      0      0
+       -> led_7p7s_init             0      0      0
+       -> led_7p7s_clear            0      0      0
+     ocx_blink_set                  0      0      0
+       -> led_7p7s_disp_time        0      0      0
+     ocx_clear                      0      0      0
+     ocx_delay                      0      0      0
+     ocx_display                    0      0      0
+       -> led_7p7s_disp_vol         0      0      0
+     ocx_event                      0      0      0
+     ocx_freq_set                   0      0      0
+     ocx_msgbox                     0      0      0
+       -> led_7p7s_disp_str         0      0      0
+     ocx_show_device                0      0      0
+       -> fs_cur_dev                0      0      0
+       -> fs_cur_dev                0      0      0
+       -> ocx_msgbox                0      0      0
+     ocx_show_playmode              0      0      0
+       -> ocx_msgbox                0      0      0
+     ocx_showch                     0      0      0
+       -> led_7p7s_disp_ch          0      0      0
+     ocx_showeq                     0      0      0
+       -> ocx_msgbox                0      0      0
+     ocx_shownum                    0      0      0
+     ocx_shownumsel                 0      0      0
+     ocx_showvol                    0      0      0
+     ocx_time_set                   0      0      0
+
+
+   Segment part sizes:
+
+     Function/Label    Bytes
+     --------------    -----
+     ocx                 18
+     disp                 6
+     led_eq_str          30
+     led_playmode_str    20
+     ocx_shownum         11
+     ?Subroutine0        10
+     ocx_show_device     22
+     ocx_shownumsel       1
+     ocx_showvol          6
+     ocx_msgbox           9
+     ocx_show_playmode   15
+     ?Subroutine1         5
+     ocx_showeq          17
+     ocx_showch          17
+     ocx_freq_set        26
+     ocx_time_set        26
+     ocx_blink_set       17
+     ocx_delay           41
+     ocx_clear           17
+     ocx_event           38
+     ocx_display         16
+     disp_init            7
+     ?<Constant "---">    4
+
+ 
+   6 bytes in segment BDATA_N
+   4 bytes in segment CODE_C
+ 188 bytes in segment DISP_OCX_SEG
+  18 bytes in segment IDATA_N
+ 113 bytes in segment LED_DISP_SEG
+  50 bytes in segment LED_DISP_TBL
+ 
+ 355 bytes of CODE  memory
+   6 bytes of DATA  memory
+  18 bytes of IDATA memory
+
+Errors: none
+Warnings: none

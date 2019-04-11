@@ -1,0 +1,1513 @@
+##############################################################################
+#                                                                            #
+# IAR 8051 C/C++ Compiler V7.20H/W32                   10/Sep/2015  19:03:26 #
+# Copyright 2004-2006 IAR Systems. All rights reserved.                      #
+#                                                                            #
+#    Core               =  plain                                             #
+#    Code model         =  near                                              #
+#    Data model         =  large                                             #
+#    Calling convention =  extended stack reentrant                          #
+#    Constant location  =  code                                              #
+#    Extended stack     =  enabled                                           #
+#    Dptr setup         =  1,16                                              #
+#    Source file        =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\user\user_spi.c                       #
+#    Command line       =  -I "C:\Program Files\IAR Systems\Embedded         #
+#                          Workbench 4.05 Evaluation version\8051\INC\" -I   #
+#                          "C:\Program Files\IAR Systems\Embedded Workbench  #
+#                          4.05 Evaluation version\8051\INC\CLIB\" -I        #
+#                          "C:\Documents and Settings\Administrator\×ÀÃæ\lil #
+#                          y\15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX1 #
+#                          070_20150908\COMMON\" -I "C:\Documents and        #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\INC\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\config\" -I "C:\Documents and    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\api\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\fm\" -I "C:\Documents and        #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\fat\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\display\" -I "C:\Documents and   #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\displ #
+#                          ay\led\" -I "C:\Documents and                     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\displ #
+#                          ay\lcd\" -I "C:\Documents and                     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\task\ #
+#                          " -I "C:\Documents and Settings\Administrator\×ÀÃ #
+#                          æ\lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lil #
+#                          y_AX1070_20150908\user\" -I "C:\Documents and     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\mem\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\module\" -I "C:\Documents and    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\modul #
+#                          e\kedir\" -I "C:\Documents and                    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\key\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\startmusic\" -D UART_DEBUG -D    #
+#                          AX207X_TAG -lC "C:\Documents and                  #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\UART_ #
+#                          Debug\List\" -o "C:\Documents and                 #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\UART_ #
+#                          Debug\Obj\" -e -z9 --debug --core=plain           #
+#                          --dptr=16,1 --data_model=large --code_model=near  #
+#                          --calling_convention=ext_stack_reentrant          #
+#                          --place_constants=code --nr_virtual_regs 20       #
+#                          --extended_stack "C:\Documents and                #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\user\ #
+#                          user_spi.c"                                       #
+#    List file          =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\UART_Debug\List\user_spi.lst          #
+#    Object file        =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\UART_Debug\Obj\user_spi.r51           #
+#                                                                            #
+#                                                                            #
+##############################################################################
+
+C:\Documents and Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX1070_20150908\user\user_spi.c
+      1          /*****************************************************************************
+      2           * Module    : user
+      3           * File      : user_spi.c
+      4           * Author    : Hanny
+      5           * Email     : coldney@yahoo.com.cn
+      6           * Function  : ÓÃ»§µÄSPI²Ù×÷
+      7           *****************************************************************************/
+      8          #include "include.h"
+
+   \                                 In segment SFR_AN, at 0x88
+   \   unsigned char volatile __sfr SDCON0
+   \                     SDCON0:
+   \   000000                DS 1
+
+   \                                 In segment SFR_AN, at 0x90
+   \   unsigned char volatile __sfr P1
+   \                     P1:
+   \   000000                DS 1
+
+   \                                 In segment SFR_AN, at 0xb0
+   \   unsigned char volatile __sfr P3
+   \                     P3:
+   \   000000                DS 1
+
+   \                                 In segment SFR_AN, at 0xbb
+   \   unsigned char volatile __sfr P1DIR
+   \                     P1DIR:
+   \   000000                DS 1
+
+   \                                 In segment SFR_AN, at 0xf7
+   \   unsigned char volatile __sfr WDTCON
+   \                     WDTCON:
+   \   000000                DS 1
+      9          
+
+   \                                 In segment XDATA_N, align 1, root
+     10          IAR_XDATA_A type_user_spi u_spi;
+   \                     u_spi:
+   \   000000                DS 3
+
+   \                                 In segment XDATA_Z, align 1, keep-with-next
+   \   000000                REQUIRE __INIT_XDATA_Z
+     11          u8 flash_chipnum;                      //flashÐòºÅ
+   \                     flash_chipnum:
+   \   000000                DS 1
+     12          extern u8 dec_bs[512+6];               //DECbuf£¬ÓÃÓÚÔÝ´æflashÊý¾Ý
+     13          extern  u8 flash_music_total_tbl[7];
+     14          extern u16 get_dirstart(void);
+     15          
+
+   \                                 In segment CODE_C, align 1
+     16          IAR_CONST u8 ReadIDCMD[4] =
+   \                     ReadIDCMD:
+   \   000000   9F90AB15     DB 159, 144, 171, 21
+     17          {
+     18          	0x9F,0x90,0xAB,0x15               //¶ÁÈ¡flashIDÃüÁî
+     19          };
+     20          
+     21          //SPI IO³õÊ¼»¯
+     22          #pragma location="USER_SPI_SEG"
+
+   \                                 In segment USER_SPI_SEG, align 1, keep-with-next
+     23          void spi_port_init(void)
+   \                     spi_port_init:
+     24          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     25          #if !SOFT_SPI
+     26          	SPI_PORT_SEL();
+     27          #endif
+     28          
+     29          #if (USE_SD_CLK_DET && USE_SDCMD_IIC_SPIDAT)
+     30          	SPI_CLK_DIR |= BIT(SPI_CLK_PIN);
+     31          #else
+     32          	SPI_CLK_DIR &= ~BIT(SPI_CLK_PIN);       //CLK
+   \   000000   53BBFB       ANL     0xbb,#0xfb
+     33          #endif
+     34          	SPI_DO_DIR &= ~BIT(SPI_DO_PIN);         //DO
+   \   000003   53BBF7       ANL     0xbb,#0xf7
+     35          	SPI_CS_DIR &= ~BIT(SPI_CS_PIN);         //CS
+   \   000006   53BBEF       ANL     0xbb,#0xef
+     36          #if (SPI_MODE_SEL == SPI_THREE_WIRES_MODE)
+     37          	SPI_DI_DIR |=  BIT(SPI_DI_PIN);         //DI
+     38          #endif
+     39          
+     40          #if !SOFT_SPI
+     41          	spi_init();
+     42          #endif
+     43          }
+   \   000009   22           RET
+     44          
+     45          #pragma location="USER_SPI_SEG"
+
+   \                                 In segment USER_SPI_SEG, align 1, keep-with-next
+     46          void spi_sd_mux_enter(void)
+   \                     spi_sd_mux_enter:
+     47          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     48          	SDCON0 = 0;
+   \   000000   758800       MOV     0x88,#0x0
+     49          }
+   \   000003   22           RET
+     50          
+     51          
+     52          #pragma location="USER_SPI_SEG"
+
+   \                                 In segment USER_SPI_SEG, align 1, keep-with-next
+     53          void spi_sd_mux_exit(void)
+   \                     spi_sd_mux_exit:
+     54          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     55          	if(device_is_online(DEVICE_SDMMC)||device_is_online(DEVICE_SDMMC1))
+   \   000000                ; Setup parameters for call to function device_is_online
+   \   000000   7900         MOV     R1,#0x0
+   \   000002   12....       LCALL   device_is_online
+   \   000005   4007         JC      ??spi_sd_mux_exit_0
+   \   000007                ; Setup parameters for call to function device_is_online
+   \   000007   7901         MOV     R1,#0x1
+   \   000009   12....       LCALL   device_is_online
+   \   00000C   5003         JNC     ??spi_sd_mux_exit_1
+     56          	{
+     57          		SDCON0 = 1;
+   \                     ??spi_sd_mux_exit_0:
+   \   00000E   758801       MOV     0x88,#0x1
+     58          	}
+     59          }
+   \                     ??spi_sd_mux_exit_1:
+   \   000011   22           RET
+     60          
+     61          #pragma location="USER_SPI_SEG"
+
+   \                                 In segment USER_SPI_SEG, align 1, keep-with-next
+     62          void spi_cs_enable(void)
+   \                     spi_cs_enable:
+     63          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     64          	switch(flash_chipnum)
+   \   000000   90....       MOV     DPTR,#flash_chipnum
+   \   000003   E0           MOVX    A,@DPTR
+   \   000004   12....       LCALL   ?UC_SWITCH_DENSE
+   \                     `?<Jumptable for spi_cs_enable>_0`:
+   \   000007   01           DB        1
+   \   000008   00           DB        0
+   \   000009   ....         DW        ??spi_cs_enable_0
+   \   00000B   ....         DW        ??spi_cs_enable_1
+     65          	{
+     66          	case 0x01:
+     67          		SPI_CS_PORT &= ~BIT(SPI_CS_PIN);
+   \                     ??spi_cs_enable_1:
+   \   00000D   C294         CLR     0x90.4
+     68          		break;
+     69          	default:
+     70          		break;
+     71          	}
+     72          }
+   \                     ??spi_cs_enable_0:
+   \   00000F   22           RET
+     73          
+     74          #pragma location="USER_SPI_SEG"
+
+   \                                 In segment USER_SPI_SEG, align 1, keep-with-next
+     75          void spi_cs_disable(void)
+   \                     spi_cs_disable:
+     76          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     77          	switch(flash_chipnum)
+   \   000000   90....       MOV     DPTR,#flash_chipnum
+   \   000003   E0           MOVX    A,@DPTR
+   \   000004   12....       LCALL   ?UC_SWITCH_DENSE
+   \                     `?<Jumptable for spi_cs_disable>_0`:
+   \   000007   01           DB        1
+   \   000008   00           DB        0
+   \   000009   ....         DW        ??spi_cs_disable_0
+   \   00000B   ....         DW        ??spi_cs_disable_1
+     78          	{
+     79          	case 0x01:
+     80          		SPI_CS_PORT |= BIT(SPI_CS_PIN);
+   \                     ??spi_cs_disable_1:
+   \   00000D   D294         SETB    0x90.4
+     81          		break;
+     82          	default:
+     83          		break;
+     84          	}
+     85          }
+   \                     ??spi_cs_disable_0:
+   \   00000F   22           RET
+     86          //Èí¼þSPIÐ´ÈëÒ»Byte
+     87          #pragma location="USER_SPI_SEG"
+
+   \                                 In segment USER_SPI_SEG, align 1, keep-with-next
+     88          void spi_write_byte_soft(u8 data)
+   \                     spi_write_byte_soft:
+     89          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     90          	u8 i;
+     91          	if(SPI_MODE_SEL == SPI_THREE_WIRES_MODE)
+     92          	{
+     93          		for(i=0; i<8; i++)
+     94          		{
+     95          			SPI_CLK_PORT &= ~BIT(SPI_CLK_PIN);
+     96          			if(data & 0x80)
+     97          			{
+     98          				SPI_DO_PORT |= BIT(SPI_DO_PIN);
+     99          			}
+    100          			else
+    101          			{
+    102          				SPI_DO_PORT &= ~BIT(SPI_DO_PIN);
+    103          			}
+    104          			SPI_CLK_PORT |= BIT(SPI_CLK_PIN);//ÉÏÉýÑØ
+    105          			data <<= 1;
+    106          		}
+    107          	}
+    108          	else
+    109          	{
+    110          		SPI_2Wire_TX();
+   \   000000   53BBF7       ANL     0xbb,#0xf7
+    111          		for(i=0; i<8; i++)
+   \   000003   7A08         MOV     R2,#0x8
+    112          		{
+    113          			SPI_CLK_PORT &= ~BIT(SPI_CLK_PIN);
+   \                     ??spi_write_byte_soft_0:
+   \   000005   C292         CLR     0x90.2
+    114          		#if 1
+    115          			asm("MOV	A,R1");
+   \   000007   E9           MOV     A,R1
+    116          			asm("MOV	C,ACC.7");
+   \   000008   A2E7         MOV     C,ACC.7
+    117          			asm("MOV	P1.3,C");
+   \   00000A   92..         MOV     P1.3,C
+    118          			asm("CLR	C");
+   \   00000C   C3           CLR     C
+    119          			asm("RLC	A");
+   \   00000D   33           RLC     A
+    120          			asm("MOV	R1,A");
+   \   00000E   F9           MOV     R1,A
+    121          		#else
+    122          			if(data & 0x80)
+    123          			{
+    124          				SPI_DO_PORT |= BIT(SPI_DO_PIN);
+    125          			}
+    126          			else
+    127          			{
+    128          				SPI_DO_PORT &= ~BIT(SPI_DO_PIN);
+    129          			}
+    130          		#endif
+    131          			SPI_CLK_PORT |= BIT(SPI_CLK_PIN);//ÉÏÉýÑØ
+   \   00000F   D292         SETB    0x90.2
+    132          			data <<= 1;
+    133          		}
+   \   000011   1A           DEC     R2
+   \   000012   EA           MOV     A,R2
+   \   000013   70F0         JNZ     ??spi_write_byte_soft_0
+    134          	}
+    135          }
+   \   000015   22           RET
+    136          
+    137          //Èí¼þSPI¶ÁÈ¡Ò»Byte
+    138          #pragma location="USER_SPI_SEG"
+
+   \                                 In segment USER_SPI_SEG, align 1, keep-with-next
+    139          u8 spi_read_byte_soft(void)
+   \                     spi_read_byte_soft:
+    140          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    141          	u8 ch,i;
+    142          	ch = 0;
+   \   000000   7900         MOV     R1,#0x0
+    143          #if (SPI_MODE_SEL == SPI_THREE_WIRES_MODE)
+    144          	for(i=0; i<8; i++)
+    145          	{
+    146          		ch <<= 1;
+    147          		SPI_CLK_PORT |= BIT(SPI_CLK_PIN);//ÏÂ½µÑØ
+    148          		asm("nop");
+    149          		asm("nop");
+    150          		asm("nop");
+    151          		SPI_CLK_PORT &= ~BIT(SPI_CLK_PIN);
+    152          		asm("nop");
+    153          		if(SPI_DI_PORT & BIT(SPI_DI_PIN))
+    154          		{
+    155          			ch |= 0x01;
+    156          		}
+    157          		else
+    158          		{
+    159          			ch &= ~0x01;
+    160          		}
+    161          	}
+    162          #else
+    163          	SPI_2Wire_RX();
+   \   000002   43BB08       ORL     0xbb,#0x8
+    164          	for(i=0; i<8; i++)
+   \   000005   7A08         MOV     R2,#0x8
+    165          	{
+    166          		SPI_CLK_PORT |= BIT(SPI_CLK_PIN);//ÏÂ½µÑØ
+   \                     ??spi_read_byte_soft_0:
+   \   000007   D292         SETB    0x90.2
+    167          		ch <<= 1;
+   \   000009   E9           MOV     A,R1
+   \   00000A   C3           CLR     C
+   \   00000B   33           RLC     A
+   \   00000C   F9           MOV     R1,A
+    168          	//	asm("nop");
+    169          	//	asm("nop");
+    170          	//	asm("nop");
+    171          		SPI_CLK_PORT &= ~BIT(SPI_CLK_PIN);
+   \   00000D   C292         CLR     0x90.2
+    172          		asm("nop");
+   \   00000F   00           nop
+    173          		if(SPI_DO_PORT & BIT(SPI_DO_PIN))
+   \   000010   A293         MOV     C,0x90.3
+   \   000012   5003         JNC     ??spi_read_byte_soft_1
+    174          		{
+    175          			ch |= 0x01;
+   \   000014   D2E0         SETB    0xE0 /* A   */.0
+   \   000016   F9           MOV     R1,A
+    176          		}
+    177          		else
+    178          		{
+    179          	//		ch &= ~0x01;
+    180          		}
+    181          	}
+   \                     ??spi_read_byte_soft_1:
+   \   000017   1A           DEC     R2
+   \   000018   EA           MOV     A,R2
+   \   000019   70EC         JNZ     ??spi_read_byte_soft_0
+    182          #endif
+    183          	return ch;
+   \   00001B   22           RET
+    184          }
+    185          #pragma location="USER_SPI_SEG"
+
+   \                                 In segment USER_SPI_SEG, align 1, keep-with-next
+    186          u8 spi_read_byte(void)
+   \                     spi_read_byte:
+    187          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    188          	u8 temp;
+    189          #if SOFT_SPI
+    190          	temp = spi_read_byte_soft();
+    191          #else
+    192          	temp = spi_read_byte_hard();
+    193          #endif
+    194          	return temp;
+   \   000000                ; Setup parameters for call to function spi_read_byte_soft
+   \   000000   12....       LCALL   spi_read_byte_soft
+   \   000003   22           RET
+    195          }
+    196          
+    197          #pragma location="USER_SPI_SEG"
+
+   \                                 In segment USER_SPI_SEG, align 1, keep-with-next
+    198          void spi_write_byte(u8 data)
+   \                     spi_write_byte:
+    199          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    200          #if SOFT_SPI
+    201          	spi_write_byte_soft(data);
+   \   000000                ; Setup parameters for call to function spi_write_byte_soft
+   \   000000   12....       LCALL   spi_write_byte_soft
+    202          #else
+    203          	spi_write_byte_hard(data);
+    204          #endif
+    205          }
+   \   000003   22           RET
+    206          
+    207          #pragma location="USER_SPI_SEG"
+
+   \                                 In segment USER_SPI_SEG, align 1, keep-with-next
+    208          void spi_write_soft(u8 *buf, u32 addr,u16 len)
+   \                     spi_write_soft:
+    209          {
+   \   000000   7408         MOV     A,#0x8
+   \   000002   12....       LCALL   ?FUNC_ENTER_SP
+   \   000005                ; Saved register size: 11
+   \   000005                ; Auto size: 0
+   \   000005   EA           MOV     A,R2
+   \   000006   FE           MOV     R6,A
+   \   000007   EB           MOV     A,R3
+   \   000008   FF           MOV     R7,A
+   \   000009   8C..         MOV     ?V0 + 0,R4
+   \   00000B   8D..         MOV     ?V0 + 1,R5
+   \   00000D   7582EE       MOV     DPL,#-0x12
+   \   000010   7583FF       MOV     DPH,#-0x1
+   \   000013   12....       LCALL   ?EXT_STACK_DISP0_16
+   \   000016   78..         MOV     R0,#?V0 + 4
+   \   000018   12....       LCALL   ?L_MOV_X
+    210          #if (USE_SD_CLK_DET && USE_SDCMD_IIC_SPIDAT)
+    211          	SPI_CLK_DIR &= ~BIT(SPI_CLK_PIN);
+    212          	SPI_CLK_PU &= ~BIT(SPI_CLK_PIN);          //¹Ø±ÕÉÏÀ­
+    213          #endif
+    214          	spi_wait_busy();
+   \   00001B                ; Setup parameters for call to function spi_wait_busy
+   \   00001B   12....       LCALL   spi_wait_busy
+    215          	spi_write_en();
+   \   00001E                ; Setup parameters for call to function spi_write_en
+   \   00001E   12....       LCALL   spi_write_en
+    216          	spi_cs_enable();
+   \   000021                ; Setup parameters for call to function spi_cs_enable
+   \   000021   12....       LCALL   spi_cs_enable
+    217          	spi_write_byte(0x02);
+   \   000024                ; Setup parameters for call to function spi_write_byte_soft
+   \   000024   7902         MOV     R1,#0x2
+   \   000026   12....       LCALL   ?Subroutine0
+    218          	spi_send_addr_2(addr);
+    219          	for(u16 i = 0; i < len; i++)
+   \                     ??CrossCallReturnLabel_0:
+   \   000029   800B         SJMP    ??CrossCallReturnLabel_2
+    220          	{
+    221          		spi_write_byte(*(buf+i));          //·¢ËÍÊý¾Ý
+   \                     ??spi_write_soft_0:
+   \   00002B                ; Setup parameters for call to function spi_write_byte_soft
+   \   00002B   12....       LCALL   ?Subroutine2
+   \                     ??CrossCallReturnLabel_4:
+   \   00002E   E0           MOVX    A,@DPTR
+   \   00002F   F9           MOV     R1,A
+   \   000030   12....       LCALL   spi_write_byte_soft
+    222          	}
+   \   000033   12....       LCALL   ?Subroutine1
+   \                     ??CrossCallReturnLabel_2:
+   \   000036   C3           CLR     C
+   \   000037   E5..         MOV     A,?V0 + 2
+   \   000039   95..         SUBB    A,?V0 + 0
+   \   00003B   E5..         MOV     A,?V0 + 3
+   \   00003D   95..         SUBB    A,?V0 + 1
+   \   00003F   40EA         JC      ??spi_write_soft_0
+    223          	spi_cs_disable();
+   \   000041                ; Setup parameters for call to function spi_cs_disable
+   \   000041   02....       LJMP    ?Subroutine4
+    224          #if (USE_SD_CLK_DET && USE_SDCMD_IIC_SPIDAT)
+    225          	SPI_CLK_DIR |= BIT(SPI_CLK_PIN);
+    226          	SPI_CLK_PU  |= BIT(SPI_CLK_PIN);          //´ò¿ªÉÏÀ­
+    227          #endif
+    228          }
+
+   \                                 In segment USER_SPI_SEG, align 1, keep-with-next
+   \                     ?Subroutine1:
+   \   000000   E5..         MOV     A,?V0 + 2
+   \   000002   2401         ADD     A,#0x1
+   \   000004   F5..         MOV     ?V0 + 2,A
+   \   000006   E5..         MOV     A,?V0 + 3
+   \   000008   3400         ADDC    A,#0x0
+   \   00000A   F5..         MOV     ?V0 + 3,A
+   \   00000C   22           RET
+
+   \                                 In segment USER_SPI_SEG, align 1, keep-with-next
+   \                     ?Subroutine0:
+   \   000000   12....       LCALL   spi_write_byte_soft
+   \   000003                ; Setup parameters for call to function spi_send_addr_2
+   \   000003                ; Setup parameters for call to function spi_send_addr_2
+   \   000003   AA..         MOV     R2,?V0 + 4
+   \   000005   AB..         MOV     R3,?V0 + 5
+   \   000007   AC..         MOV     R4,?V0 + 6
+   \   000009   AD..         MOV     R5,?V0 + 7
+   \   00000B   12....       LCALL   spi_send_addr_2
+   \   00000E   75..00       MOV     ?V0 + 2,#0x0
+   \   000011   75..00       MOV     ?V0 + 3,#0x0
+   \   000014   22           RET
+
+   \                                 In segment USER_SPI_SEG, align 1, keep-with-next
+   \                     ?Subroutine4:
+   \   000000   12....       LCALL   spi_cs_disable
+   \                     ??Subroutine4_0:
+   \   000003   7F08         MOV     R7,#0x8
+   \   000005   02....       LJMP    ?FUNC_LEAVE_SP
+    229          
+    230          #pragma location="USER_SPI_SEG"
+
+   \                                 In segment USER_SPI_SEG, align 1, keep-with-next
+    231          void spi_read_soft(u8 *buf, u32 addr, u16 len)
+   \                     spi_read_soft:
+    232          {
+   \   000000   7408         MOV     A,#0x8
+   \   000002   12....       LCALL   ?FUNC_ENTER_SP
+   \   000005                ; Saved register size: 11
+   \   000005                ; Auto size: 0
+   \   000005   EA           MOV     A,R2
+   \   000006   FE           MOV     R6,A
+   \   000007   EB           MOV     A,R3
+   \   000008   FF           MOV     R7,A
+   \   000009   8C..         MOV     ?V0 + 0,R4
+   \   00000B   8D..         MOV     ?V0 + 1,R5
+   \   00000D   7582EE       MOV     DPL,#-0x12
+   \   000010   7583FF       MOV     DPH,#-0x1
+   \   000013   12....       LCALL   ?EXT_STACK_DISP0_16
+   \   000016   78..         MOV     R0,#?V0 + 4
+   \   000018   12....       LCALL   ?L_MOV_X
+    233          #if (USE_SD_CLK_DET && USE_SDCMD_IIC_SPIDAT)
+    234          	SPI_CLK_DIR &= ~BIT(SPI_CLK_PIN);
+    235          	SPI_CLK_PU &= ~BIT(SPI_CLK_PIN);          //¹Ø±ÕÉÏÀ­
+    236          #endif
+    237          
+    238          	spi_wait_busy();
+   \   00001B                ; Setup parameters for call to function spi_wait_busy
+   \   00001B   12....       LCALL   spi_wait_busy
+    239          	spi_cs_enable();
+   \   00001E                ; Setup parameters for call to function spi_cs_enable
+   \   00001E   12....       LCALL   spi_cs_enable
+    240          	spi_write_byte(0x03);
+   \   000021                ; Setup parameters for call to function spi_write_byte_soft
+   \   000021   7903         MOV     R1,#0x3
+   \   000023   12....       LCALL   ?Subroutine0
+    241          	spi_send_addr_2(addr);
+    242          	for(u16 i = 0; i < len; i++)
+   \                     ??CrossCallReturnLabel_1:
+   \   000026   800B         SJMP    ??CrossCallReturnLabel_3
+    243          	{
+    244          		*(buf + i) = spi_read_byte();
+   \                     ??spi_read_soft_0:
+   \   000028                ; Setup parameters for call to function spi_read_byte
+   \   000028   12....       LCALL   spi_read_byte
+   \   00002B   12....       LCALL   ?Subroutine2
+   \                     ??CrossCallReturnLabel_5:
+   \   00002E   E9           MOV     A,R1
+   \   00002F   F0           MOVX    @DPTR,A
+    245          	}
+   \   000030   12....       LCALL   ?Subroutine1
+   \                     ??CrossCallReturnLabel_3:
+   \   000033   C3           CLR     C
+   \   000034   E5..         MOV     A,?V0 + 2
+   \   000036   95..         SUBB    A,?V0 + 0
+   \   000038   E5..         MOV     A,?V0 + 3
+   \   00003A   95..         SUBB    A,?V0 + 1
+   \   00003C   40EA         JC      ??spi_read_soft_0
+    246          	spi_cs_disable();
+   \   00003E                ; Setup parameters for call to function spi_cs_disable
+   \   00003E   02....       LJMP    ?Subroutine4
+    247          #if (USE_SD_CLK_DET && USE_SDCMD_IIC_SPIDAT)
+    248          	SPI_CLK_DIR |= BIT(SPI_CLK_PIN);
+    249          	SPI_CLK_PU  |= BIT(SPI_CLK_PIN);          //´ò¿ªÉÏÀ­
+    250          #endif
+    251          }
+
+   \                                 In segment USER_SPI_SEG, align 1, keep-with-next
+   \                     ?Subroutine2:
+   \   000000   EE           MOV     A,R6
+   \   000001   25..         ADD     A,?V0 + 2
+   \   000003   F582         MOV     DPL,A
+   \   000005   EF           MOV     A,R7
+   \   000006   35..         ADDC    A,?V0 + 3
+   \   000008   F583         MOV     DPH,A
+   \   00000A   22           RET
+    252          
+    253          #pragma location="USER_SPI_SEG"
+
+   \                                 In segment USER_SPI_SEG, align 1, keep-with-next
+    254          void spi_write(u8 *buf, u32 addr,u16 len)
+   \                     spi_write:
+    255          {
+   \   000000   C0..         PUSH    ?V0 + 0
+   \   000002   C0..         PUSH    ?V0 + 1
+   \   000004   C0..         PUSH    ?V0 + 2
+   \   000006   C0..         PUSH    ?V0 + 3
+   \   000008                ; Saved register size: 4
+   \   000008                ; Auto size: 0
+   \   000008   7582F5       MOV     DPL,#-0xb
+   \   00000B   7583FF       MOV     DPH,#-0x1
+   \   00000E   12....       LCALL   ?EXT_STACK_DISP0_16
+   \   000011   78..         MOV     R0,#?V0 + 0
+   \   000013   12....       LCALL   ?L_MOV_X
+    256          #if SOFT_SPI
+    257          	spi_write_soft(buf, addr,len);
+   \   000016                ; Setup parameters for call to function spi_write_soft
+   \   000016   78..         MOV     R0,#?V0 + 0
+   \   000018   12....       LCALL   ?PUSH_ISTACK_I_FOUR
+   \   00001B   12....       LCALL   spi_write_soft
+   \   00001E                REQUIRE ?Subroutine3
+   \   00001E                ; // Fall through to label ?Subroutine3
+    258          #else
+    259          	spi_write_hard(buf, addr,len);
+    260          #endif
+    261          }
+
+   \                                 In segment USER_SPI_SEG, align 1, keep-with-next
+   \                     ?Subroutine3:
+   \   000000   74FC         MOV     A,#-0x4
+   \   000002   12....       LCALL   ?DEALLOC_EXT_STACK8
+   \   000005   D0..         POP     ?V0 + 3
+   \   000007   D0..         POP     ?V0 + 2
+   \   000009   D0..         POP     ?V0 + 1
+   \   00000B   D0..         POP     ?V0 + 0
+   \   00000D   22           RET
+    262          
+    263          #pragma location="USER_SPI_SEG"
+
+   \                                 In segment USER_SPI_SEG, align 1, keep-with-next
+    264          void spi_read(u8 *buf, u32 addr, u16 len)
+   \                     spi_read:
+    265          {
+   \   000000   C0..         PUSH    ?V0 + 0
+   \   000002   C0..         PUSH    ?V0 + 1
+   \   000004   C0..         PUSH    ?V0 + 2
+   \   000006   C0..         PUSH    ?V0 + 3
+   \   000008                ; Saved register size: 4
+   \   000008                ; Auto size: 0
+   \   000008   7582F5       MOV     DPL,#-0xb
+   \   00000B   7583FF       MOV     DPH,#-0x1
+   \   00000E   12....       LCALL   ?EXT_STACK_DISP0_16
+   \   000011   78..         MOV     R0,#?V0 + 0
+   \   000013   12....       LCALL   ?L_MOV_X
+    266          #if 0	// dump index read
+    267          	if(addr < 0x400L)
+    268          	{
+    269          		printf("\n%04X,%02X",(u16)addr, len);
+    270          	}
+    271          #endif
+    272          
+    273          #if SOFT_SPI
+    274          	spi_read_soft(buf, addr,len);
+   \   000016                ; Setup parameters for call to function spi_read_soft
+   \   000016   78..         MOV     R0,#?V0 + 0
+   \   000018   12....       LCALL   ?PUSH_ISTACK_I_FOUR
+   \   00001B   12....       LCALL   spi_read_soft
+   \   00001E   80..         SJMP    ?Subroutine3
+    275          #else
+    276          	spi_read_hard(buf, addr,len);
+    277          #endif
+    278          
+    279          }
+    280          
+    281          #pragma location="USER_SPI_SEG"
+
+   \                                 In segment USER_SPI_SEG, align 1, keep-with-next
+    282          u32 spi_readID(u8 bCmd)
+   \                     spi_readID:
+    283          {
+   \   000000   7409         MOV     A,#0x9
+   \   000002   12....       LCALL   ?FUNC_ENTER_SP
+   \   000005                ; Saved register size: 12
+   \   000005                ; Auto size: 4
+   \   000005   7404         MOV     A,#0x4
+   \   000007   12....       LCALL   ?ALLOC_EXT_STACK8
+   \   00000A   E9           MOV     A,R1
+   \   00000B   FE           MOV     R6,A
+    284          	u8 cmd[4],i;
+    285          	u32 dwFlashID = 0;
+   \   00000C   90....       MOV     DPTR,#__Constant_0
+   \   00000F   78..         MOV     R0,#?V0 + 4
+   \   000011   12....       LCALL   ?L_MOV_C
+    286          	spi_cs_enable();
+   \   000014                ; Setup parameters for call to function spi_cs_enable
+   \   000014   12....       LCALL   spi_cs_enable
+    287          	//printf("bCmd = 0x%x!!!\n", bCmd );
+    288          	if((bCmd == 0x90) || (bCmd == 0xAB))
+   \   000017   7490         MOV     A,#-0x70
+   \   000019   6E           XRL     A,R6
+   \   00001A   6005         JZ      ??spi_readID_0
+   \   00001C   74AB         MOV     A,#-0x55
+   \   00001E   6E           XRL     A,R6
+   \   00001F   7013         JNZ     ??spi_readID_1
+    289          	{
+    290          		spi_write_byte(bCmd);
+   \                     ??spi_readID_0:
+   \   000021                ; Setup parameters for call to function spi_write_byte_soft
+   \   000021   EE           MOV     A,R6
+   \   000022   F9           MOV     R1,A
+   \   000023   12....       LCALL   spi_write_byte_soft
+    291          		spi_write_byte(0x00);
+   \   000026                ; Setup parameters for call to function spi_write_byte_soft
+   \   000026   7900         MOV     R1,#0x0
+   \   000028   12....       LCALL   spi_write_byte_soft
+    292          		spi_write_byte(0x00);
+   \   00002B                ; Setup parameters for call to function spi_write_byte_soft
+   \   00002B   7900         MOV     R1,#0x0
+   \   00002D   12....       LCALL   spi_write_byte_soft
+    293          		spi_write_byte(0x00);
+   \   000030                ; Setup parameters for call to function spi_write_byte_soft
+   \   000030   7900         MOV     R1,#0x0
+   \   000032   8002         SJMP    ??spi_readID_2
+    294          	}
+    295          	else
+    296          	{
+    297          		spi_write_byte(bCmd);
+   \                     ??spi_readID_1:
+   \   000034                ; Setup parameters for call to function spi_write_byte_soft
+   \   000034   EE           MOV     A,R6
+   \   000035   F9           MOV     R1,A
+   \                     ??spi_readID_2:
+   \   000036   12....       LCALL   spi_write_byte_soft
+    298          	}
+    299          
+    300          	for(i=0; i<4; i++)
+   \   000039   75..00       MOV     ?V0 + 8,#0x0
+    301          	{
+    302          		cmd[i] = spi_read_byte();
+   \                     ??spi_readID_3:
+   \   00003C   85....       MOV     ?V0 + 0,?V0 + 8
+   \   00003F   7582FB       MOV     DPL,#-0x5
+   \   000042   7583FF       MOV     DPH,#-0x1
+   \   000045   12....       LCALL   ?EXT_STACK_DISP0_16
+   \   000048   E582         MOV     A,DPL
+   \   00004A   25..         ADD     A,?V0 + 0
+   \   00004C   FE           MOV     R6,A
+   \   00004D   E583         MOV     A,DPH
+   \   00004F   3400         ADDC    A,#0x0
+   \   000051   FF           MOV     R7,A
+   \   000052                ; Setup parameters for call to function spi_read_byte
+   \   000052   12....       LCALL   spi_read_byte
+   \   000055   E9           MOV     A,R1
+   \   000056   8E82         MOV     DPL,R6
+   \   000058   8F83         MOV     DPH,R7
+   \   00005A   F0           MOVX    @DPTR,A
+    303          		dwFlashID = (dwFlashID<<8) + cmd[i];
+   \   00005B   7408         MOV     A,#0x8
+   \   00005D   78..         MOV     R0,#?V0 + 4
+   \   00005F   12....       LCALL   ?L_SHL
+   \   000062   E0           MOVX    A,@DPTR
+   \   000063   F5..         MOV     ?V0 + 0,A
+   \   000065   75..00       MOV     ?V0 + 1,#0x0
+   \   000068   75..00       MOV     ?V0 + 2,#0x0
+   \   00006B   75..00       MOV     ?V0 + 3,#0x0
+   \   00006E   78..         MOV     R0,#?V0 + 4
+   \   000070   79..         MOV     R1,#?V0 + 0
+   \   000072   12....       LCALL   ?L_ADD
+    304          	}
+   \   000075   05..         INC     ?V0 + 8
+   \   000077   E5..         MOV     A,?V0 + 8
+   \   000079   C3           CLR     C
+   \   00007A   9404         SUBB    A,#0x4
+   \   00007C   40BE         JC      ??spi_readID_3
+    305          	spi_cs_disable();
+   \   00007E                ; Setup parameters for call to function spi_cs_disable
+   \   00007E   12....       LCALL   spi_cs_disable
+    306          	//printf("CUS spi_readID:[0x%8lx]\n",dwFlashID);
+    307          	return dwFlashID;
+   \   000081   AA..         MOV     R2,?V0 + 4
+   \   000083   AB..         MOV     R3,?V0 + 5
+   \   000085   AC..         MOV     R4,?V0 + 6
+   \   000087   AD..         MOV     R5,?V0 + 7
+   \   000089   74FC         MOV     A,#-0x4
+   \   00008B   12....       LCALL   ?DEALLOC_EXT_STACK8
+   \   00008E   7F09         MOV     R7,#0x9
+   \   000090   02....       LJMP    ?FUNC_LEAVE_SP
+    308          }
+    309          
+    310          #pragma location="USER_SPI_SEG"
+
+   \                                 In segment USER_SPI_SEG, align 1, keep-with-next
+    311          bool spi_flash_init(void)
+   \                     spi_flash_init:
+    312          {
+   \   000000   7408         MOV     A,#0x8
+   \   000002   12....       LCALL   ?FUNC_ENTER_SP
+   \   000005                ; Saved register size: 11
+   \   000005                ; Auto size: 0
+    313          #if (USE_SD_CLK_DET && USE_SDCMD_IIC_SPIDAT)
+    314          	SPI_CLK_DIR &= ~BIT(SPI_CLK_PIN);
+    315          	SPI_CLK_PU  &= ~BIT(SPI_CLK_PIN);          //¹Ø±ÕÉÏÀ­
+    316          #endif
+    317          	u8 i;
+    318          	u32 FlashID;
+    319          	bool ret_state;
+    320          
+    321          	if(!(SD1_CHECK_PORT & BIT(SD1_CHECK_PIN)))        //SD¿¨²åÈë¼ì²âIO»á±»À­µÍ
+   \   000005   A2B1         MOV     C,0xb0.1
+   \   000007   400A         JC      ??spi_flash_init_0
+    322          	{	// ÓÐ SD¿¨Ê±ÎÞSPI-Flash
+    323          		printf("Have SD Card\n");
+   \   000009                ; Setup parameters for call to function my_printf
+   \   000009   7A..         MOV     R2,#(`?<Constant "Have SD Card\\n">` & 0xff)
+   \   00000B   7B..         MOV     R3,#((`?<Constant "Have SD Card\\n">` >> 8) & 0xff)
+   \   00000D   12....       LCALL   my_printf
+    324          		return false;
+   \   000010   C3           CLR     C
+   \   000011   8069         SJMP    ??spi_flash_init_1
+    325          	}
+    326          
+    327          #if (SPI_MODE_SEL == SPI_TWO_WIRES_MODE)
+    328          	SPI_2Wire_RX();
+   \                     ??spi_flash_init_0:
+   \   000013   43BB08       ORL     0xbb,#0x8
+    329          #endif
+    330          	flash_chipnum = 0x01;               //Ä¬ÈÏÎªµÚÒ»¿éflash
+   \   000016   7401         MOV     A,#0x1
+   \   000018   90....       MOV     DPTR,#flash_chipnum
+   \   00001B   F0           MOVX    @DPTR,A
+    331          	for(ret_state = true, i=0; i<4; i++)
+   \   00001C   D2..         SETB    ?VB.0
+    332          	{
+    333          		FlashID = spi_readID(ReadIDCMD[i]);
+   \                     ??spi_flash_init_2:
+   \   00001E   8E..         MOV     ?V0 + 0,R6
+   \   000020   E5..         MOV     A,?V0 + 0
+   \   000022   24..         ADD     A,#(ReadIDCMD & 0xff)
+   \   000024   F582         MOV     DPL,A
+   \   000026   E4           CLR     A
+   \   000027   34..         ADDC    A,#((ReadIDCMD >> 8) & 0xff)
+   \   000029   F583         MOV     DPH,A
+   \   00002B   E4           CLR     A
+   \   00002C   93           MOVC    A,@A+DPTR
+   \   00002D   F5..         MOV     ?V0 + 0,A
+   \   00002F                ; Setup parameters for call to function spi_readID
+   \   00002F   F9           MOV     R1,A
+   \   000030   12....       LCALL   spi_readID
+   \   000033   8A..         MOV     ?V0 + 4,R2
+   \   000035   8B..         MOV     ?V0 + 5,R3
+   \   000037   8C..         MOV     ?V0 + 6,R4
+   \   000039   8D..         MOV     ?V0 + 7,R5
+    334          		printf("ID:%xH,%08lxH\n",ReadIDCMD[i],FlashID);
+   \   00003B                ; Setup parameters for call to function my_printf
+   \   00003B   78..         MOV     R0,#?V0 + 4
+   \   00003D   12....       LCALL   ?PUSH_ISTACK_I_FOUR
+   \   000040   F5..         MOV     ?V0 + 1,A
+   \   000042   C0..         PUSH    ?V0 + 0
+   \   000044   C0..         PUSH    ?V0 + 1
+   \   000046   7A..         MOV     R2,#(`?<Constant "ID:%xH,%08lxH\\n">` & 0xff)
+   \   000048   7B..         MOV     R3,#((`?<Constant "ID:%xH,%08lxH\\n">` >> 8) & 0xff)
+   \   00004A   12....       LCALL   my_printf
+   \   00004D   74FA         MOV     A,#-0x6
+   \   00004F   12....       LCALL   ?DEALLOC_EXT_STACK8
+    335          		if((FlashID != 0xFFFFFFFF) && (FlashID == 0x0) && ((FlashID & 0x00FFFFFF) != 0x00FFFFFF))
+   \   000052   90....       MOV     DPTR,#__Constant_ffffffff
+   \   000055   78..         MOV     R0,#?V0 + 4
+   \   000057   12....       LCALL   ?L_EQ_C
+   \   00005A   600C         JZ      ??spi_flash_init_3
+   \   00005C   90....       MOV     DPTR,#__Constant_0
+   \   00005F   78..         MOV     R0,#?V0 + 4
+   \   000061   12....       LCALL   ?L_EQ_C
+   \   000064   7002         JNZ     ??spi_flash_init_3
+    336          		{
+    337          #if (USE_SD_CLK_DET && USE_SDCMD_IIC_SPIDAT)
+    338          			SPI_CLK_DIR |= BIT(SPI_CLK_PIN);
+    339          			SPI_CLK_PU  |= BIT(SPI_CLK_PIN);          //¹Ø±ÕÉÏÀ­
+    340          #endif
+    341          			ret_state = false;
+   \   000066   C2..         CLR     ?VB.0
+    342          		}
+    343          	}
+   \                     ??spi_flash_init_3:
+   \   000068   0E           INC     R6
+   \   000069   EE           MOV     A,R6
+   \   00006A   C3           CLR     C
+   \   00006B   9404         SUBB    A,#0x4
+   \   00006D   40AF         JC      ??spi_flash_init_2
+    344          	if(ret_state == false)
+   \   00006F   A2..         MOV     C,?VB.0
+   \   000071   4007         JC      ??spi_flash_init_4
+    345          		printf("Error\n");
+   \   000073                ; Setup parameters for call to function my_printf
+   \   000073   7A..         MOV     R2,#(`?<Constant "Error\\n">` & 0xff)
+   \   000075   7B..         MOV     R3,#((`?<Constant "Error\\n">` >> 8) & 0xff)
+   \   000077   12....       LCALL   my_printf
+    346          #if (USE_SD_CLK_DET && USE_SDCMD_IIC_SPIDAT)
+    347          	SPI_CLK_DIR |= BIT(SPI_CLK_PIN);
+    348          	SPI_CLK_PU  |= BIT(SPI_CLK_PIN);	//¹Ø±ÕÉÏÀ­
+    349          #endif
+    350          	return ret_state;
+   \                     ??spi_flash_init_4:
+   \   00007A   A2..         MOV     C,?VB.0
+   \                     ??spi_flash_init_1:
+   \   00007C   80..         SJMP    ??Subroutine4_0
+    351          }
+    352          
+    353          //spiÐ´ÈëÒ»sectorÊý¾Ý
+    354          #pragma location="USER_SPI_SEG"
+
+   \                                 In segment USER_SPI_SEG, align 1, keep-with-next
+    355          bool spi_sector_write(u32 sect,void *buf)//Ö¸¶¨ÉÈÇø£¬Ð´512byteÊý¾Ý
+   \                     spi_sector_write:
+    356          {
+   \   000000   740C         MOV     A,#0xc
+   \   000002   12....       LCALL   ?FUNC_ENTER_SP
+   \   000005                ; Saved register size: 15
+   \   000005                ; Auto size: 0
+   \   000005   8A..         MOV     ?V0 + 0,R2
+   \   000007   8B..         MOV     ?V0 + 1,R3
+   \   000009   8C..         MOV     ?V0 + 2,R4
+   \   00000B   8D..         MOV     ?V0 + 3,R5
+   \   00000D   7582EC       MOV     DPL,#-0x14
+   \   000010   7583FF       MOV     DPH,#-0x1
+   \   000013   12....       LCALL   ?EXT_STACK_DISP0_16
+   \   000016   E0           MOVX    A,@DPTR
+   \   000017   F8           MOV     R0,A
+   \   000018   A3           INC     DPTR
+   \   000019   E0           MOVX    A,@DPTR
+   \   00001A   F9           MOV     R1,A
+   \   00001B   E8           MOV     A,R0
+   \   00001C   FE           MOV     R6,A
+   \   00001D   E9           MOV     A,R1
+   \   00001E   FF           MOV     R7,A
+    357          	u32 i,temp1,temp2,addr;
+    358          	u8 *temp3;
+    359          	u8 *buf_addr;
+    360          
+    361          	buf_addr = (u8 *)buf;
+    362          
+    363          	temp1 = sect/8;
+    364          	temp2 = sect;
+    365          	temp2 = temp2 * 0x200UL;
+   \   00001F   7409         MOV     A,#0x9
+   \   000021   78..         MOV     R0,#?V0 + 0
+   \   000023   12....       LCALL   ?L_SHL
+   \   000026   F5..         MOV     ?V0 + 4,A
+   \   000028   85....       MOV     ?V0 + 5,?V0 + 1
+   \   00002B   85....       MOV     ?V0 + 6,?V0 + 2
+   \   00002E   85....       MOV     ?V0 + 7,?V0 + 3
+    366          
+    367          	addr = temp1 * 0x1000UL;
+   \   000031   90....       MOV     DPTR,#__Constant_fffff000
+   \   000034   78..         MOV     R0,#?V0 + 0
+   \   000036   12....       LCALL   ?L_AND_C
+    368          	if(addr > 8 * 1024 * 1024UL)     //³¬¹ýSPI FlashµÄÈÝÁ¿
+   \   000039   90....       MOV     DPTR,#__Constant_800001
+   \   00003C   78..         MOV     R0,#?V0 + 8
+   \   00003E   12....       LCALL   ?L_MOV_C
+   \   000041   78..         MOV     R0,#?V0 + 8
+   \   000043   79..         MOV     R1,#?V0 + 0
+   \   000045   12....       LCALL   ?UL_GT
+   \   000048   4003         JC      ??spi_sector_write_0
+    369          	{
+    370          		return false;
+   \   00004A   C3           CLR     C
+   \   00004B   8054         SJMP    ??spi_sector_write_1
+    371          	}
+    372          	spi_sector_erase(addr);
+   \                     ??spi_sector_write_0:
+   \   00004D                ; Setup parameters for call to function spi_sector_erase
+   \   00004D   AA..         MOV     R2,?V0 + 0
+   \   00004F   AB..         MOV     R3,?V0 + 1
+   \   000051   AC..         MOV     R4,?V0 + 2
+   \   000053   AD..         MOV     R5,?V0 + 3
+   \   000055   12....       LCALL   spi_sector_erase
+    373          
+    374          	for(i = 0; i < 2; i++)
+   \   000058   90....       MOV     DPTR,#__Constant_0
+   \   00005B   78..         MOV     R0,#?V0 + 8
+   \   00005D   12....       LCALL   ?L_MOV_C
+    375          	{
+    376          		temp3 = buf_addr + (i * 0x100);
+    377          		spi_write(temp3,temp2,256);
+   \                     ??spi_sector_write_2:
+   \   000060                ; Setup parameters for call to function spi_write_soft
+   \   000060   78..         MOV     R0,#?V0 + 4
+   \   000062   12....       LCALL   ?PUSH_ISTACK_I_FOUR
+   \   000065   FC           MOV     R4,A
+   \   000066   7D01         MOV     R5,#0x1
+   \   000068   85....       MOV     ?V0 + 0,?V0 + 8
+   \   00006B   E5..         MOV     A,?V0 + 0
+   \   00006D   F5..         MOV     ?V0 + 1,A
+   \   00006F   EE           MOV     A,R6
+   \   000070   2400         ADD     A,#0x0
+   \   000072   FA           MOV     R2,A
+   \   000073   EF           MOV     A,R7
+   \   000074   35..         ADDC    A,?V0 + 1
+   \   000076   FB           MOV     R3,A
+   \   000077   12....       LCALL   spi_write_soft
+   \   00007A   74FC         MOV     A,#-0x4
+   \   00007C   12....       LCALL   ?DEALLOC_EXT_STACK8
+    378          		temp2 = temp2 + 0x100;
+   \   00007F   90....       MOV     DPTR,#__Constant_100
+   \   000082   78..         MOV     R0,#?V0 + 4
+   \   000084   12....       LCALL   ?L_ADD_C
+    379          	}
+   \   000087   90....       MOV     DPTR,#__Constant_1
+   \   00008A   78..         MOV     R0,#?V0 + 8
+   \   00008C   12....       LCALL   ?L_ADD_C
+   \   00008F   90....       MOV     DPTR,#__Constant_2
+   \   000092   78..         MOV     R0,#?V0 + 0
+   \   000094   12....       LCALL   ?L_MOV_C
+   \   000097   78..         MOV     R0,#?V0 + 0
+   \   000099   79..         MOV     R1,#?V0 + 8
+   \   00009B   12....       LCALL   ?UL_GT
+   \   00009E   40C0         JC      ??spi_sector_write_2
+    380          	return true;
+   \   0000A0   D3           SETB    C
+   \                     ??spi_sector_write_1:
+   \   0000A1   7F0C         MOV     R7,#0xc
+   \   0000A3   02....       LJMP    ?FUNC_LEAVE_SP
+    381          }
+    382          
+    383          
+    384          //spi¶ÁÈ¡Ò»sectorÊý¾Ý
+    385          #pragma location="USER_SPI_SEG"
+
+   \                                 In segment USER_SPI_SEG, align 1, keep-with-next
+    386          bool spi_sector_read(u32 sect,void *buf)
+   \                     spi_sector_read:
+    387          {
+   \   000000   7408         MOV     A,#0x8
+   \   000002   12....       LCALL   ?FUNC_ENTER_SP
+   \   000005                ; Saved register size: 11
+   \   000005                ; Auto size: 0
+   \   000005   8A..         MOV     ?V0 + 0,R2
+   \   000007   8B..         MOV     ?V0 + 1,R3
+   \   000009   8C..         MOV     ?V0 + 2,R4
+   \   00000B   8D..         MOV     ?V0 + 3,R5
+   \   00000D   7582F0       MOV     DPL,#-0x10
+   \   000010   7583FF       MOV     DPH,#-0x1
+   \   000013   12....       LCALL   ?EXT_STACK_DISP0_16
+   \   000016   E0           MOVX    A,@DPTR
+   \   000017   FA           MOV     R2,A
+   \   000018   A3           INC     DPTR
+   \   000019   E0           MOVX    A,@DPTR
+   \   00001A   FB           MOV     R3,A
+    388          	u32 addr = sect * 0x200UL;
+   \   00001B   7409         MOV     A,#0x9
+   \   00001D   78..         MOV     R0,#?V0 + 0
+   \   00001F   12....       LCALL   ?L_SHL
+    389          	if(addr > 8 * 1024 * 1024UL)           //³¬¹ýSPI FlashµÄÈÝÁ¿
+   \   000022   90....       MOV     DPTR,#__Constant_800001
+   \   000025   78..         MOV     R0,#?V0 + 4
+   \   000027   12....       LCALL   ?L_MOV_C
+   \   00002A   78..         MOV     R0,#?V0 + 4
+   \   00002C   79..         MOV     R1,#?V0 + 0
+   \   00002E   12....       LCALL   ?UL_GT
+   \   000031   400A         JC      ??spi_sector_read_0
+    390          	{
+    391          		printf("return\n");
+   \   000033                ; Setup parameters for call to function my_printf
+   \   000033   7A..         MOV     R2,#(`?<Constant "return\\n">` & 0xff)
+   \   000035   7B..         MOV     R3,#((`?<Constant "return\\n">` >> 8) & 0xff)
+   \   000037   12....       LCALL   my_printf
+    392          		return false;
+   \   00003A   C3           CLR     C
+   \   00003B   8011         SJMP    ??spi_sector_read_1
+    393          	}
+    394          	spi_read(buf,addr,512);
+   \                     ??spi_sector_read_0:
+   \   00003D                ; Setup parameters for call to function spi_read_soft
+   \   00003D   78..         MOV     R0,#?V0 + 0
+   \   00003F   12....       LCALL   ?PUSH_ISTACK_I_FOUR
+   \   000042   FC           MOV     R4,A
+   \   000043   7D02         MOV     R5,#0x2
+   \   000045   12....       LCALL   spi_read_soft
+   \   000048   74FC         MOV     A,#-0x4
+   \   00004A   12....       LCALL   ?DEALLOC_EXT_STACK8
+    395          	return true;
+   \   00004D   D3           SETB    C
+   \                     ??spi_sector_read_1:
+   \   00004E   02....       LJMP    ??Subroutine4_0
+    396          }
+    397          
+    398          
+    399          //µÈ´ý²¥·Å
+    400          #pragma location="USER_SPI_SEG"
+
+   \                                 In segment USER_SPI_SEG, align 1, keep-with-next
+    401          void spi_music_wait(void)
+   \                     spi_music_wait:
+    402          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+   \   000000   8006         SJMP    ??spi_music_wait_0
+    403          	while(music_get_status()> STATUS_PLAY_STOPPING)
+    404          	{
+    405          		WATCHDOG_CLR();
+   \                     ??spi_music_wait_1:
+   \   000002   43F720       ORL     0xf7,#0x20
+    406          		music_event();
+   \   000005                ; Setup parameters for call to function music_event
+   \   000005   12....       LCALL   music_event
+    407          	}
+   \                     ??spi_music_wait_0:
+   \   000008                ; Setup parameters for call to function music_get_status
+   \   000008   12....       LCALL   music_get_status
+   \   00000B   E9           MOV     A,R1
+   \   00000C   C3           CLR     C
+   \   00000D   9402         SUBB    A,#0x2
+   \   00000F   50F1         JNC     ??spi_music_wait_1
+    408          	music_stop();
+   \   000011                ; Setup parameters for call to function music_stop
+   \   000011   12....       LCALL   music_stop
+    409          	u_spi.spi_music_flag = 0;
+   \   000014   E4           CLR     A
+   \   000015   90....       MOV     DPTR,#u_spi
+   \   000018   F0           MOVX    @DPTR,A
+    410          }
+   \   000019   22           RET
+    411          
+    412          //SPI MP3 ÓïÒô²¥±¨
+    413          #pragma location="USER_SPI_SEG"
+
+   \                                 In segment USER_SPI_SEG, align 1, keep-with-next
+    414          void mp3_res_play(u8 music_name)
+   \                     mp3_res_play:
+    415          {
+   \   000000   EE           MOV     A,R6
+   \   000001   C0E0         PUSH    A
+   \   000003                ; Saved register size: 1
+   \   000003                ; Auto size: 0
+   \   000003   E9           MOV     A,R1
+   \   000004   FE           MOV     R6,A
+    416          
+    417          	music_stop();
+   \   000005                ; Setup parameters for call to function music_stop
+   \   000005   12....       LCALL   music_stop
+    418          	u_spi.spi_music_flag = 1;
+   \   000008   7401         MOV     A,#0x1
+   \   00000A   90....       MOV     DPTR,#u_spi
+   \   00000D   F0           MOVX    @DPTR,A
+    419          	spi_mp3_index_read(music_name);//¶ÁÈ¡FlashÒôÀÖË÷ÒýÐÅÏ¢
+   \   00000E                ; Setup parameters for call to function spi_mp3_index_read_program
+   \   00000E   EE           MOV     A,R6
+   \   00000F   F9           MOV     R1,A
+   \   000010   12....       LCALL   spi_mp3_index_read_program
+    420          	music_init();
+   \   000013                ; Setup parameters for call to function music_init
+   \   000013   12....       LCALL   music_init
+    421          	music_play();
+   \   000016                ; Setup parameters for call to function music_play
+   \   000016   12....       LCALL   music_play
+    422          #if LED_EN
+    423          	ocx.led_sta = LED_STA_FAST_GLITTER;
+    424          #endif
+    425          }
+   \   000019   D0E0         POP     A
+   \   00001B   FE           MOV     R6,A
+   \   00001C   22           RET
+    426          
+    427          //µÈ´ýSPI MP3 ÓïÒô²¥·ÅÍê³É
+    428          // music_name from 0 to N
+    429          #pragma location="USER_SPI_SEG"
+
+   \                                 In segment USER_SPI_SEG, align 1, keep-with-next
+    430          void mp3_res_play_wait(u8 music_name)
+   \                     mp3_res_play_wait:
+    431          {
+   \   000000   EE           MOV     A,R6
+   \   000001   C0E0         PUSH    A
+   \   000003   C0..         PUSH    ?V0 + 0
+   \   000005   C0..         PUSH    ?V0 + 1
+   \   000007                ; Saved register size: 3
+   \   000007                ; Auto size: 0
+    432          	u8 music_num;
+    433          	music_num = (u8)get_dirstart();
+   \   000007                ; Setup parameters for call to function get_dirstart
+   \   000007   12....       LCALL   get_dirstart
+   \   00000A   EA           MOV     A,R2
+   \   00000B   FE           MOV     R6,A
+    434          	printf("res cur num:%d\n",music_num);
+   \   00000C                ; Setup parameters for call to function my_printf
+   \   00000C   8E..         MOV     ?V0 + 0,R6
+   \   00000E   75..00       MOV     ?V0 + 1,#0x0
+   \   000011   C0..         PUSH    ?V0 + 0
+   \   000013   C0..         PUSH    ?V0 + 1
+   \   000015   7A..         MOV     R2,#(`?<Constant "res cur num:%d\\n">` & 0xff)
+   \   000017   7B..         MOV     R3,#((`?<Constant "res cur num:%d\\n">` >> 8) & 0xff)
+   \   000019   12....       LCALL   my_printf
+   \   00001C   D0E0         POP     A
+   \   00001E   D0E0         POP     A
+    435          	mp3_res_play(music_num);
+   \   000020                ; Setup parameters for call to function mp3_res_play
+   \   000020   EE           MOV     A,R6
+   \   000021   F9           MOV     R1,A
+   \   000022   12....       LCALL   mp3_res_play
+    436          	spi_music_wait();
+   \   000025                ; Setup parameters for call to function spi_music_wait
+   \   000025   12....       LCALL   spi_music_wait
+    437          }
+   \   000028   D0..         POP     ?V0 + 1
+   \   00002A   D0..         POP     ?V0 + 0
+   \   00002C   D0E0         POP     A
+   \   00002E   FE           MOV     R6,A
+   \   00002F   22           RET
+    438          
+    439          
+    440          // music_name from 0 to N
+    441          #pragma location="USER_SPI_SEG"
+
+   \                                 In segment USER_SPI_SEG, align 1, keep-with-next
+    442          void spi_mp3_index_read(u8 music_name)
+   \                     spi_mp3_index_read:
+    443          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    444          #if SPI_PC_DOWNLOAD
+    445          	spi_mp3_index_read_pc(music_name);
+    446          #else
+    447          	spi_mp3_index_read_program(music_name);
+   \   000000                ; Setup parameters for call to function spi_mp3_index_read_program
+   \   000000   12....       LCALL   spi_mp3_index_read_program
+    448          #endif
+    449          }
+   \   000003   22           RET
+    450          
+    451          
+    452          extern bool usb_host_mass_read_do(void *buf, u32 lba, u8 offset);
+    453          extern void usb_host_set_fail(void);
+
+   \                                 In segment NEAR_CODE, align 1, keep-with-next
+    454          bool usb_read1(void *buf, u32 lba)
+   \                     usb_read1:
+    455          {
+   \   000000   7404         MOV     A,#0x4
+   \   000002   12....       LCALL   ?FUNC_ENTER_SP
+   \   000005                ; Saved register size: 7
+   \   000005                ; Auto size: 0
+   \   000005   7582F2       MOV     DPL,#-0xe
+   \   000008   7583FF       MOV     DPH,#-0x1
+   \   00000B   12....       LCALL   ?EXT_STACK_DISP0_16
+   \   00000E   78..         MOV     R0,#?V0 + 0
+   \   000010   12....       LCALL   ?L_MOV_X
+    456          	u8 offset = 0;
+    457          	bool res = usb_host_mass_read_do(buf, lba, offset);
+   \   000013                ; Setup parameters for call to function usb_host_mass_read_do
+   \   000013   78..         MOV     R0,#?V0 + 0
+   \   000015   12....       LCALL   ?PUSH_ISTACK_I_FOUR
+   \   000018   12....       LCALL   usb_host_mass_read_do
+   \   00001B   74FC         MOV     A,#-0x4
+   \   00001D   12....       LCALL   ?DEALLOC_EXT_STACK8
+   \   000020   92..         MOV     ?VB.0,C
+    458          	if(!res)
+   \   000022   4003         JC      ??usb_read1_0
+    459          	{
+    460          		usb_host_set_fail();
+   \   000024                ; Setup parameters for call to function usb_host_set_fail
+   \   000024   12....       LCALL   usb_host_set_fail
+    461          	}
+    462          	return !res;
+   \                     ??usb_read1_0:
+   \   000027   A2..         MOV     C,?VB.0
+   \   000029   B3           CPL     C
+   \   00002A   7F04         MOV     R7,#0x4
+   \   00002C   02....       LJMP    ?FUNC_LEAVE_SP
+    463          }
+
+   \                                 In segment CODE_C, align 1
+   \                     `?<Constant "Have SD Card\\n">`:
+   \   000000   48617665     DB "Have SD Card\012"
+   \            20534420
+   \            43617264
+   \            0A00    
+
+   \                                 In segment CODE_C, align 1
+   \                     `?<Constant "ID:%xH,%08lxH\\n">`:
+   \   000000   49443A25     DB "ID:%xH,%08lxH\012"
+   \            78482C25
+   \            30386C78
+   \            480A00  
+
+   \                                 In segment CODE_C, align 1
+   \                     `?<Constant "Error\\n">`:
+   \   000000   4572726F     DB "Error\012"
+   \            720A00  
+
+   \                                 In segment CODE_C, align 1
+   \                     `?<Constant "return\\n">`:
+   \   000000   72657475     DB "return\012"
+   \            726E0A00
+
+   \                                 In segment CODE_C, align 1
+   \                     `?<Constant "res cur num:%d\\n">`:
+   \   000000   72657320     DB "res cur num:%d\012"
+   \            63757220
+   \            6E756D3A
+   \            25640A00
+
+   \                                 In segment CODE_C, align 1
+   \                     __Constant_0:
+   \   000000   00000000     DD 0
+
+   \                                 In segment CODE_C, align 1
+   \                     __Constant_ffffffff:
+   \   000000   FFFFFFFF     DD 4294967295
+
+   \                                 In segment CODE_C, align 1
+   \                     __Constant_fffff000:
+   \   000000   00F0FFFF     DD 4294963200
+
+   \                                 In segment CODE_C, align 1
+   \                     __Constant_800001:
+   \   000000   01008000     DD 8388609
+
+   \                                 In segment CODE_C, align 1
+   \                     __Constant_100:
+   \   000000   00010000     DD 256
+
+   \                                 In segment CODE_C, align 1
+   \                     __Constant_1:
+   \   000000   01000000     DD 1
+
+   \                                 In segment CODE_C, align 1
+   \                     __Constant_2:
+   \   000000   02000000     DD 2
+    464          
+
+   Maximum stack usage in bytes:
+
+     Function                       EXT_STACK PSTACK XSTACK
+     --------                       --------- ------ ------
+     mp3_res_play                          4      0      0
+       -> music_stop                       2      0      0
+       -> spi_mp3_index_read_program
+                                           2      0      0
+       -> music_init                       2      0      0
+       -> music_play                       2      0      0
+     mp3_res_play_wait                     5      0      0
+       -> get_dirstart                     6      0      0
+       -> my_printf                       10      0      0
+       -> mp3_res_play                     6      0      0
+       -> spi_music_wait                   6      0      0
+     spi_cs_disable                       16      0      0
+     spi_cs_enable                        16      0      0
+     spi_flash_init                       17      0      0
+       -> my_printf                       22      0      0
+       -> spi_readID                      22      0      0
+       -> my_printf                       34      0      0
+       -> my_printf                       22      0      0
+     spi_mp3_index_read                    0      0      0
+       -> spi_mp3_index_read_program
+                                           0      0      0
+     spi_music_wait                        3      0      0
+       -> music_event                      0      0      0
+       -> music_get_status                 0      0      0
+       -> music_stop                       0      0      0
+     spi_port_init                         0      0      0
+     spi_read                             12      0      0
+       -> spi_read_soft                   16      0      0
+     spi_readID                           28      0      0
+       -> spi_cs_enable                   32      0      0
+       -> spi_write_byte_soft             32      0      0
+       -> spi_write_byte_soft             32      0      0
+       -> spi_write_byte_soft             32      0      0
+       -> spi_write_byte_soft             32      0      0
+       -> spi_write_byte_soft             32      0      0
+       -> spi_read_byte                   32      0      0
+       -> spi_cs_disable                  32      0      0
+     spi_read_byte                        16      0      0
+       -> spi_read_byte_soft               0      0      0
+     spi_read_byte_soft                    0      0      0
+     spi_read_soft                        27      0      0
+       -> spi_wait_busy                   22      0      0
+       -> spi_cs_enable                   22      0      0
+       -> spi_write_byte_soft             22      0      0
+       -> spi_send_addr_2                 22      0      0
+       -> spi_read_byte                   22      0      0
+       -> spi_cs_disable                  22      0      0
+     spi_sd_mux_enter                      0      0      0
+     spi_sd_mux_exit                       0      0      0
+       -> device_is_online                 0      0      0
+       -> device_is_online                 0      0      0
+     spi_sector_read                      17      0      0
+       -> my_printf                       22      0      0
+       -> spi_read_soft                   30      0      0
+     spi_sector_write                     21      0      0
+       -> spi_sector_erase                30      0      0
+       -> spi_write_soft                  38      0      0
+     spi_write                            12      0      0
+       -> spi_write_soft                  16      0      0
+     spi_write_byte                        0      0      0
+       -> spi_write_byte_soft              0      0      0
+     spi_write_byte_soft                  16      0      0
+     spi_write_soft                       30      0      0
+       -> spi_wait_busy                   22      0      0
+       -> spi_write_en                    22      0      0
+       -> spi_cs_enable                   22      0      0
+       -> spi_write_byte_soft             22      0      0
+       -> spi_send_addr_2                 22      0      0
+       -> spi_write_byte_soft             22      0      0
+       -> spi_cs_disable                  22      0      0
+     usb_read1                            15      0      0
+       -> usb_host_mass_read_do           22      0      0
+       -> usb_host_set_fail               14      0      0
+
+
+   Segment part sizes:
+
+     Function/Label                 Bytes
+     --------------                 -----
+     SDCON0                            1
+     P1                                1
+     P3                                1
+     P1DIR                             1
+     WDTCON                            1
+     u_spi                             3
+     flash_chipnum                     1
+     ReadIDCMD                         4
+     spi_port_init                    10
+     spi_sd_mux_enter                  4
+     spi_sd_mux_exit                  18
+     spi_cs_enable                    16
+     spi_cs_disable                   16
+     spi_write_byte_soft              22
+     spi_read_byte_soft               28
+     spi_read_byte                     4
+     spi_write_byte                    4
+     spi_write_soft                   68
+     ?Subroutine1                     13
+     ?Subroutine0                     21
+     ?Subroutine4                      8
+     spi_read_soft                    65
+     ?Subroutine2                     11
+     spi_write                        30
+     ?Subroutine3                     14
+     spi_read                         32
+     spi_readID                      147
+     spi_flash_init                  126
+     spi_sector_write                166
+     spi_sector_read                  81
+     spi_music_wait                   26
+     mp3_res_play                     29
+     mp3_res_play_wait                48
+     spi_mp3_index_read                4
+     usb_read1                        47
+     ?<Constant "Have SD Card\n">     14
+     ?<Constant "ID:%xH,%08lxH\n">    15
+     ?<Constant "Error\n">             7
+     ?<Constant "return\n">            8
+     ?<Constant "res cur num:%d\n">   16
+     __Constant_0                      4
+     __Constant_ffffffff               4
+     __Constant_fffff000               4
+     __Constant_800001                 4
+     __Constant_100                    4
+     __Constant_1                      4
+     __Constant_2                      4
+
+ 
+    92 bytes in segment CODE_C
+    47 bytes in segment NEAR_CODE
+     5 bytes in segment SFR_AN
+ 1 011 bytes in segment USER_SPI_SEG
+     3 bytes in segment XDATA_N
+     1 byte  in segment XDATA_Z
+ 
+ 1 122 bytes of CODE  memory (+ 28 bytes shared)
+     0 bytes of DATA  memory (+  5 bytes shared)
+     4 bytes of XDATA memory
+
+Errors: none
+Warnings: none

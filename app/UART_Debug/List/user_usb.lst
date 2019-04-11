@@ -1,0 +1,322 @@
+##############################################################################
+#                                                                            #
+# IAR 8051 C/C++ Compiler V7.20H/W32                   10/Sep/2015  19:03:27 #
+# Copyright 2004-2006 IAR Systems. All rights reserved.                      #
+#                                                                            #
+#    Core               =  plain                                             #
+#    Code model         =  near                                              #
+#    Data model         =  large                                             #
+#    Calling convention =  extended stack reentrant                          #
+#    Constant location  =  code                                              #
+#    Extended stack     =  enabled                                           #
+#    Dptr setup         =  1,16                                              #
+#    Source file        =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\user\user_usb.c                       #
+#    Command line       =  -I "C:\Program Files\IAR Systems\Embedded         #
+#                          Workbench 4.05 Evaluation version\8051\INC\" -I   #
+#                          "C:\Program Files\IAR Systems\Embedded Workbench  #
+#                          4.05 Evaluation version\8051\INC\CLIB\" -I        #
+#                          "C:\Documents and Settings\Administrator\×ÀÃæ\lil #
+#                          y\15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX1 #
+#                          070_20150908\COMMON\" -I "C:\Documents and        #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\INC\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\config\" -I "C:\Documents and    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\api\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\fm\" -I "C:\Documents and        #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\fat\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\display\" -I "C:\Documents and   #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\displ #
+#                          ay\led\" -I "C:\Documents and                     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\displ #
+#                          ay\lcd\" -I "C:\Documents and                     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\task\ #
+#                          " -I "C:\Documents and Settings\Administrator\×ÀÃ #
+#                          æ\lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lil #
+#                          y_AX1070_20150908\user\" -I "C:\Documents and     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\mem\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\module\" -I "C:\Documents and    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\modul #
+#                          e\kedir\" -I "C:\Documents and                    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\key\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\startmusic\" -D UART_DEBUG -D    #
+#                          AX207X_TAG -lC "C:\Documents and                  #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\UART_ #
+#                          Debug\List\" -o "C:\Documents and                 #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\UART_ #
+#                          Debug\Obj\" -e -z9 --debug --core=plain           #
+#                          --dptr=16,1 --data_model=large --code_model=near  #
+#                          --calling_convention=ext_stack_reentrant          #
+#                          --place_constants=code --nr_virtual_regs 20       #
+#                          --extended_stack "C:\Documents and                #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\user\ #
+#                          user_usb.c"                                       #
+#    List file          =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\UART_Debug\List\user_usb.lst          #
+#    Object file        =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\UART_Debug\Obj\user_usb.r51           #
+#                                                                            #
+#                                                                            #
+##############################################################################
+
+C:\Documents and Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX1070_20150908\user\user_usb.c
+      1          #include "include.h"
+
+   \                                 In segment SFR_AN, at 0xdc
+   \   unsigned char volatile __sfr USBCON1
+   \                     USBCON1:
+   \   000000                DS 1
+      2          
+      3          #pragma location="USB_SEG"
+
+   \                                 In segment USB_SEG, align 1, keep-with-next
+      4          void usb_switch_stable_device(void)
+   \                     usb_switch_stable_device:
+      5          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+      6          #if ((USB_HOST_PHY == USB_DEV_PHY) || (USB_DET != USBDET_OTG))
+      7          	usb_switch_stable_device_std(usb_chk.dev_phy);
+   \   000000                ; Setup parameters for call to function usb_switch_stable_device_std
+   \   000000   90....       MOV     DPTR,#(usb_chk + 1)
+   \   000003   E0           MOVX    A,@DPTR
+   \   000004   F9           MOV     R1,A
+   \   000005   12....       LCALL   usb_switch_stable_device_std
+      8          #else
+      9          	usb_switch_stable_device_var();
+     10          #endif
+     11          }
+   \   000008   22           RET
+     12          
+     13          #pragma location="USB_SEG"
+
+   \                                 In segment USB_SEG, align 1, keep-with-next
+     14          void usb_switch_stable_host(void)
+   \                     usb_switch_stable_host:
+     15          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     16          #if ((USB_HOST_PHY == USB_DEV_PHY) || (USB_DET != USBDET_OTG))
+     17          	usb_switch_stable_host_std(usb_chk.host_phy);
+   \   000000                ; Setup parameters for call to function usb_switch_stable_host_std
+   \   000000   90....       MOV     DPTR,#usb_chk
+   \   000003   E0           MOVX    A,@DPTR
+   \   000004   F9           MOV     R1,A
+   \   000005   12....       LCALL   usb_switch_stable_host_std
+     18          #else
+     19          	usb_switch_stable_host_var();
+     20          #endif
+     21          }
+   \   000008   22           RET
+     22          
+     23          void decoder_stream_end(void);      //Î»Á÷½áÊø
+     24          
+     25          
+     26          #pragma inline=forced
+     27          #pragma location="DEVICE_COM_SEG"
+     28          void device_remove_usb(void)
+     29          {
+     30          	USBCON1 &= ~BIT(3);             //RESET
+     31          	asm("nop");
+     32          	asm("nop");
+     33          	USBCON1 |= BIT(3);
+     34          	usb_host_enable_testready(0);
+     35          #if ((USB_HOST_PHY == USB_DEV_PHY) || (USB_DET != USBDET_OTG))
+     36          	usb_switch_host_std(usb_chk.host_phy);
+     37          #else
+     38          	usb_switch_host(usb_chk.host_phy);
+     39          #endif
+     40          	usb_ctrl.error = 1;
+     41          }
+     42          
+     43          //Éè±¸ÒÆ³ý
+     44          #pragma location="DEVICE_COM_SEG"
+
+   \                                 In segment DEVICE_COM_SEG, align 1, keep-with-next
+     45          bool device_remove(u8 dev_num)
+   \                     device_remove:
+     46          {
+   \   000000   EE           MOV     A,R6
+   \   000001   C0E0         PUSH    A
+   \   000003                ; Saved register size: 1
+   \   000003                ; Auto size: 0
+   \   000003   E9           MOV     A,R1
+   \   000004   FE           MOV     R6,A
+     47          	if(!device_status_stable(dev_num, 0))   //for lark 0=DEV_INVALID
+   \   000005                ; Setup parameters for call to function device_status_stable
+   \   000005   7A00         MOV     R2,#0x0
+   \   000007   12....       LCALL   device_status_stable
+   \   00000A   4003         JC      ??device_remove_0
+     48          	{
+     49          		return false;
+   \   00000C   C3           CLR     C
+   \   00000D   8058         SJMP    ??device_remove_1
+     50          	}
+     51          	if((dev_num == DEVICE_SDMMC) || (dev_num == DEVICE_SDMMC1))
+   \                     ??device_remove_0:
+   \   00000F   EE           MOV     A,R6
+   \   000010   6005         JZ      ??device_remove_2
+   \   000012   7401         MOV     A,#0x1
+   \   000014   6E           XRL     A,R6
+   \   000015   701C         JNZ     ??device_remove_3
+     52          	{
+     53          		if(dev_num == sd_chk.group)
+   \                     ??device_remove_2:
+   \   000017   90....       MOV     DPTR,#sd_chk
+   \   00001A   E0           MOVX    A,@DPTR
+   \   00001B   6E           XRL     A,R6
+   \   00001C   7003         JNZ     ??device_remove_4
+     54          		{
+     55          			sd_remove();
+   \   00001E                ; Setup parameters for call to function sd_remove
+   \   00001E   12....       LCALL   sd_remove
+     56          		}
+     57          
+     58          		if(task_ctl.work_sta != TASK_FLASH)
+   \                     ??device_remove_4:
+   \   000021   7406         MOV     A,#0x6
+   \   000023   65..         XRL     A,task_ctl
+   \   000025   603F         JZ      ??device_remove_5
+     59          		{
+     60          			if(fs_cur_dev() == dev_num)
+   \   000027                ; Setup parameters for call to function fs_cur_dev
+   \   000027   12....       LCALL   fs_cur_dev
+   \   00002A   E9           MOV     A,R1
+   \   00002B   6E           XRL     A,R6
+   \   00002C   7038         JNZ     ??device_remove_5
+     61          			{
+     62          				decoder_stream_end();
+   \                     ??device_remove_6:
+   \   00002E                ; Setup parameters for call to function decoder_stream_end
+   \   00002E   12....       LCALL   decoder_stream_end
+   \   000031   8033         SJMP    ??device_remove_5
+     63          			}
+     64          		}
+     65          	}
+     66          	else if((dev_num == DEVICE_UDISK)
+     67          #if UDISK_DOUBLE_EN
+     68          	        || (dev_num == DEVICE_UDISK1)
+     69          #endif
+     70          	       )
+   \                     ??device_remove_3:
+   \   000033   7402         MOV     A,#0x2
+   \   000035   6E           XRL     A,R6
+   \   000036   702E         JNZ     ??device_remove_5
+     71          	{
+     72          		if((!device_is_actived(DEVICE_UDISK))
+     73          #if UDISK_DOUBLE_EN
+     74          		        && (!device_is_actived(DEVICE_UDISK1))
+     75          #endif
+     76          		  )
+   \   000038                ; Setup parameters for call to function device_is_actived
+   \   000038   7902         MOV     R1,#0x2
+   \   00003A   12....       LCALL   device_is_actived
+   \   00003D   401A         JC      ??device_remove_7
+     77          		{
+     78          			device_remove_usb();
+   \   00003F   53DCF7       ANL     0xdc,#0xf7
+   \   000042   00           nop
+   \   000043   00           nop
+   \   000044   43DC08       ORL     0xdc,#0x8
+   \   000047                ; Setup parameters for call to function usb_host_enable_testready
+   \   000047   7900         MOV     R1,#0x0
+   \   000049   12....       LCALL   usb_host_enable_testready
+   \   00004C                ; Setup parameters for call to function usb_switch_host_std
+   \   00004C   90....       MOV     DPTR,#usb_chk
+   \   00004F   E0           MOVX    A,@DPTR
+   \   000050   F9           MOV     R1,A
+   \   000051   12....       LCALL   usb_switch_host_std
+   \   000054   7401         MOV     A,#0x1
+   \   000056   78..         MOV     R0,#(usb_ctrl & 0xff)
+   \   000058   F2           MOVX    @R0,A
+     79          		}
+     80          		usb_switch_otg(dev_num - DEVICE_UDISK);
+   \                     ??device_remove_7:
+   \   000059                ; Setup parameters for call to function usb_switch_otg
+   \   000059   7900         MOV     R1,#0x0
+   \   00005B   12....       LCALL   usb_switch_otg
+     81          		if(fs_cur_dev() == dev_num)
+   \   00005E                ; Setup parameters for call to function fs_cur_dev
+   \   00005E   12....       LCALL   fs_cur_dev
+   \   000061   E9           MOV     A,R1
+   \   000062   6402         XRL     A,#0x2
+   \   000064   60C8         JZ      ??device_remove_6
+     82          		{
+     83          			decoder_stream_end();
+     84          		}
+     85          	}
+     86          	return true;
+   \                     ??device_remove_5:
+   \   000066   D3           SETB    C
+   \                     ??device_remove_1:
+   \   000067   D0E0         POP     A
+   \   000069   FE           MOV     R6,A
+   \   00006A   22           RET
+     87          }
+     88          
+
+   Maximum stack usage in bytes:
+
+     Function                       EXT_STACK PSTACK XSTACK
+     --------                       --------- ------ ------
+     device_remove                         1      0      0
+       -> device_status_stable             2      0      0
+       -> sd_remove                        2      0      0
+       -> fs_cur_dev                       2      0      0
+       -> decoder_stream_end               2      0      0
+       -> device_is_actived                2      0      0
+       -> usb_host_enable_testready        2      0      0
+       -> usb_switch_host_std              2      0      0
+       -> usb_switch_otg                   2      0      0
+       -> fs_cur_dev                       2      0      0
+     usb_switch_stable_device              0      0      0
+       -> usb_switch_stable_device_std
+                                           0      0      0
+     usb_switch_stable_host                0      0      0
+       -> usb_switch_stable_host_std
+                                           0      0      0
+
+
+   Segment part sizes:
+
+     Function/Label           Bytes
+     --------------           -----
+     USBCON1                     1
+     usb_switch_stable_device    9
+     usb_switch_stable_host      9
+     device_remove             107
+
+ 
+ 107 bytes in segment DEVICE_COM_SEG
+   1 byte  in segment SFR_AN
+  18 bytes in segment USB_SEG
+ 
+ 125 bytes of CODE memory
+   0 bytes of DATA memory (+ 1 byte shared)
+
+Errors: none
+Warnings: none

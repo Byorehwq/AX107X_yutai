@@ -1,0 +1,771 @@
+##############################################################################
+#                                                                            #
+# IAR 8051 C/C++ Compiler V7.20H/W32                   29/Jun/2018  19:55:11 #
+# Copyright 2004-2006 IAR Systems. All rights reserved.                      #
+#                                                                            #
+#    Core               =  plain                                             #
+#    Code model         =  near                                              #
+#    Data model         =  large                                             #
+#    Calling convention =  extended stack reentrant                          #
+#    Constant location  =  code                                              #
+#    Extended stack     =  enabled                                           #
+#    Dptr setup         =  1,16                                              #
+#    Source file        =  I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\task\task_power #
+#                          off.c                                             #
+#    Command line       =  -I E:\software\8051\INC\ -I                       #
+#                          E:\software\8051\INC\CLIB\ -I                     #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\COMMON\ -I      #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\INC\ -I         #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\config\ -I      #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\api\ -I         #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\fm\ -I          #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\fat\ -I         #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\display\ -I     #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\display\theme_d #
+#                          efault\ -I I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073 #
+#                          A_宇泰_AX1071_xxxxxxxx_20180629_Merlin_1\app\disp #
+#                          lay\led\ -I I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC07 #
+#                          3A_宇泰_AX1071_xxxxxxxx_20180629_Merlin_1\app\dis #
+#                          play\lcd\ -I I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC0 #
+#                          73A_宇泰_AX1071_xxxxxxxx_20180629_Merlin_1\app\ta #
+#                          sk\ -I I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇 #
+#                          泰_AX1071_xxxxxxxx_20180629_Merlin_1\app\user\    #
+#                          -I I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_A #
+#                          X1071_xxxxxxxx_20180629_Merlin_1\app\mem\ -I      #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\module\ -I      #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\key\ -I         #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\startmusic\ -I  #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\spi\ -D         #
+#                          AX107X_TAG -lC I:\a_wangqun\宇泰_睡眠仪_KNP08\18B #
+#                          C073A_宇泰_AX1071_xxxxxxxx_20180629_Merlin_1\app\ #
+#                          Debug\List\ -o I:\a_wangqun\宇泰_睡眠仪_KNP08\18B #
+#                          C073A_宇泰_AX1071_xxxxxxxx_20180629_Merlin_1\app\ #
+#                          Debug\Obj\ -e -z9 --core=plain --dptr=16,1        #
+#                          --data_model=large --code_model=near              #
+#                          --calling_convention=ext_stack_reentrant          #
+#                          --place_constants=code --nr_virtual_regs 20       #
+#                          --extended_stack I:\a_wangqun\宇泰_睡眠仪_KNP08\1 #
+#                          8BC073A_宇泰_AX1071_xxxxxxxx_20180629_Merlin_1\ap #
+#                          p\task\task_poweroff.c                            #
+#    List file          =  I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\Debug\List\task #
+#                          _poweroff.lst                                     #
+#    Object file        =  I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\Debug\Obj\task_ #
+#                          poweroff.r51                                      #
+#                                                                            #
+#                                                                            #
+##############################################################################
+
+I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX1071_xxxxxxxx_20180629_Merlin_1\app\task\task_poweroff.c
+      1          /*****************************************************************************
+      2           * Module    : Task
+      3           * File      : task_poweroff.c
+      4           * Author    : Hanny
+      5           * Email     : coldney@yahoo.com.cn
+      6           * Function  : 关机任务流程
+      7           *****************************************************************************/
+      8          #include "include.h"
+
+   \                                 In segment SFR_AN, at 0xa0
+   \   unsigned char volatile __sfr P2
+   \                     P2:
+   \   000000                DS 1
+
+   \                                 In segment SFR_AN, at 0xbc
+   \   unsigned char volatile __sfr P2DIR
+   \                     P2DIR:
+   \   000000                DS 1
+
+   \                                 In segment SFR_AN, at 0xc8
+   \   unsigned char volatile __sfr PCON0
+   \                     PCON0:
+   \   000000                DS 1
+
+   \                                 In segment SFR_AN, at 0xcb
+   \   unsigned char volatile __sfr CLKCON
+   \                     CLKCON:
+   \   000000                DS 1
+
+   \                                 In segment SFR_AN, at 0xcc
+   \   unsigned char volatile __sfr CLKCON1
+   \                     CLKCON1:
+   \   000000                DS 1
+
+   \                                 In segment SFR_AN, at 0xf7
+   \   unsigned char volatile __sfr WDTCON
+   \                     WDTCON:
+   \   000000                DS 1
+      9          
+     10          #if TASK_POWEROFF_EN
+     11          
+     12          void task_poweroff_display(void);
+     13          
+     14          #if SOFT_POWEROFF_EN
+     15          
+
+   \                                 In segment XDATA_Z, align 1, keep-with-next
+   \   000000                REQUIRE __INIT_XDATA_Z
+     16          type_poweroff_ctl poweroff_ctl;
+   \                     poweroff_ctl:
+   \   000000                DS 3
+     17          
+     18          __root void osc_delay(u16 cnt);
+     19          #pragma location="TASK_POWEROFF_SEG"
+
+   \                                 In segment TASK_POWEROFF_SEG, align 1, keep-with-next
+     20          void soft_poweroff(void)
+   \                     soft_poweroff:
+     21          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     22          	while(1)
+     23          	{
+     24          		irtc_write_cmd(PWR_WR, 0x01);//diable VDDCORE
+   \                     ??soft_poweroff_0:
+   \   000000                ; Setup parameters for call to function irtc_write_cmd
+   \   000000   7A01         MOV     R2,#0x1
+   \   000002   795A         MOV     R1,#0x5a
+   \   000004   12....       LCALL   irtc_write_cmd
+     25          		WDTCON = 0x3d;
+   \   000007   75F73D       MOV     0xf7,#0x3d
+     26          		osc_delay(0x2000);             //delay 100ms
+   \   00000A                ; Setup parameters for call to function osc_delay
+   \   00000A   7A00         MOV     R2,#0x0
+   \   00000C   7B20         MOV     R3,#0x20
+   \   00000E   12....       LCALL   osc_delay
+   \   000011   80ED         SJMP    ??soft_poweroff_0
+     27          	}
+     28          }
+     29          
+     30          #pragma location="TASK_POWEROFF_SEG"
+
+   \                                 In segment TASK_POWEROFF_SEG, align 1, keep-with-next
+     31          void soft_poweroff_enter(void)
+   \                     soft_poweroff_enter:
+     32          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     33          	if((sys_ctl.bat_sta == VOL_INIT)               //未完成电压检测
+     34          //	        || (sys_ctl.bat_sta == VOL_GREATER_44V)     //电压高于4.4V时不能软关机，否则会损坏芯片
+     35          #if DCIN_DET_EN
+     36          	        || (poweroff_ctl.dc_in_sta == DC_IN)        //充电时不进软关机
+     37          #endif
+     38          	  )
+   \   000000   90....       MOV     DPTR,#(sys_ctl + 6)
+   \   000003   E0           MOVX    A,@DPTR
+   \   000004   6064         JZ      ??soft_poweroff_enter_0
+     39          	{
+     40          		return;
+     41          	}
+     42          	
+     43          
+     44          	printf("soft_powerdown\n");
+   \   000006                ; Setup parameters for call to function my_printf
+   \   000006   7A..         MOV     R2,#(`?<Constant "soft_powerdown\\n">` & 0xff)
+   \   000008   7B..         MOV     R3,#((`?<Constant "soft_powerdown\\n">` >> 8) & 0xff)
+   \   00000A   12....       LCALL   my_printf
+     45          	
+     46          	#if (SYS_CRY == CRY_RC)          //建荣提供修改   2017/05/12
+     47                  irtc_write_cmd(CFG_WR,0x0c);//
+     48              #else
+     49              #if (CRY_PIN_NUM == CRY_1PIN)
+     50                      irtc_write_cmd(CFG_WR,0xac);//enable 32Khz,choose 1pin osc
+     51              #else
+     52                      irtc_write_cmd(CFG_WR,0x8c);//enable 32Khz
+   \   00000D                ; Setup parameters for call to function irtc_write_cmd
+   \   00000D   7A8C         MOV     R2,#-0x74
+   \   00000F   7955         MOV     R1,#0x55
+   \   000011   12....       LCALL   irtc_write_cmd
+     53              #endif
+     54              #endif
+     55          	
+     56          //#if (CRY_PIN_NUM == CRY_1PIN)
+     57          //	irtc_write_cmd(CFG_WR,0xac);//enable 32Khz,choose 1pin osc
+     58          //#else
+     59          //	irtc_write_cmd(CFG_WR,0x8c);//enable 32Khz
+     60          //#endif
+     61          
+     62          	CLKCON |= BIT(4);           //enable rc2m
+   \   000014   43CB10       ORL     0xcb,#0x10
+     63          	IE_EA =0;                   //disable IE
+   \   000017   C2AF         CLR     0xa8.7
+     64          
+     65          	//打开2mA和8mA负载，以加快VDDCORE放电
+     66          	AIPCON8 |= BIT(6) | BIT(5);
+   \   000019   903058       MOV     DPTR,#0x3058
+   \   00001C   E0           MOVX    A,@DPTR
+   \   00001D   4460         ORL     A,#0x60
+   \   00001F   F0           MOVX    @DPTR,A
+     67          
+     68          	//打开P2内部500R上拉电阻且输出0，以加快VDDCORE放电
+     69          	//【注意】请根据外部电路情况配置合适的IO状态
+     70          	disp_port_init();
+   \   000020                ; Setup parameters for call to function led_7p7s_init
+   \   000020   12....       LCALL   led_7p7s_init
+     71          
+     72          	PUP2 = 0xff;
+   \   000023   74FF         MOV     A,#-0x1
+   \   000025   90301A       MOV     DPTR,#0x301a
+   \   000028   F0           MOVX    @DPTR,A
+     73          	PUP2L = 0xff;
+   \   000029   903012       MOV     DPTR,#0x3012
+   \   00002C   F0           MOVX    @DPTR,A
+     74          	P2 = 0x00;
+   \   00002D   75A000       MOV     0xa0,#0x0
+     75          	P2DIR = 0x00;
+   \   000030   75BC00       MOV     0xbc,#0x0
+     76          
+     77          
+     78          	/*把函数hold_func拷贝到iram*/
+     79          	void (*funpt)();
+     80          	funpt = (void ( *)())0x0000;
+     81          	u8 const   __code *otp_tbl;
+     82          	u8 *ram_tbl;
+     83          	u8 i;
+     84          	otp_tbl = (u8 const __code *)((u16)soft_poweroff);
+   \   000033   78..         MOV     R0,#(soft_poweroff & 0xff)
+   \   000035   79..         MOV     R1,#((soft_poweroff >> 8) & 0xff)
+     85          	ram_tbl = (u8 *)0x0000;
+   \   000037   7A00         MOV     R2,#0x0
+   \   000039   7B00         MOV     R3,#0x0
+     86          	for(i = 0; i < 20; i++)
+   \   00003B   7C14         MOV     R4,#0x14
+     87          	{
+     88          		*ram_tbl = *otp_tbl;
+   \                     ??soft_poweroff_enter_1:
+   \   00003D   8882         MOV     DPL,R0
+   \   00003F   8983         MOV     DPH,R1
+   \   000041   E4           CLR     A
+   \   000042   93           MOVC    A,@A+DPTR
+   \   000043   8A82         MOV     DPL,R2
+   \   000045   8B83         MOV     DPH,R3
+   \   000047   F0           MOVX    @DPTR,A
+     89          		ram_tbl++;
+   \   000048   A3           INC     DPTR
+   \   000049   AA82         MOV     R2,DPL
+   \   00004B   AB83         MOV     R3,DPH
+     90          		otp_tbl++;
+   \   00004D   8882         MOV     DPL,R0
+   \   00004F   8983         MOV     DPH,R1
+   \   000051   A3           INC     DPTR
+   \   000052   A882         MOV     R0,DPL
+   \   000054   A983         MOV     R1,DPH
+     91          	}
+   \   000056   1C           DEC     R4
+   \   000057   EC           MOV     A,R4
+   \   000058   70E3         JNZ     ??soft_poweroff_enter_1
+     92          
+     93          	CLKCON = (CLKCON & 0xfc) | BIT(0);  //sysclk select rc2m
+   \   00005A   74FC         MOV     A,#-0x4
+   \   00005C   55CB         ANL     A,0xcb
+   \   00005E   4401         ORL     A,#0x1
+   \   000060   F5CB         MOV     0xcb,A
+     94          	CLKCON1 = (CLKCON1 & 0xf3);         //sysclk no div
+   \   000062   53CCF3       ANL     0xcc,#0xf3
+   \   000065   E5CC         MOV     A,0xcc
+     95          
+     96          	(*funpt)();
+   \   000067                ; Setup parameters for indirect call
+   \   000067   120000       LCALL   0x0
+     97          }
+   \                     ??soft_poweroff_enter_0:
+   \   00006A   22           RET
+     98          
+     99          #pragma location="TASK_POWEROFF_SEG"
+
+   \                                 In segment TASK_POWEROFF_SEG, align 1, keep-with-next
+    100          void wko_init(void)
+   \                     wko_init:
+    101          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    102              u8 wkocon_val = irtc_read_cmd(WKO_RD);
+    103              #if (SYS_CRY == CRY_RC)
+    104                      CLKCON2 |= BIT(7);
+    105                      wkocon_val |= BIT(4) | BIT(3) | BIT(2);
+    106                      wkocon_val &= ~BIT(6);
+    107              #else
+    108                      wkocon_val |= BIT(6) | BIT(4) | BIT(3) | BIT(2);
+    109                          //bit6-FITEN:WKO 1ms filter enable
+    110                          //bit4-WKOEN:WKO PIN enable
+    111                          //bit3-WKOUTEN:WKO PIN output enable
+    112                          //bit2-WKOINEN:WKO PIN input enable
+    113              #endif
+    114              
+    115              irtc_write_cmd(WKO_WR,wkocon_val);
+   \   000000                ; Setup parameters for call to function irtc_write_cmd
+   \   000000                ; Setup parameters for call to function irtc_read_cmd
+   \   000000   79A1         MOV     R1,#-0x5f
+   \   000002   12....       LCALL   irtc_read_cmd
+   \   000005   E9           MOV     A,R1
+   \   000006   445C         ORL     A,#0x5c
+   \   000008   FA           MOV     R2,A
+   \   000009   795B         MOV     R1,#0x5b
+   \   00000B   12....       LCALL   irtc_write_cmd
+    116              
+    117              #if SRAM_DEBUG
+    118              	//【注意】在SRAM板上调试时，请使用电池供电，不要连接5V电源
+    119              	irtc_write_cmd(VCL_WR,0x06);//使能HVD并把HVD级别设置为4.2v(防止连接5V电源时使用软关机把芯片烧掉)
+    120              #endif
+    121          
+    122          }
+   \   00000E   22           RET
+    123          
+    124          
+    125          /* 
+    126          void wko_init(void)
+    127          {
+    128          	u8 wkocon_val = irtc_read_cmd(WKO_RD);
+    129          	wkocon_val |= BIT(6) | BIT(4) | BIT(3) | BIT(2);
+    130          	//bit6-FITEN:WKO 1ms filter enable
+    131          	//bit4-WKOEN:WKO PIN enable
+    132          	//bit3-WKOUTEN:WKO PIN output enable
+    133          	//bit2-WKOINEN:WKO PIN input enable
+    134          	wkocon_val &= ~BIT(7);
+    135          	//bit7-WKPIN_STA:wake up pin output 0,打开内部下拉电阻
+    136          	irtc_write_cmd(WKO_WR,wkocon_val);
+    137          
+    138          #if SRAM_DEBUG
+    139          	//【注意】在SRAM板上调试时，请使用电池供电，不要连接5V电源
+    140          	irtc_write_cmd(VCL_WR,0x06);//使能HVD并把HVD级别设置为4.2v(防止连接5V电源时使用软关机把芯片烧掉)
+    141          #endif
+    142          }
+    143            */
+    144          
+    145          
+    146          #pragma location="TASK_POWEROFF_SEG"
+
+   \                                 In segment TASK_POWEROFF_SEG, align 1, keep-with-next
+    147          void soft_poweroff_init(void)
+   \                     soft_poweroff_init:
+    148          {
+   \   000000   EE           MOV     A,R6
+   \   000001   C0E0         PUSH    A
+   \   000003                ; Saved register size: 1
+   \   000003                ; Auto size: 0
+   \   000003   8003         SJMP    ??soft_poweroff_init_0
+    149          	u8 poweron_cnt;
+    150          
+    151          	//printf("Pw:%d\n",poweroff_ctl.power_key_sta);
+    152          	//poweroff_ctl.power_key_sta = 1;   //  强制开启电源   20170617
+    153          	while(poweroff_ctl.power_key_sta == POWERKEY_INIT)     //等待确认power key的状态
+    154          	{
+    155          		WATCHDOG_CLR();
+   \                     ??soft_poweroff_init_1:
+   \   000005   43F720       ORL     0xf7,#0x20
+    156          	}
+   \                     ??soft_poweroff_init_0:
+   \   000008   90....       MOV     DPTR,#poweroff_ctl
+   \   00000B   E0           MOVX    A,@DPTR
+   \   00000C   60F7         JZ      ??soft_poweroff_init_1
+    157          #if DCIN_DET_EN
+    158          	while((poweroff_ctl.dc_in_sta == DC_INIT)
+    159          	        || (poweroff_ctl.dc_in_sta == DC_UNSTABLE))              //等待确认DC_IN充电线的状态
+    160          	{
+    161          		WATCHDOG_CLR();
+    162          	}
+    163          #endif
+    164          
+    165          #if POWERON_LONG_KEY
+    166          	poweron_cnt = 250;    //100*5ms = 500ms,长按POWER键开机    长按1.25s开机 
+    167          #else
+    168          	poweron_cnt = 10;     //10*5ms = 50ms,短按POWER键开机
+    169          #endif
+    170          
+    171          	uart_putc('A');
+   \   00000E                ; Setup parameters for call to function uart_putc
+   \   00000E   7941         MOV     R1,#0x41
+   \   000010   12....       LCALL   uart_putc
+    172          
+    173          	for(u8 i = 0; i < poweron_cnt; i++)
+   \   000013   7EFA         MOV     R6,#-0x6
+    174          	{
+    175          		//if((poweroff_ctl.power_key_sta == POWERKEY_DOWN)   //power key按下或DC IN
+    176          		if(1   //power key按下或DC IN
+    177          #if DCIN_DET_EN
+    178          		        &&(poweroff_ctl.dc_in_sta == DC_OUT)
+    179          #endif
+    180          		  )         //充电线拔出状态
+    181          		{
+    182          			delay_5ms(1);
+   \                     ??soft_poweroff_init_2:
+   \   000015                ; Setup parameters for call to function delay_5ms
+   \   000015   7901         MOV     R1,#0x1
+   \   000017   12....       LCALL   delay_5ms
+    183          			WATCHDOG_CLR();
+   \   00001A   43F720       ORL     0xf7,#0x20
+    184          			//uart_putc('<');
+    185          		}
+    186          		else
+    187          		{
+    188          			//printf("bat_sta: %d ",sys_ctl.bat_charger_sta);
+    189          			if(sys_ctl.bat_charger_sta == 1)
+    190          			{
+    191          				uart_putc('a');
+    192          				while(sys_ctl.bat_charger_sta == 1)     //等待确认power key的状态
+    193          				{
+    194          					//uart_putc('b');
+    195          					WATCHDOG_CLR();
+    196          					if((get_msg() == KL_POWER) || (get_msg() == KH_POWER))
+    197          					{
+    198          						WDTCON = 0x18;  //watchdog 2ms后reset
+    199          						printf("charge_power_on\n");
+    200          	                    while(1);
+    201          					}
+    202          				}
+    203          			}
+    204          			uart_putc('+');
+    205          			poweroff_ctl.flag = 0;        //用于区分是从初始化中关机，还是从其它模式中关机
+    206          			task_ctl.work_sta = TASK_POWEROFF;
+    207          			task_poweroff();              //继续关机
+    208          			break;
+    209          		}
+    210          	}
+   \   00001D   1E           DEC     R6
+   \   00001E   EE           MOV     A,R6
+   \   00001F   70F4         JNZ     ??soft_poweroff_init_2
+    211          
+    212          	poweroff_ctl.flag = 1;                //用于区分是从初始化中关机，还是从其它模式中关机
+   \   000021   7401         MOV     A,#0x1
+   \   000023   90....       MOV     DPTR,#(poweroff_ctl + 2)
+   \   000026   F0           MOVX    @DPTR,A
+    213          
+    214          	printf("power on...\n");
+   \   000027                ; Setup parameters for call to function my_printf
+   \   000027   7A..         MOV     R2,#(`?<Constant "power on...\\n">` & 0xff)
+   \   000029   7B..         MOV     R3,#((`?<Constant "power on...\\n">` >> 8) & 0xff)
+   \   00002B   12....       LCALL   my_printf
+    215          	//showhello();	
+    216          }
+   \   00002E   D0E0         POP     A
+   \   000030   FE           MOV     R6,A
+   \   000031   22           RET
+    217          #endif
+    218          
+    219          //任务事件
+    220          #pragma location="TASK_POWEROFF_SEG"
+
+   \                                 In segment TASK_POWEROFF_SEG, align 1, keep-with-next
+    221          void task_poweroff_event(void)
+   \                     task_poweroff_event:
+    222          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    223          	WATCHDOG_CLR();
+   \   000000   43F720       ORL     0xf7,#0x20
+    224          
+    225          	mem_event();
+   \   000003                ; Setup parameters for call to function mem_event
+   \   000003   12....       LCALL   mem_event
+    226          
+    227          	//printf("s_");
+    228          	//delay_5ms(200);          //延时2s期间会输出低电平
+    229          	//delay_5ms(200);
+    230          	//delay_5ms(200);
+    231          	
+    232          
+    233          #if SOFT_POWEROFF_EN
+    234          	if(poweroff_ctl.power_key_sta == POWERKEY_UP)
+   \   000006   90....       MOV     DPTR,#poweroff_ctl
+   \   000009   E0           MOVX    A,@DPTR
+   \   00000A   FA           MOV     R2,A
+   \   00000B   7402         MOV     A,#0x2
+   \   00000D   6A           XRL     A,R2
+   \   00000E   7003         JNZ     ??task_poweroff_event_0
+    235          	{
+    236          		//printf("e_");
+    237          		soft_poweroff_enter();
+   \   000010                ; Setup parameters for call to function soft_poweroff_enter
+   \   000010   12....       LCALL   soft_poweroff_enter
+    238          	}
+    239          #endif
+    240          }
+   \                     ??task_poweroff_event_0:
+   \   000013   22           RET
+    241          
+    242          //任务消息处理
+    243          #pragma location="TASK_POWEROFF_SEG"
+
+   \                                 In segment TASK_POWEROFF_SEG, align 1, keep-with-next
+    244          void task_poweroff_deal_msg(u8 msg)
+   \                     task_poweroff_deal_msg:
+    245          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    246          	
+    247          	switch(msg)
+   \   000000   E9           MOV     A,R1
+   \   000001   12....       LCALL   ?UC_SWITCH_DENSE
+   \                     `?<Jumptable for task_poweroff_deal_msg>_0`:
+   \   000004   AE           DB        174
+   \   000005   01           DB        1
+   \   000006   ....         DW        ??task_poweroff_deal_msg_0
+   \   000008   ....         DW        ??task_poweroff_deal_msg_1
+   \   00000A   ....         DW        ??task_poweroff_deal_msg_1
+    248          	{
+    249          	case KL_POWER:
+    250          #if SOFT_POWEROFF_EN
+    251          #if POWERON_LONG_KEY
+    252          	case KL_SOFT_POWER:    //长按开机
+    253          #else
+    254          	case KU_SOFT_POWER:    //短按开机
+    255          #endif
+    256          #endif
+    257                  printf("Again on\n");
+   \                     ??task_poweroff_deal_msg_1:
+   \   00000C                ; Setup parameters for call to function my_printf
+   \   00000C   7A..         MOV     R2,#(`?<Constant "Again on\\n">` & 0xff)
+   \   00000E   7B..         MOV     R3,#((`?<Constant "Again on\\n">` >> 8) & 0xff)
+   \   000010   12....       LCALL   my_printf
+    258          		task_ctl.work_sta = task_ctl.last_work;
+   \   000013   85....       MOV     task_ctl,(task_ctl + 1)
+    259          		break;
+    260          	default:
+    261          		break;
+    262          	}
+    263          	
+    264          }
+   \                     ??task_poweroff_deal_msg_0:
+   \   000016   22           RET
+    265          
+    266          /*****************************************************************************
+    267           * Module    : 关机任务入口
+    268           *****************************************************************************/
+    269          //任务初始化
+    270          #pragma location="TASK_POWEROFF_SEG"
+
+   \                                 In segment TASK_POWEROFF_SEG, align 1, keep-with-next
+    271          void task_poweroff_enter(void)
+   \                     task_poweroff_enter:
+    272          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    273          	PCON0 |= BIT(2);
+   \   000000   D2CA         SETB    0xc8.2
+    274          #if (DISP_TYPE==DISP_LED)
+    275          	ocx.led_sta = LED_STA_ON;
+    276          #endif
+    277          
+    278          #if ALARM_WAKEUP_EN
+    279          	u8 wkocon_val = irtc_read_cmd(WKO_RD);
+    280          	wkocon_val &= ~BIT(7);
+    281          	wkocon_val |= BIT(5);  //enable alarm output update wko output
+    282          	irtc_write_cmd(WKO_WR, wkocon_val);
+    283          #endif
+    284          
+    285          #if SOFT_POWEROFF_EN
+    286          	if(poweroff_ctl.flag)
+   \   000002   90....       MOV     DPTR,#(poweroff_ctl + 2)
+   \   000005   E0           MOVX    A,@DPTR
+   \   000006   600B         JZ      ??task_poweroff_enter_0
+    287          	{
+    288          #endif
+    289          		showoff();
+   \   000008                ; Setup parameters for call to function led_7p7s_disp_str
+   \   000008   7A..         MOV     R2,#(`?<Constant "off">` & 0xff)
+   \   00000A   7B..         MOV     R3,#((`?<Constant "off">` >> 8) & 0xff)
+   \   00000C   12....       LCALL   led_7p7s_disp_str
+    290                  //uart_putc('+');
+    291          		//delay_5ms(100);   // 取消延时，缩短关机等待时间  20170726  //延时中可看出MUTE输出为高电平，查找关机ber声产生原因
+    292          		//uart_putc('-');
+    293          		WATCHDOG_CLR();
+   \   00000F   43F720       ORL     0xf7,#0x20
+   \   000012   22           RET
+    294          		
+    295          #if SOFT_POWEROFF_EN
+    296          	}
+    297          	else
+    298          	{
+    299          		disp_clear();
+   \                     ??task_poweroff_enter_0:
+   \   000013                ; Setup parameters for call to function led_7p7s_clear
+   \   000013   12....       LCALL   led_7p7s_clear
+    300          	}
+    301          #endif
+    302          //if(sys_ctl.user_power_down_flag == 1)//关机键按下，断电关机   //  重新把mute拉低，导致关机有ber声音  20170705   wq 
+    303          //	SOFT_POWER_CTL_OFF();             
+    304          
+    305          }
+   \   000016   22           RET
+    306          
+    307          //任务退出
+    308          #pragma location="TASK_POWEROFF_SEG"
+
+   \                                 In segment TASK_POWEROFF_SEG, align 1, keep-with-next
+    309          void task_poweroff_exit(void)
+   \                     task_poweroff_exit:
+    310          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    311          }
+   \   000000   22           RET
+    312          
+    313          //任务主流程
+    314          #pragma location="TASK_POWEROFF_SEG"
+
+   \                                 In segment TASK_POWEROFF_SEG, align 1, keep-with-next
+    315          void task_poweroff(void)
+   \                     task_poweroff:
+    316          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    317          	printf("task_poweroff\n");
+   \   000000                ; Setup parameters for call to function my_printf
+   \   000000   7A..         MOV     R2,#(`?<Constant "task_poweroff\\n">` & 0xff)
+   \   000002   7B..         MOV     R3,#((`?<Constant "task_poweroff\\n">` >> 8) & 0xff)
+   \   000004   12....       LCALL   my_printf
+    318          	task_poweroff_enter();
+   \   000007                ; Setup parameters for call to function task_poweroff_enter
+   \   000007   12....       LCALL   task_poweroff_enter
+   \   00000A   800C         SJMP    ??task_poweroff_0
+    319          	while(task_ctl.work_sta == TASK_POWEROFF)
+    320          	{
+    321          		task_poweroff_deal_msg(get_msg());
+   \                     ??task_poweroff_1:
+   \   00000C                ; Setup parameters for call to function task_poweroff_deal_msg
+   \   00000C                ; Setup parameters for call to function get_msg
+   \   00000C   12....       LCALL   get_msg
+   \   00000F   12....       LCALL   task_poweroff_deal_msg
+    322          		task_poweroff_display();
+   \   000012                ; Setup parameters for call to function task_poweroff_display
+   \   000012   12....       LCALL   task_poweroff_display
+    323          		task_poweroff_event();
+   \   000015                ; Setup parameters for call to function task_poweroff_event
+   \   000015   12....       LCALL   task_poweroff_event
+    324          	}
+   \                     ??task_poweroff_0:
+   \   000018   7409         MOV     A,#0x9
+   \   00001A   65..         XRL     A,task_ctl
+   \   00001C   60EE         JZ      ??task_poweroff_1
+    325          	task_poweroff_exit();
+    326          }
+   \   00001E   22           RET
+
+   \                                 In segment CODE_C, align 1
+   \                     `?<Constant "soft_powerdown\\n">`:
+   \   000000   736F6674     DB "soft_powerdown\012"
+   \            5F706F77
+   \            6572646F
+   \            776E0A00
+
+   \                                 In segment CODE_C, align 1
+   \                     `?<Constant "power on...\\n">`:
+   \   000000   706F7765     DB "power on...\012"
+   \            72206F6E
+   \            2E2E2E0A
+   \            00      
+
+   \                                 In segment CODE_C, align 1
+   \                     `?<Constant "Again on\\n">`:
+   \   000000   41676169     DB "Again on\012"
+   \            6E206F6E
+   \            0A00    
+
+   \                                 In segment CODE_C, align 1
+   \                     `?<Constant "off">`:
+   \   000000   6F666600     DB "off"
+
+   \                                 In segment CODE_C, align 1
+   \                     `?<Constant "task_poweroff\\n">`:
+   \   000000   7461736B     DB "task_poweroff\012"
+   \            5F706F77
+   \            65726F66
+   \            660A00  
+
+   \                                 In segment SFR_AN, at 0xa8
+   \   union <unnamed> volatile __sfr _A_IE0
+   \                     _A_IE0:
+   \   000000                DS 1
+    327          #endif
+    328          
+    329          
+
+   Maximum stack usage in bytes:
+
+     Function                    EXT_STACK PSTACK XSTACK
+     --------                    --------- ------ ------
+     soft_poweroff                      0      0      0
+       -> irtc_write_cmd                0      0      0
+       -> osc_delay                     0      0      0
+     soft_poweroff_enter                1      0      0
+       -> my_printf                     0      0      0
+       -> irtc_write_cmd                0      0      0
+       -> led_7p7s_init                 0      0      0
+     soft_poweroff_init                 1      0      0
+       -> uart_putc                     2      0      0
+       -> delay_5ms                     2      0      0
+       -> my_printf                     2      0      0
+     task_poweroff                      0      0      0
+       -> my_printf                     0      0      0
+       -> task_poweroff_enter           0      0      0
+       -> get_msg                       0      0      0
+       -> task_poweroff_deal_msg        0      0      0
+       -> task_poweroff_display         0      0      0
+       -> task_poweroff_event           0      0      0
+     task_poweroff_deal_msg             0      0      0
+       -> my_printf                     0      0      0
+     task_poweroff_enter                0      0      0
+       -> led_7p7s_disp_str             0      0      0
+       -> led_7p7s_clear                0      0      0
+     task_poweroff_event                0      0      0
+       -> mem_event                     0      0      0
+       -> soft_poweroff_enter           0      0      0
+     task_poweroff_exit                 0      0      0
+     wko_init                           0      0      0
+       -> irtc_read_cmd                 0      0      0
+       -> irtc_write_cmd                0      0      0
+
+
+   Segment part sizes:
+
+     Function/Label                 Bytes
+     --------------                 -----
+     P2                                1
+     P2DIR                             1
+     PCON0                             1
+     CLKCON                            1
+     CLKCON1                           1
+     WDTCON                            1
+     poweroff_ctl                      3
+     ??soft_poweroff_0                19
+     soft_poweroff_enter             107
+     wko_init                         15
+     soft_poweroff_init               50
+     task_poweroff_event              20
+     task_poweroff_deal_msg           23
+     task_poweroff_enter              23
+     task_poweroff_exit                1
+     task_poweroff                    31
+     ?<Constant "soft_powerdown\n">   16
+     ?<Constant "power on...\n">      13
+     ?<Constant "Again on\n">         10
+     ?<Constant "off">                 4
+     ?<Constant "task_poweroff\n">    15
+     _A_IE0                            1
+
+ 
+  58 bytes in segment CODE_C
+   7 bytes in segment SFR_AN
+ 289 bytes in segment TASK_POWEROFF_SEG
+   3 bytes in segment XDATA_Z
+ 
+ 347 bytes of CODE  memory
+   0 bytes of DATA  memory (+ 7 bytes shared)
+   3 bytes of XDATA memory
+
+Errors: none
+Warnings: none

@@ -1,0 +1,886 @@
+##############################################################################
+#                                                                            #
+# IAR 8051 C/C++ Compiler V7.20H/W32                   10/Sep/2015  19:03:29 #
+# Copyright 2004-2006 IAR Systems. All rights reserved.                      #
+#                                                                            #
+#    Core               =  plain                                             #
+#    Code model         =  near                                              #
+#    Data model         =  large                                             #
+#    Calling convention =  extended stack reentrant                          #
+#    Constant location  =  code                                              #
+#    Extended stack     =  enabled                                           #
+#    Dptr setup         =  1,16                                              #
+#    Source file        =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\task\task.c                           #
+#    Command line       =  -I "C:\Program Files\IAR Systems\Embedded         #
+#                          Workbench 4.05 Evaluation version\8051\INC\" -I   #
+#                          "C:\Program Files\IAR Systems\Embedded Workbench  #
+#                          4.05 Evaluation version\8051\INC\CLIB\" -I        #
+#                          "C:\Documents and Settings\Administrator\×ÀÃæ\lil #
+#                          y\15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX1 #
+#                          070_20150908\COMMON\" -I "C:\Documents and        #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\INC\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\config\" -I "C:\Documents and    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\api\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\fm\" -I "C:\Documents and        #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\fat\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\display\" -I "C:\Documents and   #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\displ #
+#                          ay\led\" -I "C:\Documents and                     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\displ #
+#                          ay\lcd\" -I "C:\Documents and                     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\task\ #
+#                          " -I "C:\Documents and Settings\Administrator\×ÀÃ #
+#                          æ\lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lil #
+#                          y_AX1070_20150908\user\" -I "C:\Documents and     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\mem\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\module\" -I "C:\Documents and    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\modul #
+#                          e\kedir\" -I "C:\Documents and                    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\key\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\startmusic\" -D UART_DEBUG -D    #
+#                          AX207X_TAG -lC "C:\Documents and                  #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\UART_ #
+#                          Debug\List\" -o "C:\Documents and                 #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\UART_ #
+#                          Debug\Obj\" -e -z9 --debug --core=plain           #
+#                          --dptr=16,1 --data_model=large --code_model=near  #
+#                          --calling_convention=ext_stack_reentrant          #
+#                          --place_constants=code --nr_virtual_regs 20       #
+#                          --extended_stack "C:\Documents and                #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\task\ #
+#                          task.c"                                           #
+#    List file          =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\UART_Debug\List\task.lst              #
+#    Object file        =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\UART_Debug\Obj\task.r51               #
+#                                                                            #
+#                                                                            #
+##############################################################################
+
+C:\Documents and Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX1070_20150908\task\task.c
+      1          /*****************************************************************************
+      2          * Module    : Task
+      3          * File      : task.c
+      4          * Author    : Hanny
+      5          * Email     : coldney@yahoo.com.cn
+      6          * Function  : ÈÎÎñ¿ØÖÆÆ÷
+      7          *****************************************************************************/
+      8          #include "include.h"
+
+   \                                 In segment SFR_AN, at 0x80
+   \   unsigned char volatile __sfr P0
+   \                     P0:
+   \   000000                DS 1
+
+   \                                 In segment SFR_AN, at 0xb0
+   \   unsigned char volatile __sfr P3
+   \                     P3:
+   \   000000                DS 1
+
+   \                                 In segment SFR_AN, at 0xf7
+   \   unsigned char volatile __sfr WDTCON
+   \                     WDTCON:
+   \   000000                DS 1
+
+   \                                 In segment XDATA_Z, align 1, keep-with-next
+   \   000000                REQUIRE __INIT_XDATA_Z
+      9          u8 device_chg = 0;
+   \                     device_chg:
+   \   000000                DS 1
+     10          #define device_music	0
+     11          #define device_flash	1
+     12          
+
+   \                                 In segment XDATA_Z, align 1, keep-with-next
+   \   000000                REQUIRE __INIT_XDATA_Z
+     13          bool mute_status_change = false;
+   \                     mute_status_change:
+   \   000000                DS 1
+     14          
+
+   \                                 In segment DATA_N, align 1, root
+     15          IAR_DATA_A type_task_ctl task_ctl;
+   \                     task_ctl:
+   \   000000                DS 3
+     16          
+     17          //Çå³ý¡¢»¹Ô­Ä¬ÈÏµÄÉèÖÃ
+     18          #pragma location="TASK_SEG"
+     19          static void task_clear(void)
+     20          {
+     21          #if ( ((DISP_TYPE != DISP_LED)&&(DISP_TYPE != DISP_NO)) || ((DISP_TYPE == DISP_LED)&&(USE_IR_NUM)) )
+     22          	ocx_clear();
+     23          #endif
+     24          #if DAC_FADE_EN
+     25          	dac_fade_wait();
+     26          #endif
+     27          	mute_enable();
+     28          	b_dac.dac_stop = 0;                 //Ê¹ÇÐ»»Ä£Ê½£¬ÒÔ¼°¼Ù¹Ø»úÄÜ½â³ý¾²Òô
+     29          }
+     30          
+     31          //Ö´ÐÐÈÎÎñ
+     32          #pragma location="TASK_SEG"
+
+   \                                 In segment TASK_SEG, align 1, keep-with-next
+     33          void run_task(void)
+   \                     run_task:
+     34          {
+   \   000000   C0..         PUSH    ?V0 + 0
+   \   000002   C0..         PUSH    ?V0 + 1
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+     35          	printf("run_task\n");
+   \   000004                ; Setup parameters for call to function my_printf
+   \   000004   7A..         MOV     R2,#(`?<Constant "run_task\\n">` & 0xff)
+   \   000006   7B..         MOV     R3,#((`?<Constant "run_task\\n">` >> 8) & 0xff)
+   \   000008   12....       LCALL   my_printf
+   \   00000B   8003         SJMP    ??run_task_0
+     36          	//task_ctl.work_sta = TASK_MUSIC;
+     37              //task_ctl.work_sta = TASK_FLASH;
+     38          
+     39          	while(1)
+     40          	{
+     41          		task_clear();
+     42          		if((task_ctl.work_sta < TASK_EXIT)
+     43          #if ALARM_EN
+     44          		        && (task_ctl.work_sta != TASK_ALARM)
+     45          #endif
+     46          #if TASK_POWEROFF_EN
+     47          		        && (task_ctl.work_sta != TASK_POWEROFF)
+     48          #endif
+     49          		  )
+     50          		{
+     51          			task_ctl.last_work = task_ctl.work_sta;
+     52          		}
+     53          		printf("Y:%d,%d,%d\n",u_spi.spi_online,fs_cur_dev(),t_fat.dev_new);
+     54          
+     55          		switch(task_ctl.work_sta)
+     56          		{
+     57          
+     58          		case TASK_MUSIC:
+     59          			task_music();
+   \                     ??run_task_1:
+   \   00000D                ; Setup parameters for call to function task_music
+   \   00000D   12....       LCALL   task_music
+   \                     ??run_task_0:
+   \   000010                ; Setup parameters for call to function ocx_clear
+   \   000010   12....       LCALL   ocx_clear
+   \   000013                ; Setup parameters for call to function dac_fade_wait
+   \   000013   12....       LCALL   dac_fade_wait
+   \   000016                ; Setup parameters for call to function mute_enable
+   \   000016   12....       LCALL   mute_enable
+   \   000019   C2..         CLR     b_dac.2
+   \   00001B   E5..         MOV     A,task_ctl
+   \   00001D   C3           CLR     C
+   \   00001E   940C         SUBB    A,#0xc
+   \   000020   5003         JNC     ??run_task_2
+   \   000022   85....       MOV     (task_ctl + 1),task_ctl
+   \                     ??run_task_2:
+   \   000025                ; Setup parameters for call to function fs_cur_dev
+   \   000025   12....       LCALL   fs_cur_dev
+   \   000028   E9           MOV     A,R1
+   \   000029   F5..         MOV     ?V0 + 0,A
+   \   00002B                ; Setup parameters for call to function my_printf
+   \   00002B   90....       MOV     DPTR,#(t_fat + 26)
+   \   00002E   E0           MOVX    A,@DPTR
+   \   00002F   F582         MOV     DPL,A
+   \   000031   758300       MOV     DPH,#0x0
+   \   000034   C082         PUSH    DPL
+   \   000036   C083         PUSH    DPH
+   \   000038   75..00       MOV     ?V0 + 1,#0x0
+   \   00003B   C0..         PUSH    ?V0 + 0
+   \   00003D   C0..         PUSH    ?V0 + 1
+   \   00003F   90....       MOV     DPTR,#(u_spi + 1)
+   \   000042   E0           MOVX    A,@DPTR
+   \   000043   F582         MOV     DPL,A
+   \   000045   758300       MOV     DPH,#0x0
+   \   000048   C082         PUSH    DPL
+   \   00004A   C083         PUSH    DPH
+   \   00004C   7A..         MOV     R2,#(`?<Constant "Y:%d,%d,%d\\n">` & 0xff)
+   \   00004E   7B..         MOV     R3,#((`?<Constant "Y:%d,%d,%d\\n">` >> 8) & 0xff)
+   \   000050   12....       LCALL   my_printf
+   \   000053   74FA         MOV     A,#-0x6
+   \   000055   12....       LCALL   ?DEALLOC_EXT_STACK8
+   \   000058   E5..         MOV     A,task_ctl
+   \   00005A   12....       LCALL   ?UC_SWITCH_SPARSE
+   \                     `?<Jumptable for run_task>_0`:
+   \   00005D   00           DB        0
+   \   00005E   03           DB        3
+   \   00005F   00           DB        0
+   \   000060   ....         DW        ??run_task_1
+   \   000062   06           DB        6
+   \   000063   ....         DW        ??run_task_3
+   \   000065   08           DB        8
+   \   000066   ....         DW        ??run_task_4
+   \   000068   ....         DW        ??run_task_5
+     60          			break;
+     61          
+     62          #if TASK_AUX_EN
+     63          		case TASK_AUX:
+     64          			task_aux();
+     65          			break;
+     66          #endif
+     67          
+     68          #if ALARM_EN
+     69          		case TASK_ALARM:
+     70          			task_alarm();
+     71          			break;
+     72          #endif
+     73          
+     74          #if TASK_SPEAKER_EN
+     75          		case TASK_SPEAKER:
+     76          			task_speaker();
+     77          			break;
+     78          #endif
+     79          
+     80          #if TASK_RTC_EN
+     81          		case TASK_RTC:
+     82          			task_rtc();
+     83          			break;
+     84          #endif
+     85          
+     86          #if TASK_FM_EN
+     87          		case TASK_FM:
+     88          			task_fm();
+     89          			break;
+     90          #endif
+     91          
+     92          #if TASK_USBDEV_EN
+     93          		case TASK_USBDEV:
+     94          			task_usbdev();
+     95          			break;
+     96          #endif
+     97          
+     98          #if TASK_FLASH_EN
+     99          		case TASK_FLASH:
+    100          			task_flash_music();
+   \                     ??run_task_3:
+   \   00006A                ; Setup parameters for call to function task_flash_music
+   \   00006A   12....       LCALL   task_flash_music
+   \   00006D   80A1         SJMP    ??run_task_0
+    101          			break;
+    102          #endif
+    103          
+    104          #if TASK_POWEROFF_EN
+    105          		case TASK_POWEROFF:
+    106          			task_poweroff();
+    107          			break;
+    108          #endif
+    109          
+    110          #if TASK_LOWPOWER_EN
+    111          		case TASK_LOWPOWER:
+    112          			task_lowpower();
+    113          			break;
+    114          #endif
+    115          
+    116          #if TASK_IDLE_EN
+    117          		case TASK_IDLE:
+    118          			task_idle();
+   \                     ??run_task_4:
+   \   00006F                ; Setup parameters for call to function task_idle
+   \   00006F   12....       LCALL   task_idle
+   \   000072   809C         SJMP    ??run_task_0
+    119          			break;
+    120          #endif
+    121          
+    122          #if TASK_FMAM_DETECT_EN
+    123          		case TASK_FMAM_DETECT:
+    124          			task_fmam_detect();
+    125          			break;
+    126          #endif
+    127          
+    128          			//case TASK_EXIT:
+    129          		default:                                              //ÍË³öÎÞÐ§µÄ²Ëµ¥
+    130          			task_exit();
+   \                     ??run_task_5:
+   \   000074   E5..         MOV     A,(task_ctl + 1)
+   \   000076   12....       LCALL   ?UC_SWITCH_DENSE
+   \                     `?<Jumptable for run_task>_1`:
+   \   000079   00           DB        0
+   \   00007A   00           DB        0
+   \   00007B   ....         DW        ??run_task_6
+   \   00007D   ....         DW        ??run_task_7
+   \                     ??run_task_7:
+   \   00007F   A2B1         MOV     C,0xb0.1
+   \   000081   5024         JNC     ??run_task_6
+   \   000083                ; Setup parameters for call to function spi_sd_mux_enter
+   \   000083   12....       LCALL   spi_sd_mux_enter
+   \   000086                ; Setup parameters for call to function spi_port_init
+   \   000086   12....       LCALL   spi_port_init
+   \   000089                ; Setup parameters for call to function spi_flash_init
+   \   000089   12....       LCALL   spi_flash_init
+   \   00008C   E4           CLR     A
+   \   00008D   92E0         MOV     0xE0 /* A   */.0,C
+   \   00008F   90....       MOV     DPTR,#(u_spi + 1)
+   \   000092   F0           MOVX    @DPTR,A
+   \   000093                ; Setup parameters for call to function spi_sd_mux_exit
+   \   000093   12....       LCALL   spi_sd_mux_exit
+   \   000096                ; Setup parameters for call to function sd_port_init
+   \   000096   7901         MOV     R1,#0x1
+   \   000098   12....       LCALL   sd_port_init
+   \   00009B   90....       MOV     DPTR,#(u_spi + 1)
+   \   00009E   E0           MOVX    A,@DPTR
+   \   00009F   6006         JZ      ??run_task_6
+   \   0000A1   75..06       MOV     task_ctl,#0x6
+   \   0000A4   02....       LJMP    ??run_task_0
+   \                     ??run_task_6:
+   \   0000A7   75..00       MOV     task_ctl,#0x0
+   \   0000AA   02....       LJMP    ??run_task_0
+    131          			break;
+    132          		}
+    133          	}
+    134          }
+    135          
+    136          //¼ì²é£¬²¢¼ÓÔØÉè±¸
+    137          #pragma location="TASK_SEG"
+
+   \                                 In segment TASK_SEG, align 1, keep-with-next
+    138          u8 device_change(void)
+   \                     device_change:
+    139          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    140          	if(!b_sys.dev_change)
+   \   000000   A2..         MOV     C,b_sys.0
+   \   000002   4003         JC      ??device_change_0
+    141          	{
+    142          		return DEVICE_IDLE;             //Éè±¸Õý³£
+   \   000004   7900         MOV     R1,#0x0
+   \   000006   22           RET
+    143          	}
+    144          
+    145          	b_sys.dev_change = 0;
+   \                     ??device_change_0:
+   \   000007   C2..         CLR     b_sys.0
+    146          	return device_change_check();
+   \   000009                ; Setup parameters for call to function device_change_check
+   \   000009   12....       LCALL   device_change_check
+   \   00000C   22           RET
+    147          }
+    148          
+    149          //ÍË³öÈÎÎñ£¬·µ»Øµ½ÆäËüÈÎÎñÈ¥
+    150          #pragma location="TASK_SEG"
+    151          static void task_exit(void)
+    152          {
+    153          	//Èç¹ûÃ»ÓÐÖ÷²Ëµ¥£¬ÔòÇÐ»»µ½ÏÂÒ»¸öÈÎÎñ
+    154          	switch(task_ctl.last_work)
+    155          	{
+    156          	case TASK_MUSIC:
+    157          #if TASK_FM_EN
+    158          		task_ctl.work_sta = TASK_FM;
+    159          		break;
+    160          
+    161          	case TASK_FM:
+    162          #endif
+    163          #if TASK_SPEAKER_EN
+    164          		task_ctl.work_sta = TASK_SPEAKER;
+    165          		break;
+    166          
+    167          	case TASK_SPEAKER:
+    168          #endif
+    169          #if TASK_AUX_EN
+    170          		task_ctl.work_sta = TASK_AUX;
+    171          		break;
+    172          
+    173          	case TASK_AUX:
+    174          #endif
+    175          #if TASK_RTC_EN
+    176          		task_ctl.work_sta = TASK_RTC;
+    177          		break;
+    178          
+    179          	case TASK_RTC:
+    180          #endif
+    181          #if TASK_USBDEV_EN
+    182          		task_ctl.work_sta = TASK_USBDEV;
+    183          		break;
+    184          
+    185          	case TASK_USBDEV:
+    186          #endif
+    187          #if TASK_FLASH_EN
+    188          	#if 0
+    189          		if(u_spi.spi_online)
+    190          			task_ctl.work_sta = TASK_FLASH;
+    191          		else
+    192          			task_ctl.work_sta = TASK_MUSIC;
+    193          	#else
+    194          		if((SD1_CHECK_PORT & BIT(SD1_CHECK_PIN)))		  //SD¿¨²åÈë¼ì²âIO»á±»À­µÍ
+    195          		{	// IO Îª High, ÎÞ²åÈëÄÚÖÃ SD¿¨
+    196          			spi_sd_mux_enter();
+    197          			spi_port_init();
+    198          			u_spi.spi_online = spi_flash_init();
+    199          			spi_sd_mux_exit();
+    200          			sd_port_init(1);
+    201          			if(u_spi.spi_online)
+    202          				task_ctl.work_sta = TASK_FLASH;
+    203          			else
+    204          			{
+    205          				task_ctl.work_sta = TASK_MUSIC;
+    206          			}
+    207          		}
+    208          		else
+    209          		{	// IO Îª Low, ÓÐ²åÈëÄÚÖÃ SD¿¨
+    210          			task_ctl.work_sta = TASK_MUSIC;
+    211          		}
+    212          	#endif
+    213          		break;
+    214          
+    215          	case TASK_FLASH:
+    216          #endif
+    217          		task_ctl.work_sta = TASK_MUSIC;
+    218          		break;
+    219          
+    220          	default:
+    221          #if TASK_IDLE_EN
+    222          		task_ctl.work_sta = TASK_MUSIC;         //ÇÐµ½¿ÕÏÐÄ£Ê½
+    223          #endif
+    224          		break;
+    225          	}
+    226          }
+    227          
+    228          #pragma location="TASK_SEG"
+
+   \                                 In segment TASK_SEG, align 1, keep-with-next
+    229          void deal_vol_msg(void)
+   \                     deal_vol_msg:
+    230          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    231          	showvol();
+   \   000000                ; Setup parameters for call to function ocx_showvol
+   \   000000   12....       LCALL   ocx_showvol
+    232          	//Ê¹ÓÃVOL+,VOL-ÄÜ½â³ý¾²Òô
+    233          	if(b_dac.mute_en)
+   \   000003   A2..         MOV     C,b_dac.1
+   \   000005   5003         JNC     ??deal_vol_msg_0
+    234          	{
+    235          		user_set_mute();
+   \   000007                ; Setup parameters for call to function user_set_mute
+   \   000007   12....       LCALL   user_set_mute
+    236          	}
+    237          #if(TASK_AUX_EN || TASK_FM_EN)
+    238          	//ÉèÖÃamuxÒôÁ¿
+    239          	amux_volume_set();
+    240          #endif
+    241          }
+   \                     ??deal_vol_msg_0:
+   \   00000A   22           RET
+    242          
+    243          //ËùÓÐÈÎÎñµÄ¹«¹²ÏûÏ¢´¦Àíº¯Êý
+    244          #pragma location="TASK_SEG"
+
+   \                                 In segment TASK_SEG, align 1, keep-with-next
+    245          void deal_msg(u8 msg)
+   \                     deal_msg:
+    246          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    247          	switch(msg)
+   \   000000   90....       MOV     DPTR,#(sys_ctl + 2)
+   \   000003   E0           MOVX    A,@DPTR
+   \   000004   FA           MOV     R2,A
+   \   000005   E9           MOV     A,R1
+   \   000006   12....       LCALL   ?UC_SWITCH_SPARSE
+   \                     `?<Jumptable for deal_msg>_0`:
+   \   000009   00           DB        0
+   \   00000A   08           DB        8
+   \   00000B   86           DB        134
+   \   00000C   ....         DW        ??deal_msg_0
+   \   00000E   8A           DB        138
+   \   00000F   ....         DW        ??deal_msg_1
+   \   000011   A1           DB        161
+   \   000012   ....         DW        ??deal_msg_2
+   \   000014   A3           DB        163
+   \   000015   ....         DW        ??deal_msg_3
+   \   000017   A6           DB        166
+   \   000018   ....         DW        ??deal_msg_0
+   \   00001A   B1           DB        177
+   \   00001B   ....         DW        ??deal_msg_0
+   \   00001D   E1           DB        225
+   \   00001E   ....         DW        ??deal_msg_2
+   \   000020   E3           DB        227
+   \   000021   ....         DW        ??deal_msg_3
+   \   000023   ....         DW        ??deal_msg_4
+    248          	{
+    249          #if 1	// 2015/09/08 Merlin Ê¹ÓÃVolum¿ØÖÆ¹¦ÄÜ, 
+    250          		//ÒôÁ¿¼õ¡¢ÒôÁ¿¼Ó (Prev)
+    251          	case KL_PREV:	// ¸ÄÎªÒôÁ¿¼Óµ÷Õû Merlin 2015/09/08
+    252          	case KH_PREV:	// ¸ÄÎªÒôÁ¿¼Óµ÷Õû Merlin 2015/09/08
+    253          		if(!RP_EN_CHECK)
+   \                     ??deal_msg_2:
+   \   000025   A283         MOV     C,0x80.3
+   \   000027   401A         JC      ??deal_msg_4
+    254          		{
+    255          			user_set_volume(sys_ctl.volume - 1);
+   \   000029                ; Setup parameters for call to function user_set_volume
+   \   000029   74FF         MOV     A,#-0x1
+   \   00002B   8006         SJMP    ??deal_msg_5
+    256          			deal_vol_msg();
+    257          		}
+    258          		break;
+    259          	case KL_NEXT:	// ¸ÄÎªÒôÁ¿¼õµ÷Õû Merlin 2015/09/08
+    260          	case KH_NEXT:	// ¸ÄÎªÒôÁ¿¼õµ÷Õû Merlin 2015/09/08
+    261          		if(!RP_EN_CHECK)
+   \                     ??deal_msg_3:
+   \   00002D   A283         MOV     C,0x80.3
+   \   00002F   4012         JC      ??deal_msg_4
+    262          		{
+    263          			user_set_volume(sys_ctl.volume + 1);
+   \   000031                ; Setup parameters for call to function user_set_volume
+   \   000031   7401         MOV     A,#0x1
+   \                     ??deal_msg_5:
+   \   000033   2A           ADD     A,R2
+   \   000034   F9           MOV     R1,A
+   \   000035   12....       LCALL   user_set_volume
+    264          			deal_vol_msg();
+   \   000038                ; Setup parameters for call to function deal_vol_msg
+   \   000038   12....       LCALL   deal_vol_msg
+   \   00003B   22           RET
+    265          		}
+    266          		break;
+    267          #endif
+    268          		//°´Ä£Ê½¼ü½øÐÐÇÐ»»
+    269          	case KU_MODE:
+    270          	case KL_MODE:
+    271          	case KL_PLAY_AND_MODE:
+    272          		task_ctl.work_sta = TASK_EXIT;
+   \                     ??deal_msg_0:
+   \   00003C   75..0C       MOV     task_ctl,#0xc
+   \   00003F   22           RET
+    273          		break;
+    274          
+    275          		//¾²Òô
+    276          	case KU_MUTE:
+    277          		user_set_mute();
+   \                     ??deal_msg_1:
+   \   000040                ; Setup parameters for call to function user_set_mute
+   \   000040   12....       LCALL   user_set_mute
+    278          		break;
+    279          
+    280          		//¹Ø»ú
+    281          #if TASK_POWEROFF_EN
+    282          	case KU_POWER:
+    283          		task_ctl.work_sta = TASK_POWEROFF;
+    284          		break;
+    285          #endif
+    286          
+    287          		//Èí¹Ø»ú
+    288          #if SOFT_POWEROFF_EN
+    289          	case KL_SOFT_POWER:
+    290          		task_ctl.work_sta = TASK_POWEROFF;
+    291          		break;
+    292          #endif
+    293          		//500msÏûÏ¢
+    294          #if ALARM_EN
+    295          	case QSYSTEM_500MS:
+    296          		task_alarm_check();
+    297          		break;
+    298          #endif
+    299          	}
+    300          }
+   \                     ??deal_msg_4:
+   \   000043   22           RET
+    301          
+    302          #pragma location="TASK_SEG"
+
+   \                                 In segment TASK_SEG, align 1, keep-with-next
+    303          void device_check_stop(u8 dev_num)
+   \                     device_check_stop:
+    304          {
+   \   000000   EE           MOV     A,R6
+   \   000001   C0E0         PUSH    A
+   \   000003                ; Saved register size: 1
+   \   000003                ; Auto size: 0
+   \   000003   E9           MOV     A,R1
+   \   000004   FE           MOV     R6,A
+    305          	if(fs_cur_dev() == dev_num)
+   \   000005                ; Setup parameters for call to function fs_cur_dev
+   \   000005   12....       LCALL   fs_cur_dev
+   \   000008   E9           MOV     A,R1
+   \   000009   6E           XRL     A,R6
+   \   00000A   7003         JNZ     ??device_check_stop_0
+    306          	{
+    307          		music_stop();
+   \   00000C                ; Setup parameters for call to function music_stop
+   \   00000C   12....       LCALL   music_stop
+    308          	}
+    309          }
+   \                     ??device_check_stop_0:
+   \   00000F   D0E0         POP     A
+   \   000011   FE           MOV     R6,A
+   \   000012   22           RET
+    310          
+    311          //ËùÓÐÈÎÎñµÄ¹«¹²ÊÂ¼þ´¦Àí
+    312          #pragma location="TASK_SEG"
+
+   \                                 In segment TASK_SEG, align 1, keep-with-next
+    313          void comm_event(u8 enable)
+   \                     comm_event:
+    314          {
+   \   000000   EE           MOV     A,R6
+   \   000001   C0E0         PUSH    A
+   \   000003                ; Saved register size: 1
+   \   000003                ; Auto size: 0
+   \   000003   E9           MOV     A,R1
+   \   000004   FE           MOV     R6,A
+    315          	WATCHDOG_CLR();
+   \   000005   43F720       ORL     0xf7,#0x20
+    316          	mem_event();
+   \   000008                ; Setup parameters for call to function mem_event
+   \   000008   12....       LCALL   mem_event
+    317          	
+    318          
+    319          	WATCHDOG_CLR();
+   \   00000B   43F720       ORL     0xf7,#0x20
+    320          #if TASK_USBDEV_EN
+    321          	if(device_need_activate(DEVICE_PC))      //PC¼ì²â
+    322          	{
+    323          		if(device_activate(DEVICE_PC))
+    324          		{
+    325          			task_ctl.work_sta = TASK_USBDEV;
+    326          			return;
+    327          		}
+    328          	}
+    329          #endif
+    330          
+    331          #if AUX_DET_EN
+    332          	if(device_need_activate(DEVICE_LINEIN))     //LineIn¼ì²â
+    333          	{
+    334          		if(device_activate(DEVICE_LINEIN))
+    335          		{
+    336          			task_ctl.pre_sta = task_ctl.work_sta;
+    337          			task_ctl.work_sta = TASK_AUX;
+    338          			return;
+    339          		}
+    340          	}
+    341          #endif
+    342          
+    343          #if MIC_DET_EN
+    344          	if(device_need_activate(DEVICE_MIC))     //Mic¼ì²â
+    345          	{
+    346          		if(device_activate(DEVICE_MIC))
+    347          		{
+    348          #if KARAOKE_EN
+    349          			if(task_ctl.work_sta == TASK_MUSIC)
+    350          			{
+    351          				mic_enable();
+    352          				b_sys.karaoke_flag = 1;
+    353          				b_dac.sound_en = 0;                //ÔÚMIC´ò¿ªÊ±²»¿ª¶¯Ì¬½µÔë
+    354          				msc_ctl.mscfade_en = 0;            //ÒôÀÖ²¥·ÅÄ£Ê½µÄÇÐ»»²»ÐèÒªµ­Èëµ­³ö
+    355          #if DAC_FADE_EN
+    356          				dac_fade_in(1);                    //ÔÚÒôÀÖÔÝÍ£ºó²åÈëmicÐèÒªÖØÐÂµ­Èë
+    357          #endif
+    358          			}
+    359          #else
+    360          			task_ctl.pre_sta = task_ctl.work_sta;
+    361          			task_ctl.work_sta = TASK_SPEAKER;
+    362          #endif
+    363          			return;
+    364          		}
+    365          	}
+    366          #if KARAOKE_EN
+    367          	if((!device_activate(DEVICE_MIC)) && (task_ctl.work_sta == TASK_MUSIC))
+    368          	{
+    369          		mic_disable();
+    370          		if(b_sys.karaoke_flag)
+    371          		{
+    372          			b_sys.karaoke_flag = 0;
+    373          			b_dac.sound_en = 1;
+    374          			msc_ctl.mscfade_en = 1;
+    375          		}
+    376          	}
+    377          #endif
+    378          #endif
+    379          
+    380          #if HP_DET_EN
+    381          	if(device_need_activate(DEVICE_HP))     //HeadPhone¼ì²â
+    382          	{
+    383          		if(device_activate(DEVICE_HP))
+    384          		{
+    385          		}
+    386          	}
+    387          #endif
+    388          
+    389          	if(enable == 1)
+   \   00000E   7401         MOV     A,#0x1
+   \   000010   6E           XRL     A,R6
+   \   000011   7019         JNZ     ??comm_event_0
+    390          	{
+    391          		//ÓÐ¼¸¸öÄ£Ê½²»ÐèÒªÔÚÕâÀï½øÐÐÉ¨Ãè
+    392          		u8 f_change = device_change();
+   \   000013                ; Setup parameters for call to function device_change
+   \   000013   12....       LCALL   device_change
+   \   000016   E9           MOV     A,R1
+   \   000017   FA           MOV     R2,A
+    393          		if(DEVICE_CHANGE == f_change)
+   \   000018   7401         MOV     A,#0x1
+   \   00001A   6A           XRL     A,R2
+   \   00001B   7005         JNZ     ??comm_event_1
+    394          		{
+    395          			task_ctl.work_sta = TASK_MUSIC;     //ÈÎÒâ×´Ì¬ÏÂ£¬²åÈëÉè±¸£¬½øÈëÒôÀÖ²¥·ÅÄ£Ê½
+   \                     ??comm_event_2:
+   \   00001D   75..00       MOV     task_ctl,#0x0
+   \   000020   8028         SJMP    ??comm_event_3
+    396          		}
+    397          		else if(DEVICE_REMOVE == f_change)
+   \                     ??comm_event_1:
+   \   000022   7402         MOV     A,#0x2
+   \   000024   6A           XRL     A,R2
+   \   000025   7023         JNZ     ??comm_event_3
+    398          		{
+    399          			fs_sel_new();                       //°Î³öÉè±¸£¬ÇÐ»»µ½ÁíÍâÒ»¸ö
+   \   000027                ; Setup parameters for call to function fs_sel_new
+   \   000027   12....       LCALL   fs_sel_new
+   \   00002A   801E         SJMP    ??comm_event_3
+    400          		}
+    401          	}
+    402          	else if(enable == 2)
+   \                     ??comm_event_0:
+   \   00002C   7402         MOV     A,#0x2
+   \   00002E   6E           XRL     A,R6
+   \   00002F   7019         JNZ     ??comm_event_3
+    403          	{
+    404          		if((b_sys.dev_change) &&
+    405          		        (device_need_activate(DEVICE_SDMMC)||device_need_activate(DEVICE_UDISK))||\
+    406          		        (device_need_activate(DEVICE_SDMMC1)
+    407          #if UDISK_DOUBLE_EN
+    408          		         || device_need_activate(DEVICE_UDISK1)
+    409          #endif
+    410          		        )
+    411          		  )
+   \   000031   A2..         MOV     C,b_sys.0
+   \   000033   500E         JNC     ??comm_event_4
+   \   000035                ; Setup parameters for call to function device_need_activate
+   \   000035   7900         MOV     R1,#0x0
+   \   000037   12....       LCALL   device_need_activate
+   \   00003A   40E1         JC      ??comm_event_2
+   \   00003C                ; Setup parameters for call to function device_need_activate
+   \   00003C   7902         MOV     R1,#0x2
+   \   00003E   12....       LCALL   device_need_activate
+   \   000041   40DA         JC      ??comm_event_2
+   \                     ??comm_event_4:
+   \   000043                ; Setup parameters for call to function device_need_activate
+   \   000043   7901         MOV     R1,#0x1
+   \   000045   12....       LCALL   device_need_activate
+   \   000048   40D3         JC      ??comm_event_2
+    412          		{
+    413          			task_ctl.work_sta = TASK_MUSIC;
+    414          		}
+    415          	}
+    416          }
+   \                     ??comm_event_3:
+   \   00004A   D0E0         POP     A
+   \   00004C   FE           MOV     R6,A
+   \   00004D   22           RET
+
+   \                                 In segment CODE_C, align 1
+   \                     `?<Constant "run_task\\n">`:
+   \   000000   72756E5F     DB "run_task\012"
+   \            7461736B
+   \            0A00    
+
+   \                                 In segment CODE_C, align 1
+   \                     `?<Constant "Y:%d,%d,%d\\n">`:
+   \   000000   593A2564     DB "Y:%d,%d,%d\012"
+   \            2C25642C
+   \            25640A00
+    417          
+
+   Maximum stack usage in bytes:
+
+     Function                  EXT_STACK PSTACK XSTACK
+     --------                  --------- ------ ------
+     comm_event                       1      0      0
+       -> mem_event                   2      0      0
+       -> device_change               2      0      0
+       -> fs_sel_new                  2      0      0
+       -> device_need_activate        2      0      0
+       -> device_need_activate        2      0      0
+       -> device_need_activate        2      0      0
+     deal_msg                         0      0      0
+       -> user_set_volume             0      0      0
+       -> deal_vol_msg                0      0      0
+       -> user_set_volume             0      0      0
+       -> deal_vol_msg                0      0      0
+       -> user_set_mute               0      0      0
+     deal_vol_msg                     0      0      0
+       -> ocx_showvol                 0      0      0
+       -> user_set_mute               0      0      0
+     device_change                    1      0      0
+       -> device_change_check         0      0      0
+     device_check_stop                1      0      0
+       -> fs_cur_dev                  2      0      0
+       -> music_stop                  2      0      0
+     run_task                         8      0      0
+       -> my_printf                   4      0      0
+       -> task_music                  4      0      0
+       -> ocx_clear                   4      0      0
+       -> dac_fade_wait               4      0      0
+       -> mute_enable                 4      0      0
+       -> fs_cur_dev                  4      0      0
+       -> my_printf                  16      0      0
+       -> task_flash_music            4      0      0
+       -> task_idle                   4      0      0
+       -> spi_sd_mux_enter            4      0      0
+       -> spi_port_init               4      0      0
+       -> spi_flash_init              4      0      0
+       -> spi_sd_mux_exit             4      0      0
+       -> sd_port_init                4      0      0
+
+
+   Segment part sizes:
+
+     Function/Label             Bytes
+     --------------             -----
+     P0                            1
+     P3                            1
+     WDTCON                        1
+     device_chg                    1
+     mute_status_change            1
+     task_ctl                      3
+     run_task                    173
+     device_change                13
+     deal_vol_msg                 11
+     deal_msg                     68
+     device_check_stop            19
+     comm_event                   78
+     ?<Constant "run_task\n">     10
+     ?<Constant "Y:%d,%d,%d\n">   12
+
+ 
+  22 bytes in segment CODE_C
+   3 bytes in segment DATA_N
+   3 bytes in segment SFR_AN
+ 362 bytes in segment TASK_SEG
+   2 bytes in segment XDATA_Z
+ 
+ 384 bytes of CODE  memory
+   3 bytes of DATA  memory (+ 3 bytes shared)
+   2 bytes of XDATA memory
+
+Errors: none
+Warnings: none

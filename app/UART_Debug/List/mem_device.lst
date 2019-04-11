@@ -1,0 +1,246 @@
+##############################################################################
+#                                                                            #
+# IAR 8051 C/C++ Compiler V7.20H/W32                   10/Sep/2015  19:03:28 #
+# Copyright 2004-2006 IAR Systems. All rights reserved.                      #
+#                                                                            #
+#    Core               =  plain                                             #
+#    Code model         =  near                                              #
+#    Data model         =  large                                             #
+#    Calling convention =  extended stack reentrant                          #
+#    Constant location  =  code                                              #
+#    Extended stack     =  enabled                                           #
+#    Dptr setup         =  1,16                                              #
+#    Source file        =  C:\Documents and Settings\Administrator\◊¿√Ê\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\mem\mem_device.c                      #
+#    Command line       =  -I "C:\Program Files\IAR Systems\Embedded         #
+#                          Workbench 4.05 Evaluation version\8051\INC\" -I   #
+#                          "C:\Program Files\IAR Systems\Embedded Workbench  #
+#                          4.05 Evaluation version\8051\INC\CLIB\" -I        #
+#                          "C:\Documents and Settings\Administrator\◊¿√Ê\lil #
+#                          y\15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX1 #
+#                          070_20150908\COMMON\" -I "C:\Documents and        #
+#                          Settings\Administrator\◊¿√Ê\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\INC\" #
+#                           -I "C:\Documents and Settings\Administrator\◊¿√Ê #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\config\" -I "C:\Documents and    #
+#                          Settings\Administrator\◊¿√Ê\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\api\" #
+#                           -I "C:\Documents and Settings\Administrator\◊¿√Ê #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\fm\" -I "C:\Documents and        #
+#                          Settings\Administrator\◊¿√Ê\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\fat\" #
+#                           -I "C:\Documents and Settings\Administrator\◊¿√Ê #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\display\" -I "C:\Documents and   #
+#                          Settings\Administrator\◊¿√Ê\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\displ #
+#                          ay\led\" -I "C:\Documents and                     #
+#                          Settings\Administrator\◊¿√Ê\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\displ #
+#                          ay\lcd\" -I "C:\Documents and                     #
+#                          Settings\Administrator\◊¿√Ê\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\task\ #
+#                          " -I "C:\Documents and Settings\Administrator\◊¿√ #
+#                          Ê\lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lil #
+#                          y_AX1070_20150908\user\" -I "C:\Documents and     #
+#                          Settings\Administrator\◊¿√Ê\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\mem\" #
+#                           -I "C:\Documents and Settings\Administrator\◊¿√Ê #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\module\" -I "C:\Documents and    #
+#                          Settings\Administrator\◊¿√Ê\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\modul #
+#                          e\kedir\" -I "C:\Documents and                    #
+#                          Settings\Administrator\◊¿√Ê\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\key\" #
+#                           -I "C:\Documents and Settings\Administrator\◊¿√Ê #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\startmusic\" -D UART_DEBUG -D    #
+#                          AX207X_TAG -lC "C:\Documents and                  #
+#                          Settings\Administrator\◊¿√Ê\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\UART_ #
+#                          Debug\List\" -o "C:\Documents and                 #
+#                          Settings\Administrator\◊¿√Ê\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\UART_ #
+#                          Debug\Obj\" -e -z9 --debug --core=plain           #
+#                          --dptr=16,1 --data_model=large --code_model=near  #
+#                          --calling_convention=ext_stack_reentrant          #
+#                          --place_constants=code --nr_virtual_regs 20       #
+#                          --extended_stack "C:\Documents and                #
+#                          Settings\Administrator\◊¿√Ê\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\mem\m #
+#                          em_device.c"                                      #
+#    List file          =  C:\Documents and Settings\Administrator\◊¿√Ê\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\UART_Debug\List\mem_device.lst        #
+#    Object file        =  C:\Documents and Settings\Administrator\◊¿√Ê\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\UART_Debug\Obj\mem_device.r51         #
+#                                                                            #
+#                                                                            #
+##############################################################################
+
+C:\Documents and Settings\Administrator\◊¿√Ê\lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX1070_20150908\mem\mem_device.c
+      1          /*****************************************************************************
+      2           * Module    : mem
+      3           * File      : mem_device.c
+      4           * Author    :
+      5           * Email     :
+      6           * Function  : DEVICEº«“‰»ŒŒÒ¡˜≥Ã
+      7           *****************************************************************************/
+      8          #include "include.h"
+      9          #include "mem_device.h"
+     10          
+     11          #if (SYS_MEM == MEM_DEVICE)
+     12          
+     13          //º«“‰–≈œ¢¥Ê¥¢‘⁄U≈Ã/SDø®÷–µƒ∆ ºµÿ÷∑
+     14          #define DEV_START_ADDR  0x1C0
+     15          
+     16          u32 mem_sect;
+     17          
+     18          /*----------------------------------------------------------------------------*/
+     19          /**@brief  ºÏ≤È…Ë±∏DBRø…”√–‘
+     20             @param Œﬁ
+     21             @return Œﬁ
+     22             @note
+     23          */
+     24          /*----------------------------------------------------------------------------*/
+     25          #pragma location="MEMDEVICE"
+     26          void dev_check_dbr(void)
+     27          {
+     28          	if(fat_fs.s_size != 512)
+     29          	{
+     30          		mem_ctl.dev_mem_ready = 0;
+     31          		//printf("fs_read_only\n");
+     32          		return;
+     33          	}
+     34          
+     35          	if(fat_fs.fs_type == FS_EXFAT)
+     36          	{
+     37          		mem_sect = fat_fs.database - LD_DWORD(&fs_hook.win[BPB_ClusterHeapOffset]);
+     38          	}
+     39          	else
+     40          	{
+     41          		mem_sect = fat_fs.fatbase - LD_WORD(&fs_hook.win[BPB_RsvdSecCnt]);
+     42          	}
+     43          
+     44          	if(LD_WORD(&fs_hook.win[BPB_RsvdSecCnt]) > 1)
+     45          	{
+     46          		mem_sect += 1;
+     47          	}
+     48          	if(fat_fs.fs_type == FS_EXFAT)
+     49          	{
+     50          		if(fs_hook.win[BPB_FatOffset] != 24)
+     51          		{
+     52          			mem_sect += 24;
+     53          		}
+     54          	}
+     55          
+     56          	mem_ctl.dev_mem_ready = 1;
+     57          }
+     58          
+     59          /*----------------------------------------------------------------------------*/
+     60          /**@brief  ¥”…Ë±∏∂¡»°≥ı ºªØ–≈œ¢
+     61             @param Œﬁ
+     62             @return Œﬁ
+     63             @note
+     64          */
+     65          /*----------------------------------------------------------------------------*/
+     66          #pragma location="MEMDEVICE"
+     67          void dev_read_info(void)
+     68          {
+     69          	if(!mem_ctl.dev_mem_ready)
+     70          	{
+     71          		//printf("dev_mem_err\n");
+     72          		return;
+     73          	}
+     74          
+     75          	if(fs_hook.disk_read(fs_hook.win, mem_sect) == RES_OK)
+     76          	{
+     77          #if TASK_FM_EN
+     78          		fm_ctl.fm_freq = fs_hook.win[DEV_START_ADDR + PARAM_FREQUENCY];
+     79          #endif
+     80          		sys_ctl.volume = fs_hook.win[DEV_START_ADDR + PARAM_VOLUME];
+     81          	}
+     82          }
+     83          
+     84          /*----------------------------------------------------------------------------*/
+     85          /**@brief  ¥”…Ë±∏∂¡»°«˙ƒø
+     86             @param Œﬁ
+     87             @return Œﬁ
+     88             @note
+     89          */
+     90          /*----------------------------------------------------------------------------*/
+     91          #pragma location="MEMDEVICE"
+     92          void dev_read_music_num(void)
+     93          {
+     94          	if(!mem_ctl.dev_mem_ready)
+     95          	{
+     96          		//printf("dev_mem_err\n");
+     97          		return;
+     98          	}
+     99          
+    100          	if(fs_hook.disk_read(fs_hook.win, mem_sect) == RES_OK)
+    101          	{
+    102          		u_msc.music_num = fs_hook.win[DEV_START_ADDR + PARAM_MUSIC_NUM + 1];
+    103          		u_msc.music_num <<=8;
+    104          		u_msc.music_num += fs_hook.win[DEV_START_ADDR + PARAM_MUSIC_NUM];
+    105          	}
+    106          	else
+    107          	{
+    108          		u_msc.music_num = 1;
+    109          	}
+    110          }
+    111          
+    112          /*----------------------------------------------------------------------------*/
+    113          /**@brief  –¥–≈œ¢µΩ…Ë±∏
+    114             @param Œﬁ
+    115             @return Œﬁ
+    116             @note ≤ªƒ‹ÀÊ“‚∏¸∏ƒ
+    117          */
+    118          /*----------------------------------------------------------------------------*/
+    119          #pragma location="MEMDEVICE"
+    120          void dev_write_info(void)
+    121          {
+    122          	if((!mem_ctl.dev_mem_ready) || (fs_read_only()))
+    123          	{
+    124          		//printf("dev_mem_err\n");
+    125          		return;
+    126          	}
+    127          	bool ie_soft = IE_SINT;
+    128          	IE_SINT = 0;
+    129          	if(fs_hook.disk_read(fs_hook.win, mem_sect) == RES_OK)
+    130          	{
+    131          #if TASK_FM_EN
+    132          		fs_hook.win[DEV_START_ADDR + PARAM_FREQUENCY] = fm_ctl.fm_freq - FM_MIN_FREQ;
+    133          #endif
+    134          		fs_hook.win[DEV_START_ADDR + PARAM_VOLUME] = sys_ctl.volume;
+    135          		if(task_ctl.work_sta == TASK_MUSIC)
+    136          		{
+    137          			fs_hook.win[DEV_START_ADDR + PARAM_MUSIC_NUM] = (u8)u_msc.music_num;
+    138          			fs_hook.win[DEV_START_ADDR + PARAM_MUSIC_NUM + 1] = (u8)(u_msc.music_num>>8);
+    139          		}
+    140          		fs_hook.disk_write(fs_hook.win, mem_sect);
+    141          	}
+    142          
+    143          	IE_SINT = ie_soft;
+    144          }
+    145          
+    146          #endif
+    147          
+
+
+   Segment part sizes:
+
+     Function/Label Bytes
+     -------------- -----
+
+ 
+ 
+ 0 bytes of memory
+
+Errors: none
+Warnings: none

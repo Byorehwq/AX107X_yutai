@@ -1,0 +1,451 @@
+##############################################################################
+#                                                                            #
+# IAR 8051 C/C++ Compiler V7.20H/W32                   29/Jun/2018  19:55:13 #
+# Copyright 2004-2006 IAR Systems. All rights reserved.                      #
+#                                                                            #
+#    Core               =  plain                                             #
+#    Code model         =  near                                              #
+#    Data model         =  large                                             #
+#    Calling convention =  extended stack reentrant                          #
+#    Constant location  =  code                                              #
+#    Extended stack     =  enabled                                           #
+#    Dptr setup         =  1,16                                              #
+#    Source file        =  I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\user\user_amux. #
+#                          c                                                 #
+#    Command line       =  -I E:\software\8051\INC\ -I                       #
+#                          E:\software\8051\INC\CLIB\ -I                     #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\COMMON\ -I      #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\INC\ -I         #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\config\ -I      #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\api\ -I         #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\fm\ -I          #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\fat\ -I         #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\display\ -I     #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\display\theme_d #
+#                          efault\ -I I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073 #
+#                          A_”ÓÃ©_AX1071_xxxxxxxx_20180629_Merlin_1\app\disp #
+#                          lay\led\ -I I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC07 #
+#                          3A_”ÓÃ©_AX1071_xxxxxxxx_20180629_Merlin_1\app\dis #
+#                          play\lcd\ -I I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC0 #
+#                          73A_”ÓÃ©_AX1071_xxxxxxxx_20180629_Merlin_1\app\ta #
+#                          sk\ -I I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”Ó #
+#                          Ã©_AX1071_xxxxxxxx_20180629_Merlin_1\app\user\    #
+#                          -I I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_A #
+#                          X1071_xxxxxxxx_20180629_Merlin_1\app\mem\ -I      #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\module\ -I      #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\key\ -I         #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\startmusic\ -I  #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\spi\ -D         #
+#                          AX107X_TAG -lC I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18B #
+#                          C073A_”ÓÃ©_AX1071_xxxxxxxx_20180629_Merlin_1\app\ #
+#                          Debug\List\ -o I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18B #
+#                          C073A_”ÓÃ©_AX1071_xxxxxxxx_20180629_Merlin_1\app\ #
+#                          Debug\Obj\ -e -z9 --core=plain --dptr=16,1        #
+#                          --data_model=large --code_model=near              #
+#                          --calling_convention=ext_stack_reentrant          #
+#                          --place_constants=code --nr_virtual_regs 20       #
+#                          --extended_stack I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\1 #
+#                          8BC073A_”ÓÃ©_AX1071_xxxxxxxx_20180629_Merlin_1\ap #
+#                          p\user\user_amux.c                                #
+#    List file          =  I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\Debug\List\user #
+#                          _amux.lst                                         #
+#    Object file        =  I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\Debug\Obj\user_ #
+#                          amux.r51                                          #
+#                                                                            #
+#                                                                            #
+##############################################################################
+
+I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX1071_xxxxxxxx_20180629_Merlin_1\app\user\user_amux.c
+      1          /*****************************************************************************
+      2           * Module    : User
+      3           * File      : user_amux.c
+      4           * Author    : Hanny
+      5           * Email     : coldney@yahoo.com.cn
+      6           * Function  : AMUXµƒœ‡πÿ≈‰÷√
+      7           *****************************************************************************/
+      8          #include "include.h"
+      9          
+
+   \                                 In segment XDATA_N, align 1, root
+     10          IAR_XDATA_A volatile u8 energy_cnt;
+   \                     energy_cnt:
+   \   000000                DS 1
+
+   \                                 In segment XDATA_N, align 1, root
+     11          IAR_XDATA_A volatile u8 energy_flag;
+   \                     energy_flag:
+   \   000000                DS 1
+     12          
+     13          #if AUX_EQ_EN
+     14          #define task_aux_process            task_aux_eq_process
+     15          #elif REC_AUX_EN
+     16          #define task_aux_process            task_record_process
+     17          #else
+     18          #define task_aux_process            dummy_void
+     19          #endif
+     20          
+     21          #if REC_FM_EN
+     22          #define task_fm_process             task_record_process
+     23          #else
+     24          #define task_fm_process             dummy_void
+     25          #endif
+     26          
+     27          #if TASK_SPEAKER_EN
+     28          void task_speaker_process(void);
+     29          #else
+     30          #define task_speaker_process        dummy_void
+     31          #endif
+     32          
+     33          #if USB_MIC_SUPPORT
+     34          void task_usbmic_process_fix(void);
+     35          #else
+     36          #define task_usbmic_process_fix     dummy_void
+     37          #endif
+     38          
+     39          
+     40          
+     41          #pragma constseg="USER_AMUX_CONST"
+
+   \                                 In segment USER_AMUX_CONST, align 1
+     42          IAR_CONST type_auadc_ctl auadc_ch_sel[4] =
+   \                     auadc_ch_sel:
+   \   000000   03020580     DB 3, 2, 5, 128
+   \   000004   7800....     DW 120, dummy_void
+   \   000008   00030205     DB 0, 3, 2, 5, 128
+   \            80      
+   \   00000D   7800....     DW 120, dummy_void
+   \   000011   00000102     DB 0, 0, 1, 2, 128
+   \            80      
+   \   000016   7F00....     DW 127, dummy_void
+   \   00001A   00000205     DB 0, 0, 2, 5, 128
+   \            80      
+   \   00001F   FF02....     DW 767, dummy_void
+   \   000023   00           DB 0
+     43          {
+     44          	//adcÕ®µ¿,        ≤…—˘¬ ,        ¬À≤®∆˜œµ ˝,          bufµÿ÷∑,           —˘µ„ ˝,         ¥¶¿Ì∫Ø ˝
+     45          	{AUADC_LINEIN,    AUADC_SPR_32K, AUADC_FS128K_FP12K, (ADC_BUF_ADDR>>7), AUX_ADC_SAMPLE, task_aux_process},        //LINEIN
+     46          	{AUADC_CH_AUX_LR, AUADC_SPR_32K, AUADC_FS128K_FP12K, (ADC_BUF_ADDR>>7), 0x0078,         task_fm_process},         //FM
+     47          	{AUADC_CH_MIC,    AUADC_SPR_16K, AUADC_FS128K_FP5750, (ADC_BUF_ADDR>>7), MIX_ADC_SAMPLE, task_speaker_process},   //SPEAKER
+     48          	{AUADC_CH_MIC,    AUADC_SPR_32K, AUADC_FS128K_FP12K, (ADC_BUF_ADDR>>7), 0x02ff,         task_usbmic_process_fix}, //USBMIC
+     49          };
+     50          
+
+   \                                 In segment USER_AMUX_CONST, align 1
+     51          IAR_CONST u16 tbl_energy_music[12] =
+   \                     tbl_energy_music:
+   \   000000   00030006     DW 768, 1536, 2304, 3072, 3840, 4608, 5376, 6144, 6912, 7680, 8448
+   \            0009000C
+   \            000F0012
+   \            00150018
+   \            001B001E
+   \            0021    
+   \   000016   FFFF         DW 65535
+     52          {
+     53          	0x0300, 0x0600, 0x0900, 0x0c00,  0xf00, 0x1200, 0x1500, 0x1800,
+     54          	0x1b00, 0x1e00, 0x2100, 0xffff,
+     55          };
+     56          
+
+   \                                 In segment USER_AMUX_CONST, align 1
+     57          IAR_CONST u16 tbl_energy_amux[12] =
+   \                     tbl_energy_amux:
+   \   000000   00010002     DW 256, 512, 768, 1024, 1280, 1536, 1792, 2048, 2304, 2560, 2816, 65535
+   \            00030004
+   \            00050006
+   \            00070008
+   \            0009000A
+   \            000BFFFF
+     58          {
+     59          	0x100, 0x200, 0x300, 0x400, 0x500, 0x600, 0x700, 0x800,
+     60          	0x900, 0xa00, 0xb00, 0xffff,
+     61          };
+     62          #pragma constseg=default
+     63          
+     64          #ifdef AX207X_TAG
+     65          #if (TASK_SPEAKER_EN || USB_MIC_SUPPORT || AUX_EQ_EN || ENERGY_DISP_EN)
+     66          //audio_adc÷–∂œ
+     67          #pragma vector = VECTOR_OFFSET(AUDIO_ADC_INT)
+     68          #pragma register_bank=1
+     69          #pragma location="INTERRUPT"
+     70          __interrupt void auadc_isr(void)
+     71          {
+     72          	ISR_ENTER();
+     73          
+     74          #if ENERGY_DISP_EN
+     75          	energy_calc_process();
+     76          #endif
+     77          	(*auadc_ctl.auadc_process)();
+     78          
+     79          	ISR_EXIT();
+     80          }
+     81          #endif
+     82          #endif
+     83          
+     84          //¥À∫Ø ˝ «Œ™¡ÀΩ‚æˆFM/Linein“Ù¡øŒ™0 ±»‘”–Œ¢»ı…˘“ÙµƒŒ Ã‚
+     85          #pragma location="USER_AMUX_SEG"
+
+   \                                 In segment USER_AMUX_SEG, align 1, keep-with-next
+     86          void amux_volume_set(void)
+   \                     amux_volume_set:
+     87          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     88          	if((task_ctl.work_sta == TASK_AUX)
+     89          #if AMUX_FM_EN
+     90          	        || (task_ctl.work_sta == TASK_FM)
+     91          #endif
+     92          	  )
+   \   000000   7401         MOV     A,#0x1
+   \   000002   65..         XRL     A,task_ctl
+   \   000004   7012         JNZ     ??amux_volume_set_0
+     93          	{
+     94          		if(sys_ctl.volume)
+   \   000006   90....       MOV     DPTR,#(sys_ctl + 2)
+   \   000009   E0           MOVX    A,@DPTR
+   \   00000A   903052       MOV     DPTR,#0x3052
+   \   00000D   6005         JZ      ??amux_volume_set_1
+     95          		{
+     96          #if !AUX_EQ_EN
+     97          			AMUX_AIN_EN();
+   \   00000F   E0           MOVX    A,@DPTR
+   \   000010   D2E0         SETB    0xE0 /* A   */.0
+   \   000012   F0           MOVX    @DPTR,A
+   \   000013   22           RET
+     98          #endif
+     99          #if AMUX_FM_EN
+    100          			if(task_ctl.work_sta == TASK_FM)
+    101          			{
+    102          				fm_rx_set_vol(VOLUME_MAX);
+    103          			}
+    104          #endif
+    105          		}
+    106          		else
+    107          		{
+    108          			AMUX_AIN_DIS();
+   \                     ??amux_volume_set_1:
+   \   000014   E0           MOVX    A,@DPTR
+   \   000015   C2E0         CLR     0xE0 /* A   */.0
+   \   000017   F0           MOVX    @DPTR,A
+    109          #if AMUX_FM_EN
+    110          			if(task_ctl.work_sta == TASK_FM)
+    111          			{
+    112          				fm_rx_set_vol(0);
+    113          			}
+    114          #endif
+    115          		}
+    116          	}
+    117          }
+   \                     ??amux_volume_set_0:
+   \   000018   22           RET
+    118          
+    119          //¥Úø™MIC
+    120          #pragma location="USER_AMUX_SEG"
+
+   \                                 In segment USER_AMUX_SEG, align 1, keep-with-next
+    121          void mic_enable(void)
+   \                     mic_enable:
+    122          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    123          #ifdef AX207X_TAG
+    124          	AIPCON10 |= BIT(5);             //enable the switch to output MCOx
+    125          	AIPCON10 &= ~(BIT(3) | BIT(4)); //BIT3-disable mute the MIC Pre-Amp; BIT4-disable mute the MIC LPF
+    126          	AIPCON10 &= ~(BIT(0) | BIT(1)); //disable the R/L channel LPF for Mixed signal from DAC
+    127          	AUADCCON0 = 0x02;               //enable MIC analog block
+    128          
+    129          #if KARAOKE_EN
+    130          	AIPCON11 = (AIPCON11 & 0xF0) | USER_MIC_GAIN;  //MIC gain control
+    131          #endif
+    132          
+    133          #else //AX107X
+    134          #if KARAOKE_EN
+    135          	DACACON6 = (DACACON6 & 0x83) | (USER_MIC_GAIN <<2);
+    136          #endif
+    137          	DACACON6 &= ~BIT(7);
+   \   000000   9030A0       MOV     DPTR,#0x30a0
+   \   000003   E0           MOVX    A,@DPTR
+   \   000004   C2E7         CLR     0xE0 /* A   */.7
+   \   000006   F0           MOVX    @DPTR,A
+    138          	DACACON6 |= BIT(1);            //enable MIC
+   \   000007   E0           MOVX    A,@DPTR
+   \   000008   D2E1         SETB    0xE0 /* A   */.1
+   \   00000A   F0           MOVX    @DPTR,A
+    139          #endif
+    140          }
+   \   00000B   22           RET
+    141          
+    142          //πÿ±’MIC
+    143          #pragma location="USER_AMUX_SEG"
+
+   \                                 In segment USER_AMUX_SEG, align 1, keep-with-next
+    144          void mic_disable(void)
+   \                     mic_disable:
+    145          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    146          #ifdef AX207X_TAG
+    147          	AIPCON10 &= ~BIT(5);
+    148          	AIPCON10 |= BIT(3) | BIT(4);    //BIT3-mute the MIC Pre-Amp; BIT4-mute the MIC LPF
+    149          	AUADCCON0 = 0x00;               //disable MIC analog block
+    150          #else
+    151          	DACACON6 &= ~BIT(1);            //disable MIC
+   \   000000   9030A0       MOV     DPTR,#0x30a0
+   \   000003   E0           MOVX    A,@DPTR
+   \   000004   C2E1         CLR     0xE0 /* A   */.1
+   \   000006   F0           MOVX    @DPTR,A
+    152          #endif
+    153          
+    154          }
+   \   000007   22           RET
+    155          
+    156          #if ENERGY_DISP_EN
+    157          //ƒ‹¡øœ‘ æ÷–∂œπ˝≥Ã
+    158          #pragma location="USER_AMUX_SEG"
+    159          void energy_calc_process(void)
+    160          {
+    161          	if(AUADCCON6 & BIT(0))
+    162          	{
+    163          		AUADCCON6 &= ~BIT(0);    // clear energy pending
+    164          		energy_flag = 1;
+    165          	}
+    166          }
+    167          
+    168          //“Ù¿÷≤•∑≈œ¬ƒ‹¡øœ‘ æ≥ı ºªØ
+    169          #pragma location="USER_AMUX_SEG"
+    170          void energy_music_init(void)
+    171          {
+    172          	AIPCON10 |= (BIT(0) | BIT(1));      //enable L & R LPF
+    173          	AIPCON10 &= ~BIT(2);                //use aout L/R as input
+    174          	AIPCON10 &= ~BIT(4);                //open LPF
+    175          	energy_auadc_init();
+    176          }
+    177          
+    178          //ƒ‹¡øœ‘ æ≥ı ºªØ
+    179          #pragma location="USER_AMUX_SEG"
+    180          void energy_init(void)
+    181          {
+    182          	AUADCCON5 |= 0x02;   //energy filter 128k,5750Hz
+    183          	switch(task_ctl.work_sta)
+    184          	{
+    185          	case TASK_MUSIC:
+    186          		energy_music_init();
+    187          		break;
+    188          #if USB_SPK_SUPPORT
+    189          	case TASK_USBDEV:
+    190          		energy_music_init();
+    191          		break;
+    192          #endif
+    193          	case TASK_AUX:
+    194          #if AUX_EQ_EN
+    195          		AUADCCON2 |= 0x03;
+    196          #else
+    197          		energy_auadc_init();
+    198          #endif
+    199          		break;
+    200          	case TASK_FM:
+    201          		energy_auadc_init();
+    202          		break;
+    203          	case TASK_SPEAKER:
+    204          		AUADCCON2 |= 0x01;
+    205          		break;
+    206          	}
+    207          }
+    208          
+    209          //ø™ ºƒ‹¡øº∆À„
+    210          #pragma location="USER_AMUX_SEG"
+    211          void energy_start(void)
+    212          {
+    213          	energy_flag = 0;
+    214          	ocx.energy_cnt = 0xff;
+    215          	ocx.disp_energy = 1;
+    216          	AUADCCON6 &= ~BIT(0);        //clear energy pending
+    217          	AUADCCON2 |= 0x08;           //energy calc interrupt
+    218          	IE1 |= BIT(7);               //audio_adc interrupt
+    219          	AUADCCON0 |= 0x03;           //analog & digital block
+    220          }
+    221          
+    222          //πÿ±’ƒ‹¡øœ‘ æ
+    223          #pragma location="USER_AMUX_SEG"
+    224          void energy_close(void)
+    225          {
+    226          	AUADCCON2 &= ~BIT(3);       //disable energy calc interrupt
+    227          	energy_flag = 0;
+    228          	ocx.disp_energy = 0;
+    229          }
+    230          
+    231          //πÿ±’ADCƒ£øÈ∫Õƒ‹¡øœ‘ æ
+    232          #pragma location="USER_AMUX_SEG"
+    233          void energy_stop(void)
+    234          {
+    235          	energy_close();
+    236          	AUADCCON2 &= ~(BIT(0) | BIT(1));
+    237          	auadc_stop();
+    238          }
+    239          
+    240          #pragma location="USER_AMUX_SEG"
+    241          void energy_calc(const u16 __code *tbl)
+    242          {
+    243          	u16 calc_energy=0;
+    244          
+    245          	if(!energy_flag)
+    246          	{
+    247          		return;
+    248          	}
+    249          	energy_flag = 0;
+    250          	calc_energy  = ENGYDISPDATH<<8;
+    251          	calc_energy |= ENGYDISPDATL;
+    252          	energy_cnt = 0;
+    253          	while(tbl[energy_cnt] < calc_energy)
+    254          	{
+    255          		energy_cnt++;
+    256          	}
+    257          }
+    258          #endif
+
+   Maximum stack usage in bytes:
+
+     Function        EXT_STACK PSTACK XSTACK
+     --------        --------- ------ ------
+     amux_volume_set        0      0      0
+     mic_disable            0      0      0
+     mic_enable             0      0      0
+
+
+   Segment part sizes:
+
+     Function/Label   Bytes
+     --------------   -----
+     energy_cnt          1
+     energy_flag         1
+     auadc_ch_sel       36
+     tbl_energy_music   24
+     tbl_energy_amux    24
+     amux_volume_set    25
+     mic_enable         12
+     mic_disable         8
+
+ 
+ 84 bytes in segment USER_AMUX_CONST
+ 45 bytes in segment USER_AMUX_SEG
+  2 bytes in segment XDATA_N
+ 
+ 129 bytes of CODE  memory
+   2 bytes of XDATA memory
+
+Errors: none
+Warnings: none

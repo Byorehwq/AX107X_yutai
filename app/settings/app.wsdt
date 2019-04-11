@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Workspace>
+  <ConfigDictionary>
+    
+  <CurrentConfigs><Project>app/AX107X_Debug</Project></CurrentConfigs></ConfigDictionary>
+  <Desktop>
+    <Static>
+      <Workspace>
+        <ColumnWidths>
+          
+          
+          
+          
+        <Column0>205</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
+      </Workspace>
+      <Build>
+        
+        
+        
+        
+      <ColumnWidth0>46</ColumnWidth0><ColumnWidth1>1285</ColumnWidth1><ColumnWidth2>367</ColumnWidth2><ColumnWidth3>91</ColumnWidth3></Build>
+    <Find-in-Files><ColumnWidth0>433</ColumnWidth0><ColumnWidth1>61</ColumnWidth1><ColumnWidth2>742</ColumnWidth2></Find-in-Files><TerminalIO/><CodeCoveragePlugin/><Profiling/><Debug-Log/></Static>
+    <Windows>
+      
+      
+    <Wnd0>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-1831-19835</Identity>
+            <TabName>Workspace</TabName>
+            <Factory>Workspace</Factory>
+            <Session>
+              
+            <NodeDict><ExpandedNode>app</ExpandedNode><ExpandedNode>app/Output</ExpandedNode></NodeDict></Session>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd0><Wnd1>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-22409-25795</Identity>
+            <TabName>Build</TabName>
+            <Factory>Build</Factory>
+            <Session/>
+          </Tab>
+        <Tab><Identity>TabID-17829-13046</Identity><TabName>Find in Files</TabName><Factory>Find-in-Files</Factory><Session/></Tab><Tab><Identity>TabID-5876-6915</Identity><TabName>Debug Log</TabName><Factory>Debug-Log</Factory><Session/></Tab></Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd1></Windows>
+    <Editor>
+      
+      
+      
+      
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>I:\a_wangqun\&#x5B87;&#x6CF0;_&#x7761;&#x7720;&#x4eeA;_KNP08\18BC073A_&#x5B87;&#x6CF0;_AX1071_xxxxxxxx_20180629_Merlin_1\app\Debug\List\app.map</Filename><XPos>0</XPos><YPos>6193</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>I:\a_wangqun\&#x5B87;&#x6CF0;_&#x7761;&#x7720;&#x4eeA;_KNP08\18BC073A_&#x5B87;&#x6CF0;_AX1071_xxxxxxxx_20180629_Merlin_1\app\main.c</Filename><XPos>0</XPos><YPos>58</YPos><SelStart>1550</SelStart><SelEnd>1550</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>I:\a_wangqun\&#x5B87;&#x6CF0;_&#x7761;&#x7720;&#x4eeA;_KNP08\18BC073A_&#x5B87;&#x6CF0;_AX1071_xxxxxxxx_20180629_Merlin_1\app\user\user_init.c</Filename><XPos>0</XPos><YPos>107</YPos><SelStart>3028</SelStart><SelEnd>3028</SelEnd></Tab><ActiveTab>2</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>I:\a_wangqun\&#x5B87;&#x6CF0;_&#x7761;&#x7720;&#x4eeA;_KNP08\18BC073A_&#x5B87;&#x6CF0;_AX1071_xxxxxxxx_20180629_Merlin_1\app\task\task_flash.c</Filename><XPos>0</XPos><YPos>402</YPos><SelStart>8863</SelStart><SelEnd>8863</SelEnd></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-01e7fae8><key>iaridepm1</key></Toolbar-01e7fae8></Sizes></Row0></Top><Left><Row0><Sizes><Wnd0><Rect><Top>-2</Top><Left>-2</Left><Bottom>662</Bottom><Right>279</Right><x>-2</x><y>-2</y><xscreen>0</xscreen><yscreen>0</yscreen><sizeHorzCX>0</sizeHorzCX><sizeHorzCY>0</sizeHorzCY><sizeVertCX>146354</sizeVertCX><sizeVertCY>665330</sizeVertCY></Rect></Wnd0></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd1><Rect><Top>-2</Top><Left>-2</Left><Bottom>291</Bottom><Right>1922</Right><x>-2</x><y>-2</y><xscreen>1924</xscreen><yscreen>293</yscreen><sizeHorzCX>1002083</sizeHorzCX><sizeHorzCY>293587</sizeHorzCY><sizeVertCX>0</sizeVertCX><sizeVertCY>0</sizeVertCY></Rect></Wnd1></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+  </Desktop>
+</Workspace>
+
+

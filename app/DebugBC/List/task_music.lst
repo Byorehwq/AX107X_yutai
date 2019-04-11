@@ -1,0 +1,2191 @@
+##############################################################################
+#                                                                            #
+# IAR 8051 C/C++ Compiler V7.20H/W32                   27/Jun/2018  22:48:35 #
+# Copyright 2004-2006 IAR Systems. All rights reserved.                      #
+#                                                                            #
+#    Core               =  plain                                             #
+#    Code model         =  near                                              #
+#    Data model         =  large                                             #
+#    Calling convention =  extended stack reentrant                          #
+#    Constant location  =  code                                              #
+#    Extended stack     =  enabled                                           #
+#    Dptr setup         =  1,16                                              #
+#    Source file        =  task/task_music.c                                 #
+#    Command line       =  -f option_c51.cfg (-ICOMMON\ -IINC\ -Iconfig\     #
+#                          -Iapi\ -Ifm\ -Ifat\ -Idisplay\                    #
+#                          -Idisplay\theme_default\ -Idisplay\led\           #
+#                          -Idisplay\lcd\ -Itask\ -Iuser\ -Imem\ -Imodule\   #
+#                          -Ikey\ -Istartmusic\ -Ispi\ -e -z9 --core=plain   #
+#                          --dptr=16,1 --data_model=large --code_model=near  #
+#                          --calling_convention=ext_stack_reentrant          #
+#                          --place_constants=code --nr_virtual_regs 20       #
+#                          --extended_stack) -DAX207X_TAG --debug -lC        #
+#                          DebugBC/List -o DebugBC/Obj/task_music.r51        #
+#                          task/task_music.c                                 #
+#    List file          =  DebugBC/List/task_music.lst                       #
+#    Object file        =  DebugBC/Obj/task_music.r51                        #
+#                                                                            #
+#                                                                            #
+##############################################################################
+
+R:\18BC073A_宇泰_AX1071_xxxxxxxx_20180627\app\task\task_music.c
+      1          /*****************************************************************************
+      2           * Module    : Task
+      3           * File      : task_music.c
+      4           * Author    : Hanny
+      5           * Email     : coldney@yahoo.com.cn
+      6           * Function  : 音乐播放任务流程
+      7           *****************************************************************************/
+      8          #include "include.h"
+      9          
+     10          #define DBG_MUSIC(...)              printf(__VA_ARGS__)
+     11          #define MUSIC_ENCRYPT_EN            0
+     12          
+
+   \                                 In segment XDATA_Z, align 1, keep-with-next
+   \   000000                REQUIRE __INIT_XDATA_Z
+     13          type_t_msc t_msc;
+   \                     t_msc:
+   \   000000                DS 1
+
+   \                                 In segment XDATA_Z, align 1, keep-with-next
+   \   000000                REQUIRE __INIT_XDATA_Z
+     14          bool first;
+   \                     first:
+   \   000000                DS 1
+     15          extern bool SD_FLAG;
+     16          
+     17          //扫描设备文件
+     18          #pragma location="TASK_MUSIC_SEG"
+     19          static bool task_music_scan_file(void)
+     20          {
+     21          	if(task_music_scan_music())             //扫描音乐文件夹
+     22          	{
+     23          		task_ctl.work_sta = TASK_MUSIC;
+     24          		return true;
+     25          	}
+     26          
+     27          	task_ctl.work_sta = TASK_EXIT;          //设备无效，返回主菜单
+     28          	return false;
+     29          }
+     30          
+     31          //重新挂载文件系统
+     32          #pragma location="TASK_MUSIC_SEG"
+
+   \                                 In segment TASK_MUSIC_SEG, align 1, keep-with-next
+     33          static bool task_music_remount_device(void)
+   \                     ??task_music_remount_device:
+     34          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     35          	//music_stop();                           //停止当前音乐
+     36          	//printf("[%02x]\n",fs_cur_dev());
+     37          //#ifdef AX207X_TAG
+     38          	printf("remount%d,%d\n",fs_cur_dev(),device_is_actived(DEVICE_SDMMC1));
+   \   000000                ; Setup parameters for call to function device_is_actived
+   \   000000   7901         MOV     R1,#0x1
+   \   000002   12....       LCALL   device_is_actived
+   \   000005                ; Setup parameters for call to function my_printf
+   \   000005   E4           CLR     A
+   \   000006   92E0         MOV     0xE0 /* A   */.0,C
+   \   000008   F582         MOV     DPL,A
+   \   00000A   758300       MOV     DPH,#0x0
+   \   00000D   C082         PUSH    DPL
+   \   00000F   C083         PUSH    DPH
+   \   000011                ; Setup parameters for call to function fs_cur_dev
+   \   000011   12....       LCALL   ?Subroutine2
+   \                     ??CrossCallReturnLabel_5:
+   \   000014   F582         MOV     DPL,A
+   \   000016   758300       MOV     DPH,#0x0
+   \   000019   C082         PUSH    DPL
+   \   00001B   C083         PUSH    DPH
+   \   00001D   7A..         MOV     R2,#(`?<Constant "remount%d,%d\\n">` & 0xff)
+   \   00001F   7B..         MOV     R3,#((`?<Constant "remount%d,%d\\n">` >> 8) & 0xff)
+   \   000021   12....       LCALL   my_printf
+   \   000024   74FC         MOV     A,#-0x4
+   \   000026   12....       LCALL   ?DEALLOC_EXT_STACK8
+     39          	return false;	// Merlin 2015/06/30
+   \   000029   C3           CLR     C
+   \   00002A   22           RET
+     40          #if !ADD_BY_WUPENGFEI
+     41          	if((fs_cur_dev() == DEVICE_SDMMC) && (device_is_actived(DEVICE_SDMMC1)))
+     42          	{
+     43          		t_fat.dev_new = DEVICE_SDMMC1;
+     44          	}
+     45          //#endif
+     46          	if(!device_mount() || !task_music_scan_file())
+     47          	{
+     48          		return false;
+     49          	}
+     50          	return true;
+     51          #endif
+     52          }
+
+   \                                 In segment TASK_MUSIC_SEG, align 1, keep-with-next
+   \                     ?Subroutine2:
+   \   000000   12....       LCALL   fs_cur_dev
+   \   000003   E9           MOV     A,R1
+   \   000004   22           RET
+     53          
+     54          //选择下一个设备播放
+     55          #pragma location="TASK_MUSIC_SEG"
+
+   \                                 In segment TASK_MUSIC_SEG, align 1, keep-with-next
+     56          bool task_music_next_device(void)
+   \                     task_music_next_device:
+     57          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     58          	if(!device_switch() || !task_music_remount_device())
+   \   000000                ; Setup parameters for call to function device_switch
+   \   000000   12....       LCALL   device_switch
+   \   000003   5005         JNC     ??task_music_next_device_0
+   \   000005                ; Setup parameters for call to function task_music_remount_device
+   \   000005   12....       LCALL   ??task_music_remount_device
+   \   000008   4002         JC      ??task_music_next_device_1
+     59          	{
+     60          		return false;
+   \                     ??task_music_next_device_0:
+   \   00000A   C3           CLR     C
+   \   00000B   22           RET
+     61          	}
+     62          #if USE_BREAK_POINT
+     63          	b_msc.break_init = 1;
+   \                     ??task_music_next_device_1:
+   \   00000C   12....       LCALL   ?Subroutine0
+     64          #endif
+     65          
+     66          	mem_ctl.dev = fs_cur_dev();
+     67          	mem_read_music_num();                   //打开的文件编号
+     68          	b_msc.file_change = 1;                  //需要打开一个新文件
+   \                     ??CrossCallReturnLabel_0:
+   \   00000F   D2..         SETB    b_msc.0
+     69          	return true;
+   \   000011   D3           SETB    C
+   \   000012   22           RET
+     70          }
+
+   \                                 In segment TASK_MUSIC_SEG, align 1, keep-with-next
+   \                     ?Subroutine0:
+   \   000000   D2..         SETB    b_msc.3
+   \   000002                ; Setup parameters for call to function fs_cur_dev
+   \   000002                ; Setup parameters for call to function fs_cur_dev
+   \   000002   12....       LCALL   ?Subroutine2
+   \                     ??CrossCallReturnLabel_10:
+   \   000005   90....       MOV     DPTR,#mem_ctl
+   \   000008   F0           MOVX    @DPTR,A
+   \   000009                ; Setup parameters for call to function mem_read_music_num
+   \   000009                ; Setup parameters for call to function mem_read_music_num
+   \   000009   12....       LCALL   mem_read_music_num
+   \   00000C   22           RET
+     71          
+     72          #if AUTO_CHANGE_DEVICE
+     73          //自动下一曲到下一设备播放
+     74          #pragma location="TASK_MUSIC_SEG"
+     75          static bool task_music_auto_device(void)
+     76          {
+     77          	u_msc.music_num = 1;
+     78          	mem_write_file_change();
+     79          
+     80          #if USE_BREAK_POINT
+     81          	task_music_break_save(0);
+     82          #endif
+     83          
+     84          	if(device_switch())                     //检查是否有下一设备
+     85          	{
+     86          		if(!task_music_remount_device())    //下一设备挂载文件系统
+     87          		{
+     88          			if(!task_music_next_device())   //挂载不成功，选回原设备
+     89          			{
+     90          				return false;
+     91          			}
+     92          		}
+     93          	}
+     94          	return true;
+     95          }
+     96          #endif
+     97          
+     98          //初始化第music_num首歌
+     99          #pragma location="MUSIC_SEG"
+    100          static bool task_music_init(u16 music_num)
+    101          {
+    102          	if(!f_open(music_num))
+    103          	{
+    104          		return false;
+    105          	}
+    106          
+    107          #if DIR_SWITCH_EN
+    108          	u_msc.dir_num = t_fat.dir_count;
+    109          #endif
+    110          
+    111          #if MUSIC_ENCRYPT_EN
+    112          	music_check_encrypt();//判断是否为加密mp3
+    113          	music_head_decrypt();
+    114          #endif
+    115          
+    116          #if WAV_SUPPORT
+    117          	u_msc.music_type = music_init();
+    118          #else
+    119          	u_msc.music_type = music_init_mp3_only();
+    120          #endif
+    121          
+    122          	//printf("mtype:%d\n", u_msc.music_type);
+    123          #if WAV_SUPPORT
+    124          	if(u_msc.music_type == TYPE_WAV)
+    125          	{
+    126          		set_sys_clk(SYS_48M);               //WAV时使用48M时钟
+    127          	}
+    128          	else
+    129          	{
+    130          		set_sys_clk(SYS_24M);
+    131          	}
+    132          #endif
+    133          	if(TYPE_NONE == u_msc.music_type)
+    134          	{
+    135          		return false;
+    136          	}
+    137          	return true;
+    138          }
+    139          
+    140          #if DIR_SWITCH_EN
+    141          //0:下一文件夹/1:上一文件夹
+    142          #pragma location="TASK_MUSIC_SEG"
+    143          void task_music_dir(bool direct)
+    144          {
+    145          	if(u_msc.dir_total <= 1)
+    146          	{
+    147          		return;
+    148          	}
+    149          
+    150          	u_msc.dir_num = loop_auto(direct, u_msc.dir_num, 1, u_msc.dir_total);
+    151          
+    152          	music_stop();
+    153          	f_open_dir(u_msc.dir_num);
+    154          	b_msc.file_change = 1;
+    155          	u_msc.music_num = t_fat.file_count;
+    156          }
+    157          #endif
+    158          
+    159          //0:下一曲/1:上一曲
+    160          #pragma location="TASK_MUSIC_SEG"
+
+   \                                 In segment TASK_MUSIC_SEG, align 1, keep-with-next
+    161          static void task_music_direct(bool direct)
+   \                     ??task_music_direct:
+    162          {
+   \   000000   C0..         PUSH    ?V0 + 0
+   \   000002   C0..         PUSH    ?V0 + 1
+   \   000004   C0..         PUSH    ?VB
+   \   000006                ; Saved register size: 3
+   \   000006                ; Auto size: 0
+   \   000006   A2F0         MOV     C,B.0
+   \   000008   92..         MOV     ?VB.0,C
+    163          #if (MUSIC_PLAYMODE && (PLAYMODE_NUM == PLAYMODE_FOUR))
+    164          	u16 dir_start, dir_last;
+    165          #endif
+    166          
+    167          	b_msc.file_change = 1;
+    168          	b_msc.file_prev_next = direct;                       //设置方向，供解码出错时使用
+   \   00000A   92..         MOV     b_msc.2,C
+   \   00000C   D2..         SETB    b_msc.0
+    169          
+    170          	switch(sys_ctl.mode_play)
+   \   00000E   90....       MOV     DPTR,#sys_ctl
+   \   000011   E0           MOVX    A,@DPTR
+   \   000012   12....       LCALL   ?UC_SWITCH_DENSE
+   \                     `?<Jumptable for task_music_direct>_0`:
+   \   000015   00           DB        0
+   \   000016   00           DB        0
+   \   000017   ....         DW        ??task_music_direct_1
+   \   000019   ....         DW        ??task_music_direct_2
+    171          	{
+    172          	case ITEM_LOOP_ALL:
+    173          #if MUSIC_PLAYMODE
+    174          	case ITEM_LOOP_SINGLE:
+    175          #endif
+    176          		if(direct)      //上一曲
+    177          		{
+    178          #if AUTO_CHANGE_DEVICE
+    179          			if(u_msc.music_num == 1)
+    180          			{
+    181          				if(task_music_auto_device())
+    182          				{
+    183          					u_msc.music_num = u_msc.music_total;//自动上一曲到下一设备播放
+    184          					b_msc.file_change = 1;              //需要打开一个新文件
+    185          					return;
+    186          				}
+    187          			}
+    188          #endif
+    189          		}
+    190          		else            //下一曲
+    191          		{
+    192          #if AUTO_CHANGE_DEVICE
+    193          			if(u_msc.music_num == u_msc.music_total)
+    194          			{
+    195          				if(task_music_auto_device())
+    196          				{
+    197          					u_msc.music_num = 1;                //自动下一曲到下一设备播放
+    198          					b_msc.file_change = 1;              //需要打开一个新文件
+    199          					return;
+    200          				}
+    201          			}
+    202          #endif
+    203          		}
+    204          		//全部循环
+    205          		u_msc.music_num = loop_auto(direct, u_msc.music_num, 1, u_msc.music_total);
+   \                     ??task_music_direct_2:
+   \   00001B                ; Setup parameters for call to function loop_auto
+   \   00001B   90....       MOV     DPTR,#(u_msc + 4)
+   \   00001E   12....       LCALL   ?PUSH_ISTACK_X_TWO
+   \   000021   7C01         MOV     R4,#0x1
+   \   000023   FD           MOV     R5,A
+   \   000024   90....       MOV     DPTR,#u_msc
+   \   000027   E0           MOVX    A,@DPTR
+   \   000028   FA           MOV     R2,A
+   \   000029   A3           INC     DPTR
+   \   00002A   E0           MOVX    A,@DPTR
+   \   00002B   FB           MOV     R3,A
+   \   00002C   A2..         MOV     C,?VB.0
+   \   00002E   92F0         MOV     B.0,C
+   \   000030   12....       LCALL   loop_auto
+   \   000033   D0E0         POP     A
+   \   000035   D0E0         POP     A
+   \   000037   90....       MOV     DPTR,#u_msc
+   \   00003A   EA           MOV     A,R2
+   \   00003B   F0           MOVX    @DPTR,A
+   \   00003C   A3           INC     DPTR
+   \   00003D   EB           MOV     A,R3
+   \   00003E   F0           MOVX    @DPTR,A
+    206          		break;
+    207          #if (MUSIC_PLAYMODE && (PLAYMODE_NUM == PLAYMODE_FOUR))
+    208          	case ITEM_LOOP_FOLDER:
+    209          		//目录循环
+    210          		music_stop();
+    211          		dir_start = f_get_dirstart();           //当前目录第一个文件的编号
+    212          		dir_last = dir_start + f_get_dirtotal() - 1;
+    213          		u_msc.music_num = loop_auto(direct, u_msc.music_num, dir_start, dir_last);
+    214          		break;
+    215          	case ITEM_LOOP_RAMDOM:
+    216          #ifdef AX207X_TAG
+    217          		u_msc.music_num = rand(u_msc.music_total) + 1;
+    218          #else
+    219          		u_msc.music_num = rand(u_msc.music_total, u_msc.music_num) + 1;
+    220          #endif
+    221          		break;
+    222          #endif
+    223          	}
+    224          }
+   \                     ??task_music_direct_1:
+   \   00003F   D0..         POP     ?VB
+   \   000041   02....       LJMP    ??Subroutine3_0
+
+   \                                 In segment TASK_MUSIC_SEG, align 1, keep-with-next
+   \                     ?Subroutine3:
+   \   000000   D0..         POP     ?V0 + 3
+   \   000002   D0..         POP     ?V0 + 2
+   \                     ??Subroutine3_0:
+   \   000004   D0..         POP     ?V0 + 1
+   \   000006   D0..         POP     ?V0 + 0
+   \   000008   22           RET
+    225          
+    226          #if !REPEAT_AS_ONE
+    227          //自动下一曲
+    228          #pragma location="TASK_MUSIC_SEG"
+    229          static void task_music_auto_next(void)
+    230          {
+    231          #if !ADD_BY_WUPENGFEI
+    232          	if(music_get_mtime() < 5)
+    233          	{
+    234          		//播放不足500ms，认为本歌错误
+    235          		if(b_msc.file_prev_next)                //初始化失败，重新读取下一个文件
+    236          		{
+    237          			task_music_direct(1);
+    238          		}
+    239          		else
+    240          		{
+    241          			task_music_direct(0);
+    242          		}
+    243          	}
+    244          	else
+    245          #endif
+    246          	{
+    247          		b_msc.file_prev_next = 0;                       //清除方向
+    248          		b_msc.file_change = 1;
+    249          		if(sys_ctl.mode_play != ITEM_LOOP_SINGLE)
+    250          		{
+    251          			task_music_direct(0);
+    252          		}
+    253          	}
+    254          }
+    255          #endif
+    256          
+    257          //计算显示的时间
+    258          #pragma location="TASK_MUSIC_SEG"
+
+   \                                 In segment TASK_MUSIC_SEG, align 1, keep-with-next
+    259          void task_music_cal_time(void)
+   \                     task_music_cal_time:
+    260          {
+   \   000000   740C         MOV     A,#0xc
+   \   000002   12....       LCALL   ?FUNC_ENTER_SP
+   \   000005                ; Saved register size: 15
+   \   000005                ; Auto size: 0
+    261          	u32 cur_sec = music_get_mtime() / 10;           //当前播放时间，精确到0.1s
+   \   000005                ; Setup parameters for call to function music_get_mtime
+   \   000005   12....       LCALL   music_get_mtime
+   \   000008   8A..         MOV     ?V0 + 4,R2
+   \   00000A   8B..         MOV     ?V0 + 5,R3
+   \   00000C   8C..         MOV     ?V0 + 6,R4
+   \   00000E   8D..         MOV     ?V0 + 7,R5
+   \   000010   90....       MOV     DPTR,#__Constant_a
+   \   000013   78..         MOV     R0,#?V0 + 0
+   \   000015   12....       LCALL   ?L_MOV_C
+   \   000018   78..         MOV     R0,#?V0 + 4
+   \   00001A   79..         MOV     R1,#?V0 + 0
+   \   00001C   12....       LCALL   ?UL_DIV_MOD
+    262          	u_msc.cur_time.min = cur_sec / 60;
+   \   00001F   85....       MOV     ?V0 + 0,?V0 + 4
+   \   000022   85....       MOV     ?V0 + 1,?V0 + 5
+   \   000025   85....       MOV     ?V0 + 2,?V0 + 6
+   \   000028   85....       MOV     ?V0 + 3,?V0 + 7
+   \   00002B   90....       MOV     DPTR,#__Constant_3c
+   \   00002E   78..         MOV     R0,#?V0 + 8
+   \   000030   12....       LCALL   ?L_MOV_C
+   \   000033   78..         MOV     R0,#?V0 + 0
+   \   000035   79..         MOV     R1,#?V0 + 8
+   \   000037   12....       LCALL   ?UL_DIV_MOD
+   \   00003A   E5..         MOV     A,?V0 + 0
+   \   00003C   90....       MOV     DPTR,#(u_msc + 7)
+   \   00003F   F0           MOVX    @DPTR,A
+    263          	u_msc.cur_time.sec = cur_sec % 60;
+   \   000040   90....       MOV     DPTR,#__Constant_3c
+   \   000043   78..         MOV     R0,#?V0 + 0
+   \   000045   12....       LCALL   ?L_MOV_C
+   \   000048   78..         MOV     R0,#?V0 + 4
+   \   00004A   79..         MOV     R1,#?V0 + 0
+   \   00004C   12....       LCALL   ?UL_DIV_MOD
+   \   00004F   E5..         MOV     A,?V0 + 0
+   \   000051   90....       MOV     DPTR,#(u_msc + 8)
+   \   000054   F0           MOVX    @DPTR,A
+    264          }
+   \   000055   7F0C         MOV     R7,#0xc
+   \   000057   02....       LJMP    ?FUNC_LEAVE_SP
+    265          
+    266          //打开一首新的音乐
+    267          #pragma location="TASK_MUSIC_SEG"
+
+   \                                 In segment TASK_MUSIC_SEG, align 1, keep-with-next
+    268          void task_music_new(void)
+   \                     task_music_new:
+    269          {
+   \   000000   7404         MOV     A,#0x4
+   \   000002   12....       LCALL   ?FUNC_ENTER_SP
+   \   000005                ; Saved register size: 7
+   \   000005                ; Auto size: 0
+    270          	u16 err_cnt = 0;
+   \   000005   F5..         MOV     ?V0 + 2,A
+   \   000007   F5..         MOV     ?V0 + 3,A
+    271          	u16 err_total;
+    272          	if(sys_ctl.mode_play == ITEM_LOOP_RAMDOM)
+   \   000009   90....       MOV     DPTR,#sys_ctl
+   \   00000C   E0           MOVX    A,@DPTR
+   \   00000D   6401         XRL     A,#0x1
+   \   00000F   90....       MOV     DPTR,#(u_msc + 4)
+   \   000012   700E         JNZ     ??task_music_new_0
+    273          	{
+    274          		err_total = u_msc.music_total * 2;          //增大随机播放时错误歌曲的循环次数
+   \   000014   E0           MOVX    A,@DPTR
+   \   000015   FE           MOV     R6,A
+   \   000016   A3           INC     DPTR
+   \   000017   E0           MOVX    A,@DPTR
+   \   000018   FF           MOV     R7,A
+   \   000019   EE           MOV     A,R6
+   \   00001A   C3           CLR     C
+   \   00001B   33           RLC     A
+   \   00001C   FE           MOV     R6,A
+   \   00001D   EF           MOV     A,R7
+   \   00001E   33           RLC     A
+   \                     ??task_music_new_1:
+   \   00001F   FF           MOV     R7,A
+   \   000020   8038         SJMP    ??task_music_new_2
+    275          	}
+    276          	else
+    277          	{
+    278          		err_total = u_msc.music_total;
+   \                     ??task_music_new_0:
+   \   000022   E0           MOVX    A,@DPTR
+   \   000023   FE           MOV     R6,A
+   \   000024   A3           INC     DPTR
+   \   000025   E0           MOVX    A,@DPTR
+   \   000026   80F7         SJMP    ??task_music_new_1
+   \                     ??task_music_new_3:
+   \   000028                ; Setup parameters for call to function music_init_mp3_only
+    279          	}
+    280          	while(device_is_actived(fs_cur_dev()) && b_msc.file_change)
+    281          	{
+    282          #if REPEAT_AS_ONE
+    283          		if(b_msc.repeat_as_one_flag == 0)
+    284          		{
+    285          			music_stop();                               //停止播放器
+    286          		}
+    287          		else
+    288          		{
+    289          			b_msc.repeat_as_one_flag = 0;
+    290          		}
+    291          #else
+    292          		music_stop();//停止播放器
+    293          #endif
+    294          		b_msc.file_change = 0;
+    295          		//播放指定歌曲
+    296          
+    297          		sound_ctl_clr();
+    298          		if(task_music_init(u_msc.music_num))
+   \   000028   12....       LCALL   music_init_mp3_only
+   \   00002B   E9           MOV     A,R1
+   \   00002C   90....       MOV     DPTR,#(u_msc + 6)
+   \   00002F   F0           MOVX    @DPTR,A
+   \   000030   6044         JZ      ??task_music_new_4
+    299          		{
+    300          			//task_music_clear_a();                   //清除A点
+    301          			printf("music_play[%d][%d]\n",fs_cur_dev(),u_msc.music_num);
+   \   000032                ; Setup parameters for call to function fs_cur_dev
+   \   000032   12....       LCALL   ?Subroutine2
+   \                     ??CrossCallReturnLabel_6:
+   \   000035   FA           MOV     R2,A
+   \   000036                ; Setup parameters for call to function my_printf
+   \   000036   90....       MOV     DPTR,#u_msc
+   \   000039   12....       LCALL   ?PUSH_ISTACK_X_TWO
+   \   00003C   8A..         MOV     ?V0 + 0,R2
+   \   00003E   F5..         MOV     ?V0 + 1,A
+   \   000040   C0..         PUSH    ?V0 + 0
+   \   000042   C0..         PUSH    ?V0 + 1
+   \   000044   7A..         MOV     R2,#(`?<Constant "music_play[%d][%d]\\n">` & 0xff)
+   \   000046   7B..         MOV     R3,#((`?<Constant "music_play[%d][%d]\\n">` >> 8) & 0xff)
+   \   000048   12....       LCALL   my_printf
+   \   00004B   74FC         MOV     A,#-0x4
+   \   00004D   12....       LCALL   ?DEALLOC_EXT_STACK8
+    302          			dac_fade_in(0);
+   \   000050                ; Setup parameters for call to function dac_fade_in
+   \   000050   C2F0         CLR     B.0
+   \   000052   12....       LCALL   dac_fade_in
+    303          			music_play();
+   \   000055                ; Setup parameters for call to function music_play
+   \   000055   12....       LCALL   music_play
+    304          
+    305          			b_msc.pause = 0;
+   \   000058   C2..         CLR     b_msc.1
+    306          			//delay_5ms(5);                           //延时一小段时间，试解几帧，计算出相应信息
+    307          		}
+   \                     ??task_music_new_2:
+   \   00005A                ; Setup parameters for call to function device_is_actived
+   \   00005A                ; Setup parameters for call to function fs_cur_dev
+   \   00005A   12....       LCALL   ?Subroutine1
+   \                     ??CrossCallReturnLabel_2:
+   \   00005D   82..         ANL     C,b_msc.0
+   \   00005F   5032         JNC     ??task_music_new_5
+   \   000061                ; Setup parameters for call to function music_stop
+   \   000061   12....       LCALL   music_stop
+   \   000064   C2..         CLR     b_msc.0
+   \   000066                ; Setup parameters for call to function sound_ctl_clr
+   \   000066   12....       LCALL   sound_ctl_clr
+   \   000069                ; Setup parameters for call to function f_open_no_speed
+   \   000069   90....       MOV     DPTR,#u_msc
+   \   00006C   E0           MOVX    A,@DPTR
+   \   00006D   FA           MOV     R2,A
+   \   00006E   A3           INC     DPTR
+   \   00006F   E0           MOVX    A,@DPTR
+   \   000070   FB           MOV     R3,A
+   \   000071   12....       LCALL   f_open_no_speed
+   \   000074   40B2         JC      ??task_music_new_3
+    308          		else
+    309          		{
+    310          			if(!fs_is_mounted() || ++err_cnt >= err_total)       //所有的音乐文件都无法播放
+   \                     ??task_music_new_4:
+   \   000076                ; Setup parameters for call to function fs_is_mounted
+   \   000076   12....       LCALL   fs_is_mounted
+   \   000079   5015         JNC     ??task_music_new_6
+   \   00007B   E5..         MOV     A,?V0 + 2
+   \   00007D   2401         ADD     A,#0x1
+   \   00007F   F5..         MOV     ?V0 + 2,A
+   \   000081   E5..         MOV     A,?V0 + 3
+   \   000083   3400         ADDC    A,#0x0
+   \   000085   F5..         MOV     ?V0 + 3,A
+   \   000087   C3           CLR     C
+   \   000088   E5..         MOV     A,?V0 + 2
+   \   00008A   9E           SUBB    A,R6
+   \   00008B   E5..         MOV     A,?V0 + 3
+   \   00008D   9F           SUBB    A,R7
+   \   00008E   4008         JC      ??task_music_new_7
+    311          			{
+    312          				//msgbox(STR_FILE_ERROR, NULL);
+    313          				task_ctl.work_sta = TASK_EXIT;      //连续错误文件过多，退出目录播放
+   \                     ??task_music_new_6:
+   \   000090   75..0C       MOV     task_ctl,#0xc
+    314          				break;
+    315          			}
+    316          
+    317          			if(b_msc.file_prev_next)                //初始化失败，重新读取下一个文件
+    318          			{
+    319          				task_music_direct(1);
+    320          			}
+    321          			else
+    322          			{
+    323          				task_music_direct(0);
+    324          			}
+    325          		}
+    326          	}
+    327          }
+   \                     ??task_music_new_5:
+   \   000093   7F04         MOV     R7,#0x4
+   \   000095   02....       LJMP    ?FUNC_LEAVE_SP
+   \                     ??task_music_new_7:
+   \   000098   A2..         MOV     C,b_msc.2
+   \   00009A   5007         JNC     ??task_music_new_8
+   \   00009C                ; Setup parameters for call to function task_music_direct
+   \   00009C   D2F0         SETB    B.0
+   \                     ??task_music_new_9:
+   \   00009E   12....       LCALL   ??task_music_direct
+   \   0000A1   80B7         SJMP    ??task_music_new_2
+   \                     ??task_music_new_8:
+   \   0000A3                ; Setup parameters for call to function task_music_direct
+   \   0000A3   C2F0         CLR     B.0
+   \   0000A5   80F7         SJMP    ??task_music_new_9
+
+   \                                 In segment TASK_MUSIC_SEG, align 1, keep-with-next
+   \                     ?Subroutine1:
+   \   000000   12....       LCALL   fs_cur_dev
+   \   000003   12....       LCALL   device_is_actived
+   \   000006   22           RET
+    328          
+    329          //获取音乐文件的个数
+    330          #pragma location="TASK_MUSIC_SEG"
+    331          static bool task_music_scan_music(void)
+    332          {
+    333          	//配置扫描过滤器为音乐文件夹
+    334          #if FS_SCAN_SPEED_EN
+    335          	f_scan_set(SCAN_SUB_FOLDER|SCAN_SPEED, &file_filter_music, &dir_filter_music);
+    336          #else
+    337          	f_scan_set(SCAN_SUB_FOLDER, &file_filter_music, &dir_filter_music);
+    338          #endif
+    339          	u_msc.music_total = f_gettotal();                   //获取歌曲的总数
+    340          	//printf("total: %d\n", u_msc.music_total);
+    341          #if DIR_SWITCH_EN
+    342          	u_msc.dir_total = t_fat.dir_count;
+    343          #endif
+    344          	return (u_msc.music_total != 0);
+    345          }
+    346          
+    347          //任务事务处理
+    348          #pragma location="TASK_MUSIC_SEG"
+
+   \                                 In segment TASK_MUSIC_SEG, align 1, keep-with-next
+    349          static void task_music_event(void)
+   \                     ??task_music_event:
+    350          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    351          	comm_event(0);                          //调用公共事件
+   \   000000                ; Setup parameters for call to function comm_event
+   \   000000   7900         MOV     R1,#0x0
+   \   000002   12....       LCALL   comm_event
+    352          	music_event();                          //解码需要的事件
+   \   000005                ; Setup parameters for call to function music_event
+   \   000005   12....       LCALL   music_event
+    353          #if TASK_TIPS_EN
+    354          	task_ctl.pre_sta = TASK_MUSIC;
+    355          #endif
+    356          #if USE_IR_NUM
+    357          	if(ocx.event == 1)
+    358          	{
+    359          		ocx.event = 0;
+    360          		if(ocx.number == 0 || ocx.number > u_msc.music_total)
+    361          		{
+    362          			//u_msc.music_num = 1;
+    363          			//msgbox(" err");
+    364          		}
+    365          		else
+    366          		{
+    367          			u_msc.music_num = ocx.number;
+    368          			b_msc.file_prev_next = 0;                       //清除方向
+    369          			b_msc.file_change = 1;
+    370          		}
+    371          	}
+    372          #endif
+    373          
+    374          	//检查设备状态
+    375          	if(!device_is_actived(fs_cur_dev()))
+   \   000008                ; Setup parameters for call to function device_is_actived
+   \   000008                ; Setup parameters for call to function fs_cur_dev
+   \   000008   12....       LCALL   ?Subroutine1
+   \                     ??CrossCallReturnLabel_3:
+   \   00000B   4002         JC      ??task_music_event_1
+    376          	{
+    377          		b_sys.dev_change = 1;               //当前设备无效，设备发生变动
+   \   00000D   D2..         SETB    b_sys.0
+    378          	}
+    379          	if(b_sys.dev_change)
+   \                     ??task_music_event_1:
+   \   00000F   A2..         MOV     C,b_sys.0
+   \   000011   5012         JNC     ??task_music_event_2
+    380          	{
+    381          		device_chg |= BIT(device_music);
+   \   000013   90....       MOV     DPTR,#device_chg
+   \   000016   E0           MOVX    A,@DPTR
+   \   000017   D2E0         SETB    0xE0 /* A   */.0
+   \   000019   F0           MOVX    @DPTR,A
+    382          		music_stop();                       //停止当前音乐
+   \   00001A                ; Setup parameters for call to function music_stop
+   \   00001A   12....       LCALL   music_stop
+    383          		b_msc.file_change = 1;              //需要打开一个新文件
+    384          #if USE_BREAK_POINT
+    385          		b_msc.break_init =1;
+   \   00001D   43..09       ORL     b_msc,#0x9
+    386          		task_music_break_save(1);
+   \   000020                ; Setup parameters for call to function task_music_break_save
+   \   000020   D2F0         SETB    B.0
+   \   000022   12....       LCALL   task_music_break_save
+    387          #endif
+    388          	}
+    389          	if(device_change())
+   \                     ??task_music_event_2:
+   \   000025                ; Setup parameters for call to function device_change
+   \   000025   12....       LCALL   device_change
+   \   000028   E9           MOV     A,R1
+   \   000029   6042         JZ      ??task_music_event_3
+    390          	{
+    391          #if (SYS_MEM == MEM_DEVICE)
+    392          		mem_ctl.dev_mem_ready = 0;          //设备变动，设备记忆无效
+    393          #endif
+    394          		music_stop();                       //停止当前音乐
+   \   00002B                ; Setup parameters for call to function music_stop
+   \   00002B   12....       LCALL   music_stop
+    395          		if((fs_cur_dev() == DEVICE_SDMMC) || ((fs_cur_dev() == DEVICE_SDMMC1) && (u_spi.spi_online == false)))
+   \   00002E                ; Setup parameters for call to function fs_cur_dev
+   \   00002E   12....       LCALL   ?Subroutine2
+   \                     ??CrossCallReturnLabel_7:
+   \   000031   600D         JZ      ??task_music_event_4
+   \   000033                ; Setup parameters for call to function fs_cur_dev
+   \   000033   12....       LCALL   ?Subroutine2
+   \                     ??CrossCallReturnLabel_8:
+   \   000036   6401         XRL     A,#0x1
+   \   000038   700B         JNZ     ??task_music_event_5
+   \   00003A   90....       MOV     DPTR,#(u_spi + 1)
+   \   00003D   E0           MOVX    A,@DPTR
+   \   00003E   7005         JNZ     ??task_music_event_5
+    396          		{
+    397          			sd_stop(1);
+   \                     ??task_music_event_4:
+   \   000040                ; Setup parameters for call to function sd_stop
+   \   000040   D2F0         SETB    B.0
+   \   000042   12....       LCALL   sd_stop
+    398          		}
+    399          		if(!task_music_remount_device())
+   \                     ??task_music_event_5:
+   \   000045                ; Setup parameters for call to function task_music_remount_device
+   \   000045   12....       LCALL   ??task_music_remount_device
+   \   000048   400F         JC      ??task_music_event_6
+    400          		{
+    401          			if(!task_music_next_device())
+   \   00004A                ; Setup parameters for call to function task_music_next_device
+   \   00004A   12....       LCALL   task_music_next_device
+   \   00004D   400A         JC      ??task_music_event_6
+    402          			{			
+    403          				task_ctl.work_sta = TASK_EXIT;      //设备无效，退出
+   \   00004F   75..0C       MOV     task_ctl,#0xc
+    404          				//showhello();	// Merlin 移除, 因为进入每个 Task时会显示对应的信息
+    405          				if(fs_cur_dev() == DEVICE_SDMMC)
+   \   000052                ; Setup parameters for call to function fs_cur_dev
+   \   000052   12....       LCALL   ?Subroutine2
+   \                     ??CrossCallReturnLabel_9:
+   \   000055   7002         JNZ     ??task_music_event_6
+    406          				{
+    407          					b_sys.modeswitch_flag = 1;
+   \   000057   D2..         SETB    b_sys.2
+    408          				}
+    409          			}
+    410          		}
+    411          		b_msc.file_change = 1;                  //需要打开一个新文件
+   \                     ??task_music_event_6:
+   \   000059   D2..         SETB    b_msc.0
+    412          		device_chg |= BIT(device_music);
+   \   00005B   90....       MOV     DPTR,#device_chg
+   \   00005E   E0           MOVX    A,@DPTR
+   \   00005F   D2E0         SETB    0xE0 /* A   */.0
+   \   000061   F0           MOVX    @DPTR,A
+    413          
+    414          		if(b_dac.mute_en)                       //解除MUTE
+   \   000062   A2..         MOV     C,b_dac.1
+   \   000064   5003         JNC     ??task_music_event_7
+    415          		{
+    416          			mute_disable();
+   \   000066                ; Setup parameters for call to function mute_disable
+   \   000066   12....       LCALL   mute_disable
+    417          		}
+    418          #if USE_BREAK_POINT
+    419          		b_msc.break_init = 1;
+   \                     ??task_music_event_7:
+   \   000069   12....       LCALL   ?Subroutine0
+    420          #endif
+    421          		mem_ctl.dev = fs_cur_dev();
+    422          		mem_read_music_num();                   //打开的文件编
+    423          #if MUSIC_SWITCH_DEV
+    424          		t_msc.mode = 0;                             //用来切换模式
+    425          #endif
+    426          		return;
+   \                     ??CrossCallReturnLabel_1:
+   \   00006C   22           RET
+    427          	}
+    428          
+    429          	//打开新文件
+    430          	if(b_msc.file_change)
+   \                     ??task_music_event_3:
+   \   00006D   A2..         MOV     C,b_msc.0
+   \   00006F   5032         JNC     ??task_music_event_8
+    431          	{
+    432          		b_dac.mute_en = 1; user_set_mute();	// 开始播放
+   \   000071   D2..         SETB    b_dac.1
+   \   000073                ; Setup parameters for call to function user_set_mute
+   \   000073   12....       LCALL   user_set_mute
+    433          
+    434          #if REPEAT_AS_ONE
+    435          		if(b_msc.repeat_as_one_flag == 0)
+    436          #endif
+    437          		{
+    438          			// music_stop();
+    439          			dac_fade_in(0);
+   \   000076                ; Setup parameters for call to function dac_fade_in
+   \   000076   C2F0         CLR     B.0
+   \   000078   12....       LCALL   dac_fade_in
+    440          		}
+    441          //#if (DISP_TYPE==DISP_LED)
+    442          		ocx.led_sta = LED_STA_ON;
+   \   00007B   78..         MOV     R0,#(ocx + 17)
+   \   00007D   7601         MOV     @R0,#0x1
+    443          //#endif
+    444          #if USE_BREAK_POINT
+    445          		if(b_msc.break_init)
+   \   00007F   A2..         MOV     C,b_msc.3
+   \   000081   5003         JNC     ??task_music_event_9
+    446          		{
+    447          			mem_read_music_break();                 //如果SD_CMD与IIC复用，需在读文件前读出断点信息
+   \   000083                ; Setup parameters for call to function read_music_break_rtcram
+   \   000083   12....       LCALL   read_music_break_rtcram
+    448          		}
+    449          #endif
+    450          		task_music_new();
+   \                     ??task_music_event_9:
+   \   000086                ; Setup parameters for call to function task_music_new
+   \   000086   12....       LCALL   task_music_new
+    451          		mem_write_file_change();                    //文件初始化成功后再保存曲目
+   \   000089                ; Setup parameters for call to function mem_write_file_change
+   \   000089   12....       LCALL   mem_write_file_change
+    452          		//shownum(u_msc.music_num);
+    453          		if(device_chg)
+   \   00008C   90....       MOV     DPTR,#device_chg
+   \   00008F   E0           MOVX    A,@DPTR
+   \   000090   6008         JZ      ??task_music_event_10
+    454          		{
+    455          			ocx_show_device();
+   \   000092                ; Setup parameters for call to function ocx_show_device
+   \   000092   12....       LCALL   ocx_show_device
+    456          			device_chg = 0;
+   \   000095   E4           CLR     A
+   \   000096   90....       MOV     DPTR,#device_chg
+   \   000099   F0           MOVX    @DPTR,A
+    457          		}
+    458          #if AB_REPEAT_EN
+    459          		u_msc.repeat = 0;
+    460          		task_music_set_a();
+    461          #endif
+    462          #if USE_BREAK_POINT
+    463          		if(b_msc.break_init)
+   \                     ??task_music_event_10:
+   \   00009A   A2..         MOV     C,b_msc.3
+   \   00009C   5005         JNC     ??task_music_event_8
+    464          		{
+    465          			b_msc.break_init = 0;
+   \   00009E   C2..         CLR     b_msc.3
+    466          			task_music_break_init();
+   \   0000A0                ; Setup parameters for call to function task_music_break_init
+   \   0000A0   12....       LCALL   task_music_break_init
+    467          		}
+    468          #endif
+    469          	}
+    470          
+    471          	//计算当前显示的时间
+    472          	task_music_cal_time();
+   \                     ??task_music_event_8:
+   \   0000A3                ; Setup parameters for call to function task_music_cal_time
+   \   0000A3   12....       LCALL   task_music_cal_time
+    473          
+    474          	//判断音乐的播放状态
+    475          	if(music_get_status() <= STATUS_PLAY_STOPPING)
+   \   0000A6                ; Setup parameters for call to function music_get_status
+   \   0000A6   12....       LCALL   music_get_status
+   \   0000A9   E9           MOV     A,R1
+   \   0000AA   C3           CLR     C
+   \   0000AB   9402         SUBB    A,#0x2
+   \   0000AD   5032         JNC     ??task_music_event_11
+    476          	{
+    477                  if(device_is_actived(fs_cur_dev())) {
+   \   0000AF                ; Setup parameters for call to function device_is_actived
+   \   0000AF                ; Setup parameters for call to function fs_cur_dev
+   \   0000AF   12....       LCALL   ?Subroutine1
+   \                     ??CrossCallReturnLabel_4:
+   \   0000B2   502A         JNC     ??task_music_event_12
+    478                      DBG_MUSIC("auto_next %d\n", music_get_status());
+   \   0000B4                ; Setup parameters for call to function my_printf
+   \   0000B4                ; Setup parameters for call to function music_get_status
+   \   0000B4   12....       LCALL   music_get_status
+   \   0000B7   E9           MOV     A,R1
+   \   0000B8   F582         MOV     DPL,A
+   \   0000BA   758300       MOV     DPH,#0x0
+   \   0000BD   C082         PUSH    DPL
+   \   0000BF   C083         PUSH    DPH
+   \   0000C1   7A..         MOV     R2,#(`?<Constant "auto_next %d\\n">` & 0xff)
+   \   0000C3   7B..         MOV     R3,#((`?<Constant "auto_next %d\\n">` >> 8) & 0xff)
+   \   0000C5   12....       LCALL   my_printf
+   \   0000C8   D0E0         POP     A
+   \   0000CA   D0E0         POP     A
+    479          #if MUSIC_STOP
+    480                      if (!b_msc.stop)
+    481          #endif
+    482                      {
+    483          #if !REPEAT_AS_ONE
+    484                          task_music_auto_next();                      //本曲播放完毕，播放下一曲
+   \   0000CC   C2..         CLR     b_msc.2
+   \   0000CE   D2..         SETB    b_msc.0
+   \   0000D0   90....       MOV     DPTR,#sys_ctl
+   \   0000D3   E0           MOVX    A,@DPTR
+   \   0000D4   6402         XRL     A,#0x2
+   \   0000D6   6009         JZ      ??task_music_event_11
+   \   0000D8                ; Setup parameters for call to function task_music_direct
+   \   0000D8   C2F0         CLR     B.0
+   \   0000DA   12....       LCALL   ??task_music_direct
+   \   0000DD   22           RET
+    485          #endif
+    486                      }
+    487                  } else {
+    488                      music_stop();
+   \                     ??task_music_event_12:
+   \   0000DE                ; Setup parameters for call to function music_stop
+   \   0000DE   12....       LCALL   music_stop
+   \                     ??task_music_event_11:
+   \   0000E1   22           RET
+    489                  }
+    490              }
+    491          }
+    492          
+    493          
+    494          //任务消息处理
+    495          #pragma location="TASK_MUSIC_SEG"
+
+   \                                 In segment TASK_MUSIC_SEG, align 1, keep-with-next
+    496          static void task_music_deal_msg(u8 msg)
+   \                     ??task_music_deal_msg:
+    497          {
+   \   000000   EE           MOV     A,R6
+   \   000001   C0E0         PUSH    A
+   \   000003   C0..         PUSH    ?V0 + 0
+   \   000005   C0..         PUSH    ?V0 + 1
+   \   000007                ; Saved register size: 3
+   \   000007                ; Auto size: 0
+   \   000007   E9           MOV     A,R1
+   \   000008   FE           MOV     R6,A
+    498          	if(msg != NO_KEY)
+   \   000009   6014         JZ      ??task_music_deal_msg_1
+    499          		printf("M:%02x\n", msg);
+   \   00000B                ; Setup parameters for call to function my_printf
+   \   00000B   8E..         MOV     ?V0 + 0,R6
+   \   00000D   75..00       MOV     ?V0 + 1,#0x0
+   \   000010   C0..         PUSH    ?V0 + 0
+   \   000012   C0..         PUSH    ?V0 + 1
+   \   000014   7A..         MOV     R2,#(`?<Constant "M:%02x\\n">` & 0xff)
+   \   000016   7B..         MOV     R3,#((`?<Constant "M:%02x\\n">` >> 8) & 0xff)
+   \   000018   12....       LCALL   my_printf
+   \   00001B   D0E0         POP     A
+   \   00001D   D0E0         POP     A
+    500          	switch(msg)
+   \                     ??task_music_deal_msg_1:
+   \   00001F   90....       MOV     DPTR,#(u_msc + 4)
+   \   000022   E0           MOVX    A,@DPTR
+   \   000023   F8           MOV     R0,A
+   \   000024   A3           INC     DPTR
+   \   000025   E0           MOVX    A,@DPTR
+   \   000026   F9           MOV     R1,A
+   \   000027   EE           MOV     A,R6
+   \   000028   12....       LCALL   ?UC_SWITCH_SPARSE
+   \                     `?<Jumptable for task_music_deal_msg>_0`:
+   \   00002B   00           DB        0
+   \   00002C   07           DB        7
+   \   00002D   81           DB        129
+   \   00002E   ....         DW        ??task_music_deal_msg_2
+   \   000030   82           DB        130
+   \   000031   ....         DW        ??task_music_deal_msg_3
+   \   000033   83           DB        131
+   \   000034   ....         DW        ??task_music_deal_msg_4
+   \   000036   8A           DB        138
+   \   000037   ....         DW        ??task_music_deal_msg_2
+   \   000039   8B           DB        139
+   \   00003A   ....         DW        ??task_music_deal_msg_4
+   \   00003C   91           DB        145
+   \   00003D   ....         DW        ??task_music_deal_msg_3
+   \   00003F   A2           DB        162
+   \   000040   ....         DW        ??task_music_deal_msg_5
+   \   000042   ....         DW        ??task_music_deal_msg_6
+    501          	{
+    502          	//两键同时按下播放第一首歌曲
+    503          	#if 0
+    504          	case KL_PREV_NEXT:
+    505          		task_music_direct(0);
+    506          		u_msc.music_num = 1;
+    507          		irtc_write_ram((DEVICE_UDISK * RTCRAM_OFFSET + RTCRAM_MUSIC_NUM_SD), (u8 *)&u_msc.music_num, 2);
+    508          		irtc_write_ram((DEVICE_SDMMC * RTCRAM_OFFSET + RTCRAM_MUSIC_NUM_SD), (u8 *)&u_msc.music_num, 2);
+    509          		if(u_spi.spi_online)
+    510          			u_msc.music_num = 0;	// 当 SPI-Flash时, 曲目由0 开始计数
+    511          		irtc_write_ram((DEVICE_SDMMC1 * RTCRAM_OFFSET + RTCRAM_MUSIC_NUM_SD), (u8 *)&u_msc.music_num, 2);
+    512          		u_msc.music_num = 1;
+    513          		printf("##hello##");
+    514          		break;
+    515          	#endif
+    516          		
+    517          		//上一曲，下一曲
+    518          	//case KL_PREV:	// 改为音量加调整 Merlin 2015/09/08
+    519          	case KU_PREV:
+    520          	case KU_PREV_VOL_DOWN:
+    521                   #if MUSIC_STOP
+    522                   		if(b_msc.stop)
+    523                   		{
+    524                   			break;
+    525                   		}
+    526                   #endif
+    527                   		if(u_msc.music_total > 1)
+   \                     ??task_music_deal_msg_2:
+   \   000044   C3           CLR     C
+   \   000045   E8           MOV     A,R0
+   \   000046   9402         SUBB    A,#0x2
+   \   000048   E9           MOV     A,R1
+   \   000049   9400         SUBB    A,#0x0
+   \   00004B   405D         JC      ??task_music_deal_msg_7
+    528                   		{
+    529                   			DBG_MUSIC("Prev\n");
+   \   00004D                ; Setup parameters for call to function my_printf
+   \   00004D   7A..         MOV     R2,#(`?<Constant "Prev\\n">` & 0xff)
+   \   00004F   7B..         MOV     R3,#((`?<Constant "Prev\\n">` >> 8) & 0xff)
+   \   000051   12....       LCALL   my_printf
+    530                   			task_music_direct(1);
+   \   000054                ; Setup parameters for call to function task_music_direct
+   \   000054   D2F0         SETB    B.0
+   \                     ??task_music_deal_msg_8:
+   \   000056   12....       LCALL   ??task_music_direct
+    531                   #if REPEAT_AS_ONE
+    532                   			b_msc.repeat_as_one_flag = 0;
+    533                   #endif
+    534                   			disp.update = 1;
+   \   000059   D2..         SETB    disp.0
+    535                   			ocx.disp_status = OCX_NULL;
+   \   00005B   78..         MOV     R0,#(ocx + 3)
+   \   00005D   7600         MOV     @R0,#0x0
+   \   00005F   8049         SJMP    ??task_music_deal_msg_7
+    536                   		}
+    537                   		break;
+    538          	case KU_NEXT:
+    539          	case KU_NEXT_VOL_UP:
+    540          #if MUSIC_STOP
+    541          		if(b_msc.stop)
+    542          		{
+    543          			break;
+    544          		}
+    545          #endif
+    546          		if(u_msc.music_total > 1)
+   \                     ??task_music_deal_msg_4:
+   \   000061   C3           CLR     C
+   \   000062   E8           MOV     A,R0
+   \   000063   9402         SUBB    A,#0x2
+   \   000065   E9           MOV     A,R1
+   \   000066   9400         SUBB    A,#0x0
+   \   000068   4040         JC      ??task_music_deal_msg_7
+    547          		{
+    548          
+    549          			DBG_MUSIC("Next\n");
+   \   00006A                ; Setup parameters for call to function my_printf
+   \   00006A   7A..         MOV     R2,#(`?<Constant "Next\\n">` & 0xff)
+   \   00006C   7B..         MOV     R3,#((`?<Constant "Next\\n">` >> 8) & 0xff)
+   \   00006E   12....       LCALL   my_printf
+    550          			task_music_direct(0);
+   \   000071                ; Setup parameters for call to function task_music_direct
+   \   000071   C2F0         CLR     B.0
+   \   000073   80E1         SJMP    ??task_music_deal_msg_8
+    551          #if REPEAT_AS_ONE
+    552          			b_msc.repeat_as_one_flag = 0;
+    553          #endif
+    554          			disp.update = 1;
+    555          			ocx.disp_status = OCX_NULL;
+    556          		}
+    557          		break;
+    558          
+    559          		//播放、暂停
+    560          	case KU_PLAY:
+    561          	//case KL_PLAY:
+    562          	case KU_PLAY_AND_MODE:
+    563          
+    564          	#if 0
+    565          		// test resule is fail on AX2070 SRAM board
+    566          		IE_EA = 0;
+    567          		u8 v = (irtc_read_cmd(CFG_RD) & BIT(1));
+    568          		IE_EA = 1;
+    569          		printf("P:%c",v ? '1' : '0');
+    570          	#endif
+    571          
+    572          		if(music_start_pause())
+   \                     ??task_music_deal_msg_3:
+   \   000075                ; Setup parameters for call to function music_start_pause
+   \   000075   12....       LCALL   music_start_pause
+   \   000078   500C         JNC     ??task_music_deal_msg_9
+    573          		{
+    574          			b_msc.pause = 0;            //更新显示状态
+   \   00007A   C2..         CLR     b_msc.1
+    575          //#if (DISP_TYPE==DISP_LED)
+    576          			ocx.led_sta = LED_STA_ON;
+   \   00007C   78..         MOV     R0,#(ocx + 17)
+   \   00007E   7601         MOV     @R0,#0x1
+    577          //#endif
+    578          			DBG_MUSIC("play\n");
+   \   000080                ; Setup parameters for call to function my_printf
+   \   000080   7A..         MOV     R2,#(`?<Constant "play\\n">` & 0xff)
+   \   000082   7B..         MOV     R3,#((`?<Constant "play\\n">` >> 8) & 0xff)
+   \   000084   800A         SJMP    ??task_music_deal_msg_10
+    579          			user_set_mute();
+    580          			disp.update = 1;
+    581          			ocx.disp_status = OCX_NULL;
+    582          		}
+    583          		else
+    584          		{
+    585          			b_msc.pause = 1;
+   \                     ??task_music_deal_msg_9:
+   \   000086   D2..         SETB    b_msc.1
+    586          //#if (DISP_TYPE==DISP_LED)
+    587          			ocx.led_sta = LED_STA_SLOW_GLITTER;
+   \   000088   78..         MOV     R0,#(ocx + 17)
+   \   00008A   7603         MOV     @R0,#0x3
+    588          //#endif
+    589          			DBG_MUSIC("Pause\n");
+   \   00008C                ; Setup parameters for call to function my_printf
+   \   00008C   7A..         MOV     R2,#(`?<Constant "Pause\\n">` & 0xff)
+   \   00008E   7B..         MOV     R3,#((`?<Constant "Pause\\n">` >> 8) & 0xff)
+   \                     ??task_music_deal_msg_10:
+   \   000090   12....       LCALL   my_printf
+    590          			user_set_mute();
+   \   000093                ; Setup parameters for call to function user_set_mute
+   \   000093   12....       LCALL   user_set_mute
+    591          			disp.update = 1;
+   \   000096   D2..         SETB    disp.0
+    592          			ocx.disp_status = OCX_NULL;
+   \   000098   78..         MOV     R0,#(ocx + 3)
+   \   00009A   7600         MOV     @R0,#0x0
+    593          		}
+    594          #if MUSIC_STOP
+    595          		if(b_msc.stop)
+    596          		{
+    597          			b_msc.stop = 0;
+    598          			u_msc.music_num = 1;
+    599          			b_msc.file_change = 1;
+    600          			shownum(u_msc.music_num);
+    601          		}
+    602          #endif
+    603          		disp.update = 1;
+   \   00009C   D2..         SETB    disp.0
+   \   00009E   800A         SJMP    ??task_music_deal_msg_7
+    604          		break;
+    605          
+    606          #if FAST_FORW_BACKW_EN
+    607          #if 0
+    608          		//快进、快退
+    609          	case KL_PREV:
+    610          	case KH_PREV:
+    611          #if MUSIC_STOP
+    612          		if(b_msc.stop)
+    613          		{
+    614          			break;
+    615          		}
+    616          #endif
+    617          		DBG_MUSIC("P");
+    618          #if PLAUSE_FAST_FORW_BACKW
+    619          		if(b_msc.pause)
+    620          		{
+    621          			b_msc.pause = 0;
+    622          			msc_ctl.status = STATUS_PLAY_PLAYING;
+    623          		}
+    624          #endif
+    625          		music_fast(MUSIC_FAST_BACKWORD, 3);             //快退
+    626          		music_fast_end();                               //快退马上结束，就可以出声
+    627          		break;
+    628          #endif
+    629          
+    630          	case KL_NEXT:
+    631          	case KH_NEXT:
+    632          #if MUSIC_STOP
+    633          		if(b_msc.stop)
+    634          		{
+    635          			break;
+    636          		}
+    637          #endif
+    638          		DBG_MUSIC("N");
+    639          #if PLAUSE_FAST_FORW_BACKW
+    640          		if(b_msc.pause)
+    641          		{
+    642          			b_msc.pause = 0;
+    643          			msc_ctl.status = STATUS_PLAY_PLAYING;
+    644          		}
+    645          #endif
+    646          		music_fast(MUSIC_FAST_FORWORD, 3);              //快进
+    647          		music_fast_end();                               //快进马上结束，就可以出声
+    648          		break;
+    649          
+    650          	//case KLU_PREV:
+    651          	case KLU_NEXT:
+    652          		DBG_MUSIC("E");
+    653          		music_fast_end();                           //快进快退结束
+    654          #if PLAUSE_FAST_FORW_BACKW
+    655          		if(!b_dac.mute_en)
+    656          		{
+    657          #if DAC_FADE_EN
+    658          			dac_fade_in(1);
+    659          #endif
+    660          		}
+    661          #endif
+    662          		break;
+    663          #endif
+    664          
+    665          #if MUSIC_EQ
+    666          		//EQ
+    667          	case KU_EQ:
+    668          	case KL_PLAYMODE:
+    669          		user_set_eq(sys_ctl.eq_num + 1);
+    670          		DBG_MUSIC("EQ=%02x\n", sys_ctl.eq_num);
+    671          		showeq();
+    672          		break;
+    673          #endif
+    674          
+    675          #if AB_REPEAT_EN
+    676          		//AB复读
+    677          	case KL_EQ:
+    678          #if MUSIC_STOP
+    679          		if(b_msc.stop)
+    680          		{
+    681          			break;
+    682          		}
+    683          #endif
+    684          		if(u_msc.repeat == 0)
+    685          		{
+    686          			task_music_set_a();    //更新A点
+    687          			u_msc.repeat = 1;
+    688          		}
+    689          		else if(u_msc.repeat == 1)
+    690          		{
+    691          			task_music_repeat_play();
+    692          			u_msc.repeat = 2;
+    693          		}
+    694          		else if(u_msc.repeat == 2)
+    695          		{
+    696          			music_get_point(&u_msc.point.pb);
+    697          			music_jump(&u_msc.point.pb);
+    698          			u_msc.repeat = 0;
+    699          		}
+    700          		disp.update = 1;
+    701          		break;
+    702          #endif
+    703          
+    704          #if ENERGY_DISP_EN
+    705          	case KL_PLAYMODE:
+    706          #if MUSIC_STOP
+    707          		if(b_msc.stop)
+    708          		{
+    709          			break;
+    710          		}
+    711          #endif
+    712          		if(!ocx.disp_energy)
+    713          		{
+    714          			energy_start();
+    715          		}
+    716          		else
+    717          		{
+    718          			energy_stop();
+    719          		}
+    720          		break;
+    721          #endif
+    722          
+    723          #if MUSIC_STOP
+    724          	case KU_STOP:
+    725          		if(!b_msc.stop)
+    726          		{
+    727          			music_stop();
+    728          			b_msc.stop = 1;
+    729          		}
+    730          		disp.update = 1;
+    731          //#if (DISP_TYPE==DISP_LED)
+    732          		ocx.led_sta = LED_STA_ON;
+    733          //#endif
+    734          		break;
+    735          #endif
+    736          
+    737          #if USE_IR_NUM
+    738          	case T_KEY_NUM_0:
+    739          	case T_KEY_NUM_1:
+    740          	case T_KEY_NUM_2:
+    741          	case T_KEY_NUM_3:
+    742          	case T_KEY_NUM_4:
+    743          	case T_KEY_NUM_5:
+    744          	case T_KEY_NUM_6:
+    745          	case T_KEY_NUM_7:
+    746          	case T_KEY_NUM_8:
+    747          	case T_KEY_NUM_9:
+    748          #if MUSIC_STOP
+    749          		if(b_msc.stop)
+    750          		{
+    751          			break;
+    752          		}
+    753          #endif
+    754          		shownumsel(msg - T_KEY_NUM_0);
+    755          		break;
+    756          #endif
+    757          	case KL_PLAY:
+    758          		task_ctl.work_sta = TASK_EXIT;
+   \                     ??task_music_deal_msg_5:
+   \   0000A0   75..0C       MOV     task_ctl,#0xc
+   \   0000A3   8005         SJMP    ??task_music_deal_msg_7
+    759          		break;
+    760          
+    761          #if 0 	// 2015-06-29 停用设备切换
+    762          	case KL_PREV:
+    763          	
+    764          #if USE_BREAK_POINT
+    765          		task_music_break_save(1);
+    766          #endif
+    767          #if MUSIC_SWITCH_DEV
+    768          		t_msc.mode++;    //播放模式：USB0-USB1-SD0-SD1-其他模式
+    769          		{
+    770          			u8 tmp;
+    771          			tmp = device_get_actived_num();
+    772          			//printf("tmp:%d\n",tmp);
+    773          		}
+    774          		device_chg |= BIT(device_music);
+    775          		if((t_msc.mode == tmp/*device_get_actived_num()*/) ||(fs_cur_dev()==DEVICE_SDMMC1)|| (!task_music_next_device()))
+    776          		{
+    777          			sd_stop(1);
+    778          			if(device_activate(DEVICE_UDISK))
+    779          			{
+    780          				t_fat.dev_new = DEVICE_UDISK;    //模式切换，下次进入MP3模式时先播放U盘
+    781          			}
+    782          #if UDISK_DOUBLE_EN
+    783          			else  if(device_activate(DEVICE_UDISK1))
+    784          			{
+    785          				t_fat.dev_new = DEVICE_UDISK1;    //模式切换，下次进入MP3模式时先播放U盘
+    786          			}
+    787          #endif
+    788          			else  if(device_activate(DEVICE_SDMMC))
+    789          			{
+    790          				t_fat.dev_new = DEVICE_SDMMC;    //模式切换，下次进入MP3模式时先播放U盘
+    791          			}
+    792          			task_ctl.work_sta = TASK_EXIT;
+    793          		}
+    794          		if(b_dac.mute_en)
+    795          		{
+    796          			//解除MUTE
+    797          			mute_disable();
+    798          		}
+    799          #else
+    800          		task_ctl.work_sta = TASK_EXIT;
+    801          #endif
+    802          
+    803          		break;
+    804          #endif
+    805          
+    806          #if DIR_SWITCH_EN
+    807          	case KU_PREVDIR:
+    808          		task_music_dir(1);
+    809          		break;
+    810          
+    811          	case KU_NEXTDIR:
+    812          		task_music_dir(0);
+    813          		break;
+    814          #endif
+    815          		//调用公共消息函数
+    816          	default:
+    817          		//K_T=0;
+    818          		deal_msg(msg);
+   \                     ??task_music_deal_msg_6:
+   \   0000A5                ; Setup parameters for call to function deal_msg
+   \   0000A5   EE           MOV     A,R6
+   \   0000A6   F9           MOV     R1,A
+   \   0000A7   12....       LCALL   deal_msg
+    819          		break;
+    820          	}
+    821          }
+   \                     ??task_music_deal_msg_7:
+   \   0000AA   D0..         POP     ?V0 + 1
+   \   0000AC   D0..         POP     ?V0 + 0
+   \   0000AE   D0E0         POP     A
+   \   0000B0   FE           MOV     R6,A
+   \   0000B1   22           RET
+    822          
+    823          /*****************************************************************************
+    824           * Module    : 音乐任务断点记忆
+    825           *****************************************************************************/
+    826          #if USE_BREAK_POINT
+    827          //保存断点
+    828          #pragma location="TASK_MUSIC_SEG"
+
+   \                                 In segment TASK_MUSIC_SEG, align 1, keep-with-next
+    829          void task_music_break_save(bool flag)
+   \                     task_music_break_save:
+    830          {
+   \   000000   C0..         PUSH    ?V0 + 0
+   \   000002   C0..         PUSH    ?V0 + 1
+   \   000004   C0..         PUSH    ?V0 + 2
+   \   000006   C0..         PUSH    ?V0 + 3
+   \   000008                ; Saved register size: 4
+   \   000008                ; Auto size: 0
+   \   000008   A2F0         MOV     C,B.0
+    831          	if(flag)
+   \   00000A   5013         JNC     ??task_music_break_save_0
+    832          	{
+    833          		music_get_point(&u_msc.break_point);
+   \   00000C                ; Setup parameters for call to function music_get_point
+   \   00000C   7A..         MOV     R2,#((u_msc + 9) & 0xff)
+   \   00000E   7B..         MOV     R3,#(((u_msc + 9) >> 8) & 0xff)
+   \   000010   12....       LCALL   music_get_point
+    834          		u_msc.filename_checksum = music_filename_check();
+   \   000013                ; Setup parameters for call to function music_filename_check
+   \   000013   12....       LCALL   music_filename_check
+   \   000016   90....       MOV     DPTR,#(u_msc + 17)
+   \   000019   EA           MOV     A,R2
+   \   00001A   F0           MOVX    @DPTR,A
+   \   00001B   A3           INC     DPTR
+   \   00001C   EB           MOV     A,R3
+   \   00001D   801E         SJMP    ??task_music_break_save_1
+    835          	}
+    836          	else
+    837          	{
+    838          		u_msc.break_point.pos = 0;
+   \                     ??task_music_break_save_0:
+   \   00001F   90....       MOV     DPTR,#__Constant_0
+   \   000022   78..         MOV     R0,#?V0 + 0
+   \   000024   12....       LCALL   ?L_MOV_C
+   \   000027   90....       MOV     DPTR,#(u_msc + 13)
+   \   00002A   78..         MOV     R0,#?V0 + 0
+   \   00002C   12....       LCALL   ?L_MOV_TO_X
+    839          		u_msc.break_point.frame = 0;
+   \   00002F   90....       MOV     DPTR,#(u_msc + 9)
+   \   000032   78..         MOV     R0,#?V0 + 0
+   \   000034   12....       LCALL   ?L_MOV_TO_X
+    840          		u_msc.filename_checksum = 0;
+   \   000037   90....       MOV     DPTR,#(u_msc + 17)
+   \   00003A   E4           CLR     A
+   \   00003B   F0           MOVX    @DPTR,A
+   \   00003C   A3           INC     DPTR
+   \                     ??task_music_break_save_1:
+   \   00003D   F0           MOVX    @DPTR,A
+    841          	}
+    842          	mem_write_music_break();
+   \   00003E                ; Setup parameters for call to function write_music_break_rtcram
+   \   00003E   12....       LCALL   write_music_break_rtcram
+    843          	//printf("save:frame=%08lu pos=%08lu\n",u_msc.break_point.frame,u_msc.break_point.pos);
+    844          	//printf("num=%02x checksum=%02x\n", u_msc.music_num,u_msc.filename_checksum);
+    845          }
+   \   000041                REQUIRE ?Subroutine3
+   \   000041                ; // Fall through to label ?Subroutine3
+    846          
+    847          //进入音乐任务跳至断点播放
+    848          #pragma location="TASK_MUSIC_SEG"
+
+   \                                 In segment TASK_MUSIC_SEG, align 1, keep-with-next
+    849          void task_music_break_init(void)
+   \                     task_music_break_init:
+    850          {
+   \   000000   C0..         PUSH    ?V0 + 0
+   \   000002   C0..         PUSH    ?V0 + 1
+   \   000004   C0..         PUSH    ?V0 + 2
+   \   000006   C0..         PUSH    ?V0 + 3
+   \   000008                ; Saved register size: 4
+   \   000008                ; Auto size: 0
+    851          #if (SYS_MEM == MEM_RTCRAM)
+    852          	printf("read:frame=%08lu pos=%08lu\n",u_msc.break_point.frame,u_msc.break_point.pos);
+   \   000008                ; Setup parameters for call to function my_printf
+   \   000008   90....       MOV     DPTR,#(u_msc + 13)
+   \   00000B   78..         MOV     R0,#?V0 + 0
+   \   00000D   12....       LCALL   ?L_MOV_X
+   \   000010   78..         MOV     R0,#?V0 + 0
+   \   000012   12....       LCALL   ?PUSH_ISTACK_I_FOUR
+   \   000015   90....       MOV     DPTR,#(u_msc + 9)
+   \   000018   78..         MOV     R0,#?V0 + 0
+   \   00001A   12....       LCALL   ?L_MOV_X
+   \   00001D   78..         MOV     R0,#?V0 + 0
+   \   00001F   12....       LCALL   ?PUSH_ISTACK_I_FOUR
+   \   000022   7A..         MOV     R2,#(`?<Constant "read:frame=%08lu pos=...">` & 0xff)
+   \   000024   7B..         MOV     R3,#((`?<Constant "read:frame=%08lu pos=...">` >> 8) & 0xff)
+   \   000026   12....       LCALL   my_printf
+   \   000029   74F8         MOV     A,#-0x8
+   \   00002B   12....       LCALL   ?DEALLOC_EXT_STACK8
+    853          	music_jump(&u_msc.break_point);         //RTCRAM空间不够，不保存文件名校验各
+   \   00002E                ; Setup parameters for call to function music_jump
+   \   00002E   7A..         MOV     R2,#((u_msc + 9) & 0xff)
+   \   000030   7B..         MOV     R3,#(((u_msc + 9) >> 8) & 0xff)
+   \   000032   12....       LCALL   music_jump
+    854          #else
+    855          	if(music_filename_check() == u_msc.filename_checksum)
+    856          	{
+    857          		music_jump(&u_msc.break_point);
+    858          	}
+    859          #endif
+    860          }
+   \   000035   80..         SJMP    ?Subroutine3
+    861          #endif
+    862          
+    863          /*****************************************************************************
+    864           * Module    : 音乐任务AB复读
+    865           *****************************************************************************/
+    866          #if AB_REPEAT_EN
+    867          //设置A点
+    868          #pragma location="TASK_MUSIC_SEG"
+    869          static void task_music_set_a(void)
+    870          {
+    871          	music_get_point(&u_msc.point.pa);
+    872          	music_set_a_point(&u_msc.point.pa);
+    873          	//printf("a fra:%08lu\n",u_msc.point.pa.frame);
+    874          	//printf("a pos:%08lu\n",u_msc.point.pa.pos);
+    875          }
+    876          
+    877          //开始复读
+    878          #pragma location="TASK_MUSIC_SEG"
+    879          static void task_music_repeat_start(u8 repeat_cnt)
+    880          {
+    881          	music_get_point(&u_msc.point.pb);
+    882          	music_jump(&u_msc.point.pa);
+    883          	//printf("b fra:%08lu\n",u_msc.point.pb.frame);
+    884          	//printf("b pos:%08lu\n",u_msc.point.pb.pos);
+    885          	music_repeat(repeat_cnt, &u_msc.point);
+    886          }
+    887          
+    888          //复读/播放
+    889          #pragma location="TASK_MUSIC_SEG"
+    890          static void task_music_repeat_play(void)
+    891          {
+    892          	if(b_msc.pause)
+    893          	{
+    894          		return;
+    895          	}
+    896          	task_music_repeat_start(REPEAT_LOOP);
+    897          }
+    898          #endif
+    899          
+    900          
+    901          /*****************************************************************************
+    902           * Module    : 音乐任务入口
+    903           *****************************************************************************/
+    904          //任务初始化
+    905          #pragma location="TASK_MUSIC_SEG"
+
+   \                                 In segment TASK_MUSIC_SEG, align 1, keep-with-next
+    906          static void task_music_enter(void)
+   \                     ??task_music_enter:
+    907          {
+   \   000000   C0..         PUSH    ?V0 + 0
+   \   000002   C0..         PUSH    ?V0 + 1
+   \   000004   C0..         PUSH    ?V0 + 2
+   \   000006   C0..         PUSH    ?V0 + 3
+   \   000008                ; Saved register size: 4
+   \   000008                ; Auto size: 0
+    908          #if TASK_FLASH_EN
+    909          	u_spi.spi_music_flag = 0;
+   \   000008   E4           CLR     A
+   \   000009   90....       MOV     DPTR,#u_spi
+   \   00000C   F0           MOVX    @DPTR,A
+    910          #endif
+    911          	if(!user_music_enter())
+   \   00000D                ; Setup parameters for call to function user_music_enter
+   \   00000D   12....       LCALL   user_music_enter
+   \   000010   400A         JC      ??task_music_enter_1
+    912          	{
+    913          		ocx_msgbox("---");
+   \   000012                ; Setup parameters for call to function ocx_msgbox
+   \   000012   7A..         MOV     R2,#(`?<Constant "---">` & 0xff)
+   \   000014   7B..         MOV     R3,#((`?<Constant "---">` >> 8) & 0xff)
+   \   000016   12....       LCALL   ocx_msgbox
+   \   000019   02....       LJMP    ??task_music_enter_2
+    914          		task_ctl.work_sta = TASK_EXIT;      //设备无效，返回主菜单
+    915          		return;
+    916          	}
+    917          	if(first==0)
+   \                     ??task_music_enter_1:
+   \   00001C   90....       MOV     DPTR,#first
+   \   00001F   E0           MOVX    A,@DPTR
+   \   000020   700E         JNZ     ??task_music_enter_3
+    918          	{
+    919          		disp_device();
+   \   000022                ; Setup parameters for call to function led_7p7s_disp_device
+   \   000022   12....       LCALL   led_7p7s_disp_device
+    920          		delay_5ms(60);
+   \   000025                ; Setup parameters for call to function delay_5ms
+   \   000025   793C         MOV     R1,#0x3c
+   \   000027   12....       LCALL   delay_5ms
+    921          		first=1;
+   \   00002A   7401         MOV     A,#0x1
+   \   00002C   90....       MOV     DPTR,#first
+   \   00002F   F0           MOVX    @DPTR,A
+    922          	}
+    923          #if DAC_FADE_EN
+    924          	b_dac.sound_en = 0;                     //动态降噪
+   \                     ??task_music_enter_3:
+   \   000030   C2..         CLR     b_dac.4
+    925          	msc_ctl.mscfade_en = 0;
+   \   000032   E4           CLR     A
+   \   000033   90....       MOV     DPTR,#(msc_ctl + 26)
+   \   000036   F0           MOVX    @DPTR,A
+    926              b_dac.digvol_en = 1;  					//JianRong -2015-06-10
+   \   000037   D2..         SETB    b_dac.3
+    927          #else
+    928          	msc_ctl.mscfade_en = 0;
+    929          	b_dac.digvol_en = 1;
+    930          	dac_set_volume_direct(sys_ctl.volume);
+    931          #endif
+    932          	memset(&u_msc, 0, sizeof(u_msc));			//清除音乐文件信息
+   \   000039                ; Setup parameters for call to function my_memset
+   \   000039   7C17         MOV     R4,#0x17
+   \   00003B   FD           MOV     R5,A
+   \   00003C   F9           MOV     R1,A
+   \   00003D   7A..         MOV     R2,#(u_msc & 0xff)
+   \   00003F   7B..         MOV     R3,#((u_msc >> 8) & 0xff)
+   \   000041   12....       LCALL   my_memset
+    933          	user_set_eq(0);//设置EQ
+   \   000044                ; Setup parameters for call to function user_set_eq
+   \   000044   7900         MOV     R1,#0x0
+   \   000046   12....       LCALL   user_set_eq
+    934          	//播放信息初始化
+    935          	b_msc.pause = 0;
+    936          #if MUSIC_STOP
+    937          	b_msc.stop = 0;
+    938          #endif
+    939          	b_msc.file_change = 1;                  //需要打开一个新文件
+    940          #if USE_BREAK_POINT
+    941          	b_msc.break_init = 1;
+   \   000049   C2..         CLR     b_msc.1
+   \   00004B   43..09       ORL     b_msc,#0x9
+    942          #endif
+    943          #if AB_REPEAT_EN
+    944          	u_msc.repeat = 0;                       //不打开AB复读
+    945          #endif
+    946          #if MUSIC_SWITCH_DEV
+    947          	t_msc.mode = 0;                         //用来切换模式
+    948          #endif
+    949          
+    950          #if REPEAT_AS_ONE
+    951          	b_msc.repeat_as_one_flag = 0;
+    952          #endif
+    953          
+    954          //#if (DISP_TYPE==DISP_LED)
+    955          	ocx.led_sta = LED_STA_ON;
+   \   00004E   78..         MOV     R0,#(ocx + 17)
+   \   000050   7601         MOV     @R0,#0x1
+    956          //#endif
+    957          	if(!task_music_scan_file())
+   \   000052                ; Setup parameters for call to function f_scan_set
+   \   000052   7C..         MOV     R4,#(dir_filter_music & 0xff)
+   \   000054   7D..         MOV     R5,#((dir_filter_music >> 8) & 0xff)
+   \   000056   7A..         MOV     R2,#(file_filter_music & 0xff)
+   \   000058   7B..         MOV     R3,#((file_filter_music >> 8) & 0xff)
+   \   00005A   7901         MOV     R1,#0x1
+   \   00005C   12....       LCALL   f_scan_set
+   \   00005F                ; Setup parameters for call to function f_gettotal_no_speed
+   \   00005F   12....       LCALL   f_gettotal_no_speed
+   \   000062   90....       MOV     DPTR,#(u_msc + 4)
+   \   000065   EA           MOV     A,R2
+   \   000066   F0           MOVX    @DPTR,A
+   \   000067   A3           INC     DPTR
+   \   000068   EB           MOV     A,R3
+   \   000069   F0           MOVX    @DPTR,A
+   \   00006A   90....       MOV     DPTR,#(u_msc + 4)
+   \   00006D   E0           MOVX    A,@DPTR
+   \   00006E   7002         JNZ     ??task_music_enter_4
+   \   000070   A3           INC     DPTR
+   \   000071   E0           MOVX    A,@DPTR
+   \                     ??task_music_enter_4:
+   \   000072   603E         JZ      ??task_music_enter_5
+   \   000074   75..00       MOV     task_ctl,#0x0
+    958          	{
+    959          		if(!task_music_next_device())
+    960          		{
+    961          			//showhello();	// Merlin 移除, 因为进入每个 Task时会显示对应的信息
+    962          			task_ctl.work_sta = TASK_EXIT;  //设备无效，返回主菜单
+    963          			return;
+    964          		}
+    965          	}
+    966          	mem_read_music_num();                //打开的文件编号
+   \                     ??task_music_enter_6:
+   \   000077                ; Setup parameters for call to function mem_read_music_num
+   \   000077   12....       LCALL   mem_read_music_num
+    967          
+    968          #if MUSIC_STOP
+    969          	if(b_msc.stop)
+    970          	{
+    971          		b_msc.stop = 0;
+    972          		u_msc.music_num = 1;
+    973          #if USE_BREAK_POINT
+    974          		b_msc.break_init = 0;               //stop模式后，从第一首歌零分零秒开始播放
+    975          #endif
+    976          	}
+    977          #endif
+    978          
+    979          //#if (DISP_TYPE==DISP_LED)
+    980          	ocx.led_sta = LED_STA_ON;
+   \   00007A   78..         MOV     R0,#(ocx + 17)
+   \   00007C   7601         MOV     @R0,#0x1
+    981          //#endif
+    982          	//shownum(u_msc.music_num);               //显示当前曲目
+    983          	ocx_show_device();
+   \   00007E                ; Setup parameters for call to function ocx_show_device
+   \   00007E   12....       LCALL   ocx_show_device
+    984          
+    985          #if DACR_ONLY
+    986          #ifdef AX207X_TAG
+    987          	dac_channel_disconnect();
+    988          #endif
+    989          #endif
+    990          
+    991          #if KARAOKE_EN
+    992          	b_sys.karaoke_flag = 0;
+    993          
+    994          	if(device_is_actived(DEVICE_MIC))
+    995          	{
+    996          		mic_enable();
+    997          		b_sys.karaoke_flag = 1;
+    998          		b_dac.sound_en = 0;                //在MIC打开时不开动态降噪
+    999          		msc_ctl.mscfade_en = 0;            //音乐播放模式的切换不需要淡入淡出
+   1000          	}
+   1001          #endif
+   1002          
+   1003          	mute_disable();
+   \   000081                ; Setup parameters for call to function mute_disable
+   \   000081   12....       LCALL   mute_disable
+   1004          	sound_ctl_init(10, 0x20, 100, 0x1a);
+   \   000084                ; Setup parameters for call to function sound_ctl_init
+   \   000084   90....       MOV     DPTR,#__Constant_1a
+   \   000087   78..         MOV     R0,#?V0 + 0
+   \   000089   12....       LCALL   ?L_MOV_C
+   \   00008C   78..         MOV     R0,#?V0 + 0
+   \   00008E   12....       LCALL   ?PUSH_ISTACK_I_FOUR
+   \   000091   7464         MOV     A,#0x64
+   \   000093   C0E0         PUSH    A
+   \   000095   90....       MOV     DPTR,#__Constant_20
+   \   000098   78..         MOV     R0,#?V0 + 0
+   \   00009A   12....       LCALL   ?L_MOV_C
+   \   00009D   AA..         MOV     R2,?V0 + 0
+   \   00009F   AB..         MOV     R3,?V0 + 1
+   \   0000A1   AC..         MOV     R4,?V0 + 2
+   \   0000A3   AD..         MOV     R5,?V0 + 3
+   \   0000A5   790A         MOV     R1,#0xa
+   \   0000A7   12....       LCALL   sound_ctl_init
+   \   0000AA   74FB         MOV     A,#-0x5
+   \   0000AC   12....       LCALL   ?DEALLOC_EXT_STACK8
+   1005          #if ENERGY_DISP_EN
+   1006          	energy_init();
+   1007          #endif
+   1008          #if (MUSIC_PLAYMODE && (PLAYMODE_NUM == PLAYMODE_FOUR))
+   1009          	rand_init(12345 ^ TMR2CNTL);
+   1010          #endif
+   1011          }
+   \                     ??task_music_enter_7:
+   \   0000AF   02....       LJMP    ?Subroutine3
+   \                     ??task_music_enter_5:
+   \   0000B2   75..0C       MOV     task_ctl,#0xc
+   \   0000B5                ; Setup parameters for call to function task_music_next_device
+   \   0000B5   12....       LCALL   task_music_next_device
+   \   0000B8   40BD         JC      ??task_music_enter_6
+   \                     ??task_music_enter_2:
+   \   0000BA   75..0C       MOV     task_ctl,#0xc
+   \   0000BD   80F0         SJMP    ??task_music_enter_7
+   1012          
+   1013          //任务退出
+   1014          #pragma location="TASK_MUSIC_SEG"
+   1015          static void task_music_exit(void)
+   1016          {
+   1017          	SD_FLAG=0;
+   1018          #if USE_BREAK_POINT
+   1019          	if(task_ctl.work_sta != TASK_EXIT)
+   1020          	{
+   1021          		task_music_break_save(1);
+   1022          	}
+   1023          #endif
+   1024          #if ENERGY_DISP_EN
+   1025          	energy_stop();
+   1026          #endif
+   1027          	msc_ctl.mscfade_en = 1;             //退出音乐模式时淡出，必须放在music_stop之前
+   1028          	music_stop();
+   1029          	delay_5ms(20);
+   1030          
+   1031          #if (SYS_MEM != MEM_DEVICE)
+   1032          	if(device_is_online(DEVICE_UDISK))
+   1033          	{
+   1034          		usb_host_suspend();
+   1035          	}
+   1036          #endif
+   1037          
+   1038          #if (USE_I2C_SD_MUX || FM_CLK_IO_MUX_SDCLK)
+   1039          	if(device_is_online(DEVICE_SDMMC))
+   1040          	{
+   1041          		set_sd_idle_state();           //退出MP3后卡进入IDLE模式，防止SD卡在线影响IIC
+   1042          	}
+   1043          #endif
+   1044          
+   1045          	b_dac.sound_en = 0;
+   1046          #if DAC_FADE_EN
+   1047          	dac_fade_out();
+   1048          	dac_fade_wait();
+   1049          #endif
+   1050          	mute_enable();
+   1051          
+   1052          #if WAV_SUPPORT
+   1053          	set_sys_clk(SYS_24M);              //WAV播放时退出MP3模式切回24MHz
+   1054          #endif
+   1055          
+   1056          #if KARAOKE_EN
+   1057          	if(device_is_actived(DEVICE_MIC))
+   1058          	{
+   1059          		mic_disable();
+   1060          	}
+   1061          #endif
+   1062          }
+   1063          
+   1064          //任务主流程
+   1065          #pragma location="TASK_MUSIC_SEG"
+
+   \                                 In segment TASK_MUSIC_SEG, align 1, keep-with-next
+   1066          void task_music(void)
+   \                     task_music:
+   1067          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+   1068          	printf("task_music\n");
+   \   000000                ; Setup parameters for call to function my_printf
+   \   000000   7A..         MOV     R2,#(`?<Constant "task_music\\n">` & 0xff)
+   \   000002   7B..         MOV     R3,#((`?<Constant "task_music\\n">` >> 8) & 0xff)
+   \   000004   12....       LCALL   my_printf
+   1069          	task_music_enter();
+   \   000007                ; Setup parameters for call to function task_music_enter
+   \   000007   12....       LCALL   ??task_music_enter
+   \   00000A   800C         SJMP    ??task_music_0
+   1070          	while(task_ctl.work_sta == TASK_MUSIC)
+   1071          	{
+   1072          		task_music_event();
+   \                     ??task_music_1:
+   \   00000C                ; Setup parameters for call to function task_music_event
+   \   00000C   12....       LCALL   ??task_music_event
+   1073          		task_music_deal_msg(get_msg());
+   \   00000F                ; Setup parameters for call to function task_music_deal_msg
+   \   00000F                ; Setup parameters for call to function get_msg
+   \   00000F   12....       LCALL   get_msg
+   \   000012   12....       LCALL   ??task_music_deal_msg
+   1074          		task_music_display();
+   \   000015                ; Setup parameters for call to function task_music_display
+   \   000015   12....       LCALL   task_music_display
+   1075          	}
+   \                     ??task_music_0:
+   \   000018   E5..         MOV     A,task_ctl
+   \   00001A   60F0         JZ      ??task_music_1
+   1076          	task_music_exit();
+   \   00001C   E4           CLR     A
+   \   00001D   90....       MOV     DPTR,#SD_FLAG
+   \   000020   F0           MOVX    @DPTR,A
+   \   000021   740C         MOV     A,#0xc
+   \   000023   65..         XRL     A,task_ctl
+   \   000025   6005         JZ      ??task_music_2
+   \   000027                ; Setup parameters for call to function task_music_break_save
+   \   000027   D2F0         SETB    B.0
+   \   000029   12....       LCALL   task_music_break_save
+   \                     ??task_music_2:
+   \   00002C   7401         MOV     A,#0x1
+   \   00002E   90....       MOV     DPTR,#(msc_ctl + 26)
+   \   000031   F0           MOVX    @DPTR,A
+   \   000032                ; Setup parameters for call to function music_stop
+   \   000032   12....       LCALL   music_stop
+   \   000035                ; Setup parameters for call to function delay_5ms
+   \   000035   7914         MOV     R1,#0x14
+   \   000037   12....       LCALL   delay_5ms
+   \   00003A                ; Setup parameters for call to function device_is_online
+   \   00003A   7902         MOV     R1,#0x2
+   \   00003C   12....       LCALL   device_is_online
+   \   00003F   5003         JNC     ??task_music_3
+   \   000041                ; Setup parameters for call to function usb_host_suspend
+   \   000041   12....       LCALL   usb_host_suspend
+   \                     ??task_music_3:
+   \   000044                ; Setup parameters for call to function device_is_online
+   \   000044   7900         MOV     R1,#0x0
+   \   000046   12....       LCALL   device_is_online
+   \   000049   5003         JNC     ??task_music_4
+   \   00004B                ; Setup parameters for call to function set_sd_idle_state
+   \   00004B   12....       LCALL   set_sd_idle_state
+   \                     ??task_music_4:
+   \   00004E   C2..         CLR     b_dac.4
+   \   000050                ; Setup parameters for call to function dac_fade_out
+   \   000050   12....       LCALL   dac_fade_out
+   \   000053                ; Setup parameters for call to function dac_fade_wait
+   \   000053   12....       LCALL   dac_fade_wait
+   \   000056                ; Setup parameters for call to function mute_enable
+   \   000056   12....       LCALL   mute_enable
+   1077          }
+   \   000059   22           RET
+
+   \                                 In segment CODE_C, align 1
+   \                     `?<Constant "remount%d,%d\\n">`:
+   \   000000   72656D6F     DB "remount%d,%d\012"
+   \            756E7425
+   \            642C2564
+   \            0A00    
+
+   \                                 In segment CODE_C, align 1
+   \                     `?<Constant "music_play[%d][%d]\\n">`:
+   \   000000   6D757369     DB "music_play[%d][%d]\012"
+   \            635F706C
+   \            61795B25
+   \            645D5B25
+   \            645D0A00
+
+   \                                 In segment CODE_C, align 1
+   \                     `?<Constant "auto_next %d\\n">`:
+   \   000000   6175746F     DB "auto_next %d\012"
+   \            5F6E6578
+   \            74202564
+   \            0A00    
+
+   \                                 In segment CODE_C, align 1
+   \                     `?<Constant "M:%02x\\n">`:
+   \   000000   4D3A2530     DB "M:%02x\012"
+   \            32780A00
+
+   \                                 In segment CODE_C, align 1
+   \                     `?<Constant "Prev\\n">`:
+   \   000000   50726576     DB "Prev\012"
+   \            0A00    
+
+   \                                 In segment CODE_C, align 1
+   \                     `?<Constant "Next\\n">`:
+   \   000000   4E657874     DB "Next\012"
+   \            0A00    
+
+   \                                 In segment CODE_C, align 1
+   \                     `?<Constant "play\\n">`:
+   \   000000   706C6179     DB "play\012"
+   \            0A00    
+
+   \                                 In segment CODE_C, align 1
+   \                     `?<Constant "Pause\\n">`:
+   \   000000   50617573     DB "Pause\012"
+   \            650A00  
+
+   \                                 In segment CODE_C, align 1
+   \                     `?<Constant "read:frame=%08lu pos=...">`:
+   \   000000   72656164     DB "read:frame=%08lu pos=%08lu\012"
+   \            3A667261
+   \            6D653D25
+   \            30386C75
+   \            20706F73
+   \            3D253038
+   \            6C750A00
+
+   \                                 In segment CODE_C, align 1
+   \                     `?<Constant "---">`:
+   \   000000   2D2D2D00     DB "---"
+
+   \                                 In segment CODE_C, align 1
+   \                     `?<Constant "task_music\\n">`:
+   \   000000   7461736B     DB "task_music\012"
+   \            5F6D7573
+   \            69630A00
+
+   \                                 In segment CODE_C, align 1
+   \                     __Constant_a:
+   \   000000   0A000000     DD 10
+
+   \                                 In segment CODE_C, align 1
+   \                     __Constant_3c:
+   \   000000   3C000000     DD 60
+
+   \                                 In segment CODE_C, align 1
+   \                     __Constant_0:
+   \   000000   00000000     DD 0
+
+   \                                 In segment CODE_C, align 1
+   \                     __Constant_1a:
+   \   000000   1A000000     DD 26
+
+   \                                 In segment CODE_C, align 1
+   \                     __Constant_20:
+   \   000000   20000000     DD 32
+   1078          
+
+   Maximum stack usage in bytes:
+
+     Function                       EXT_STACK PSTACK XSTACK
+     --------                       --------- ------ ------
+     task_music                            0      0      0
+       -> my_printf                        0      0      0
+       -> task_music_enter                 0      0      0
+       -> task_music_event                 0      0      0
+       -> get_msg                          0      0      0
+       -> task_music_deal_msg              0      0      0
+       -> task_music_display               0      0      0
+       -> task_music_break_save            0      0      0
+       -> music_stop                       0      0      0
+       -> delay_5ms                        0      0      0
+       -> device_is_online                 0      0      0
+       -> usb_host_suspend                 0      0      0
+       -> device_is_online                 0      0      0
+       -> set_sd_idle_state                0      0      0
+       -> dac_fade_out                     0      0      0
+       -> dac_fade_wait                    0      0      0
+       -> mute_enable                      0      0      0
+     task_music_break_init                12      0      0
+       -> my_printf                       24      0      0
+       -> music_jump                       8      0      0
+     task_music_break_save                 4      0      0
+       -> music_get_point                  8      0      0
+       -> music_filename_check             8      0      0
+       -> write_music_break_rtcram         8      0      0
+     task_music_cal_time                  15      0      0
+       -> music_get_mtime                 30      0      0
+     task_music_deal_msg                   5      0      0
+       -> my_printf                       10      0      0
+       -> my_printf                        6      0      0
+       -> task_music_direct                6      0      0
+       -> my_printf                        6      0      0
+       -> task_music_direct                6      0      0
+       -> music_start_pause                6      0      0
+       -> my_printf                        6      0      0
+       -> user_set_mute                    6      0      0
+       -> my_printf                        6      0      0
+       -> user_set_mute                    6      0      0
+       -> deal_msg                         6      0      0
+     task_music_direct                    12      0      0
+       -> loop_auto                       10      0      0
+     task_music_enter                      9      0      0
+       -> user_music_enter                 8      0      0
+       -> ocx_msgbox                       8      0      0
+       -> led_7p7s_disp_device             8      0      0
+       -> delay_5ms                        8      0      0
+       -> my_memset                        8      0      0
+       -> user_set_eq                      8      0      0
+       -> f_scan_set                       8      0      0
+       -> f_gettotal_no_speed              8      0      0
+       -> mem_read_music_num               8      0      0
+       -> ocx_show_device                  8      0      0
+       -> mute_disable                     8      0      0
+       -> sound_ctl_init                  18      0      0
+       -> task_music_next_device           8      0      0
+     task_music_event                      2      0      0
+       -> comm_event                       0      0      0
+       -> music_event                      0      0      0
+       -> fs_cur_dev                       0      0      0
+       -> device_is_actived                0      0      0
+       -> music_stop                       0      0      0
+       -> task_music_break_save            0      0      0
+       -> device_change                    0      0      0
+       -> music_stop                       0      0      0
+       -> fs_cur_dev                       0      0      0
+       -> fs_cur_dev                       0      0      0
+       -> sd_stop                          0      0      0
+       -> task_music_remount_device        0      0      0
+       -> task_music_next_device           0      0      0
+       -> fs_cur_dev                       0      0      0
+       -> mute_disable                     0      0      0
+       -> fs_cur_dev                       0      0      0
+       -> mem_read_music_num               0      0      0
+       -> user_set_mute                    0      0      0
+       -> dac_fade_in                      0      0      0
+       -> read_music_break_rtcram          0      0      0
+       -> task_music_new                   0      0      0
+       -> mem_write_file_change            0      0      0
+       -> ocx_show_device                  0      0      0
+       -> task_music_break_init            0      0      0
+       -> task_music_cal_time              0      0      0
+       -> music_get_status                 0      0      0
+       -> fs_cur_dev                       0      0      0
+       -> device_is_actived                0      0      0
+       -> music_get_status                 0      0      0
+       -> my_printf                        4      0      0
+       -> task_music_direct                0      0      0
+       -> music_stop                       0      0      0
+     task_music_new                       11      0      0
+       -> music_init_mp3_only             14      0      0
+       -> fs_cur_dev                      14      0      0
+       -> my_printf                       22      0      0
+       -> dac_fade_in                     14      0      0
+       -> music_play                      14      0      0
+       -> fs_cur_dev                      14      0      0
+       -> device_is_actived               14      0      0
+       -> music_stop                      14      0      0
+       -> sound_ctl_clr                   14      0      0
+       -> f_open_no_speed                 14      0      0
+       -> fs_is_mounted                   14      0      0
+       -> task_music_direct               14      0      0
+       -> task_music_direct               14      0      0
+     task_music_next_device                4      0      0
+       -> device_switch                    0      0      0
+       -> task_music_remount_device        0      0      0
+       -> fs_cur_dev                       0      0      0
+       -> mem_read_music_num               0      0      0
+     task_music_remount_device             4      0      0
+       -> device_is_actived                0      0      0
+       -> fs_cur_dev                       4      0      0
+       -> my_printf                        8      0      0
+
+
+   Segment part sizes:
+
+     Function/Label                 Bytes
+     --------------                 -----
+     t_msc                             1
+     first                             1
+     task_music_remount_device        43
+     ?Subroutine2                      5
+     task_music_next_device           19
+     ?Subroutine0                     13
+     task_music_direct                68
+     ?Subroutine3                      9
+     task_music_cal_time              90
+     task_music_new                  167
+     ?Subroutine1                      7
+     task_music_event                226
+     task_music_deal_msg             178
+     task_music_break_save            65
+     task_music_break_init            55
+     task_music_enter                191
+     task_music                       90
+     ?<Constant "remount%d,%d\n">     14
+     ?<Constant "music_play[%d][%d]\n">
+                                      20
+     ?<Constant "auto_next %d\n">     14
+     ?<Constant "M:%02x\n">            8
+     ?<Constant "Prev\n">              6
+     ?<Constant "Next\n">              6
+     ?<Constant "play\n">              6
+     ?<Constant "Pause\n">             7
+     ?<Constant "read:frame=%08lu pos=...">
+                                      28
+     ?<Constant "---">                 4
+     ?<Constant "task_music\n">       12
+     __Constant_a                      4
+     __Constant_3c                     4
+     __Constant_0                      4
+     __Constant_1a                     4
+     __Constant_20                     4
+
+ 
+   145 bytes in segment CODE_C
+ 1 226 bytes in segment TASK_MUSIC_SEG
+     2 bytes in segment XDATA_Z
+ 
+ 1 351 bytes of CODE  memory (+ 20 bytes shared)
+     2 bytes of XDATA memory
+
+Errors: none
+Warnings: none

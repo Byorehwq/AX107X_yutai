@@ -1,0 +1,606 @@
+##############################################################################
+#                                                                            #
+# IAR 8051 C/C++ Compiler V7.20H/W32                   10/Sep/2015  19:03:31 #
+# Copyright 2004-2006 IAR Systems. All rights reserved.                      #
+#                                                                            #
+#    Core               =  plain                                             #
+#    Code model         =  near                                              #
+#    Data model         =  large                                             #
+#    Calling convention =  extended stack reentrant                          #
+#    Constant location  =  code                                              #
+#    Extended stack     =  enabled                                           #
+#    Dptr setup         =  1,16                                              #
+#    Source file        =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\user\user_setting.c                   #
+#    Command line       =  -I "C:\Program Files\IAR Systems\Embedded         #
+#                          Workbench 4.05 Evaluation version\8051\INC\" -I   #
+#                          "C:\Program Files\IAR Systems\Embedded Workbench  #
+#                          4.05 Evaluation version\8051\INC\CLIB\" -I        #
+#                          "C:\Documents and Settings\Administrator\×ÀÃæ\lil #
+#                          y\15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX1 #
+#                          070_20150908\COMMON\" -I "C:\Documents and        #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\INC\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\config\" -I "C:\Documents and    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\api\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\fm\" -I "C:\Documents and        #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\fat\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\display\" -I "C:\Documents and   #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\displ #
+#                          ay\led\" -I "C:\Documents and                     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\displ #
+#                          ay\lcd\" -I "C:\Documents and                     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\task\ #
+#                          " -I "C:\Documents and Settings\Administrator\×ÀÃ #
+#                          æ\lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lil #
+#                          y_AX1070_20150908\user\" -I "C:\Documents and     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\mem\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\module\" -I "C:\Documents and    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\modul #
+#                          e\kedir\" -I "C:\Documents and                    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\key\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\startmusic\" -D UART_DEBUG -D    #
+#                          AX207X_TAG -lC "C:\Documents and                  #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\UART_ #
+#                          Debug\List\" -o "C:\Documents and                 #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\UART_ #
+#                          Debug\Obj\" -e -z9 --debug --core=plain           #
+#                          --dptr=16,1 --data_model=large --code_model=near  #
+#                          --calling_convention=ext_stack_reentrant          #
+#                          --place_constants=code --nr_virtual_regs 20       #
+#                          --extended_stack "C:\Documents and                #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\user\ #
+#                          user_setting.c"                                   #
+#    List file          =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\UART_Debug\List\user_setting.lst      #
+#    Object file        =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\UART_Debug\Obj\user_setting.r51       #
+#                                                                            #
+#                                                                            #
+##############################################################################
+
+C:\Documents and Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX1070_20150908\user\user_setting.c
+      1          /*****************************************************************************
+      2           * Module    : User
+      3           * File      : user_setting.c
+      4           * Author    : Hanny
+      5           * Email     : coldney@yahoo.com.cn
+      6           * Function  : ÏµÍ³²ÎÊýÉèÖÃ
+      7           *****************************************************************************/
+      8          #include "include.h"
+
+   \                                 In segment SFR_AN, at 0x88
+   \   unsigned char volatile __sfr SDCON0
+   \                     SDCON0:
+   \   000000                DS 1
+
+   \                                 In segment SFR_AN, at 0xc9
+   \   unsigned char volatile __sfr PCON1
+   \                     PCON1:
+   \   000000                DS 1
+      9          
+
+   \                                 In segment XDATA_Z, align 1, keep-with-next
+   \   000000                REQUIRE __INIT_XDATA_Z
+     10          type_sys_ctl sys_ctl;
+   \                     sys_ctl:
+   \   000000                DS 10
+
+   \                                 In segment BDATA_N, align 1, root
+     11          IAR_BDATA_A type_sys_flag b_sys;
+   \                     b_sys:
+   \   000000                DS 1
+     12          
+     13          #define EQ0(n) ((u8)(((n) + (16 - 3)) * 8))
+     14          #define EQ1(n) ((u8)(((n) + (16 - 4)) * 8))
+     15          #define EQ2(n) EQ1(n)
+     16          #define EQ3(n) EQ1(n)
+     17          #define EQ4(n) EQ1(n)
+     18          #define EQ5(n) EQ1(n)
+     19          #define EQ6(n) EQ1(n)
+     20          #define EQ7(n) EQ1(n)
+     21          #define EQ8(n) ((u8)(((n) + (16 - 2)) * 8))
+     22          
+     23          #pragma constseg="EQ_TBL"
+     24          //ÎåÖÖEQÐ§¹ûDBÖµ£¬Ã¿¸öÖµµÄ·¶Î§Îª -12 ~ 12 db
+
+   \                                 In segment EQ_TBL, align 1
+     25          IAR_CONST u8 tbl_eq_db[6][9] =
+   \                     tbl_eq_db:
+   \   000000   68606060     DB 104, 96, 96, 96, 96, 96, 96, 96, 112, 144, 112, 104, 48, 48, 64, 96
+   \            60606060
+   \            70907068
+   \            30304060
+   \   000010   68806880     DB 104, 128, 104, 128, 152, 64, 64, 80, 120, 152, 168, 80, 72, 72, 152
+   \            98404050
+   \            7898A850
+   \            484898  
+   \   00001F   98985860     DB 152, 152, 88, 96, 120, 176, 168, 160, 80, 80, 80, 104, 112, 136, 72
+   \            78B0A8A0
+   \            50505068
+   \            708848  
+   \   00002E   48506048     DB 72, 80, 96, 72, 72, 144, 160, 176
+   \            4890A0B0
+     26          {
+     27          	{EQ0(0),  EQ1(0),  EQ2(0),  EQ3(0),  EQ4(0),  EQ5(0),  EQ6(0), EQ7(0), EQ8(0)},             //0db,²»ÒªÐÞ¸Ä´ËÏî
+     28          	{EQ0(5),  EQ1(2),  EQ2(1),  EQ3(-6),  EQ4(-6),  EQ5(-4),  EQ6(0), EQ7(1), EQ8(2)},          //POP
+     29          	{EQ0(0),  EQ1(4),  EQ2(7),  EQ3(-4),  EQ4(-4),  EQ5(-2),  EQ6(3), EQ7(7), EQ8(7)},          //ROCK
+     30          	{EQ0(-3),  EQ1(-3),  EQ2(-3),  EQ3(7),  EQ4(7),  EQ5(7),  EQ6(-1), EQ7(0), EQ8(1)},         //JAZZ
+     31          	{EQ0(9),  EQ1(9),  EQ2(8),  EQ3(-2),  EQ4(-2),  EQ5(-2),  EQ6(1), EQ7(2), EQ8(3)},          //CLASSIC
+     32          	{EQ0(-4),  EQ1(-3),  EQ2(-2),  EQ3(0),  EQ4(-3),  EQ5(-3),  EQ6(6), EQ7(8), EQ8(8)},        //COUNTRY
+     33          };
+     34          
+     35          //EQÂË²¨Æ÷ÏµÊý±í,ÇëÊ¹ÓÃEQµ÷ÊÔ¹¤¾ß EQGAIN.exe
+
+   \                                 In segment EQ_TBL, align 1
+     36          IAR_CONST u8 eq_coeff[54] =
+   \                     eq_coeff:
+   \   000000   00347F98     DB 0, 52, 127, 152, 192, 103, 0, 104, 127, 45, 192, 207, 0, 206, 126
+   \            C0670068
+   \            7F2DC0CF
+   \            00CE7E  
+   \   00000F   54C19C01     DB 84, 193, 156, 1, 150, 124, 148, 195, 45, 3, 26, 120, 215, 198, 52, 6
+   \            967C94C3
+   \            2D031A78
+   \            D7C63406
+   \   00001F   03704FCC     DB 3, 112, 79, 204, 6, 10, 0, 94, 218, 211, 255, 17, 241, 50, 135, 227
+   \            060A005E
+   \            DAD3FF11
+   \            F13287E3
+   \   00002F   E219A8E3     DB 226, 25, 168, 227, 122, 243, 80
+   \            7AF350  
+     37          {
+     38          	0x00, 0x34, 0x7F, 0x98, 0xc0, 0x67,
+     39          	0x00, 0x68, 0x7f, 0x2d, 0xc0, 0xcf,
+     40          	0x00, 0xce, 0x7e, 0x54, 0xc1, 0x9c,
+     41          	0x01, 0x96, 0x7c, 0x94, 0xc3, 0x2d,
+     42          	0x03, 0x1a, 0x78, 0xd7, 0xc6, 0x34,
+     43          	0x06, 0x03, 0x70, 0x4f, 0xcc, 0x06,
+     44          	0x0a, 0x00, 0x5e, 0xda, 0xd3, 0xff,
+     45          	0x11, 0xf1, 0x32, 0x87, 0xe3, 0xe2,
+     46          	0x19, 0xa8, 0xe3, 0x7a, 0xf3, 0x50
+     47          };
+     48          #pragma constseg=default
+     49          
+     50          //ÉèÖÃµ±Ç°²¥·ÅÒôÁ¿
+     51          #pragma location="USER_SETTING_SEG"
+
+   \                                 In segment USER_SETTING_SEG, align 1, keep-with-next
+     52          void user_change_volume(u8 volume)
+   \                     user_change_volume:
+     53          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     54          	if(volume <= VOLUME_MAX)
+   \   000000   E9           MOV     A,R1
+   \   000001   C3           CLR     C
+   \   000002   9411         SUBB    A,#0x11
+   \   000004   5003         JNC     ??user_change_volume_0
+     55          	{
+     56          #if DAC_FADE_EN
+     57          		dac_set_volume(volume);
+   \   000006                ; Setup parameters for call to function dac_set_volume
+   \   000006   12....       LCALL   dac_set_volume
+     58          #else
+     59          		dac_set_volume_direct(volume);
+     60          #endif
+     61          	}
+     62          }
+   \                     ??user_change_volume_0:
+   \   000009   22           RET
+     63          
+     64          //±£´æ²¢ÉèÖÃÏµÍ³ÒôÁ¿
+     65          #pragma location="USER_SETTING_SEG"
+
+   \                                 In segment USER_SETTING_SEG, align 1, keep-with-next
+     66          bool user_set_volume(u8 volume)
+   \                     user_set_volume:
+     67          {
+   \   000000   EE           MOV     A,R6
+   \   000001   C0E0         PUSH    A
+   \   000003                ; Saved register size: 1
+   \   000003                ; Auto size: 0
+   \   000003   E9           MOV     A,R1
+   \   000004   FE           MOV     R6,A
+     68          	user_change_volume(volume);
+   \   000005                ; Setup parameters for call to function user_change_volume
+   \   000005   12....       LCALL   user_change_volume
+     69          	if(volume == sys_ctl.volume)
+   \   000008   90....       MOV     DPTR,#(sys_ctl + 2)
+   \   00000B   E0           MOVX    A,@DPTR
+   \   00000C   6E           XRL     A,R6
+   \   00000D   7003         JNZ     ??user_set_volume_0
+     70          	{
+     71          		return false;                             //Ã»ÓÐ¸ü¸Ä
+   \   00000F   C3           CLR     C
+   \   000010   8016         SJMP    ??user_set_volume_1
+     72          	}
+     73          	if(volume <= VOLUME_MAX)
+   \                     ??user_set_volume_0:
+   \   000012   EE           MOV     A,R6
+   \   000013   C3           CLR     C
+   \   000014   9411         SUBB    A,#0x11
+   \   000016   500F         JNC     ??user_set_volume_2
+     74          	{
+     75          		sys_ctl.volume = volume;
+   \   000018   EE           MOV     A,R6
+   \   000019   F0           MOVX    @DPTR,A
+     76          
+     77          		mem_ctl.delay_time = MEM_DELAY;
+   \   00001A   74FF         MOV     A,#-0x1
+   \   00001C   90....       MOV     DPTR,#(mem_ctl + 2)
+   \   00001F   F0           MOVX    @DPTR,A
+     78          		mem_ctl.change_flag |= BIT(MEM_VOL_BIT);
+   \   000020   90....       MOV     DPTR,#(mem_ctl + 1)
+   \   000023   E0           MOVX    A,@DPTR
+   \   000024   D2E1         SETB    0xE0 /* A   */.1
+   \   000026   F0           MOVX    @DPTR,A
+     79          	}
+     80          	return true;
+   \                     ??user_set_volume_2:
+   \   000027   D3           SETB    C
+   \                     ??user_set_volume_1:
+   \   000028   D0E0         POP     A
+   \   00002A   FE           MOV     R6,A
+   \   00002B   22           RET
+     81          }
+     82          
+     83          #pragma location="TASK_FM_SEG"
+
+   \                                 In segment TASK_FM_SEG, align 1, keep-with-next
+     84          bool user_set_fm_volume(u8 volume)
+   \                     user_set_fm_volume:
+     85          {
+   \   000000   EE           MOV     A,R6
+   \   000001   C0E0         PUSH    A
+   \   000003                ; Saved register size: 1
+   \   000003                ; Auto size: 0
+   \   000003   E9           MOV     A,R1
+   \   000004   FE           MOV     R6,A
+     86          	if(volume == sys_ctl.volume)
+   \   000005   90....       MOV     DPTR,#(sys_ctl + 2)
+   \   000008   E0           MOVX    A,@DPTR
+   \   000009   6E           XRL     A,R6
+   \   00000A   7003         JNZ     ??user_set_fm_volume_0
+     87          	{
+     88          		return false;                             //Ã»ÓÐ¸ü¸Ä
+   \   00000C   C3           CLR     C
+   \   00000D   8027         SJMP    ??user_set_fm_volume_1
+     89          	}
+     90          	if(volume <= VOLUME_MAX)
+   \                     ??user_set_fm_volume_0:
+   \   00000F   EE           MOV     A,R6
+   \   000010   C3           CLR     C
+   \   000011   9411         SUBB    A,#0x11
+   \   000013   5019         JNC     ??user_set_fm_volume_2
+     91          	{
+     92          		fm_rx_set_vol(volume);
+   \   000015                ; Setup parameters for call to function fm_rx_set_vol
+   \   000015   12....       LCALL   fm_rx_set_vol
+     93          		sys_ctl.volume = volume;
+   \   000018   EE           MOV     A,R6
+   \   000019   90....       MOV     DPTR,#(sys_ctl + 2)
+   \   00001C   F0           MOVX    @DPTR,A
+     94          #if !AMUX_FM_WITH_NO_CAP
+     95          		user_change_volume(sys_ctl.volume);
+   \   00001D                ; Setup parameters for call to function user_change_volume
+   \   00001D   F9           MOV     R1,A
+   \   00001E   12....       LCALL   user_change_volume
+     96          #endif
+     97          		mem_ctl.delay_time = MEM_DELAY;
+   \   000021   74FF         MOV     A,#-0x1
+   \   000023   90....       MOV     DPTR,#(mem_ctl + 2)
+   \   000026   F0           MOVX    @DPTR,A
+     98          		mem_ctl.change_flag |= BIT(MEM_VOL_BIT);
+   \   000027   90....       MOV     DPTR,#(mem_ctl + 1)
+   \   00002A   E0           MOVX    A,@DPTR
+   \   00002B   D2E1         SETB    0xE0 /* A   */.1
+   \   00002D   F0           MOVX    @DPTR,A
+     99          	}
+    100          	if(b_dac.mute_en)
+   \                     ??user_set_fm_volume_2:
+   \   00002E   A2..         MOV     C,b_dac.1
+   \   000030   5003         JNC     ??user_set_fm_volume_3
+    101          	{
+    102          		mute_disable();
+   \   000032                ; Setup parameters for call to function mute_disable
+   \   000032   12....       LCALL   mute_disable
+    103          	}
+    104          	return true;
+   \                     ??user_set_fm_volume_3:
+   \   000035   D3           SETB    C
+   \                     ??user_set_fm_volume_1:
+   \   000036   D0E0         POP     A
+   \   000038   FE           MOV     R6,A
+   \   000039   22           RET
+    105          }
+    106          
+    107          //ÉèÖÃµ±Ç°EQ
+    108          #pragma location="USER_SETTING_SEG"
+
+   \                                 In segment USER_SETTING_SEG, align 1, keep-with-next
+    109          u8 user_change_eq(u8 eq_num)
+   \                     user_change_eq:
+    110          {
+   \   000000   EE           MOV     A,R6
+   \   000001   C0E0         PUSH    A
+   \   000003                ; Saved register size: 1
+   \   000003                ; Auto size: 0
+   \   000003   E9           MOV     A,R1
+   \   000004   FE           MOV     R6,A
+    111          #if MUSIC_EQ
+    112          	if(eq_num > EQ_NUM_MAX)
+    113          	{
+    114          		eq_num = 0;
+    115          	}
+    116          	if(eq_num == sys_ctl.eq_num)
+    117          	{
+    118          		return eq_num;                             //Ã»ÓÐ¸ü¸Ä
+    119          	}
+    120          #endif
+    121          #if EQ_FADE_EN
+    122          #if EQ_MODIFY_DB_EN
+    123          	music_eq_set(eq_num);
+    124          #else
+    125          	music_eq_set_m(eq_num);
+    126          #endif
+    127          #else
+    128          #if EQ_MODIFY_DB_EN
+    129          	music_eq_setd(eq_num);
+    130          #else
+    131          	music_eq_setd_m(eq_num);
+   \   000005                ; Setup parameters for call to function music_eq_setd_m
+   \   000005   12....       LCALL   music_eq_setd_m
+    132          #endif
+    133          #endif
+    134          	return eq_num;
+   \   000008   EE           MOV     A,R6
+   \   000009   F9           MOV     R1,A
+   \   00000A   D0E0         POP     A
+   \   00000C   FE           MOV     R6,A
+   \   00000D   22           RET
+    135          }
+    136          
+    137          //±£´æ²¢ÉèÖÃEQ
+    138          #pragma location="USER_SETTING_SEG"
+
+   \                                 In segment USER_SETTING_SEG, align 1, keep-with-next
+    139          bool user_set_eq(u8 eq_num)
+   \                     user_set_eq:
+    140          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    141          	u8 num_eq;
+    142          	num_eq = user_change_eq(eq_num);
+   \   000000                ; Setup parameters for call to function user_change_eq
+   \   000000   12....       LCALL   user_change_eq
+   \   000003   E9           MOV     A,R1
+   \   000004   FA           MOV     R2,A
+    143          	if(num_eq <= EQ_NUM_MAX)
+   \   000005   C3           CLR     C
+   \   000006   9406         SUBB    A,#0x6
+   \   000008   5005         JNC     ??user_set_eq_0
+    144          	{
+    145          		sys_ctl.eq_num = num_eq;
+   \   00000A   EA           MOV     A,R2
+   \   00000B   90....       MOV     DPTR,#(sys_ctl + 1)
+   \   00000E   F0           MOVX    @DPTR,A
+    146          	}
+    147          	return true;
+   \                     ??user_set_eq_0:
+   \   00000F   D3           SETB    C
+   \   000010   22           RET
+    148          }
+    149          
+    150          //ÉèÖÃMUTE
+    151          #pragma location="USER_SETTING_SEG"
+
+   \                                 In segment USER_SETTING_SEG, align 1, keep-with-next
+    152          void user_set_mute(void)
+   \                     user_set_mute:
+    153          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    154          	if(b_dac.mute_en)
+   \   000000   A2..         MOV     C,b_dac.1
+   \   000002   5013         JNC     ??user_set_mute_0
+    155          	{
+    156          		mute_disable();
+   \   000004                ; Setup parameters for call to function mute_disable
+   \   000004   12....       LCALL   mute_disable
+    157          		if(!b_dac.dac_stop || !b_dac.digvol_en)     //DACÔÝÍ£Ê±£¬½âmute²»½øÐÐµ­Èë
+   \   000007   740C         MOV     A,#0xc
+   \   000009   55..         ANL     A,b_dac
+   \   00000B   640C         XRL     A,#0xc
+   \   00000D   600E         JZ      ??user_set_mute_1
+    158          		{
+    159          #if DAC_FADE_EN
+    160          			dac_fade_in(b_dac.digvol_en);
+   \   00000F                ; Setup parameters for call to function dac_fade_in
+   \   00000F   A2..         MOV     C,b_dac.3
+   \   000011   92F0         MOV     B.0,C
+   \   000013   12....       LCALL   dac_fade_in
+   \   000016   22           RET
+    161          #endif
+    162          		}
+    163          	}
+    164          	else
+    165          	{
+    166          #if DAC_FADE_EN
+    167          		dac_fade_out();
+   \                     ??user_set_mute_0:
+   \   000017                ; Setup parameters for call to function dac_fade_out
+   \   000017   12....       LCALL   dac_fade_out
+    168          		mute_enable();
+   \   00001A                ; Setup parameters for call to function mute_enable
+   \   00001A   12....       LCALL   mute_enable
+    169          #endif
+    170          	}
+    171          }
+   \                     ??user_set_mute_1:
+   \   00001D   22           RET
+    172          
+    173          #if KEY_VOICE_EN
+    174          #pragma location="USER_SETTING_SEG"
+    175          void user_kick_kv(void)
+    176          {
+    177          	if(!b_dac.mute_en && sys_ctl.volume != 0)
+    178          	{
+    179          		if(!dac_fade_busy())
+    180          		{
+    181          			dac_fade_in_auto();
+    182          		}
+    183          		b_dac.key_voice = 1;
+    184          	}
+    185          }
+    186          
+    187          #pragma location="USER_SETTING_SEG"
+    188          void user_chk_kv(void)
+    189          {
+    190          	if(b_dac.key_voice)
+    191          	{
+    192          		if(!dac_fade_busy())
+    193          		{
+    194          			b_dac.key_voice = 0;
+    195          			if(!(KVCCON & BIT(0)))
+    196          			{
+    197          				KVCCON |= BIT(0);    //key voice enable
+    198          			}
+    199          		}
+    200          	}
+    201          	else
+    202          	{
+    203          		if(!(KVCCON & BIT(0)))
+    204          		{
+    205          			if(b_dac.mute_en || b_dac.dac_stop || (b_dac.sound_flag && !b_dac.sound_sta))
+    206          			{
+    207          				if(dac_fade_out_auto())
+    208          				{
+    209          				}
+    210          			}
+    211          		}
+    212          	}
+    213          }
+    214          #endif
+    215          
+    216          #pragma location="USER_SETTING_SEG"
+
+   \                                 In segment USER_SETTING_SEG, align 1, keep-with-next
+    217          void sdclk_output_clk_start(void)
+   \                     sdclk_output_clk_start:
+    218          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    219          	PCON1 &= ~BIT(3);                           //sdc clk enable
+   \   000000   53C9F7       ANL     0xc9,#0xf7
+    220          #if (FM_CLOCK == USE_SD_IO_12MHZ_CLK)
+    221          	SDBAUD = 0;                                 //SD_CLK = 12MHz
+    222          #elif (FM_CLOCK == USE_SD_IO_32KHZ_CLK)
+    223          	set_sys_clk(SYS_12M);
+    224          	SDBAUD = 182;                               //SD_CLK = 32768Hz
+    225          #endif
+    226          	SDCON0 |= (BIT(0) | BIT(1));                //Enable SDC & Keep Clk Outing
+   \   000003   438803       ORL     0x88,#0x3
+   \   000006   E588         MOV     A,0x88
+    227          }
+   \   000008   22           RET
+    228          
+    229          #pragma location="USER_SETTING_SEG"
+
+   \                                 In segment USER_SETTING_SEG, align 1, keep-with-next
+    230          void sdclk_output_clk_stop(void)
+   \                     sdclk_output_clk_stop:
+    231          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    232          	SDCON0 = 0;
+   \   000000   758800       MOV     0x88,#0x0
+    233          #if (FM_CLOCK == USE_SD_IO_32KHZ_CLK)
+    234          	set_sys_clk(SYS_24M);
+    235          #endif
+    236          }
+   \   000003   22           RET
+    237          
+
+   Maximum stack usage in bytes:
+
+     Function                EXT_STACK PSTACK XSTACK
+     --------                --------- ------ ------
+     sdclk_output_clk_start         0      0      0
+     sdclk_output_clk_stop          0      0      0
+     user_change_eq                 1      0      0
+       -> music_eq_setd_m           2      0      0
+     user_change_volume             1      0      0
+       -> dac_set_volume            0      0      0
+     user_set_eq                    0      0      0
+       -> user_change_eq            0      0      0
+     user_set_fm_volume             1      0      0
+       -> fm_rx_set_vol             2      0      0
+       -> user_change_volume        2      0      0
+       -> mute_disable              2      0      0
+     user_set_mute                  0      0      0
+       -> mute_disable              0      0      0
+       -> dac_fade_in               0      0      0
+       -> dac_fade_out              0      0      0
+       -> mute_enable               0      0      0
+     user_set_volume                1      0      0
+       -> user_change_volume        2      0      0
+
+
+   Segment part sizes:
+
+     Function/Label         Bytes
+     --------------         -----
+     SDCON0                    1
+     PCON1                     1
+     sys_ctl                  10
+     b_sys                     1
+     tbl_eq_db                54
+     eq_coeff                 54
+     user_change_volume       10
+     user_set_volume          44
+     user_set_fm_volume       58
+     user_change_eq           14
+     user_set_eq              17
+     user_set_mute            30
+     sdclk_output_clk_start    9
+     sdclk_output_clk_stop     4
+
+ 
+   1 byte  in segment BDATA_N
+ 108 bytes in segment EQ_TBL
+   2 bytes in segment SFR_AN
+  58 bytes in segment TASK_FM_SEG
+ 128 bytes in segment USER_SETTING_SEG
+  10 bytes in segment XDATA_Z
+ 
+ 294 bytes of CODE  memory
+   1 byte  of DATA  memory (+ 2 bytes shared)
+  10 bytes of XDATA memory
+
+Errors: none
+Warnings: none

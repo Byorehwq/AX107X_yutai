@@ -1,0 +1,216 @@
+##############################################################################
+#                                                                            #
+# IAR 8051 C/C++ Compiler V7.20H/W32                   10/Sep/2015  19:03:27 #
+# Copyright 2004-2006 IAR Systems. All rights reserved.                      #
+#                                                                            #
+#    Core               =  plain                                             #
+#    Code model         =  near                                              #
+#    Data model         =  large                                             #
+#    Calling convention =  extended stack reentrant                          #
+#    Constant location  =  code                                              #
+#    Extended stack     =  enabled                                           #
+#    Dptr setup         =  1,16                                              #
+#    Source file        =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\task\task_fmam_detect.c               #
+#    Command line       =  -I "C:\Program Files\IAR Systems\Embedded         #
+#                          Workbench 4.05 Evaluation version\8051\INC\" -I   #
+#                          "C:\Program Files\IAR Systems\Embedded Workbench  #
+#                          4.05 Evaluation version\8051\INC\CLIB\" -I        #
+#                          "C:\Documents and Settings\Administrator\×ÀÃæ\lil #
+#                          y\15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX1 #
+#                          070_20150908\COMMON\" -I "C:\Documents and        #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\INC\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\config\" -I "C:\Documents and    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\api\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\fm\" -I "C:\Documents and        #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\fat\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\display\" -I "C:\Documents and   #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\displ #
+#                          ay\led\" -I "C:\Documents and                     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\displ #
+#                          ay\lcd\" -I "C:\Documents and                     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\task\ #
+#                          " -I "C:\Documents and Settings\Administrator\×ÀÃ #
+#                          æ\lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lil #
+#                          y_AX1070_20150908\user\" -I "C:\Documents and     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\mem\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\module\" -I "C:\Documents and    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\modul #
+#                          e\kedir\" -I "C:\Documents and                    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\key\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\startmusic\" -D UART_DEBUG -D    #
+#                          AX207X_TAG -lC "C:\Documents and                  #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\UART_ #
+#                          Debug\List\" -o "C:\Documents and                 #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\UART_ #
+#                          Debug\Obj\" -e -z9 --debug --core=plain           #
+#                          --dptr=16,1 --data_model=large --code_model=near  #
+#                          --calling_convention=ext_stack_reentrant          #
+#                          --place_constants=code --nr_virtual_regs 20       #
+#                          --extended_stack "C:\Documents and                #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\task\ #
+#                          task_fmam_detect.c"                               #
+#    List file          =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\UART_Debug\List\task_fmam_detect.lst  #
+#    Object file        =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\UART_Debug\Obj\task_fmam_detect.r51   #
+#                                                                            #
+#                                                                            #
+##############################################################################
+
+C:\Documents and Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX1070_20150908\task\task_fmam_detect.c
+      1          /*****************************************************************************
+      2           * Module    : Task
+      3           * File      : task_fmam_detect.c
+      4           * Author    :
+      5           * Email     :
+      6           * Function  : fm/amÆµÂÊ¼ì²âÈÎÎñÁ÷³Ì
+      7           *****************************************************************************/
+      8          #include "include.h"
+      9          
+     10          #if TASK_FMAM_DETECT_EN
+     11          
+     12          IAR_XDATA_A type_fmam_ctl fmam_ctl;
+     13          
+     14          /****************************************************
+     15              AM frequency band: 500K ~ 31MHz
+     16              FM frequency band: 60M  ~ 130MHz
+     17          ****************************************************/
+     18          
+     19          
+     20          #pragma location="TASK_FMAM_DETECT_SEG"
+     21          static void task_fmam_detect_enter(void)
+     22          {
+     23          	PCON2 &= ~BIT(5);                       //FMAM clock en
+     24          	PIE1 &= ~BIT(6);                        //P35 digital input disabled
+     25          	P3DIR |= BIT(5);
+     26          
+     27          	FMAMTPR = 0x00;                         //8ms * 24000 - 191488 = 512(0x200)
+     28          	//FMAMCON0[5:4] = 2b'10
+     29          
+     30          	FMAMCON0 = BIT(6)|BIT(5)|BIT(1)|BIT(0); //bit6-CHSEL:fm and am channel effect
+     31          	//bit5 bit4-:FMAMTPRH
+     32          	//bit1-AMIN_EN:am input enable
+     33          	//bit0-FMIN_EN:fm input enable
+     34          	FMAMCON2 |= BIT(1);                     //bit1-FMAMCNT_CLR:fmam count clean zero
+     35          	FMAMCON1 = BIT(1) | BIT(0);             //bit1-FM_SEL:fm frequency select fm
+     36          	//bit0-FMAM_EN:fmam frequency detect enable
+     37          }
+     38          
+     39          #pragma location="TASK_FMAM_DETECT_SEG"
+     40          static void task_fmam_detect_exit(void)
+     41          {
+     42          	FMAMCON0 = 0;
+     43          	FMAMCON1 = 0;
+     44          }
+     45          
+     46          #pragma location="TASK_FMAM_DETECT_SEG"
+     47          static u16 get_freq_value(void)
+     48          {
+     49          	u16 freq;
+     50          	while(!(FMAMCON1&BIT(3)))       //wait fmam detect finish
+     51          	{
+     52          		WATCHDOG_CLR();
+     53          	}
+     54          	FMAMCON1 &= ~BIT(3);
+     55          	freq = FMAMCNTH;
+     56          	freq <<= 8;
+     57          	freq += FMAMCNTL;
+     58          	return freq;
+     59          }
+     60          
+     61          #pragma location="TASK_FMAM_DETECT_SEG"
+     62          static void get_fmam_freq(void)
+     63          {
+     64          	u32 freq;
+     65          
+     66          	FMAMCON2 |= BIT(1);             /* ÏÈÇå¼ÆÊýÆ÷ */
+     67          	FMAMCON1 = BIT(1)|BIT(0);       /* ÇÐ³ÉFMÍ¨µÀ£¬Í¬Ê±ÇåPending */
+     68          	delay_5ms(20);
+     69          	freq = get_freq_value();
+     70          	printf("[%ld]", freq);
+     71          	if(freq > (59000>>2))
+     72          	{
+     73          		freq <<= 2;
+     74          		fmam_ctl.freq = freq;
+     75          		printf("------fm freq = %ld\n", fmam_ctl.freq);
+     76          		return;
+     77          	}
+     78          
+     79          	FMAMCON2 |= BIT(1);             /* ÏÈÇå¼ÆÊýÆ÷ */
+     80          	FMAMCON1 = BIT(0);              /* ÇÐ³ÉAMÍ¨µÀ£¬Í¬Ê±ÇåPending */
+     81          	delay_5ms(20);
+     82          	fmam_ctl.freq = get_freq_value();
+     83          	printf("am freq = %ld\n", fmam_ctl.freq);
+     84          }
+     85          
+     86          #pragma location="TASK_FMAM_DETECT_SEG"
+     87          static void task_fmam_detect_event(void)
+     88          {
+     89          	WATCHDOG_CLR();
+     90          	get_fmam_freq();
+     91          }
+     92          
+     93          #pragma location="TASK_FMAM_DETECT_SEG"
+     94          static void task_fmam_detect_deal_msg(u8 msg)
+     95          {
+     96          }
+     97          
+     98          #pragma location="TASK_FMAM_DETECT_SEG"
+     99          static void task_fmam_detect_display(void)
+    100          {
+    101          }
+    102          
+    103          #pragma location="TASK_FMAM_DETECT_SEG"
+    104          void task_fmam_detect(void)
+    105          {
+    106          	printf("task_fmam_detect.\n");
+    107          	task_fmam_detect_enter();
+    108          	while(task_ctl.work_sta == TASK_FMAM_DETECT)
+    109          	{
+    110          		task_fmam_detect_event();
+    111          		task_fmam_detect_deal_msg(get_msg());
+    112          		task_fmam_detect_display();
+    113          	}
+    114          	task_fmam_detect_exit();
+    115          }
+    116          
+    117          #endif
+
+
+   Segment part sizes:
+
+     Function/Label Bytes
+     -------------- -----
+
+ 
+ 
+ 0 bytes of memory
+
+Errors: none
+Warnings: none

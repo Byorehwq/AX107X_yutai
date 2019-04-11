@@ -1,0 +1,255 @@
+##############################################################################
+#                                                                            #
+# IAR 8051 C/C++ Compiler V7.20H/W32                   10/Sep/2015  19:03:29 #
+# Copyright 2004-2006 IAR Systems. All rights reserved.                      #
+#                                                                            #
+#    Core               =  plain                                             #
+#    Code model         =  near                                              #
+#    Data model         =  large                                             #
+#    Calling convention =  extended stack reentrant                          #
+#    Constant location  =  code                                              #
+#    Extended stack     =  enabled                                           #
+#    Dptr setup         =  1,16                                              #
+#    Source file        =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\task\task_alarm.c                     #
+#    Command line       =  -I "C:\Program Files\IAR Systems\Embedded         #
+#                          Workbench 4.05 Evaluation version\8051\INC\" -I   #
+#                          "C:\Program Files\IAR Systems\Embedded Workbench  #
+#                          4.05 Evaluation version\8051\INC\CLIB\" -I        #
+#                          "C:\Documents and Settings\Administrator\×ÀÃæ\lil #
+#                          y\15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX1 #
+#                          070_20150908\COMMON\" -I "C:\Documents and        #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\INC\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\config\" -I "C:\Documents and    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\api\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\fm\" -I "C:\Documents and        #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\fat\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\display\" -I "C:\Documents and   #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\displ #
+#                          ay\led\" -I "C:\Documents and                     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\displ #
+#                          ay\lcd\" -I "C:\Documents and                     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\task\ #
+#                          " -I "C:\Documents and Settings\Administrator\×ÀÃ #
+#                          æ\lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lil #
+#                          y_AX1070_20150908\user\" -I "C:\Documents and     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\mem\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\module\" -I "C:\Documents and    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\modul #
+#                          e\kedir\" -I "C:\Documents and                    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\key\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\startmusic\" -D UART_DEBUG -D    #
+#                          AX207X_TAG -lC "C:\Documents and                  #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\UART_ #
+#                          Debug\List\" -o "C:\Documents and                 #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\UART_ #
+#                          Debug\Obj\" -e -z9 --debug --core=plain           #
+#                          --dptr=16,1 --data_model=large --code_model=near  #
+#                          --calling_convention=ext_stack_reentrant          #
+#                          --place_constants=code --nr_virtual_regs 20       #
+#                          --extended_stack "C:\Documents and                #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\task\ #
+#                          task_alarm.c"                                     #
+#    List file          =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\UART_Debug\List\task_alarm.lst        #
+#    Object file        =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\UART_Debug\Obj\task_alarm.r51         #
+#                                                                            #
+#                                                                            #
+##############################################################################
+
+C:\Documents and Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX1070_20150908\task\task_alarm.c
+      1          /*****************************************************************************
+      2           * Module    : Task
+      3           * File      : task_alarm.c
+      4           * Author    : Hanny
+      5           * Email     : coldney@yahoo.com.cn
+      6           * Function  : ÄÖÖÓÈÎÎñÁ÷³Ì
+      7           *****************************************************************************/
+      8          #include "include.h"
+      9          
+     10          #if ALARM_EN
+     11          
+     12          type_task_alarm t_alarm;
+     13          
+     14          #ifdef AX207X_TAG
+     15          
+     16          //ÄÖÖÓPCMÊý¾Ý,ÕýÏÒ²¨µÄ4¸öµã. 16bit, Ð¡¶Ë(µÍ8bitÔÚÇ°),ÏÈ×óÉùµÀ,ºóÓÒÉùµÀ
+     17          #pragma constseg="TASK_ALARM_CONST"
+     18          IAR_CONST u8 alarm_pcm_buf[16] =
+     19          {
+     20          	0x00, 0x00, 0x00, 0x00, 0xDA, 0xBF, 0xDA, 0xBF,
+     21          	0x00, 0x00, 0x00, 0x00, 0x26, 0x40, 0x26, 0x40
+     22          };
+     23          #pragma constseg=default
+     24          
+     25          #else
+     26          //AX107XÉÏ£¬Õâ¸öbufÒÆÈëÁËmrom
+     27          extern IAR_CONST u8 alarm_pcm_buf[16];
+     28          
+     29          #endif
+     30          
+     31          //½øÈëalarmÈÎÎñ
+     32          #pragma location="TASK_ALARM_SEG"
+     33          static void task_alarm_enter(void)
+     34          {
+     35          	SELECT_IROM2();
+     36          	t_alarm.alarm_cnt = 0;
+     37          	t_alarm.delay_10ms_cnt = 0;
+     38          	t_alarm.delay_1s_cnt = 0;
+     39          	t_alarm.vol_tmp = sys_ctl.volume;
+     40          	dac_out_init(DAC_SPA_16K);
+     41          #if !DAC_FADE_EN
+     42          	b_dac.digvol_en = 1;
+     43          #endif
+     44          	user_set_volume(10);
+     45          	mute_disable();
+     46          #if DAC_FADE_EN
+     47          	dac_fade_in(0);
+     48          	dac_fade_wait();
+     49          #endif
+     50          	flush_msg();
+     51          }
+     52          
+     53          //alarmÈÎÎñÍË³ö
+     54          #pragma location="TASK_ALARM_SEG"
+     55          static void task_alarm_exit(void)
+     56          {
+     57          	dac_clr_buf();
+     58          	sys_ctl.volume = t_alarm.vol_tmp;
+     59          	user_set_volume(sys_ctl.volume);
+     60          #if DAC_FADE_EN
+     61          	dac_fade_out();
+     62          #endif
+     63          	RTC_ALARM_EN();//ÖØÐÂ´ò¿ªÄÖÖÓ
+     64          }
+     65          
+     66          //alarmÈÎÎñÊÂ¼þ´¦Àí£¬ÏìÁå·½Ê½ÊÇ:¶ÌÏì4Éù,¶ÌÍ£4Éù,ÔÙ³¤Í£4Éù
+     67          #pragma location="TASK_ALARM_SEG"
+     68          static void task_alarm_event(void)
+     69          {
+     70          	u8 i;
+     71          	WATCHDOG_CLR();
+     72          	if(t_alarm.alarm_cnt < 4)
+     73          	{
+     74          		t_alarm.delay_10ms_cnt = 0; //¶ÌÏìÊ±¼ä
+     75          		while(t_alarm.delay_10ms_cnt < ALARM_RING_CYCLE/10)
+     76          		{
+     77          			//Ö±ÍÆPCMµ½DAC£¬left_l,left_h,right_l,right_h
+     78          			for(i=0; i<16;)
+     79          			{
+     80          				while(!(AUCON7 & BIT(7)));
+     81          				AUCON5 = alarm_pcm_buf[i++];
+     82          				AUCON5 = alarm_pcm_buf[i++];
+     83          			}
+     84          		}
+     85          
+     86          		t_alarm.delay_10ms_cnt = 0; //¶ÌÍ£Ê±¼ä.
+     87          		while(t_alarm.delay_10ms_cnt < ALARM_SILENCE_CYCLE_A/10)
+     88          		{
+     89          			for(i=0; i<2; i++)
+     90          			{
+     91          				while(!(AUCON7 & BIT(7)));
+     92          				AUCON5 = 0;
+     93          				AUCON5 = 0;
+     94          			}
+     95          		}
+     96          		t_alarm.alarm_cnt++;
+     97          	}
+     98          	else
+     99          	{
+    100          		disp_clear();
+    101          		t_alarm.delay_10ms_cnt = 0; //³¤Í£Ê±¼ä.
+    102          		while(t_alarm.delay_10ms_cnt < ALARM_SILENCE_CYCLE_B/10)
+    103          		{
+    104          			for(i=0; i<2; i++)
+    105          			{
+    106          				while(!(AUCON7 & BIT(7)));
+    107          				AUCON5 = 0;
+    108          				AUCON5 = 0;
+    109          			}
+    110          		}
+    111          
+    112          		sec2date(&t_time, irtc_read_date());
+    113          		t_alarm.alarm_cnt = 0;
+    114          	}
+    115          }
+    116          
+    117          //alarmÈÎÎñÏûÏ¢´¦Àí
+    118          #pragma location="TASK_ALARM_SEG"
+    119          static void task_alarm_deal_msg(u8 msg)
+    120          {
+    121          	//°´ÈÎÒâ°´¼üÍ£Ö¹ÄÖÖÓ,·µ»ØÔ­À´µÄ¹¤×÷Ä£Ê½
+    122          	if(((msg&0xE0)==T_KEY_SHORT_UP) || ((msg&0xE0)==T_KEY_LONG_UP)\
+    123          	        || t_alarm.delay_1s_cnt >= 60)//60s
+    124          	{
+    125          		task_ctl.work_sta = task_ctl.last_work;
+    126          	}
+    127          }
+    128          
+    129          //alarmÈÎÎñ
+    130          #pragma location="TASK_ALARM_SEG"
+    131          void task_alarm(void)
+    132          {
+    133          	printf("alarm mode\n");
+    134          	task_alarm_enter();
+    135          	while(task_ctl.work_sta == TASK_ALARM)
+    136          	{
+    137          		task_alarm_event();
+    138          		task_alarm_deal_msg(get_msg());
+    139          		ocx_time_set(t_time.hour, t_time.minute);
+    140          		disp_time();
+    141          	}
+    142          	task_alarm_exit();
+    143          }
+    144          
+    145          #pragma location="TASK_ALARM_SEG"
+    146          void task_alarm_check(void)
+    147          {
+    148          	if(IRTCON & BIT(5))
+    149          	{
+    150          		IRTCON &= ~BIT(5);
+    151          		RTC_ALARM_DIS();
+    152          		task_ctl.work_sta = TASK_ALARM;
+    153          	}
+    154          }
+    155          
+    156          #endif
+
+
+   Segment part sizes:
+
+     Function/Label Bytes
+     -------------- -----
+
+ 
+ 
+ 0 bytes of memory
+
+Errors: none
+Warnings: none

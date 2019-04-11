@@ -1,0 +1,791 @@
+##############################################################################
+#                                                                            #
+# IAR 8051 C/C++ Compiler V7.20H/W32                   10/Sep/2015  19:03:29 #
+# Copyright 2004-2006 IAR Systems. All rights reserved.                      #
+#                                                                            #
+#    Core               =  plain                                             #
+#    Code model         =  near                                              #
+#    Data model         =  large                                             #
+#    Calling convention =  extended stack reentrant                          #
+#    Constant location  =  code                                              #
+#    Extended stack     =  enabled                                           #
+#    Dptr setup         =  1,16                                              #
+#    Source file        =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\fm\si484x.c                           #
+#    Command line       =  -I "C:\Program Files\IAR Systems\Embedded         #
+#                          Workbench 4.05 Evaluation version\8051\INC\" -I   #
+#                          "C:\Program Files\IAR Systems\Embedded Workbench  #
+#                          4.05 Evaluation version\8051\INC\CLIB\" -I        #
+#                          "C:\Documents and Settings\Administrator\×ÀÃæ\lil #
+#                          y\15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX1 #
+#                          070_20150908\COMMON\" -I "C:\Documents and        #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\INC\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\config\" -I "C:\Documents and    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\api\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\fm\" -I "C:\Documents and        #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\fat\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\display\" -I "C:\Documents and   #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\displ #
+#                          ay\led\" -I "C:\Documents and                     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\displ #
+#                          ay\lcd\" -I "C:\Documents and                     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\task\ #
+#                          " -I "C:\Documents and Settings\Administrator\×ÀÃ #
+#                          æ\lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lil #
+#                          y_AX1070_20150908\user\" -I "C:\Documents and     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\mem\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\module\" -I "C:\Documents and    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\modul #
+#                          e\kedir\" -I "C:\Documents and                    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\key\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\startmusic\" -D UART_DEBUG -D    #
+#                          AX207X_TAG -lC "C:\Documents and                  #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\UART_ #
+#                          Debug\List\" -o "C:\Documents and                 #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\UART_ #
+#                          Debug\Obj\" -e -z9 --debug --core=plain           #
+#                          --dptr=16,1 --data_model=large --code_model=near  #
+#                          --calling_convention=ext_stack_reentrant          #
+#                          --place_constants=code --nr_virtual_regs 20       #
+#                          --extended_stack "C:\Documents and                #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\fm\si #
+#                          484x.c"                                           #
+#    List file          =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\UART_Debug\List\si484x.lst            #
+#    Object file        =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\UART_Debug\Obj\si484x.r51             #
+#                                                                            #
+#                                                                            #
+##############################################################################
+
+C:\Documents and Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX1070_20150908\fm\si484x.c
+      1          /*--------------------------------------------------------------------------*/
+      2          /**@file Si484x.C
+      3             @brief FMÄ£¿éSi484xÇý¶¯
+      4             @details FMÄ£¿éSi484xµÄÇý¶¯º¯Êý
+      5             @author LZZ
+      6             @date 2010-08-17
+      7             @note ±¾Çý¶¯Ö§³ÖÄ£¿é£¬Ö§³Ö32K¹²¾§Õñ,Ö§³ÖP05Êä³öÊ±ÖÓ,ÈýÖÖ·½Ê½Ê±ÖÓµÄ³ÌÐòÒ»Ñù
+      8                   Í¨¹ýÊ¶±ðIDÀ´Çø±ð¸÷ÖÖ°æ±¾
+      9          */
+     10          /*----------------------------------------------------------------------------*/
+     11          
+     12          #include "include.h"
+     13          #include "Si484x.h"
+     14          
+     15          
+     16          #if FM_SI484X_EN
+     17          
+     18          u8 band_index=12;
+     19          u8 tuner_mode;
+     20          u8 state_machine;
+     21          u8 fm_bass_treble=0;
+     22          u8 am_bass_treble=0;
+     23          u8 max_vol=0;
+     24          u8 si484x_dat[11];
+     25          u8 si484x_readdata[4];
+     26          
+     27          void FM_Si484x_Write_2(u8 size);
+     28          void FM_Si484x_Read_2(u8 size);
+     29          
+     30          #define Si484X_RD_CTRL   0x0021
+     31          #define Si484X_WR_CTRL   0x0020
+     32          #pragma constseg = Si484x_RX_TABLE
+     33          
+     34          const u8 max_vol_list[9] = {59,60,61,62,63,62,61,60,59};
+     35          #pragma constseg=default
+     36          #if USE_PORT_INTERRUPT
+     37          /*----------------------------------------------------------------------------*/
+     38          /***@brief   PORTÍâ²¿ÖÐ¶ÏµÄ³õÊ¼»¯
+     39              @details
+     40              @param ÎÞ
+     41              @return ÎÞ
+     42              @note
+     43          */
+     44          /*----------------------------------------------------------------------------*/
+     45          #pragma location="START_UP"
+     46          __near_func void port_init(void)
+     47          {
+     48          	IE1 &=~BIT(2);
+     49          	PWKEN &=~0x01;  //enable PORT(P04) Interrupt
+     50          	asm("nop");
+     51          	asm("nop");
+     52          	PWKEDGE= 0x00;
+     53          	asm("nop");
+     54          	asm("nop");
+     55          	P0DIR |=BIT(4);    //set ingput
+     56          	PIE0 |= (1<<4);
+     57          	IE1 |= (1<<2);     //
+     58          }
+     59          /*----------------------------------------------------------------------------*/
+     60          /***@brief   PORTÍâ²¿ÖÐ¶Ï·þÎñº¯Êý
+     61              @details
+     62              @param ÎÞ
+     63              @return ÎÞ
+     64              @note
+     65          */
+     66          /*----------------------------------------------------------------------------*/
+     67          #pragma vector = VECTOR_OFFSET(PORT_INT)
+     68          #pragma register_bank = 1
+     69          __interrupt __near_func void isr_port(void)
+     70          {
+     71          	ISR_ENTER();
+     72          	if(PWKEN & BIT(4))   //PORT ÖÐ¶Ï
+     73          	{
+     74          		PWKEN &=~BIT(4);
+     75          		if(state_machine & SM_RADIO_READY)
+     76          		{
+     77          			flag_tuner_irq = 1;
+     78          		}
+     79          	}
+     80          	ISR_EXIT();
+     81          }
+     82          #endif
+     83          #if USE_CAPTURE_MODE
+     84          /*----------------------------------------------------------------------------*/
+     85          /**@brief timer0 ³õÊ¼»¯º¯Êý
+     86             @details:Ö÷ÒªÓÃÓÚSIÏµÁÐµÄÊÕÒôÐ¾Æ¬IRQÐÅºÅµÄCapture
+     87             @param ÎÞ
+     88             @return ÎÞ
+     89             @note : timer0¶ÔÓ¦CaptureµÄ¹¦ÄÜµÄGPIOÊÇP05
+     90          */
+     91          /*----------------------------------------------------------------------------*/
+     92          void timer0_init()
+     93          {
+     94          	IE1 &=~BIT(5);
+     95          	TMR0CON = 0x37;
+     96          	PIE0 |= (1<<5);   //digital input
+     97          	P0DIR |= BIT(5);  //Si484xIRQ
+     98          	IE1 |= BIT(5);
+     99          }
+    100          /*----------------------------------------------------------------------------*/
+    101          /**@brief timer0 ÖÐ¶Ï·þÎñº¯Êý
+    102             @details:Ö÷ÒªÓÃÓÚSIÏµÁÐµÄÊÕÒôÐ¾Æ¬IRQÐÅºÅµÄCapture
+    103             @param ÎÞ
+    104             @return ÎÞ
+    105             @note : timer0¶ÔÓ¦CaptureµÄ¹¦ÄÜµÄGPIOÊÇP05
+    106          */
+    107          /*----------------------------------------------------------------------------*/
+    108          #pragma vector = VECTOR_OFFSET(TIMER0_INT)
+    109          #pragma register_bank = 1
+    110          __interrupt __near_func void isr_timer0(void)
+    111          {
+    112          	ISR_ENTER();
+    113          	if(TMR0CON & 0x80)	//CAPTURE
+    114          	{
+    115          		TMR0CON &= ~BIT(7);
+    116          		if(state_machine & SM_RADIO_READY)
+    117          		{
+    118          			flag_tuner_irq = 1;
+    119          		}
+    120          	}
+    121          	ISR_EXIT();
+    122          }
+    123          #endif
+    124          
+    125          /*----------------------------------------------------------------------------*/
+    126          /**@brief  IIC³õÊ¼»¯¸´Î»
+    127             @param ÎÞ
+    128             @return ÎÞ
+    129             @note
+    130          */
+    131          /*----------------------------------------------------------------------------*/
+    132          void i2c_reset(void)@"Si484x_RX"
+    133          {
+    134          	IIC_DATA_HIGH();
+    135          	IIC_CLK_HIGH();
+    136          	SI484X_RST_LOW();
+    137          	delay_5ms(1);
+    138          	SI484X_RST_HIGH();
+    139          	delay_5ms(1);
+    140          }
+    141          /*----------------------------------------------------------------------------*/
+    142          /**@brief  ¸´Î»SIÐ¾Æ¬
+    143             @param ÎÞ
+    144             @return ÎÞ
+    145             @note
+    146          */
+    147          /*----------------------------------------------------------------------------*/
+    148          void Si484x_Reset(void)@"Si484x_RX"
+    149          {
+    150          	SI484X_RST_HIGH();
+    151          	delay_5ms(1);
+    152          	SI484X_RST_LOW();
+    153          	IIC_DATA_LOW();
+    154          	IIC_CLK_LOW();
+    155          	delay_5ms(1);
+    156          	IIC_CLK_HIGH();
+    157          	SI484X_RST_HIGH();
+    158          	IIC_DATA_HIGH();
+    159          }
+    160          
+    161          /****************************************************************************
+    162           * this function set the bass/treble
+    163           * **************************************************************************/
+    164          /*----------------------------------------------------------------------------*/
+    165          /**@brief  »ñÈ¡SIÐ¾Æ¬µÄ¸ß¡¢µÍÒôÊä³ö·ù¶È
+    166             @param ÎÞ
+    167             @return ÎÞ
+    168             @note
+    169          */
+    170          /*----------------------------------------------------------------------------*/
+    171          void atdd_set_bass_treble(u8 tone)@"Si484x_RX"
+    172          {
+    173          	set_property(0x4002,tone);
+    174          #if 0//FM_AUDIO_MODE == 3
+    175          	if(tuner_mode == FM)
+    176          	{
+    177          		volume= atdd_get_actual_vol();
+    178          		max_vol = max_vol_list[tone];
+    179          	}
+    180          #endif
+    181          }
+    182          /*----------------------------------------------------------------------------*/
+    183          /**@brief  »ñÈ¡SIÐ¾Æ¬µÄÈ¥¼ÓÖØÊ±¼ä
+    184             @param ÎÞ
+    185             @return ÎÞ
+    186             @note
+    187          */
+    188          /*----------------------------------------------------------------------------*/
+    189          void atdd_set_deemphasis(u8 deemphasis)@"Si484x_RX"
+    190          {
+    191          	set_property(0x1100,deemphasis);
+    192          }
+    193          /*----------------------------------------------------------------------------*/
+    194          /**@brief  »ñÈ¡SIÐ¾Æ¬µÄµ¥ÉùµÀµ÷ÖÆµÄRSSIÃÅÏÞ
+    195             @param ÎÞ
+    196             @return ÎÞ
+    197             @note
+    198          */
+    199          /*----------------------------------------------------------------------------*/
+    200          void atdd_set_rssi_blend_mono(u8 blend_mono)@"Si484x_RX"
+    201          {
+    202          	set_property(0x1801,blend_mono);
+    203          }
+    204          /*----------------------------------------------------------------------------*/
+    205          /**@brief  »ñÈ¡SIÐ¾Æ¬µÄÁ¢ÌåÉù»ìºÏµÄRSSIÃÅÏÞ
+    206             @param ÎÞ
+    207             @return ÎÞ
+    208             @note
+    209          */
+    210          /*----------------------------------------------------------------------------*/
+    211          void atdd_set_rssi_blend_stereo(u8 blend_stereo)@"Si484x_RX"
+    212          {
+    213          	set_property(0x1800,blend_stereo);
+    214          }
+    215          
+    216          /*----------------------------------------------------------------------------*/
+    217          /**@brief  »ñÈ¡SIÐ¾Æ¬µÄÁ¢ÌåÉù·ÖÀë¶È
+    218             @param ÎÞ
+    219             @return ÎÞ
+    220             @note
+    221          */
+    222          /*----------------------------------------------------------------------------*/
+    223          void atdd_set_stereo_separation(u8 separation)@"Si484x_RX"
+    224          {
+    225          	set_property(0x1207,separation);
+    226          }
+    227          
+    228          /*----------------------------------------------------------------------------*/
+    229          /**@brief  »ñÈ¡SIÐ¾Æ¬µÄÊµ¼ÊµÄÒôÁ¿¡¡
+    230             @param ÎÞ
+    231             @return ÎÞ
+    232             @note
+    233          */
+    234          /*----------------------------------------------------------------------------*/
+    235          #ifdef  enable_get_actual_vol_command
+    236          #ifndef enable_get_property_command
+    237          #define enable_get_property_command
+    238          #endif
+    239          u8 atdd_get_actual_vol()@"Si484x_RX"
+    240          {
+    241          	u8 actual_vol;
+    242          	actual_vol = (u8) get_property(0x4003);
+    243          	return actual_vol;
+    244          }
+    245          #endif
+    246          /*----------------------------------------------------------------------------*/
+    247          /**@brief  ÉèÖÃSIÐ¾Æ¬µÄVolume¡¡
+    248             @param ÎÞ
+    249             @return ÎÞ
+    250             @note
+    251          */
+    252          /*----------------------------------------------------------------------------*/
+    253          void atdd_set_volume(u8 vol)@"Si484x_RX"
+    254          {
+    255          	set_property(0x4000,vol);
+    256          	//set_property(0x4001,0);
+    257          }
+    258          
+    259          
+    260          #define ADJPT_STERRO_DISABLE 0
+    261          #define FM_ADJPT_ATTENUATION_DISABLE 0
+    262          #define FM_AUDIO_MODE 3
+    263          #define FM_FORCE_MONO 0
+    264          //1:de-emphasis 50us
+    265          //2:de-emphasis 75us
+    266          #define FM_DE_EMPHASIS 2
+    267          #define FM_BLEND_MONO  8
+    268          #define FM_BLEND_STEREO 49
+    269          #define FM_SEPARATION 0x9F
+    270          /*----------------------------------------------------------------------------*/
+    271          /**@brief  ÅäÖÃFM²¨¶ÎµÄÒ»Ð©²ÎÊý¡¡
+    272             @param ÎÞ
+    273             @return ÎÞ
+    274             @note
+    275          */
+    276          /*----------------------------------------------------------------------------*/
+    277          void config_fm()@"Si484x_RX1"
+    278          {
+    279          	if(!flag_tuner_pri)
+    280          	{
+    281          		atdd_set_deemphasis(FM_DE_EMPHASIS);
+    282          		atdd_set_rssi_blend_mono(FM_BLEND_MONO);
+    283          		atdd_set_rssi_blend_stereo(FM_BLEND_STEREO);
+    284          		atdd_set_stereo_separation(FM_SEPARATION);
+    285          	}
+    286          	atdd_audio_mode(ADJPT_STERRO_DISABLE,FM_ADJPT_ATTENUATION_DISABLE,FM_FORCE_MONO,FM_AUDIO_MODE);
+    287          //#if  FM_AUDIO_MODE != 1
+    288          	atdd_set_volume(SI484X_OUT_VOL);
+    289          //#endif
+    290          }
+    291          /***************************************************
+    292           * config am band,initial volume and bass/treble
+    293           * *************************************************/
+    294          /*----------------------------------------------------------------------------*/
+    295          /**@brief  ÅäÖÃAM²¨¶ÎµÄÒ»Ð©²ÎÊý
+    296             @param ÎÞ
+    297             @return ÎÞ
+    298             @note
+    299          */
+    300          /*----------------------------------------------------------------------------*/
+    301          void config_am()@"Si484x_RX1"
+    302          {
+    303          	//atdd_set_bass_treble(am_bass_treble);
+    304          	atdd_set_volume(SI484X_OUT_VOL);
+    305          }
+    306          /***************************************************
+    307           * config sw band,initial volume ,bass/treble and tuning preference
+    308           * a
+    309           * *************************************************/
+    310          /*----------------------------------------------------------------------------*/
+    311          /**@brief   ÅäÖÃSW²¨¶ÎµÄÒ»Ð©²ÎÊý
+    312             @param ÎÞ
+    313             @return ÎÞ
+    314             @note
+    315          */
+    316          /*----------------------------------------------------------------------------*/
+    317          #define SW_ADJPT_ATTENUATION_DISABLE 0
+    318          void config_sw()@"Si484x_RX1"
+    319          {
+    320          	//atdd_set_bass_treble(am_bass_treble);
+    321          	atdd_set_volume(SI484X_OUT_VOL);
+    322          	//atdd_audio_mode(0,SW_ADJPT_ATTENUATION_DISABLE,0,0);
+    323          }
+    324          
+    325          /*----------------------------------------------------------------------------*/
+    326          /**@brief  ÉèÖÃSIÐ¾Æ¬¿ª»ú,µÈ´ý¾§ÕñÆðÕñÊ±¼ä¡¢²¨¶ÎµÄÑ¡ÔñºÍÊôÐÔµÄ½¨Á¢
+    327             @param ÎÞ
+    328             @return ÎÞ
+    329             @note
+    330          */
+    331          /*----------------------------------------------------------------------------*/
+    332          void atdd_power_up(u8 xoscen,u8 xowait,u8 band_index,u16 band_bottom,u16 band_top,u8 chspc)@"Si484x_RX1"
+    333          {
+    334          	u8 len;
+    335          	si484x_dat[0] = ATDD_POWER_UP;  //ATDD powerup command
+    336          	si484x_dat[1] = band_index;
+    337          	if(xoscen)
+    338          	{
+    339          		si484x_dat[1] |= ATDD_XOSCEN ;
+    340          	}
+    341          	if(xowait)
+    342          	{
+    343          		si484x_dat[1] |= ATDD_XOWAIT;
+    344          	}
+    345          	len = 2;
+    346          	if(flag_tuner_pri)
+    347          	{
+    348          		si484x_dat[2] = band_bottom>>8;
+    349          		si484x_dat[3] = band_bottom;
+    350          		si484x_dat[4] = band_top>>8;
+    351          		si484x_dat[5] = band_top;
+    352          		si484x_dat[6] = chspc;
+    353          		len = 7;
+    354          	}
+    355          	FM_Si484x_Write_2(len);
+    356          	wait_cts();
+    357          	//write_command(len, cmd, 0, NULL);
+    358          }
+    359          
+    360          /*******************************************************************************
+    361           * This function set the audio mode,fm force mono,+/-100K-adjance channel attenuation mode
+    362           * and +/-100k-adjance channel stereo status
+    363           * *****************************************************************************/
+    364          /*----------------------------------------------------------------------------*/
+    365          /**@brief  µÃµ½ÉèÖÃÒôÆµÄ£Ê½
+    366             @param ÎÞ
+    367             @return ÎÞ
+    368             @note
+    369          */
+    370          /*----------------------------------------------------------------------------*/
+    371          void atdd_audio_mode(u8 adj_st,u8 adj_attn,u8 force_mono,u8 audio_mode)@"Si484x_RX"
+    372          {
+    373          	si484x_dat[0] = ATDD_AUDIO_MODE;
+    374          	si484x_dat[1] = audio_mode;
+    375          	if(adj_st)
+    376          	{
+    377          		si484x_dat[1] |= ADJPT_STEO;
+    378          	}
+    379          	if(adj_attn)
+    380          	{
+    381          		si484x_dat[1] |= ADJPT_ATTN;
+    382          	}
+    383          	if(force_mono)
+    384          	{
+    385          		si484x_dat[1] |= FM_MONO;
+    386          	}
+    387          	FM_Si484x_Write_2(2);
+    388          	wait_cts();
+    389          	//write_command(2, cmd, 0, NULL);
+    390          }
+    391          /*----------------------------------------------------------------------------*/
+    392          /**@brief  µÃµ½SIÐ¾Æ¬µ±Ç°µ÷Ð³ÆµÂÊ¡¢²¨¶ÎµÈµÈÐ¾Æ¬µÄ×´Ì¬
+    393             @param ÎÞ
+    394             @return ÎÞ
+    395             @note
+    396          */
+    397          /*----------------------------------------------------------------------------*/
+    398          void atdd_get_status(void)@"Si484x_RX"
+    399          {
+    400          	//get atdd status and analyze them
+    401          	si484x_dat[0] = ATDD_GET_STATUS;
+    402          	FM_Si484x_Write_2(1);
+    403          	wait_cts();
+    404          	FM_Si484x_Read_2(4);
+    405          	//write_command(1,&cmd,4,rspbuf);
+    406          }
+    407          /*----------------------------------------------------------------------------*/
+    408          /**@brief  ÉèÖÃSIÐ¾Æ¬µÄÊôÐÔÖµ
+    409             @param ÎÞ
+    410             @return ÎÞ
+    411             @note
+    412          */
+    413          /*----------------------------------------------------------------------------*/
+    414          #if FM_AUDIO_MODE == 3
+    415          #ifndef enable_get_actual_vol_command
+    416          #define enable_get_actual_vol_command
+    417          #endif
+    418          #endif
+    419          void set_property(u16 property_id,u16 property_value)@"Si484x_RX1"
+    420          {
+    421          	si484x_dat[0] = 0x12;
+    422          	si484x_dat[1] = 0;
+    423          	si484x_dat[2] = (u8)(property_id >> 8);
+    424          	si484x_dat[3] = (u8)(property_id);
+    425          	si484x_dat[4] = (u8)(property_value >> 8);
+    426          	si484x_dat[5] = (u8)(property_value);
+    427          	FM_Si484x_Write_2(6);
+    428          	wait_cts();
+    429          	//write_command(6, cmd, 0, NULL);
+    430          }
+    431          /*----------------------------------------------------------------------------*/
+    432          /**@brief  »ñÈ¡SIÐ¾Æ¬µÄÊôÐÔÖµ
+    433             @param ÎÞ
+    434             @return ÎÞ
+    435             @note
+    436          */
+    437          /*----------------------------------------------------------------------------*/
+    438          #ifdef  enable_get_property_command
+    439          u16 get_property(u16 property_id)@"Si484x_RX1"
+    440          {
+    441          	si484x_dat[0] = 0x13;
+    442          	si484x_dat[1] = 0;
+    443          	si484x_dat[2] = (u8)(property_id >> 8);
+    444          	si484x_dat[3] = (u8)(property_id);
+    445          	FM_Si484x_Write_2(4);
+    446          	wait_cts();
+    447          	FM_Si484x_Read_2(4);
+    448          	//write_command(4, cmd,4, rsp);
+    449          	return (u16)(si484x_readdata[2]<<8+si484x_readdata[3]);
+    450          }
+    451          #endif
+    452          
+    453          /*----------------------------------------------------------------------------*/
+    454          /**@brief   ÍË³öFMÄ£Ê½,¹ØµôSIÐ¾Æ¬
+    455             @param ÎÞ
+    456             @return ÎÞ
+    457             @note
+    458          */
+    459          /*----------------------------------------------------------------------------*/
+    460          #ifdef  enable_power_down_command
+    461          void atdd_power_down(void)@"Si484x_RX"
+    462          {
+    463          	si484x_dat[0] = ATDD_POWER_DOWN;
+    464          	FM_Si484x_Write_2(1);
+    465          	wait_cts();
+    466          	//write_command(1,&cmd,0,NULL);
+    467          }
+    468          #endif
+    469          /*----------------------------------------------------------------------------*/
+    470          /**@brief FMÄ£¿éSi484x³õÊ¼»¯
+    471             @param ÎÞ
+    472             @return ÎÞ
+    473             @note
+    474          */
+    475          /*----------------------------------------------------------------------------*/
+    476          void si484x_init(void)@"Si484x_RX"
+    477          {
+    478          	RESTSI484XDIROUT();
+    479          	Si484x_Reset();
+    480          	flag_tuner_irq = 0;
+    481          	state_machine = SM_RADIO_RESET;
+    482          	i2c_reset();
+    483          	delay_5ms(20);  //ÑÓÊ±100MS
+    484          	Si484x_Reset();
+    485          }
+    486          /*----------------------------------------------------------------------------*/
+    487          /***@brief    ÅäÖÃÐ¾Æ¬µÄ¹¤×÷²¨¶Î
+    488              @details
+    489              @param
+    490              @return ÎÞ
+    491              @note £ºÔÚÊ¹ÓÃÍâ²¿¾§ÕñÊ±SM_RADIO_RESETÖ®ºó
+    492                      ±ØÐëÑÓÊ±100msµÈ´ý¾§ÕñÎÈ¶¨
+    493          */
+    494          /*----------------------------------------------------------------------------*/
+    495          void config_tune(void)@"Si484x_RX"
+    496          {
+    497          	if(tuner_mode == FM)
+    498          	{
+    499          		atdd_power_up(XOSCEN,XOWAIT_LONG,band_index,FM_BAND_BOTTOM,FM_BAND_TOP,FM_BAND_SPACING);
+    500          
+    501          		if(state_machine == SM_RADIO_RESET)
+    502          		{
+    503          			delay_5ms(20);
+    504          		}
+    505          		config_fm();
+    506          	}
+    507          	if(tuner_mode == AM)
+    508          	{
+    509          		atdd_power_up(XOSCEN,XOWAIT_LONG,21,AM_BAND_BOTTOM,AM_BAND_TOP,AM_BAND_SPACING);
+    510          		if(state_machine == SM_RADIO_RESET)
+    511          		{
+    512          			delay_5ms(20);
+    513          		}
+    514          		config_am();
+    515          	}
+    516          	if(tuner_mode == SW)
+    517          	{
+    518          		atdd_power_up(XOSCEN,XOWAIT_LONG,band_index,SW_BAND_BOTTOM,SW_BAND_TOP,SW_BAND_SPACING);
+    519          		if(state_machine == SM_RADIO_RESET)
+    520          		{
+    521          			delay_5ms(20);
+    522          		}
+    523          		config_sw();
+    524          	}
+    525          }
+    526          /*----------------------------------------------------------------------------*/
+    527          /***@brief    ²éÑ¯SIµÄÐ¾Æ¬µÄ×´Ì¬£¬°üÀ¨µ±Ç°¹¤×÷µÄÆµµã¡¢µçÌ¨µÄÖÊÁ¿µÈÐÅÏ¢
+    528              @details
+    529              @param
+    530              @return ÎÞ
+    531              @note £º
+    532          */
+    533          /*----------------------------------------------------------------------------*/
+    534          void parse_atdd_status(void)@"Si484x_RX"
+    535          {
+    536          	atdd_get_status();
+    537          	if(si484x_readdata[0] & INFORDY)
+    538          	{
+    539          		flag_host_band = si484x_readdata[0] & HOSTBAND;
+    540          		flag_tuner_pri = si484x_readdata[0] & TUNERPRI;
+    541          		if(!flag_host_band) //SIÐ¾Æ¬×Ô¼º¿ØÖÆ²¨¶Î
+    542          		{
+    543          			band_index = si484x_readdata[1] & 0x3F;
+    544          			tuner_mode = si484x_readdata[1] >> 6;
+    545          		}
+    546          
+    547          		if(state_machine == SM_RADIO_POWERUP)
+    548          		{
+    549          			state_machine = SM_RADIO_READY;
+    550          		}
+    551          		if(state_machine == SM_RADIO_READY)
+    552          		{
+    553          
+    554          			flag_station = 0;
+    555          			if(si484x_readdata[0] & STATION)
+    556          			{
+    557          				flag_station = 1;   //µçÌ¨µÄÖÊÁ¿
+    558          			}
+    559          #if 0
+    560          			flag_stereo = 0;
+    561          			if(si484x_readdata[0] & STEREO)
+    562          			{
+    563          				flag_stereo = 1;   //ÊÇ·ñÊÇÁ¢ÌåÉù
+    564          			}
+    565          #endif
+    566          			if(tuner_mode==TUNER_MODE_SW)
+    567          			{
+    568          				fm_freq=(((si484x_readdata[2]>>4)&0x07)*10+(si484x_readdata[2]&0x0f))*100+((si484x_readdata[3]>>4)&0x0f)*10+(si484x_readdata[3]&0x0f);
+    569          				cur_menu = MENU_FM_FREQ;   //SW²¨¶ÎµÄÆµÂÊ²Ëµ¥ÏÔÊ¾
+    570          				disp_menu(cur_menu);
+    571          			}
+    572          			else if(tuner_mode==TUNER_MODE_FM)
+    573          			{
+    574          				fm_freq=(((si484x_readdata[2]>>4)&0x0f)*10+(si484x_readdata[2]&0x0f))*100+((si484x_readdata[3]>>4)&0x0f)*10+(si484x_readdata[3]&0x0f);
+    575          				cur_menu = MENU_FM_FREQ;   //FM²¨¶ÎµÄÆµÂÊ²Ëµ¥ÏÔÊ¾
+    576          				disp_menu(cur_menu);
+    577          			}
+    578          			else
+    579          			{
+    580          				fm_freq=(((si484x_readdata[2]>>4)&0x0f)*10+(si484x_readdata[2]&0x0f))*100+((si484x_readdata[3]>>4)&0x0f)*10+(si484x_readdata[3]&0x0f);
+    581          				cur_menu = MENU_FM_FREQ;   //AM²¨¶ÎµÄÆµÂÊ²Ëµ¥ÏÔÊ¾
+    582          				disp_menu(cur_menu);
+    583          			}
+    584          		}
+    585          	}
+    586          	if(si484x_readdata[0] & HOSTRST)
+    587          	{
+    588          		i2c_reset();
+    589          		state_machine = SM_RADIO_RESET;
+    590          	}
+    591          	if(si484x_readdata[0] & HOSTPWRUP)//||(si484x_readdata[0] == HOSTERR))
+    592          	{
+    593          		config_tune();       //¿ÉÒÔÑ¡ÔñÅäFM¡¢AM¡¢SW
+    594          		state_machine = SM_RADIO_POWERUP;
+    595          	}
+    596          }
+    597          /*----------------------------------------------------------------------------*/
+    598          /**@brief Í¨¹ýiic¶ÁÈ¡SI×´Ì¬µÄÒ»Ð©²ÎÊý
+    599             @param ÎÞ
+    600             @return ÎÞ
+    601             @note
+    602          */
+    603          /*----------------------------------------------------------------------------*/
+    604          void FM_Si484x_Read_2(u8 size)@"Si484x_RX"
+    605          
+    606          {
+    607          	u16 i;
+    608          
+    609          	fm_i2c_start();
+    610          	fm_i2c_send_byte(0x23);
+    611          	fm_i2c_recv_ack();
+    612          
+    613          	for(i=0; i<size-1; i++)
+    614          	{
+    615          		si484x_readdata[i] = fm_i2c_read_byte();
+    616          		fm_i2c_send_ack();
+    617          	}
+    618          
+    619          	si484x_readdata[i] = fm_i2c_read_byte();
+    620          	fm_i2c_send_nack();
+    621          
+    622          	fm_i2c_stop();
+    623          }
+    624          /*----------------------------------------------------------------------------*/
+    625          /**@brief Í¨¹ýIICÏòSIÐ¾Æ¬Ð´CMD
+    626             @param ÎÞ
+    627             @return ÎÞ
+    628             @note
+    629          */
+    630          /*----------------------------------------------------------------------------*/
+    631          void FM_Si484x_Write_2(u8 size)@"Si484x_RX"
+    632          {
+    633          	u8 i;
+    634          
+    635          	fm_i2c_start();
+    636          	fm_i2c_send_byte(0x22);
+    637          	fm_i2c_recv_ack();
+    638          
+    639          	for(i=0; i<size; i++)
+    640          	{
+    641          		fm_i2c_send_byte(si484x_dat[i]);
+    642          		fm_i2c_recv_ack();
+    643          	}
+    644          
+    645          	fm_i2c_stop();
+    646          }
+    647          /*----------------------------------------------------------------------------*/
+    648          /**@brief SIµÈ´ý¿ÉÒÔ·¢ËÍÏÂÒ»¸öÃüÁî
+    649             @param ÎÞ
+    650             @return ÎÞ
+    651             @note
+    652          */
+    653          /*----------------------------------------------------------------------------*/
+    654          void wait_cts(void)@"Si484x_RX"
+    655          {
+    656          	u8 i=10;
+    657          	do
+    658          	{
+    659          		delay_5ms(1);
+    660          		FM_Si484x_Read_2(1);
+    661          	}
+    662          	while(!(si484x_readdata[0] & 0x80) && i--);
+    663          }
+    664          
+    665          /*----------------------------------------------------------------------------*/
+    666          /**@brief FMÄ£¿éSi484x¹Ø±Õ
+    667             @param ÎÞ
+    668             @return ÎÞ
+    669             @note
+    670          */
+    671          /*----------------------------------------------------------------------------*/
+    672          void Si484x_off(void)@"Si484x_RX"
+    673          {
+    674          	//Si484x_Powerdown();
+    675          #ifdef  enable_power_down_command
+    676          	atdd_power_down();
+    677          #endif
+    678          }
+    679          
+    680          /*----------------------------------------------------------------------------*/
+    681          /**@brief FMÄ£¿éSi484xÉèÖÃÒôÁ¿
+    682             @param vol ÒôÁ¿Öµ
+    683             @return ÎÞ
+    684             @note ÒôÁ¿·¶Î§0~15
+    685          */
+    686          /*----------------------------------------------------------------------------*/
+    687          void Si484x_set_vol(u8 vol)@"Si484x_RX"
+    688          {
+    689          
+    690          }
+    691          
+    692          #endif
+
+
+   Segment part sizes:
+
+     Function/Label Bytes
+     -------------- -----
+
+ 
+ 
+ 0 bytes of memory
+
+Errors: none
+Warnings: none

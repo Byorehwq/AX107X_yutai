@@ -1,0 +1,1493 @@
+##############################################################################
+#                                                                            #
+# IAR 8051 C/C++ Compiler V7.20H/W32                   29/Jun/2018  19:55:08 #
+# Copyright 2004-2006 IAR Systems. All rights reserved.                      #
+#                                                                            #
+#    Core               =  plain                                             #
+#    Code model         =  near                                              #
+#    Data model         =  large                                             #
+#    Calling convention =  extended stack reentrant                          #
+#    Constant location  =  code                                              #
+#    Extended stack     =  enabled                                           #
+#    Dptr setup         =  1,16                                              #
+#    Source file        =  I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\module\device.c #
+#    Command line       =  -I E:\software\8051\INC\ -I                       #
+#                          E:\software\8051\INC\CLIB\ -I                     #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\COMMON\ -I      #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\INC\ -I         #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\config\ -I      #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\api\ -I         #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\fm\ -I          #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\fat\ -I         #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\display\ -I     #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\display\theme_d #
+#                          efault\ -I I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073 #
+#                          A_宇泰_AX1071_xxxxxxxx_20180629_Merlin_1\app\disp #
+#                          lay\led\ -I I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC07 #
+#                          3A_宇泰_AX1071_xxxxxxxx_20180629_Merlin_1\app\dis #
+#                          play\lcd\ -I I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC0 #
+#                          73A_宇泰_AX1071_xxxxxxxx_20180629_Merlin_1\app\ta #
+#                          sk\ -I I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇 #
+#                          泰_AX1071_xxxxxxxx_20180629_Merlin_1\app\user\    #
+#                          -I I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_A #
+#                          X1071_xxxxxxxx_20180629_Merlin_1\app\mem\ -I      #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\module\ -I      #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\key\ -I         #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\startmusic\ -I  #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\spi\ -D         #
+#                          AX107X_TAG -lC I:\a_wangqun\宇泰_睡眠仪_KNP08\18B #
+#                          C073A_宇泰_AX1071_xxxxxxxx_20180629_Merlin_1\app\ #
+#                          Debug\List\ -o I:\a_wangqun\宇泰_睡眠仪_KNP08\18B #
+#                          C073A_宇泰_AX1071_xxxxxxxx_20180629_Merlin_1\app\ #
+#                          Debug\Obj\ -e -z9 --core=plain --dptr=16,1        #
+#                          --data_model=large --code_model=near              #
+#                          --calling_convention=ext_stack_reentrant          #
+#                          --place_constants=code --nr_virtual_regs 20       #
+#                          --extended_stack I:\a_wangqun\宇泰_睡眠仪_KNP08\1 #
+#                          8BC073A_宇泰_AX1071_xxxxxxxx_20180629_Merlin_1\ap #
+#                          p\module\device.c                                 #
+#    List file          =  I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\Debug\List\devi #
+#                          ce.lst                                            #
+#    Object file        =  I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\Debug\Obj\devic #
+#                          e.r51                                             #
+#                                                                            #
+#                                                                            #
+##############################################################################
+
+I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX1071_xxxxxxxx_20180629_Merlin_1\app\module\device.c
+      1          /*****************************************************************************
+      2           * Module    : Module
+      3           * File      : device.c
+      4           * Author    :
+      5           * Email     :
+      6           * Function  :
+      7           *****************************************************************************/
+      8          #include "include.h"
+      9          #include "device.h"
+     10          
+     11          #define DBG_DEV(...)                //printf(__VA_ARGS__)
+     12          
+     13          #define DEV_TOTAL       9           //总共8个设备
+     14          
+
+   \                                 In segment XDATA_Z, align 1, keep-with-next
+   \   000000                REQUIRE __INIT_XDATA_Z
+     15          type_dev_ctl dev_ctl;
+   \                     dev_ctl:
+   \   000000                DS 42
+     16          
+     17          #pragma location="DEVICE_INIT"
+
+   \                                 In segment DEVICE_INIT, align 1, keep-with-next
+     18          void device_init(void)
+   \                     device_init:
+     19          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     20          	memset(&dev_ctl, 0, sizeof(dev_ctl));
+   \   000000                ; Setup parameters for call to function my_memset
+   \   000000   7C2A         MOV     R4,#0x2a
+   \   000002   7D00         MOV     R5,#0x0
+   \   000004   7900         MOV     R1,#0x0
+   \   000006   7A..         MOV     R2,#(dev_ctl & 0xff)
+   \   000008   7B..         MOV     R3,#((dev_ctl >> 8) & 0xff)
+   \   00000A   12....       LCALL   my_memset
+     21          	dev_ctl.sd.delay = 40;
+   \   00000D   7428         MOV     A,#0x28
+   \   00000F   90....       MOV     DPTR,#(dev_ctl + 4)
+   \   000012   F0           MOVX    @DPTR,A
+     22          	dev_ctl.sd1.delay = 40;             //延时20*5=100ms
+   \   000013   90....       MOV     DPTR,#(dev_ctl + 9)
+   \   000016   F0           MOVX    @DPTR,A
+     23          	dev_ctl.pc.delay = 60;                //值太小容易误检
+   \   000017   743C         MOV     A,#0x3c
+   \   000019   90....       MOV     DPTR,#(dev_ctl + 34)
+   \   00001C   F0           MOVX    @DPTR,A
+     24          	dev_ctl.udisk.delay = 40;
+   \   00001D   7428         MOV     A,#0x28
+   \   00001F   90....       MOV     DPTR,#(dev_ctl + 14)
+   \   000022   F0           MOVX    @DPTR,A
+     25          	dev_ctl.udisk1.delay = 40;
+   \   000023   90....       MOV     DPTR,#(dev_ctl + 19)
+   \   000026   F0           MOVX    @DPTR,A
+     26          #if USE_7P7S_LED_AUX_MUX
+     27          	dev_ctl.line.delay = 10;
+     28          #else
+     29          	dev_ctl.line.delay = 40;
+   \   000027   90....       MOV     DPTR,#(dev_ctl + 24)
+   \   00002A   F0           MOVX    @DPTR,A
+     30          #endif
+     31          	dev_ctl.ear.delay = 40;
+   \   00002B   90....       MOV     DPTR,#(dev_ctl + 29)
+   \   00002E   F0           MOVX    @DPTR,A
+     32          	dev_ctl.mic.delay = 40;
+   \   00002F   90....       MOV     DPTR,#(dev_ctl + 39)
+   \   000032   F0           MOVX    @DPTR,A
+     33          }
+   \   000033   22           RET
+     34          
+     35          //获取设备总数
+     36          #pragma location="DEVICE_SEG"
+
+   \                                 In segment DEVICE_SEG, align 1, keep-with-next
+     37          u8 get_total_dev(void)
+   \                     get_total_dev:
+     38          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     39          	return DEV_TOTAL;
+   \   000000   7909         MOV     R1,#0x9
+   \   000002   22           RET
+     40          }
+     41          
+     42          //获取所有激活的设备
+     43          #pragma location="DEVICE_COM_SEG"
+
+   \                                 In segment DEVICE_COM_SEG, align 1, keep-with-next
+     44          u8 device_get_actived(void)
+   \                     device_get_actived:
+     45          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     46          	return dev_ctl.dev_actived;
+   \   000000   90....       MOV     DPTR,#dev_ctl
+   \   000003   E0           MOVX    A,@DPTR
+   \   000004   F9           MOV     R1,A
+   \   000005   22           RET
+     47          }
+     48          
+     49          //获取所有可用的设备
+     50          #pragma location="DEVICE_COM_SEG"
+
+   \                                 In segment DEVICE_COM_SEG, align 1, keep-with-next
+     51          u8 device_get_valid(void)
+   \                     device_get_valid:
+     52          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     53          	return (~dev_ctl.dev_aborted) & dev_ctl.dev_actived;
+   \   000000   12....       LCALL   ?Subroutine0
+   \                     ??CrossCallReturnLabel_0:
+   \   000003   F9           MOV     R1,A
+   \   000004   22           RET
+     54          }
+
+   \                                 In segment DEVICE_COM_SEG, align 1, keep-with-next
+   \                     ?Subroutine0:
+   \   000000   90....       MOV     DPTR,#(dev_ctl + 1)
+   \   000003   E0           MOVX    A,@DPTR
+   \   000004   F4           CPL     A
+   \   000005   7583..       MOV     DPH,#((dev_ctl >> 8) & 0xff)
+   \   000008   7582..       MOV     DPL,#(dev_ctl & 0xff)
+   \   00000B   FA           MOV     R2,A
+   \   00000C   E0           MOVX    A,@DPTR
+   \   00000D   5A           ANL     A,R2
+   \   00000E   22           RET
+     55          
+     56          //设置设备不可用
+     57          #pragma location="DEVICE_COM_SEG"
+
+   \                                 In segment DEVICE_COM_SEG, align 1, keep-with-next
+     58          void device_set_aborted(u8 dev_num)
+   \                     device_set_aborted:
+     59          {
+   \   000000   C0..         PUSH    ?V0 + 0
+   \   000002   C0..         PUSH    ?V0 + 1
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+     60          	dev_ctl.dev_aborted |= BIT(dev_num);//设置设备中止
+   \   000004   75..01       MOV     ?V0 + 0,#0x1
+   \   000007   75..00       MOV     ?V0 + 1,#0x0
+   \   00000A   E9           MOV     A,R1
+   \   00000B   78..         MOV     R0,#?V0 + 0
+   \   00000D   12....       LCALL   ?S_SHL
+   \   000010   90....       MOV     DPTR,#(dev_ctl + 1)
+   \   000013   E0           MOVX    A,@DPTR
+   \   000014   45..         ORL     A,?V0 + 0
+   \   000016   F0           MOVX    @DPTR,A
+     61          }
+   \   000017                REQUIRE ?Subroutine4
+   \   000017                ; // Fall through to label ?Subroutine4
+
+   \                                 In segment DEVICE_COM_SEG, align 1, keep-with-next
+   \                     ?Subroutine4:
+   \   000000   D0..         POP     ?V0 + 1
+   \   000002   D0..         POP     ?V0 + 0
+   \   000004   22           RET
+     62          
+     63          
+     64          //检查设备是否可用
+     65          #pragma location="DEVICE_COM_SEG"
+
+   \                                 In segment DEVICE_COM_SEG, align 1, keep-with-next
+     66          bool device_is_valid(u8 dev_num)
+   \                     device_is_valid:
+     67          {
+   \   000000   C0..         PUSH    ?V0 + 0
+   \   000002   C0..         PUSH    ?V0 + 1
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+     68          	if(dev_num >= get_total_dev())
+   \   000004   E9           MOV     A,R1
+   \   000005   C3           CLR     C
+   \   000006   9409         SUBB    A,#0x9
+   \   000008   4003         JC      ??device_is_valid_0
+     69          	{
+     70          		return false;
+   \   00000A   C3           CLR     C
+   \   00000B   801B         SJMP    ??device_is_valid_1
+     71          	}
+     72          	return ((~dev_ctl.dev_aborted) & dev_ctl.dev_actived & BIT(dev_num));
+   \                     ??device_is_valid_0:
+   \   00000D   75..01       MOV     ?V0 + 0,#0x1
+   \   000010   75..00       MOV     ?V0 + 1,#0x0
+   \   000013   E9           MOV     A,R1
+   \   000014   78..         MOV     R0,#?V0 + 0
+   \   000016   12....       LCALL   ?S_SHL
+   \   000019   12....       LCALL   ?Subroutine0
+   \                     ??CrossCallReturnLabel_1:
+   \   00001C   55..         ANL     A,?V0 + 0
+   \   00001E   6004         JZ      ??device_is_valid_2
+   \   000020   D2F0         SETB    B.0
+   \   000022   8002         SJMP    ??device_is_valid_3
+   \                     ??device_is_valid_2:
+   \   000024   C2F0         CLR     B.0
+   \                     ??device_is_valid_3:
+   \   000026   A2F0         MOV     C,B.0
+   \                     ??device_is_valid_1:
+   \   000028   80..         SJMP    ?Subroutine4
+     73          }
+     74          
+     75          bool usb_host_mass_read_end(void);
+     76          
+     77          #pragma location="USB_SEG"
+
+   \                                 In segment USB_SEG, align 1, keep-with-next
+     78          u8 host_select_phy(u8 phy_num)
+   \                     host_select_phy:
+     79          {
+   \   000000   7404         MOV     A,#0x4
+   \   000002   12....       LCALL   ?FUNC_ENTER_SP
+   \   000005                ; Saved register size: 7
+   \   000005                ; Auto size: 0
+   \   000005   89..         MOV     ?V0 + 2,R1
+     80          	bool tmpie_sint;
+     81          	u8 cur_host_phy = usb_chk.host_phy;
+   \   000007   90....       MOV     DPTR,#usb_chk
+   \   00000A   E0           MOVX    A,@DPTR
+   \   00000B   F5..         MOV     ?V0 + 3,A
+     82          	u8 cur_dev = fs_cur_dev();
+   \   00000D                ; Setup parameters for call to function fs_cur_dev
+   \   00000D   12....       LCALL   fs_cur_dev
+   \   000010   E9           MOV     A,R1
+   \   000011   FA           MOV     R2,A
+     83          	if(phy_num != cur_host_phy)
+   \   000012   E5..         MOV     A,?V0 + 3
+   \   000014   65..         XRL     A,?V0 + 2
+   \   000016   6045         JZ      ??host_select_phy_0
+     84          	{
+     85          		if(cur_dev == (DEVICE_UDISK + cur_host_phy))
+   \   000018   85....       MOV     ?V0 + 0,?V0 + 3
+   \   00001B   7402         MOV     A,#0x2
+   \   00001D   25..         ADD     A,?V0 + 0
+   \   00001F   FE           MOV     R6,A
+   \   000020   E4           CLR     A
+   \   000021   3400         ADDC    A,#0x0
+   \   000023   FF           MOV     R7,A
+   \   000024   8A82         MOV     DPL,R2
+   \   000026   8582..       MOV     ?V0 + 0,DPL
+   \   000029   EE           MOV     A,R6
+   \   00002A   65..         XRL     A,?V0 + 0
+   \   00002C   7001         JNZ     ??host_select_phy_1
+   \   00002E   EF           MOV     A,R7
+   \                     ??host_select_phy_1:
+   \   00002F   700C         JNZ     ??host_select_phy_2
+     86          		{
+     87          			tmpie_sint = IE_SINT;
+   \   000031   A2A8         MOV     C,0xa8.0
+   \   000033   92..         MOV     ?VB.0,C
+     88          			IE_SINT = 0;                            //暂停正在播放的UDISK
+   \   000035   C2A8         CLR     0xa8.0
+     89          			usb_host_mass_read_end();
+   \   000037                ; Setup parameters for call to function usb_host_mass_read_end
+   \   000037   12....       LCALL   usb_host_mass_read_end
+     90          			usb_host_suspend();
+   \   00003A                ; Setup parameters for call to function usb_host_suspend
+   \   00003A   12....       LCALL   usb_host_suspend
+     91          		}
+     92          		usb_chk.host_phy = phy_num;
+   \                     ??host_select_phy_2:
+   \   00003D   E5..         MOV     A,?V0 + 2
+   \   00003F   12....       LCALL   ?Subroutine1
+     93          		usb_port_init(usb_chk.host_phy);
+     94          		if(device_activate_udisk_do())
+   \                     ??CrossCallReturnLabel_2:
+   \   000042   5004         JNC     ??host_select_phy_3
+     95          		{
+     96          			//printf("change phy[%d]\n",usb_chk.host_phy);
+     97          			return 1;
+   \   000044   7901         MOV     R1,#0x1
+   \   000046   8017         SJMP    ??host_select_phy_4
+     98          		}
+     99          		if(cur_dev == (DEVICE_UDISK + cur_host_phy))
+   \                     ??host_select_phy_3:
+   \   000048   EE           MOV     A,R6
+   \   000049   65..         XRL     A,?V0 + 0
+   \   00004B   7001         JNZ     ??host_select_phy_5
+   \   00004D   EF           MOV     A,R7
+   \                     ??host_select_phy_5:
+   \   00004E   7009         JNZ     ??host_select_phy_6
+    100          		{
+    101          			usb_chk.host_phy = cur_host_phy;       //恢复当前播放的UDISK
+   \   000050   E5..         MOV     A,?V0 + 3
+   \   000052   12....       LCALL   ?Subroutine1
+    102          			usb_port_init(usb_chk.host_phy);
+    103          			device_activate_udisk_do();
+    104          			IE_SINT = tmpie_sint;
+   \                     ??CrossCallReturnLabel_3:
+   \   000055   A2..         MOV     C,?VB.0
+   \   000057   92A8         MOV     0xa8.0,C
+    105          		}
+    106          		//printf("change phy[%d]\n",usb_chk.host_phy);
+    107          		return 2;
+   \                     ??host_select_phy_6:
+   \   000059   7902         MOV     R1,#0x2
+   \   00005B   8002         SJMP    ??host_select_phy_4
+    108          	}
+    109          	return 0;
+   \                     ??host_select_phy_0:
+   \   00005D   7900         MOV     R1,#0x0
+   \                     ??host_select_phy_4:
+   \   00005F   7F04         MOV     R7,#0x4
+   \   000061   02....       LJMP    ?FUNC_LEAVE_SP
+    110          }
+
+   \                                 In segment USB_SEG, align 1, keep-with-next
+   \                     ?Subroutine1:
+   \   000000   90....       MOV     DPTR,#usb_chk
+   \   000003   F0           MOVX    @DPTR,A
+   \   000004                ; Setup parameters for call to function usb_port_init
+   \   000004                ; Setup parameters for call to function usb_port_init
+   \   000004   E0           MOVX    A,@DPTR
+   \   000005   F9           MOV     R1,A
+   \   000006   12....       LCALL   usb_port_init
+   \   000009                ; Setup parameters for call to function device_activate_udisk_do
+   \   000009                ; Setup parameters for call to function device_activate_udisk_do
+   \   000009   12....       LCALL   device_activate_udisk_do
+   \   00000C   22           RET
+    111          
+    112          //尝试去激活初始化设备
+    113          #pragma location="DEVICE_SEG"
+
+   \                                 In segment DEVICE_SEG, align 1, keep-with-next
+    114          bool device_activate_do(u8 dev_num)
+   \                     device_activate_do:
+    115          {
+   \   000000   EE           MOV     A,R6
+   \   000001   C0E0         PUSH    A
+   \   000003   C0..         PUSH    ?V0 + 0
+   \   000005   C0..         PUSH    ?V0 + 1
+   \   000007                ; Saved register size: 3
+   \   000007                ; Auto size: 0
+   \   000007   E9           MOV     A,R1
+   \   000008   FE           MOV     R6,A
+    116          	if((dev_num == DEVICE_SDMMC) || (dev_num == DEVICE_SDMMC1))
+   \   000009   6005         JZ      ??device_activate_do_0
+   \   00000B   7401         MOV     A,#0x1
+   \   00000D   6E           XRL     A,R6
+   \   00000E   701B         JNZ     ??device_activate_do_1
+    117          	{
+    118          		if(!sd_active_safe(dev_num))
+   \                     ??device_activate_do_0:
+   \   000010                ; Setup parameters for call to function sd_active_safe
+   \   000010   12....       LCALL   sd_active_safe
+   \   000013   4039         JC      ??device_activate_do_2
+    119          		{
+    120          			printf("sd %d init fail\n",dev_num);
+   \   000015                ; Setup parameters for call to function my_printf
+   \   000015   8E..         MOV     ?V0 + 0,R6
+   \   000017   75..00       MOV     ?V0 + 1,#0x0
+   \   00001A   C0..         PUSH    ?V0 + 0
+   \   00001C   C0..         PUSH    ?V0 + 1
+   \   00001E   7A..         MOV     R2,#(`?<Constant "sd %d init fail\\n">` & 0xff)
+   \   000020   7B..         MOV     R3,#((`?<Constant "sd %d init fail\\n">` >> 8) & 0xff)
+   \   000022   12....       LCALL   my_printf
+   \   000025   D0E0         POP     A
+   \   000027   D0E0         POP     A
+   \   000029   8016         SJMP    ??device_activate_do_3
+    121          #ifdef TAG_AX2070
+    122          			if(dev_num == DEVICE_SDMMC)
+    123          			{
+    124          				dev_ctl.sd.actived = DEV_INVALID;           //初始化无效
+    125          			}
+    126          			else
+    127          			{
+    128          				dev_ctl.sd1.actived = DEV_INVALID;           //初始化无效
+    129          			}
+    130          #endif
+    131          			return false;
+    132          		}
+    133          		//printf("sd %d init ok\n",dev_num);
+    134          	}
+    135          	else if((dev_num == DEVICE_UDISK)
+    136          #if UDISK_DOUBLE_EN
+    137          	        || (dev_num == DEVICE_UDISK1)
+    138          #endif
+    139          	       )
+   \                     ??device_activate_do_1:
+   \   00002B   7402         MOV     A,#0x2
+   \   00002D   6E           XRL     A,R6
+   \   00002E   701E         JNZ     ??device_activate_do_2
+    140          	{
+    141          		usb_host_tune_set();
+   \   000030                ; Setup parameters for call to function usb_host_tune_set
+   \   000030   12....       LCALL   usb_host_tune_set
+    142          		u8 enum_sta = host_select_phy(dev_num - DEVICE_UDISK);
+   \   000033                ; Setup parameters for call to function host_select_phy
+   \   000033   7900         MOV     R1,#0x0
+   \   000035   12....       LCALL   host_select_phy
+   \   000038   E9           MOV     A,R1
+   \   000039   FA           MOV     R2,A
+    143          		//printf("enum_sta:%d\n",enum_sta);
+    144          		if(0 == enum_sta)
+   \   00003A   7008         JNZ     ??device_activate_do_4
+    145          		{
+    146          			if(!device_activate_udisk_do())
+   \   00003C                ; Setup parameters for call to function device_activate_udisk_do
+   \   00003C   12....       LCALL   device_activate_udisk_do
+   \   00003F   4008         JC      ??device_activate_do_5
+    147          			{
+    148          				return false;
+   \                     ??device_activate_do_3:
+   \   000041   C3           CLR     C
+   \   000042   8023         SJMP    ??device_activate_do_6
+    149          			}
+    150          		}
+    151          		else if(2 == enum_sta)
+   \                     ??device_activate_do_4:
+   \   000044   7402         MOV     A,#0x2
+   \   000046   6A           XRL     A,R2
+   \   000047   60F8         JZ      ??device_activate_do_3
+    152          		{
+    153          			return false;
+    154          		}
+    155          		usb_host_enable_testready(1);
+   \                     ??device_activate_do_5:
+   \   000049                ; Setup parameters for call to function usb_host_enable_testready
+   \   000049   7901         MOV     R1,#0x1
+   \   00004B   12....       LCALL   usb_host_enable_testready
+    156          	}
+    157          	device_activate_try(dev_num);
+   \                     ??device_activate_do_2:
+   \   00004E                ; Setup parameters for call to function device_activate_try
+   \   00004E   EE           MOV     A,R6
+   \   00004F   F9           MOV     R1,A
+   \   000050   12....       LCALL   device_activate_try
+    158          	dev_ctl.dev_actived |= BIT(dev_num);
+   \   000053   75..01       MOV     ?V0 + 0,#0x1
+   \   000056   75..00       MOV     ?V0 + 1,#0x0
+   \   000059   EE           MOV     A,R6
+   \   00005A   78..         MOV     R0,#?V0 + 0
+   \   00005C   12....       LCALL   ?S_SHL
+   \   00005F   90....       MOV     DPTR,#dev_ctl
+   \   000062   E0           MOVX    A,@DPTR
+   \   000063   45..         ORL     A,?V0 + 0
+   \   000065   F0           MOVX    @DPTR,A
+    159          	return true;
+   \   000066   D3           SETB    C
+   \                     ??device_activate_do_6:
+   \   000067   D0..         POP     ?V0 + 1
+   \   000069   D0..         POP     ?V0 + 0
+   \   00006B   D0E0         POP     A
+   \   00006D   FE           MOV     R6,A
+   \   00006E   22           RET
+    160          }
+    161          
+    162          //尝试去激活初始化设备
+    163          #pragma location="DEVICE_COM_SEG"
+
+   \                                 In segment DEVICE_COM_SEG, align 1, keep-with-next
+    164          bool device_activate(u8 dev_num)
+   \                     device_activate:
+    165          {
+   \   000000   EE           MOV     A,R6
+   \   000001   C0E0         PUSH    A
+   \   000003                ; Saved register size: 1
+   \   000003                ; Auto size: 0
+   \   000003   E9           MOV     A,R1
+   \   000004   FE           MOV     R6,A
+    166          	if(device_is_actived(dev_num))
+   \   000005                ; Setup parameters for call to function device_is_actived
+   \   000005   12....       LCALL   device_is_actived
+   \   000008   5003         JNC     ??device_activate_0
+    167          	{
+    168          		return true;
+   \   00000A   D3           SETB    C
+   \   00000B   800F         SJMP    ??device_activate_1
+    169          	}
+    170          	if(!device_need_activate(dev_num))
+   \                     ??device_activate_0:
+   \   00000D                ; Setup parameters for call to function device_need_activate
+   \   00000D   EE           MOV     A,R6
+   \   00000E   F9           MOV     R1,A
+   \   00000F   12....       LCALL   device_need_activate
+   \   000012   4003         JC      ??device_activate_2
+    171          	{
+    172          		return false;
+   \   000014   C3           CLR     C
+   \   000015   8005         SJMP    ??device_activate_1
+    173          	}
+    174          	return device_activate_do(dev_num);
+   \                     ??device_activate_2:
+   \   000017                ; Setup parameters for call to function device_activate_do
+   \   000017   EE           MOV     A,R6
+   \   000018   F9           MOV     R1,A
+   \   000019   12....       LCALL   device_activate_do
+   \                     ??device_activate_1:
+   \   00001C   D0E0         POP     A
+   \   00001E   FE           MOV     R6,A
+   \   00001F   22           RET
+    175          }
+    176          
+    177          //获取所有激活的设备数量
+    178          #pragma location="DEVICE_COM_SEG"
+
+   \                                 In segment DEVICE_COM_SEG, align 1, keep-with-next
+    179          u8 device_get_actived_num(void)
+   \                     device_get_actived_num:
+    180          {
+   \   000000   EE           MOV     A,R6
+   \   000001   C0E0         PUSH    A
+   \   000003   EF           MOV     A,R7
+   \   000004   C0E0         PUSH    A
+   \   000006   C0..         PUSH    ?V0 + 0
+   \   000008                ; Saved register size: 3
+   \   000008                ; Auto size: 0
+    181          	u8 dev_actived, dev_num = 0;
+   \   000008   7F00         MOV     R7,#0x0
+    182          	dev_actived = dev_ctl.dev_actived;
+   \   00000A   90....       MOV     DPTR,#dev_ctl
+   \   00000D   E0           MOVX    A,@DPTR
+   \   00000E   F5..         MOV     ?V0 + 0,A
+    183          	//printf("lib:%02x\n",dev_actived);
+    184          	for(u8 i = 0; i < MEDIA_DEVICE_NUM; i++)
+   \   000010   7E00         MOV     R6,#0x0
+    185          	{
+    186          		if(device_is_online(i))
+    187          		{
+    188          			if(dev_actived & 0x01)
+   \                     ??device_get_actived_num_0:
+   \   000012   E5..         MOV     A,?V0 + 0
+   \   000014   A2E0         MOV     C,0xE0 /* A   */.0
+   \   000016   C0D0         PUSH    PSW
+   \   000018                ; Setup parameters for call to function device_is_online
+   \   000018   EE           MOV     A,R6
+   \   000019   F9           MOV     R1,A
+   \   00001A   12....       LCALL   device_is_online
+   \   00001D   92F0         MOV     B.0,C
+   \   00001F   12....       LCALL   ?POP_BIT_ESP
+   \   000022   82F0         ANL     C,B.0
+   \   000024   5001         JNC     ??device_get_actived_num_1
+    189          			{
+    190          				dev_num++;
+   \   000026   0F           INC     R7
+    191          			}
+    192          		}
+    193          		dev_actived >>= 1;
+   \                     ??device_get_actived_num_1:
+   \   000027   E5..         MOV     A,?V0 + 0
+   \   000029   C3           CLR     C
+   \   00002A   13           RRC     A
+   \   00002B   F5..         MOV     ?V0 + 0,A
+    194          	}
+   \   00002D   0E           INC     R6
+   \   00002E   EE           MOV     A,R6
+   \   00002F   C3           CLR     C
+   \   000030   9404         SUBB    A,#0x4
+   \   000032   40DE         JC      ??device_get_actived_num_0
+    195          	return dev_num;
+   \   000034   EF           MOV     A,R7
+   \   000035   F9           MOV     R1,A
+   \   000036   D0..         POP     ?V0 + 0
+   \   000038   D0E0         POP     A
+   \   00003A   FF           MOV     R7,A
+   \   00003B   D0E0         POP     A
+   \   00003D   FE           MOV     R6,A
+   \   00003E   22           RET
+    196          }
+    197          
+    198          //检查，并加载设备
+    199          #pragma location="DEVICE_SEG"
+
+   \                                 In segment DEVICE_SEG, align 1, keep-with-next
+    200          u8 device_change_check(void)
+   \                     device_change_check:
+    201          {
+   \   000000   EE           MOV     A,R6
+   \   000001   C0E0         PUSH    A
+   \   000003   EF           MOV     A,R7
+   \   000004   C0E0         PUSH    A
+   \   000006   C0..         PUSH    ?V0 + 0
+   \   000008                ; Saved register size: 3
+   \   000008                ; Auto size: 0
+    202          
+    203          	u8 change_flag = DEVICE_IDLE;
+   \   000008   75..00       MOV     ?V0 + 0,#0x0
+    204          
+    205          	//检查是否有设备插入
+    206          	for(u8 i=0; i<MEDIA_DEVICE_NUM; i++)
+   \   00000B   7E00         MOV     R6,#0x0
+    207          	{
+    208          		if(device_need_activate(i))
+   \                     ??device_change_check_0:
+   \   00000D                ; Setup parameters for call to function device_need_activate
+   \   00000D   EE           MOV     A,R6
+   \   00000E   F9           MOV     R1,A
+   \   00000F   12....       LCALL   device_need_activate
+   \   000012   5014         JNC     ??device_change_check_1
+    209          		{
+    210          			device_check_stop(i);
+   \   000014                ; Setup parameters for call to function device_check_stop
+   \   000014   EE           MOV     A,R6
+   \   000015   F9           MOV     R1,A
+   \   000016   12....       LCALL   device_check_stop
+    211          			if(device_activate(i))
+   \   000019                ; Setup parameters for call to function device_activate
+   \   000019   EE           MOV     A,R6
+   \   00001A   F9           MOV     R1,A
+   \   00001B   12....       LCALL   device_activate
+   \   00001E   5008         JNC     ??device_change_check_1
+    212          			{
+    213          				t_fat.dev_new = i;
+   \   000020   EE           MOV     A,R6
+   \   000021   90....       MOV     DPTR,#(t_fat + 26)
+   \   000024   F0           MOVX    @DPTR,A
+    214          				change_flag = DEVICE_CHANGE;
+   \   000025   75..01       MOV     ?V0 + 0,#0x1
+    215          			}
+    216          		}
+    217          	}
+   \                     ??device_change_check_1:
+   \   000028   0E           INC     R6
+   \   000029   EE           MOV     A,R6
+   \   00002A   C3           CLR     C
+   \   00002B   9404         SUBB    A,#0x4
+   \   00002D   40DE         JC      ??device_change_check_0
+    218          
+    219          	//检查当前设备的在线情况
+    220          	u8 cur_dev = fs_cur_dev();
+   \   00002F                ; Setup parameters for call to function fs_cur_dev
+   \   00002F   12....       LCALL   fs_cur_dev
+   \   000032   E9           MOV     A,R1
+   \   000033   FF           MOV     R7,A
+    221          	if((t_fat.dev_new == DEVICE_INVALID) && (cur_dev != DEVICE_INVALID) && (!device_is_actived(cur_dev)))
+   \   000034   90....       MOV     DPTR,#(t_fat + 26)
+   \   000037   E0           MOVX    A,@DPTR
+   \   000038   64FF         XRL     A,#0xff
+   \   00003A   7032         JNZ     ??device_change_check_2
+   \   00003C   74FF         MOV     A,#-0x1
+   \   00003E   6F           XRL     A,R7
+   \   00003F   602D         JZ      ??device_change_check_2
+   \   000041                ; Setup parameters for call to function device_is_actived
+   \   000041   12....       LCALL   device_is_actived
+   \   000044   4028         JC      ??device_change_check_2
+    222          	{
+    223          
+    224          		device_check_stop(cur_dev);
+   \   000046                ; Setup parameters for call to function device_check_stop
+   \   000046   EF           MOV     A,R7
+   \   000047   F9           MOV     R1,A
+   \   000048   12....       LCALL   device_check_stop
+    225          		change_flag = DEVICE_REMOVE;
+   \   00004B   75..02       MOV     ?V0 + 0,#0x2
+    226          
+    227          		for(u8 i=0; i<MEDIA_DEVICE_NUM-1; i++)
+   \   00004E   7E00         MOV     R6,#0x0
+    228          		{
+    229          			if(++cur_dev >= MEDIA_DEVICE_NUM)
+   \                     ??device_change_check_3:
+   \   000050   0F           INC     R7
+   \   000051   EF           MOV     A,R7
+   \   000052   C3           CLR     C
+   \   000053   9404         SUBB    A,#0x4
+   \   000055   4002         JC      ??device_change_check_4
+    230          			{
+    231          				cur_dev = 0;
+   \   000057   7F00         MOV     R7,#0x0
+    232          			}
+    233          			if(device_is_actived(cur_dev))          //如果有可用设备，则选择新设备
+   \                     ??device_change_check_4:
+   \   000059                ; Setup parameters for call to function device_is_actived
+   \   000059   EF           MOV     A,R7
+   \   00005A   F9           MOV     R1,A
+   \   00005B   12....       LCALL   device_is_actived
+   \   00005E   5007         JNC     ??device_change_check_5
+    234          			{
+    235          				t_fat.dev_new = cur_dev;
+   \   000060   EF           MOV     A,R7
+   \   000061   90....       MOV     DPTR,#(t_fat + 26)
+   \   000064   F0           MOVX    @DPTR,A
+    236          				break;
+   \   000065   8007         SJMP    ??device_change_check_2
+    237          			}
+    238          		}
+   \                     ??device_change_check_5:
+   \   000067   0E           INC     R6
+   \   000068   EE           MOV     A,R6
+   \   000069   C3           CLR     C
+   \   00006A   9403         SUBB    A,#0x3
+   \   00006C   40E2         JC      ??device_change_check_3
+    239          	}
+    240          	return change_flag;
+   \                     ??device_change_check_2:
+   \   00006E   A9..         MOV     R1,?V0 + 0
+   \   000070   D0..         POP     ?V0 + 0
+   \   000072   D0E0         POP     A
+   \   000074   FF           MOV     R7,A
+   \   000075   D0E0         POP     A
+   \   000077   FE           MOV     R6,A
+   \   000078   22           RET
+    241          }
+    242          
+    243          //获取USB_HOST的激活状态
+    244          #pragma location="DEVICE_SEG"
+
+   \                                 In segment DEVICE_SEG, align 1, keep-with-next
+    245          u8 usb_host_get_actived(void)
+   \                     usb_host_get_actived:
+    246          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    247          	if(usb_chk.host_phy == 0)
+   \   000000   90....       MOV     DPTR,#usb_chk
+   \   000003   E0           MOVX    A,@DPTR
+   \   000004   7006         JNZ     ??usb_host_get_actived_0
+    248          	{
+    249          		return dev_ctl.udisk.actived;
+   \   000006   90....       MOV     DPTR,#(dev_ctl + 16)
+   \   000009   E0           MOVX    A,@DPTR
+   \   00000A   F9           MOV     R1,A
+   \   00000B   22           RET
+    250          	}
+    251          	else
+    252          	{
+    253          		return dev_ctl.udisk1.actived;
+   \                     ??usb_host_get_actived_0:
+   \   00000C   90....       MOV     DPTR,#(dev_ctl + 21)
+   \   00000F   E0           MOVX    A,@DPTR
+   \   000010   F9           MOV     R1,A
+   \   000011   22           RET
+    254          	}
+    255          }
+    256          
+    257          //设置USB_HOST的激活状态
+    258          #pragma location="DEVICE_SEG"
+
+   \                                 In segment DEVICE_SEG, align 1, keep-with-next
+    259          void usb_host_set_actived(u8 actived)
+   \                     usb_host_set_actived:
+    260          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    261          	if(usb_chk.host_phy == 0)
+   \   000000   90....       MOV     DPTR,#usb_chk
+   \   000003   E0           MOVX    A,@DPTR
+   \   000004   701E         JNZ     ??usb_host_set_actived_0
+    262          	{
+    263          		dev_ctl.udisk.actived = actived;
+   \   000006   E9           MOV     A,R1
+   \   000007   90....       MOV     DPTR,#(dev_ctl + 16)
+   \   00000A   F0           MOVX    @DPTR,A
+    264          		if(actived == DEV_ACTIVED)
+   \   00000B   7402         MOV     A,#0x2
+   \   00000D   69           XRL     A,R1
+   \   00000E   90....       MOV     DPTR,#dev_ctl
+   \   000011   7005         JNZ     ??usb_host_set_actived_1
+    265          		{
+    266          			dev_ctl.dev_actived |= BIT(DEVICE_UDISK);
+   \   000013   E0           MOVX    A,@DPTR
+   \   000014   D2E2         SETB    0xE0 /* A   */.2
+   \   000016   F0           MOVX    @DPTR,A
+   \   000017   22           RET
+    267          		}
+    268          		else
+    269          		{
+    270          			dev_ctl.dev_actived &= ~BIT(DEVICE_UDISK);
+   \                     ??usb_host_set_actived_1:
+   \   000018   E0           MOVX    A,@DPTR
+   \   000019   C2E2         CLR     0xE0 /* A   */.2
+   \   00001B   F0           MOVX    @DPTR,A
+    271          			if(actived == DEV_INVALID)
+   \   00001C   E9           MOV     A,R1
+   \   00001D   7005         JNZ     ??usb_host_set_actived_0
+    272          			{
+    273          				usb_host_enable_testready(0);
+   \   00001F                ; Setup parameters for call to function usb_host_enable_testready
+   \   00001F   7900         MOV     R1,#0x0
+   \   000021   12....       LCALL   usb_host_enable_testready
+    274          			}
+    275          		}
+    276          	}
+    277          #if UDISK_DOUBLE_EN
+    278          	else
+    279          	{
+    280          		dev_ctl.udisk1.actived = actived;
+    281          		if(actived == DEV_ACTIVED)
+    282          		{
+    283          			dev_ctl.dev_actived |= BIT(DEVICE_UDISK1);
+    284          		}
+    285          		else
+    286          		{
+    287          			dev_ctl.dev_actived &= ~BIT(DEVICE_UDISK1);
+    288          			if(actived == DEV_INVALID)
+    289          			{
+    290          				usb_host_enable_testready(0);
+    291          			}
+    292          		}
+    293          	}
+    294          #endif
+    295          }
+   \                     ??usb_host_set_actived_0:
+   \   000024   22           RET
+    296          
+    297          #pragma location="DEVICE_SEG"
+
+   \                                 In segment DEVICE_SEG, align 1, keep-with-next
+    298          bool usb_host_unactived(void)
+   \                     usb_host_unactived:
+    299          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    300          	if(usb_chk.host_phy == 0)
+   \   000000   90....       MOV     DPTR,#usb_chk
+   \   000003   E0           MOVX    A,@DPTR
+   \   000004   7005         JNZ     ??usb_host_unactived_0
+    301          	{
+    302          		if(dev_ctl.udisk.actived != DEV_INVALID)
+   \   000006   90....       MOV     DPTR,#(dev_ctl + 16)
+   \   000009   8003         SJMP    ??usb_host_unactived_1
+    303          		{
+    304          			dev_ctl.udisk.actived = DEV_UNACTIVE;
+    305          			return true;
+    306          		}
+    307          	}
+    308          	else
+    309          	{
+    310          		if(dev_ctl.udisk1.actived != DEV_INVALID)
+   \                     ??usb_host_unactived_0:
+   \   00000B   90....       MOV     DPTR,#(dev_ctl + 21)
+   \                     ??usb_host_unactived_1:
+   \   00000E   E0           MOVX    A,@DPTR
+   \   00000F   6005         JZ      ??usb_host_unactived_2
+    311          		{
+    312          			dev_ctl.udisk1.actived = DEV_UNACTIVE;
+   \   000011   7401         MOV     A,#0x1
+   \   000013   F0           MOVX    @DPTR,A
+    313          			return true;
+   \   000014   D3           SETB    C
+   \   000015   22           RET
+    314          		}
+    315          	}
+    316          	return false;
+   \                     ??usb_host_unactived_2:
+   \   000016   C3           CLR     C
+   \   000017   22           RET
+    317          }
+    318          
+    319          #pragma location="DEVICE_SEG"
+
+   \                                 In segment DEVICE_SEG, align 1, keep-with-next
+    320          bool usb_host_need_testready(void)
+   \                     usb_host_need_testready:
+    321          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    322          	if(usb_chk.host_phy == 0)
+   \   000000   90....       MOV     DPTR,#usb_chk
+   \   000003   E0           MOVX    A,@DPTR
+   \   000004   7011         JNZ     ??usb_host_need_testready_0
+    323          	{
+    324          		if(dev_ctl.udisk.actived == DEV_ACTIVED || dev_ctl.udisk.actived == DEV_NO_MEDIUM)
+   \   000006   90....       MOV     DPTR,#(dev_ctl + 16)
+   \   000009   E0           MOVX    A,@DPTR
+   \   00000A   FA           MOV     R2,A
+   \   00000B   7402         MOV     A,#0x2
+   \   00000D   6A           XRL     A,R2
+   \   00000E   6005         JZ      ??usb_host_need_testready_1
+   \   000010   7403         MOV     A,#0x3
+   \   000012   6A           XRL     A,R2
+   \   000013   7011         JNZ     ??usb_host_need_testready_2
+    325          		{
+    326          			return true;
+   \                     ??usb_host_need_testready_1:
+   \   000015   D3           SETB    C
+   \   000016   22           RET
+    327          		}
+    328          	}
+    329          	else
+    330          	{
+    331          		if(dev_ctl.udisk1.actived == DEV_ACTIVED || dev_ctl.udisk1.actived == DEV_NO_MEDIUM)
+   \                     ??usb_host_need_testready_0:
+   \   000017   90....       MOV     DPTR,#(dev_ctl + 21)
+   \   00001A   E0           MOVX    A,@DPTR
+   \   00001B   FA           MOV     R2,A
+   \   00001C   7402         MOV     A,#0x2
+   \   00001E   6A           XRL     A,R2
+   \   00001F   60F4         JZ      ??usb_host_need_testready_1
+   \   000021   7403         MOV     A,#0x3
+   \   000023   6A           XRL     A,R2
+   \   000024   60EF         JZ      ??usb_host_need_testready_1
+    332          		{
+    333          			return true;
+    334          		}
+    335          	}
+    336          	return false;
+   \                     ??usb_host_need_testready_2:
+   \   000026   C3           CLR     C
+   \   000027   22           RET
+    337          }
+    338          
+
+   \                                 In segment BIT_N, align 1, root
+    339          IAR_BIT_A bool udisk_suspend_flag,udisk1_suspend_flag;
+   \                     udisk_suspend_flag:
+   \   000000                DS 1
+
+   \                                 In segment BIT_N, align 1, root
+   \                     udisk1_suspend_flag:
+   \   000000                DS 1
+    340          
+    341          #pragma location="USB_SEG"
+
+   \                                 In segment USB_SEG, align 1, keep-with-next, root
+    342          void usb_host_resume(void)
+   \                     usb_host_resume:
+    343          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    344          	if(usb_chk.host_phy == 0)
+   \   000000   90....       MOV     DPTR,#usb_chk
+   \   000003   E0           MOVX    A,@DPTR
+   \   000004   700F         JNZ     ??usb_host_resume_0
+    345          	{
+    346          		if(udisk_suspend_flag)
+   \   000006   A2..         MOV     C,udisk_suspend_flag
+   \   000008   5016         JNC     ??usb_host_resume_1
+    347          		{
+    348          			//uart_putc('-');
+    349          			udisk_suspend_flag = 0;
+   \   00000A   C2..         CLR     udisk_suspend_flag
+    350          			usb_host_resume_m();
+   \   00000C                ; Setup parameters for call to function usb_host_resume_m
+   \   00000C   12....       LCALL   ?Subroutine2
+    351          			if(dev_ctl.udisk.actived == DEV_ACTIVED)
+   \                     ??CrossCallReturnLabel_4:
+   \   00000F   700F         JNZ     ??usb_host_resume_1
+    352          			{
+    353          				dev_ctl.udisk.actived = DEV_UNACTIVE; //resume后重新枚举，解决suspend有问题的读卡器或U盘
+   \                     ??usb_host_resume_2:
+   \   000011   7401         MOV     A,#0x1
+   \   000013   F0           MOVX    @DPTR,A
+   \   000014   22           RET
+    354          			}
+    355          		}
+    356          	}
+    357          	else
+    358          	{
+    359          		if(udisk1_suspend_flag)
+   \                     ??usb_host_resume_0:
+   \   000015   A2..         MOV     C,udisk1_suspend_flag
+   \   000017   5007         JNC     ??usb_host_resume_1
+    360          		{
+    361          			//uart_putc('-');
+    362          			udisk1_suspend_flag = 0;
+   \   000019   C2..         CLR     udisk1_suspend_flag
+    363          			usb_host_resume_m();
+   \   00001B                ; Setup parameters for call to function usb_host_resume_m
+   \   00001B   12....       LCALL   ?Subroutine2
+    364          			if(dev_ctl.udisk.actived == DEV_ACTIVED)
+   \                     ??CrossCallReturnLabel_5:
+   \   00001E   60F1         JZ      ??usb_host_resume_2
+    365          			{
+    366          				dev_ctl.udisk.actived = DEV_UNACTIVE; //resume后重新枚举，解决suspend有问题的读卡器或U盘
+    367          			}
+    368          		}
+    369          	}
+    370          }
+   \                     ??usb_host_resume_1:
+   \   000020   22           RET
+
+   \                                 In segment USB_SEG, align 1, keep-with-next
+   \                     ?Subroutine2:
+   \   000000   12....       LCALL   usb_host_resume_m
+   \   000003   90....       MOV     DPTR,#(dev_ctl + 16)
+   \   000006   E0           MOVX    A,@DPTR
+   \   000007   6402         XRL     A,#0x2
+   \   000009   22           RET
+    371          
+    372          #pragma location="USB_SEG"
+
+   \                                 In segment USB_SEG, align 1, keep-with-next, root
+    373          void usb_host_suspend(void)
+   \                     usb_host_suspend:
+    374          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    375          	//uart_putc('|');
+    376          	if(usb_chk.host_phy == 0)
+   \   000000   90....       MOV     DPTR,#usb_chk
+   \   000003   E0           MOVX    A,@DPTR
+   \   000004   7004         JNZ     ??usb_host_suspend_0
+    377          	{
+    378          		udisk_suspend_flag = 1;
+   \   000006   D2..         SETB    udisk_suspend_flag
+   \   000008   8002         SJMP    ??usb_host_suspend_1
+    379          	}
+    380          	else
+    381          	{
+    382          		udisk1_suspend_flag = 1;
+   \                     ??usb_host_suspend_0:
+   \   00000A   D2..         SETB    udisk1_suspend_flag
+    383          	}
+    384          	usb_host_suspend_m();
+   \                     ??usb_host_suspend_1:
+   \   00000C                ; Setup parameters for call to function usb_host_suspend_m
+   \   00000C   12....       LCALL   usb_host_suspend_m
+    385          }
+   \   00000F   22           RET
+    386          
+    387          #pragma location="USB_SEG"
+
+   \                                 In segment USB_SEG, align 1, keep-with-next
+    388          void usb_host_disclk(void)
+   \                     usb_host_disclk:
+    389          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    390          	if(usb_chk.host_phy == 0)
+   \   000000   90....       MOV     DPTR,#usb_chk
+   \   000003   E0           MOVX    A,@DPTR
+   \   000004   7012         JNZ     ??usb_host_disclk_0
+    391          	{
+    392          		if(dev_ctl.udisk.actived == DEV_ACTIVED)
+   \   000006   90....       MOV     DPTR,#(dev_ctl + 16)
+   \   000009   E0           MOVX    A,@DPTR
+   \   00000A   6402         XRL     A,#0x2
+   \   00000C   701B         JNZ     ??usb_host_disclk_1
+    393          		{
+    394          			usb_host_suspend();
+   \   00000E                ; Setup parameters for call to function usb_host_suspend
+   \   00000E   12....       LCALL   usb_host_suspend
+    395          			dev_ctl.udisk.actived = DEV_UNACTIVE;
+   \   000011   7401         MOV     A,#0x1
+   \   000013   90....       MOV     DPTR,#(dev_ctl + 16)
+   \   000016   F0           MOVX    @DPTR,A
+   \   000017   22           RET
+    396          		}
+    397          	}
+    398          	else
+    399          	{
+    400          		if(dev_ctl.udisk1.actived == DEV_ACTIVED)
+   \                     ??usb_host_disclk_0:
+   \   000018   90....       MOV     DPTR,#(dev_ctl + 21)
+   \   00001B   E0           MOVX    A,@DPTR
+   \   00001C   6402         XRL     A,#0x2
+   \   00001E   7009         JNZ     ??usb_host_disclk_1
+    401          		{
+    402          			usb_host_suspend();
+   \   000020                ; Setup parameters for call to function usb_host_suspend
+   \   000020   12....       LCALL   usb_host_suspend
+    403          			dev_ctl.udisk1.actived = DEV_UNACTIVE;
+   \   000023   7401         MOV     A,#0x1
+   \   000025   90....       MOV     DPTR,#(dev_ctl + 21)
+   \   000028   F0           MOVX    @DPTR,A
+    404          		}
+    405          	}
+    406          }
+   \                     ??usb_host_disclk_1:
+   \   000029   22           RET
+    407          
+    408          #ifndef AX207X_TAG
+    409          //设置sd状态
+    410          #pragma location="SD_SEG"
+
+   \                                 In segment SD_SEG, align 1, keep-with-next
+    411          void sd_set_status(u8 sta)
+   \                     sd_set_status:
+    412          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    413          	if(sd_chk.group == DEVICE_SDMMC)
+   \   000000   90....       MOV     DPTR,#sd_chk
+   \   000003   E0           MOVX    A,@DPTR
+   \   000004   7017         JNZ     ??sd_set_status_0
+    414          	{
+    415          		dev_ctl.sd.actived = sta;
+   \   000006   E9           MOV     A,R1
+   \   000007   90....       MOV     DPTR,#(dev_ctl + 6)
+   \   00000A   F0           MOVX    @DPTR,A
+    416          		if(sta == DEV_ACTIVED)
+   \   00000B   7402         MOV     A,#0x2
+   \   00000D   69           XRL     A,R1
+   \   00000E   90....       MOV     DPTR,#dev_ctl
+   \   000011   7005         JNZ     ??sd_set_status_1
+    417          		{
+    418          			dev_ctl.dev_actived |= BIT(DEVICE_SDMMC);
+   \   000013   E0           MOVX    A,@DPTR
+   \   000014   D2E0         SETB    0xE0 /* A   */.0
+   \   000016   F0           MOVX    @DPTR,A
+   \   000017   22           RET
+    419          		}
+    420          		else
+    421          		{
+    422          			dev_ctl.dev_actived &= ~BIT(DEVICE_SDMMC);
+   \                     ??sd_set_status_1:
+   \   000018   E0           MOVX    A,@DPTR
+   \   000019   C2E0         CLR     0xE0 /* A   */.0
+   \   00001B   F0           MOVX    @DPTR,A
+   \   00001C   22           RET
+    423          		}
+    424          	}
+    425          	else if(sd_chk.group == DEVICE_SDMMC1)
+   \                     ??sd_set_status_0:
+   \   00001D   6401         XRL     A,#0x1
+   \   00001F   7016         JNZ     ??sd_set_status_2
+    426          	{
+    427          		dev_ctl.sd1.actived = sta;
+   \   000021   E9           MOV     A,R1
+   \   000022   90....       MOV     DPTR,#(dev_ctl + 11)
+   \   000025   F0           MOVX    @DPTR,A
+    428          		if(sta == DEV_ACTIVED)
+   \   000026   7402         MOV     A,#0x2
+   \   000028   69           XRL     A,R1
+   \   000029   90....       MOV     DPTR,#dev_ctl
+   \   00002C   7005         JNZ     ??sd_set_status_3
+    429          		{
+    430          			dev_ctl.dev_actived |= BIT(DEVICE_SDMMC1);
+   \   00002E   E0           MOVX    A,@DPTR
+   \   00002F   D2E1         SETB    0xE0 /* A   */.1
+   \   000031   F0           MOVX    @DPTR,A
+   \   000032   22           RET
+    431          		}
+    432          		else
+    433          		{
+    434          			dev_ctl.dev_actived &= ~BIT(DEVICE_SDMMC1);
+   \                     ??sd_set_status_3:
+   \   000033   E0           MOVX    A,@DPTR
+   \   000034   C2E1         CLR     0xE0 /* A   */.1
+   \   000036   F0           MOVX    @DPTR,A
+    435          		}
+    436          	}
+    437          }
+   \                     ??sd_set_status_2:
+   \   000037   22           RET
+    438          
+    439          //获取sd状态
+    440          #pragma location="SD_SEG"
+
+   \                                 In segment SD_SEG, align 1, keep-with-next
+    441          u8 sd_get_status(void)
+   \                     sd_get_status:
+    442          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    443          	if(sd_chk.group == DEVICE_SDMMC)
+   \   000000   90....       MOV     DPTR,#sd_chk
+   \   000003   E0           MOVX    A,@DPTR
+   \   000004   7006         JNZ     ??sd_get_status_0
+    444          	{
+    445          		return dev_ctl.sd.actived;
+   \   000006   90....       MOV     DPTR,#(dev_ctl + 6)
+   \   000009   E0           MOVX    A,@DPTR
+   \   00000A   F9           MOV     R1,A
+   \   00000B   22           RET
+    446          	}
+    447          	else if(sd_chk.group == DEVICE_SDMMC1)
+   \                     ??sd_get_status_0:
+   \   00000C   6401         XRL     A,#0x1
+   \   00000E   7006         JNZ     ??sd_get_status_1
+    448          	{
+    449          		return dev_ctl.sd1.actived;
+   \   000010   90....       MOV     DPTR,#(dev_ctl + 11)
+   \   000013   E0           MOVX    A,@DPTR
+   \   000014   F9           MOV     R1,A
+   \   000015   22           RET
+    450          	}
+    451          	return 0;	// add by Merlin
+   \                     ??sd_get_status_1:
+   \   000016   7900         MOV     R1,#0x0
+   \   000018   22           RET
+    452          }
+    453          
+    454          #pragma location="SD_SEG"
+
+   \                                 In segment SD_SEG, align 1, keep-with-next
+    455          void sd_unactived(void)
+   \                     sd_unactived:
+    456          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    457          #if SD_DOUBLE_EN
+    458          	dev_ctl.sd.actived = DEV_ACTIVED;
+    459          	dev_ctl.sd1.actived = DEV_ACTIVED;
+    460          	dev_ctl.dev_actived |= BIT(DEVICE_SDMMC)|BIT(DEVICE_SDMMC1);
+    461          #else
+    462          	sd_clr_status(DEV_UNACTIVE);
+   \   000000                ; Setup parameters for call to function sd_clr_status
+   \   000000   7901         MOV     R1,#0x1
+   \   000002   12....       LCALL   sd_clr_status
+    463          #endif
+    464          }
+   \   000005   22           RET
+    465          #endif
+    466          
+    467          #pragma location="SD_SEG"
+
+   \                                 In segment SD_SEG, align 1, keep-with-next
+    468          bool sd_disk_read(void *buf, u32 lba)
+   \                     sd_disk_read:
+    469          {
+   \   000000   C0..         PUSH    ?V0 + 0
+   \   000002   C0..         PUSH    ?V0 + 1
+   \   000004   C0..         PUSH    ?V0 + 2
+   \   000006   C0..         PUSH    ?V0 + 3
+   \   000008                ; Saved register size: 4
+   \   000008                ; Auto size: 0
+   \   000008   7582F5       MOV     DPL,#-0xb
+   \   00000B   7583FF       MOV     DPH,#-0x1
+   \   00000E   12....       LCALL   ?EXT_STACK_DISP0_16
+   \   000011   78..         MOV     R0,#?V0 + 0
+   \   000013   12....       LCALL   ?L_MOV_X
+    470          	t_fat.t_item.win_cnt++;
+   \   000016   90....       MOV     DPTR,#(t_fat + 7)
+   \   000019   12....       LCALL   ?Subroutine3
+    471          	t_fat.t_item.dir_wincnt++;
+   \                     ??CrossCallReturnLabel_6:
+   \   00001C   90....       MOV     DPTR,#(t_fat + 9)
+   \   00001F   12....       LCALL   ?Subroutine3
+    472          #ifdef AX207X_TAG
+    473          	bool res = sd_read(buf, lba);
+    474          	if(res)
+    475          	{
+    476          		if(sd_chk.group == DEVICE_SDMMC)
+    477          		{
+    478          			dev_ctl.sd.actived = DEVICE_INVALID;
+    479          			dev_ctl.dev_actived &= ~BIT(DEVICE_SDMMC);
+    480          		}
+    481          		else if(sd_chk.group == DEVICE_SDMMC1)
+    482          		{
+    483          			dev_ctl.sd1.actived = DEVICE_INVALID;
+    484          			dev_ctl.dev_actived &= ~BIT(DEVICE_SDMMC1);
+    485          		}
+    486          	}
+    487          	return res;
+    488          #else
+    489          	return sd_read(buf, lba);
+   \                     ??CrossCallReturnLabel_7:
+   \   000022                ; Setup parameters for call to function sd_read
+   \   000022   78..         MOV     R0,#?V0 + 0
+   \   000024   12....       LCALL   ?PUSH_ISTACK_I_FOUR
+   \   000027   12....       LCALL   sd_read
+   \   00002A   74FC         MOV     A,#-0x4
+   \   00002C   12....       LCALL   ?DEALLOC_EXT_STACK8
+   \   00002F   D0..         POP     ?V0 + 3
+   \   000031   D0..         POP     ?V0 + 2
+   \   000033   D0..         POP     ?V0 + 1
+   \   000035   D0..         POP     ?V0 + 0
+   \   000037   22           RET
+    490          #endif
+    491          }
+
+   \                                 In segment SD_SEG, align 1, keep-with-next
+   \                     ?Subroutine3:
+   \   000000   E0           MOVX    A,@DPTR
+   \   000001   2401         ADD     A,#0x1
+   \   000003   F0           MOVX    @DPTR,A
+   \   000004   A3           INC     DPTR
+   \   000005   E0           MOVX    A,@DPTR
+   \   000006   3400         ADDC    A,#0x0
+   \   000008   F0           MOVX    @DPTR,A
+   \   000009   22           RET
+    492          
+    493          
+    494          //SD_DECT复用SD_CLK时，检测到SD卡拔出需要比较长的时间，需要及早淡出,避免拔卡噪声
+    495          #pragma location="SD_SEG"
+
+   \                                 In segment SD_SEG, align 1, keep-with-next
+    496          bool sd_active_a(void)
+   \                     sd_active_a:
+    497          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    498          	bool res;
+    499          
+    500          #if (DAC_FADE_EN && USE_SD_CLK_DET)
+    501          	if(task_ctl.work_sta == TASK_MUSIC)
+    502          	{
+    503          		dac_fade_out();
+    504          	}
+    505          #endif
+    506          
+    507          	res = sd_active();
+    508          
+    509          #if (DAC_FADE_EN && USE_SD_CLK_DET)
+    510          	if(res && (music_get_status() == STATUS_PLAY_PLAYING))
+    511          	{
+    512          		dac_fade_in(1);
+    513          	}
+    514          #endif
+    515          	return res;
+   \   000000                ; Setup parameters for call to function sd_active
+   \   000000   12....       LCALL   sd_active
+   \   000003   22           RET
+    516          }
+
+   \                                 In segment CODE_C, align 1
+   \                     `?<Constant "sd %d init fail\\n">`:
+   \   000000   73642025     DB "sd %d init fail\012"
+   \            6420696E
+   \            69742066
+   \            61696C0A
+   \            00      
+
+   \                                 In segment SFR_AN, at 0xa8
+   \   union <unnamed> volatile __sfr _A_IE0
+   \                     _A_IE0:
+   \   000000                DS 1
+
+   Maximum stack usage in bytes:
+
+     Function                       EXT_STACK PSTACK XSTACK
+     --------                       --------- ------ ------
+     device_activate                       4      0      0
+       -> device_is_actived                2      0      0
+       -> device_need_activate             2      0      0
+       -> device_activate_do               2      0      0
+     device_activate_do                    6      0      0
+       -> sd_active_safe                   6      0      0
+       -> my_printf                       10      0      0
+       -> usb_host_tune_set                6      0      0
+       -> host_select_phy                  6      0      0
+       -> device_activate_udisk_do         6      0      0
+       -> usb_host_enable_testready        6      0      0
+       -> device_activate_try              6      0      0
+     device_change_check                   3      0      0
+       -> device_need_activate             6      0      0
+       -> device_check_stop                6      0      0
+       -> device_activate                  6      0      0
+       -> fs_cur_dev                       6      0      0
+       -> device_is_actived                6      0      0
+       -> device_check_stop                6      0      0
+       -> device_is_actived                6      0      0
+     device_get_actived                    0      0      0
+     device_get_actived_num                4      0      0
+       -> device_is_online                 8      0      0
+     device_get_valid                      2      0      0
+     device_init                           0      0      0
+       -> my_memset                        0      0      0
+     device_is_valid                       4      0      0
+     device_set_aborted                    2      0      0
+     get_total_dev                         0      0      0
+     host_select_phy                      10      0      0
+       -> fs_cur_dev                      14      0      0
+       -> usb_host_mass_read_end          14      0      0
+       -> usb_host_suspend                14      0      0
+       -> usb_port_init                   14      0      0
+       -> device_activate_udisk_do        14      0      0
+       -> usb_port_init                   14      0      0
+       -> device_activate_udisk_do        14      0      0
+     sd_active_a                           0      0      0
+       -> sd_active                        0      0      0
+     sd_disk_read                         12      0      0
+       -> sd_read                         16      0      0
+     sd_get_status                         0      0      0
+     sd_set_status                         0      0      0
+     sd_unactived                          0      0      0
+       -> sd_clr_status                    0      0      0
+     usb_host_disclk                       0      0      0
+       -> usb_host_suspend                 0      0      0
+       -> usb_host_suspend                 0      0      0
+     usb_host_get_actived                  0      0      0
+     usb_host_need_testready               0      0      0
+     usb_host_resume                       0      0      0
+       -> usb_host_resume_m                0      0      0
+       -> usb_host_resume_m                0      0      0
+     usb_host_set_actived                  0      0      0
+       -> usb_host_enable_testready        0      0      0
+     usb_host_suspend                      7      0      0
+       -> usb_host_suspend_m               0      0      0
+     usb_host_unactived                    0      0      0
+
+
+   Segment part sizes:
+
+     Function/Label                 Bytes
+     --------------                 -----
+     dev_ctl                          42
+     device_init                      52
+     get_total_dev                     3
+     device_get_actived                6
+     device_get_valid                  5
+     ?Subroutine0                     15
+     device_set_aborted               23
+     ?Subroutine4                      5
+     device_is_valid                  42
+     host_select_phy                 100
+     ?Subroutine1                     13
+     device_activate_do              111
+     device_activate                  32
+     device_get_actived_num           63
+     device_change_check             121
+     usb_host_get_actived             18
+     usb_host_set_actived             37
+     usb_host_unactived               24
+     usb_host_need_testready          40
+     udisk_suspend_flag                1
+     udisk1_suspend_flag               1
+     usb_host_resume                  33
+     ?Subroutine2                     10
+     usb_host_suspend                 16
+     usb_host_disclk                  42
+     sd_set_status                    56
+     sd_get_status                    25
+     sd_unactived                      6
+     sd_disk_read                     56
+     ?Subroutine3                     10
+     sd_active_a                       4
+     ?<Constant "sd %d init fail\n">
+                                      17
+     _A_IE0                            1
+
+ 
+   2 bytes in segment BIT_N
+  17 bytes in segment CODE_C
+ 191 bytes in segment DEVICE_COM_SEG
+  52 bytes in segment DEVICE_INIT
+ 354 bytes in segment DEVICE_SEG
+ 157 bytes in segment SD_SEG
+   1 byte  in segment SFR_AN
+ 214 bytes in segment USB_SEG
+  42 bytes in segment XDATA_Z
+ 
+ 985 bytes of CODE  memory
+   0 bytes of DATA  memory (+ 1 byte shared)
+  42 bytes of XDATA memory
+   2 bytes of BIT   memory
+
+Errors: none
+Warnings: none

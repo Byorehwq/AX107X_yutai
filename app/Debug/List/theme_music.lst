@@ -1,0 +1,289 @@
+##############################################################################
+#                                                                            #
+# IAR 8051 C/C++ Compiler V7.20H/W32                   29/Jun/2018  19:55:12 #
+# Copyright 2004-2006 IAR Systems. All rights reserved.                      #
+#                                                                            #
+#    Core               =  plain                                             #
+#    Code model         =  near                                              #
+#    Data model         =  large                                             #
+#    Calling convention =  extended stack reentrant                          #
+#    Constant location  =  code                                              #
+#    Extended stack     =  enabled                                           #
+#    Dptr setup         =  1,16                                              #
+#    Source file        =  I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\display\theme_d #
+#                          efault\theme_music.c                              #
+#    Command line       =  -I E:\software\8051\INC\ -I                       #
+#                          E:\software\8051\INC\CLIB\ -I                     #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\COMMON\ -I      #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\INC\ -I         #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\config\ -I      #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\api\ -I         #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\fm\ -I          #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\fat\ -I         #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\display\ -I     #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\display\theme_d #
+#                          efault\ -I I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073 #
+#                          A_”ÓÃ©_AX1071_xxxxxxxx_20180629_Merlin_1\app\disp #
+#                          lay\led\ -I I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC07 #
+#                          3A_”ÓÃ©_AX1071_xxxxxxxx_20180629_Merlin_1\app\dis #
+#                          play\lcd\ -I I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC0 #
+#                          73A_”ÓÃ©_AX1071_xxxxxxxx_20180629_Merlin_1\app\ta #
+#                          sk\ -I I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”Ó #
+#                          Ã©_AX1071_xxxxxxxx_20180629_Merlin_1\app\user\    #
+#                          -I I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_A #
+#                          X1071_xxxxxxxx_20180629_Merlin_1\app\mem\ -I      #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\module\ -I      #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\key\ -I         #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\startmusic\ -I  #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\spi\ -D         #
+#                          AX107X_TAG -lC I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18B #
+#                          C073A_”ÓÃ©_AX1071_xxxxxxxx_20180629_Merlin_1\app\ #
+#                          Debug\List\ -o I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18B #
+#                          C073A_”ÓÃ©_AX1071_xxxxxxxx_20180629_Merlin_1\app\ #
+#                          Debug\Obj\ -e -z9 --core=plain --dptr=16,1        #
+#                          --data_model=large --code_model=near              #
+#                          --calling_convention=ext_stack_reentrant          #
+#                          --place_constants=code --nr_virtual_regs 20       #
+#                          --extended_stack I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\1 #
+#                          8BC073A_”ÓÃ©_AX1071_xxxxxxxx_20180629_Merlin_1\ap #
+#                          p\display\theme_default\theme_music.c             #
+#    List file          =  I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\Debug\List\them #
+#                          e_music.lst                                       #
+#    Object file        =  I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\Debug\Obj\theme #
+#                          _music.r51                                        #
+#                                                                            #
+#                                                                            #
+##############################################################################
+
+I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX1071_xxxxxxxx_20180629_Merlin_1\app\display\theme_default\theme_music.c
+      1          /*****************************************************************************
+      2           * Module    : Theme
+      3           * File      : lcd_default_music.c
+      4           * Author    : Hanny
+      5           * Email     : coldney@yahoo.com.cn
+      6           * Function  : “Ù¿÷≤•∑≈»ŒŒÒœ‘ æ÷˜Ã‚
+      7           *****************************************************************************/
+      8          #include "include.h"
+
+   \                                 In segment XDATA_Z, align 1, keep-with-next
+   \   000000                REQUIRE __INIT_XDATA_Z
+      9          bool vol_less_34V_blink;
+   \                     vol_less_34V_blink:
+   \   000000                DS 1
+     10          #pragma location="DISP_MUSIC_SEG"
+
+   \                                 In segment DISP_MUSIC_SEG, align 1, keep-with-next
+     11          void task_music_display(void)
+   \                     task_music_display:
+     12          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     13          #if ((DISP_TYPE != DISP_LED) && (DISP_TYPE != DISP_NO))
+     14          	ocx_event();
+   \   000000                ; Setup parameters for call to function ocx_event
+   \   000000   12....       LCALL   ocx_event
+     15          #if ENERGY_DISP_EN
+     16          	if(ocx.disp_energy)
+     17          	{
+     18          		ocx_energy_set(tbl_energy_music);
+     19          	}
+     20          	else
+     21          #endif
+     22          	{
+     23          		ocx_time_set(u_msc.cur_time.min, u_msc.cur_time.sec);
+   \   000003                ; Setup parameters for call to function ocx_time_set
+   \   000003   90....       MOV     DPTR,#(u_msc + 8)
+   \   000006   E0           MOVX    A,@DPTR
+   \   000007   FA           MOV     R2,A
+   \   000008   90....       MOV     DPTR,#(u_msc + 7)
+   \   00000B   E0           MOVX    A,@DPTR
+   \   00000C   F9           MOV     R1,A
+   \   00000D   12....       LCALL   ocx_time_set
+     24          	}
+     25          
+     26          	if(!disp.update)
+   \   000010   A2..         MOV     C,disp.0
+   \   000012   5053         JNC     ??task_music_display_0
+     27          	{
+     28          		return;                     //≤ª–Ë“™∏¸–¬œ‘ æ
+     29          	}
+     30          	disp.update = 0;
+   \   000014   C2..         CLR     disp.0
+     31          
+     32          	//À¢–¬œ‘ æΩÁ√Ê
+     33          	switch(ocx.disp_status)
+   \   000016   78..         MOV     R0,#(ocx + 3)
+   \   000018   E6           MOV     A,@R0
+   \   000019   12....       LCALL   ?UC_SWITCH_DENSE
+   \                     `?<Jumptable for task_music_display>_0`:
+   \   00001C   00           DB        0
+   \   00001D   01           DB        1
+   \   00001E   ....         DW        ??task_music_display_1
+   \   000020   ....         DW        ??task_music_display_2
+   \   000022   ....         DW        ??task_music_display_3
+     34          	{
+     35          	case OCX_NULL:
+     36          //#if MUSIC_STOP
+     37          //		if(b_msc.stop)
+     38          //		{
+     39          //			showstop();
+     40          //		}
+     41          //		else
+     42          //#endif
+     43          //		{
+     44          //#if ENERGY_DISP_EN
+     45          //			if(ocx.disp_energy)
+     46          //			{
+     47          //				disp_energy();
+     48          //			}
+     49          //			else
+     50          //#endif
+     51          //			{
+     52          				//
+     53          				//disp_numsel_icon();
+     54          			if(vol_less_34V_blink == 0)
+   \                     ??task_music_display_2:
+   \   000024   90....       MOV     DPTR,#vol_less_34V_blink
+   \   000027   E0           MOVX    A,@DPTR
+   \   000028   7028         JNZ     ??task_music_display_4
+     55          			{
+     56          				if(b_msc.pause == 0){
+   \   00002A   A2..         MOV     C,b_msc.1
+   \   00002C   401C         JC      ??task_music_display_5
+     57          
+     58          					if(task_ctl.work_sta == TASK_FLASH)
+   \   00002E   7406         MOV     A,#0x6
+   \   000030   65..         XRL     A,task_ctl
+   \   000032   90....       MOV     DPTR,#u_msc
+   \   000035   700A         JNZ     ??task_music_display_6
+     59          						disp_numsel(u_msc.music_num+1); // Ï∂ SPI-Flash ±,	œ‘ æ÷µ“™ +1
+   \   000037                ; Setup parameters for call to function led_7p7s_dispnum
+   \   000037   E0           MOVX    A,@DPTR
+   \   000038   2401         ADD     A,#0x1
+   \   00003A   FA           MOV     R2,A
+   \   00003B   A3           INC     DPTR
+   \   00003C   E0           MOVX    A,@DPTR
+   \   00003D   3400         ADDC    A,#0x0
+   \   00003F   8004         SJMP    ??task_music_display_7
+     60          					else
+     61          						disp_numsel(u_msc.music_num);
+   \                     ??task_music_display_6:
+   \   000041                ; Setup parameters for call to function led_7p7s_dispnum
+   \   000041   E0           MOVX    A,@DPTR
+   \   000042   FA           MOV     R2,A
+   \   000043   A3           INC     DPTR
+   \   000044   E0           MOVX    A,@DPTR
+   \                     ??task_music_display_7:
+   \   000045   FB           MOV     R3,A
+   \   000046   12....       LCALL   led_7p7s_dispnum
+   \   000049   22           RET
+     62          				}
+     63          				else
+     64          				{
+     65          					showpause();
+   \                     ??task_music_display_5:
+   \   00004A                ; Setup parameters for call to function led_7p7s_disp_str
+   \   00004A   7A..         MOV     R2,#(`?<Constant "  p">` & 0xff)
+   \   00004C   7B..         MOV     R3,#((`?<Constant "  p">` >> 8) & 0xff)
+   \   00004E   12....       LCALL   led_7p7s_disp_str
+   \   000051   22           RET
+     66          				}
+     67          			}
+     68          			else
+     69          			{
+     70          					disp_clear();
+   \                     ??task_music_display_4:
+   \   000052                ; Setup parameters for call to function led_7p7s_clear
+   \   000052   12....       LCALL   led_7p7s_clear
+   \   000055   22           RET
+     71          			}
+     72          			break;
+     73          		case OCX_NUMBOX:
+     74          #if USE_IR_NUM
+     75          		case OCX_NUMSELBOX:
+     76          #endif	
+     77          			disp_numsel(ocx.number);
+   \                     ??task_music_display_3:
+   \   000056                ; Setup parameters for call to function led_7p7s_dispnum
+   \   000056   78..         MOV     R0,#(ocx + 13)
+   \   000058   E6           MOV     A,@R0
+   \   000059   FA           MOV     R2,A
+   \   00005A   08           INC     R0
+   \   00005B   E6           MOV     A,@R0
+   \   00005C   FB           MOV     R3,A
+   \   00005D   12....       LCALL   led_7p7s_dispnum
+     78          			disp_numsel_icon();
+   \   000060                ; Setup parameters for call to function led_7p7s_disp_numsel_icon
+   \   000060   12....       LCALL   led_7p7s_disp_numsel_icon
+   \   000063   22           RET
+     79          			break;
+     80          		default:
+     81          			ocx_display();
+   \                     ??task_music_display_1:
+   \   000064                ; Setup parameters for call to function ocx_display
+   \   000064   12....       LCALL   ocx_display
+   \                     ??task_music_display_0:
+   \   000067   22           RET
+     82          			break;
+     83          	//	}
+     84          	}
+     85          #endif
+     86          
+     87          #if ((DISP_TYPE == DISP_LED) && (USE_IR_NUM))
+     88          	ocx_event();
+     89          #endif
+     90          }
+
+   \                                 In segment CODE_C, align 1
+   \                     `?<Constant "  p">`:
+   \   000000   20207000     DB "  p"
+
+   Maximum stack usage in bytes:
+
+     Function                       EXT_STACK PSTACK XSTACK
+     --------                       --------- ------ ------
+     task_music_display                    0      0      0
+       -> ocx_event                        0      0      0
+       -> ocx_time_set                     0      0      0
+       -> led_7p7s_dispnum                 0      0      0
+       -> led_7p7s_dispnum                 0      0      0
+       -> led_7p7s_disp_str                0      0      0
+       -> led_7p7s_clear                   0      0      0
+       -> led_7p7s_dispnum                 0      0      0
+       -> led_7p7s_disp_numsel_icon        0      0      0
+       -> ocx_display                      0      0      0
+
+
+   Segment part sizes:
+
+     Function/Label     Bytes
+     --------------     -----
+     vol_less_34V_blink    1
+     task_music_display  104
+     ?<Constant "  p">     4
+
+ 
+   4 bytes in segment CODE_C
+ 104 bytes in segment DISP_MUSIC_SEG
+   1 byte  in segment XDATA_Z
+ 
+ 108 bytes of CODE  memory
+   1 byte  of XDATA memory
+
+Errors: none
+Warnings: none

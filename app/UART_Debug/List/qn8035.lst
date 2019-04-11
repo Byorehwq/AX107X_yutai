@@ -1,0 +1,681 @@
+##############################################################################
+#                                                                            #
+# IAR 8051 C/C++ Compiler V7.20H/W32                   10/Sep/2015  19:03:29 #
+# Copyright 2004-2006 IAR Systems. All rights reserved.                      #
+#                                                                            #
+#    Core               =  plain                                             #
+#    Code model         =  near                                              #
+#    Data model         =  large                                             #
+#    Calling convention =  extended stack reentrant                          #
+#    Constant location  =  code                                              #
+#    Extended stack     =  enabled                                           #
+#    Dptr setup         =  1,16                                              #
+#    Source file        =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\fm\qn8035.c                           #
+#    Command line       =  -I "C:\Program Files\IAR Systems\Embedded         #
+#                          Workbench 4.05 Evaluation version\8051\INC\" -I   #
+#                          "C:\Program Files\IAR Systems\Embedded Workbench  #
+#                          4.05 Evaluation version\8051\INC\CLIB\" -I        #
+#                          "C:\Documents and Settings\Administrator\×ÀÃæ\lil #
+#                          y\15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX1 #
+#                          070_20150908\COMMON\" -I "C:\Documents and        #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\INC\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\config\" -I "C:\Documents and    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\api\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\fm\" -I "C:\Documents and        #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\fat\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\display\" -I "C:\Documents and   #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\displ #
+#                          ay\led\" -I "C:\Documents and                     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\displ #
+#                          ay\lcd\" -I "C:\Documents and                     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\task\ #
+#                          " -I "C:\Documents and Settings\Administrator\×ÀÃ #
+#                          æ\lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lil #
+#                          y_AX1070_20150908\user\" -I "C:\Documents and     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\mem\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\module\" -I "C:\Documents and    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\modul #
+#                          e\kedir\" -I "C:\Documents and                    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\key\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\startmusic\" -D UART_DEBUG -D    #
+#                          AX207X_TAG -lC "C:\Documents and                  #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\UART_ #
+#                          Debug\List\" -o "C:\Documents and                 #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\UART_ #
+#                          Debug\Obj\" -e -z9 --debug --core=plain           #
+#                          --dptr=16,1 --data_model=large --code_model=near  #
+#                          --calling_convention=ext_stack_reentrant          #
+#                          --place_constants=code --nr_virtual_regs 20       #
+#                          --extended_stack "C:\Documents and                #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\fm\qn #
+#                          8035.c"                                           #
+#    List file          =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\UART_Debug\List\qn8035.lst            #
+#    Object file        =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\UART_Debug\Obj\qn8035.r51             #
+#                                                                            #
+#                                                                            #
+##############################################################################
+
+C:\Documents and Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX1070_20150908\fm\qn8035.c
+      1          /*--------------------------------------------------------------------------*/
+      2          /**@file QN8035.C
+      3             @brief FMÄ£¿éQN8035Çý¶¯
+      4             @details FMÄ£¿éQN8035µÄÇý¶¯º¯Êý
+      5             @author LZZ
+      6             @date 2010-08-17
+      7             @note Í¨¹ýºê¶¨ÒåÀ´Ñ¡ÔñÇý¶¯·½Ê½
+      8          */
+      9          /*----------------------------------------------------------------------------*/
+     10          
+     11          #include "include.h"
+     12          #include "qn8035.h"
+     13          
+     14          #if FM_QN8035_EN
+     15          
+     16          volatile u8 qn_count;
+     17          __data u8 qnd_PreNoiseFloor = 40;
+     18          __data u8 qnd_NoiseFloor = 37;
+     19          
+     20          
+     21          void SoftDelay_QN(u8 n)
+     22          {
+     23          	while(n--)
+     24          		asm("nop");
+     25          }
+     26          
+     27          u16 FREQ2CHREG(u16 freq)@"QN8035_RX"
+     28          {
+     29          	return	(freq-6000)/5;
+     30          }
+     31          
+     32          void QNF_SetMute(u8 On)@"QN8035_RX"
+     33          {
+     34          	QND_WriteReg(REG_DAC, On?0x1B:0x10);
+     35          }
+     36          
+     37          /**********************************************************************
+     38          u8 QNF_SetCh(u16 freq)
+     39          **********************************************************************
+     40          Description: set channel frequency
+     41          
+     42          Parameters:
+     43              freq:  channel frequency to be set
+     44          Return Value:
+     45              1: success
+     46          **********************************************************************/
+     47          #if USING_VALID_CH
+     48          void QNF_SetCh(u16 freq) @"QN8035_RX"
+     49          {
+     50          	u8 temp;
+     51          
+     52          	freq = FREQ2CHREG(freq);
+     53          	//writing lower 8 bits of CCA channel start index
+     54          	QND_WriteReg(CH_START, (u8)freq);
+     55          	//writing lower 8 bits of CCA channel stop index
+     56          	QND_WriteReg(CH_STOP, (u8)freq);
+     57          	//writing lower 8 bits of channel index
+     58          	QND_WriteReg(CH, (u8)freq);
+     59          	//writing higher bits of CCA channel start,stop and step index
+     60          	temp = (u8)((freq >> 8) & CH_CH);
+     61          	temp |= ((u8)(freq >> 6) & CH_CH_START);
+     62          	temp |= ((u8)(freq >> 4) & CH_CH_STOP);
+     63          	temp |= QND_STEP_CONSTANT;
+     64          	QND_WriteReg(CH_STEP, temp);
+     65          }
+     66          #else
+     67          void QNF_SetCh(u16 start,u16 stop,u8 step) @"QN8035_RX"
+     68          {
+     69          	u8 temp;
+     70          
+     71          	start = FREQ2CHREG(start);
+     72          	stop = FREQ2CHREG(stop);
+     73          	//writing lower 8 bits of CCA channel start index
+     74          	QND_WriteReg(CH_START, (u8)start);
+     75          	//writing lower 8 bits of CCA channel stop index
+     76          	QND_WriteReg(CH_STOP, (u8)stop);
+     77          	//writing lower 8 bits of channel index
+     78          	QND_WriteReg(CH, (u8)start);
+     79          	//writing higher bits of CCA channel start,stop and step index
+     80          	temp = (u8)((start >> 8) & CH_CH);
+     81          	temp |= ((u8)(start >> 6) & CH_CH_START);
+     82          	temp |= ((u8)(stop >> 4) & CH_CH_STOP);
+     83          	temp |= (step << 6);
+     84          	QND_WriteReg(CH_STEP, temp);
+     85          }
+     86          #endif
+     87          
+     88          /**********************************************************************
+     89          void QND_Init()
+     90          **********************************************************************
+     91          Description: Initialize device to make it ready to have all functionality ready for use.
+     92          
+     93          Parameters:
+     94              None
+     95          Return Value:
+     96              1: Device is ready to use.
+     97              0: Device is not ready to serve function.
+     98          **********************************************************************/
+     99          #if (FM_CLOCK == USE_MODULE_CRYSTAL)
+    100          static void qn8035_init_part1(void)@"QN8035_RX"
+    101          {
+    102          	/*qn8075,Ê¹ÓÃ¶ÀÁ¢¾§ÕñÊ±£¬µÈ´ýÆðÕñÊ±¼äÐèÒª2S£¬
+    103          	ÉÏµçÊ±ÏÈÅäÖÃÇ°°ë²¿·Ö£¬ºó°ë²¿·ÖÔÚ³õÊ¼»¯Ê±ÅäÖÃ*/
+    104          #if (FM_CLOCK == USE_MODULE_CRYSTAL)
+    105          
+    106          	QND_WriteReg(0x00, 0x81);
+    107          	delay_5ms(5);
+    108          
+    109          	QNF_SetMute(1);
+    110          	QND_WriteReg(0x58, 0x93);//mod PLL setting
+    111          
+    112          	qn_count = 210;          //210*10ms = 2100ms
+    113          	fm_ctl.init_sta = 0;
+    114          #endif
+    115          }
+    116          #endif
+    117          
+    118          bool qn8035_init_process(void)@"QN8035_RX"
+    119          {
+    120          #if (FM_CLOCK == USE_MODULE_CRYSTAL)
+    121          	if(qn_count)
+    122          	{
+    123          		qn_count--;
+    124          
+    125          		return 0;
+    126          	}
+    127          	else {
+    128          		return 1;   //³õÊ¼»¯Íê³É
+    129          	}
+    130          #else
+    131          	return 1;
+    132          #endif
+    133          }
+    134          
+    135          void qn8035_init(void)@"QN8035_RX"
+    136          {
+    137          	QND_WriteReg(0x00, 0x81);
+    138          	DELAY_MS(1);
+    139          
+    140          // change crystal frequency setting here
+    141          #if (FM_CLOCK == USE_IO_32KHZ_CLK)
+    142          	QND_WriteReg(0x01,QND_DIGITAL_CLOCK);//   ·½²¨ÓÃÕâ¸ö
+    143          #elif (FM_CLOCK == SHARE_CRYSTAL_32KHz)
+    144          	QND_WriteReg(0x01,QND_SINE_WAVE_CLOCK);//   ÕýÏÒ²¨ÓÃÕâ¸ö
+    145          #elif (FM_CLOCK==SHARE_CRYSTAL_24MHz)//24M¹²¾§Õñ
+    146          	QND_WriteReg(0x15, 0xDC);   //24M
+    147          	QND_WriteReg(0x16, 0x02);   //Ê±ÖÓ
+    148          	QND_WriteReg(0x17, 0x54);   // Ê±ÖÓ
+    149          #elif (FM_CLOCK == USE_MODULE_CRYSTAL)
+    150          	QNF_SetMute(1);
+    151          	QND_WriteReg(0x58, 0x93);//mod PLL setting
+    152          	delay_5ms(25);
+    153          	QND_WriteReg(XTAL_DIV0, QND_XTAL_DIV0);//01
+    154          	QND_WriteReg(XTAL_DIV1, QND_XTAL_DIV1);//08
+    155          	QND_WriteReg(XTAL_DIV2, QND_XTAL_DIV2);//5c
+    156          #endif
+    157          
+    158          	QND_WriteReg(0x54, 0x47);//mod PLL setting
+    159          	//select SNR as filter3,SM step is 2db
+    160          	QND_WriteReg(0x19, 0xc4);
+    161          	QND_WriteReg(0x40,0x70);	//set SNR as SM,SNC,HCC MPX   /////Ã»ÓÐ
+    162          	QND_WriteReg(0x33, 0x9c);//9e;//set HCC and SM Hystersis 5db
+    163          	QND_WriteReg(0x2d, 0xD6);//notch filter threshold adjusting
+    164          	QND_WriteReg(0x43, 0x10);//notch filter threshold enable
+    165          	QND_WriteReg(0x47,0x39);
+    166          	//enter receiver mode directly
+    167          	QND_WriteReg(0x00, 0x11);
+    168          	//Enable the channel condition filter3 adaptation,Let ccfilter3 adjust freely
+    169          	QND_WriteReg(0x1D,0xA9);
+    170          	QND_WriteReg(0x4f, 0x40);//dsiable auto tuning
+    171          	QND_WriteReg(0x34,SMSTART_VAL); ///set SMSTART
+    172          	QND_WriteReg(0x35,SNCSTART_VAL); ///set SNCSTART
+    173          	QND_WriteReg(0x36,HCCSTART_VAL); ///set HCCSTART
+    174          	QNF_SetMute(1);
+    175          }
+    176          
+    177          /*----------------------------------------------------------------------------*/
+    178          /**@brief FMÄ£¿éQN8035ÉèÖÃÒôÁ¿
+    179             @param volume ÒôÁ¿Öµ
+    180             @return ÎÞ
+    181             @note ÒôÁ¿·¶Î§0~15
+    182          */
+    183          /*----------------------------------------------------------------------------*/
+    184          void qn8035_set_vol(u8 volume)@"QN8035_RX"
+    185          {
+    186          	volume = volume*3;
+    187          	if(volume>47)
+    188          	{
+    189          		volume = 47;//qn8035 volume range is from 0~47
+    190          	}
+    191          	QND_RXConfigAudio(volume);
+    192          }
+    193          
+    194          /*----------------------------------------------------------------------------*/
+    195          /**@brief FMÄ£¿éQN8035¹Ø±Õ
+    196             @param ÎÞ
+    197             @return ÎÞ
+    198             @note
+    199          */
+    200          /*----------------------------------------------------------------------------*/
+    201          void qn8035_off(void)@"QN8035_RX"
+    202          {
+    203          	QND_WriteReg(0x00, 0x01);  //QND_WriteReg(0x00, 0x21);
+    204          	DELAY_MS(5);
+    205          }
+    206          
+    207          
+    208          /**********************************************************************
+    209          void qnd_tune2ch(u16 ch)
+    210          **********************************************************************
+    211          Description: Tune to the specific channel. call QND_SetSysMode() before
+    212          call this function
+    213          Parameters:
+    214          ch
+    215          Set the frequency (10kHz) to be tuned,
+    216          eg: 101.30MHz will be set to 10130.
+    217          Return Value:
+    218          None
+    219          **********************************************************************/
+    220          void qnd_tune2ch(u16 ch) @"QN8035_RX_EXT"
+    221          {
+    222          	u8 reg;
+    223          
+    224          	ch = ch * 10;
+    225          	//increase reference PLL charge pump current.
+    226          	QND_WriteReg(REG_REF,0x7A);
+    227          
+    228          	/********** QNF_RXInit ****************/
+    229          	QND_WriteReg(0x1B,0x70);  //Let NFILT adjust freely
+    230          	//QNF_SetRegBit(0x2C,0x3F,0x12);  ///When SNR<ccth31, ccfilt3 will work
+    231          	//setting the threshold of Filter3 will be worked.
+    232          	QND_WriteReg(0x2C,0x52);
+    233          	//QNF_SetRegBit(0x1D,0x40,0x00);  ///Let ccfilter3 adjust freely
+    234          	//QNF_SetRegBit(0x41,0x0F,0x0A);  ///Set a hcc index to trig ccfilter3's adjust
+    235          	QND_WriteReg(0x45,0x50);        ///Set aud_thrd will affect ccfilter3's tap number
+    236          	//QNF_SetRegBit(0x40,0x70,0x70);  ///snc/hcc/sm snr_rssi_sel; snc_start=0x40; hcc_start=0x30; sm_start=0x20
+    237          	QND_WriteReg(0x40,0x70);
+    238          	//QNF_SetRegBit(0x19,0x80,0x80);  ///Use SNR for ccfilter selection criterion
+    239          	//selecting SNR as filter3 filter condition
+    240          	//QND_WriteReg(0x19, 0xC2);
+    241          	//QNF_SetRegBit(0x3E,0x80,0x80);  ///it is decided by programming this register
+    242          	//QNF_SetRegBit(0x41,0xE0,0xC0);  ///DC notching High pass filter bandwidth; remove low freqency dc signals
+    243          	QND_WriteReg(0x41,0xCA);
+    244          	QND_WriteReg(0x34,SMSTART_VAL); ///set SMSTART
+    245          	QND_WriteReg(0x35,SNCSTART_VAL); ///set SNCSTART
+    246          	QND_WriteReg(0x36,HCCSTART_VAL); ///set HCCSTART
+    247          	/********** End of QNF_RXInit ****************/
+    248          
+    249          	QNF_SetMute(1);
+    250          #if USING_VALID_CH
+    251          	QNF_SetCh(ch);
+    252          #else
+    253          	QNF_SetCh(ch,ch,1);
+    254          #endif
+    255          	//enable CCA mode with user write into frequency
+    256          	QND_WriteReg(0x00, 0x13);
+    257          	//Auto tuning
+    258          	QND_WriteReg(0x4F, 0x80);
+    259          	reg = QND_ReadReg(0x4F);
+    260          	reg >>= 1;
+    261          	QND_WriteReg(0x4F, reg);
+    262          	///avoid the "POP" noise.
+    263          	DELAY_MS(150);  //150ms
+    264          	///decrease reference PLL charge pump current.
+    265          	QND_WriteReg(REG_REF,0x70);
+    266          	QNF_SetMute(0);
+    267          }
+    268          
+    269          /***********************************************************************
+    270          Description: scan a noise floor from 87.5M to 108M by step 200K
+    271          Parameters:
+    272          Return Value:
+    273          1: scan a noise floor successfully.
+    274          0: chip would not normally work.
+    275          **********************************************************************/
+    276          u8 QND_ScanNoiseFloor(u16 start,u16 stop) @"QN8035_RX_EXT"
+    277          {
+    278          	u8 regValue;
+    279          	u8 timeOut = 255; //time out is 2.55S
+    280          
+    281          	QND_WriteReg(CCA_SNR_TH_1,0x00);
+    282          	QND_WriteReg(CCA_SNR_TH_2,0x05);
+    283          	QND_WriteReg(0x40,0xf0);
+    284          	//config CCS frequency rang by step 200KHZ
+    285          	QNF_SetCh(start,stop,2);
+    286          	/*
+    287          	QND_WriteReg(CH_START,0x26);
+    288          	QND_WriteReg(CH_STOP,0xc0);
+    289          	QND_WriteReg(CH_STEP,0xb8);
+    290          	*/
+    291          	//enter CCA mode,channel index is decided by internal CCA
+    292          	QND_WriteReg(SYSTEM1,0x12);
+    293          
+    294          	while(1)
+    295          	{
+    296          		regValue = QND_ReadReg(SYSTEM1);
+    297          
+    298          		//if it seeks a potential channel, the loop will be quited
+    299          		if((regValue & CHSC) == 0) break;
+    300          		DELAY_MS(5);
+    301          		//if it was time out,chip would not normally work.
+    302          		if((timeOut--) == 0)
+    303          		{
+    304          			QND_WriteReg(0x40,0x70);
+    305          			return 0;
+    306          		}
+    307          	}
+    308          
+    309          	QND_WriteReg(0x40,0x70);
+    310          	DELAY_MS(5);
+    311          	qnd_NoiseFloor = QND_ReadReg(0x3f);
+    312          	if(((qnd_PreNoiseFloor-qnd_NoiseFloor) >= 2) ||((qnd_NoiseFloor-qnd_PreNoiseFloor) >= 2))
+    313          	{
+    314          		qnd_PreNoiseFloor = qnd_NoiseFloor;
+    315          	}
+    316          	//TRACE("NF:%d,timeOut:%d\n",qnd_NoiseFloor,255-timeOut);
+    317          	return 1;
+    318          }
+    319          /***********************************************************************
+    320          void QND_RXSetTH(u8 th)
+    321          ***********************************************************************
+    322          Description: Setting the threshold value of automatic scan channel
+    323          th:
+    324            Setting threshold for quality of channel to be searched,
+    325            the range of th value:CCA_SENSITIVITY_LEVEL_0 ~ CCA_SENSITIVITY_LEVEL_9
+    326          Return Value:
+    327            None
+    328          ***********************************************************************/
+    329          static void QND_RXSetTH(u8 th) @"QN8035_RX"
+    330          {
+    331          	u8 rssi_th,cca_snr_th_1,cca_snr_th_2 = 0x05;
+    332          	rssi_th = (qnd_PreNoiseFloor-25);
+    333          	///increase reference PLL charge pump current.
+    334          	QND_WriteReg(REG_REF,0x7A);
+    335          	//NFILT program is enabled
+    336          	QND_WriteReg(0x1B,0x78);
+    337          	//using Filter3
+    338          	QND_WriteReg(CCA1,0x75);
+    339          	//setting CCA IF counter error range value(256).
+    340          	QND_WriteReg(CCA_CNT2,0x05);//
+    341          #if PILOT_CCA
+    342          	QND_WriteReg(PLT1,0x00);
+    343          #endif
+    344          	cca_snr_th_1 = 0x40;//0x00
+    345          	//selection the time of CCA FSM wait SNR calculator to settle:20ms
+    346          	//0x00:	    20ms(default)
+    347          	//0x40:	    40ms
+    348          	//0x80:	    60ms
+    349          	//0xC0:	    100m
+    350          	//    QNF_SetRegBit(CCA_SNR_TH_1 , 0xC0, 0x00);
+    351          	//selection the time of CCA FSM wait RF front end and AGC to settle:20ms
+    352          	//0x00:     10ms
+    353          	//0x40:     20ms(default)
+    354          	//0x80:     40ms
+    355          	//0xC0:     60ms
+    356          	//    QNF_SetRegBit(CCA_SNR_TH_2, 0xC0, 0x40);
+    357          	//    QNF_SetRegBit(CCA, 30);
+    358          	//setting CCA RSSI threshold is 30
+    359          	//QND_WriteReg(CCA,QND_ReadReg(CCA)&0xC0|25);  // 20 ~ 30
+    360          	cca_snr_th_2 |= 0xc0;
+    361          	QND_WriteReg(CCA_SNR_TH_2,cca_snr_th_2);
+    362          
+    363          	QND_WriteReg(CCA,QND_ReadReg(CCA)&0xc0|rssi_th);
+    364          #if PILOT_CCA
+    365          	QND_WriteReg(CCA_SNR_TH_1,cca_snr_th_1|(7 +th)); //setting SNR threshold for CCA
+    366          #else
+    367          	QND_WriteReg(CCA_SNR_TH_1,cca_snr_th_1|(9+th)); //setting SNR threshold for CCA
+    368          #endif
+    369          }
+    370          
+    371          /***********************************************************************
+    372          u16 QND_RXValidCH(u16 freq, u8 step);
+    373          ***********************************************************************
+    374          Description: to validate a ch (frequency)(if it's a valid channel)
+    375          Freq: specific channel frequency, unit: 10Khz
+    376            eg: 108.00MHz will be set to 10800.
+    377          Step:
+    378            FM:
+    379            QND_FMSTEP_100KHZ: set leap step to 100kHz
+    380            QND_FMSTEP_200KHZ: set leap step to 200kHz
+    381            QND_FMSTEP_50KHZ:  set leap step to 50kHz
+    382          Return Value:
+    383            0: not a valid channel
+    384            other: a valid channel at this frequency
+    385          ***********************************************************************/
+    386          static u8 QND_RXValidCH(u16 freq) @"QN8035_RX"
+    387          {
+    388          	u8 regValue;
+    389          	u8 timeOut;
+    390          	u8 isValidChannelFlag;
+    391          
+    392          	u8 readCnt,stereoCount=0;
+    393          
+    394          	if(freq == 8750)
+    395          	{
+    396          		QND_ScanNoiseFloor(8750,8800);
+    397          		QND_RXSetTH(0);
+    398          	}
+    399          	else if(((freq - 8810) % 200) == 0)
+    400          	{
+    401          		QND_ScanNoiseFloor(freq,freq+190);
+    402          		QND_RXSetTH(0);
+    403          	}
+    404          
+    405          #if USING_VALID_CH
+    406          	QNF_SetCh(freq);
+    407          #else
+    408          	QNF_SetCh(freq,freq,1);
+    409          #endif
+    410          
+    411          	//Auto tuning
+    412          	QND_WriteReg(0x00, 0x11);
+    413          	QND_WriteReg(0x4f, 0x80);
+    414          	DELAY_MS(20);
+    415          	regValue = QND_ReadReg(0x4f);
+    416          	regValue = (regValue >> 1);
+    417          	QND_WriteReg(0x4f, regValue);
+    418          
+    419          	//QNF_SetRegBit(SYSTEM1,0x03,0x02);//enter channel scan mode,channel frequency is decided by internal CCA
+    420          	//entering into RX mode and CCA mode,channels index decide by CCA.
+    421          	timeOut = 20;
+    422          
+    423          	QND_WriteReg(0x00, 0x12);
+    424          
+    425          	while(1)
+    426          	{
+    427          		regValue = QND_ReadReg(SYSTEM1);
+    428          		//if it seeks a potential channel, the loop will be quited
+    429          		if((regValue & CHSC) == 0) break;
+    430          		DELAY_MS(20);
+    431          		//if it was time out,chip would not normally work.
+    432          		if((timeOut--) == 0)
+    433          		{
+    434          			return 0;
+    435          		}
+    436          	}
+    437          
+    438          	//TRACE("CHSC:%d,timeOut:%d \n",regValue&CHSC,timeOut);
+    439          	//reading out the rxcca_fail flag of RXCCA status
+    440          	//isValidChannelFlag = (QND_ReadReg(STATUS1) & RXCCA_FAIL ? 0:1) && timeOut;
+    441          
+    442          	isValidChannelFlag = (QND_ReadReg(STATUS1) & RXCCA_FAIL ? 0:1);
+    443          
+    444          	if(isValidChannelFlag)
+    445          	{
+    446          #if PILOT_CCA
+    447          		DELAY_MS(10);
+    448          		u8 snr = QND_ReadReg(SNR);
+    449          		if(snr> 20)
+    450          		{
+    451          			return 1;
+    452          		}
+    453          		for(readCnt=10; readCnt>0; readCnt--)
+    454          		{
+    455          			DELAY_MS(5);
+    456          			stereoCount += ((QND_ReadReg(STATUS1) & ST_MO_RX) ? 0:1);
+    457          			if(stereoCount >= 3) return 1;
+    458          		}
+    459          #else
+    460          		return 1;
+    461          #endif
+    462          	}
+    463          	return 0;
+    464          }
+    465          
+    466          /************************************************************************
+    467          void QND_RXConfigAudio(u8 optiontype, u8 option )
+    468          *************************************************************************
+    469          Description: config audio
+    470          Parameters:
+    471            optiontype: option
+    472              QND_CONFIG_MONO; ¡®option¡¯control mono, 0: stereo receive mode ,1: mono receiver mode
+    473              QND_CONFIG_MUTE; ¡®option¡¯control mute, 0:mute disable,1:mute enable
+    474              QND_CONFIG_VOLUME: 'option' control the volume gain,range : 0~47(-47db~0db)
+    475          
+    476          Return Value:
+    477              none
+    478          **********************************************************************/
+    479          static void QND_RXConfigAudio(u8 option) @"QN8035_RX"
+    480          {
+    481          	u8 regVal;
+    482          
+    483          	regVal = QND_ReadReg(VOL_CTL);
+    484          	regVal = (regVal&0xC0)|(option/6)|(5-option%6<<3);
+    485          	QND_WriteReg(VOL_CTL,regVal);
+    486          }
+    487          
+    488          
+    489          ////////////////////////////////////////////
+    490          u8 QND_ReadReg(u8 adr)@"QN8035_RX"
+    491          {
+    492          	u8  I2CReadResult;
+    493          
+    494          	fm_i2c_start();             //I2CÆô¶¯
+    495          
+    496          	fm_i2c_send_byte(0x20);     //Ð´ÃüÁî
+    497          	fm_i2c_recv_ack();
+    498          
+    499          	fm_i2c_send_byte(adr);      //Ð´µØÖ·
+    500          	fm_i2c_recv_ack();
+    501          
+    502          	fm_i2c_stop();              //I2CÍ£Ö¹
+    503          	SoftDelay_QN(60);
+    504          
+    505          	fm_i2c_start();             //Ð´×ªÎª¶ÁÃüÁî£¬ÐèÒªÔÙ´ÎÆô¶¯I2C
+    506          
+    507          	fm_i2c_send_byte(0x21);     //¶ÁÃüÁî
+    508          	fm_i2c_recv_ack();
+    509          
+    510          	I2CReadResult = fm_i2c_read_byte();
+    511          	//printf("i2c:%02x\n", I2CReadResult);
+    512          	fm_i2c_send_nack();         //·¢ËÍackÃüÁî
+    513          
+    514          	fm_i2c_stop();              //I2CÍ£Ö¹
+    515          	SoftDelay_QN(60);
+    516          
+    517          	return  I2CReadResult;
+    518          }
+    519          
+    520          void QND_WriteReg(u8 adr, u8 value)@"QN8035_RX"
+    521          {
+    522          	fm_i2c_start();             //I2CÆô¶¯
+    523          
+    524          	fm_i2c_send_byte(0x20);     //Ð´ÃüÁî
+    525          	fm_i2c_recv_ack();
+    526          
+    527          	fm_i2c_send_byte(adr);      //Ð´µØÖ·
+    528          	fm_i2c_recv_ack();
+    529          
+    530          	fm_i2c_send_byte(value);    //Ð´Êý¾Ý
+    531          	fm_i2c_recv_ack();
+    532          
+    533          	fm_i2c_stop();              //I2CÍ£Ö¹Ê±Ðò
+    534          	SoftDelay_QN(60);
+    535          }
+    536          
+    537          
+    538          u8 qn8035_seek(u16 freq)@"QN8035_RX"
+    539          {
+    540          	QNF_SetMute(1);
+    541          	return QND_RXValidCH(freq*10);//qn8035 step frequency unit is 10KHZ
+    542          }
+    543          
+    544          
+    545          void qn8035_mute(void)@"QN8035_RX"
+    546          {
+    547          	QNF_SetMute(1);
+    548          }
+    549          
+    550          void qn8035_unmute(void)@"QN8035_RX"
+    551          {
+    552          	DELAY_MS(5);
+    553          	QNF_SetMute(0);
+    554          }
+    555          
+    556          
+    557          /*----------------------------------------------------------------------------*/
+    558          /**@brief FMÄ£¿éQN8035¼ì²â
+    559             @param ÎÞ
+    560             @return ¼ì²âµ½QN8035Ä£¿é·µ»Ø1£¬·ñÔò·µ»Ø0
+    561             @note
+    562          */
+    563          /*----------------------------------------------------------------------------*/
+    564          u8 qn8035_online(void)@"QN8035_RX"
+    565          {
+    566          	u8 temp;
+    567          	for(u8 i = 0; i < 3; i++)
+    568          	{
+    569          		temp =QND_ReadReg(0x06) & 0xFC;
+    570          		//printf("qn id = %02x\n",temp);
+    571          		if((temp) == 0x84)
+    572          		{
+    573          #if (FM_CLOCK == USE_MODULE_CRYSTAL)
+    574          			qn8035_init_part1();
+    575          #endif
+    576          			return 1;
+    577          		}
+    578          	}
+    579          	return 0;
+    580          }
+    581          
+    582          #endif
+
+
+   Segment part sizes:
+
+     Function/Label Bytes
+     -------------- -----
+
+ 
+ 
+ 0 bytes of memory
+
+Errors: none
+Warnings: none

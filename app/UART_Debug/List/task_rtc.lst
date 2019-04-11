@@ -1,0 +1,416 @@
+##############################################################################
+#                                                                            #
+# IAR 8051 C/C++ Compiler V7.20H/W32                   10/Sep/2015  19:03:30 #
+# Copyright 2004-2006 IAR Systems. All rights reserved.                      #
+#                                                                            #
+#    Core               =  plain                                             #
+#    Code model         =  near                                              #
+#    Data model         =  large                                             #
+#    Calling convention =  extended stack reentrant                          #
+#    Constant location  =  code                                              #
+#    Extended stack     =  enabled                                           #
+#    Dptr setup         =  1,16                                              #
+#    Source file        =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\task\task_rtc.c                       #
+#    Command line       =  -I "C:\Program Files\IAR Systems\Embedded         #
+#                          Workbench 4.05 Evaluation version\8051\INC\" -I   #
+#                          "C:\Program Files\IAR Systems\Embedded Workbench  #
+#                          4.05 Evaluation version\8051\INC\CLIB\" -I        #
+#                          "C:\Documents and Settings\Administrator\×ÀÃæ\lil #
+#                          y\15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX1 #
+#                          070_20150908\COMMON\" -I "C:\Documents and        #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\INC\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\config\" -I "C:\Documents and    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\api\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\fm\" -I "C:\Documents and        #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\fat\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\display\" -I "C:\Documents and   #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\displ #
+#                          ay\led\" -I "C:\Documents and                     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\displ #
+#                          ay\lcd\" -I "C:\Documents and                     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\task\ #
+#                          " -I "C:\Documents and Settings\Administrator\×ÀÃ #
+#                          æ\lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lil #
+#                          y_AX1070_20150908\user\" -I "C:\Documents and     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\mem\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\module\" -I "C:\Documents and    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\modul #
+#                          e\kedir\" -I "C:\Documents and                    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\key\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\startmusic\" -D UART_DEBUG -D    #
+#                          AX207X_TAG -lC "C:\Documents and                  #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\UART_ #
+#                          Debug\List\" -o "C:\Documents and                 #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\UART_ #
+#                          Debug\Obj\" -e -z9 --debug --core=plain           #
+#                          --dptr=16,1 --data_model=large --code_model=near  #
+#                          --calling_convention=ext_stack_reentrant          #
+#                          --place_constants=code --nr_virtual_regs 20       #
+#                          --extended_stack "C:\Documents and                #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\task\ #
+#                          task_rtc.c"                                       #
+#    List file          =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\UART_Debug\List\task_rtc.lst          #
+#    Object file        =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\UART_Debug\Obj\task_rtc.r51           #
+#                                                                            #
+#                                                                            #
+##############################################################################
+
+C:\Documents and Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX1070_20150908\task\task_rtc.c
+      1          /*****************************************************************************
+      2           * Module    : Task
+      3           * File      : task_rtc.c
+      4           * Author    : Hanny
+      5           * Email     : coldney@yahoo.com.cn
+      6           * Function  : Ê±ÖÓÈÎÎñÁ÷³Ì
+      7           *****************************************************************************/
+      8          #include "include.h"
+      9          
+     10          #if TASK_RTC_EN
+     11          
+     12          #define DBG_RTC(...)        //printf(__VA_ARGS__)
+     13          
+     14          type_task_rtc __idata t_rtc;
+     15          void task_rtc_display(void);
+     16          
+     17          //Ê±ÖÓºÍÄÖÖÓÖ®¼äÇÐ»»
+     18          #pragma location="TASK_RTC_SEG"
+     19          void task_rtc_select(u8 select)
+     20          {
+     21          	t_rtc.select = select;
+     22          
+     23          #if ALARM_EN
+     24          	if(t_rtc.select)
+     25          	{
+     26          		ocx_blink_set(0, 0);
+     27          		sec2date(&t_time, irtc_read_alarm());
+     28          		DBG_RTC("alarm: ");
+     29          	}
+     30          	else
+     31          	{
+     32          		ocx_blink_set(ICON_DOT, 0);
+     33          		sec2date(&t_time, irtc_read_date());
+     34          		DBG_RTC("time : ");
+     35          	}
+     36          #else
+     37          	ocx_blink_set(ICON_DOT, 0);
+     38          	sec2date(&t_time, irtc_read_date());
+     39          	DBG_RTC("time : ");
+     40          #endif
+     41          #if RTC_DATE_EN
+     42          	DBG_RTC("%02d-%02d-%02d\n", t_time.year, t_time.month, t_time.day);
+     43          #endif
+     44          	DBG_RTC("%02d:%02d:%02d\n", t_time.hour, t_time.minute, t_time.second);
+     45          }
+     46          
+     47          //µ÷ÕûÊ±¼ä
+     48          #pragma location="TASK_RTC_SEG"
+     49          void task_rtc_set_time(u8 inc)
+     50          {
+     51          	if(t_rtc.index&0x01)
+     52          	{
+     53          		deal_hour(inc);
+     54          	}
+     55          	else
+     56          	{
+     57          		deal_minute(inc);
+     58          	}
+     59          }
+     60          
+     61          #if ALARM_EN && RTC_DATE_EN
+     62          //ÄÖÖÓ×Ô¶¯Ð£×¼ÏìÁåÈÕÆÚÊ±¼ä
+     63          #pragma location="TASK_RTC_SEG"
+     64          void task_alarm_match_time(bool mode)
+     65          {
+     66          	u32 alarm_total_seconds_of_a_day = irtc_read_alarm()%SECONDS_OF_A_DAY;
+     67          	sec2date(&t_time, irtc_read_date());//°ÑÄÖÖÓÈÕÆÚÓëÊ±ÖÓÈÕÆÚÍ¬²½
+     68          	if(mode && (alarm_total_seconds_of_a_day <= (irtc_read_date()%SECONDS_OF_A_DAY))) //µ±ÄÖÖÓÊ±¼ä²»´óÓÚÊ±ÖÓÊ±¼äÊ±ÄÖÖÓÊ±¼ä×Ô¼ÓÒ»
+     69          	{
+     70          		t_time.day += 1;
+     71          	}
+     72          	sec2time(&t_time, alarm_total_seconds_of_a_day);//°ÑÄÖÖÓÊ±¼ä¸ü¸Ä»ØÈ¥
+     73          	irtc_write_alarm(date2sec(&t_time));
+     74          }
+     75          #endif
+     76          
+     77          //ÈÎÎñ³õÊ¼»¯
+     78          #pragma location="TASK_RTC_SEG"
+     79          static void task_rtc_enter(void)
+     80          {
+     81          	SELECT_IROM2();
+     82          	smemset_i(&t_rtc, 0x00, sizeof(t_rtc));
+     83          	task_rtc_select(0);
+     84          
+     85          #if (DISP_TYPE==DISP_LED)
+     86          	ocx.led_sta = LED_STA_ON;
+     87          #endif
+     88          
+     89          #if KEY_VOICE_EN
+     90          	AMUX_AIN_EN();
+     91          	mute_disable();
+     92          #endif
+     93          }
+     94          
+     95          //ÈÎÎñÍË³ö
+     96          #pragma location="TASK_RTC_SEG"
+     97          static void task_rtc_exit(void)
+     98          {
+     99          }
+    100          
+    101          //ÈÎÎñÊÂ¼þ´¦Àí
+    102          #pragma location="TASK_RTC_SEG"
+    103          static void task_rtc_event(void)
+    104          {
+    105          	comm_event(1);
+    106          
+    107          #if USE_IR_NUM
+    108          	if(ocx.event == 1)
+    109          	{
+    110          		ocx.event = 0;
+    111          		if(t_rtc.setting)
+    112          		{
+    113          			if(t_rtc.index)
+    114          			{
+    115          				if(ocx.number <= 23)
+    116          				{
+    117          					t_time.hour = ocx.number;
+    118          				}
+    119          			}
+    120          			else
+    121          			{
+    122          				if(ocx.number <= 59)
+    123          				{
+    124          					t_time.minute = ocx.number;
+    125          				}
+    126          			}
+    127          			irtc_write_date(date2sec(&t_time));
+    128          		}
+    129          	}
+    130          #endif
+    131          }
+    132          
+    133          //ÈÎÎñÏûÏ¢´¦Àí
+    134          #pragma location="TASK_RTC_SEG"
+    135          static void task_rtc_deal_msg(u8 msg)
+    136          {
+    137          	switch(msg)
+    138          	{
+    139          	case QSYSTEM_500MS:
+    140          		if((t_rtc.select | t_rtc.setting) == 0)
+    141          		{
+    142          			if(IRTCON & BIT(3))
+    143          			{
+    144          				IRTCON &= ~BIT(3);
+    145          #if !ALARM_EN
+    146          				sec2date(&t_time, irtc_read_date());
+    147          #else
+    148          #if RTC_DATE_EN
+    149          				if(irtc_read_date()%SECONDS_OF_A_DAY == 0) //ÐÂÒ»ÌìµÄ0µã0·Ö0Ãë
+    150          				{
+    151          					task_alarm_match_time(0);
+    152          				}
+    153          				sec2date(&t_time, irtc_read_date());
+    154          #else
+    155          				sec2date(&t_time, irtc_read_date());
+    156          				if(irtc_read_date() > SECONDS_OF_A_DAY) //Ê±ÖÓÊ±¼äÊ¼ÖÕ±£³ÖÐ¡ÓÚÒ»Ìì
+    157          				{
+    158          					irtc_write_date(date2sec(&t_time));
+    159          				}
+    160          #endif
+    161          #endif
+    162          				DBG_RTC("QSYSTEM_500MS:");
+    163          				DBG_RTC("%02d:%02d:%02d\n", t_time.hour, t_time.minute, t_time.second);
+    164          			}
+    165          #if ALARM_EN
+    166          			task_alarm_check();
+    167          #endif
+    168          		}
+    169          		break;
+    170          
+    171          	case KU_NEXT:
+    172          #if USE_IR_NUM
+    173          		if(ocx.status == OCX_NUMSELBOX)
+    174          		{
+    175          			break;
+    176          		}
+    177          #endif
+    178          		if(t_rtc.setting)
+    179          		{
+    180          			t_rtc.index++;
+    181          			ocx_blink_set(0, (t_rtc.index&0x01)? 0x0c : 0x03);
+    182          		}
+    183          #if ALARM_EN
+    184          		else
+    185          		{
+    186          			task_rtc_select(!t_rtc.select);
+    187          		}
+    188          #endif
+    189          		break;
+    190          
+    191          	case KU_PREV:
+    192          #if USE_IR_NUM
+    193          		if(ocx.status == OCX_NUMSELBOX)
+    194          		{
+    195          			break;
+    196          		}
+    197          #endif
+    198          		if(t_rtc.setting)
+    199          		{
+    200          			t_rtc.index--;
+    201          			ocx_blink_set(0, (t_rtc.index&0x01)? 0x0c : 0x03);
+    202          		}
+    203          #if ALARM_EN
+    204          		else
+    205          		{
+    206          			task_rtc_select(!t_rtc.select);
+    207          		}
+    208          #endif
+    209          		break;
+    210          
+    211          	case KU_PLAY:
+    212          		t_rtc.setting = !t_rtc.setting;
+    213          		if(t_rtc.setting)
+    214          		{
+    215          			DBG_RTC("setting\n");
+    216          			t_rtc.index = 0;
+    217          			ocx_blink_set(0, 0x03);
+    218          #if ALARM_EN
+    219          			if(t_rtc.select)
+    220          			{
+    221          				RTC_ALARM_EN();
+    222          #if RTC_DATE_EN
+    223          				task_alarm_match_time(1);
+    224          #endif
+    225          			}
+    226          #endif
+    227          		}
+    228          		else
+    229          		{
+    230          			DBG_RTC("cancel\n");
+    231          			task_rtc_select(t_rtc.select);
+    232          		}
+    233          		break;
+    234          
+    235          	case KL_PLAY:
+    236          		if(t_rtc.setting)
+    237          		{
+    238          			DBG_RTC("ok\n");
+    239          			t_rtc.setting = 0;
+    240          #if ALARM_EN
+    241          			if(t_rtc.select)
+    242          			{
+    243          				irtc_write_alarm(date2sec(&t_time));
+    244          #if RTC_DATE_EN
+    245          				task_alarm_match_time(1);
+    246          #endif
+    247          			}
+    248          			else
+    249          			{
+    250          				irtc_write_date(date2sec(&t_time));
+    251          			}
+    252          #else
+    253          			irtc_write_date(date2sec(&t_time));
+    254          #endif
+    255          			task_rtc_select(0);
+    256          		}
+    257          		break;
+    258          
+    259          	case KU_VOL_UP:
+    260          	case KH_VOL_UP:
+    261          		if(t_rtc.setting)
+    262          		{
+    263          			task_rtc_set_time(1);
+    264          		}
+    265          		break;
+    266          
+    267          	case KU_VOL_DOWN:
+    268          	case KH_VOL_DOWN:
+    269          		if(t_rtc.setting)
+    270          		{
+    271          			task_rtc_set_time(0);
+    272          		}
+    273          		break;
+    274          
+    275          #if USE_IR_NUM
+    276          	case T_KEY_NUM_0:
+    277          	case T_KEY_NUM_1:
+    278          	case T_KEY_NUM_2:
+    279          	case T_KEY_NUM_3:
+    280          	case T_KEY_NUM_4:
+    281          	case T_KEY_NUM_5:
+    282          	case T_KEY_NUM_6:
+    283          	case T_KEY_NUM_7:
+    284          	case T_KEY_NUM_8:
+    285          	case T_KEY_NUM_9:
+    286          		shownumsel(msg - T_KEY_NUM_0);
+    287          		if(ocx.number > 99)
+    288          		{
+    289          			ocx.show_time = 0;
+    290          		}
+    291          		break;
+    292          #endif
+    293          
+    294          	default:
+    295          		deal_msg(msg);
+    296          		break;
+    297          	}
+    298          }
+    299          
+    300          //ÈÎÎñÖ÷Á÷³Ì
+    301          #pragma location="TASK_RTC_SEG"
+    302          void task_rtc(void)
+    303          {
+    304          	printf("task_rtc\n");
+    305          	task_rtc_enter();
+    306          	while(task_ctl.work_sta == TASK_RTC)
+    307          	{
+    308          		task_rtc_event();
+    309          		task_rtc_deal_msg(get_msg());
+    310          		task_rtc_display();
+    311          		//PCON0 |= BIT(2);			//½øÈëIDLE
+    312          		//asm("nop");asm("nop");asm("nop");
+    313          	}
+    314          	task_rtc_exit();
+    315          }
+    316          
+    317          #endif
+
+
+   Segment part sizes:
+
+     Function/Label Bytes
+     -------------- -----
+
+ 
+ 
+ 0 bytes of memory
+
+Errors: none
+Warnings: none

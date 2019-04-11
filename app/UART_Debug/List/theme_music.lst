@@ -1,0 +1,257 @@
+##############################################################################
+#                                                                            #
+# IAR 8051 C/C++ Compiler V7.20H/W32                   10/Sep/2015  19:03:30 #
+# Copyright 2004-2006 IAR Systems. All rights reserved.                      #
+#                                                                            #
+#    Core               =  plain                                             #
+#    Code model         =  near                                              #
+#    Data model         =  large                                             #
+#    Calling convention =  extended stack reentrant                          #
+#    Constant location  =  code                                              #
+#    Extended stack     =  enabled                                           #
+#    Dptr setup         =  1,16                                              #
+#    Source file        =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\display\theme_default\theme_music.c   #
+#    Command line       =  -I "C:\Program Files\IAR Systems\Embedded         #
+#                          Workbench 4.05 Evaluation version\8051\INC\" -I   #
+#                          "C:\Program Files\IAR Systems\Embedded Workbench  #
+#                          4.05 Evaluation version\8051\INC\CLIB\" -I        #
+#                          "C:\Documents and Settings\Administrator\×ÀÃæ\lil #
+#                          y\15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX1 #
+#                          070_20150908\COMMON\" -I "C:\Documents and        #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\INC\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\config\" -I "C:\Documents and    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\api\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\fm\" -I "C:\Documents and        #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\fat\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\display\" -I "C:\Documents and   #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\displ #
+#                          ay\led\" -I "C:\Documents and                     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\displ #
+#                          ay\lcd\" -I "C:\Documents and                     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\task\ #
+#                          " -I "C:\Documents and Settings\Administrator\×ÀÃ #
+#                          æ\lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lil #
+#                          y_AX1070_20150908\user\" -I "C:\Documents and     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\mem\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\module\" -I "C:\Documents and    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\modul #
+#                          e\kedir\" -I "C:\Documents and                    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\key\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\startmusic\" -D UART_DEBUG -D    #
+#                          AX207X_TAG -lC "C:\Documents and                  #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\UART_ #
+#                          Debug\List\" -o "C:\Documents and                 #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\UART_ #
+#                          Debug\Obj\" -e -z9 --debug --core=plain           #
+#                          --dptr=16,1 --data_model=large --code_model=near  #
+#                          --calling_convention=ext_stack_reentrant          #
+#                          --place_constants=code --nr_virtual_regs 20       #
+#                          --extended_stack "C:\Documents and                #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\displ #
+#                          ay\theme_default\theme_music.c"                   #
+#    List file          =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\UART_Debug\List\theme_music.lst       #
+#    Object file        =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\UART_Debug\Obj\theme_music.r51        #
+#                                                                            #
+#                                                                            #
+##############################################################################
+
+C:\Documents and Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX1070_20150908\display\theme_default\theme_music.c
+      1          /*****************************************************************************
+      2           * Module    : Theme
+      3           * File      : lcd_default_music.c
+      4           * Author    : Hanny
+      5           * Email     : coldney@yahoo.com.cn
+      6           * Function  : ÒôÀÖ²¥·ÅÈÎÎñÏÔÊ¾Ö÷Ìâ
+      7           *****************************************************************************/
+      8          #include "include.h"
+      9          
+     10          #pragma location="DISP_MUSIC_SEG"
+
+   \                                 In segment DISP_MUSIC_SEG, align 1, keep-with-next
+     11          void task_music_display(void)
+   \                     task_music_display:
+     12          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     13          #if ((DISP_TYPE != DISP_LED) && (DISP_TYPE != DISP_NO))
+     14          	ocx_event();
+   \   000000                ; Setup parameters for call to function ocx_event
+   \   000000   12....       LCALL   ocx_event
+     15          #if ENERGY_DISP_EN
+     16          	if(ocx.disp_energy)
+     17          	{
+     18          		ocx_energy_set(tbl_energy_music);
+     19          	}
+     20          	else
+     21          #endif
+     22          	{
+     23          		ocx_time_set(u_msc.cur_time.min, u_msc.cur_time.sec);
+   \   000003                ; Setup parameters for call to function ocx_time_set
+   \   000003   90....       MOV     DPTR,#(u_msc + 6)
+   \   000006   E0           MOVX    A,@DPTR
+   \   000007   FA           MOV     R2,A
+   \   000008   90....       MOV     DPTR,#(u_msc + 5)
+   \   00000B   E0           MOVX    A,@DPTR
+   \   00000C   F9           MOV     R1,A
+   \   00000D   12....       LCALL   ocx_time_set
+     24          	}
+     25          
+     26          	if(!disp.update)
+   \   000010   A2..         MOV     C,disp.0
+   \   000012   503D         JNC     ??task_music_display_0
+     27          	{
+     28          		return;                     //²»ÐèÒª¸üÐÂÏÔÊ¾
+     29          	}
+     30          	disp.update = 0;
+   \   000014   C2..         CLR     disp.0
+     31          
+     32          	//Ë¢ÐÂÏÔÊ¾½çÃæ
+     33          	switch(ocx.disp_status)
+   \   000016   78..         MOV     R0,#(ocx + 3)
+   \   000018   E6           MOV     A,@R0
+   \   000019   12....       LCALL   ?UC_SWITCH_DENSE
+   \                     `?<Jumptable for task_music_display>_0`:
+   \   00001C   00           DB        0
+   \   00001D   01           DB        1
+   \   00001E   ....         DW        ??task_music_display_1
+   \   000020   ....         DW        ??task_music_display_2
+   \   000022   ....         DW        ??task_music_display_3
+     34          	{
+     35          	case OCX_NULL:
+     36          #if MUSIC_STOP
+     37          		if(b_msc.stop)
+     38          		{
+     39          			showstop();
+     40          		}
+     41          		else
+     42          #endif
+     43          		{
+     44          #if ENERGY_DISP_EN
+     45          			if(ocx.disp_energy)
+     46          			{
+     47          				disp_energy();
+     48          			}
+     49          			else
+     50          #endif
+     51          			{
+     52          				//disp_play_pause();
+     53          				if(task_ctl.work_sta == TASK_FLASH)
+   \                     ??task_music_display_2:
+   \   000024   7406         MOV     A,#0x6
+   \   000026   65..         XRL     A,task_ctl
+   \   000028   90....       MOV     DPTR,#u_msc
+   \   00002B   700A         JNZ     ??task_music_display_4
+     54          					disp_numsel(u_msc.music_num+1);	// ì¶ SPI-FlashÊ±,  ÏÔÊ¾ÖµÒª +1
+   \   00002D                ; Setup parameters for call to function led_5c7s_dispnum
+   \   00002D   E0           MOVX    A,@DPTR
+   \   00002E   2401         ADD     A,#0x1
+   \   000030   FA           MOV     R2,A
+   \   000031   A3           INC     DPTR
+   \   000032   E0           MOVX    A,@DPTR
+   \   000033   3400         ADDC    A,#0x0
+   \   000035   8004         SJMP    ??task_music_display_5
+     55          				else
+     56          					disp_numsel(u_msc.music_num);
+   \                     ??task_music_display_4:
+   \   000037                ; Setup parameters for call to function led_5c7s_dispnum
+   \   000037   E0           MOVX    A,@DPTR
+   \   000038   FA           MOV     R2,A
+   \   000039   A3           INC     DPTR
+   \   00003A   E0           MOVX    A,@DPTR
+   \                     ??task_music_display_5:
+   \   00003B   FB           MOV     R3,A
+   \   00003C   12....       LCALL   led_5c7s_dispnum
+   \   00003F   22           RET
+     57          			}
+     58          			break;
+     59          		case OCX_NUMBOX:
+     60          #if USE_IR_NUM
+     61          		case OCX_NUMSELBOX:
+     62          #endif
+     63          			disp_numsel(ocx.number);
+   \                     ??task_music_display_3:
+   \   000040                ; Setup parameters for call to function led_5c7s_dispnum
+   \   000040   78..         MOV     R0,#(ocx + 13)
+   \   000042   E6           MOV     A,@R0
+   \   000043   FA           MOV     R2,A
+   \   000044   08           INC     R0
+   \   000045   E6           MOV     A,@R0
+   \   000046   FB           MOV     R3,A
+   \   000047   12....       LCALL   led_5c7s_dispnum
+     64          			disp_numsel_icon();
+   \   00004A                ; Setup parameters for call to function led_5c7s_disp_numsel_icon
+   \   00004A   12....       LCALL   led_5c7s_disp_numsel_icon
+     65          			break;
+   \   00004D   22           RET
+     66          		default:
+     67          			ocx_display();
+   \                     ??task_music_display_1:
+   \   00004E                ; Setup parameters for call to function ocx_display
+   \   00004E   12....       LCALL   ocx_display
+     68          			break;
+   \                     ??task_music_display_0:
+   \   000051   22           RET
+     69          		}
+     70          	}
+     71          #endif
+     72          
+     73          #if ((DISP_TYPE == DISP_LED) && (USE_IR_NUM))
+     74          	ocx_event();
+     75          #endif
+     76          }
+
+   Maximum stack usage in bytes:
+
+     Function                       EXT_STACK PSTACK XSTACK
+     --------                       --------- ------ ------
+     task_music_display                    0      0      0
+       -> ocx_event                        0      0      0
+       -> ocx_time_set                     0      0      0
+       -> led_5c7s_dispnum                 0      0      0
+       -> led_5c7s_dispnum                 0      0      0
+       -> led_5c7s_dispnum                 0      0      0
+       -> led_5c7s_disp_numsel_icon        0      0      0
+       -> ocx_display                      0      0      0
+
+
+   Segment part sizes:
+
+     Function/Label     Bytes
+     --------------     -----
+     task_music_display   82
+
+ 
+ 82 bytes in segment DISP_MUSIC_SEG
+ 
+ 82 bytes of CODE memory
+
+Errors: none
+Warnings: none

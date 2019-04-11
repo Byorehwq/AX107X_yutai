@@ -1,0 +1,429 @@
+##############################################################################
+#                                                                            #
+# IAR 8051 C/C++ Compiler V7.20H/W32                   27/Jun/2018  22:48:35 #
+# Copyright 2004-2006 IAR Systems. All rights reserved.                      #
+#                                                                            #
+#    Core               =  plain                                             #
+#    Code model         =  near                                              #
+#    Data model         =  large                                             #
+#    Calling convention =  extended stack reentrant                          #
+#    Constant location  =  code                                              #
+#    Extended stack     =  enabled                                           #
+#    Dptr setup         =  1,16                                              #
+#    Source file        =  user/file_filter.c                                #
+#    Command line       =  -f option_c51.cfg (-ICOMMON\ -IINC\ -Iconfig\     #
+#                          -Iapi\ -Ifm\ -Ifat\ -Idisplay\                    #
+#                          -Idisplay\theme_default\ -Idisplay\led\           #
+#                          -Idisplay\lcd\ -Itask\ -Iuser\ -Imem\ -Imodule\   #
+#                          -Ikey\ -Istartmusic\ -Ispi\ -e -z9 --core=plain   #
+#                          --dptr=16,1 --data_model=large --code_model=near  #
+#                          --calling_convention=ext_stack_reentrant          #
+#                          --place_constants=code --nr_virtual_regs 20       #
+#                          --extended_stack) -DAX207X_TAG --debug -lC        #
+#                          DebugBC/List -o DebugBC/Obj/file_filter.r51       #
+#                          user/file_filter.c                                #
+#    List file          =  DebugBC/List/file_filter.lst                      #
+#    Object file        =  DebugBC/Obj/file_filter.r51                       #
+#                                                                            #
+#                                                                            #
+##############################################################################
+
+R:\18BC073A_宇泰_AX1071_xxxxxxxx_20180627\app\user\file_filter.c
+      1          /*****************************************************************************
+      2           * Module    : User
+      3           * File      : file_filter.c
+      4           * Author    : Hanny
+      5           * Email     : coldney@yahoo.com.cn
+      6           * Function  : 文件扫描过滤器
+      7           *****************************************************************************/
+      8          #include "include.h"
+      9          
+     10          #if WAV_SUPPORT
+     11          	#if MPX_SUPPORT
+     12          		#define MUSIC_EXT_NUM 3     //一共搜索3个扩展名
+     13          		#pragma constseg="FILE_FILTER_CONST"
+     14          		IAR_CONST char tbl_music_ext[MUSIC_EXT_NUM][4] = {"mp3", "mpx", "wav"};
+     15          		bool f_Encrypt; 	// 1: is Encrypt MP3, 0: is normal MP3
+     16          	#else
+     17          #define MUSIC_EXT_NUM 2     //一共搜索2个扩展名
+     18          #pragma constseg="FILE_FILTER_CONST"
+     19          IAR_CONST char tbl_music_ext[MUSIC_EXT_NUM][4] = {"mp3", "wav"};
+     20          	#endif
+     21          #else
+     22          	#if MPX_SUPPORT
+     23          		#define MUSIC_EXT_NUM 2 	//一共搜索2个扩展名
+     24          		#pragma constseg="FILE_FILTER_CONST"
+
+   \                                 In segment FILE_FILTER_CONST, align 1
+     25          		IAR_CONST char tbl_music_ext[MUSIC_EXT_NUM][4] = {"mp3", "mpx"};
+   \                     tbl_music_ext:
+   \   000000   6D703300     DB "mp3"
+   \   000004   6D707800     DB "mpx"
+
+   \                                 In segment XDATA_Z, align 1, keep-with-next
+   \   000000                REQUIRE __INIT_XDATA_Z
+     26          		bool f_Encrypt; 	// 1: is Encrypt MP3, 0: is normal MP3
+   \                     f_Encrypt:
+   \   000000                DS 1
+     27          	#else
+     28          #define MUSIC_EXT_NUM 1     //一共搜索1个扩展名
+     29          #pragma constseg="FILE_FILTER_CONST"
+     30          IAR_CONST char tbl_music_ext[MUSIC_EXT_NUM][4] = {"mp3"};
+     31          	#endif
+     32          #endif
+     33          #pragma constseg=default
+     34          
+     35          #pragma location="FILE_FILTER_SEG"
+
+   \                                 In segment FILE_FILTER_SEG, align 1, keep-with-next
+     36          u8 char2value(unsigned char c)
+   \                     char2value:
+     37          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     38          	u8 value;
+     39          	value = c - '0';
+   \   000000   74D0         MOV     A,#-0x30
+   \   000002   29           ADD     A,R1
+   \   000003   FA           MOV     R2,A
+     40          	return (value>9)?0:value;
+   \   000004   C3           CLR     C
+   \   000005   940A         SUBB    A,#0xa
+   \   000007   4003         JC      ??char2value_0
+   \   000009   7900         MOV     R1,#0x0
+   \   00000B   22           RET
+   \                     ??char2value_0:
+   \   00000C   EA           MOV     A,R2
+   \   00000D   F9           MOV     R1,A
+   \   00000E   22           RET
+     41          }
+     42          
+     43          //判断文件是否为需要查找的文件
+     44          #pragma location="FILE_FILTER_SEG"
+
+   \                                 In segment FILE_FILTER_SEG, align 1, keep-with-next
+     45          bool file_is_target_number(void)
+   \                     file_is_target_number:
+     46          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     47          	if(t_fat.file_number == t_fat.file_count)
+   \   000000   12....       LCALL   ?Subroutine0
+   \                     ??CrossCallReturnLabel_0:
+   \   000003   7003         JNZ     ??file_is_target_number_0
+   \   000005   A3           INC     DPTR
+   \   000006   E0           MOVX    A,@DPTR
+   \   000007   69           XRL     A,R1
+   \                     ??file_is_target_number_0:
+   \   000008   7002         JNZ     ??file_is_target_number_1
+     48          	{
+     49          		return true;
+   \   00000A   D3           SETB    C
+   \   00000B   22           RET
+     50          	}
+     51          	return false;
+   \                     ??file_is_target_number_1:
+   \   00000C   C3           CLR     C
+   \   00000D   22           RET
+     52          }
+
+   \                                 In segment FILE_FILTER_SEG, align 1, keep-with-next
+   \                     ?Subroutine0:
+   \   000000   90....       MOV     DPTR,#(t_fat + 19)
+   \   000003   E0           MOVX    A,@DPTR
+   \   000004   F8           MOV     R0,A
+   \   000005   A3           INC     DPTR
+   \   000006   E0           MOVX    A,@DPTR
+   \   000007   F9           MOV     R1,A
+   \   000008   90....       MOV     DPTR,#(t_fat + 17)
+   \   00000B   E0           MOVX    A,@DPTR
+   \   00000C   68           XRL     A,R0
+   \   00000D   22           RET
+     53          
+     54          #if MPX_SUPPORT
+     55          #pragma location="FILE_FILTER_SEG"
+
+   \                                 In segment FILE_FILTER_SEG, align 1, keep-with-next
+     56          bool file_is_Encrypt_music(char *ext_name)
+   \                     file_is_Encrypt_music:
+     57          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     58          	f_Encrypt = false;
+   \   000000   E4           CLR     A
+   \   000001   90....       MOV     DPTR,#f_Encrypt
+   \   000004   F0           MOVX    @DPTR,A
+     59          	if(	(ext_name[0] == tbl_music_ext[1][0]) &&
+     60          		(ext_name[1] == tbl_music_ext[1][1]) &&
+     61          		(ext_name[2] == tbl_music_ext[1][2]))
+   \   000005   8A82         MOV     DPL,R2
+   \   000007   8B83         MOV     DPH,R3
+   \   000009   E0           MOVX    A,@DPTR
+   \   00000A   FC           MOV     R4,A
+   \   00000B   90....       MOV     DPTR,#(tbl_music_ext + 4)
+   \   00000E   E4           CLR     A
+   \   00000F   93           MOVC    A,@A+DPTR
+   \   000010   6C           XRL     A,R4
+   \   000011   7025         JNZ     ??file_is_Encrypt_music_0
+   \   000013   8A82         MOV     DPL,R2
+   \   000015   8B83         MOV     DPH,R3
+   \   000017   A3           INC     DPTR
+   \   000018   E0           MOVX    A,@DPTR
+   \   000019   FC           MOV     R4,A
+   \   00001A   90....       MOV     DPTR,#(tbl_music_ext + 5)
+   \   00001D   E4           CLR     A
+   \   00001E   93           MOVC    A,@A+DPTR
+   \   00001F   6C           XRL     A,R4
+   \   000020   7016         JNZ     ??file_is_Encrypt_music_0
+   \   000022   8A82         MOV     DPL,R2
+   \   000024   8B83         MOV     DPH,R3
+   \   000026   A3           INC     DPTR
+   \   000027   A3           INC     DPTR
+   \   000028   E0           MOVX    A,@DPTR
+   \   000029   FA           MOV     R2,A
+   \   00002A   90....       MOV     DPTR,#(tbl_music_ext + 6)
+   \   00002D   E4           CLR     A
+   \   00002E   93           MOVC    A,@A+DPTR
+   \   00002F   6A           XRL     A,R2
+   \   000030   7006         JNZ     ??file_is_Encrypt_music_0
+     62          	{
+     63          		f_Encrypt = true;
+   \   000032   7401         MOV     A,#0x1
+   \   000034   90....       MOV     DPTR,#f_Encrypt
+   \   000037   F0           MOVX    @DPTR,A
+     64          	}
+     65          	return f_Encrypt;
+   \                     ??file_is_Encrypt_music_0:
+   \   000038   90....       MOV     DPTR,#f_Encrypt
+   \   00003B   E0           MOVX    A,@DPTR
+   \   00003C   A2E0         MOV     C,0xE0 /* A   */.0
+   \   00003E   22           RET
+     66          }
+     67          #endif
+     68          #pragma location="FILE_FILTER_SEG"
+
+   \                                 In segment FILE_FILTER_SEG, align 1, keep-with-next
+     69          bool file_is_music(char *ext_name)
+   \                     file_is_music:
+     70          {
+   \   000000   EE           MOV     A,R6
+   \   000001   C0E0         PUSH    A
+   \   000003   EF           MOV     A,R7
+   \   000004   C0E0         PUSH    A
+   \   000006                ; Saved register size: 2
+   \   000006                ; Auto size: 0
+   \   000006   EA           MOV     A,R2
+   \   000007   FE           MOV     R6,A
+   \   000008   EB           MOV     A,R3
+   \   000009   FF           MOV     R7,A
+     71          #if MPX_SUPPORT
+     72          	file_is_Encrypt_music(ext_name);
+   \   00000A                ; Setup parameters for call to function file_is_Encrypt_music
+   \   00000A   12....       LCALL   file_is_Encrypt_music
+     73          #endif
+     74          	return f_check_ext(ext_name, tbl_music_ext, MUSIC_EXT_NUM);
+   \   00000D                ; Setup parameters for call to function f_check_ext
+   \   00000D   7902         MOV     R1,#0x2
+   \   00000F   7C..         MOV     R4,#(tbl_music_ext & 0xff)
+   \   000011   7D..         MOV     R5,#((tbl_music_ext >> 8) & 0xff)
+   \   000013   EE           MOV     A,R6
+   \   000014   FA           MOV     R2,A
+   \   000015   EF           MOV     A,R7
+   \   000016   FB           MOV     R3,A
+   \   000017   12....       LCALL   f_check_ext
+   \   00001A   D0E0         POP     A
+   \   00001C   FF           MOV     R7,A
+   \   00001D   D0E0         POP     A
+   \   00001F   FE           MOV     R6,A
+   \   000020   22           RET
+     75          }
+     76          
+     77          //音乐播放的文件过滤器
+     78          #pragma location="FILE_FILTER_SEG"
+
+   \                                 In segment FILE_FILTER_SEG, align 1, keep-with-next
+     79          bool file_filter_music(void)
+   \                     file_filter_music:
+     80          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 3
+   \   000000   C0E0         PUSH    A
+   \   000002   C0E0         PUSH    A
+   \   000004   C0E0         PUSH    A
+     81          	if(!f_attr_is_file())
+   \   000006                ; Setup parameters for call to function f_attr_is_file
+   \   000006   12....       LCALL   f_attr_is_file
+   \   000009   4003         JC      ??file_filter_music_0
+     82          	{
+     83          		return false;
+   \                     ??file_filter_music_1:
+   \   00000B   C3           CLR     C
+   \   00000C   804F         SJMP    ??file_filter_music_2
+     84          	}
+     85          
+     86          	char ext_name[3];
+     87          	get_ext_name(ext_name);
+   \                     ??file_filter_music_0:
+   \   00000E                ; Setup parameters for call to function get_ext_name
+   \   00000E   7582FC       MOV     DPL,#-0x4
+   \   000011   7583FF       MOV     DPH,#-0x1
+   \   000014   12....       LCALL   ?EXT_STACK_DISP0_16
+   \   000017   AA82         MOV     R2,DPL
+   \   000019   AB83         MOV     R3,DPH
+   \   00001B   12....       LCALL   get_ext_name
+     88          	//在EXFAT中，后缀名可能为小写
+     89          	if(f_check_ext(ext_name, tbl_music_ext, MUSIC_EXT_NUM))     //检测是否为音乐文件
+   \   00001E                ; Setup parameters for call to function f_check_ext
+   \   00001E   7902         MOV     R1,#0x2
+   \   000020   7C..         MOV     R4,#(tbl_music_ext & 0xff)
+   \   000022   7D..         MOV     R5,#((tbl_music_ext >> 8) & 0xff)
+   \   000024   7582FC       MOV     DPL,#-0x4
+   \   000027   7583FF       MOV     DPH,#-0x1
+   \   00002A   12....       LCALL   ?EXT_STACK_DISP0_16
+   \   00002D   AA82         MOV     R2,DPL
+   \   00002F   AB83         MOV     R3,DPH
+   \   000031   12....       LCALL   f_check_ext
+   \   000034   50D5         JNC     ??file_filter_music_1
+     90          	{
+     91          
+     92          #if DIR_SWITCH_EN
+     93          		/* 此段统计文件夹编号，不用时可屏蔽 */
+     94          		if(t_fat.file_count == t_fat.t_item.before_files)
+     95          		{
+     96          			t_fat.dir_count++;
+     97          			if(t_fat.dir_number == t_fat.dir_count)
+     98          			{
+     99          				t_fat.file_number = t_fat.t_item.before_files+1;
+    100          			}
+    101          		}
+    102          #endif
+    103          #if MPX_SUPPORT
+    104          		file_is_Encrypt_music(ext_name);
+   \   000036                ; Setup parameters for call to function file_is_Encrypt_music
+   \   000036   7582FC       MOV     DPL,#-0x4
+   \   000039   7583FF       MOV     DPH,#-0x1
+   \   00003C   12....       LCALL   ?EXT_STACK_DISP0_16
+   \   00003F   AA82         MOV     R2,DPL
+   \   000041   AB83         MOV     R3,DPH
+   \   000043   12....       LCALL   file_is_Encrypt_music
+    105          #endif
+    106          		t_fat.file_count++;
+   \   000046   90....       MOV     DPTR,#(t_fat + 17)
+   \   000049   E0           MOVX    A,@DPTR
+   \   00004A   2401         ADD     A,#0x1
+   \   00004C   F0           MOVX    @DPTR,A
+   \   00004D   A3           INC     DPTR
+   \   00004E   E0           MOVX    A,@DPTR
+   \   00004F   3400         ADDC    A,#0x0
+   \   000051   F0           MOVX    @DPTR,A
+    107          #if FS_SCAN_SPEED_EN
+    108          		fs_save_dpath();
+    109          #endif
+    110          		if(t_fat.file_number == t_fat.file_count)               //检测是否找到目标曲目文件
+   \   000052   12....       LCALL   ?Subroutine0
+   \                     ??CrossCallReturnLabel_1:
+   \   000055   7003         JNZ     ??file_filter_music_3
+   \   000057   A3           INC     DPTR
+   \   000058   E0           MOVX    A,@DPTR
+   \   000059   69           XRL     A,R1
+   \                     ??file_filter_music_3:
+   \   00005A   70AF         JNZ     ??file_filter_music_1
+    111          		{
+    112          			return true;
+   \   00005C   D3           SETB    C
+   \                     ??file_filter_music_2:
+   \   00005D   D0E0         POP     A
+   \   00005F   D0E0         POP     A
+   \   000061   D0E0         POP     A
+   \   000063   22           RET
+    113          		}
+    114          	}
+    115          	return false;
+    116          }
+    117          
+    118          //音乐播放的目录过滤器
+    119          #pragma location="FILE_FILTER_SEG"
+
+   \                                 In segment FILE_FILTER_SEG, align 1, keep-with-next
+    120          bool dir_filter_music(void)
+   \                     dir_filter_music:
+    121          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    122          	if(!f_attr_is_dir())
+   \   000000                ; Setup parameters for call to function f_attr_is_dir
+   \   000000   12....       LCALL   f_attr_is_dir
+   \   000003   4002         JC      ??dir_filter_music_0
+    123          	{
+    124          		return false;
+   \   000005   C3           CLR     C
+   \   000006   22           RET
+    125          	}
+    126          	return true;
+   \                     ??dir_filter_music_0:
+   \   000007   D3           SETB    C
+   \   000008   22           RET
+    127          }
+    128          
+    129          #pragma location="FILE_FILTER_SEG"
+
+   \                                 In segment FILE_FILTER_SEG, align 1, keep-with-next
+    130          u8 get_scan_dept(void)
+   \                     get_scan_dept:
+    131          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    132          	return t_fat.t_item.dir_depth;
+   \   000000   90....       MOV     DPTR,#t_fat
+   \   000003   E0           MOVX    A,@DPTR
+   \   000004   F9           MOV     R1,A
+   \   000005   22           RET
+    133          }
+    134          
+    135          
+
+   Maximum stack usage in bytes:
+
+     Function                   EXT_STACK PSTACK XSTACK
+     --------                   --------- ------ ------
+     char2value                        0      0      0
+     dir_filter_music                  0      0      0
+       -> f_attr_is_dir                0      0      0
+     file_filter_music                 3      0      0
+       -> f_attr_is_file               6      0      0
+       -> get_ext_name                 6      0      0
+       -> f_check_ext                  6      0      0
+       -> file_is_Encrypt_music        6      0      0
+     file_is_Encrypt_music             3      0      0
+     file_is_music                     2      0      0
+       -> file_is_Encrypt_music        4      0      0
+       -> f_check_ext                  4      0      0
+     file_is_target_number             0      0      0
+     get_scan_dept                     0      0      0
+
+
+   Segment part sizes:
+
+     Function/Label        Bytes
+     --------------        -----
+     tbl_music_ext            8
+     f_Encrypt                1
+     char2value              15
+     file_is_target_number   14
+     ?Subroutine0            14
+     file_is_Encrypt_music   63
+     file_is_music           33
+     file_filter_music      100
+     dir_filter_music         9
+     get_scan_dept            6
+
+ 
+   8 bytes in segment FILE_FILTER_CONST
+ 254 bytes in segment FILE_FILTER_SEG
+   1 byte  in segment XDATA_Z
+ 
+ 262 bytes of CODE  memory
+   1 byte  of XDATA memory
+
+Errors: none
+Warnings: none

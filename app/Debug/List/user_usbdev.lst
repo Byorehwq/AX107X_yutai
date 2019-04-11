@@ -1,0 +1,358 @@
+##############################################################################
+#                                                                            #
+# IAR 8051 C/C++ Compiler V7.20H/W32                   29/Jun/2018  19:55:15 #
+# Copyright 2004-2006 IAR Systems. All rights reserved.                      #
+#                                                                            #
+#    Core               =  plain                                             #
+#    Code model         =  near                                              #
+#    Data model         =  large                                             #
+#    Calling convention =  extended stack reentrant                          #
+#    Constant location  =  code                                              #
+#    Extended stack     =  enabled                                           #
+#    Dptr setup         =  1,16                                              #
+#    Source file        =  I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\user\user_usbde #
+#                          v.c                                               #
+#    Command line       =  -I E:\software\8051\INC\ -I                       #
+#                          E:\software\8051\INC\CLIB\ -I                     #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\COMMON\ -I      #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\INC\ -I         #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\config\ -I      #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\api\ -I         #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\fm\ -I          #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\fat\ -I         #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\display\ -I     #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\display\theme_d #
+#                          efault\ -I I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073 #
+#                          A_”ÓÃ©_AX1071_xxxxxxxx_20180629_Merlin_1\app\disp #
+#                          lay\led\ -I I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC07 #
+#                          3A_”ÓÃ©_AX1071_xxxxxxxx_20180629_Merlin_1\app\dis #
+#                          play\lcd\ -I I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC0 #
+#                          73A_”ÓÃ©_AX1071_xxxxxxxx_20180629_Merlin_1\app\ta #
+#                          sk\ -I I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”Ó #
+#                          Ã©_AX1071_xxxxxxxx_20180629_Merlin_1\app\user\    #
+#                          -I I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_A #
+#                          X1071_xxxxxxxx_20180629_Merlin_1\app\mem\ -I      #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\module\ -I      #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\key\ -I         #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\startmusic\ -I  #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\spi\ -D         #
+#                          AX107X_TAG -lC I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18B #
+#                          C073A_”ÓÃ©_AX1071_xxxxxxxx_20180629_Merlin_1\app\ #
+#                          Debug\List\ -o I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18B #
+#                          C073A_”ÓÃ©_AX1071_xxxxxxxx_20180629_Merlin_1\app\ #
+#                          Debug\Obj\ -e -z9 --core=plain --dptr=16,1        #
+#                          --data_model=large --code_model=near              #
+#                          --calling_convention=ext_stack_reentrant          #
+#                          --place_constants=code --nr_virtual_regs 20       #
+#                          --extended_stack I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\1 #
+#                          8BC073A_”ÓÃ©_AX1071_xxxxxxxx_20180629_Merlin_1\ap #
+#                          p\user\user_usbdev.c                              #
+#    List file          =  I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\Debug\List\user #
+#                          _usbdev.lst                                       #
+#    Object file        =  I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\Debug\Obj\user_ #
+#                          usbdev.r51                                        #
+#                                                                            #
+#                                                                            #
+##############################################################################
+
+I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX1071_xxxxxxxx_20180629_Merlin_1\app\user\user_usbdev.c
+      1          #include "include.h"
+      2          
+      3          
+      4          
+      5          #if TASK_USBDEV_EN
+      6          
+      7          IAR_DATA_A type_usb_audio_ctl usb_audio_ctl @ "USBDEV_DATA";
+      8          
+      9          #pragma constseg="USBDEV_TBL"
+     10          //–Ú¡–∫≈
+     11          IAR_CONST u8 tbl_usb_str_serial_number[24] =
+     12          {
+     13          	24,         // Num bytes of this descriptor
+     14          	3,          // String descriptor
+     15          	'2',    0,
+     16          	'0',    0,
+     17          	'1',    0,
+     18          	'3',    0,
+     19          	USB_SER_NUM0,    0,
+     20          	USB_SER_NUM1,    0,
+     21          	USB_SER_NUM2,    0,
+     22          	USB_SER_NUM3,    0,
+     23          	'p',    0,
+     24          	'h',    0,
+     25          	'0',    0
+     26          };
+     27          
+     28          const u8 __code *const __code tbl_string_point[4]=
+     29          {
+     30          	tbl_usb_language_id,
+     31          	tbl_usb_str_manufacturer,
+     32          	tbl_usb_str_product,
+     33          	tbl_usb_str_serial_number
+     34          };
+     35          #pragma constseg=default
+     36          
+     37          
+     38          /*----------------------------------------------------------------------------*/
+     39          /**@brief  usbdevªÒ»°◊÷∑˚¥Æ√Ë ˆ∑˚
+     40             @param  Œﬁ
+     41             @return Œﬁ
+     42             @note
+     43          */
+     44          /*----------------------------------------------------------------------------*/
+     45          #pragma location="TASK_USBDEV_SEG"
+     46          const u8 __code *usb_get_str_desc(u8 index)
+     47          {
+     48          	return tbl_string_point[index];
+     49          }
+     50          
+     51          #if USB_HID_SUPPORT
+     52          #pragma location="TASK_USBDEV_SEG"
+     53          void usb_hid_vol(bool direct)
+     54          {
+     55          	if(usb_hid_is_valid())
+     56          	{
+     57          		if(direct)
+     58          		{
+     59          #if ((DISP_TYPE != DISP_LED) && (DISP_TYPE != DISP_NO))   //≤ªœ‘ æ“Ù¡ø÷µ ±£¨ø…“‘≤ª“™“‘œ¬¥¶¿Ì
+     60          			if(usb_audio_ctl.spk_vol_set < VOLUME_MAX)
+     61          			{
+     62          				usb_audio_ctl.spk_vol_set++;
+     63          				usb_audio_ctl.spk_vol_dir = 1;
+     64          			}
+     65          #endif
+     66          			usb_hid_key(HID_CTL_VOLUP);
+     67          		}
+     68          		else
+     69          		{
+     70          #if ((DISP_TYPE != DISP_LED) && (DISP_TYPE != DISP_NO))
+     71          			if(usb_audio_ctl.spk_vol_set > 0)
+     72          			{
+     73          				usb_audio_ctl.spk_vol_set--;
+     74          				usb_audio_ctl.spk_vol_dir = -1;
+     75          			}
+     76          #endif
+     77          			usb_hid_key(HID_CTL_VOLDOWN);
+     78          		}
+     79          
+     80          #if ((DISP_TYPE != DISP_LED) && (DISP_TYPE != DISP_NO))
+     81          		sys_ctl.hid_vol_delay_cnt = 30;  //300ms≥¨ ±ÕÀ≥ˆ
+     82          		while(usb_audio_ctl.spk_vol_dir != 0)
+     83          		{
+     84          			WATCHDOG_CLR();
+     85          			usb_ep0_process();
+     86          			if(!usb_device_is_online() || !usb_hid_is_valid())
+     87          			{
+     88          				break;
+     89          			}
+     90          			if(!sys_ctl.hid_vol_delay_cnt)
+     91          			{
+     92          				break;
+     93          			}
+     94          		}
+     95          #endif
+     96          	}
+     97          }
+     98          #endif
+     99          
+    100          #if USB_SPK_SUPPORT
+    101          /*----------------------------------------------------------------------------*/
+    102          /**@brief  usbspk…Ë÷√“Ù¡ø
+    103             @param  Œﬁ
+    104             @return Œﬁ
+    105             @note π©USB÷–∂œµ˜”√
+    106          */
+    107          /*----------------------------------------------------------------------------*/
+    108          #pragma location="TASK_USBDEV_SEG"
+    109          void usb_spk_set_volume(void)
+    110          {
+    111          	u8 ret = usb_spk_set_volume_do();
+    112          
+    113          #if ((DISP_TYPE != DISP_LED) && (DISP_TYPE != DISP_NO))
+    114          	if(ret == 3)
+    115          	{
+    116          		user_set_volume(usb_audio_ctl.spk_vol_set);
+    117          		put_msg(QUSBDEV_SET_VOL);
+    118          	}
+    119          	else if(ret == 2)
+    120          	{
+    121          		usb_hid_key(HID_CTL_VOLUP);
+    122          	}
+    123          	else if(ret == 1)
+    124          	{
+    125          		usb_hid_key(HID_CTL_VOLDOWN);
+    126          	}
+    127          #else
+    128          	user_set_volume(usb_audio_ctl.spk_vol_cur);
+    129          #endif
+    130          }
+    131          
+    132          #endif /* USB_SPK_SUPPORT */
+    133          
+    134          #if USB_MIC_SUPPORT
+    135          //–ﬁ∏¥USBMIC AUADCCON10≥ı ºªØ ±√ª”–ºı1Œ Ã‚
+    136          #pragma location="TASK_USBDEV_SEG"
+    137          void task_usbmic_process_fix(void)
+    138          {
+    139          	if(auadc_ctl.discard_cnt)
+    140          	{
+    141          		if(AUADCCON6 & (BIT(3)|BIT(1)))
+    142          		{
+    143          			AUADCCON6 &= ~(BIT(3)|BIT(1));
+    144          		}
+    145          		if(AUADCCON6 & (BIT(4)|BIT(2)))
+    146          		{
+    147          			AUADCCON6 &= ~(BIT(4)|BIT(2));
+    148          			auadc_ctl.discard_cnt--;
+    149          		}
+    150          		usb_audio_ctl.mic_speed = 2;
+    151          		usb_audio_ctl.adc_total = 0;
+    152          	}
+    153          	else
+    154          	{
+    155          		if(AUADCCON6 & (BIT(3)|BIT(1)))
+    156          		{
+    157          			AUADCCON6 &= ~(BIT(3)|BIT(1));
+    158          			usb_audio_ctl.adc_cnt += 0x300;
+    159          		}
+    160          		else if(AUADCCON6 & (BIT(4)|BIT(2)))
+    161          		{
+    162          			AUADCCON6 &= ~(BIT(4)|BIT(2));
+    163          			usb_audio_ctl.adc_cnt += 0x300;
+    164          		}
+    165          		usb_audio_ctl.adc_total = usb_audio_ctl.adc_cnt;
+    166          	}
+    167          }
+    168          
+    169          /*----------------------------------------------------------------------------*/
+    170          /**@brief  ¥Úø™usbmic
+    171             @param  Œﬁ
+    172             @return Œﬁ
+    173             @note
+    174          */
+    175          /*----------------------------------------------------------------------------*/
+    176          #pragma location="TASK_USBDEV_SEG"
+    177          void usb_mic_enable(void)
+    178          {
+    179          	//printf("mic begin\n");
+    180          	memset((void *)FILTER_ADDR, 0, 0xA0);
+    181          	usb_mic_set_ptr((u8 *)(ADC_BUF_ADDR));
+    182          	auadc_start();
+    183          	iso_in_packet(64);
+    184          }
+    185          
+    186          /*----------------------------------------------------------------------------*/
+    187          /**@brief  πÿ±’usbmic
+    188             @param  Œﬁ
+    189             @return Œﬁ
+    190             @note
+    191          */
+    192          /*----------------------------------------------------------------------------*/
+    193          #pragma location="TASK_USBDEV_SEG"
+    194          void usb_mic_disable(void)
+    195          {
+    196          	//printf("mic end\n");
+    197          	auadc_stop();
+    198          }
+    199          #endif /* USB_MIC_SUPPORT */
+    200          
+    201          /*----------------------------------------------------------------------------*/
+    202          /**@brief  USBDEV≥ı ºªØ
+    203             @param  Œﬁ
+    204             @return Œﬁ
+    205             @note
+    206          */
+    207          /*----------------------------------------------------------------------------*/
+    208          #pragma location="TASK_USBDEV_SEG"
+    209          void usb_device_init(void)
+    210          {
+    211          	usb_ep0_init();
+    212          
+    213          #if USB_MASS_SUPPORT
+    214          	usb_mass_init();
+    215          #endif
+    216          
+    217          #if (USB_SPK_SUPPORT || USB_MIC_SUPPORT)
+    218          	usb_audio_init(VOLUME_MAX+1);
+    219          #endif
+    220          
+    221          #if USB_HID_SUPPORT
+    222          	usb_hid_init();
+    223          #endif
+    224          }
+    225          
+    226          /*----------------------------------------------------------------------------*/
+    227          /**@brief  USBDEV∏¥Œª¥¶¿Ì
+    228             @param  Œﬁ
+    229             @return Œﬁ
+    230             @note
+    231          */
+    232          /*----------------------------------------------------------------------------*/
+    233          #pragma location="TASK_USBDEV_SEG"
+    234          void usb_device_reset(void)
+    235          {
+    236          	USBIE_DIS();
+    237          
+    238          	usb_ep0_reset(DEV_TYPE);
+    239          
+    240          #if USB_MASS_SUPPORT
+    241          	usb_mass_reset();
+    242          #endif
+    243          
+    244          #if (USB_SPK_SUPPORT || USB_MIC_SUPPORT)
+    245          	usb_audio_reset();
+    246          #endif
+    247          
+    248          #if USB_HID_SUPPORT
+    249          	usb_hid_reset();
+    250          #endif
+    251          
+    252          	USBIE_EN();
+    253          }
+    254          
+    255          /*----------------------------------------------------------------------------*/
+    256          /**@brief  USB÷–∂œ
+    257             @param  Œﬁ
+    258             @return Œﬁ
+    259             @note
+    260          */
+    261          /*----------------------------------------------------------------------------*/
+    262          #pragma vector = VECTOR_OFFSET(USB_CTL_INT)
+    263          #pragma register_bank=1
+    264          #pragma location="INTERRUPT"
+    265          __interrupt void usb_isr(void)
+    266          {
+    267          	ISR_ENTER();
+    268          	usb_isr_mask();
+    269          	ISR_EXIT();
+    270          }
+    271          #endif
+    272          
+
+
+   Segment part sizes:
+
+     Function/Label Bytes
+     -------------- -----
+
+ 
+ 
+ 0 bytes of memory
+
+Errors: none
+Warnings: none

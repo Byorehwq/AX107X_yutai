@@ -1,0 +1,171 @@
+##############################################################################
+#                                                                            #
+# IAR 8051 C/C++ Compiler V7.20H/W32                   10/Sep/2015  19:03:27 #
+# Copyright 2004-2006 IAR Systems. All rights reserved.                      #
+#                                                                            #
+#    Core               =  plain                                             #
+#    Code model         =  near                                              #
+#    Data model         =  large                                             #
+#    Calling convention =  extended stack reentrant                          #
+#    Constant location  =  code                                              #
+#    Extended stack     =  enabled                                           #
+#    Dptr setup         =  1,16                                              #
+#    Source file        =  C:\Documents and Settings\Administrator\◊¿√Ê\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\config\config.c                       #
+#    Command line       =  -I "C:\Program Files\IAR Systems\Embedded         #
+#                          Workbench 4.05 Evaluation version\8051\INC\" -I   #
+#                          "C:\Program Files\IAR Systems\Embedded Workbench  #
+#                          4.05 Evaluation version\8051\INC\CLIB\" -I        #
+#                          "C:\Documents and Settings\Administrator\◊¿√Ê\lil #
+#                          y\15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX1 #
+#                          070_20150908\COMMON\" -I "C:\Documents and        #
+#                          Settings\Administrator\◊¿√Ê\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\INC\" #
+#                           -I "C:\Documents and Settings\Administrator\◊¿√Ê #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\config\" -I "C:\Documents and    #
+#                          Settings\Administrator\◊¿√Ê\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\api\" #
+#                           -I "C:\Documents and Settings\Administrator\◊¿√Ê #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\fm\" -I "C:\Documents and        #
+#                          Settings\Administrator\◊¿√Ê\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\fat\" #
+#                           -I "C:\Documents and Settings\Administrator\◊¿√Ê #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\display\" -I "C:\Documents and   #
+#                          Settings\Administrator\◊¿√Ê\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\displ #
+#                          ay\led\" -I "C:\Documents and                     #
+#                          Settings\Administrator\◊¿√Ê\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\displ #
+#                          ay\lcd\" -I "C:\Documents and                     #
+#                          Settings\Administrator\◊¿√Ê\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\task\ #
+#                          " -I "C:\Documents and Settings\Administrator\◊¿√ #
+#                          Ê\lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lil #
+#                          y_AX1070_20150908\user\" -I "C:\Documents and     #
+#                          Settings\Administrator\◊¿√Ê\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\mem\" #
+#                           -I "C:\Documents and Settings\Administrator\◊¿√Ê #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\module\" -I "C:\Documents and    #
+#                          Settings\Administrator\◊¿√Ê\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\modul #
+#                          e\kedir\" -I "C:\Documents and                    #
+#                          Settings\Administrator\◊¿√Ê\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\key\" #
+#                           -I "C:\Documents and Settings\Administrator\◊¿√Ê #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\startmusic\" -D UART_DEBUG -D    #
+#                          AX207X_TAG -lC "C:\Documents and                  #
+#                          Settings\Administrator\◊¿√Ê\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\UART_ #
+#                          Debug\List\" -o "C:\Documents and                 #
+#                          Settings\Administrator\◊¿√Ê\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\UART_ #
+#                          Debug\Obj\" -e -z9 --debug --core=plain           #
+#                          --dptr=16,1 --data_model=large --code_model=near  #
+#                          --calling_convention=ext_stack_reentrant          #
+#                          --place_constants=code --nr_virtual_regs 20       #
+#                          --extended_stack "C:\Documents and                #
+#                          Settings\Administrator\◊¿√Ê\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\confi #
+#                          g\config.c"                                       #
+#    List file          =  C:\Documents and Settings\Administrator\◊¿√Ê\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\UART_Debug\List\config.lst            #
+#    Object file        =  C:\Documents and Settings\Administrator\◊¿√Ê\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\UART_Debug\Obj\config.r51             #
+#                                                                            #
+#                                                                            #
+##############################################################################
+
+C:\Documents and Settings\Administrator\◊¿√Ê\lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX1070_20150908\config\config.c
+      1          /*****************************************************************************
+      2           * Module    : Config
+      3           * File      : config.c
+      4           * Author    : Hanny
+      5           * Email     : coldney@163.com
+      6           * Function  : ”√ªß≈‰÷√Œƒº˛£¨µ„ª˜◊Û≤‡ƒø¬º’πø™£¨ø…±‡º≠œ‡”¶µƒ≈‰÷√
+      7           *****************************************************************************/
+      8          #include "config.h"
+      9          
+     10          /*****************************************************************************
+     11          °æ◊¢“‚ ¬œÓ°ø
+     12          AX207X∞¸¿®:
+     13              AX2070(LQFP48);
+     14              AX2073(SOP16);
+     15              AX2073B(SOP16);
+     16          AX107X∞¸¿®:
+     17              AX1070(LQFP48);
+     18              AX1071(SOP28);
+     19              AX1073(SOP16);
+     20              AX1073B(SOP16);
+     21              AX1076(SSOP24);
+     22          
+     23          æß’Ò≈‰÷√∫ÕDAC≈‰÷√‘⁄≤ªÕ¨∑‚◊∞…œ”–≤Ó±£¨æﬂÃÂ»Áœ¬£∫
+     24          AX2070:
+     25              1.DAC≥ı ºªØ—°œÓ£¨”–VCM:    #define DAC_INIT_TYPE     DAC_VCM_WITH_CAP
+     26              2.VDDHP”ÎVDDIO∑÷ø™:        #define VDDHP_VDDIO_SHT   0
+     27          
+     28          AX2073:
+     29              1.œµÕ≥æß’Ò—°‘Ò£¨Œﬁæß’Ò£∫   #define SYS_CRY           CRY_RC
+     30              2.DAC≥ı ºªØ—°œÓ£¨ŒﬁVCM:    #define DAC_INIT_TYPE     DAC_VCM_NO_CAP
+     31              3.VDDHP”ÎVDDIO∞Ó“ª∆:      #define VDDHP_VDDIO_SHT   1
+     32          
+     33          AX2073B:
+     34              1.œµÕ≥æß’Ò—°‘Ò£¨µ•PINæß’Ò£∫#define CRY_PIN_NUM       CRY_1PIN
+     35              2.DAC≥ı ºªØ—°œÓ£¨ŒﬁVCM:    #define DAC_INIT_TYPE     DAC_VCM_NO_CAP
+     36              3.VDDHP”ÎVDDIO∞Ó“ª∆:      #define VDDHP_VDDIO_SHT   1
+     37          
+     38          AX2075:
+     39              1.œµÕ≥æß’Ò—°‘Ò£¨Œﬁæß’Ò£∫   #define SYS_CRY           CRY_RC
+     40              2.DAC≥ı ºªØ—°œÓ£¨ŒﬁVCM:    #define DAC_INIT_TYPE     DAC_VCM_NO_CAP
+     41              3.VDDHP”ÎVDDIO∞Ó“ª∆:      #define VDDHP_VDDIO_SHT   1
+     42          
+     43          AX1070:
+     44              1. π”√multi-bit DAC:       #define USE_MULTI_BIT_DAC 1
+     45              2.DAC≥ı ºªØ—°œÓ£¨”–VCM:    #define DAC_INIT_TYPE     DAC_VCM_WITH_CAP
+     46              3.VDDHP”ÎVDDIO∑÷ø™:        #define VDDHP_VDDIO_SHT   0
+     47          
+     48          AX1071:
+     49              1.œµÕ≥æß’Ò—°‘Ò£¨µ•PINæß’Ò£∫#define CRY_PIN_NUM       CRY_1PIN
+     50              2. π”√multi-bit DAC:       #define USE_MULTI_BIT_DAC 1
+     51              3.DAC≥ı ºªØ—°œÓ£¨ŒﬁVCM:    #define DAC_INIT_TYPE     DAC_VCM_NO_CAP
+     52              4.VDDHP”ÎVDDIO∑÷ø™:        #define VDDHP_VDDIO_SHT   0
+     53          
+     54          AX1073:
+     55              1.œµÕ≥æß’Ò—°‘Ò£¨Œﬁæß’Ò£∫   #define SYS_CRY           CRY_RC
+     56              2. π”√multi-bit DAC:       #define USE_MULTI_BIT_DAC 1
+     57              3.DAC≥ı ºªØ—°œÓ£¨ŒﬁVCM:    #define DAC_INIT_TYPE     DAC_VCM_NO_CAP
+     58              4.VDDHP”ÎVDDIO∞Ó“ª∆:      #define VDDHP_VDDIO_SHT   1
+     59          
+     60          AX1073B:
+     61              1.œµÕ≥æß’Ò—°‘Ò£¨µ•PINæß’Ò£∫#define CRY_PIN_NUM       CRY_1PIN
+     62              2. π”√multi-bit DAC:       #define USE_MULTI_BIT_DAC 1
+     63              3.DAC≥ı ºªØ—°œÓ£¨ŒﬁVCM:    #define DAC_INIT_TYPE     DAC_VCM_NO_CAP
+     64              4.VDDHP”ÎVDDIO∞Ó“ª∆:      #define VDDHP_VDDIO_SHT   1
+     65          
+     66          AX1076:
+     67              1.œµÕ≥æß’Ò—°‘Ò£¨µ•PINæß’Ò£∫#define CRY_PIN_NUM       CRY_1PIN
+     68              2. π”√multi-bit DAC:       #define USE_MULTI_BIT_DAC 1
+     69              3.DAC≥ı ºªØ—°œÓ£¨ŒﬁVCM:    #define DAC_INIT_TYPE     DAC_VCM_NO_CAP
+     70              4.VDDHP”ÎVDDIO∞Ó“ª∆:      #define VDDHP_VDDIO_SHT   1
+     71          
+     72           *****************************************************************************/
+
+
+   Segment part sizes:
+
+     Function/Label Bytes
+     -------------- -----
+
+ 
+ 
+ 0 bytes of memory
+
+Errors: none
+Warnings: none

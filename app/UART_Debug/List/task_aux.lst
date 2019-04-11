@@ -1,0 +1,300 @@
+##############################################################################
+#                                                                            #
+# IAR 8051 C/C++ Compiler V7.20H/W32                   10/Sep/2015  19:03:29 #
+# Copyright 2004-2006 IAR Systems. All rights reserved.                      #
+#                                                                            #
+#    Core               =  plain                                             #
+#    Code model         =  near                                              #
+#    Data model         =  large                                             #
+#    Calling convention =  extended stack reentrant                          #
+#    Constant location  =  code                                              #
+#    Extended stack     =  enabled                                           #
+#    Dptr setup         =  1,16                                              #
+#    Source file        =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\task\task_aux.c                       #
+#    Command line       =  -I "C:\Program Files\IAR Systems\Embedded         #
+#                          Workbench 4.05 Evaluation version\8051\INC\" -I   #
+#                          "C:\Program Files\IAR Systems\Embedded Workbench  #
+#                          4.05 Evaluation version\8051\INC\CLIB\" -I        #
+#                          "C:\Documents and Settings\Administrator\×ÀÃæ\lil #
+#                          y\15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX1 #
+#                          070_20150908\COMMON\" -I "C:\Documents and        #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\INC\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\config\" -I "C:\Documents and    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\api\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\fm\" -I "C:\Documents and        #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\fat\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\display\" -I "C:\Documents and   #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\displ #
+#                          ay\led\" -I "C:\Documents and                     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\displ #
+#                          ay\lcd\" -I "C:\Documents and                     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\task\ #
+#                          " -I "C:\Documents and Settings\Administrator\×ÀÃ #
+#                          æ\lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lil #
+#                          y_AX1070_20150908\user\" -I "C:\Documents and     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\mem\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\module\" -I "C:\Documents and    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\modul #
+#                          e\kedir\" -I "C:\Documents and                    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\key\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\startmusic\" -D UART_DEBUG -D    #
+#                          AX207X_TAG -lC "C:\Documents and                  #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\UART_ #
+#                          Debug\List\" -o "C:\Documents and                 #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\UART_ #
+#                          Debug\Obj\" -e -z9 --debug --core=plain           #
+#                          --dptr=16,1 --data_model=large --code_model=near  #
+#                          --calling_convention=ext_stack_reentrant          #
+#                          --place_constants=code --nr_virtual_regs 20       #
+#                          --extended_stack "C:\Documents and                #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\task\ #
+#                          task_aux.c"                                       #
+#    List file          =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\UART_Debug\List\task_aux.lst          #
+#    Object file        =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\UART_Debug\Obj\task_aux.r51           #
+#                                                                            #
+#                                                                            #
+##############################################################################
+
+C:\Documents and Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX1070_20150908\task\task_aux.c
+      1          /*****************************************************************************
+      2           * Module    : Task
+      3           * File      : task_aux.c
+      4           * Author    : jingfa
+      5           * Email     :
+      6           * Function  : AUXÈÎÎñ
+      7           *****************************************************************************/
+      8          #include "include.h"
+      9          
+     10          #if TASK_AUX_EN
+     11          
+     12          #if AUX_EQ_EN
+     13          #pragma location="TASK_AUX_SEG"
+     14          void task_aux_eq_process(void)
+     15          {
+     16          	if(AUADCCON6 & BIT(3))
+     17          	{
+     18          		AUADCCON6 &= ~BIT(3);
+     19          		auxeq_dac_out(ADC_BUF_ADDR, AUX_EQ_SAMPLE/2);
+     20          	}
+     21          	if(AUADCCON6 & BIT(4))
+     22          	{
+     23          		AUADCCON6 &= ~BIT(4);
+     24          		auxeq_dac_out(ADC_BUF_ADDR+AUX_EQ_INPUT_ADDR, AUX_EQ_SAMPLE/2);
+     25          	}
+     26          }
+     27          #endif
+     28          
+     29          //ÈÎÎñ³õÊ¼»¯
+     30          #pragma location="TASK_AUX_SEG"
+     31          static void task_aux_enter(void)
+     32          {
+     33          #if AUX_DET_EN
+     34          	if(!device_activate(DEVICE_LINEIN))
+     35          	{
+     36          		task_ctl.work_sta = TASK_EXIT;
+     37          		return;
+     38          	}
+     39          #endif
+     40          
+     41          #if((defined AX107X_TAG) && (AMUX_LINEIN == AMUX_CH_MM))
+     42          	mic_enable();
+     43          	DACACON6 = (DACACON6 & 0x83) | (GAIN_0DB <<2);
+     44          
+     45          #else
+     46          
+     47          #if((defined AX107X_TAG) && ((AMUX_LINEIN == AMUX_CH_0M)||(AMUX_LINEIN == AMUX_CH_2M)||(AMUX_LINEIN == AMUX_CH_4M)))
+     48          	DACACON6 |= BIT(0);//´ò¿ªMICÓÃ×÷LINE¹¦ÄÜ
+     49          #endif
+     50          
+     51          	amux_init(AMUX_LINEIN);                 //³õÊ¼»¯LINEIN AMUX
+     52          #endif  //((defined AX107X_TAG) && (AMUX_LINEIN == AMUX_CH_MM))
+     53          
+     54          #if AUX_EQ_EN
+     55          	AMUX_AIN_DIS();
+     56          	auadc_init(CH_SEL_LINEIN);              //³õÊ¼»¯AUADC
+     57          	dac_out_init(DAC_SPA_S32K);
+     58          	memset((void *)ADC_BUF_ADDR, 0, 0x1600);
+     59          	auadc_start();
+     60          	mute_disable();
+     61          #if DAC_FADE_EN
+     62          	dac_fade_in(1);
+     63          #endif
+     64          #else  //AUX_EQ_EN
+     65          #if REC_AUX_EN
+     66          	record_init(CH_SEL_LINEIN);
+     67          #endif
+     68          
+     69          	mute_disable();
+     70          #if DAC_FADE_EN
+     71          #if KEY_VOICE_EN
+     72          	dac_fade_in(1);
+     73          #else
+     74          	dac_fade_in(0);
+     75          #endif
+     76          #else
+     77          #if KEY_VOICE_EN
+     78          	b_dac.digvol_en = 1;
+     79          #else
+     80          	b_dac.digvol_en = 0;
+     81          #endif
+     82          	dac_set_volume_direct(sys_ctl.volume);
+     83          #endif
+     84          #if (!KEY_VOICE_EN)
+     85          	DAC_ANL_DIS();
+     86          #endif
+     87          #endif  //AUX_EQ_EN
+     88          
+     89          #if ENERGY_DISP_EN
+     90          	energy_init();
+     91          #endif
+     92          
+     93          #if (DISP_TYPE==DISP_LED)
+     94          	ocx.led_sta = LED_STA_ON;
+     95          #endif
+     96          }
+     97          
+     98          //ÈÎÎñÍË³ö
+     99          #pragma location="TASK_AUX_SEG"
+    100          static void task_aux_exit(void)
+    101          {
+    102          #if DAC_FADE_EN
+    103          	dac_fade_out();
+    104          	dac_fade_wait();
+    105          #endif
+    106          
+    107          #if ((!AUX_EQ_EN) && (!KEY_VOICE_EN))
+    108          	DAC_ANL_EN();
+    109          #endif
+    110          
+    111          #if ENERGY_DISP_EN
+    112          	energy_stop();
+    113          #endif
+    114          #if AUX_EQ_EN
+    115          	auadc_stop();
+    116          #endif
+    117          
+    118          #if((defined AX107X_TAG) && (AMUX_LINEIN == AMUX_CH_MM))
+    119          	mic_disable();
+    120          #else
+    121          #if((defined AX107X_TAG) && ((AMUX_LINEIN == AMUX_CH_0M)||(AMUX_LINEIN == AMUX_CH_2M)||(AMUX_LINEIN == AMUX_CH_4M)))
+    122          	DACACON6 &= ~BIT(0);//¹Ø±ÕMICÓÃ×÷LINE¹¦ÄÜ
+    123          #endif
+    124          	amux_exit();
+    125          #endif
+    126          }
+    127          
+    128          //ÈÎÎñÊÂ¼þ
+    129          #pragma location="TASK_AUX_SEG"
+    130          static void task_aux_event(void)
+    131          {
+    132          	comm_event(1);
+    133          #if AUX_DET_EN
+    134          	if(!device_activate(DEVICE_LINEIN))
+    135          	{
+    136          		task_ctl.work_sta = task_ctl.pre_sta;
+    137          	}
+    138          #endif
+    139          }
+    140          
+    141          //ÈÎÎñÏûÏ¢´¦Àí
+    142          #pragma location="TASK_AUX_SEG"
+    143          static void task_aux_deal_msg(u8 msg)
+    144          {
+    145          	switch(msg)
+    146          	{
+    147          	case KU_PLAY:
+    148          	case KU_PLAY_AND_MODE:
+    149          #if !AUX_EQ_EN
+    150          		if(b_dac.mute_en)
+    151          		{
+    152          			AMUX_AIN_EN();
+    153          		}
+    154          		else
+    155          		{
+    156          			AMUX_AIN_DIS();
+    157          		}
+    158          #endif
+    159          		user_set_mute();
+    160          		disp.update = 1;
+    161          		break;
+    162          #if AUX_EQ_EN
+    163          	case KU_EQ:
+    164          		user_set_eq(sys_ctl.eq_num + 1);
+    165          		showeq();
+    166          		break;
+    167          #endif
+    168          #if ENERGY_DISP_EN
+    169          	case KL_PLAYMODE:
+    170          		if(!ocx.disp_energy)
+    171          		{
+    172          			energy_start();
+    173          		}
+    174          		else
+    175          		{
+    176          			energy_close();
+    177          		}
+    178          		disp.update = 1;
+    179          		break;
+    180          #endif
+    181          	default:
+    182          		deal_msg(msg);
+    183          		break;
+    184          	}
+    185          }
+    186          
+    187          //ÈÎÎñÖ÷Á÷³Ì
+    188          #pragma location="TASK_AUX_SEG"
+    189          void task_aux(void)
+    190          {
+    191          	printf("task_aux\n");
+    192          	task_aux_enter();
+    193          	while(task_ctl.work_sta == TASK_AUX)
+    194          	{
+    195          		task_aux_event();
+    196          		task_aux_deal_msg(get_msg());
+    197          		task_aux_display();
+    198          	}
+    199          	task_aux_exit();
+    200          }
+    201          #endif
+
+
+   Segment part sizes:
+
+     Function/Label Bytes
+     -------------- -----
+
+ 
+ 
+ 0 bytes of memory
+
+Errors: none
+Warnings: none

@@ -1,0 +1,573 @@
+##############################################################################
+#                                                                            #
+# IAR 8051 C/C++ Compiler V7.20H/W32                   10/Sep/2015  19:03:28 #
+# Copyright 2004-2006 IAR Systems. All rights reserved.                      #
+#                                                                            #
+#    Core               =  plain                                             #
+#    Code model         =  near                                              #
+#    Data model         =  large                                             #
+#    Calling convention =  extended stack reentrant                          #
+#    Constant location  =  code                                              #
+#    Extended stack     =  enabled                                           #
+#    Dptr setup         =  1,16                                              #
+#    Source file        =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\key\ir.c                              #
+#    Command line       =  -I "C:\Program Files\IAR Systems\Embedded         #
+#                          Workbench 4.05 Evaluation version\8051\INC\" -I   #
+#                          "C:\Program Files\IAR Systems\Embedded Workbench  #
+#                          4.05 Evaluation version\8051\INC\CLIB\" -I        #
+#                          "C:\Documents and Settings\Administrator\×ÀÃæ\lil #
+#                          y\15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX1 #
+#                          070_20150908\COMMON\" -I "C:\Documents and        #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\INC\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\config\" -I "C:\Documents and    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\api\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\fm\" -I "C:\Documents and        #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\fat\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\display\" -I "C:\Documents and   #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\displ #
+#                          ay\led\" -I "C:\Documents and                     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\displ #
+#                          ay\lcd\" -I "C:\Documents and                     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\task\ #
+#                          " -I "C:\Documents and Settings\Administrator\×ÀÃ #
+#                          æ\lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lil #
+#                          y_AX1070_20150908\user\" -I "C:\Documents and     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\mem\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\module\" -I "C:\Documents and    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\modul #
+#                          e\kedir\" -I "C:\Documents and                    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\key\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\startmusic\" -D UART_DEBUG -D    #
+#                          AX207X_TAG -lC "C:\Documents and                  #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\UART_ #
+#                          Debug\List\" -o "C:\Documents and                 #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\UART_ #
+#                          Debug\Obj\" -e -z9 --debug --core=plain           #
+#                          --dptr=16,1 --data_model=large --code_model=near  #
+#                          --calling_convention=ext_stack_reentrant          #
+#                          --place_constants=code --nr_virtual_regs 20       #
+#                          --extended_stack "C:\Documents and                #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\key\i #
+#                          r.c"                                              #
+#    List file          =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\UART_Debug\List\ir.lst                #
+#    Object file        =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\UART_Debug\Obj\ir.r51                 #
+#                                                                            #
+#                                                                            #
+##############################################################################
+
+C:\Documents and Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX1070_20150908\key\ir.c
+      1          /*****************************************************************************
+      2          * Module    : Module
+      3          * File      : ir.c
+      4          * Author    : jingfa
+      5          * Email     :
+      6          * Function  : ºìÍâÇý¶¯Ïà¹Ø
+      7          *****************************************************************************/
+      8          #include "include.h"
+      9          #include "kedir.h"
+     10          #include "ir.h"
+     11          
+     12          #if USE_IR
+     13          
+     14          volatile __data u8 ir_state;
+     15          volatile __data u8 ir_cnt;
+     16          volatile __data u8 repeat_cnt;
+     17          volatile __data u16 ir_data;
+     18          volatile __data u16 ir_code;
+     19          volatile bool ir_key_sta;
+     20          
+     21          #define IR_TABLE_DIM  2
+     22          
+     23          #pragma constseg="IR_CONST_TABLE"
+     24          #if (IR_TABLE_DIM != 2)     //Ò»Î¬±í
+     25          
+     26          //0xFF00(21KEY)
+     27          IAR_CONST u8 ir_table_FF00[96] =
+     28          {
+     29          // 	   0              1 		     2	            3             4               5             6                 7
+     30          	/*0*/  NO_KEY,        NO_KEY,        NO_KEY,        NO_KEY,       NO_KEY,         NO_KEY,       NO_KEY,           T_KEY_PREV,
+     31          	T_KEY_NUM_4,   T_KEY_PLAY,    NO_KEY,	    NO_KEY,		  T_KEY_NUM_1,	  T_KEY_NUM_0,	NO_KEY,			  NO_KEY,
+     32          	/*1*/  NO_KEY,        NO_KEY,        NO_KEY,        NO_KEY,       NO_KEY,         T_KEY_NEXT,   T_KEY_VOL_DOWN,	  NO_KEY,
+     33          	T_KEY_NUM_2,   T_KEY_VOL_UP,  NO_KEY,        NO_KEY,	      T_KEY_NUM_5,	  NO_KEY,	    NO_KEY,			  NO_KEY,
+     34          	/*2*/  NO_KEY,        NO_KEY,        NO_KEY,        NO_KEY,       NO_KEY,         NO_KEY,	    NO_KEY,	     	  NO_KEY,
+     35          	NO_KEY,	      NO_KEY,	     NO_KEY,	    NO_KEY,	      NO_KEY,	      NO_KEY,	    NO_KEY,	     	  NO_KEY,
+     36          	/*3*/  NO_KEY,        NO_KEY,        NO_KEY,        NO_KEY,       NO_KEY,         NO_KEY,	    NO_KEY,			  NO_KEY,
+     37          	NO_KEY,		  NO_KEY,		 NO_KEY,	    NO_KEY,		  NO_KEY,		  NO_KEY,	    NO_KEY,			  NO_KEY,
+     38          	/*4*/  T_KEY_PLAYMODE,NO_KEY,        T_KEY_NUM_7,   T_KEY_EQ,     T_KEY_MODE,     T_KEY_POWER,  T_KEY_STOP,       T_KEY_MUTE,
+     39          	NO_KEY,        NO_KEY,      	 T_KEY_NUM_9,   NO_KEY,       NO_KEY,      	  NO_KEY,       NO_KEY,      	  NO_KEY,
+     40          	/*5*/  NO_KEY,        NO_KEY,        T_KEY_NUM_8,   NO_KEY,       NO_KEY,         NO_KEY,	    NO_KEY,			  NO_KEY,
+     41          	NO_KEY,		  NO_KEY,		 T_KEY_NUM_6,	NO_KEY,		  NO_KEY,		  NO_KEY,	    T_KEY_NUM_3,	  NO_KEY,
+     42          };
+     43          
+     44          //0xBF00(18KEY)
+     45          IAR_CONST u8 ir_table_BF00[32] =
+     46          {
+     47          	//  0              1              2              3             4               5             6                 7
+     48          	/*0*/  T_KEY_POWER,   T_KEY_PLAY,    T_KEY_MODE,    NO_KEY,       T_KEY_NUM_1,    T_KEY_NUM_2,  T_KEY_NUM_3,      NO_KEY,
+     49          	T_KEY_NUM_4,   T_KEY_NUM_5,   T_KEY_NUM_6,   NO_KEY,       T_KEY_NUM_7,    T_KEY_NUM_8,  T_KEY_NUM_9,      NO_KEY,
+     50          	/*1*/  T_KEY_NUM_0,   NO_KEY,        T_KEY_VOL_UP,  NO_KEY,       T_KEY_PREV,     T_KEY_NEXT,   T_KEY_VOL_DOWN,   NO_KEY,
+     51          	NO_KEY,        NO_KEY,        NO_KEY,        NO_KEY,       NO_KEY,         NO_KEY,       NO_KEY,           NO_KEY,
+     52          };
+     53          
+     54          //0xFD02(20KEY)
+     55          IAR_CONST u8 ir_table_FD02[32] =
+     56          {
+     57          	//  0              1              2              3             4               5               6               7
+     58          	/*0*/  T_KEY_PLAY,    T_KEY_CH_DOWN, T_KEY_CH_UP,   NO_KEY,       T_KEY_EQ,       T_KEY_VOL_DOWN, T_KEY_VOL_UP,   NO_KEY,
+     59          	T_KEY_NUM_0,   T_KEY_PREV,    T_KEY_NEXT,    NO_KEY,       T_KEY_NUM_1,    T_KEY_NUM_2,    T_KEY_NUM_3,    NO_KEY,
+     60          	/*1*/  T_KEY_NUM_4,   T_KEY_NUM_5,   T_KEY_NUM_6,   NO_KEY,       T_KEY_NUM_7,    T_KEY_NUM_8,    T_KEY_NUM_9,    NO_KEY,
+     61          	NO_KEY,        NO_KEY,        T_KEY_MODE,    NO_KEY,       NO_KEY,         NO_KEY,         NO_KEY,         NO_KEY,
+     62          };
+     63          
+     64          //0xFE01(21KEY)
+     65          IAR_CONST u8 ir_table_FE01[32] =
+     66          {
+     67          	// 0               1              2               3             4              5               6               7
+     68          	/*0*/ NO_KEY,         T_KEY_EQ,      T_KEY_VOL_DOWN, T_KEY_VOL_UP, T_KEY_NUM_0,   T_KEY_PREV,     T_KEY_NEXT,     T_KEY_NUM_1,
+     69          	T_KEY_NUM_2,    T_KEY_NUM_3,   T_KEY_NUM_4,    NO_KEY,       T_KEY_NUM_7,   T_KEY_NUM_8,    T_KEY_NUM_9,    T_KEY_POWER,
+     70          	/*1*/ NO_KEY,         NO_KEY,        T_KEY_PLAY,     NO_KEY,       NO_KEY,        NO_KEY,         NO_KEY,         NO_KEY,
+     71          	NO_KEY,         T_KEY_MODE,    T_KEY_CH_DOWN,  T_KEY_NUM_5,  NO_KEY,        NO_KEY,         T_KEY_CH_UP,    T_KEY_NUM_6,
+     72          };
+     73          
+     74          #else //(IR_TABLE_DIM == 2) ¶þÎ¬±í
+     75          
+     76          //0xFF00(21KEY)
+     77          IAR_CONST u8 ir_table_FF00[][2] =
+     78          {
+     79          	{0x07, T_KEY_PREV},
+     80          	{0x09, T_KEY_PLAY},
+     81          	{0x15, T_KEY_NEXT},
+     82          	{0x16, T_KEY_VOL_DOWN},
+     83          	{0x19, T_KEY_VOL_UP},
+     84          	{0x44, T_KEY_MODE},
+     85          	{0x40, T_KEY_PLAYMODE},
+     86          	{0x43, T_KEY_EQ},
+     87          	{0x45, T_KEY_POWER},
+     88          	{0x46, T_KEY_STOP},
+     89          	{0x47, T_KEY_MUTE},
+     90          	{0x0d, T_KEY_NUM_0},
+     91          	{0x0c, T_KEY_NUM_1},
+     92          	{0x18, T_KEY_NUM_2},
+     93          	{0x5e, T_KEY_NUM_3},
+     94          	{0x08, T_KEY_NUM_4},
+     95          	{0x1c, T_KEY_NUM_5},
+     96          	{0x5a, T_KEY_NUM_6},
+     97          	{0x42, T_KEY_NUM_7},
+     98          	{0x52, T_KEY_NUM_8},
+     99          	{0x4a, T_KEY_NUM_9},
+    100          	{0xFF, NO_KEY}   //ÒÔ0xFF½áÊø
+    101          };
+    102          
+    103          //0xBF00(18KEY)
+    104          IAR_CONST u8 ir_table_BF00[][2] =
+    105          {
+    106          	{0x14, T_KEY_PREV},
+    107          	{0x01, T_KEY_PLAY},
+    108          	{0x15, T_KEY_NEXT},
+    109          	{0x16, T_KEY_VOL_DOWN},
+    110          	{0x12, T_KEY_VOL_UP},
+    111          	{0x02, T_KEY_MODE},
+    112          	{0x00, T_KEY_POWER},
+    113          	{0x10, T_KEY_NUM_0},
+    114          	{0x04, T_KEY_NUM_1},
+    115          	{0x05, T_KEY_NUM_2},
+    116          	{0x06, T_KEY_NUM_3},
+    117          	{0x08, T_KEY_NUM_4},
+    118          	{0x09, T_KEY_NUM_5},
+    119          	{0x0A, T_KEY_NUM_6},
+    120          	{0x0C, T_KEY_NUM_7},
+    121          	{0x0D, T_KEY_NUM_8},
+    122          	{0x0E, T_KEY_NUM_9},
+    123          	{0xFF, NO_KEY}   //ÒÔ0xFF½áÊø
+    124          };
+    125          
+    126          //0xFD02(20KEY)
+    127          IAR_CONST u8 ir_table_FD02[][2] =
+    128          {
+    129          	{0x09, T_KEY_PREV},
+    130          	{0x00, T_KEY_PLAY},
+    131          	{0x0A, T_KEY_NEXT},
+    132          	{0x05, T_KEY_VOL_DOWN},
+    133          	{0x06, T_KEY_VOL_UP},
+    134          	{0x1A, T_KEY_MODE},
+    135          	{0x04, T_KEY_EQ},
+    136          	{0x01, T_KEY_CH_DOWN},
+    137          	{0x02, T_KEY_CH_UP},
+    138          	{0x08, T_KEY_NUM_0},
+    139          	{0x0C, T_KEY_NUM_1},
+    140          	{0x0D, T_KEY_NUM_2},
+    141          	{0x0E, T_KEY_NUM_3},
+    142          	{0x10, T_KEY_NUM_4},
+    143          	{0x11, T_KEY_NUM_5},
+    144          	{0x12, T_KEY_NUM_6},
+    145          	{0x14, T_KEY_NUM_7},
+    146          	{0x15, T_KEY_NUM_8},
+    147          	{0x16, T_KEY_NUM_9},
+    148          	{0xFF, NO_KEY}   //ÒÔ0xFF½áÊø
+    149          };
+    150          
+    151          //0xFE01(21KEY)
+    152          IAR_CONST u8 ir_table_FE01[][2] =
+    153          {
+    154          	{0x05, T_KEY_PREV},
+    155          	{0x12, T_KEY_PLAY},
+    156          	{0x06, T_KEY_NEXT},
+    157          	{0x02, T_KEY_VOL_DOWN},
+    158          	{0x03, T_KEY_VOL_UP},
+    159          	{0x19, T_KEY_MODE},
+    160          	{0x01, T_KEY_EQ},
+    161          	{0x0F, T_KEY_POWER},
+    162          	{0x1A, T_KEY_CH_DOWN},
+    163          	{0x1E, T_KEY_CH_UP},
+    164          	{0x04, T_KEY_NUM_0},
+    165          	{0x07, T_KEY_NUM_1},
+    166          	{0x08, T_KEY_NUM_2},
+    167          	{0x09, T_KEY_NUM_3},
+    168          	{0x0A, T_KEY_NUM_4},
+    169          	{0x1B, T_KEY_NUM_5},
+    170          	{0x1F, T_KEY_NUM_6},
+    171          	{0x0C, T_KEY_NUM_7},
+    172          	{0x0D, T_KEY_NUM_8},
+    173          	{0x0E, T_KEY_NUM_9},
+    174          	{0xFF, NO_KEY}   //ÒÔ0xFF½áÊø
+    175          };
+    176          #endif //(IR_TABLE_DIM != 2)
+    177          #pragma constseg=default
+    178          
+    179          #pragma location="IR_SCAN"
+    180          u8 ir_key_get_1(IAR_CONST u8 ir_table[][2], u8 ir_data)
+    181          {
+    182          	u8 keyval = NO_KEY;
+    183          
+    184          	for(u8 i=0;; i++)
+    185          	{
+    186          		if((ir_table[i][0] == ir_data) || (ir_table[i][0] == 0xFF))
+    187          		{
+    188          			keyval = ir_table[i][1];
+    189          			break;
+    190          		}
+    191          	}
+    192          	return keyval;
+    193          }
+    194          
+    195          
+    196          #pragma location="IR_SCAN"
+    197          void ir_cap_isr(void)
+    198          {
+    199          	u16  ir_tmp;
+    200          	static u8 __idata ir_scan = 0;
+    201          
+    202          	if(TMR1CON1 & 0x40)              //capture
+    203          	{
+    204          		TMR1CNTL = 0;
+    205          		TMR1CNTH = 0;
+    206          		ir_tmp = TMR1PWMH<<8;
+    207          		u8 aa = TMR1PWML;
+    208          		ir_tmp |= aa;
+    209          		TMR1CON1 &= ~BIT(6);
+    210          		ir_tmp /= (24000 / 64);      //1msÎªµ¥Î»
+    211          		ir_key_sta = 1;
+    212          	}
+    213          	else                             //overflow
+    214          	{
+    215          #if USE_KEDIR && !USE_HW_IR && ((USE_KEDIR_TYPE == KEDIR_KEY_IR_LED) || (USE_KEDIR_TYPE == KEDIR_KEY_IR))
+    216          		ir_state = 1;
+    217          #endif
+    218          		TMR1CON1 &= ~BIT(7);
+    219          		ir_tmp = 125;
+    220          	}
+    221          
+    222          	/* ÓÐÐ©ºìÍâ¸ÉÈÅ½ÏÑÏÖØ£¬ÒªÓÃÏÂÃæ³ÌÐò´¦ÀíÒ»ÏÂ */
+    223          	if(ir_cnt == 32)
+    224          	{
+    225          #if USE_KEDIR && !USE_HW_IR && ((USE_KEDIR_TYPE == KEDIR_KEY_IR_LED) || (USE_KEDIR_TYPE == KEDIR_KEY_IR))
+    226          		ir_state = 1;
+    227          #endif
+    228          		if((ir_tmp >= 10) && (ir_tmp <= 12))             //Á¬·¢Âë=11.25ms
+    229          		{
+    230          			ir_scan = 0;
+    231          #if USE_KEDIR && !USE_HW_IR && ((USE_KEDIR_TYPE == KEDIR_KEY_IR_LED) || (USE_KEDIR_TYPE == KEDIR_KEY_IR))
+    232          			ir_state = 0;
+    233          #endif
+    234          		}
+    235          		else
+    236          		{
+    237          #if USE_KEDIR && !USE_HW_IR && ((USE_KEDIR_TYPE == KEDIR_KEY_IR_LED) || (USE_KEDIR_TYPE == KEDIR_KEY_IR))
+    238          			ir_scan = ir_tmp;
+    239          #else
+    240          			ir_scan += ir_tmp;
+    241          #endif
+    242          			if(ir_scan > 120)        //³¬¹ý108msµÄÁ¬·¢¼ä¸ô£¬ÔòÈÏÎªÌ§¼ü
+    243          			{
+    244          				ir_cnt = 0;
+    245          				ir_key_sta = 0;
+    246          			}
+    247          		}
+    248          		return;
+    249          	}
+    250          	else if((ir_tmp > 7) || (ir_tmp == 0))
+    251          	{
+    252          #if USE_KEDIR && !USE_HW_IR && ((USE_KEDIR_TYPE == KEDIR_KEY_IR_LED) || (USE_KEDIR_TYPE == KEDIR_KEY_IR))
+    253          		if((ir_tmp > 7) && (ir_tmp != 125))
+    254          		{
+    255          			ir_state = 0;
+    256          		}
+    257          		if(ir_tmp == 0)
+    258          		{
+    259          			ir_state = 1;
+    260          		}
+    261          #endif
+    262          		/*Òýµ¼ÂëÊÇ13.5ms;
+    263          		NEC±ê×¼ Î»0ÊÇ1.125ms,Î»1ÊÇ2.25ms;
+    264          		PHILIPS±ê×¼Î»0Î»1¶¼ÊÇ1.788ms;
+    265          		ÆäËûÖµÊÇ¸ÉÈÅ.*/
+    266          		ir_scan = 0;
+    267          		ir_cnt = 0;
+    268          		ir_key_sta = 0;
+    269          		return;
+    270          	}
+    271          	ir_data >>= 1;
+    272          	ir_cnt++;
+    273          
+    274          	if(ir_tmp == 2)
+    275          	{
+    276          		ir_data |= 0x8000;
+    277          	}
+    278          
+    279          	if(ir_cnt == 16)
+    280          	{
+    281          		ir_code = ir_data;
+    282          	}
+    283          	else if(ir_cnt == 32)
+    284          	{
+    285          		if((ir_data&0xFF) >= 96)
+    286          		{
+    287          			ir_data = NO_KEY;
+    288          		}
+    289          	}
+    290          }
+    291          
+    292          #pragma location="IR_SCAN"
+    293          u8 get_ir_val(void)
+    294          {
+    295          	u8 ir_val = NO_KEY;
+    296          
+    297          #if IR_FF00_EN
+    298          	if(ir_code == USERCODE_FF00)
+    299          	{
+    300          		//printf("ir_code = %02x,ir_data = %02x\n",ir_code,ir_data&0xff);
+    301          #if (IR_TABLE_DIM == 2)
+    302          		ir_val = ir_key_get_1(ir_table_FF00, ir_data);
+    303          #else
+    304          		ir_val = ir_table_FF00[ir_data & 0xff];
+    305          #endif
+    306          	}
+    307          #endif
+    308          
+    309          #if IR_BF00_EN
+    310          	if(ir_code == USERCODE_BF00)
+    311          	{
+    312          		//printf("ir_code = %02x,ir_data = %02x\n",ir_code,ir_data&0xff);
+    313          #if (IR_TABLE_DIM == 2)
+    314          		ir_val = ir_key_get_1(ir_table_BF00, ir_data);
+    315          #else
+    316          		ir_val = ir_table_BF00[ir_data & 0xff];
+    317          #endif
+    318          	}
+    319          #endif
+    320          
+    321          #if IR_FD02_EN
+    322          	if(ir_code == USERCODE_FD02)
+    323          	{
+    324          		//printf("ir_code = %02x,ir_data = %02x\n",ir_code,ir_data&0xff);
+    325          #if (IR_TABLE_DIM == 2)
+    326          		ir_val = ir_key_get_1(ir_table_FD02, ir_data);
+    327          #else
+    328          		ir_val = ir_table_FD02[ir_data & 0xff];
+    329          #endif
+    330          	}
+    331          #endif
+    332          
+    333          #if IR_FE01_EN
+    334          	if(ir_code == USERCODE_FE01)
+    335          	{
+    336          		//printf("ir_code = %02x,ir_data = %02x\n",ir_code,ir_data&0xff);
+    337          #if (IR_TABLE_DIM == 2)
+    338          		ir_val = ir_key_get_1(ir_table_FE01, ir_data);
+    339          #else
+    340          		ir_val = ir_table_FE01[ir_data & 0xff];
+    341          #endif
+    342          	}
+    343          #endif
+    344          	return ir_val;
+    345          }
+    346          
+    347          #pragma location="IR_SCAN"
+    348          u8 ir_process(void)
+    349          {
+    350          	u8 ir_val = NO_KEY;
+    351          
+    352          #if USE_HW_IR
+    353          	if(ir_cnt < 35)           //108ms - 58.5ms(Òýµ¼Âë+ÓÃ»§Âë+Êý¾ÝÂëµÄ×î¶ÌÊ±¼ä) + 108ms = 157.5ms
+    354          	{
+    355          		ir_cnt++;
+    356          	}
+    357          	else
+    358          	{
+    359          		ir_data = 0;
+    360          		ir_cnt = IR_TIMEOUT_CNT;      //time out
+    361          		repeat_cnt = 0;
+    362          		ir_code = 0;
+    363          		ir_key_sta = 0;
+    364          	}
+    365          
+    366          	ir_val = get_ir_val();
+    367          
+    368          #else   //USE_HW_IR
+    369          	if(ir_cnt == 32)
+    370          	{
+    371          		ir_val = get_ir_val();
+    372          	}
+    373          #endif
+    374          	return ir_val;
+    375          }
+    376          
+    377          //ºìÍâÒ£¿Ø³õÊ¼»¯º¯Êý
+    378          #pragma location="IR_INIT"
+    379          void ir_init(void)
+    380          {
+    381          #if (USE_KEDIR && !USE_HW_IR)
+    382          	ir_state = 0;
+    383          #endif
+    384          	ir_cnt = 0;
+    385          	ir_key_sta = 0;
+    386          	repeat_cnt = 0;
+    387          	ir_data = 0x00;
+    388          	ir_code = 0x00;
+    389          
+    390          #if USE_KEDIR
+    391          #if USE_HW_IR
+    392          #if ((SYS_CRY == CRY_32K) && (CRY_PIN_NUM == CRY_2PIN))
+    393          	CLKCON2 = (CLKCON2 | BIT(5)) & (~BIT(4)); //IR clock select XOSC 32KHz£¨ÈÝ´íÐÔ¸üÇ¿£©
+    394          
+    395          	IRCFG = 0x5e;    //ONEFULL
+    396          	IRCFG = 0x28;    //ZEROCYC
+    397          	IRCFG = 0x04;    //REPEATCNT
+    398          	IRCFG = 0x08;    //ENDCONT
+    399          	IRCFG = 0x12;    //BEGINCNT
+    400          
+    401          	LEDHIGH = 0x00;
+    402          #else
+    403          	CLKCON2 &= ~(BIT(4)|BIT(5));    //IR clock select PLL 1M
+    404          #endif
+    405          #endif
+    406          
+    407          	LEDCON2 |= 0x83;                //IR input from comparator, comparator enable, comparator voltage enable
+    408          	LEDCON1 = (LEDCON1&0x3f) | (KEDIR_PORT<<6);
+    409          #if USE_HW_IR
+    410          	KEDIR_ENABLE_IR();
+    411          	IRCON |= BIT(1);
+    412          	asm("setb 0xBA");
+    413          	IE_TM1 = 1;
+    414          #else
+    415          #if USE_KEDIR && ((USE_KEDIR_TYPE == KEDIR_KEY_IR_LED) || (USE_KEDIR_TYPE == KEDIR_KEY_IR))
+    416          	KEDIR_ENABLE_IR();
+    417          #endif
+    418          	IE_TM1 = 0;
+    419          	TMR1CON0 = 0x7F;                //timer1 capture MIX IR
+    420          	TMR1CON1 = 0x36;
+    421          	TMR1PRH = 0xA1;
+    422          	TMR1PRL = 0x22;
+    423          	asm("ORL 0XB8,#0X04");
+    424          	IE_TM1 = 1;
+    425          #endif
+    426          	IRCON |= 1;                     //ir enable
+    427          
+    428          #else //USE_KEDIR
+    429          
+    430          #if USE_HW_IR
+    431          #if (SYS_CRY == CRY_32K)
+    432          	CLKCON2 = (CLKCON2 | BIT(5)) & (~BIT(4)); //IR clock select XOSC 32KHz£¨ÈÝ´íÐÔ¸üÇ¿£©
+    433          
+    434          	IRCFG = 0x5e;    //ONEFULL
+    435          	IRCFG = 0x28;    //ZEROCYC
+    436          	IRCFG = 0x04;    //REPEATCNT
+    437          	IRCFG = 0x08;    //ENDCONT
+    438          	IRCFG = 0x12;    //BEGINCNT
+    439          #else
+    440          	CLKCON2 &= ~(BIT(4)|BIT(5));    //IR clock select PLL 1M
+    441          #endif
+    442          
+    443          	//IRÍ¨µÀÑ¡Ôñ:(00-P10; 01-P03; 10-P02; 11-P27)
+    444          #if (IR_PORT == IR_P10)
+    445          	LEDCON1 &= ~(BIT(7) | BIT(6));  //P10
+    446          #elif (IR_PORT == IR_P03)
+    447          	LEDCON1 &= ~BIT(7);             //P03
+    448          	LEDCON1 |= BIT(6);
+    449          #elif (IR_PORT == IR_P02)
+    450          	LEDCON1 |= BIT(7);              //P02
+    451          	LEDCON1 &= ~BIT(6);
+    452          #elif (IR_PORT == IR_P27)
+    453          	LEDCON1 |= BIT(7) | BIT(6);     //P27
+    454          #endif
+    455          
+    456          	IRCON |= BIT(0) | BIT(1);
+    457          	asm("setb 0xBA");
+    458          	IE_TM1 = 1;
+    459          #else
+    460          	P0DIR |= BIT(7);
+    461          	IE_TM1 = 0;
+    462          	TMR1CON0 = 0x73;                //timer1 capture P07
+    463          	TMR1CON1 = 0x36;
+    464          	TMR1PRH = 0xA1;
+    465          	TMR1PRL = 0x22;
+    466          	asm("ORL 0XB8,#0X04");
+    467          	IE_TM1 = 1;
+    468          #endif
+    469          
+    470          #endif //USE_KEDIR
+    471          }
+    472          
+    473          #endif //USE_IR
+    474          
+
+
+   Segment part sizes:
+
+     Function/Label Bytes
+     -------------- -----
+
+ 
+ 
+ 0 bytes of memory
+
+Errors: none
+Warnings: none

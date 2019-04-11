@@ -1,0 +1,190 @@
+##############################################################################
+#                                                                            #
+# IAR 8051 C/C++ Compiler V7.20H/W32                   29/Jun/2018  19:55:12 #
+# Copyright 2004-2006 IAR Systems. All rights reserved.                      #
+#                                                                            #
+#    Core               =  plain                                             #
+#    Code model         =  near                                              #
+#    Data model         =  large                                             #
+#    Calling convention =  extended stack reentrant                          #
+#    Constant location  =  code                                              #
+#    Extended stack     =  enabled                                           #
+#    Dptr setup         =  1,16                                              #
+#    Source file        =  I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\display\theme_d #
+#                          efault\theme_speaker.c                            #
+#    Command line       =  -I E:\software\8051\INC\ -I                       #
+#                          E:\software\8051\INC\CLIB\ -I                     #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\COMMON\ -I      #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\INC\ -I         #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\config\ -I      #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\api\ -I         #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\fm\ -I          #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\fat\ -I         #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\display\ -I     #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\display\theme_d #
+#                          efault\ -I I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073 #
+#                          A_”ÓÃ©_AX1071_xxxxxxxx_20180629_Merlin_1\app\disp #
+#                          lay\led\ -I I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC07 #
+#                          3A_”ÓÃ©_AX1071_xxxxxxxx_20180629_Merlin_1\app\dis #
+#                          play\lcd\ -I I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC0 #
+#                          73A_”ÓÃ©_AX1071_xxxxxxxx_20180629_Merlin_1\app\ta #
+#                          sk\ -I I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”Ó #
+#                          Ã©_AX1071_xxxxxxxx_20180629_Merlin_1\app\user\    #
+#                          -I I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_A #
+#                          X1071_xxxxxxxx_20180629_Merlin_1\app\mem\ -I      #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\module\ -I      #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\key\ -I         #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\startmusic\ -I  #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\spi\ -D         #
+#                          AX107X_TAG -lC I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18B #
+#                          C073A_”ÓÃ©_AX1071_xxxxxxxx_20180629_Merlin_1\app\ #
+#                          Debug\List\ -o I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18B #
+#                          C073A_”ÓÃ©_AX1071_xxxxxxxx_20180629_Merlin_1\app\ #
+#                          Debug\Obj\ -e -z9 --core=plain --dptr=16,1        #
+#                          --data_model=large --code_model=near              #
+#                          --calling_convention=ext_stack_reentrant          #
+#                          --place_constants=code --nr_virtual_regs 20       #
+#                          --extended_stack I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\1 #
+#                          8BC073A_”ÓÃ©_AX1071_xxxxxxxx_20180629_Merlin_1\ap #
+#                          p\display\theme_default\theme_speaker.c           #
+#    List file          =  I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\Debug\List\them #
+#                          e_speaker.lst                                     #
+#    Object file        =  I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\Debug\Obj\theme #
+#                          _speaker.r51                                      #
+#                                                                            #
+#                                                                            #
+##############################################################################
+
+I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX1071_xxxxxxxx_20180629_Merlin_1\app\display\theme_default\theme_speaker.c
+      1          /*****************************************************************************
+      2           * Module    : Theme
+      3           * File      : lcd_default_idle.c
+      4           * Author    : Hanny
+      5           * Email     : coldney@yahoo.com.cn
+      6           * Function  : ø’œ–»ŒŒÒœ‘ æ÷˜Ã‚
+      7           *****************************************************************************/
+      8          #include "include.h"
+      9          
+     10          #pragma location="DISP_SPEAKER_SEG"
+
+   \                                 In segment DISP_SPEAKER_SEG, align 1, keep-with-next
+     11          void task_speaker_display(void)
+   \                     task_speaker_display:
+     12          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     13          #if ((DISP_TYPE != DISP_LED) && (DISP_TYPE != DISP_NO))
+     14          	ocx_event();
+   \   000000                ; Setup parameters for call to function ocx_event
+   \   000000   12....       LCALL   ocx_event
+     15          #if ENERGY_DISP_EN
+     16          	ocx_energy_set(tbl_energy_amux);
+     17          #endif
+     18          
+     19          	if(disp.update == 0)
+   \   000003   A2..         MOV     C,disp.0
+   \   000005   5023         JNC     ??task_speaker_display_0
+     20          	{
+     21          		return;
+     22          	}
+     23          	disp.update = 0;
+   \   000007   C2..         CLR     disp.0
+     24          
+     25          	//À¢–¬œ‘ æΩÁ√Ê
+     26          	if(ocx.disp_status == OCX_NULL)
+   \   000009   78..         MOV     R0,#(ocx + 3)
+   \   00000B   E6           MOV     A,@R0
+   \   00000C   FA           MOV     R2,A
+   \   00000D   7008         JNZ     ??task_speaker_display_1
+     27          	{
+     28          #if ENERGY_DISP_EN
+     29          		if(ocx.disp_energy)
+     30          		{
+     31          			disp_energy();
+     32          		}
+     33          		else
+     34          #endif
+     35          		{
+     36          			disp_str("o--o");
+   \   00000F                ; Setup parameters for call to function led_7p7s_disp_str
+   \   00000F   7A..         MOV     R2,#(`?<Constant "o--o">` & 0xff)
+   \   000011   7B..         MOV     R3,#((`?<Constant "o--o">` >> 8) & 0xff)
+   \   000013   12....       LCALL   led_7p7s_disp_str
+   \   000016   22           RET
+     37          		}
+     38          	}
+     39          	else if(ocx.disp_status == OCX_NUMBOX)
+   \                     ??task_speaker_display_1:
+   \   000017   7401         MOV     A,#0x1
+   \   000019   6A           XRL     A,R2
+   \   00001A   700B         JNZ     ??task_speaker_display_2
+     40          	{
+     41          		disp_numsel(ocx.number);
+   \   00001C                ; Setup parameters for call to function led_7p7s_dispnum
+   \   00001C   78..         MOV     R0,#(ocx + 13)
+   \   00001E   E6           MOV     A,@R0
+   \   00001F   FA           MOV     R2,A
+   \   000020   08           INC     R0
+   \   000021   E6           MOV     A,@R0
+   \   000022   FB           MOV     R3,A
+   \   000023   12....       LCALL   led_7p7s_dispnum
+   \   000026   22           RET
+     42          	}
+     43          	else
+     44          	{
+     45          		ocx_display();
+   \                     ??task_speaker_display_2:
+   \   000027                ; Setup parameters for call to function ocx_display
+   \   000027   12....       LCALL   ocx_display
+   \                     ??task_speaker_display_0:
+   \   00002A   22           RET
+     46          	}
+     47          #endif
+     48          }
+
+   \                                 In segment CODE_C, align 1
+   \                     `?<Constant "o--o">`:
+   \   000000   6F2D2D6F     DB "o--o"
+   \            00      
+
+   Maximum stack usage in bytes:
+
+     Function               EXT_STACK PSTACK XSTACK
+     --------               --------- ------ ------
+     task_speaker_display          0      0      0
+       -> ocx_event                0      0      0
+       -> led_7p7s_disp_str        0      0      0
+       -> led_7p7s_dispnum         0      0      0
+       -> ocx_display              0      0      0
+
+
+   Segment part sizes:
+
+     Function/Label       Bytes
+     --------------       -----
+     task_speaker_display   43
+     ?<Constant "o--o">      5
+
+ 
+  5 bytes in segment CODE_C
+ 43 bytes in segment DISP_SPEAKER_SEG
+ 
+ 48 bytes of CODE memory
+
+Errors: none
+Warnings: none

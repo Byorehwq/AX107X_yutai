@@ -1,0 +1,807 @@
+##############################################################################
+#                                                                            #
+# IAR 8051 C/C++ Compiler V7.20H/W32                   10/Sep/2015  19:03:27 #
+# Copyright 2004-2006 IAR Systems. All rights reserved.                      #
+#                                                                            #
+#    Core               =  plain                                             #
+#    Code model         =  near                                              #
+#    Data model         =  large                                             #
+#    Calling convention =  extended stack reentrant                          #
+#    Constant location  =  code                                              #
+#    Extended stack     =  enabled                                           #
+#    Dptr setup         =  1,16                                              #
+#    Source file        =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\display\display.c                     #
+#    Command line       =  -I "C:\Program Files\IAR Systems\Embedded         #
+#                          Workbench 4.05 Evaluation version\8051\INC\" -I   #
+#                          "C:\Program Files\IAR Systems\Embedded Workbench  #
+#                          4.05 Evaluation version\8051\INC\CLIB\" -I        #
+#                          "C:\Documents and Settings\Administrator\×ÀÃæ\lil #
+#                          y\15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX1 #
+#                          070_20150908\COMMON\" -I "C:\Documents and        #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\INC\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\config\" -I "C:\Documents and    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\api\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\fm\" -I "C:\Documents and        #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\fat\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\display\" -I "C:\Documents and   #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\displ #
+#                          ay\led\" -I "C:\Documents and                     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\displ #
+#                          ay\lcd\" -I "C:\Documents and                     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\task\ #
+#                          " -I "C:\Documents and Settings\Administrator\×ÀÃ #
+#                          æ\lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lil #
+#                          y_AX1070_20150908\user\" -I "C:\Documents and     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\mem\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\module\" -I "C:\Documents and    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\modul #
+#                          e\kedir\" -I "C:\Documents and                    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\key\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\startmusic\" -D UART_DEBUG -D    #
+#                          AX207X_TAG -lC "C:\Documents and                  #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\UART_ #
+#                          Debug\List\" -o "C:\Documents and                 #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\UART_ #
+#                          Debug\Obj\" -e -z9 --debug --core=plain           #
+#                          --dptr=16,1 --data_model=large --code_model=near  #
+#                          --calling_convention=ext_stack_reentrant          #
+#                          --place_constants=code --nr_virtual_regs 20       #
+#                          --extended_stack "C:\Documents and                #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\displ #
+#                          ay\display.c"                                     #
+#    List file          =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\UART_Debug\List\display.lst           #
+#    Object file        =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\UART_Debug\Obj\display.r51            #
+#                                                                            #
+#                                                                            #
+##############################################################################
+
+C:\Documents and Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX1070_20150908\display\display.c
+      1          #include "include.h"
+      2          #include "led_5c7s.h"
+      3          
+
+   \                                 In segment IDATA_N, align 1, root
+      4          IAR_IDATA_A type_ocx_ctl ocx;
+   \                     ocx:
+   \   000000                DS 17
+
+   \                                 In segment BDATA_N, align 1, root
+      5          IAR_BDATA_A type_disp_flag disp;
+   \                     disp:
+   \   000000                DS 1
+      6          
+      7          #pragma constseg="LED_DISP_TBL"
+
+   \                                 In segment LED_DISP_TBL, align 1
+      8          IAR_CONST char led_eq_str[6][5] =
+   \                     led_eq_str:
+   \   000000   206E6F72     DB " nor"
+   \            00      
+   \   000005   20706F70     DB " pop"
+   \            00      
+   \   00000A   20726F63     DB " roc"
+   \            00      
+   \   00000F   206A617A     DB " jaz"
+   \            00      
+   \   000014   20636C61     DB " cla"
+   \            00      
+   \   000019   20636F75     DB " cou"
+   \            00      
+      9          {
+     10          	" nor",
+     11          	" pop",
+     12          	" roc",
+     13          	" jaz",
+     14          	" cla",
+     15          	" cou",
+     16          };
+     17          
+
+   \                                 In segment LED_DISP_TBL, align 1
+     18          IAR_CONST char led_playmode_str[4][5] =
+   \                     led_playmode_str:
+   \   000000   616C6C00     DB "all"
+   \   000004   00           DB 0
+   \   000005   72646F00     DB "rdo"
+   \   000009   00           DB 0
+   \   00000A   6F6E6500     DB "one"
+   \   00000E   00           DB 0
+   \   00000F   666F6400     DB "fod"
+   \   000013   00           DB 0
+     19          {
+     20          	"all",
+     21          	"rdo",
+     22          	"one",
+     23          	"fod",
+     24          };
+     25          #pragma constseg=default
+     26          
+     27          //Êý×Ö¿ò
+     28          #pragma location="LED_DISP_SEG"
+
+   \                                 In segment LED_DISP_SEG, align 1, keep-with-next
+     29          void ocx_shownum(u16 number)
+   \                     ocx_shownum:
+     30          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     31          	ocx.number = number;
+   \   000000   78..         MOV     R0,#(ocx + 13)
+   \   000002   EA           MOV     A,R2
+   \   000003   F6           MOV     @R0,A
+   \   000004   08           INC     R0
+   \   000005   EB           MOV     A,R3
+   \   000006   F6           MOV     @R0,A
+     32          	ocx.status = OCX_NUMBOX;
+   \   000007   78..         MOV     R0,#(ocx + 2)
+   \   000009   7601         MOV     @R0,#0x1
+     33          	ocx.show_time = 300;
+   \   00000B                REQUIRE ?Subroutine0
+   \   00000B                ; // Fall through to label ?Subroutine0
+     34          	disp.update = 1;
+     35          }
+
+   \                                 In segment LED_DISP_SEG, align 1, keep-with-next
+   \                     ?Subroutine0:
+   \   000000   18           DEC     R0
+   \   000001   18           DEC     R0
+   \   000002   762C         MOV     @R0,#0x2c
+   \   000004   08           INC     R0
+   \   000005   7601         MOV     @R0,#0x1
+   \   000007   D2..         SETB    disp.0
+   \   000009   22           RET
+     36          
+     37          //Éè±¸×Ö·û
+     38          #pragma location="LED_DISP_SEG"
+
+   \                                 In segment LED_DISP_SEG, align 1, keep-with-next
+     39          void ocx_show_device(void)
+   \                     ocx_show_device:
+     40          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     41          	if(fs_cur_dev() == DEVICE_SDMMC)
+   \   000000                ; Setup parameters for call to function fs_cur_dev
+   \   000000   12....       LCALL   fs_cur_dev
+   \   000003   E9           MOV     A,R1
+   \   000004   600F         JZ      ??ocx_show_device_0
+     42          	{
+     43          #if DISP_Show_Device
+     44          		ocx_msgbox("-2-");
+     45          #endif
+     46          	}
+     47          	else if(fs_cur_dev() == DEVICE_SDMMC1)
+   \   000006                ; Setup parameters for call to function fs_cur_dev
+   \   000006   12....       LCALL   fs_cur_dev
+   \   000009   E9           MOV     A,R1
+   \   00000A   6401         XRL     A,#0x1
+   \   00000C   6007         JZ      ??ocx_show_device_0
+     48          	{	// ÄÚÖÃ TF¿¨ »òÄÚÖÃ Flash
+     49          #if DISP_Show_Device
+     50          		ocx_msgbox("-1-");
+     51          #endif
+     52          	}
+     53          	else
+     54          	{
+     55          		ocx_msgbox("---");
+   \   00000E                ; Setup parameters for call to function ocx_msgbox
+   \   00000E   7A..         MOV     R2,#(`?<Constant "---">` & 0xff)
+   \   000010   7B..         MOV     R3,#((`?<Constant "---">` >> 8) & 0xff)
+   \   000012   12....       LCALL   ocx_msgbox
+     56          	}
+     57          
+     58          }
+   \                     ??ocx_show_device_0:
+   \   000015   22           RET
+     59          
+     60          
+     61          //ÊýÔñ¿ò
+     62          #pragma location="LED_DISP_SEG"
+
+   \                                 In segment LED_DISP_SEG, align 1, keep-with-next
+     63          void ocx_shownumsel(u8 number)
+   \                     ocx_shownumsel:
+     64          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     65          #if USE_IR_NUM
+     66          	if(ocx.status != OCX_NUMSELBOX || ocx.number > 999)
+     67          	{
+     68          		ocx.number = number;
+     69          		ocx.status = OCX_NUMSELBOX;
+     70          	}
+     71          	else
+     72          	{
+     73          		ocx.number = (ocx.number * 10) + number;
+     74          	}
+     75          	ocx.show_time = 300;
+     76          	disp.update = 1;
+     77          #endif
+     78          }
+   \   000000   22           RET
+     79          
+     80          //ÒôÁ¿¿ò
+     81          #pragma location="LED_DISP_SEG"
+
+   \                                 In segment LED_DISP_SEG, align 1, keep-with-next
+     82          void ocx_showvol(void)
+   \                     ocx_showvol:
+     83          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     84          	ocx.status = OCX_VOLBOX;
+   \   000000   78..         MOV     R0,#(ocx + 2)
+   \   000002   7603         MOV     @R0,#0x3
+     85          	ocx.show_time = 300;
+   \   000004   80..         SJMP    ?Subroutine0
+     86          	disp.update = 1;
+     87          }
+     88          
+     89          //ÏûÏ¢¿ò
+     90          #pragma location="LED_DISP_SEG"
+
+   \                                 In segment LED_DISP_SEG, align 1, keep-with-next
+     91          void ocx_msgbox(const char __code *str)
+   \                     ocx_msgbox:
+     92          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     93          	disp_str(str);
+   \   000000                ; Setup parameters for call to function led_5c7s_disp_str
+   \   000000   12....       LCALL   led_5c7s_disp_str
+     94          	ocx.status = OCX_MSGBOX;
+   \   000003   78..         MOV     R0,#(ocx + 2)
+   \   000005   7604         MOV     @R0,#0x4
+     95          	ocx.show_time = 300;
+   \   000007   80..         SJMP    ?Subroutine0
+     96          	disp.update = 1;
+     97          }
+     98          
+     99          //²¥·ÅÄ£Ê½¿ò
+    100          #pragma location="LED_DISP_SEG"
+
+   \                                 In segment LED_DISP_SEG, align 1, keep-with-next
+    101          void ocx_show_playmode(void)
+   \                     ocx_show_playmode:
+    102          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    103          	ocx_msgbox(led_playmode_str[sys_ctl.mode_play]);
+   \   000000                ; Setup parameters for call to function ocx_msgbox
+   \   000000   90....       MOV     DPTR,#sys_ctl
+   \   000003   E0           MOVX    A,@DPTR
+   \   000004   75F005       MOV     B,#0x5
+   \   000007   A4           MUL     AB
+   \   000008   24..         ADD     A,#(led_playmode_str & 0xff)
+   \   00000A   FA           MOV     R2,A
+   \   00000B   E5F0         MOV     A,B
+   \   00000D   34..         ADDC    A,#((led_playmode_str >> 8) & 0xff)
+   \   00000F                REQUIRE ?Subroutine1
+   \   00000F                ; // Fall through to label ?Subroutine1
+    104          }
+
+   \                                 In segment LED_DISP_SEG, align 1, keep-with-next
+   \                     ?Subroutine1:
+   \   000000   FB           MOV     R3,A
+   \   000001   12....       LCALL   ocx_msgbox
+   \   000004   22           RET
+    105          
+    106          //EQ¿ò
+    107          #pragma location="LED_DISP_SEG"
+
+   \                                 In segment LED_DISP_SEG, align 1, keep-with-next
+    108          void ocx_showeq(void)
+   \                     ocx_showeq:
+    109          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    110          	ocx_msgbox(led_eq_str[sys_ctl.eq_num]);
+   \   000000                ; Setup parameters for call to function ocx_msgbox
+   \   000000   90....       MOV     DPTR,#(sys_ctl + 1)
+   \   000003   E0           MOVX    A,@DPTR
+   \   000004   75F005       MOV     B,#0x5
+   \   000007   A4           MUL     AB
+   \   000008   24..         ADD     A,#(led_eq_str & 0xff)
+   \   00000A   FA           MOV     R2,A
+   \   00000B   E5F0         MOV     A,B
+   \   00000D   34..         ADDC    A,#((led_eq_str >> 8) & 0xff)
+   \   00000F   80..         SJMP    ?Subroutine1
+    111          }
+    112          
+    113          //FMÆµµÀ¿ò
+    114          #pragma location="LED_DISP_SEG"
+
+   \                                 In segment LED_DISP_SEG, align 1, keep-with-next
+    115          void ocx_showch(u8 ch)
+   \                     ocx_showch:
+    116          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    117          	disp_channel(ch);
+   \   000000                ; Setup parameters for call to function led_5c7s_disp_ch
+   \   000000   12....       LCALL   led_5c7s_disp_ch
+    118          	ocx.status = OCX_MSGBOX;
+   \   000003   78..         MOV     R0,#(ocx + 2)
+   \   000005   7604         MOV     @R0,#0x4
+    119          	ocx.show_time = 200;
+   \   000007   18           DEC     R0
+   \   000008   18           DEC     R0
+   \   000009   76C8         MOV     @R0,#-0x38
+   \   00000B   08           INC     R0
+   \   00000C   7600         MOV     @R0,#0x0
+    120          	disp.update = 1;
+   \   00000E   D2..         SETB    disp.0
+    121          }
+   \   000010   22           RET
+    122          
+    123          //ÆµÂÊÉèÖÃ
+    124          #pragma location="DISP_OCX_SEG"
+
+   \                                 In segment DISP_OCX_SEG, align 1, keep-with-next
+    125          void ocx_freq_set(u16 freq)
+   \                     ocx_freq_set:
+    126          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    127          	if(ocx.disp_status != OCX_NULL)
+   \   000000   78..         MOV     R0,#(ocx + 3)
+   \   000002   E6           MOV     A,@R0
+   \   000003   7014         JNZ     ??ocx_freq_set_0
+    128          	{
+    129          		return;
+    130          	}
+    131          	if(ocx.freq == freq)
+   \   000005   78..         MOV     R0,#(ocx + 15)
+   \   000007   EA           MOV     A,R2
+   \   000008   66           XRL     A,@R0
+   \   000009   7003         JNZ     ??ocx_freq_set_1
+   \   00000B   08           INC     R0
+   \   00000C   EB           MOV     A,R3
+   \   00000D   66           XRL     A,@R0
+   \                     ??ocx_freq_set_1:
+   \   00000E   6009         JZ      ??ocx_freq_set_0
+    132          	{
+    133          		return;
+    134          	}
+    135          	ocx.freq = freq;
+   \   000010   78..         MOV     R0,#(ocx + 15)
+   \   000012   EA           MOV     A,R2
+   \   000013   F6           MOV     @R0,A
+   \   000014   08           INC     R0
+   \   000015   EB           MOV     A,R3
+   \   000016   F6           MOV     @R0,A
+    136          	disp.update = 1;            //ÉèÖÃ¸üÐÂ±êÖ¾
+   \   000017   D2..         SETB    disp.0
+    137          }
+   \                     ??ocx_freq_set_0:
+   \   000019   22           RET
+    138          
+    139          //Ê±¼äÏÔÊ¾ÉèÖÃ
+    140          #pragma location="DISP_OCX_SEG"
+
+   \                                 In segment DISP_OCX_SEG, align 1, keep-with-next
+    141          void ocx_time_set(u8 timeh, u8 timel)
+   \                     ocx_time_set:
+    142          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    143          #if (DISP_TYPE != DISP_LED)
+    144          	if(ocx.disp_status != OCX_NULL)
+   \   000000   78..         MOV     R0,#(ocx + 3)
+   \   000002   E6           MOV     A,@R0
+   \   000003   7014         JNZ     ??ocx_time_set_0
+    145          	{
+    146          		return;
+    147          	}
+    148          	if(ocx.timeh == timeh && ocx.timel == timel)
+   \   000005   78..         MOV     R0,#(ocx + 11)
+   \   000007   E6           MOV     A,@R0
+   \   000008   69           XRL     A,R1
+   \   000009   7005         JNZ     ??ocx_time_set_1
+   \   00000B   08           INC     R0
+   \   00000C   E6           MOV     A,@R0
+   \   00000D   6A           XRL     A,R2
+   \   00000E   6009         JZ      ??ocx_time_set_0
+    149          	{
+    150          		return;
+    151          	}
+    152          	ocx.timeh = timeh;
+   \                     ??ocx_time_set_1:
+   \   000010   78..         MOV     R0,#(ocx + 11)
+   \   000012   E9           MOV     A,R1
+   \   000013   F6           MOV     @R0,A
+    153          	ocx.timel = timel;
+   \   000014   08           INC     R0
+   \   000015   EA           MOV     A,R2
+   \   000016   F6           MOV     @R0,A
+    154          	disp.update = 1;            //ÉèÖÃ¸üÐÂ±êÖ¾
+   \   000017   D2..         SETB    disp.0
+    155          #endif
+    156          }
+   \                     ??ocx_time_set_0:
+   \   000019   22           RET
+    157          
+    158          //ÄÜÁ¿ÏÔÊ¾ÉèÖÃ
+    159          #if ENERGY_DISP_EN
+    160          #pragma location="DISP_OCX_SEG"
+    161          void ocx_energy_set(const u16 __code *tbl)
+    162          {
+    163          	energy_calc(tbl);
+    164          	if(ocx.energy_cnt == energy_cnt)
+    165          	{
+    166          		return;
+    167          	}
+    168          	ocx.energy_cnt = energy_cnt;
+    169          	disp.update = 1;            //ÉèÖÃ¸üÐÂ±êÖ¾
+    170          }
+    171          #endif
+    172          
+    173          //ÉÁË¸¿ØÖÆ
+    174          #pragma location="DISP_OCX_SEG"
+
+   \                                 In segment DISP_OCX_SEG, align 1, keep-with-next
+    175          void ocx_blink_set(u8 icon, u8 num)
+   \                     ocx_blink_set:
+    176          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    177          #if (DISP_TYPE != DISP_LED)
+    178          	ocx.blink_icon = icon;
+   \   000000   78..         MOV     R0,#(ocx + 6)
+   \   000002   E9           MOV     A,R1
+   \   000003   F6           MOV     @R0,A
+    179          	if(ocx.blink_num != num)
+   \   000004   08           INC     R0
+   \   000005   E6           MOV     A,@R0
+   \   000006   6A           XRL     A,R2
+   \   000007   6005         JZ      ??ocx_blink_set_0
+    180          	{
+    181          		ocx.blink_num = num;
+   \   000009   EA           MOV     A,R2
+   \   00000A   F6           MOV     @R0,A
+    182          		disp_time();
+   \   00000B                ; Setup parameters for call to function led_5c7s_disp_time
+   \   00000B   12....       LCALL   led_5c7s_disp_time
+    183          	}
+    184          	disp.update = 1;            //ÉèÖÃ¸üÐÂ±êÖ¾
+   \                     ??ocx_blink_set_0:
+   \   00000E   D2..         SETB    disp.0
+    185          #endif
+    186          }
+   \   000010   22           RET
+    187          
+    188          //¿Ø¼þÑÓÊ±£¬5msµ÷ÓÃÒ»´Î
+    189          #pragma location="DISP_OCX_SEG"
+
+   \                                 In segment DISP_OCX_SEG, align 1, keep-with-next
+    190          void ocx_delay(void)
+   \                     ocx_delay:
+    191          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    192          #if ((DISP_TYPE != DISP_LED) && (DISP_TYPE != DISP_NO))
+    193          	if(ocx.show_time != 0)
+   \   000000   78..         MOV     R0,#ocx
+   \   000002   E6           MOV     A,@R0
+   \   000003   7002         JNZ     ??ocx_delay_0
+   \   000005   08           INC     R0
+   \   000006   E6           MOV     A,@R0
+   \                     ??ocx_delay_0:
+   \   000007   600B         JZ      ??ocx_delay_1
+    194          	{
+    195          		ocx.show_time--;
+   \   000009   78..         MOV     R0,#ocx
+   \   00000B   E6           MOV     A,@R0
+   \   00000C   24FF         ADD     A,#-0x1
+   \   00000E   F6           MOV     @R0,A
+   \   00000F   08           INC     R0
+   \   000010   E6           MOV     A,@R0
+   \   000011   34FF         ADDC    A,#-0x1
+   \   000013   F6           MOV     @R0,A
+    196          	}
+    197          
+    198          	if(ocx.blink_time != 0)
+   \                     ??ocx_delay_1:
+   \   000014   78..         MOV     R0,#(ocx + 4)
+   \   000016   E6           MOV     A,@R0
+   \   000017   600A         JZ      ??ocx_delay_2
+    199          	{
+    200          		ocx.blink_time--;
+   \   000019   16           DEC     @R0
+    201          		if(ocx.blink_time == BLINK_TIME)
+   \   00001A   E6           MOV     A,@R0
+   \   00001B   6464         XRL     A,#0x64
+   \   00001D   7009         JNZ     ??ocx_delay_3
+    202          		{
+    203          			ocx.blink_sta = 0;
+   \   00001F   08           INC     R0
+   \   000020   7600         MOV     @R0,#0x0
+   \   000022   22           RET
+    204          		}
+    205          	}
+    206          	else
+    207          	{
+    208          		ocx.blink_time = (BLINK_TIME * 2);
+   \                     ??ocx_delay_2:
+   \   000023   76C8         MOV     @R0,#-0x38
+    209          		ocx.blink_sta = 1;
+   \   000025   08           INC     R0
+   \   000026   7601         MOV     @R0,#0x1
+    210          	}
+    211          #endif
+    212          
+    213          #if ((DISP_TYPE == DISP_LED) && (USE_IR_NUM))
+    214          	if(ocx.show_time != 0)
+    215          	{
+    216          		ocx.show_time--;
+    217          	}
+    218          #endif
+    219          }
+   \                     ??ocx_delay_3:
+   \   000028   22           RET
+    220          
+    221          #pragma location="DISP_OCX_SEG"
+
+   \                                 In segment DISP_OCX_SEG, align 1, keep-with-next
+    222          void ocx_clear(void)
+   \                     ocx_clear:
+    223          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    224          #if ((DISP_TYPE != DISP_LED) && (DISP_TYPE != DISP_NO))
+    225          	ocx.blink_sta = 0;
+   \   000000   78..         MOV     R0,#(ocx + 5)
+   \   000002   7600         MOV     @R0,#0x0
+    226          	ocx.blink_icon = 0;
+   \   000004   08           INC     R0
+   \   000005   7600         MOV     @R0,#0x0
+    227          	ocx.blink_num = 0;
+   \   000007   08           INC     R0
+   \   000008   7600         MOV     @R0,#0x0
+    228          	ocx.status = OCX_NULL;
+   \   00000A   78..         MOV     R0,#(ocx + 2)
+   \   00000C   7600         MOV     @R0,#0x0
+    229          	disp.update = 1;    //ÉèÖÃ¸üÐÂ±êÖ¾
+   \   00000E   D2..         SETB    disp.0
+    230          #endif
+    231          
+    232          #if ((DISP_TYPE == DISP_LED) && (USE_IR_NUM))
+    233          	ocx.status = OCX_NULL;
+    234          #endif
+    235          }
+   \   000010   22           RET
+    236          
+    237          //¿Ø¼þÊÂ¼þ
+    238          #pragma location="DISP_OCX_SEG"
+
+   \                                 In segment DISP_OCX_SEG, align 1, keep-with-next
+    239          void ocx_event(void)
+   \                     ocx_event:
+    240          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    241          #if ((DISP_TYPE != DISP_LED) && (DISP_TYPE != DISP_NO))
+    242          	if(ocx.show_time == 0)
+   \   000000   78..         MOV     R0,#ocx
+   \   000002   E6           MOV     A,@R0
+   \   000003   7002         JNZ     ??ocx_event_0
+   \   000005   08           INC     R0
+   \   000006   E6           MOV     A,@R0
+   \                     ??ocx_event_0:
+   \   000007   700F         JNZ     ??ocx_event_1
+    243          	{
+    244          		if(ocx.status == OCX_NUMSELBOX)
+   \   000009   78..         MOV     R0,#(ocx + 2)
+   \   00000B   E6           MOV     A,@R0
+   \   00000C   6402         XRL     A,#0x2
+   \   00000E   7004         JNZ     ??ocx_event_2
+    245          		{
+    246          			ocx.event = 1;
+   \   000010   78..         MOV     R0,#(ocx + 10)
+   \   000012   7601         MOV     @R0,#0x1
+    247          		}
+    248          		ocx.status = OCX_NULL;
+   \                     ??ocx_event_2:
+   \   000014   78..         MOV     R0,#(ocx + 2)
+   \   000016   7600         MOV     @R0,#0x0
+    249          	}
+    250          	if(ocx.status != ocx.disp_status)
+   \                     ??ocx_event_1:
+   \   000018   78..         MOV     R0,#(ocx + 2)
+   \   00001A   E6           MOV     A,@R0
+   \   00001B   FA           MOV     R2,A
+   \   00001C   08           INC     R0
+   \   00001D   E6           MOV     A,@R0
+   \   00001E   6A           XRL     A,R2
+   \   00001F   6004         JZ      ??ocx_event_3
+    251          	{
+    252          		ocx.disp_status = ocx.status;
+   \   000021   EA           MOV     A,R2
+   \   000022   F6           MOV     @R0,A
+    253          		disp.update = 1;            //ÉèÖÃ¸üÐÂ±êÖ¾
+   \   000023   D2..         SETB    disp.0
+    254          	}
+    255          #endif
+    256          
+    257          #if ((DISP_TYPE == DISP_LED) && (USE_IR_NUM))
+    258          	if(ocx.show_time == 0)
+    259          	{
+    260          		if(ocx.status == OCX_NUMSELBOX)
+    261          		{
+    262          			ocx.event = 1;
+    263          		}
+    264          		ocx.status = OCX_NULL;
+    265          	}
+    266          #endif
+    267          }
+   \                     ??ocx_event_3:
+   \   000025   22           RET
+    268          
+    269          //ÏÔÊ¾¿Ø¼þ
+    270          #pragma location="DISP_OCX_SEG"
+
+   \                                 In segment DISP_OCX_SEG, align 1, keep-with-next
+    271          void ocx_display(void)
+   \                     ocx_display:
+    272          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    273          	switch(ocx.disp_status)
+   \   000000   78..         MOV     R0,#(ocx + 3)
+   \   000002   E6           MOV     A,@R0
+   \   000003   12....       LCALL   ?UC_SWITCH_DENSE
+   \                     `?<Jumptable for ocx_display>_0`:
+   \   000006   03           DB        3
+   \   000007   00           DB        0
+   \   000008   ....         DW        ??ocx_display_0
+   \   00000A   ....         DW        ??ocx_display_1
+    274          	{
+    275          		//case OCX_MSGBOX:
+    276          		//    break;
+    277          	case OCX_VOLBOX:
+    278          		disp_vol();
+   \                     ??ocx_display_1:
+   \   00000C                ; Setup parameters for call to function led_5c7s_disp_vol
+   \   00000C   12....       LCALL   led_5c7s_disp_vol
+    279          		break;
+    280          	}
+    281          }
+   \                     ??ocx_display_0:
+   \   00000F   22           RET
+    282          
+    283          //ÏÔÊ¾³õÊ¼»¯
+    284          #pragma location="DISP_OCX_SEG"
+
+   \                                 In segment DISP_OCX_SEG, align 1, keep-with-next
+    285          void disp_init(void)
+   \                     disp_init:
+    286          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    287          	disp_port_init();
+   \   000000                ; Setup parameters for call to function led_5c7s_init
+   \   000000   12....       LCALL   led_5c7s_init
+    288          #if SOFT_POWEROFF_EN
+    289          	disp_clear();
+    290          #else
+    291          	showhello();
+   \   000003                ; Setup parameters for call to function led_5c7s_disp_str
+   \   000003   7A..         MOV     R2,#(`?<Constant "888">` & 0xff)
+   \   000005   7B..         MOV     R3,#((`?<Constant "888">` >> 8) & 0xff)
+   \   000007   12....       LCALL   led_5c7s_disp_str
+    292          #endif
+    293          }
+   \   00000A   22           RET
+
+   \                                 In segment CODE_C, align 1
+   \                     `?<Constant "---">`:
+   \   000000   2D2D2D00     DB "---"
+
+   \                                 In segment CODE_C, align 1
+   \                     `?<Constant "888">`:
+   \   000000   38383800     DB "888"
+
+   Maximum stack usage in bytes:
+
+     Function                EXT_STACK PSTACK XSTACK
+     --------                --------- ------ ------
+     disp_init                      0      0      0
+       -> led_5c7s_init             0      0      0
+       -> led_5c7s_disp_str         0      0      0
+     ocx_blink_set                  0      0      0
+       -> led_5c7s_disp_time        0      0      0
+     ocx_clear                      0      0      0
+     ocx_delay                      0      0      0
+     ocx_display                    0      0      0
+       -> led_5c7s_disp_vol         0      0      0
+     ocx_event                      0      0      0
+     ocx_freq_set                   0      0      0
+     ocx_msgbox                     0      0      0
+       -> led_5c7s_disp_str         0      0      0
+     ocx_show_device                0      0      0
+       -> fs_cur_dev                0      0      0
+       -> fs_cur_dev                0      0      0
+       -> ocx_msgbox                0      0      0
+     ocx_show_playmode              0      0      0
+       -> ocx_msgbox                0      0      0
+     ocx_showch                     0      0      0
+       -> led_5c7s_disp_ch          0      0      0
+     ocx_showeq                     0      0      0
+       -> ocx_msgbox                0      0      0
+     ocx_shownum                    0      0      0
+     ocx_shownumsel                 0      0      0
+     ocx_showvol                    0      0      0
+     ocx_time_set                   0      0      0
+
+
+   Segment part sizes:
+
+     Function/Label    Bytes
+     --------------    -----
+     ocx                 17
+     disp                 1
+     led_eq_str          30
+     led_playmode_str    20
+     ocx_shownum         11
+     ?Subroutine0        10
+     ocx_show_device     22
+     ocx_shownumsel       1
+     ocx_showvol          6
+     ocx_msgbox           9
+     ocx_show_playmode   15
+     ?Subroutine1         5
+     ocx_showeq          17
+     ocx_showch          17
+     ocx_freq_set        26
+     ocx_time_set        26
+     ocx_blink_set       17
+     ocx_delay           41
+     ocx_clear           17
+     ocx_event           38
+     ocx_display         16
+     disp_init           11
+     ?<Constant "---">    4
+     ?<Constant "888">    4
+
+ 
+   1 byte  in segment BDATA_N
+   8 bytes in segment CODE_C
+ 192 bytes in segment DISP_OCX_SEG
+  17 bytes in segment IDATA_N
+ 113 bytes in segment LED_DISP_SEG
+  50 bytes in segment LED_DISP_TBL
+ 
+ 363 bytes of CODE  memory
+   1 byte  of DATA  memory
+  17 bytes of IDATA memory
+
+Errors: none
+Warnings: none

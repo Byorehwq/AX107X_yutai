@@ -1,0 +1,806 @@
+##############################################################################
+#                                                                            #
+# IAR 8051 C/C++ Compiler V7.20H/W32                   27/Jun/2018  22:48:35 #
+# Copyright 2004-2006 IAR Systems. All rights reserved.                      #
+#                                                                            #
+#    Core               =  plain                                             #
+#    Code model         =  near                                              #
+#    Data model         =  large                                             #
+#    Calling convention =  extended stack reentrant                          #
+#    Constant location  =  code                                              #
+#    Extended stack     =  enabled                                           #
+#    Dptr setup         =  1,16                                              #
+#    Source file        =  user/user_music.c                                 #
+#    Command line       =  -f option_c51.cfg (-ICOMMON\ -IINC\ -Iconfig\     #
+#                          -Iapi\ -Ifm\ -Ifat\ -Idisplay\                    #
+#                          -Idisplay\theme_default\ -Idisplay\led\           #
+#                          -Idisplay\lcd\ -Itask\ -Iuser\ -Imem\ -Imodule\   #
+#                          -Ikey\ -Istartmusic\ -Ispi\ -e -z9 --core=plain   #
+#                          --dptr=16,1 --data_model=large --code_model=near  #
+#                          --calling_convention=ext_stack_reentrant          #
+#                          --place_constants=code --nr_virtual_regs 20       #
+#                          --extended_stack) -DAX207X_TAG --debug -lC        #
+#                          DebugBC/List -o DebugBC/Obj/user_music.r51        #
+#                          user/user_music.c                                 #
+#    List file          =  DebugBC/List/user_music.lst                       #
+#    Object file        =  DebugBC/Obj/user_music.r51                        #
+#                                                                            #
+#                                                                            #
+##############################################################################
+
+R:\18BC073A_宇泰_AX1071_xxxxxxxx_20180627\app\user\user_music.c
+      1          /*****************************************************************************
+      2           * Module    : User
+      3           * File      : user_music.c
+      4           * Author    : Hanny
+      5           * Email     : coldney@yahoo.com.cn
+      6           * Function  : 用户音乐播放控制
+      7           *****************************************************************************/
+      8          #include "include.h"
+
+   \                                 In segment SFR_AN, at 0xad
+   \   unsigned char volatile __sfr SPMODE
+   \                     SPMODE:
+   \   000000                DS 1
+
+   \                                 In segment SFR_AN, at 0xf7
+   \   unsigned char volatile __sfr WDTCON
+   \                     WDTCON:
+   \   000000                DS 1
+      9          
+
+   \                                 In segment XDATA_Z, align 1, keep-with-next
+   \   000000                REQUIRE __INIT_XDATA_Z
+     10          type_user_music u_msc;
+   \                     u_msc:
+   \   000000                DS 23
+
+   \                                 In segment BDATA_N, align 1, root
+     11          IAR_BDATA_A type_user_music_flag b_msc;
+   \                     b_msc:
+   \   000000                DS 1
+     12          
+     13          
+     14          //音乐解码
+     15          #pragma location="MUSIC_SEG"
+
+   \                                 In segment MUSIC_SEG, align 1, keep-with-next
+     16          void music_decode(void)
+   \                     music_decode:
+     17          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     18          	if(msc_ctl.status == STATUS_PLAY_PLAYING || msc_ctl.status == STATUS_PLAY_FAST)
+   \   000000   90....       MOV     DPTR,#(msc_ctl + 1)
+   \   000003   E0           MOVX    A,@DPTR
+   \   000004   FA           MOV     R2,A
+   \   000005   7402         MOV     A,#0x2
+   \   000007   6A           XRL     A,R2
+   \   000008   6005         JZ      ??music_decode_0
+   \   00000A   7404         MOV     A,#0x4
+   \   00000C   6A           XRL     A,R2
+   \   00000D   7003         JNZ     ??music_decode_1
+     19          	{
+     20          #if AB_REPEAT_EN
+     21          		if(msc_ctl.status == STATUS_PLAY_PLAYING)
+     22          		{
+     23          			if(!music_repeat_hook())
+     24          			{
+     25          				return;
+     26          			}
+     27          		}
+     28          #endif
+     29          
+     30          #if WAV_SUPPORT
+     31          		switch(msc_ctl.type)
+     32          		{
+     33          		case TYPE_MP3:
+     34          			msc_mp3_decode();
+     35          			break;
+     36          
+     37          		case TYPE_WAV:
+     38          			msc_wav_decode();
+     39          			break;
+     40          		default:
+     41          			break;
+     42          		}
+     43          #else
+     44          		msc_mp3_decode();
+   \                     ??music_decode_0:
+   \   00000F                ; Setup parameters for call to function msc_mp3_decode
+   \   00000F   12....       LCALL   msc_mp3_decode
+     45          #endif
+     46          	}
+     47          }
+   \                     ??music_decode_1:
+   \   000012   22           RET
+     48          
+     49          #pragma location="MUSIC_SEG"
+
+   \                                 In segment MUSIC_SEG, align 1, keep-with-next
+     50          void music_set_jmp(void)
+   \                     music_set_jmp:
+     51          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     52          #if WAV_SUPPORT
+     53          	if(msc_ctl.type == TYPE_WAV)
+     54          	{
+     55          		wav_set_jump();
+     56          	}
+     57          	else
+     58          	{
+     59          		mp3_set_jump();
+     60          	}
+     61          #else
+     62          	mp3_set_jump();
+   \   000000                ; Setup parameters for call to function mp3_set_jump
+   \   000000   12....       LCALL   mp3_set_jump
+     63          #endif
+     64          }
+   \   000003   22           RET
+     65          
+     66          bool is_wma_file(void);
+     67          u8 *decoder_peek(void);
+     68          
+     69          #if !WAV_SUPPORT
+
+   \                                 In segment CODE_C, align 1
+     70          IAR_CONST u8 wav_header[4] =
+   \                     wav_header:
+   \   000000   52494646     DB 82, 73, 70, 70
+     71          {
+     72          	'R', 'I', 'F', 'F',
+     73          };
+     74          #endif
+     75          
+     76          #pragma location="MUSIC_SEG"
+
+   \                                 In segment MUSIC_SEG, align 1, keep-with-next
+     77          bool is_other_file(void)
+   \                     is_other_file:
+     78          {
+   \   000000   EE           MOV     A,R6
+   \   000001   C0E0         PUSH    A
+   \   000003   EF           MOV     A,R7
+   \   000004   C0E0         PUSH    A
+   \   000006                ; Saved register size: 2
+   \   000006                ; Auto size: 0
+     79          	if(is_wma_file())
+   \   000006                ; Setup parameters for call to function is_wma_file
+   \   000006   12....       LCALL   is_wma_file
+   \   000009   5003         JNC     ??is_other_file_0
+     80          	{
+     81          		return true;    //WMA
+   \                     ??is_other_file_1:
+   \   00000B   D3           SETB    C
+   \   00000C   8015         SJMP    ??is_other_file_2
+     82          	}
+     83          #if !WAV_SUPPORT
+     84          	else if(0 == smemcmp_c(decoder_peek(), wav_header, 4))
+   \                     ??is_other_file_0:
+   \   00000E                ; Setup parameters for call to function smemcmp_c
+   \   00000E   7404         MOV     A,#0x4
+   \   000010   C0E0         PUSH    A
+   \   000012                ; Setup parameters for call to function decoder_peek
+   \   000012   12....       LCALL   decoder_peek
+   \   000015   D0E0         POP     A
+   \   000017   F9           MOV     R1,A
+   \   000018   7C..         MOV     R4,#(wav_header & 0xff)
+   \   00001A   7D..         MOV     R5,#((wav_header >> 8) & 0xff)
+   \   00001C   12....       LCALL   smemcmp_c
+   \   00001F   E9           MOV     A,R1
+   \   000020   60E9         JZ      ??is_other_file_1
+     85          	{
+     86          		return true;    //WAV
+     87          	}
+     88          #endif
+     89          	return false;
+   \   000022   C3           CLR     C
+   \                     ??is_other_file_2:
+   \   000023   D0E0         POP     A
+   \   000025   FF           MOV     R7,A
+   \   000026   D0E0         POP     A
+   \   000028   FE           MOV     R6,A
+   \   000029   22           RET
+     90          }
+     91          
+     92          /*----------------------------------------------------------------------------*/
+     93          /**@brief  解码软中断
+     94             @param  无
+     95             @return 无
+     96             @note
+     97          */
+     98          /*----------------------------------------------------------------------------*/
+     99          #pragma optimize=speed high
+    100          #pragma vector = VECTOR_OFFSET(SOFT_INT)		//soft int for decode
+    101          #pragma register_bank=1
+    102          #pragma location="INTERRUPT"
+
+   \                                 In segment INTERRUPT, align 1, keep-with-next
+    103          __interrupt void soft_isr(void)
+   \                     soft_isr:
+   \   000000                REQUIRE __REG_BANK_1
+    104          {
+   \   000000   C0E0         PUSH    A
+   \   000002   C0D0         PUSH    PSW
+   \   000004   75D008       MOV     PSW,#0x8
+   \   000007   C082         PUSH    DPL
+   \   000009   C083         PUSH    DPH
+   \   00000B   C0F0         PUSH    B
+   \   00000D                ; Saved register size: 5
+   \   00000D                ; Auto size: 0
+    105          	ISR_ENTER();
+   \   00000D   C08B         push 0x8b
+   \   00000F   C086         push 0x86
+   \   000011   5386C0       anl 0x86, #0xc0
+   \   000014   C084         push 0x84
+   \   000016   C085         push 0x85
+    106          
+    107          	CLR_SOFT_INT();
+   \   000018   53AD7F       ANL     0xad,#0x7f
+    108          	WATCHDOG_CLR();
+   \   00001B   43F720       ORL     0xf7,#0x20
+    109          	music_decode();
+   \   00001E                ; Setup parameters for call to function music_decode
+   \   00001E   12....       LCALL   music_decode
+    110          
+    111          	ISR_EXIT();
+   \   000021   D085         pop 0x85
+   \   000023   D084         pop 0x84
+   \   000025   D086         pop 0x86
+   \   000027   D08B         pop 0x8b
+    112          }
+   \   000029   D0F0         POP     B
+   \   00002B   D083         POP     DPH
+   \   00002D   D082         POP     DPL
+   \   00002F   D0D0         POP     PSW
+   \   000031   D0E0         POP     A
+   \   000033   32           RETI
+    113          
+    114          /*----------------------------------------------------------------------------*/
+    115          /**@brief  MP3 解码中断
+    116             @param  无
+    117             @return 无
+    118             @note
+    119          */
+    120          /*----------------------------------------------------------------------------*/
+    121          #pragma optimize=speed high
+    122          #pragma vector=VECTOR_OFFSET(AUDIO_INT)
+    123          #pragma register_bank=1
+    124          #pragma location="MUSIC_SEG"
+
+   \                                 In segment MUSIC_SEG, align 1, keep-with-next
+    125          __interrupt void mp3_isr(void)
+   \                     mp3_isr:
+   \   000000                REQUIRE __REG_BANK_1
+    126          {
+   \   000000   C0E0         PUSH    A
+   \   000002   C0D0         PUSH    PSW
+   \   000004   75D008       MOV     PSW,#0x8
+   \   000007   C082         PUSH    DPL
+   \   000009   C083         PUSH    DPH
+   \   00000B   C0F0         PUSH    B
+   \   00000D                ; Saved register size: 5
+   \   00000D                ; Auto size: 0
+    127          	ISR_ENTER();
+   \   00000D   C08B         push 0x8b
+   \   00000F   C086         push 0x86
+   \   000011   5386C0       anl 0x86, #0xc0
+   \   000014   C084         push 0x84
+   \   000016   C085         push 0x85
+    128          
+    129          #if WAV_SUPPORT
+    130          	if(msc_ctl.type == TYPE_MP3)
+    131          	{
+    132          		//MP3硬件中断
+    133          		mp3_synth_check();
+    134          		KICK_SOFT_INT();
+    135          	}
+    136          	else if(msc_ctl.type == TYPE_WAV)
+    137          	{
+    138          		//WAV DAC缺数中断
+    139          		AUCON8 &= ~BIT(2);
+    140          		KICK_SOFT_INT();
+    141          	}
+    142          #else
+    143          	//MP3硬件中断
+    144          	mp3_synth_check();
+   \   000018                ; Setup parameters for call to function mp3_synth_check
+   \   000018   12....       LCALL   mp3_synth_check
+    145          	KICK_SOFT_INT();
+   \   00001B   43AD80       ORL     0xad,#0x80
+   \   00001E   00           nop
+    146          #endif
+    147          
+    148          	ISR_EXIT();
+   \   00001F   D085         pop 0x85
+   \   000021   D084         pop 0x84
+   \   000023   D086         pop 0x86
+   \   000025   D08B         pop 0x8b
+    149          }
+   \   000027   D0F0         POP     B
+   \   000029   D083         POP     DPH
+   \   00002B   D082         POP     DPL
+   \   00002D   D0D0         POP     PSW
+   \   00002F   D0E0         POP     A
+   \   000031   32           RETI
+    150          
+    151          #pragma location="TASK_MUSIC_SEG"
+
+   \                                 In segment TASK_MUSIC_SEG, align 1, keep-with-next
+    152          bool device_switch(void)
+   \                     device_switch:
+    153          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    154          	if(fs_cur_dev() == DEVICE_SDMMC1)	// 内插卡
+   \   000000                ; Setup parameters for call to function fs_cur_dev
+   \   000000   12....       LCALL   fs_cur_dev
+   \   000003   E9           MOV     A,R1
+   \   000004   6401         XRL     A,#0x1
+   \   000006   701E         JNZ     ??device_switch_0
+    155          	{
+    156          		sd_stop(1);
+   \   000008                ; Setup parameters for call to function sd_stop
+   \   000008   D2F0         SETB    B.0
+   \   00000A   12....       LCALL   sd_stop
+    157          		if(device_activate(DEVICE_UDISK))
+   \   00000D                ; Setup parameters for call to function device_activate
+   \   00000D   7902         MOV     R1,#0x2
+   \   00000F   12....       LCALL   device_activate
+   \   000012   5004         JNC     ??device_switch_1
+    158          		{
+    159          			t_fat.dev_new = DEVICE_UDISK;
+   \   000014   7402         MOV     A,#0x2
+   \   000016   8008         SJMP    ??device_switch_2
+    160          			return true;
+    161          		}
+    162          #if UDISK_DOUBLE_EN
+    163          		else  if(device_activate(DEVICE_UDISK1))
+    164          		{
+    165          			t_fat.dev_new = DEVICE_UDISK1;
+    166          			return true;
+    167          		}
+    168          #endif
+    169          		else  if(device_is_actived(DEVICE_SDMMC))	// 外接卡
+   \                     ??device_switch_1:
+   \   000018                ; Setup parameters for call to function device_is_actived
+   \   000018   7900         MOV     R1,#0x0
+   \   00001A   12....       LCALL   device_is_actived
+   \   00001D   5049         JNC     ??device_switch_3
+    170          		{
+    171          			t_fat.dev_new = DEVICE_SDMMC;
+   \                     ??device_switch_4:
+   \   00001F   E4           CLR     A
+   \                     ??device_switch_2:
+   \   000020   90....       MOV     DPTR,#(t_fat + 26)
+   \   000023   F0           MOVX    @DPTR,A
+    172          			return true;
+   \   000024   D3           SETB    C
+   \   000025   22           RET
+    173          		}
+    174          	}
+    175          	else if(fs_cur_dev() == DEVICE_UDISK)
+   \                     ??device_switch_0:
+   \   000026                ; Setup parameters for call to function fs_cur_dev
+   \   000026   12....       LCALL   fs_cur_dev
+   \   000029   E9           MOV     A,R1
+   \   00002A   6402         XRL     A,#0x2
+   \   00002C   7012         JNZ     ??device_switch_5
+    176          	{
+    177          #if UDISK_DOUBLE_EN
+    178          		if(device_activate(DEVICE_UDISK1))
+    179          		{
+    180          			t_fat.dev_new = DEVICE_UDISK1;
+    181          			return true;
+    182          		}
+    183          		else
+    184          #endif
+    185          			if(device_is_actived(DEVICE_SDMMC))
+   \   00002E                ; Setup parameters for call to function device_is_actived
+   \   00002E   7900         MOV     R1,#0x0
+   \   000030   12....       LCALL   device_is_actived
+   \   000033   40EA         JC      ??device_switch_4
+    186          			{
+    187          
+    188          				t_fat.dev_new = DEVICE_SDMMC;
+    189          				return true;
+    190          			}
+    191          			else  if(device_is_actived(DEVICE_SDMMC1))
+   \   000035                ; Setup parameters for call to function device_is_actived
+   \   000035   7901         MOV     R1,#0x1
+   \   000037   12....       LCALL   device_is_actived
+   \   00003A   502C         JNC     ??device_switch_3
+    192          			{
+    193          
+    194          				t_fat.dev_new = DEVICE_SDMMC1;
+   \                     ??device_switch_6:
+   \   00003C   7401         MOV     A,#0x1
+   \   00003E   80E0         SJMP    ??device_switch_2
+    195          				return true;
+    196          			}
+    197          	}
+    198          #if UDISK_DOUBLE_EN
+    199          	else if(fs_cur_dev() == DEVICE_UDISK1)
+    200          	{
+    201          		if(device_is_actived(DEVICE_SDMMC))
+    202          		{
+    203          			t_fat.dev_new = DEVICE_SDMMC;
+    204          			return true;
+    205          		}
+    206          		else if(device_is_actived(DEVICE_SDMMC1))
+    207          		{
+    208          			t_fat.dev_new = DEVICE_SDMMC1;
+    209          			return true;
+    210          		}
+    211          		else if(device_activate(DEVICE_UDISK))
+    212          		{
+    213          			t_fat.dev_new = DEVICE_UDISK;
+    214          			return true;
+    215          		}
+    216          	}
+    217          #endif
+    218          	else if(fs_cur_dev() == DEVICE_SDMMC)	// 外接卡
+   \                     ??device_switch_5:
+   \   000040                ; Setup parameters for call to function fs_cur_dev
+   \   000040   12....       LCALL   fs_cur_dev
+   \   000043   E9           MOV     A,R1
+   \   000044   7022         JNZ     ??device_switch_3
+    219          	{
+    220          		sd_stop(1);
+   \   000046                ; Setup parameters for call to function sd_stop
+   \   000046   D2F0         SETB    B.0
+   \   000048   12....       LCALL   sd_stop
+    221          		if(device_is_actived(DEVICE_SDMMC1))	// 内接卡
+   \   00004B                ; Setup parameters for call to function device_is_actived
+   \   00004B   7901         MOV     R1,#0x1
+   \   00004D   12....       LCALL   device_is_actived
+   \   000050   40EA         JC      ??device_switch_6
+    222          		{
+    223          			t_fat.dev_new = DEVICE_SDMMC1;
+    224          			return true;
+    225          		}
+    226          		else if(device_activate(DEVICE_UDISK))
+   \   000052                ; Setup parameters for call to function device_activate
+   \   000052   7902         MOV     R1,#0x2
+   \   000054   12....       LCALL   device_activate
+   \   000057   500F         JNC     ??device_switch_3
+    227          		{
+    228          			t_fat.dev_new = DEVICE_UDISK;
+   \   000059   7402         MOV     A,#0x2
+   \   00005B   90....       MOV     DPTR,#(t_fat + 26)
+   \   00005E   F0           MOVX    @DPTR,A
+    229          			printf("UDISK NEXT \n");
+   \   00005F                ; Setup parameters for call to function my_printf
+   \   00005F   7A..         MOV     R2,#(`?<Constant "UDISK NEXT \\n">` & 0xff)
+   \   000061   7B..         MOV     R3,#((`?<Constant "UDISK NEXT \\n">` >> 8) & 0xff)
+   \   000063   12....       LCALL   my_printf
+    230          			return true;
+   \   000066   D3           SETB    C
+   \   000067   22           RET
+    231          		}
+    232          #if UDISK_DOUBLE_EN
+    233          		else if(device_activate(DEVICE_UDISK1))
+    234          		{
+    235          			t_fat.dev_new = DEVICE_UDISK1;
+    236          			return true;
+    237          		}
+    238          #endif
+    239          	}
+    240          	return false;
+   \                     ??device_switch_3:
+   \   000068   C3           CLR     C
+   \   000069   22           RET
+    241          }
+    242          
+    243          #pragma location="TASK_MUSIC_SEG"
+
+   \                                 In segment TASK_MUSIC_SEG, align 1, keep-with-next
+    244          bool device_mount(void)
+   \                     device_mount:
+    245          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    246          	fs_sel_new();
+   \   000000                ; Setup parameters for call to function fs_sel_new
+   \   000000   12....       LCALL   fs_sel_new
+    247          #if (SYS_MEM == MEM_DEVICE)
+    248          	mem_ctl.dev_mem_new = 0;                //挂载后，清除新记忆设备标志
+    249          #endif
+    250          	if(fs_need_mounted())
+   \   000003                ; Setup parameters for call to function fs_need_mounted
+   \   000003   12....       LCALL   fs_need_mounted
+   \   000006   5010         JNC     ??device_mount_0
+    251          	{
+    252          		if(fs_init())
+   \   000008                ; Setup parameters for call to function fs_init
+   \   000008   12....       LCALL   fs_init
+   \   00000B   500B         JNC     ??device_mount_0
+    253          		{
+    254          			mem_ctl.dev = fs_cur_dev();
+   \   00000D                ; Setup parameters for call to function fs_cur_dev
+   \   00000D   12....       LCALL   fs_cur_dev
+   \   000010   E9           MOV     A,R1
+   \   000011   90....       MOV     DPTR,#mem_ctl
+   \   000014   F0           MOVX    @DPTR,A
+    255          
+    256          #if (SYS_MEM == MEM_DEVICE)
+    257          			dev_check_dbr();                //记忆到设备时，检查是否可用
+    258          #else
+    259          			mem_write_device();             //保存当前播放设备
+   \   000015                ; Setup parameters for call to function mem_write_device
+   \   000015   12....       LCALL   mem_write_device
+    260          #endif
+    261          		}
+    262          	}
+    263          	if(!fs_is_mounted())
+   \                     ??device_mount_0:
+   \   000018                ; Setup parameters for call to function fs_is_mounted
+   \   000018   12....       LCALL   fs_is_mounted
+   \   00001B   4002         JC      ??device_mount_1
+    264          	{
+    265          		return false;
+   \                     ??device_mount_2:
+   \   00001D   C3           CLR     C
+   \   00001E   22           RET
+    266          	}
+    267          	if(!device_is_actived(fs_cur_dev()))
+   \                     ??device_mount_1:
+   \   00001F                ; Setup parameters for call to function device_is_actived
+   \   00001F                ; Setup parameters for call to function fs_cur_dev
+   \   00001F   12....       LCALL   fs_cur_dev
+   \   000022   12....       LCALL   device_is_actived
+   \   000025   50F6         JNC     ??device_mount_2
+    268          	{
+    269          		return false;
+    270          	}
+    271          	return true;
+   \   000027   D3           SETB    C
+   \   000028   22           RET
+    272          }
+    273          
+    274          #pragma location="USER_MUSIC_SEG"
+
+   \                                 In segment USER_MUSIC_SEG, align 1, keep-with-next
+    275          bool user_music_enter(void)
+   \                     user_music_enter:
+    276          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    277          	device_change();
+   \   000000                ; Setup parameters for call to function device_change
+   \   000000   12....       LCALL   device_change
+    278          
+    279          	if(t_msc.poweron)
+   \   000003   90....       MOV     DPTR,#t_msc
+   \   000006   E0           MOVX    A,@DPTR
+   \   000007   6011         JZ      ??user_music_enter_0
+    280          	{
+    281          		t_msc.poweron = 0;
+   \   000009   E4           CLR     A
+   \   00000A   F0           MOVX    @DPTR,A
+    282          		if(sys_ctl.dev_save < MEDIA_DEVICE_NUM)
+   \   00000B   90....       MOV     DPTR,#(sys_ctl + 7)
+   \   00000E   E0           MOVX    A,@DPTR
+   \   00000F   FA           MOV     R2,A
+   \   000010   C3           CLR     C
+   \   000011   9404         SUBB    A,#0x4
+   \   000013   5005         JNC     ??user_music_enter_0
+    283          		{
+    284          			t_fat.dev_new = sys_ctl.dev_save;
+   \   000015   EA           MOV     A,R2
+   \   000016   90....       MOV     DPTR,#(t_fat + 26)
+   \   000019   F0           MOVX    @DPTR,A
+    285          		}
+    286          	}
+    287          
+    288          	if(device_mount())                      //挂载文件系统
+   \                     ??user_music_enter_0:
+   \   00001A                ; Setup parameters for call to function device_mount
+   \   00001A   12....       LCALL   device_mount
+    289          	{
+    290          		return true;
+   \   00001D   D3           SETB    C
+   \   00001E   22           RET
+    291          	}
+    292          
+    293          //	if(device_switch() && device_mount())   //选择下一设备挂载文件系统
+    294          //	{
+    295          //		return true;
+    296          //	}
+    297          //	else
+    298          //	{
+    299          //		return false;
+    300          //	}
+    301          	return true;
+    302          }
+    303          
+    304          //dir = 0: inc, dir = 1: dec
+    305          #pragma location="MUSIC_SEG"
+
+   \                                 In segment MUSIC_SEG, align 1, keep-with-next
+    306          u16 loop_auto(bool dir, u16 cur, u16 min, u16 max)
+   \                     loop_auto:
+    307          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+   \   000000   7582FB       MOV     DPL,#-0x5
+   \   000003   7583FF       MOV     DPH,#-0x1
+   \   000006   12....       LCALL   ?EXT_STACK_DISP0_16
+   \   000009   E0           MOVX    A,@DPTR
+   \   00000A   F8           MOV     R0,A
+   \   00000B   A3           INC     DPTR
+   \   00000C   E0           MOVX    A,@DPTR
+   \   00000D   F9           MOV     R1,A
+    308          	if(dir)
+   \   00000E   A2F0         MOV     C,B.0
+   \   000010   501C         JNC     ??loop_auto_0
+    309          	{
+    310          		if(cur > max || cur <= min)
+   \   000012   C3           CLR     C
+   \   000013   E8           MOV     A,R0
+   \   000014   9A           SUBB    A,R2
+   \   000015   E9           MOV     A,R1
+   \   000016   9B           SUBB    A,R3
+   \   000017   4007         JC      ??loop_auto_1
+   \   000019   C3           CLR     C
+   \   00001A   EC           MOV     A,R4
+   \   00001B   9A           SUBB    A,R2
+   \   00001C   ED           MOV     A,R5
+   \   00001D   9B           SUBB    A,R3
+   \   00001E   4005         JC      ??loop_auto_2
+    311          		{
+    312          			return max;
+   \                     ??loop_auto_1:
+   \   000020   E8           MOV     A,R0
+   \   000021   FA           MOV     R2,A
+   \   000022   E9           MOV     A,R1
+   \   000023   FB           MOV     R3,A
+   \   000024   22           RET
+    313          		}
+    314          		return (cur - 1);
+   \                     ??loop_auto_2:
+   \   000025   74FF         MOV     A,#-0x1
+   \   000027   2A           ADD     A,R2
+   \   000028   1A           DEC     R2
+   \   000029   74FF         MOV     A,#-0x1
+   \   00002B   3B           ADDC    A,R3
+   \   00002C   FB           MOV     R3,A
+   \   00002D   22           RET
+    315          	}
+    316          	else
+    317          	{
+    318          		if(cur >= max || cur < min)
+   \                     ??loop_auto_0:
+   \   00002E   C3           CLR     C
+   \   00002F   EA           MOV     A,R2
+   \   000030   98           SUBB    A,R0
+   \   000031   EB           MOV     A,R3
+   \   000032   99           SUBB    A,R1
+   \   000033   5007         JNC     ??loop_auto_3
+   \   000035   C3           CLR     C
+   \   000036   EA           MOV     A,R2
+   \   000037   9C           SUBB    A,R4
+   \   000038   EB           MOV     A,R3
+   \   000039   9D           SUBB    A,R5
+   \   00003A   5005         JNC     ??loop_auto_4
+    319          		{
+    320          			return min;
+   \                     ??loop_auto_3:
+   \   00003C   EC           MOV     A,R4
+   \   00003D   FA           MOV     R2,A
+   \   00003E   ED           MOV     A,R5
+   \   00003F   FB           MOV     R3,A
+   \   000040   22           RET
+    321          		}
+    322          		return (cur + 1);
+   \                     ??loop_auto_4:
+   \   000041   7401         MOV     A,#0x1
+   \   000043   2A           ADD     A,R2
+   \   000044   0A           INC     R2
+   \   000045   E4           CLR     A
+   \   000046   3B           ADDC    A,R3
+   \   000047   FB           MOV     R3,A
+   \   000048   22           RET
+    323          	}
+    324          }
+
+   \                                 In segment INTVEC, offset 0x3, root
+   \                     `soft_isr??INTVEC 3`:
+   \   000003   02....       LJMP       (soft_isr)
+
+   \                                 In segment INTVEC, offset 0x23, root
+   \                     `mp3_isr??INTVEC 35`:
+   \   000023   02....       LJMP       (mp3_isr)
+
+   \                                 In segment CODE_C, align 1
+   \                     `?<Constant "UDISK NEXT \\n">`:
+   \   000000   55444953     DB "UDISK NEXT \012"
+   \            4B204E45
+   \            5854200A
+   \            00      
+
+   Maximum stack usage in bytes:
+
+     Function               EXT_STACK PSTACK XSTACK
+     --------               --------- ------ ------
+     device_mount                  0      0      0
+       -> fs_sel_new               0      0      0
+       -> fs_need_mounted          0      0      0
+       -> fs_init                  0      0      0
+       -> fs_cur_dev               0      0      0
+       -> mem_write_device         0      0      0
+       -> fs_is_mounted            0      0      0
+       -> fs_cur_dev               0      0      0
+       -> device_is_actived        0      0      0
+     device_switch                 0      0      0
+       -> fs_cur_dev               0      0      0
+       -> sd_stop                  0      0      0
+       -> device_activate          0      0      0
+       -> device_is_actived        0      0      0
+       -> fs_cur_dev               0      0      0
+       -> device_is_actived        0      0      0
+       -> device_is_actived        0      0      0
+       -> fs_cur_dev               0      0      0
+       -> sd_stop                  0      0      0
+       -> device_is_actived        0      0      0
+       -> device_activate          0      0      0
+       -> my_printf                0      0      0
+     is_other_file                 3      0      0
+       -> is_wma_file              4      0      0
+       -> decoder_peek             6      0      0
+       -> smemcmp_c                4      0      0
+     loop_auto                     2      0      0
+     mp3_isr                       5      0      0
+       -> mp3_synth_check         10      0      0
+     music_decode                  5      0      0
+       -> msc_mp3_decode           0      0      0
+     music_set_jmp                 0      0      0
+       -> mp3_set_jump             0      0      0
+     soft_isr                      5      0      0
+       -> music_decode            10      0      0
+     user_music_enter              0      0      0
+       -> device_change            0      0      0
+       -> device_mount             0      0      0
+
+
+   Segment part sizes:
+
+     Function/Label              Bytes
+     --------------              -----
+     SPMODE                         1
+     WDTCON                         1
+     u_msc                         23
+     b_msc                          1
+     music_decode                  19
+     music_set_jmp                  4
+     wav_header                     4
+     is_other_file                 42
+     soft_isr                      52
+     mp3_isr                       50
+     device_switch                106
+     device_mount                  41
+     user_music_enter              31
+     loop_auto                     73
+     soft_isr??INTVEC 3             3
+     mp3_isr??INTVEC 35             3
+     ?<Constant "UDISK NEXT \n">   13
+
+ 
+   1 byte  in segment BDATA_N
+  17 bytes in segment CODE_C
+  52 bytes in segment INTERRUPT
+   6 bytes in segment INTVEC
+ 188 bytes in segment MUSIC_SEG
+   2 bytes in segment SFR_AN
+ 147 bytes in segment TASK_MUSIC_SEG
+  31 bytes in segment USER_MUSIC_SEG
+  23 bytes in segment XDATA_Z
+ 
+ 435 bytes of CODE  memory (+ 6 bytes shared)
+   1 byte  of DATA  memory (+ 2 bytes shared)
+  23 bytes of XDATA memory
+
+Errors: none
+Warnings: none

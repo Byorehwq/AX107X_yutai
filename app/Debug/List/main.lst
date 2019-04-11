@@ -1,0 +1,1052 @@
+##############################################################################
+#                                                                            #
+# IAR 8051 C/C++ Compiler V7.20H/W32                   29/Jun/2018  19:55:09 #
+# Copyright 2004-2006 IAR Systems. All rights reserved.                      #
+#                                                                            #
+#    Core               =  plain                                             #
+#    Code model         =  near                                              #
+#    Data model         =  large                                             #
+#    Calling convention =  extended stack reentrant                          #
+#    Constant location  =  code                                              #
+#    Extended stack     =  enabled                                           #
+#    Dptr setup         =  1,16                                              #
+#    Source file        =  I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\main.c          #
+#    Command line       =  -I E:\software\8051\INC\ -I                       #
+#                          E:\software\8051\INC\CLIB\ -I                     #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\COMMON\ -I      #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\INC\ -I         #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\config\ -I      #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\api\ -I         #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\fm\ -I          #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\fat\ -I         #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\display\ -I     #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\display\theme_d #
+#                          efault\ -I I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073 #
+#                          A_宇泰_AX1071_xxxxxxxx_20180629_Merlin_1\app\disp #
+#                          lay\led\ -I I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC07 #
+#                          3A_宇泰_AX1071_xxxxxxxx_20180629_Merlin_1\app\dis #
+#                          play\lcd\ -I I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC0 #
+#                          73A_宇泰_AX1071_xxxxxxxx_20180629_Merlin_1\app\ta #
+#                          sk\ -I I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇 #
+#                          泰_AX1071_xxxxxxxx_20180629_Merlin_1\app\user\    #
+#                          -I I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_A #
+#                          X1071_xxxxxxxx_20180629_Merlin_1\app\mem\ -I      #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\module\ -I      #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\key\ -I         #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\startmusic\ -I  #
+#                          I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\spi\ -D         #
+#                          AX107X_TAG -lC I:\a_wangqun\宇泰_睡眠仪_KNP08\18B #
+#                          C073A_宇泰_AX1071_xxxxxxxx_20180629_Merlin_1\app\ #
+#                          Debug\List\ -o I:\a_wangqun\宇泰_睡眠仪_KNP08\18B #
+#                          C073A_宇泰_AX1071_xxxxxxxx_20180629_Merlin_1\app\ #
+#                          Debug\Obj\ -e -z9 --core=plain --dptr=16,1        #
+#                          --data_model=large --code_model=near              #
+#                          --calling_convention=ext_stack_reentrant          #
+#                          --place_constants=code --nr_virtual_regs 20       #
+#                          --extended_stack I:\a_wangqun\宇泰_睡眠仪_KNP08\1 #
+#                          8BC073A_宇泰_AX1071_xxxxxxxx_20180629_Merlin_1\ap #
+#                          p\main.c                                          #
+#    List file          =  I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\Debug\List\main #
+#                          .lst                                              #
+#    Object file        =  I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\Debug\Obj\main. #
+#                          r51                                               #
+#                                                                            #
+#                                                                            #
+##############################################################################
+
+I:\a_wangqun\宇泰_睡眠仪_KNP08\18BC073A_宇泰_AX1071_xxxxxxxx_20180629_Merlin_1\app\main.c
+      1          /*****************************************************************************
+      2           * Module    : MAIN
+      3           * File      : main.c
+      4           * Author    : jingfa
+      5           * Email     :
+      6           * Function  : 主流程
+      7           *****************************************************************************/
+      8          #include "include.h"
+
+   \                                 In segment SFR_AN, at 0x80
+   \   unsigned char volatile __sfr P0
+   \                     P0:
+   \   000000                DS 1
+
+   \                                 In segment SFR_AN, at 0xc2
+   \   unsigned char volatile __sfr TMR2CON1
+   \                     TMR2CON1:
+   \   000000                DS 1
+
+   \                                 In segment SFR_AN, at 0xf1
+   \   unsigned char volatile __sfr TMR3CON
+   \                     TMR3CON:
+   \   000000                DS 1
+
+   \                                 In segment SFR_AN, at 0xf7
+   \   unsigned char volatile __sfr WDTCON
+   \                     WDTCON:
+   \   000000                DS 1
+      9          #include "user_io.h"
+     10          #include "user_key.h"
+     11          
+     12          
+     13          extern u8 SPI_wait_timeout;
+     14          extern u8 vol_less_power_warning_flag;//低电压提示后关机标志
+     15          extern u8 vol_less_33V_flag;         //电压3.3v标志
+     16          extern u8 vol_less_34V_flag;         //电压3.4v标志
+     17          extern bool vol_less_34V_blink; //低于3.3v屏闪
+     18          extern bool Timer1_flag;
+     19          
+     20          extern u8 power_key_cnt;
+     21          extern u8 count_led_off;
+
+   \                                 In segment XDATA_I, align 1, keep-with-next
+     22          u8 vcmbuf_flag = 1;
+   \                     vcmbuf_flag:
+   \   000000                DS 1
+   \   000001                REQUIRE `?<Initializer for vcmbuf_flag>`
+   \   000001                REQUIRE __INIT_XDATA_I
+     23          #define TIMER_15	15
+     24          #define TIMER_30	30
+     25          #define TIMER_60	60
+     26          #define TIMER_7h	420
+     27          
+     28          //1ms定时器延时
+     29          #pragma location="SYS_DELAY"
+
+   \                                 In segment SYS_DELAY, align 1, keep-with-next
+     30          void delay_1ms(u8 cnt)
+   \                     delay_1ms:
+     31          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     32          #ifdef AX207X_TAG
+     33          	if(sys_fix.usb_init_fix)
+     34          	{
+     35          		sys_fix.usb_init_fix = 0;
+     36          		return;
+     37          	}
+     38          #endif
+     39          
+     40          	/*IE_EA和IE_TM2中断,都已打开时，使用外部代码；
+     41          	  IE_EA或IE_TM2中断,没打开时，使用maskrom中代码;
+     42          	*/
+     43          	if((IE0 & BIT(7)) && (IE0 & BIT(3)))
+   \   000000   A2AF         MOV     C,0xa8.7
+   \   000002   500F         JNC     ??delay_1ms_0
+   \   000004   A2AB         MOV     C,0xa8.3
+   \   000006   500B         JNC     ??delay_1ms_0
+     44          	{
+     45          		sys_ctl.delay_cnt = cnt + 1;
+   \   000008   7401         MOV     A,#0x1
+   \   00000A   29           ADD     A,R1
+   \   00000B   90....       MOV     DPTR,#(sys_ctl + 8)
+   \   00000E   F0           MOVX    @DPTR,A
+     46          		while(sys_ctl.delay_cnt);
+   \                     ??delay_1ms_1:
+   \   00000F   E0           MOVX    A,@DPTR
+   \   000010   70FD         JNZ     ??delay_1ms_1
+   \   000012   22           RET
+     47          	}
+     48          	else
+     49          	{
+     50          		delay_m(cnt);
+   \                     ??delay_1ms_0:
+   \   000013                ; Setup parameters for call to function delay_m
+   \   000013   12....       LCALL   delay_m
+     51          	}
+     52          }
+   \   000016   22           RET
+     53          
+
+   \                                 In segment XDATA_Z, align 1, keep-with-next
+   \   000000                REQUIRE __INIT_XDATA_Z
+     54          u8 t_pwn_duty1, t_pwn_duty2;	// Duty range from 0x00 to 0xFF
+   \                     t_pwn_duty1:
+   \   000000                DS 1
+
+   \                                 In segment XDATA_Z, align 1, keep-with-next
+   \   000000                REQUIRE __INIT_XDATA_Z
+   \                     t_pwn_duty2:
+   \   000000                DS 1
+     55          
+     56          #pragma optimize=speed high
+     57          #pragma vector = VECTOR_OFFSET(TIMER3_INT)
+     58          //#pragma register_bank=3
+     59          #pragma location="INTERRUPT"
+
+   \                                 In segment INTERRUPT, align 1, keep-with-next
+     60          __interrupt void timer3_isr(void)		// 122us
+   \                     timer3_isr:
+     61          {
+   \   000000   C0E0         PUSH    A
+   \   000002   C0D0         PUSH    PSW
+   \   000004   C082         PUSH    DPL
+   \   000006   C083         PUSH    DPH
+   \   000008                ; Saved register size: 4
+   \   000008                ; Auto size: 0
+     62          	ISR_ENTER();
+   \   000008   C08B         push 0x8b
+   \   00000A   C086         push 0x86
+   \   00000C   5386C0       anl 0x86, #0xc0
+   \   00000F   C084         push 0x84
+   \   000011   C085         push 0x85
+     63          	TMR3CON &= ~BIT(7);    //clear pending
+   \   000013   53F17F       ANL     0xf1,#0x7f
+     64          
+     65          	static __data u8 PWM_ACC_0, PWM_ACC_1;
+     66          
+     67          	// LED 0
+     68          	PWM_ACC_0 += t_pwn_duty1;   //PWM_Duty_R;	// PWM_ACC_R = PWM_ACC_R + PWM_Duty_R; CY is Carry
+   \   000016   90....       MOV     DPTR,#t_pwn_duty1
+   \   000019   E0           MOVX    A,@DPTR
+   \   00001A   25..         ADD     A,??PWM_ACC_0
+   \   00001C   F5..         MOV     ??PWM_ACC_0,A
+     69          	MOV_Carry_To_LED_O();
+   \   00001E   92..         MOV     P0.5 , C
+     70          	//asm("MOV	P4.5 , C");
+     71          
+     72          	// LED 1
+     73          	PWM_ACC_1 += t_pwn_duty2;  //PWM_Duty_G;	// PWM_ACC_R = PWM_ACC_R + PWM_Duty_R; CY is Carry
+   \   000020   90....       MOV     DPTR,#t_pwn_duty2
+   \   000023   E0           MOVX    A,@DPTR
+   \   000024   25..         ADD     A,??PWM_ACC_1
+   \   000026   F5..         MOV     ??PWM_ACC_1,A
+     74          	MOV_Carry_To_LED_T();
+   \   000028   92..         MOV     P0.4 , C
+     75          	//asm("MOV	P4.5 , C");
+     76          
+     77          
+     78          
+     79          	ISR_EXIT();
+   \   00002A   D085         pop 0x85
+   \   00002C   D084         pop 0x84
+   \   00002E   D086         pop 0x86
+   \   000030   D08B         pop 0x8b
+     80          
+     81          	// move to here for speed up
+     82          	//asm("POP PSW");
+     83          	//asm("POP A");
+     84          	//asm("RETI");
+     85          }
+   \   000032   D083         POP     DPH
+   \   000034   D082         POP     DPL
+   \   000036                REQUIRE ?Subroutine0
+   \   000036                ; // Fall through to label ?Subroutine0
+
+   \                                 In segment INTERRUPT, align 1, keep-with-next
+   \                     ?Subroutine0:
+   \   000000   D0D0         POP     PSW
+   \   000002   D0E0         POP     A
+   \   000004   32           RETI
+
+   \                                 In segment DATA_Z, align 1, keep-with-next
+   \   000000                REQUIRE __INIT_DATA_Z
+   \                     ??PWM_ACC_0:
+   \   000000                DS 1
+
+   \                                 In segment DATA_Z, align 1, keep-with-next
+   \   000000                REQUIRE __INIT_DATA_Z
+   \                     ??PWM_ACC_1:
+   \   000000                DS 1
+     86          
+
+   \                                 In segment NEAR_CODE, align 1, keep-with-next
+     87          void no_used_code(void)
+   \                     no_used_code:
+     88          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     89          	LED0_PORT |= BIT(LED0_PIN);
+   \   000000   D285         SETB    0x80.5
+     90          	LED1_PORT |= BIT(LED1_PIN);
+   \   000002   D284         SETB    0x80.4
+     91          }
+   \   000004   22           RET
+     92          
+     93          
+     94          /*----------------------------------------------------------------------------*/
+     95          /**@brief  timer2中断
+     96             @param  无
+     97             @return 无
+     98             @note   1ms中断
+     99          */
+    100          /*----------------------------------------------------------------------------*/
+    101          #pragma vector = VECTOR_OFFSET(TIMER2_INT)
+    102          #pragma register_bank=2
+    103          #pragma location="INTERRUPT"
+
+   \                                 In segment INTERRUPT, align 1, keep-with-next
+    104          __interrupt void timer2_isr(void)
+   \                     timer2_isr:
+   \   000000                REQUIRE __REG_BANK_2
+    105          {
+   \   000000   C0E0         PUSH    A
+   \   000002   C0D0         PUSH    PSW
+   \   000004   75D010       MOV     PSW,#0x10
+   \   000007   C0..         PUSH    ?V0 + 0
+   \   000009   C0..         PUSH    ?V0 + 1
+   \   00000B   C082         PUSH    DPL
+   \   00000D   C083         PUSH    DPH
+   \   00000F   C0F0         PUSH    B
+   \   000011                ; Saved register size: 7
+   \   000011                ; Auto size: 0
+    106          	static u8 count_1s = 0;
+    107          	ISR_ENTER();
+   \   000011   C08B         push 0x8b
+   \   000013   C086         push 0x86
+   \   000015   5386C0       anl 0x86, #0xc0
+   \   000018   C084         push 0x84
+   \   00001A   C085         push 0x85
+    108          	TMR2CON1 &= ~BIT(7);    //clear pending
+   \   00001C   53C27F       ANL     0xc2,#0x7f
+    109          
+    110          	static u8 __data counter_5ms, counter_1ms, counter_1s, counter_1min;
+    111          	static u8 WDT_time;		// count by 10mSec, to make 1.5Sec for f_Clear_WDT
+    112          //	static u16 bat_disp_cnt;			// 低压报警显示计数 20180327
+    113          //	static u16 char_disp_cnt;		// 电池充电显示计数	20180327
+    114          
+    115          	if(scan_ctl.disp_volume_flag == true)
+   \   00001F   90....       MOV     DPTR,#(scan_ctl + 9)
+   \   000022   E0           MOVX    A,@DPTR
+   \   000023   6005         JZ      ??timer2_isr_0
+    116          	{
+    117          		disp_vol();
+   \   000025                ; Setup parameters for call to function led_7p7s_disp_vol
+   \   000025   12....       LCALL   led_7p7s_disp_vol
+   \   000028   8019         SJMP    ??timer2_isr_1
+    118          	}else if(scan_ctl.disp_timer_flag == true)
+   \                     ??timer2_isr_0:
+   \   00002A   90....       MOV     DPTR,#(scan_ctl + 8)
+   \   00002D   E0           MOVX    A,@DPTR
+   \   00002E   6005         JZ      ??timer2_isr_2
+    119          	{
+    120          		disp_timer();
+   \   000030                ; Setup parameters for call to function led_7p7s_disp_timer
+   \   000030   12....       LCALL   led_7p7s_disp_timer
+   \   000033   800E         SJMP    ??timer2_isr_1
+    121          	}else if(scan_ctl.disp_song_flag == true)
+   \                     ??timer2_isr_2:
+   \   000035   90....       MOV     DPTR,#(scan_ctl + 10)
+   \   000038   E0           MOVX    A,@DPTR
+   \   000039   6005         JZ      ??timer2_isr_3
+    122          	{
+    123          		disp_song();	
+   \   00003B                ; Setup parameters for call to function led_7p7s_disp_song
+   \   00003B   12....       LCALL   led_7p7s_disp_song
+   \   00003E   8003         SJMP    ??timer2_isr_1
+    124          	}else{
+    125          		disp_clock();						// 时钟显示
+   \                     ??timer2_isr_3:
+   \   000040                ; Setup parameters for call to function led_7p7s_disp_clock
+   \   000040   12....       LCALL   led_7p7s_disp_clock
+    126          	}
+    127          	
+    128          #if Emcode_Enable
+    129          	KEY_Whire1();		// 编码开关的分析
+   \                     ??timer2_isr_1:
+   \   000043                ; Setup parameters for call to function KEY_Whire1
+   \   000043   12....       LCALL   KEY_Whire1
+    130          #endif
+    131          
+    132          #if LED_7P7S_SCAN_HALF_MS
+    133          	static u8 __data counter_half_ms;
+    134          	static u8 __data counter_half_half_ms;
+    135          	counter_half_half_ms++;
+   \   000046   05..         INC     ??counter_half_half_ms
+    136          	disp_scan();
+   \   000048                ; Setup parameters for call to function led_7p7s_scan
+   \   000048   12....       LCALL   led_7p7s_scan
+    137          	if((counter_half_half_ms%4) == 0)
+   \   00004B   7403         MOV     A,#0x3
+   \   00004D   55..         ANL     A,??counter_half_half_ms
+   \   00004F   6003         JZ      $+5
+   \   000051   02....       LJMP    ??timer2_isr_4
+    138          	{
+    139          		counter_half_ms++;
+   \   000054   05..         INC     ??counter_half_ms
+    140          		counter_half_half_ms = 0;
+   \   000056   75..00       MOV     ??counter_half_half_ms,#0x0
+    141          	}
+    142          	else
+    143          	{
+    144          		goto timer2_exit;
+    145          	}
+    146          	if((counter_half_ms%2) == 0)
+   \   000059   E5..         MOV     A,??counter_half_ms
+   \   00005B   A2E0         MOV     C,0xE0 /* A   */.0
+   \   00005D   5003         JNC     $+5
+   \   00005F   02....       LJMP    ??timer2_isr_4
+    147          	{
+    148          		counter_1ms++;
+   \   000062   05..         INC     ??counter_1ms
+    149          		counter_half_ms = 0;
+   \   000064   75..00       MOV     ??counter_half_ms,#0x0
+    150          	}
+    151          	else
+    152          	{
+    153          		goto timer2_exit;
+    154          	}
+    155          #else
+    156          	counter_1ms++;
+    157          	disp_scan();
+    158          #endif
+    159          
+    160          	if(sys_ctl.delay_cnt > 0)
+   \   000067   90....       MOV     DPTR,#(sys_ctl + 8)
+   \   00006A   E0           MOVX    A,@DPTR
+   \   00006B   6003         JZ      ??timer2_isr_5
+    161          	{
+    162          		sys_ctl.delay_cnt--;
+   \   00006D   E0           MOVX    A,@DPTR
+   \   00006E   14           DEC     A
+   \   00006F   F0           MOVX    @DPTR,A
+    163          	}
+    164          
+    165          	if((counter_1ms%3) == 0)
+    166          	{
+    167          
+    168          #if DAC_POWER_SPEED
+    169          		if(dac_init_ctl.sta < DAC_INIT_END)
+    170          		{
+    171          			dac_init_process();
+    172          		}
+    173          #endif
+    174          	}
+    175          #if DAC_FADE_EN
+    176          	if((counter_1ms & 0x01) == 0)
+   \                     ??timer2_isr_5:
+   \   000070   E5..         MOV     A,??counter_1ms
+   \   000072   A2E0         MOV     C,0xE0 /* A   */.0
+   \   000074   4003         JC      ??timer2_isr_6
+    177          	{
+    178          		dac_fade_auto();
+   \   000076                ; Setup parameters for call to function dac_fade_auto
+   \   000076   12....       LCALL   dac_fade_auto
+    179          		//dac_fade_auto();
+    180          	}
+    181          #endif
+    182          
+    183          	/*5ms  定时****************************************************/
+    184          	if((counter_1ms%5) == 0)
+   \                     ??timer2_isr_6:
+   \   000079   E5..         MOV     A,??counter_1ms
+   \   00007B   75F005       MOV     B,#0x5
+   \   00007E   84           DIV     AB
+   \   00007F   E5F0         MOV     A,B
+   \   000081   6003         JZ      $+5
+   \   000083   02....       LJMP    ??timer2_isr_4
+    185          	{
+    186          		//scan_ctl.disp_scan_flag = 1;
+    187          		if(sys.delay_cnt > 0)
+   \   000086   E5..         MOV     A,(sys + 1)
+   \   000088   6004         JZ      ??timer2_isr_7
+    188          		{
+    189          			sys.delay_cnt--;
+   \   00008A   15..         DEC     (sys + 1)
+   \   00008C   E5..         MOV     A,(sys + 1)
+    190          		}
+    191          #if ( ((DISP_TYPE != DISP_LED)&&(DISP_TYPE != DISP_NO)) || ((DISP_TYPE == DISP_LED)&&(USE_IR_NUM)) )
+    192          		ocx_delay();
+   \                     ??timer2_isr_7:
+   \   00008E                ; Setup parameters for call to function ocx_delay
+   \   00008E   12....       LCALL   ocx_delay
+    193          #endif
+    194          		//sd_detect();        //sd检测, 外接SD卡检测
+    195          #if SD_DOUBLE_EN
+    196          		sd1_detect();       //sd1检测, 内接SD卡检测
+    197          #endif
+    198          		//usb_detect();       //usb检测
+    199          #if (AUX_DET_EN && !USE_7P7S_LED_AUX_MUX)
+    200          		aux_detect();       //lienin检测
+    201          #endif
+    202          #if MIC_DET_EN
+    203          		mic_detect();       //mic检测
+    204          #endif
+    205          #if HP_DET_EN
+    206          		headphone_detect(); //headphone检测
+    207          #endif
+    208          #if DCIN_DET_EN
+    209          		dcin_detect();
+    210          #endif
+    211          		key_scan();         // 按键扫描
+   \   000091                ; Setup parameters for call to function key_scan
+   \   000091   12....       LCALL   key_scan
+    212          		
+    213          #if Emcode_Enable
+    214          	KEY_Whire2();		// 编码开关的分析
+   \   000094                ; Setup parameters for call to function KEY_Whire2
+   \   000094   12....       LCALL   KEY_Whire2
+    215          #endif
+    216          
+    217          #if 0// DAC_FADE_EN
+    218          		dac_fade_auto();	// 由 5mSec 改至 2mSec
+    219          #endif
+    220          		mute_ctl_auto();    //5ms中断里控制MUTE
+   \   000097                ; Setup parameters for call to function mute_ctl_auto
+   \   000097   12....       LCALL   mute_ctl_auto
+    221          #if KEY_VOICE_EN
+    222          		user_chk_kv();
+    223          #endif
+    224          
+    225          		counter_5ms++;
+   \   00009A   05..         INC     ??counter_5ms
+    226          		/*10ms 定时****************************************************/
+    227          		if((counter_5ms%2) == 0x00)
+   \   00009C   E5..         MOV     A,??counter_5ms
+   \   00009E   A2E0         MOV     C,0xE0 /* A   */.0
+   \   0000A0   4019         JC      ??timer2_isr_8
+    228          		{
+    229          			counter_1ms = 0;
+   \   0000A2   75..00       MOV     ??counter_1ms,#0x0
+    230          
+    231                      #if USB_HID_SUPPORT
+    232                      			usb_hid_delay();
+    233                      			if(sys_ctl.hid_vol_delay_cnt > 0)
+    234                      			{
+    235                      				sys_ctl.hid_vol_delay_cnt--;
+    236                      			}
+    237                      #endif
+    238                      #if USB_MASS_SUPPORT
+    239                      			usb_mass_delay();
+    240                      #endif
+    241                      #if ALARM_EN
+    242                      			t_alarm.delay_10ms_cnt++;
+    243                      #endif
+    244                      #if TASK_FM_EN
+    245                      			fm_init_process();
+    246                      #endif
+    247                      			mem_time_set();
+   \   0000A5                ; Setup parameters for call to function mem_time_set
+   \   0000A5   12....       LCALL   mem_time_set
+    248                      if(++WDT_time > 150)
+   \   0000A8   90....       MOV     DPTR,#??WDT_time
+   \   0000AB   E0           MOVX    A,@DPTR
+   \   0000AC   04           INC     A
+   \   0000AD   F0           MOVX    @DPTR,A
+   \   0000AE   C3           CLR     C
+   \   0000AF   9497         SUBB    A,#-0x69
+   \   0000B1   4008         JC      ??timer2_isr_8
+    249          			{	// 1500mSec to Make Clear WDT flag
+    250          				WDT_time = 0;
+   \   0000B3   E4           CLR     A
+   \   0000B4   F0           MOVX    @DPTR,A
+    251          				f_Clear_WDT = true;
+   \   0000B5   7401         MOV     A,#0x1
+   \   0000B7   90....       MOV     DPTR,#f_Clear_WDT
+   \   0000BA   F0           MOVX    @DPTR,A
+    252          			}
+    253          		}
+    254          //#endif
+    255          		/*0.5s   定时****************************************************/
+    256          		if((counter_5ms%100)==0)
+   \                     ??timer2_isr_8:
+   \   0000BB   E5..         MOV     A,??counter_5ms
+   \   0000BD   75F064       MOV     B,#0x64
+   \   0000C0   84           DIV     AB
+   \   0000C1   E5F0         MOV     A,B
+   \   0000C3   701E         JNZ     ??timer2_isr_9
+    257          		{
+    258          			if(disp.display_dp_flag == 1) 				// 时钟显示时冒号闪烁
+   \   0000C5   E5..         MOV     A,(disp + 2)
+   \   0000C7   6005         JZ      ??timer2_isr_10
+    259          			{
+    260          				disp.display_dp_flag = 0;
+   \   0000C9   75..00       MOV     (disp + 2),#0x0
+   \   0000CC   8003         SJMP    ??timer2_isr_11
+    261          			}else
+    262          			{
+    263          				disp.display_dp_flag = 1;
+   \                     ??timer2_isr_10:
+   \   0000CE   75..01       MOV     (disp + 2),#0x1
+    264          			}
+    265          			
+    266          			if(scan_ctl.disp_clock_set_flag == 1)		// 设置时钟时数码管闪烁  
+   \                     ??timer2_isr_11:
+   \   0000D1   90....       MOV     DPTR,#(scan_ctl + 11)
+   \   0000D4   E0           MOVX    A,@DPTR
+   \   0000D5   600C         JZ      ??timer2_isr_9
+    267          			{
+    268          				if(disp.display_led_flag == 1)
+   \   0000D7   E5..         MOV     A,(disp + 3)
+   \   0000D9   6005         JZ      ??timer2_isr_12
+    269          				{
+    270          					disp.display_led_flag = 0;
+   \   0000DB   75..00       MOV     (disp + 3),#0x0
+   \   0000DE   8003         SJMP    ??timer2_isr_9
+    271          				}else
+    272          				{
+    273          					disp.display_led_flag = 1;
+   \                     ??timer2_isr_12:
+   \   0000E0   75..01       MOV     (disp + 3),#0x1
+    274          				}
+    275          			}
+    276          		}
+    277          
+    278          		/*1s   定时****************************************************/
+    279          		if(counter_5ms == 200)
+   \                     ??timer2_isr_9:
+   \   0000E3   74C8         MOV     A,#-0x38
+   \   0000E5   65..         XRL     A,??counter_5ms
+   \   0000E7   6003         JZ      $+5
+   \   0000E9   02....       LJMP    ??timer2_isr_4
+    280          		{
+    281          			counter_5ms = 0;//此处必须清零，重新循环
+   \   0000EC   75..00       MOV     ??counter_5ms,#0x0
+    282          		//	printf("b_msc.pause=%d\n",b_msc.pause);
+    283          					
+    284          			if(vol_less_33V_flag == 1)
+   \   0000EF   90....       MOV     DPTR,#vol_less_33V_flag
+   \   0000F2   E0           MOVX    A,@DPTR
+   \   0000F3   6401         XRL     A,#0x1
+   \   0000F5   7010         JNZ     ??timer2_isr_13
+    285          			{
+    286          				count_1s++;
+   \   0000F7   90....       MOV     DPTR,#??count_1s
+   \   0000FA   E0           MOVX    A,@DPTR
+   \   0000FB   04           INC     A
+   \   0000FC   F0           MOVX    @DPTR,A
+    287          				if(count_1s == 4)//3.1v定时4s后关机
+   \   0000FD   6404         XRL     A,#0x4
+   \   0000FF   700B         JNZ     ??timer2_isr_14
+    288          				{
+    289          					vol_less_power_warning_flag = 1;
+   \   000101   7401         MOV     A,#0x1
+   \   000103   90....       MOV     DPTR,#vol_less_power_warning_flag
+   \   000106   F0           MOVX    @DPTR,A
+    290          					count_1s=0;
+    291          				}	
+    292          			}
+    293          			else
+    294          			{
+    295          				count_1s =0;
+   \                     ??timer2_isr_13:
+   \   000107   E4           CLR     A
+   \   000108   90....       MOV     DPTR,#??count_1s
+   \   00010B   F0           MOVX    @DPTR,A
+    296          			}
+    297          
+    298          			if((sys_ctl.bat_charger_cnt != 0xFF)&&(sys_ctl.bat_charger_cnt != 0x00))
+   \                     ??timer2_isr_14:
+   \   00010C   90....       MOV     DPTR,#(sys_ctl + 15)
+   \   00010F   E0           MOVX    A,@DPTR
+   \   000110   FA           MOV     R2,A
+   \   000111   74FF         MOV     A,#-0x1
+   \   000113   6A           XRL     A,R2
+   \   000114   6005         JZ      ??timer2_isr_15
+   \   000116   EA           MOV     A,R2
+   \   000117   6002         JZ      ??timer2_isr_15
+    299          			{
+    300          				sys_ctl.bat_charger_cnt--;
+   \   000119   14           DEC     A
+   \   00011A   F0           MOVX    @DPTR,A
+    301          			}
+    302          
+    303          
+    304          			if((sys_ctl.alarm_cnt != 0xFF)&&(sys_ctl.alarm_cnt != 0x00))
+   \                     ??timer2_isr_15:
+   \   00011B   90....       MOV     DPTR,#(sys_ctl + 13)
+   \   00011E   E0           MOVX    A,@DPTR
+   \   00011F   FA           MOV     R2,A
+   \   000120   74FF         MOV     A,#-0x1
+   \   000122   6A           XRL     A,R2
+   \   000123   6005         JZ      ??timer2_isr_16
+   \   000125   EA           MOV     A,R2
+   \   000126   6002         JZ      ??timer2_isr_16
+    305          			{
+    306          				sys_ctl.alarm_cnt--;
+   \   000128   14           DEC     A
+   \   000129   F0           MOVX    @DPTR,A
+    307          			}
+    308          			//printf("%d_%d ",sys_ctl.bat_charger_sta,sys_ctl.bat_charger_cnt);
+    309          			//printf("%d_",sys_ctl.alarm_cnt);
+    310          
+    311          			if(scan_ctl.disp_cnt > 0)
+   \                     ??timer2_isr_16:
+   \   00012A   90....       MOV     DPTR,#(scan_ctl + 7)
+   \   00012D   E0           MOVX    A,@DPTR
+   \   00012E   6002         JZ      ??timer2_isr_17
+    312          			{
+    313          				scan_ctl.disp_cnt--;
+   \   000130   14           DEC     A
+   \   000131   F0           MOVX    @DPTR,A
+    314          			}
+    315          			if(scan_ctl.disp_cnt == 0)
+   \                     ??timer2_isr_17:
+   \   000132   E0           MOVX    A,@DPTR
+   \   000133   700D         JNZ     ??timer2_isr_18
+    316          			{
+    317          				scan_ctl.disp_volume_flag = false;
+   \   000135   E4           CLR     A
+   \   000136   90....       MOV     DPTR,#(scan_ctl + 9)
+   \   000139   F0           MOVX    @DPTR,A
+    318          				scan_ctl.disp_timer_flag = false;
+   \   00013A   90....       MOV     DPTR,#(scan_ctl + 8)
+   \   00013D   F0           MOVX    @DPTR,A
+    319          				scan_ctl.disp_song_flag = false;
+   \   00013E   90....       MOV     DPTR,#(scan_ctl + 10)
+   \   000141   F0           MOVX    @DPTR,A
+    320          				scan_ctl.disp_cnt = 0;
+    321          			}
+    322          
+    323          			//printf("%d_",scan_ctl.disp_cnt);
+    324          				
+    325                      #if ALARM_EN
+    326                      			t_alarm.delay_1s_cnt++;
+    327                      #endif
+    328                      #if USE_TOUCH_KEY
+    329          			
+    330                      			touch_key_rest();
+    331                      #endif
+    332          			    			
+    333                  	counter_1s++;
+   \                     ??timer2_isr_18:
+   \   000142   05..         INC     ??counter_1s
+    334                      /*1min   定时****************************************************/
+    335          		    if((counter_1s%60) == 0x00)
+   \   000144   E5..         MOV     A,??counter_1s
+   \   000146   75F03C       MOV     B,#0x3c
+   \   000149   84           DIV     AB
+   \   00014A   E5F0         MOV     A,B
+   \   00014C   6003         JZ      $+5
+   \   00014E   02....       LJMP    ??timer2_isr_4
+    336          	        {
+    337          				counter_1min++;
+   \   000151   05..         INC     ??counter_1min
+    338          				if(ocx.timel < 59)
+   \   000153   78..         MOV     R0,#(ocx + 12)
+   \   000155   E6           MOV     A,@R0
+   \   000156   943B         SUBB    A,#0x3b
+   \   000158   5003         JNC     ??timer2_isr_19
+    339          				{
+    340          					ocx.timel += 1;
+   \                     ??timer2_isr_20:
+   \   00015A   06           INC     @R0
+   \   00015B   800B         SJMP    ??timer2_isr_21
+    341          				}else
+    342          				{
+    343          					ocx.timel = 0;
+   \                     ??timer2_isr_19:
+   \   00015D   7600         MOV     @R0,#0x0
+    344          					if(ocx.timeh < 23){
+   \   00015F   18           DEC     R0
+   \   000160   E6           MOV     A,@R0
+   \   000161   C3           CLR     C
+   \   000162   9417         SUBB    A,#0x17
+   \   000164   40F4         JC      ??timer2_isr_20
+    345          						ocx.timeh += 1;
+    346          					}else{
+    347          						ocx.timeh = 0;
+   \   000166   7600         MOV     @R0,#0x0
+    348          					}
+    349          				}
+    350          				//printf("1min\n"); 
+    351          
+    352                          counter_1s = 0;  //清零
+   \                     ??timer2_isr_21:
+   \   000168   75..00       MOV     ??counter_1s,#0x0
+    353          
+    354          				if(scan_ctl.timer_flag != 0)            //睡眠仪 产品模式:15min 30min 60min定时 测试模式:1min 2min 3min
+   \   00016B   90....       MOV     DPTR,#(scan_ctl + 14)
+   \   00016E   E0           MOVX    A,@DPTR
+   \   00016F   FA           MOV     R2,A
+   \   000170   6065         JZ      ??timer2_isr_4
+    355          				{
+    356          					scan_ctl.count_1min++;
+   \   000172   90....       MOV     DPTR,#(scan_ctl + 15)
+   \   000175   E0           MOVX    A,@DPTR
+   \   000176   2401         ADD     A,#0x1
+   \   000178   F0           MOVX    @DPTR,A
+   \   000179   A3           INC     DPTR
+   \   00017A   E0           MOVX    A,@DPTR
+   \   00017B   3400         ADDC    A,#0x0
+   \   00017D   F0           MOVX    @DPTR,A
+    357          					if((scan_ctl.timer_flag == 1) && (scan_ctl.count_1min == TIMER_15))
+   \   00017E   7401         MOV     A,#0x1
+   \   000180   6A           XRL     A,R2
+   \   000181   90....       MOV     DPTR,#(scan_ctl + 15)
+   \   000184   7011         JNZ     ??timer2_isr_22
+   \   000186   E0           MOVX    A,@DPTR
+   \   000187   640F         XRL     A,#0xf
+   \   000189   7002         JNZ     ??timer2_isr_23
+   \   00018B   A3           INC     DPTR
+   \   00018C   E0           MOVX    A,@DPTR
+   \                     ??timer2_isr_23:
+   \   00018D   7034         JNZ     ??timer2_isr_24
+    358          					//if((scan_ctl.timer_flag == 1) && (scan_ctl.count_1min == 1))
+    359          					{
+    360          						Timer1_flag = true;
+   \                     ??timer2_isr_25:
+   \   00018F   7401         MOV     A,#0x1
+   \   000191   90....       MOV     DPTR,#Timer1_flag
+   \   000194   F0           MOVX    @DPTR,A
+   \   000195   802C         SJMP    ??timer2_isr_24
+    361          					}else if((scan_ctl.timer_flag == 2) && (scan_ctl.count_1min == TIMER_30))
+   \                     ??timer2_isr_22:
+   \   000197   E0           MOVX    A,@DPTR
+   \   000198   F8           MOV     R0,A
+   \   000199   A3           INC     DPTR
+   \   00019A   E0           MOVX    A,@DPTR
+   \   00019B   F9           MOV     R1,A
+   \   00019C   7402         MOV     A,#0x2
+   \   00019E   6A           XRL     A,R2
+   \   00019F   700A         JNZ     ??timer2_isr_26
+   \   0001A1   741E         MOV     A,#0x1e
+   \                     ??timer2_isr_27:
+   \   0001A3   68           XRL     A,R0
+   \   0001A4   7001         JNZ     ??timer2_isr_28
+   \   0001A6   E9           MOV     A,R1
+   \                     ??timer2_isr_28:
+   \   0001A7   701A         JNZ     ??timer2_isr_24
+   \   0001A9   80E4         SJMP    ??timer2_isr_25
+    362          					{
+    363          						Timer1_flag = true;
+    364          					}else if((scan_ctl.timer_flag == 3) && (scan_ctl.count_1min == TIMER_60))
+   \                     ??timer2_isr_26:
+   \   0001AB   7403         MOV     A,#0x3
+   \   0001AD   6A           XRL     A,R2
+   \   0001AE   7004         JNZ     ??timer2_isr_29
+   \   0001B0   743C         MOV     A,#0x3c
+   \   0001B2   80EF         SJMP    ??timer2_isr_27
+    365          					{
+    366          						Timer1_flag = true;
+    367          					}else if((scan_ctl.timer_flag == 4) && (scan_ctl.count_1min == TIMER_7h))
+   \                     ??timer2_isr_29:
+   \   0001B4   7404         MOV     A,#0x4
+   \   0001B6   6A           XRL     A,R2
+   \   0001B7   700A         JNZ     ??timer2_isr_24
+   \   0001B9   74A4         MOV     A,#-0x5c
+   \   0001BB   68           XRL     A,R0
+   \   0001BC   7003         JNZ     ??timer2_isr_30
+   \   0001BE   7401         MOV     A,#0x1
+   \   0001C0   69           XRL     A,R1
+   \                     ??timer2_isr_30:
+   \   0001C1   60CC         JZ      ??timer2_isr_25
+    368          					{
+    369          						Timer1_flag = true;
+    370          					}
+    371          					printf("min: %d\n", scan_ctl.count_1min);
+   \                     ??timer2_isr_24:
+   \   0001C3                ; Setup parameters for call to function my_printf
+   \   0001C3   90....       MOV     DPTR,#(scan_ctl + 15)
+   \   0001C6   12....       LCALL   ?PUSH_ISTACK_X_TWO
+   \   0001C9   7A..         MOV     R2,#(`?<Constant "min: %d\\n">` & 0xff)
+   \   0001CB   7B..         MOV     R3,#((`?<Constant "min: %d\\n">` >> 8) & 0xff)
+   \   0001CD   12....       LCALL   my_printf
+   \   0001D0   D0E0         POP     A
+   \   0001D2   D0E0         POP     A
+    372          					counter_1s = 0;
+   \   0001D4   75..00       MOV     ??counter_1s,#0x0
+    373          				}
+    374          
+    375          				
+    376          
+    377          	        }
+    378                      
+    379          			
+    380                  }
+    381          	}
+    382          #if LED_7P7S_SCAN_HALF_MS
+    383          timer2_exit:
+    384          #endif
+    385          
+    386          	ISR_EXIT();
+   \                     ??timer2_isr_4:
+   \   0001D7   D085         pop 0x85
+   \   0001D9   D084         pop 0x84
+   \   0001DB   D086         pop 0x86
+   \   0001DD   D08B         pop 0x8b
+    387          }
+   \   0001DF   D0F0         POP     B
+   \   0001E1   D083         POP     DPH
+   \   0001E3   D082         POP     DPL
+   \   0001E5   D0..         POP     ?V0 + 1
+   \   0001E7   D0..         POP     ?V0 + 0
+   \   0001E9   02....       LJMP    ?Subroutine0
+
+   \                                 In segment XDATA_Z, align 1, keep-with-next
+   \   000000                REQUIRE __INIT_XDATA_Z
+   \                     ??count_1s:
+   \   000000                DS 1
+
+   \                                 In segment DATA_Z, align 1, keep-with-next
+   \   000000                REQUIRE __INIT_DATA_Z
+   \                     ??counter_5ms:
+   \   000000                DS 1
+
+   \                                 In segment DATA_Z, align 1, keep-with-next
+   \   000000                REQUIRE __INIT_DATA_Z
+   \                     ??counter_1ms:
+   \   000000                DS 1
+
+   \                                 In segment DATA_Z, align 1, keep-with-next
+   \   000000                REQUIRE __INIT_DATA_Z
+   \                     ??counter_1s:
+   \   000000                DS 1
+
+   \                                 In segment DATA_Z, align 1, keep-with-next
+   \   000000                REQUIRE __INIT_DATA_Z
+   \                     ??counter_1min:
+   \   000000                DS 1
+
+   \                                 In segment XDATA_Z, align 1, keep-with-next
+   \   000000                REQUIRE __INIT_XDATA_Z
+   \                     ??WDT_time:
+   \   000000                DS 1
+
+   \                                 In segment DATA_Z, align 1, keep-with-next
+   \   000000                REQUIRE __INIT_DATA_Z
+   \                     ??counter_half_ms:
+   \   000000                DS 1
+
+   \                                 In segment DATA_Z, align 1, keep-with-next
+   \   000000                REQUIRE __INIT_DATA_Z
+   \                     ??counter_half_half_ms:
+   \   000000                DS 1
+    388          
+    389          /*----------------------------------------------------------------------------*/
+    390          /**@brief 主流程
+    391             @param 无
+    392             @return 无
+    393             @note
+    394          */
+    395          /*----------------------------------------------------------------------------*/
+    396          #pragma location="SYS_INIT"
+
+   \                                 In segment SYS_INIT, align 1, keep-with-next
+    397          void main(void)
+   \                     main:
+    398          {
+   \   000000                ; Auto size: 0
+    399          	/*
+    400          	【注意】为避免新定义的变量在初始化操作前被使用而产生问题，
+    401          	系统启动后，已将data区0x1308-0x13FF的248byte(除R0-R7的8byte),
+    402          	和xdata区的0x0000-0x0FFF的4096byte全部清0。
+    403          	*/
+    404          	WATCHDOG_CLR();                 //系统上电后默认打开Watchdog，定时2048ms。
+   \   000000   43F720       ORL     0xf7,#0x20
+    405          	system_init();                  //系统初始化
+   \   000003                ; Setup parameters for call to function system_init
+   \   000003   12....       LCALL   system_init
+    406          	run_task();                     //运行任务
+   \   000006                ; Setup parameters for call to function run_task
+   \   000006   12....       LCALL   run_task
+    407          	while(1);
+   \                     ??main_0:
+   \   000009   80FE         SJMP    ??main_0
+    408          }
+
+   \                                 In segment INTVEC, offset 0x1b, root
+   \                     `timer2_isr??INTVEC 27`:
+   \   00001B   02....       LJMP       (timer2_isr)
+
+   \                                 In segment INTVEC, offset 0x5b, root
+   \                     `timer3_isr??INTVEC 91`:
+   \   00005B   02....       LJMP       (timer3_isr)
+
+   \                                 In segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for vcmbuf_flag>`:
+   \   000000   01           DB 1
+
+   \                                 In segment CODE_C, align 1
+   \                     `?<Constant "min: %d\\n">`:
+   \   000000   6D696E3A     DB "min: %d\012"
+   \            2025640A
+   \            00      
+
+   \                                 In segment SFR_AN, at 0xa8
+   \   union <unnamed> volatile __sfr _A_IE0
+   \                     _A_IE0:
+   \   000000                DS 1
+
+   Maximum stack usage in bytes:
+
+     Function                 EXT_STACK PSTACK XSTACK
+     --------                 --------- ------ ------
+     delay_1ms                       0      0      0
+       -> delay_m                    0      0      0
+     main                            0      0      0
+       -> system_init                0      0      0
+       -> run_task                   0      0      0
+     no_used_code                    0      0      0
+     timer2_isr                      9      0      0
+       -> led_7p7s_disp_vol         14      0      0
+       -> led_7p7s_disp_timer       14      0      0
+       -> led_7p7s_disp_song        14      0      0
+       -> led_7p7s_disp_clock       14      0      0
+       -> KEY_Whire1                14      0      0
+       -> led_7p7s_scan             14      0      0
+       -> dac_fade_auto             14      0      0
+       -> ocx_delay                 14      0      0
+       -> key_scan                  14      0      0
+       -> KEY_Whire2                14      0      0
+       -> mute_ctl_auto             14      0      0
+       -> mem_time_set              14      0      0
+       -> my_printf                 18      0      0
+     timer3_isr                      4      0      0
+
+
+   Segment part sizes:
+
+     Function/Label                 Bytes
+     --------------                 -----
+     P0                                1
+     TMR2CON1                          1
+     TMR3CON                           1
+     WDTCON                            1
+     vcmbuf_flag                       1
+     delay_1ms                        23
+     t_pwn_duty1                       1
+     t_pwn_duty2                       1
+     timer3_isr                       54
+     ?Subroutine0                      5
+     PWM_ACC_0                         1
+     PWM_ACC_1                         1
+     no_used_code                      5
+     timer2_isr                      492
+     count_1s                          1
+     counter_5ms                       1
+     counter_1ms                       1
+     counter_1s                        1
+     counter_1min                      1
+     WDT_time                          1
+     counter_half_ms                   1
+     counter_half_half_ms              1
+     main                             11
+     timer2_isr??INTVEC 27             3
+     timer3_isr??INTVEC 91             3
+     ?<Initializer for vcmbuf_flag>    1
+     ?<Constant "min: %d\n">           9
+     _A_IE0                            1
+
+ 
+   9 bytes in segment CODE_C
+   8 bytes in segment DATA_Z
+ 551 bytes in segment INTERRUPT
+   6 bytes in segment INTVEC
+   5 bytes in segment NEAR_CODE
+   5 bytes in segment SFR_AN
+  23 bytes in segment SYS_DELAY
+  11 bytes in segment SYS_INIT
+   1 byte  in segment XDATA_I
+   1 byte  in segment XDATA_ID
+   4 bytes in segment XDATA_Z
+ 
+ 600 bytes of CODE  memory (+ 6 bytes shared)
+   8 bytes of DATA  memory (+ 5 bytes shared)
+   5 bytes of XDATA memory
+
+Errors: none
+Warnings: none

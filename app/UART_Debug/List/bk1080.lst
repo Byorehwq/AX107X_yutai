@@ -1,0 +1,466 @@
+##############################################################################
+#                                                                            #
+# IAR 8051 C/C++ Compiler V7.20H/W32                   10/Sep/2015  19:03:27 #
+# Copyright 2004-2006 IAR Systems. All rights reserved.                      #
+#                                                                            #
+#    Core               =  plain                                             #
+#    Code model         =  near                                              #
+#    Data model         =  large                                             #
+#    Calling convention =  extended stack reentrant                          #
+#    Constant location  =  code                                              #
+#    Extended stack     =  enabled                                           #
+#    Dptr setup         =  1,16                                              #
+#    Source file        =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\fm\bk1080.c                           #
+#    Command line       =  -I "C:\Program Files\IAR Systems\Embedded         #
+#                          Workbench 4.05 Evaluation version\8051\INC\" -I   #
+#                          "C:\Program Files\IAR Systems\Embedded Workbench  #
+#                          4.05 Evaluation version\8051\INC\CLIB\" -I        #
+#                          "C:\Documents and Settings\Administrator\×ÀÃæ\lil #
+#                          y\15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX1 #
+#                          070_20150908\COMMON\" -I "C:\Documents and        #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\INC\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\config\" -I "C:\Documents and    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\api\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\fm\" -I "C:\Documents and        #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\fat\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\display\" -I "C:\Documents and   #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\displ #
+#                          ay\led\" -I "C:\Documents and                     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\displ #
+#                          ay\lcd\" -I "C:\Documents and                     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\task\ #
+#                          " -I "C:\Documents and Settings\Administrator\×ÀÃ #
+#                          æ\lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lil #
+#                          y_AX1070_20150908\user\" -I "C:\Documents and     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\mem\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\module\" -I "C:\Documents and    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\modul #
+#                          e\kedir\" -I "C:\Documents and                    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\key\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\startmusic\" -D UART_DEBUG -D    #
+#                          AX207X_TAG -lC "C:\Documents and                  #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\UART_ #
+#                          Debug\List\" -o "C:\Documents and                 #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\UART_ #
+#                          Debug\Obj\" -e -z9 --debug --core=plain           #
+#                          --dptr=16,1 --data_model=large --code_model=near  #
+#                          --calling_convention=ext_stack_reentrant          #
+#                          --place_constants=code --nr_virtual_regs 20       #
+#                          --extended_stack "C:\Documents and                #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\fm\bk #
+#                          1080.c"                                           #
+#    List file          =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\UART_Debug\List\bk1080.lst            #
+#    Object file        =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\UART_Debug\Obj\bk1080.r51             #
+#                                                                            #
+#                                                                            #
+##############################################################################
+
+C:\Documents and Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX1070_20150908\fm\bk1080.c
+      1          /*--------------------------------------------------------------------------*/
+      2          /**@file BK1080.C
+      3             @brief FMÄ£¿éQN8035Çý¶¯
+      4             @details FMÄ£¿éQN8035µÄÇý¶¯º¯Êý
+      5             @author LZZ
+      6             @date 2010-08-17
+      7             @note Í¨¹ýºê¶¨ÒåÀ´Ñ¡ÔñÇý¶¯·½Ê½
+      8          */
+      9          /*----------------------------------------------------------------------------*/
+     10          #include "include.h"
+     11          #include "bk1080.h"
+     12          
+     13          #if FM_BK1080_EN
+     14          
+     15          __no_init __xdata u16 writedata[34] @ "BK1080_BUF";
+     16          
+     17          extern void bk1080_mute(void);
+     18          extern void bk1080_unmute(void);
+     19          
+     20          #pragma constseg = BK1080_RX_TABLE
+     21          const __code u16 bk1080_init_tbl[34] =
+     22          {
+     23          	0x0006,	//REG0
+     24          	0x1080,	//REG1
+     25          	0x5201,	//REG2
+     26          	0x0000,	//REG3
+     27          	0x00C0,	//REG4
+     28          #if FM_SEEK_50K_STEP
+     29          	0x0A2f,	//REG5  //0x0A1F:100KHz   0x0A2F:50KHz
+     30          #else
+     31          	0x0A1f,	//REG5
+     32          #endif
+     33          	0x002E,	//REG6
+     34          	0x02FF,	//REG7
+     35          	0x5B11,	//REG8
+     36          	0x0000,	//REG9
+     37          	0x411E,	//REG10
+     38          	0x0000,	//REG11
+     39          	0xCE00,	//REG12
+     40          	0x0000,	//REG13
+     41          	0x0000,	//REG14
+     42          	0x1000,	//REG15
+     43          	0x0010,	//REG16
+     44          	0x0000,	//REG17
+     45          	0x13FF,	//REG18
+     46          	0x9852,	//REG19
+     47          	0x0000,	//REG20
+     48          	0x0000,	//REG21
+     49          	0x0008,	//REG22
+     50          	0x0000,	//REG23
+     51          	0x51E0,	//REG24
+     52          	0x38BC,//0x28DC,	//REG25
+     53          	0x2645,	//REG26
+     54          	0x00E4,	//REG27
+     55          	0x1CD8,	//REG28
+     56          	0x3A50,	//REG29
+     57          	0xEAF0,	//REG30
+     58          	0x3000,	//REG31
+     59          	0x0200,//0x0000,	//REG32
+     60          	0x0000	//REG33
+     61          };
+     62          #pragma constseg=default
+     63          
+     64          #pragma location="BK1080"
+     65          void bk1080_Write(u16 *writedata,u8 size)
+     66          {
+     67          	u8 i;
+     68          
+     69          	fm_i2c_start();
+     70          	fm_i2c_send_byte(0x80);
+     71          	fm_i2c_recv_ack();
+     72          
+     73          	fm_i2c_send_byte(0x00);
+     74          	fm_i2c_recv_ack();
+     75          
+     76          	for(i=0; i<size; i++)
+     77          	{
+     78          		fm_i2c_send_byte(writedata[i]>>8);
+     79          		fm_i2c_recv_ack();
+     80          		fm_i2c_send_byte(writedata[i]);
+     81          		fm_i2c_recv_ack();
+     82          	}
+     83          
+     84          	fm_i2c_stop();
+     85          }
+     86          
+     87          #pragma location="BK1080"
+     88          void bk1080_Write_reg(u8 reg,u16 dat)
+     89          {
+     90          	fm_i2c_start();
+     91          	fm_i2c_send_byte(0x80);
+     92          	fm_i2c_recv_ack();
+     93          	fm_i2c_send_byte(reg*2);
+     94          	fm_i2c_recv_ack();
+     95          	fm_i2c_send_byte(dat>>8);
+     96          	fm_i2c_recv_ack();
+     97          	fm_i2c_send_byte(dat);
+     98          	fm_i2c_recv_ack();
+     99          	fm_i2c_stop();
+    100          }
+    101          
+    102          #pragma location="BK1080"
+    103          u16 bk1080_Read_reg(u16 reg)
+    104          {
+    105          	u16 temp;
+    106          	u8 temp1,temp2;
+    107          
+    108          	fm_i2c_start();
+    109          	fm_i2c_send_byte(0x80);
+    110          	fm_i2c_recv_ack();
+    111          	fm_i2c_send_byte(reg*2+1);
+    112          	fm_i2c_recv_ack();
+    113          	temp1 = fm_i2c_read_byte();
+    114          	fm_i2c_send_ack();
+    115          	temp2= fm_i2c_read_byte();
+    116          	fm_i2c_send_nack();
+    117          	fm_i2c_stop();
+    118          	temp=temp1;
+    119          	temp=(temp<<8)+(temp2);
+    120          
+    121          	return temp;
+    122          }
+    123          
+    124          /*----------------------------------------------------------------------------*/
+    125          /**@brief FMÄ£¿éBK1080³õÊ¼»¯
+    126             @param ÎÞ
+    127             @return ÎÞ
+    128             @note
+    129          */
+    130          /*----------------------------------------------------------------------------*/
+    131          #pragma location="BK1080"
+    132          void bk1080_init(void)
+    133          {
+    134          	u8 i;
+    135          
+    136          	for(i=0; i<=33; i++)
+    137          		writedata[i] = bk1080_init_tbl[i];
+    138          
+    139          #if (FM_CLOCK == USE_MODULE_CRYSTAL)
+    140          	writedata[2] = 0x5201;	//internal 32.768K
+    141          #elif ((FM_CLOCK == USE_IO_32KHZ_CLK) || (FM_CLOCK == USE_SD_IO_32KHZ_CLK) || (FM_CLOCK == SHARE_CRYSTAL_32KHz))
+    142          	writedata[2] = 0x4201;	//external 32.768K
+    143          #elif(FM_CLOCK== SHARE_CRYSTAL_24MHz)
+    144          	writedata[2] =  0x4201;	//external 24M
+    145          	writedata[16] = 0x2DC6;
+    146          	writedata[17] = 0x8000;
+    147          	writedata[25] = 0xA8DC;
+    148          #elif ((FM_CLOCK == SHARE_CRYSTAL_12MHz) || (FM_CLOCK == USE_IO_12MHZ_CLK) || (FM_CLOCK == USE_SD_IO_12MHZ_CLK))
+    149          	writedata[2] = 0x4201;	//external 12M
+    150          	writedata[16] = 0x16E3;
+    151          	writedata[17] = 0x8000;
+    152          	writedata[25] = 0x28DC;
+    153          #else
+    154          #error "BK1080: ÇëÑ¡ÔñFMÊ±ÖÓÔ´"
+    155          #endif
+    156          
+    157          	for(i=0; i<34; i++)
+    158          		bk1080_Write_reg(i, writedata[i]);
+    159          
+    160          	WATCHDOG_CLR();
+    161          	delay_5ms(200); //750msÒÔÉÏ
+    162          	WATCHDOG_CLR();
+    163          }
+    164          
+    165          /*----------------------------------------------------------------------------*/
+    166          /**@brief FMÄ£¿éBK1080ÉèÖÃÆµÂÊ
+    167             @param freq ÒªÉèÖÃµÄÆµÂÊ
+    168             @para  mute_ctrl:  //0 Ã»ÓÐmute_ctrl   //1 ÓÐmute_ctrl
+    169             @return ÎÞ
+    170             @note ÆµÂÊ·¶Î§Îª875~1080
+    171          */
+    172          /*----------------------------------------------------------------------------*/
+    173          #pragma location="BK1080"
+    174          void bk1080_set_freq(u16 freq, u8 mute_ctrl)
+    175          {
+    176          	u16 ch = 0;
+    177          #if FM_SEEK_50K_STEP
+    178          	ch = (freq - 8750) / 5;   //50K
+    179          #else
+    180          	ch = freq - 875;
+    181          #endif
+    182          	if(mute_ctrl)
+    183          	{
+    184          		bk1080_mute();
+    185          	}
+    186          	writedata[2] &= ~0x0100;        //disable seek
+    187          	bk1080_Write_reg(0x02,writedata[2]);
+    188          	writedata[3] &= ~0x8000;             //reset tune
+    189          	bk1080_Write_reg(0x03,writedata[3]);
+    190          
+    191          	writedata[3] = ch | 0x8000;
+    192          	bk1080_Write_reg(0x03, writedata[3]);
+    193          	delay_5ms(5);//20);      //++ changed, SO @ 2010-08-26, really need 100ms ?
+    194          	writedata[2] &= ~0x4000;
+    195          	bk1080_Write_reg(0x02,writedata[2]);
+    196          	if(mute_ctrl)
+    197          	{
+    198          		bk1080_unmute();
+    199          	}
+    200          }
+    201          
+    202          
+    203          /*----------------------------------------------------------------------------*/
+    204          /**@brief FMÄ£¿éBK1080ÉèÖÃÒôÁ¿
+    205             @param vol ÒôÁ¿Öµ
+    206             @return ÎÞ
+    207             @note ÒôÁ¿·¶Î§0~15
+    208          */
+    209          /*----------------------------------------------------------------------------*/
+    210          #pragma location="BK1080"
+    211          void bk1080_set_vol(u8 vol)
+    212          {
+    213          	if(vol>15)
+    214          		vol=15;
+    215          
+    216          	writedata[5] &= 0xfff0;
+    217          	writedata[5] |= (vol & 0x0f);
+    218          	bk1080_Write_reg(0x05, writedata[5]);
+    219          
+    220          	if(vol > 0)
+    221          		writedata[2] &= ~0x4000; //not mute
+    222          	else
+    223          		writedata[2] |= 0x4000;  //mute
+    224          	bk1080_Write_reg(0x02,writedata[2]);
+    225          }
+    226          
+    227          /*----------------------------------------------------------------------------*/
+    228          /**@brief FMÄ£¿éBK1080¹Ø±Õ
+    229             @param ÎÞ
+    230             @return ÎÞ
+    231             @note
+    232          */
+    233          /*----------------------------------------------------------------------------*/
+    234          #pragma location="BK1080"
+    235          void bk1080_off(void)
+    236          {
+    237          	writedata[2] |= (1<<6);
+    238          	writedata[2] |= 1;
+    239          	bk1080_Write_reg(0x02,writedata[2]);
+    240          	delay_5ms(10);
+    241          }
+    242          
+    243          /*----------------------------------------------------------------------------*/
+    244          /**@brief FMÄ£¿éBK1080×Ô¶¯ËÑÌ¨
+    245             @param freq ÒªËÑË÷µÄÆµÂÊ
+    246             @return Ö¸¶¨µÄÆµÂÊÏÂÓÐÌ¨·µ»Ø1£¬·ñÔò·µ»Ø0
+    247             @note
+    248          */
+    249          /*----------------------------------------------------------------------------*/
+    250          #pragma location="BK1080"
+    251          u8 bk1080_seek(u16 freq)
+    252          {
+    253          
+    254          	static u16 last_fre=0;
+    255          	static u16 g_freq_deviation_last=0;
+    256          	u16 cur_freq_deviation;
+    257          	u16 reg7;
+    258          	u16 reg10;
+    259          
+    260          	bk1080_set_freq(freq,0);
+    261          	delay_5ms(25);   //delay 125ms     //ÕâÀïÑÓÊ±±È½ÏÖØÒª,ÉÙÁËµÄ»°ÊÕ²»ÁËÌ¨
+    262          	bk1080_mute();
+    263          	reg7 = bk1080_Read_reg(0x07);
+    264          	cur_freq_deviation = reg7>>4;
+    265          
+    266          	reg10 = bk1080_Read_reg(0x0A);
+    267          	if(reg10 & 0x1000)    //check AFCRL bit12	//invalide channel
+    268          	{
+    269          		last_fre=freq;
+    270          		g_freq_deviation_last=cur_freq_deviation;
+    271          		return 0;//false
+    272          	}
+    273          	if((reg10 & 0x00FF)<5)    //RSSI:Received Signal Strength Indicator
+    274          	{
+    275          		last_fre=freq;
+    276          		g_freq_deviation_last=cur_freq_deviation;
+    277          		return 0;//false
+    278          	}
+    279          	if((reg7 & 0xf) <2)        //SNR
+    280          	{
+    281          		last_fre = freq;
+    282          		g_freq_deviation_last = cur_freq_deviation;
+    283          		return 0; //false
+    284          	}
+    285          	if((cur_freq_deviation>=280)&&(cur_freq_deviation<=(0xfff-280)))   //280
+    286          	{
+    287          		last_fre=freq;
+    288          		g_freq_deviation_last=cur_freq_deviation;
+    289          		return 0;//false
+    290          	}
+    291          
+    292          //new added 2009-08-25
+    293          	//ÏòÉÏËÑ
+    294          	if((freq>=876)&&((freq-last_fre)==1))
+    295          	{
+    296          		if(g_freq_deviation_last&0x800)
+    297          		{
+    298          			last_fre=freq;
+    299          			g_freq_deviation_last=cur_freq_deviation;
+    300          			return 0;//false
+    301          		}
+    302          		if(g_freq_deviation_last<50)
+    303          		{
+    304          			last_fre=freq;
+    305          			g_freq_deviation_last=cur_freq_deviation;
+    306          			return 0;//false
+    307          		}
+    308          	}
+    309          #if 0  //ÏòÏÂËÑ
+    310          	if((freq>=875)&&((last_fre-freq)==1))
+    311          	{
+    312          		if((g_freq_deviation_last&0x800)==0)
+    313          		{
+    314          			last_fre=freq;
+    315          			g_freq_deviation_last=cur_freq_deviation;
+    316          			return 0;//false
+    317          		}
+    318          
+    319          		if(g_freq_deviation_last>(0xfff-80))
+    320          		{
+    321          			last_fre=freq;
+    322          			g_freq_deviation_last=cur_freq_deviation;
+    323          			return 0;//false
+    324          		}
+    325          	}
+    326          #endif
+    327          	last_fre=freq;
+    328          	g_freq_deviation_last = cur_freq_deviation;
+    329          	bk1080_unmute();
+    330          	return 1;//ok
+    331          }
+    332          
+    333          #pragma location="BK1080"
+    334          void bk1080_mute(void)
+    335          {
+    336          	writedata[2] |= 0x4000;
+    337          	bk1080_Write_reg(0x02,writedata[2]);
+    338          }
+    339          
+    340          void bk1080_unmute(void)@"BK1080"
+    341          {
+    342          	writedata[2] &= ~0x4000;
+    343          	bk1080_Write_reg(0x02,writedata[2]);
+    344          }
+    345          
+    346          /*----------------------------------------------------------------------------*/
+    347          /**@brief FMÄ£¿éBK1080¼ì²â
+    348             @param ÎÞ
+    349             @return ¼ì²âµ½BK1080Ä£¿é·µ»Ø1£¬·ñÔò·µ»Ø0
+    350             @note
+    351          */
+    352          /*----------------------------------------------------------------------------*/
+    353          #pragma location="BK1080"
+    354          u8 bk1080_online(void)
+    355          {
+    356          	u16 tmp;
+    357          	tmp = bk1080_Read_reg(0x01);
+    358          
+    359          	if(tmp == 0x1080)
+    360          		return 1;
+    361          	else
+    362          		return 0;
+    363          }
+    364          
+    365          #endif
+    366          
+    367          
+
+
+   Segment part sizes:
+
+     Function/Label Bytes
+     -------------- -----
+
+ 
+ 
+ 0 bytes of memory
+
+Errors: none
+Warnings: none

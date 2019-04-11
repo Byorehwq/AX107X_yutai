@@ -1,0 +1,470 @@
+##############################################################################
+#                                                                            #
+# IAR 8051 C/C++ Compiler V7.20H/W32                   10/Sep/2015  19:03:28 #
+# Copyright 2004-2006 IAR Systems. All rights reserved.                      #
+#                                                                            #
+#    Core               =  plain                                             #
+#    Code model         =  near                                              #
+#    Data model         =  large                                             #
+#    Calling convention =  extended stack reentrant                          #
+#    Constant location  =  code                                              #
+#    Extended stack     =  enabled                                           #
+#    Dptr setup         =  1,16                                              #
+#    Source file        =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\mem\mem_internal.c                    #
+#    Command line       =  -I "C:\Program Files\IAR Systems\Embedded         #
+#                          Workbench 4.05 Evaluation version\8051\INC\" -I   #
+#                          "C:\Program Files\IAR Systems\Embedded Workbench  #
+#                          4.05 Evaluation version\8051\INC\CLIB\" -I        #
+#                          "C:\Documents and Settings\Administrator\×ÀÃæ\lil #
+#                          y\15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX1 #
+#                          070_20150908\COMMON\" -I "C:\Documents and        #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\INC\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\config\" -I "C:\Documents and    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\api\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\fm\" -I "C:\Documents and        #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\fat\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\display\" -I "C:\Documents and   #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\displ #
+#                          ay\led\" -I "C:\Documents and                     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\displ #
+#                          ay\lcd\" -I "C:\Documents and                     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\task\ #
+#                          " -I "C:\Documents and Settings\Administrator\×ÀÃ #
+#                          æ\lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lil #
+#                          y_AX1070_20150908\user\" -I "C:\Documents and     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\mem\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\module\" -I "C:\Documents and    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\modul #
+#                          e\kedir\" -I "C:\Documents and                    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\key\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\startmusic\" -D UART_DEBUG -D    #
+#                          AX207X_TAG -lC "C:\Documents and                  #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\UART_ #
+#                          Debug\List\" -o "C:\Documents and                 #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\UART_ #
+#                          Debug\Obj\" -e -z9 --debug --core=plain           #
+#                          --dptr=16,1 --data_model=large --code_model=near  #
+#                          --calling_convention=ext_stack_reentrant          #
+#                          --place_constants=code --nr_virtual_regs 20       #
+#                          --extended_stack "C:\Documents and                #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\mem\m #
+#                          em_internal.c"                                    #
+#    List file          =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\UART_Debug\List\mem_internal.lst      #
+#    Object file        =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\UART_Debug\Obj\mem_internal.r51       #
+#                                                                            #
+#                                                                            #
+##############################################################################
+
+C:\Documents and Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX1070_20150908\mem\mem_internal.c
+      1          /*****************************************************************************
+      2           * Module    : mem
+      3           * File      : mem_internal.c
+      4           * Author    :
+      5           * Email     :
+      6           * Function  : ÄÚÖÃ¼ÇÒäÈÎÎñÁ÷³Ì
+      7           *****************************************************************************/
+      8          #include "include.h"
+      9          #include "mem_internal.h"
+     10          
+     11          #if (SYS_MEM == MEM_INTERNAL)
+     12          
+     13          //¼ì²éÄÚÖÃ¼ÇÄ£¿éÊÇ·ñµÚÒ»´ÎÉÏµç
+     14          #pragma location="MEMINT"
+     15          bool internal_poweron_check(void)
+     16          {
+     17          #if USE_BREAK_POINT
+     18          	mem_ctl.erase_sta = NEED_RE_ERASE;
+     19          #endif
+     20          	if(((internal_read_info(INTERNAL_MARK_1)) == 0x55)
+     21          	        && ((internal_read_info(INTERNAL_MARK_2)) == 0xAA))
+     22          	{
+     23          		return 1;
+     24          	}
+     25          	else
+     26          	{
+     27          		internal_sector_erase(INTERNAL_MARK_1);  //²Á³ýÁ½byte
+     28          		u16 write_value = 0xAA55;
+     29          		internal_write_info(INTERNAL_MARK_1, (u8 *)&write_value, 2);
+     30          
+     31          		internal_sector_erase(INTERNAL_NUM_SD_ADDR); //ÓÃÓÚ¼ÇÒäÇúÄ¿µØÖ·µÄ×Ö½ÚÐèÒª²Á³ý
+     32          		internal_sector_erase(INTERNAL_NUM_USB_ADDR);
+     33          		//printf("internal first poweron.\n");
+     34          		return 0;
+     35          	}
+     36          }
+     37          
+     38          //±ê¼ÇÄÚÖÃ¼ÇÒäÒÑ¾­Ëð»µ
+     39          #pragma location="MEMINT"
+     40          void internal_is_damage(void)
+     41          {
+     42          	mem_ctl.internal_sta = false;  //ÒÑËð»µ£¬²»ÔÙ±£´æ
+     43          }
+     44          
+     45          #pragma location="MEMINT"
+     46          u8 get_addr_offset(u8 para_tyte)
+     47          {
+     48          	u16 value;
+     49          	u8 addr_offset = 0;
+     50          
+     51          	//para_tyte:  0-SD;1-USB
+     52          	value = internal_read_info(para_tyte * 2 + 1);
+     53          	value <<= 8;
+     54          	value += internal_read_info(para_tyte * 2);
+     55          
+     56          	for(u8 i=0; i<16; i++)
+     57          	{
+     58          		if(value & BIT(0))
+     59          		{
+     60          			break;
+     61          		}
+     62          		else
+     63          		{
+     64          			value >>= 1;
+     65          			addr_offset++;
+     66          		}
+     67          	}
+     68          	if(addr_offset >= INTERNAL_OFFSET_MAX)
+     69          	{
+     70          		addr_offset = 0;
+     71          	}
+     72          	//printf("addr offset = %d\n",addr_offset);
+     73          
+     74          	return addr_offset;
+     75          }
+     76          
+     77          #pragma location="MEMINT"
+     78          u8 addr_offset_increase(u8 para_tyte)
+     79          {
+     80          	u8 next_addr_offset;
+     81          	u16 offset_value = 0xFFFF;
+     82          
+     83          	next_addr_offset = get_addr_offset(para_tyte);
+     84          	next_addr_offset++;
+     85          	if(next_addr_offset >= INTERNAL_OFFSET_MAX)
+     86          	{
+     87          		next_addr_offset = 0;
+     88          		internal_sector_erase(para_tyte * 2);
+     89          	}
+     90          
+     91          	for(u8 i=0; i<next_addr_offset; i++)
+     92          	{
+     93          		offset_value <<= 1;
+     94          	}
+     95          
+     96          	internal_write_info(para_tyte * 2, (u8 *)&offset_value, 2);
+     97          
+     98          	return next_addr_offset;
+     99          }
+    100          
+    101          //Ð´ÈëÒôÁ¿Öµ+µ±Ç°²¥·ÅÉè±¸Öµ,2byte,Ã¿1´ÎÐèÒª²Á³ý
+    102          #pragma location="MEMINT"
+    103          void write_volume_device_internal(void)
+    104          {
+    105          	u16 value_vol_dev;
+    106          
+    107          	value_vol_dev = t_fat.dev_sel;
+    108          	value_vol_dev <<= 8;
+    109          	value_vol_dev += sys_ctl.volume;
+    110          
+    111          #if MEM_WRITE_COMPARE
+    112          	u16 read_value=0;
+    113          	internal_read_multi(INTERNAL_VOL_PARA,(u8 *)&read_value,2);  //¶Á³öÉÏ´ÎÖµ
+    114          	if(read_value == value_vol_dev)
+    115          	{
+    116          		return;                 //Èç¹ûµ±Ç°ÖµÓëÉÏ´ÎÖµÏàµÈ£¬¾Í²»ÔÙÐ´²Ù×÷
+    117          	}
+    118          #endif
+    119          
+    120          	internal_sector_erase(INTERNAL_VOL_PARA);
+    121          	internal_write_info(INTERNAL_VOL_PARA,(u8 *)&value_vol_dev,2);
+    122          
+    123          #if MEM_WRITE_COMPARE
+    124          	internal_read_multi(INTERNAL_VOL_PARA,(u8 *)&read_value,2);  //¶Á³ö±¾´ÎÐ´ÈëµÄÖµ
+    125          	if(read_value != value_vol_dev)
+    126          	{
+    127          		internal_is_damage();
+    128          	}
+    129          #endif
+    130          }
+    131          
+    132          //¶Á³öÒôÁ¿Öµ
+    133          #pragma location="MEMINT"
+    134          void read_volume_internal(void)
+    135          {
+    136          	sys_ctl.volume = internal_read_info(INTERNAL_VOL_PARA);
+    137          }
+    138          
+    139          //¶Á³öµ±Ç°²¥·ÅÉè±¸Öµ
+    140          #pragma location="MEMINT"
+    141          void read_device_internal(void)
+    142          {
+    143          	sys_ctl.dev_save = internal_read_info(INTERNAL_DEV_PARA);
+    144          }
+    145          
+    146          //Ð´ÈëÇúÄ¿Öµ2byte,ÐèÒªÏÈ²Á³ý
+    147          #pragma location="MEMINT"
+    148          void write_num_internal(void)
+    149          {
+    150          	u8 addr;
+    151          	u16 num_temp;
+    152          
+    153          	num_temp = u_msc.music_num; //±£´æµ±Ç°Öµ
+    154          
+    155          #if MEM_WRITE_COMPARE
+    156          	read_num_internal();             //¶Á³öÉÏ´ÎÖµ
+    157          	if(num_temp == u_msc.music_num)
+    158          	{
+    159          		return;                 //Èç¹ûµ±Ç°ÖµÓëÉÏ´ÎÖµÏàµÈ£¬¾Í²»ÔÙÐ´²Ù×÷
+    160          	}
+    161          #endif
+    162          
+    163          	addr = INTERNAL_NUM_SD_PARA + mem_ctl.dev * INTERNAL_OFFSET
+    164          	       + addr_offset_increase(mem_ctl.dev) * 2;
+    165          	//printf("write num addr = %02x\n",addr);
+    166          	internal_sector_erase(addr);
+    167          	internal_write_info(addr, (u8 *)&num_temp, 2);
+    168          
+    169          #if MEM_WRITE_COMPARE
+    170          	read_num_internal();             //¶Á³ö±¾´ÎÐ´ÈëµÄÖµ
+    171          	if(num_temp != u_msc.music_num)
+    172          	{
+    173          		u_msc.music_num = num_temp;
+    174          		internal_is_damage();
+    175          	}
+    176          #endif
+    177          }
+    178          
+    179          //¶Á³öÇúÄ¿Öµ
+    180          #pragma location="MEMINT"
+    181          void read_num_internal(void)
+    182          {
+    183          	u8 addr;
+    184          
+    185          	addr = INTERNAL_NUM_SD_PARA + mem_ctl.dev * INTERNAL_OFFSET
+    186          	       + get_addr_offset(mem_ctl.dev) * 2;
+    187          	//printf("read num addr = %02x\n",addr);
+    188          
+    189          	internal_read_multi(addr,(u8 *)&u_msc.music_num,2);
+    190          	//printf("read num = %02x\n",u_msc.music_num);
+    191          }
+    192          
+    193          #if USE_BREAK_POINT
+    194          //¶Á³öÒôÀÖ²¥·Å¶ÏµãÐÅÏ¢
+    195          #pragma location="MEMINT"
+    196          void read_music_break_internal(void)
+    197          {
+    198          	u8 addr;
+    199          
+    200          	addr = INTERNAL_POS_SD_PARA + mem_ctl.dev * INTERNAL_OFFSET;
+    201          
+    202          	internal_read_multi(addr,(u8 *)&u_msc.break_point.pos,4);
+    203          	internal_read_multi(addr+4,(u8 *)&u_msc.break_point.frame,4);
+    204          	internal_read_multi(addr+8,(u8 *)&u_msc.filename_checksum,2);
+    205          	//printf("read frame=%08lu pos=%08lu\n",u_msc.break_point.frame,u_msc.break_point.pos);
+    206          	//printf("read checksum = %04x\n",u_msc.filename_checksum);
+    207          
+    208          	mem_ctl.read_dev = mem_ctl.dev;
+    209          	mem_ctl.erase_time = MEM_DELAY;
+    210          }
+    211          
+    212          //Ð´ÈëÒôÀÖ²¥·Å¶ÏµãÐÅÏ¢
+    213          #pragma location="MEMINT"
+    214          void write_music_break_internal(void)
+    215          {
+    216          	mem_ctl.erase_time = MEM_DELAY;
+    217          
+    218          	u8 addr = INTERNAL_POS_SD_PARA + mem_ctl.dev * INTERNAL_OFFSET;
+    219          
+    220          	if(mem_ctl.erase_sta < HAVE_ERASED)
+    221          	{
+    222          		for(u8 i=mem_ctl.erase_sta; i<5; i++)
+    223          		{
+    224          			mem_ctl.erase_sta++;
+    225          			internal_sector_erase(addr + i*2);  //ÓÉÓÚÁ¬Ðø²Á³ý5¸ösectorµØÖ·µÄÊ±¼ä½Ï³¤£¬ÒÆµ½ÆäËü´¦²Á³ý
+    226          		}
+    227          	}
+    228          
+    229          	if(mem_ctl.erase_sta != HAVE_ERASED)
+    230          	{
+    231          		return;
+    232          	}
+    233          
+    234          	mem_ctl.erase_sta = NEED_RE_ERASE;     //ÒÑÐ´±êÊ¶£¬ÐèÒªÖØÐÂ²Á³ý
+    235          	//printf("addr = %02x,addr+4=%02x\n",addr,addr+4);
+    236          	//printf("write frame=%08lu pos=%08lu\n",u_msc.break_point.frame,u_msc.break_point.pos);
+    237          	internal_write_info(addr,(u8 *)&u_msc.break_point.pos,4);
+    238          #if MEM_WRITE_COMPARE
+    239          	u32 read_value=0;
+    240          	internal_read_multi(addr,(u8 *)&read_value,4);
+    241          	if(read_value != u_msc.break_point.pos)
+    242          	{
+    243          		internal_is_damage();
+    244          		return;
+    245          	}
+    246          #endif
+    247          
+    248          	internal_write_info(addr+4,(u8 *)&u_msc.break_point.frame,4);
+    249          #if MEM_WRITE_COMPARE
+    250          	internal_read_multi(addr+4,(u8 *)&read_value,4);
+    251          	if(read_value != u_msc.break_point.frame)
+    252          	{
+    253          		internal_is_damage();
+    254          		return;
+    255          	}
+    256          #endif
+    257          
+    258          	//printf("write checksum = %04x\n",u_msc.filename_checksum);
+    259          	internal_write_info(addr+8, (u8 *)&u_msc.filename_checksum, 2);
+    260          #if MEM_WRITE_COMPARE
+    261          	internal_read_multi(addr+8,(u8 *)&read_value,2);
+    262          	if((u16)read_value != u_msc.filename_checksum)
+    263          	{
+    264          		internal_is_damage();
+    265          		return;
+    266          	}
+    267          #endif
+    268          }
+    269          
+    270          //²Á³ýÓÃÓÚ´æ·Å¶ÏµãÐÅÏ¢µÄµØÖ·
+    271          #pragma location="MEMINT"
+    272          void erase_music_break_internal(void)
+    273          {
+    274          	if((mem_ctl.erase_sta < HAVE_ERASED) && (mem_ctl.read_dev == mem_ctl.dev))
+    275          	{
+    276          		u8 addr = INTERNAL_POS_SD_PARA + mem_ctl.dev * INTERNAL_OFFSET;
+    277          
+    278          		internal_sector_erase(addr + mem_ctl.erase_sta*2);
+    279          		mem_ctl.erase_sta++;
+    280          	}
+    281          }
+    282          #endif
+    283          
+    284          #if TASK_FM_EN
+    285          #pragma location="MEMINT"
+    286          void write_fm_info_internal(u8 byte_value)
+    287          {
+    288          	u8 start_addr;
+    289          	u8 erase_addr;
+    290          
+    291          	byte_value = byte_value >> 1;
+    292          
+    293          	if((mem_ctl.prev_ch_number) && (byte_value)
+    294          	        && (mem_ctl.prev_ch_number != byte_value))
+    295          	{
+    296          		start_addr = mem_ctl.prev_ch_number+1;
+    297          	}
+    298          	else
+    299          	{
+    300          		start_addr = mem_ctl.prev_ch_number;
+    301          	}
+    302          	//printf("start addr = %d\n",start_addr);
+    303          
+    304          	for(u8 i=start_addr*2; i<(byte_value*2+1); i=i+2)
+    305          	{
+    306          
+    307          		erase_addr = INTERNAL_FREQUENCY_BUF + i;
+    308          
+    309          		//printf("erase add = %02x\n",erase_addr);
+    310          		internal_sector_erase(erase_addr);
+    311          
+    312          		//printf("write add = %02x\n",erase_addr);
+    313          		internal_write_info(erase_addr,&fm_ctl.ch_buf[i],1);
+    314          
+    315          		//printf("write add = %02x\n",erase_addr +1);
+    316          		internal_write_info(erase_addr + 1,&fm_ctl.ch_buf[i+1],1);
+    317          	}
+    318          
+    319          	mem_ctl.prev_ch_number = byte_value;
+    320          }
+    321          
+    322          #pragma location="MEMINT"
+    323          void write_cur_channel_internal(void)
+    324          {
+    325          	internal_sector_erase(INTERNAL_CUR_CHANNEL);
+    326          	internal_write_info(INTERNAL_CUR_CHANNEL,&fm_ctl.ch_cur,1);
+    327          #if FM_SEEK_50K_STEP
+    328          	internal_write_info(INTERNAL_FM_TOTAL_CHANNEL,&fm_ctl.ch_total,1);
+    329          	internal_sector_erase(INTERNAL_FREQUENCY);
+    330          	u8 freq_high,freq_low;
+    331          	u16 freq = (fm_ctl.fm_freq - FM_MIN_FREQ)/5;
+    332          	freq_high = (u8)(freq>>8);
+    333          	freq_low = (u8)freq;
+    334          	internal_write_info(INTERNAL_FREQUENCY,&freq_high,1);
+    335          	internal_write_info(INTERNAL_FREQUENCY+1,&freq_low,1);
+    336          #else
+    337          	u8 freq = fm_ctl.fm_freq - FM_MIN_FREQ;
+    338          	internal_write_info(INTERNAL_FREQUENCY,&freq,1);
+    339          #endif
+    340          
+    341          }
+    342          
+    343          #pragma location="MEMINT"
+    344          void write_total_channel_internal(void)
+    345          {
+    346          	internal_sector_erase(INTERNAL_FM_TOTAL_CHANNEL);
+    347          	internal_write_info(INTERNAL_FM_TOTAL_CHANNEL,&fm_ctl.ch_total,1);
+    348          }
+    349          
+    350          #pragma location="MEMINT"
+    351          void read_fm_info_internal(void)
+    352          {
+    353          
+    354          	for(u8 i=0; i<CH_BUF_MAX; i++)
+    355          	{
+    356          		fm_ctl.ch_buf[i] = internal_read_info(INTERNAL_FREQUENCY_BUF+i);
+    357          		//printf("buf[%d] = %02x\n",i,fm_ctl.ch_buf[i]);
+    358          	}
+    359          
+    360          	fm_ctl.ch_total = internal_read_info(INTERNAL_FM_TOTAL_CHANNEL);
+    361          	fm_ctl.ch_cur = internal_read_info(INTERNAL_CUR_CHANNEL);
+    362          #if FM_SEEK_50K_STEP
+    363          	fm_ctl.fm_freq = 5*(internal_read_info(INTERNAL_FREQUENCY)+internal_read_info(INTERNAL_FREQUENCY+1));
+    364          #else
+    365          	fm_ctl.fm_freq = internal_read_info(INTERNAL_FREQUENCY);
+    366          #endif
+    367          	//printf("total = %d\n",fm_ctl.ch_total);
+    368          }
+    369          #endif
+    370          
+    371          #endif
+
+
+   Segment part sizes:
+
+     Function/Label Bytes
+     -------------- -----
+
+ 
+ 
+ 0 bytes of memory
+
+Errors: none
+Warnings: none

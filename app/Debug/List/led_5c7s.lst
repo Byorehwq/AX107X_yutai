@@ -1,0 +1,457 @@
+##############################################################################
+#                                                                            #
+# IAR 8051 C/C++ Compiler V7.20H/W32                   29/Jun/2018  19:55:08 #
+# Copyright 2004-2006 IAR Systems. All rights reserved.                      #
+#                                                                            #
+#    Core               =  plain                                             #
+#    Code model         =  near                                              #
+#    Data model         =  large                                             #
+#    Calling convention =  extended stack reentrant                          #
+#    Constant location  =  code                                              #
+#    Extended stack     =  enabled                                           #
+#    Dptr setup         =  1,16                                              #
+#    Source file        =  I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\display\led\led #
+#                          _5c7s.c                                           #
+#    Command line       =  -I E:\software\8051\INC\ -I                       #
+#                          E:\software\8051\INC\CLIB\ -I                     #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\COMMON\ -I      #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\INC\ -I         #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\config\ -I      #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\api\ -I         #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\fm\ -I          #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\fat\ -I         #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\display\ -I     #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\display\theme_d #
+#                          efault\ -I I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073 #
+#                          A_”ÓÃ©_AX1071_xxxxxxxx_20180629_Merlin_1\app\disp #
+#                          lay\led\ -I I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC07 #
+#                          3A_”ÓÃ©_AX1071_xxxxxxxx_20180629_Merlin_1\app\dis #
+#                          play\lcd\ -I I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC0 #
+#                          73A_”ÓÃ©_AX1071_xxxxxxxx_20180629_Merlin_1\app\ta #
+#                          sk\ -I I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”Ó #
+#                          Ã©_AX1071_xxxxxxxx_20180629_Merlin_1\app\user\    #
+#                          -I I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_A #
+#                          X1071_xxxxxxxx_20180629_Merlin_1\app\mem\ -I      #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\module\ -I      #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\key\ -I         #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\startmusic\ -I  #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\spi\ -D         #
+#                          AX107X_TAG -lC I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18B #
+#                          C073A_”ÓÃ©_AX1071_xxxxxxxx_20180629_Merlin_1\app\ #
+#                          Debug\List\ -o I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18B #
+#                          C073A_”ÓÃ©_AX1071_xxxxxxxx_20180629_Merlin_1\app\ #
+#                          Debug\Obj\ -e -z9 --core=plain --dptr=16,1        #
+#                          --data_model=large --code_model=near              #
+#                          --calling_convention=ext_stack_reentrant          #
+#                          --place_constants=code --nr_virtual_regs 20       #
+#                          --extended_stack I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\1 #
+#                          8BC073A_”ÓÃ©_AX1071_xxxxxxxx_20180629_Merlin_1\ap #
+#                          p\display\led\led_5c7s.c                          #
+#    List file          =  I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\Debug\List\led_ #
+#                          5c7s.lst                                          #
+#    Object file        =  I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\Debug\Obj\led_5 #
+#                          c7s.r51                                           #
+#                                                                            #
+#                                                                            #
+##############################################################################
+
+I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX1071_xxxxxxxx_20180629_Merlin_1\app\display\led\led_5c7s.c
+      1          /*--------------------------------------------------------------------------*/
+      2          /**@file led_5c7s.C
+      3             @brief LED∏˜÷÷œ‘ æ∫Ø ˝
+      4             @details LEDœ‘ æ÷– π”√µƒ∫Ø ˝
+      5             @author LZZ
+      6             @date   2010-08-17
+      7             @note   none
+      8          */
+      9          /*----------------------------------------------------------------------------*/
+     10          #include "include.h"
+     11          
+     12          
+     13          #if (DISP_TYPE==DISP_LED_5C7S)
+     14          
+     15          IAR_DATA_A u8 dispbuf[5];
+     16          
+     17          #pragma constseg="LED_DISP_TBL"
+     18          IAR_CONST u8 tbl_led_num[10] =
+     19          {
+     20          	LED_5C7S_0, LED_5C7S_1, LED_5C7S_2, LED_5C7S_3, LED_5C7S_4,
+     21          	LED_5C7S_5, LED_5C7S_6, LED_5C7S_7, LED_5C7S_8, LED_5C7S_9,
+     22          };
+     23          
+     24          IAR_CONST u8 tbl_led_alpha[26] =
+     25          {
+     26          	LED_5C7S_A, LED_5C7S_b, LED_5C7S_C, LED_5C7S_d, LED_5C7S_E,
+     27          	LED_5C7S_F, LED_5C7S_g, LED_5C7S_H, LED_5C7S_I, LED_5C7S_J,
+     28          	LED_5C7S_K, LED_5C7S_L, LED_5C7S_m, LED_5C7S_n, LED_5C7S_O,
+     29          	LED_5C7S_P, LED_5C7S_q, LED_5C7S_r, LED_5C7S_S, LED_5C7S_t,
+     30          	LED_5C7S_U, LED_5C7S_V, LED_5C7S_w, LED_5C7S_X, LED_5C7S_y,
+     31          	LED_5C7S_Z
+     32          };
+     33          
+     34          IAR_CONST u8 tbl_led_energy[3] =
+     35          {
+     36          	(BIT_E | BIT_F), LED_5C7S_C, LED_5C7S_0,
+     37          };
+     38          #pragma constseg=default
+     39          
+     40          
+     41          #pragma location="LED_DISP_SEG"
+     42          //œ‘ æ -, 0~9, a~zµƒ◊÷∑˚¥Æ(≥£¡ø)
+     43          void led_5c7s_disp_str(const char __code *str)
+     44          {
+     45          	u8 i;
+     46          	u8 ch;
+     47          
+     48          	for(i=0; i!=3; i++)
+     49          	{
+     50          		ch = str[i];
+     51          		if(ch >= '0' && ch <= '9')
+     52          		{
+     53          			dispbuf[i] = tbl_led_num[ch - '0'];
+     54          		}
+     55          		else if(ch >= 'A' && ch <= 'Z')
+     56          		{
+     57          			dispbuf[i] = tbl_led_alpha[ch - 'A'];
+     58          		}
+     59          		else if(ch >= 'a' && ch <= 'z')
+     60          		{
+     61          			dispbuf[i] = tbl_led_alpha[ch - 'a'];
+     62          		}
+     63          		else if(ch == ' ')
+     64          		{
+     65          			dispbuf[i] = 0;
+     66          		}
+     67          		else
+     68          		{
+     69          			dispbuf[i] = LED_5C7S__;
+     70          		}
+     71          	}
+     72          //    dispbuf[4] = 0;
+     73          }
+     74          
+     75          
+     76          /*----------------------------------------------------------------------------*/
+     77          /**@brief LED≥ı ºªØ∫Ø ˝£¨≤ªœ‘ æ
+     78             @param Œﬁ
+     79             @return Œﬁ
+     80             @note
+     81          */
+     82          /*----------------------------------------------------------------------------*/
+     83          void led_5c7s_init(void) AT(LED_5C7S_INIT);
+     84          void led_5c7s_init(void)
+     85          {
+     86          	LED_5C7S_PORT_INIT(); 
+     87          	ALL_LED_5C7S_OFF();
+     88          }
+     89          
+     90          /*----------------------------------------------------------------------------*/
+     91          /**@brief 5com7seg LED «Â≥˝œ‘ æª∫¥Ê
+     92             @param Œﬁ
+     93             @return Œﬁ
+     94             @note
+     95          */
+     96          /*----------------------------------------------------------------------------*/
+     97          void led_5c7s_clear(void) AT(LED_5C7S_INIT);
+     98          void led_5c7s_clear(void)
+     99          {
+    100          	smemset_i(dispbuf, 0, 3);
+    101          }
+    102          
+    103          //5c7s…¡À∏øÿ÷∆
+    104          void led_5c7s_blink(void) AT(LED_5C7S_SEG);
+    105          void led_5c7s_blink(void)
+    106          {
+    107          #if 0
+    108          	if(ocx.blink_sta)
+    109          	{
+    110          		dispbuf[4] |= ocx.blink_icon;
+    111          		if(ocx.blink_num & 0x0c)
+    112          		{
+    113          			CHAR_HOURH = ocx.blink_numh;
+    114          			CHAR_HOURL = ocx.blink_numl;
+    115          		}
+    116          		else if(ocx.blink_num & 0x03)
+    117          		{
+    118          			CHAR_MINH = ocx.blink_numh;
+    119          			CHAR_MINL = ocx.blink_numl;
+    120          		}
+    121          	}
+    122          	else
+    123          	{
+    124          		dispbuf[4] &= ~ocx.blink_icon;
+    125          		if(ocx.blink_num & 0x0c)
+    126          		{
+    127          			CHAR_HOURH = 0;
+    128          			CHAR_HOURL = 0;
+    129          		}
+    130          		else if(ocx.blink_num & 0x03)
+    131          		{
+    132          			CHAR_MINH = 0;
+    133          			CHAR_MINL = 0;
+    134          		}
+    135          	}
+    136          #endif
+    137          }
+    138          
+    139          /*----------------------------------------------------------------------------*/
+    140          /**@brief LED…®√Ë∫Ø ˝£¨÷∏ˆµ„¡¡LED
+    141             @param Œﬁ
+    142             @return Œﬁ
+    143             @note
+    144          */
+    145          /*----------------------------------------------------------------------------*/
+    146          void led_5c7s_scan(void) AT(LED_5C7S_SEG);
+    147          void led_5c7s_scan(void)
+    148          {
+    149          	static u8 scan_cnt = 0;
+    150          
+    151          	ALL_LED_5C7S_OFF();
+    152          
+    153          	//led_5c7s_blink();
+    154          
+    155          	scan_cnt++;
+    156          	if(scan_cnt > 2)
+    157          	{
+    158          		scan_cnt = 0;
+    159          	}
+    160          
+    161          #if LED_5C7S_EXT_RES_EN
+    162          	// π”√Õ‚≤øœﬁ¡˜µÁ◊Ë,∂‘“™µ„¡¡µƒ∂Œ…ËŒ™ ‰≥ˆ0
+    163          	LED_5C7S_S_PORT &= ~dispbuf[scan_cnt];
+    164          #else
+    165          	// π”√ƒ⁄≤øœﬁ¡˜µÁ◊Ë,∂‘“™µ„¡¡µƒ∂Œ…ËŒ™ ‰»Îœ¬¿≠
+    166          //	LED_5C7S_S_DIR |= dispbuf[scan_cnt];
+    167          
+    168          // SEG = P42, P03/6, P22~6
+    169          // COM = P43, P04/5
+    170          
+    171          // COM0 = P43 = SCH.SEG5 = LED.P12
+    172          // COM1 = P04 = SCH.SEG1 = LED.P8
+    173          // COM2 = P05 = SCH.SEG2 = LED.P9
+    174          
+    175          // SEG_A = P42 = SCH.SEG4 = LED.P11
+    176          // SEG_B = P06 = SCH.SEG0 = LED.P7
+    177          // SEG_C = P23 = SCH.SEG9 = LED.P4
+    178          // SEG_D = P25 = SCH.SEG7 = LED.P2
+    179          // SEG_E = P26 = SCH.SEG6 = LED.P1
+    180          // SEG_F = P03 = SCH.SEG3 = LED.P10
+    181          // SEG_G = P22 = SCH.SEG10 = LED.P5
+    182          // SEG_DP = P24 = SCH.SEG8 = LED.P3
+    183          	
+    184              if(dispbuf[scan_cnt] & BIT_A)     P4 |= BIT(2);
+    185              if(dispbuf[scan_cnt] & BIT_B)     P0 |= BIT(6);
+    186              if(dispbuf[scan_cnt] & BIT_C)     P2 |= BIT(3);
+    187              if(dispbuf[scan_cnt] & BIT_D)     P2 |= BIT(5);
+    188              if(dispbuf[scan_cnt] & BIT_E)     P2 |= BIT(6);
+    189              if(dispbuf[scan_cnt] & BIT_F)     P0 |= BIT(3);
+    190              if(dispbuf[scan_cnt] & BIT_G)    	P2 |= BIT(2); 
+    191              if(dispbuf[scan_cnt] & BIT_DP)   P2 |= BIT(4); 
+    192          	
+    193          #endif
+    194          
+    195          	switch(scan_cnt)
+    196          	{
+    197          	case 0:
+    198          		LED_5C7S_C0_PORT &= ~LED_5C7S_C0_BIT;
+    199          		break;
+    200          	case 1:
+    201          		LED_5C7S_C1_PORT &= ~LED_5C7S_C1_BIT;
+    202          		break;
+    203          	case 2:
+    204          		LED_5C7S_C2_PORT &= ~LED_5C7S_C2_BIT;
+    205          		break;
+    206          	default:
+    207          		break;
+    208          	}
+    209          }
+    210          
+    211          
+    212          //œ‘ æ ˝◊÷
+    213          void led_5c7s_dispnum(u16 num) AT(LED_5C7S_SEG);
+    214          void led_5c7s_dispnum(u16 num)
+    215          {
+    216          #if OLD
+    217          	u8 i;
+    218          	const	u8 batt[3]={LED_5C7S_L,LED_5C7S_O,0};
+    219          	if(LESS_BATT==1)
+    220          	{
+    221          		for(i=2; i!=0xff; i--)
+    222          		{
+    223          			dispbuf[i] = batt[i];
+    224          		}
+    225          	}
+    226          	else
+    227          	{
+    228          		for(i=2; i!=0xff; i--)
+    229          		{
+    230          			dispbuf[i] =tbl_led_num[num % 10];
+    231          			num /= 10;
+    232          		}
+    233          	}
+    234          #else
+    235          	// 3Œª ˝¬Îπ‹£¨Ωˆƒ‹œ‘ æ º∏∞Ÿ ˝÷µ
+    236          	dispbuf[0] = tbl_led_num[num/100];
+    237          	dispbuf[1] = tbl_led_num[num%100/10];
+    238          	dispbuf[2] = tbl_led_num[num%10];
+    239          #endif
+    240          }
+    241          
+    242          //œ‘ æ“Ù¡ø
+    243          void led_5c7s_disp_vol(void) AT(LED_5C7S_SEG);
+    244          void led_5c7s_disp_vol(void)
+    245          {
+    246          	disp_numsel(sys_ctl.volume);
+    247          	//dispbuf[0] = 0;
+    248          	dispbuf[0] = LED_5C7S_V;
+    249          }
+    250          
+    251          //œ‘ æ ±º‰
+    252          void led_5c7s_disp_time(void) AT(LED_5C7S_SEG);
+    253          void led_5c7s_disp_time(void)
+    254          {
+    255          	bool ie_ea = IE_EA;
+    256          	IE_EA = 0;
+    257          
+    258          	dispbuf[0] = tbl_led_num[ocx.timeh / 10];
+    259          	dispbuf[1] = tbl_led_num[ocx.timeh % 10];
+    260          	dispbuf[2] = tbl_led_num[ocx.timel / 10];
+    261          #if 0
+    262          
+    263          	if(ocx.blink_num & 0x0c)
+    264          	{
+    265          		ocx.blink_numh = CHAR_HOURH;
+    266          		ocx.blink_numl = CHAR_HOURL;
+    267          	}
+    268          	else if(ocx.blink_num & 0x03)
+    269          	{
+    270          		ocx.blink_numh = CHAR_MINH;
+    271          		ocx.blink_numl = CHAR_MINL;
+    272          	}
+    273          #endif
+    274          	IE_EA = ie_ea;
+    275          }
+    276          
+    277          //œ‘ æµ±«∞…Ë±∏
+    278          void led_5c7s_disp_device(void) AT(LED_5C7S_SEG);
+    279          void led_5c7s_disp_device(void)
+    280          {
+    281          	u8 i;
+    282          const u8 p1[3]={LED_5C7S__,LED_5C7S_1,LED_5C7S__};
+    283          const u8 p2[3]={LED_5C7S__,LED_5C7S_2,LED_5C7S__};
+    284          
+    285          #if 1
+    286          	if(task_ctl.work_sta == TASK_FLASH)
+    287          	{
+    288          		for(i=2; i!=0xff; i--)
+    289          		{
+    290          			dispbuf[i] =p1[i];
+    291          		}
+    292          
+    293          	}
+    294          	if(task_ctl.work_sta == TASK_MUSIC)
+    295          	{
+    296          		for(i=2; i!=0xff; i--)
+    297          		{
+    298          			dispbuf[i] =p2[i];
+    299          		}
+    300          	}
+    301          #endif	
+    302          }
+    303          
+    304          //œ‘ æ≤•∑≈ΩÁ√Ê
+    305          void led_5c7s_disp_play_pause(void) AT(LED_5C7S_SEG);
+    306          void led_5c7s_disp_play_pause(void)
+    307          {
+    308          	//disp_time();
+    309          	//dispbuf[4] = LED_5C7S_DDOT | LED_5C7S_MP3 | (b_msc.pause ? LED_5C7S_PAUSE : LED_5C7S_PLAY);
+    310          	 disp_device();
+    311          }
+    312          
+    313          //œ‘ æ≤•∑≈ΩÁ√Ê
+    314          void led_5c7s_disp_numsel_icon(void) AT(LED_5C7S_SEG);
+    315          void led_5c7s_disp_numsel_icon(void)
+    316          {
+    317          	// dispbuf[4] = LED_5C7S_MP3;
+    318               disp_device();
+    319          }
+    320          
+    321          //œ‘ æFM∆µµ¿
+    322          void led_5c7s_disp_ch(u8 ch) AT(LED_5C7S_SEG);
+    323          void led_5c7s_disp_ch(u8 ch)
+    324          {
+    325          	disp_numsel(ch);
+    326          	dispbuf[0] = LED_5C7S_C;
+    327          	dispbuf[1] = LED_5C7S_H;
+    328          }
+    329          
+    330          //œ‘ æFM∆µµ„
+    331          void led_5c7s_disp_freq(void) AT(LED_5C7S_SEG);
+    332          void led_5c7s_disp_freq(void)
+    333          {
+    334          	disp_numsel(ocx.freq);
+    335          	if(dispbuf[0] == LED_5C7S_0)
+    336          	{
+    337          		dispbuf[0] = 0;
+    338          	}
+    339          	// dispbuf[4] = LED_5C7S_MHZ;
+    340          }
+    341          
+    342          //ƒ‹¡øœ‘ æ
+    343          #if ENERGY_DISP_EN
+    344          void led_5c7s_disp_energy(void) AT(LED_5C7S_SEG);
+    345          void led_5c7s_disp_energy(void)
+    346          {
+    347          	u8 num1, num2, i;
+    348          
+    349          	num1 = ocx.energy_cnt / 3;
+    350          	num2 = ocx.energy_cnt % 3;
+    351          	//printf("num1=%dx num2=%d\n", num1, num2);
+    352          	for(i=0; i!=3; i++)
+    353          	{
+    354          		if(i < num1)
+    355          		{
+    356          			dispbuf[i] = tbl_led_energy[2];
+    357          		}
+    358          		else if(i == num1)
+    359          		{
+    360          			dispbuf[i] = tbl_led_energy[num2];
+    361          		}
+    362          		else
+    363          		{
+    364          			dispbuf[i] = 0;
+    365          		}
+    366          	}
+    367          }
+    368          #endif
+    369          #endif /* (DISP_TYPE==DISP_LED_5C7S) */
+    370          
+    371          
+
+
+   Segment part sizes:
+
+     Function/Label Bytes
+     -------------- -----
+
+ 
+ 
+ 0 bytes of memory
+
+Errors: none
+Warnings: none

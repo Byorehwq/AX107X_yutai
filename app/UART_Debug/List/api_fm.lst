@@ -1,0 +1,685 @@
+##############################################################################
+#                                                                            #
+# IAR 8051 C/C++ Compiler V7.20H/W32                   10/Sep/2015  19:03:27 #
+# Copyright 2004-2006 IAR Systems. All rights reserved.                      #
+#                                                                            #
+#    Core               =  plain                                             #
+#    Code model         =  near                                              #
+#    Data model         =  large                                             #
+#    Calling convention =  extended stack reentrant                          #
+#    Constant location  =  code                                              #
+#    Extended stack     =  enabled                                           #
+#    Dptr setup         =  1,16                                              #
+#    Source file        =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\fm\api_fm.c                           #
+#    Command line       =  -I "C:\Program Files\IAR Systems\Embedded         #
+#                          Workbench 4.05 Evaluation version\8051\INC\" -I   #
+#                          "C:\Program Files\IAR Systems\Embedded Workbench  #
+#                          4.05 Evaluation version\8051\INC\CLIB\" -I        #
+#                          "C:\Documents and Settings\Administrator\×ÀÃæ\lil #
+#                          y\15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX1 #
+#                          070_20150908\COMMON\" -I "C:\Documents and        #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\INC\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\config\" -I "C:\Documents and    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\api\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\fm\" -I "C:\Documents and        #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\fat\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\display\" -I "C:\Documents and   #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\displ #
+#                          ay\led\" -I "C:\Documents and                     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\displ #
+#                          ay\lcd\" -I "C:\Documents and                     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\task\ #
+#                          " -I "C:\Documents and Settings\Administrator\×ÀÃ #
+#                          æ\lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lil #
+#                          y_AX1070_20150908\user\" -I "C:\Documents and     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\mem\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\module\" -I "C:\Documents and    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\modul #
+#                          e\kedir\" -I "C:\Documents and                    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\key\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\startmusic\" -D UART_DEBUG -D    #
+#                          AX207X_TAG -lC "C:\Documents and                  #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\UART_ #
+#                          Debug\List\" -o "C:\Documents and                 #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\UART_ #
+#                          Debug\Obj\" -e -z9 --debug --core=plain           #
+#                          --dptr=16,1 --data_model=large --code_model=near  #
+#                          --calling_convention=ext_stack_reentrant          #
+#                          --place_constants=code --nr_virtual_regs 20       #
+#                          --extended_stack "C:\Documents and                #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\fm\ap #
+#                          i_fm.c"                                           #
+#    List file          =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\UART_Debug\List\api_fm.lst            #
+#    Object file        =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\UART_Debug\Obj\api_fm.r51             #
+#                                                                            #
+#                                                                            #
+##############################################################################
+
+C:\Documents and Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX1070_20150908\fm\api_fm.c
+      1          /*--------------------------------------------------------------------------*/
+      2          /***@file api_fm.c
+      3              @brief  fm²Ù×÷api½Ó¿Ú
+      4              @details 
+      5              @author
+      6              @date
+      7              @note
+      8          */
+      9          /*----------------------------------------------------------------------------*/
+     10          #include "include.h"
+     11          #include "rda5807p.h"
+     12          #include "bk1080.h"
+     13          #include "kt0830.h"
+     14          #include "qn8035.h"
+     15          #include "qn8065.h"
+     16          #include "si484x.h"
+     17          #include "rtc6218.h"
+     18          
+     19          /*----------------------------------------------------------------------------*/
+     20          /***@brief fm_read_id
+     21              @details ¶ÁÈ¡fmÄ£¿éµÄid
+     22              @param ÎÞ
+     23              @return ÎÞ
+     24              @note
+     25          */
+     26          /*----------------------------------------------------------------------------*/
+     27          #pragma location="API_FM"
+
+   \                                 In segment API_FM, align 1, keep-with-next
+     28          u8 fm_read_id(void)
+   \                     fm_read_id:
+     29          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     30          	u8 result;
+     31          	result = FM_NO;
+     32          
+     33          #if FM_SI484X_EN
+     34          	return FM_SI484X;
+     35          #else
+     36          
+     37          #if FM_RDA5807_EN
+     38          	if(rda5807p_online())
+     39          	{
+     40          		result = FM_RDA5807;
+     41          	}
+     42          #endif
+     43          
+     44          #if FM_AR1010_EN
+     45          	if(ar1010_online())
+     46          	{
+     47          		result = FM_AR1010
+     48          	}
+     49          #endif
+     50          
+     51          #if FM_AR1019_EN
+     52          	         if(ar1019_online())
+     53          	{
+     54          		result = FM_AR1019;
+     55          	}
+     56          #endif
+     57          
+     58          #if FM_BK1080_EN
+     59          	if(bk1080_online())
+     60          	{
+     61          		result = FM_BK1080;
+     62          	}
+     63          #endif
+     64          
+     65          #if FM_CL6017S_EN
+     66          	if(cl6017s_online())
+     67          	{
+     68          		result = FM_CL6017S;
+     69          	}
+     70          #endif
+     71          
+     72          #if FM_CL6017G_EN
+     73          	if(cl6017G_online())
+     74          	{
+     75          		result = FM_CL6017G;
+     76          	}
+     77          #endif
+     78          
+     79          #if FM_KT0830_EN
+     80          	if(kt0830_online())
+     81          	{
+     82          		result = FM_KT0830;
+     83          	}
+     84          #endif
+     85          
+     86          #if FM_QN8035_EN
+     87          	if(qn8035_online())
+     88          	{
+     89          		result = FM_QN8035;
+     90          	}
+     91          #endif
+     92          
+     93          #if FM_QN8065_EN
+     94          	if(qn8065_online())
+     95          	{
+     96          		result = FM_QN8065;
+     97          	}
+     98          #endif
+     99          
+    100          #if FM_RTC6218_EN
+    101          	if(RTC6218_online())
+    102          		result = FM_RTC6218;
+    103          #endif
+    104          	return result;
+   \   000000   7900         MOV     R1,#0x0
+   \   000002   22           RET
+    105          #endif /* FM_SI484X_EN */
+    106          }
+    107          
+    108          /*----------------------------------------------------------------------------*/
+    109          /**@brief fm_rx_init
+    110             @details fm ³õÊ¼»¯
+    111             @param ÎÞ
+    112             @return ÎÞ
+    113             @note ÎÞ
+    114          */
+    115          /*----------------------------------------------------------------------------*/
+    116          #pragma location="API_FM"
+
+   \                                 In segment API_FM, align 1, keep-with-next
+    117          void fm_rx_init(void)
+   \                     fm_rx_init:
+    118          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    119          	switch(fm_ctl.fm_type)
+    120          	{
+    121          #if FM_SI484X_EN
+    122          	case FM_SI484X:
+    123          		si484x_init();
+    124          		break;
+    125          #endif
+    126          
+    127          #if FM_RDA5807_EN
+    128          	case FM_RDA5807:
+    129          		rda5807p_init();
+    130          		break;
+    131          #endif
+    132          
+    133          #if FM_AR1010_EN
+    134          	case FM_AR1010:
+    135          		ar1010_init();
+    136          		break;
+    137          #endif
+    138          
+    139          #if FM_AR1019_EN
+    140          	case FM_AR1019:
+    141          		ar1019_init();
+    142          		break;
+    143          #endif
+    144          
+    145          #if FM_BK1080_EN
+    146          	case FM_BK1080:
+    147          		bk1080_init();
+    148          		break;
+    149          #endif
+    150          
+    151          #if FM_CL6017S_EN
+    152          	case FM_CL6017S:
+    153          		cl6017s_init();
+    154          		break;
+    155          #endif
+    156          
+    157          #if FM_CL6017G_EN
+    158          	case FM_CL6017G:
+    159          		cl6017g_init();
+    160          		break;
+    161          #endif
+    162          
+    163          #if FM_KT0830_EN
+    164          	case FM_KT0830:
+    165          		kt0830_init();
+    166          		break;
+    167          #endif
+    168          
+    169          #if FM_QN8035_EN
+    170          	case FM_QN8035:
+    171          #if (FM_CLOCK == USE_MODULE_CRYSTAL)
+    172          		while(!fm_ctl.init_sta)     //µÈ´ýÇ°°ë²¿·Ö³õÊ¼»¯Íê³É
+    173          		{
+    174          			WATCHDOG_CLR();
+    175          		}
+    176          #endif
+    177          		qn8035_init();
+    178          		break;
+    179          #endif
+    180          
+    181          #if FM_QN8065_EN
+    182          	case FM_QN8065:
+    183          		qn8065_init();
+    184          		break;
+    185          #endif
+    186          
+    187          #if FM_RTC6218_EN
+    188          	case FM_RTC6218:
+    189          		RTC6218_init();
+    190          		break;
+    191          #endif
+    192          	}
+    193          }
+   \   000000   22           RET
+    194          
+    195          #pragma location="API_FM"
+
+   \                                 In segment API_FM, align 1, keep-with-next
+    196          void fm_init_process(void)
+   \                     fm_init_process:
+    197          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    198          #if FM_QN8035_EN
+    199          #if (FM_CLOCK == USE_MODULE_CRYSTAL)
+    200          	if(qn8035_init_process())
+    201          	{
+    202          		fm_ctl.init_sta = 1;     //³õÊ¼»¯Íê³É
+    203          	}
+    204          #endif
+    205          #endif
+    206          }
+   \   000000   22           RET
+    207          
+    208          /*----------------------------------------------------------------------------*/
+    209          /***@brief fm ÉèÖÃÆµÂÊ
+    210             @details fm ÉèÖÃÆµÂÊ
+    211             @param [in]freq: ÊäÈëÉèÖÃÆµÂÊ
+    212             @return ÎÞ
+    213             @note ÎÞ
+    214          */
+    215          /*----------------------------------------------------------------------------*/
+    216          #pragma location="API_FM"
+
+   \                                 In segment API_FM, align 1, keep-with-next
+    217          void fm_rx_set_freq(u16 freq)
+   \                     fm_rx_set_freq:
+    218          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    219          	if(freq>=FM_MIN_FREQ && freq<=FM_MAX_FREQ)
+    220          	{
+    221          		switch(fm_ctl.fm_type)
+    222          		{
+    223          #if FM_RDA5807_EN
+    224          		case FM_RDA5807:
+    225          			rda5807p_set_freq(freq);
+    226          			break;
+    227          #endif
+    228          
+    229          #if FM_AR1010_EN
+    230          		case FM_AR1010:
+    231          			ar1010_set_freq(freq);
+    232          			break;
+    233          #endif
+    234          
+    235          #if FM_AR1019_EN
+    236          		case FM_AR1019:
+    237          			ar1019_set_freq(freq);
+    238          			break;
+    239          #endif
+    240          
+    241          #if FM_BK1080_EN
+    242          		case FM_BK1080:
+    243          			bk1080_set_freq(freq,1);
+    244          			break;
+    245          #endif
+    246          
+    247          #if FM_CL6017S_EN
+    248          		case FM_CL6017S:
+    249          			cl6017s_set_freq(freq);
+    250          			break;
+    251          #endif
+    252          
+    253          #if FM_CL6017G_EN
+    254          		case FM_CL6017G:
+    255          			cl6017g_set_freq(freq);
+    256          			break;
+    257          #endif
+    258          
+    259          #if FM_KT0830_EN
+    260          		case FM_KT0830:
+    261          			kt0830_set_freq(freq);
+    262          			break;
+    263          #endif
+    264          
+    265          #if FM_QN8035_EN
+    266          		case FM_QN8035:
+    267          			qnd_tune2ch(freq);
+    268          			break;
+    269          #endif
+    270          
+    271          #if FM_QN8065_EN
+    272          		case FM_QN8065:
+    273          			qn8065_tune2ch(freq);
+    274          			break;
+    275          #endif
+    276          
+    277          #if FM_RTC6218_EN
+    278          		case FM_RTC6218:
+    279          			RTC6218_set_freq(freq);
+    280          			break;
+    281          #endif
+    282          		}
+    283          	}
+    284          }
+   \   000000   22           RET
+    285          
+    286          
+    287          /*----------------------------------------------------------------------------*/
+    288          /**@brief fm ÉèÖÃfmÒôÁ¿
+    289             @details fm ÉèÖÃfmÒôÁ¿
+    290             @param [in]vol: ÊäÈëÉèÖÃÒôÁ¿
+    291             @return ÎÞ
+    292             @note ÎÞ
+    293          */
+    294          /*----------------------------------------------------------------------------*/
+    295          #pragma location="API_FM"
+
+   \                                 In segment API_FM, align 1, keep-with-next
+    296          void fm_rx_set_vol(u8 vol)
+   \                     fm_rx_set_vol:
+    297          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    298          	switch(fm_ctl.fm_type)
+    299          	{
+    300          #if FM_RDA5807_EN
+    301          	case FM_RDA5807:
+    302          		rda5807p_set_vol(vol);
+    303          		break;
+    304          #endif
+    305          
+    306          #if FM_AR1010_EN
+    307          	case FM_AR1010:
+    308          		ar1010_set_vol(vol);
+    309          		break;
+    310          #endif
+    311          
+    312          #if FM_AR1019_EN
+    313          	case FM_AR1019:
+    314          		ar1019_set_vol(vol);
+    315          		break;
+    316          #endif
+    317          
+    318          #if FM_BK1080_EN
+    319          	case FM_BK1080:
+    320          		bk1080_set_vol(vol);
+    321          		break;
+    322          #endif
+    323          
+    324          #if FM_CL6017S_EN
+    325          	case FM_CL6017S:
+    326          		cl6017s_set_vol(vol);
+    327          		break;
+    328          #endif
+    329          
+    330          #if FM_CL6017G_EN
+    331          	case FM_CL6017G:
+    332          		cl6017g_set_vol(vol);
+    333          		break;
+    334          #endif
+    335          
+    336          #if FM_KT0830_EN
+    337          	case FM_KT0830:
+    338          		kt0830_set_vol(vol);
+    339          		break;
+    340          #endif
+    341          
+    342          #if FM_QN8035_EN
+    343          	case FM_QN8035:
+    344          		qn8035_set_vol(vol);
+    345          		break;
+    346          #endif
+    347          
+    348          #if FM_QN8065_EN
+    349          	case FM_QN8065:
+    350          		qn8065_set_vol(vol);
+    351          		break;
+    352          #endif
+    353          
+    354          #if FM_RTC6218_EN
+    355          	case FM_RTC6218:
+    356          		RTC6218_set_vol(vol);
+    357          		break;
+    358          #endif
+    359          	}
+    360          }
+   \   000000   22           RET
+    361          
+    362          /*----------------------------------------------------------------------------*/
+    363          /**@brief fm ËÑÌ¨
+    364             @details fm ËÑÌ¨
+    365             @param freq: ÊäÈëËÑË÷ÆµÂÊ
+    366             @return  0:³É¹¦£¬ÆäËü£ºÊ§°Ü
+    367             @note ÎÞ
+    368          */
+    369          /*----------------------------------------------------------------------------*/
+    370          #if !FM_SI484X_EN
+    371          #pragma location="API_FM"
+
+   \                                 In segment API_FM, align 1, keep-with-next
+    372          u8 fm_rx_seek(u16 freq)
+   \                     fm_rx_seek:
+    373          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    374          	u8 res = 0;
+    375          
+    376          	switch(fm_ctl.fm_type)
+    377          	{
+    378          #if FM_RDA5807_EN
+    379          	case FM_RDA5807:
+    380          		res = rda5807p_seek(freq);
+    381          		break;
+    382          #endif
+    383          
+    384          #if FM_AR1010_EN
+    385          	case FM_AR1010:
+    386          		res = ar1010_seek(freq);
+    387          		break;
+    388          #endif
+    389          
+    390          #if FM_AR1019_EN
+    391          	case FM_AR1019:
+    392          		res = ar1019_seek(freq);
+    393          		break;
+    394          #endif
+    395          
+    396          #if FM_BK1080_EN
+    397          	case FM_BK1080:
+    398          		res = bk1080_seek(freq);
+    399          		break;
+    400          #endif
+    401          
+    402          #if FM_CL6017S_EN
+    403          	case FM_CL6017S:
+    404          		res = cl6017s_seek(freq);
+    405          		break;
+    406          #endif
+    407          
+    408          #if FM_CL6017G_EN
+    409          	case FM_CL6017G:
+    410          		res = cl6017g_seek(freq);
+    411          		break;
+    412          #endif
+    413          
+    414          #if FM_KT0830_EN
+    415          	case FM_KT0830:
+    416          		res = kt0830_seek(freq);
+    417          		break;
+    418          #endif
+    419          
+    420          #if FM_QN8035_EN
+    421          	case FM_QN8035:
+    422          		res = qn8035_seek(freq);
+    423          		break;
+    424          #endif
+    425          
+    426          #if FM_QN8065_EN
+    427          	case FM_QN8065:
+    428          		res = qn8065_seek(freq);
+    429          		break;
+    430          #endif
+    431          
+    432          #if FM_RTC6218_EN
+    433          	case FM_RTC6218:
+    434          		res = RTC6218_seek(freq);
+    435          		break;
+    436          #endif
+    437          	}
+    438          
+    439          	return res;
+   \   000000   7900         MOV     R1,#0x0
+   \   000002   22           RET
+    440          }
+    441          #endif
+    442          /*----------------------------------------------------------------------------*/
+    443          /***@brief fm ¹Ø±Õ
+    444              @details fm ¹Ø±Õ
+    445              @param ÎÞ
+    446              @return ÎÞ
+    447              @note ÎÞ
+    448          */
+    449          /*----------------------------------------------------------------------------*/
+    450          #pragma location="API_FM"
+
+   \                                 In segment API_FM, align 1, keep-with-next
+    451          void fm_rx_off(void)
+   \                     fm_rx_off:
+    452          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    453          	switch(fm_ctl.fm_type)
+    454          	{
+    455          #if FM_SI484X_EN
+    456          	case FM_SI484X:
+    457          		Si484x_off();
+    458          		break;
+    459          #endif
+    460          
+    461          #if FM_RDA5807_EN
+    462          	case FM_RDA5807:
+    463          		rda5807p_off();
+    464          		break;
+    465          #endif
+    466          
+    467          #if FM_AR1010_EN
+    468          	case FM_AR1010:
+    469          		ar1010_off();
+    470          		break;
+    471          #endif
+    472          
+    473          #if FM_AR1019_EN
+    474          	case FM_AR1019:
+    475          		ar1019_off();
+    476          		break;
+    477          #endif
+    478          
+    479          #if FM_BK1080_EN
+    480          	case FM_BK1080:
+    481          		bk1080_off();
+    482          		break;
+    483          #endif
+    484          
+    485          #if FM_CL6017S_EN
+    486          	case FM_CL6017S:
+    487          		cl6017s_off();
+    488          		break;
+    489          #endif
+    490          
+    491          #if FM_CL6017G_EN
+    492          	case FM_CL6017G:
+    493          		cl6017g_off();
+    494          		break;
+    495          #endif
+    496          
+    497          #if FM_KT0830_EN
+    498          	case FM_KT0830:
+    499          		kt0830_off();
+    500          		break;
+    501          #endif
+    502          
+    503          #if FM_QN8035_EN
+    504          	case FM_QN8035:
+    505          		qn8035_off();
+    506          		break;
+    507          #endif
+    508          
+    509          #if FM_QN8065_EN
+    510          	case FM_QN8065:
+    511          		qn8065_off();
+    512          		break;
+    513          #endif
+    514          
+    515          #if FM_RTC6218_EN
+    516          	case FM_RTC6218:
+    517          		RTC6218_off();
+    518          		break;
+    519          #endif
+    520          	}
+    521          }
+   \   000000   22           RET
+    522          
+
+   Maximum stack usage in bytes:
+
+     Function        EXT_STACK PSTACK XSTACK
+     --------        --------- ------ ------
+     fm_init_process        0      0      0
+     fm_read_id             0      0      0
+     fm_rx_init             0      0      0
+     fm_rx_off              0      0      0
+     fm_rx_seek             0      0      0
+     fm_rx_set_freq         0      0      0
+     fm_rx_set_vol          0      0      0
+
+
+   Segment part sizes:
+
+     Function/Label  Bytes
+     --------------  -----
+     fm_read_id         3
+     fm_rx_init         1
+     fm_init_process    1
+     fm_rx_set_freq     1
+     fm_rx_set_vol      1
+     fm_rx_seek         3
+     fm_rx_off          1
+
+ 
+ 11 bytes in segment API_FM
+ 
+ 11 bytes of CODE memory
+
+Errors: none
+Warnings: none

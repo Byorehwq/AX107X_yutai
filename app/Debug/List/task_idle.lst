@@ -1,0 +1,274 @@
+##############################################################################
+#                                                                            #
+# IAR 8051 C/C++ Compiler V7.20H/W32                   29/Jun/2018  19:55:10 #
+# Copyright 2004-2006 IAR Systems. All rights reserved.                      #
+#                                                                            #
+#    Core               =  plain                                             #
+#    Code model         =  near                                              #
+#    Data model         =  large                                             #
+#    Calling convention =  extended stack reentrant                          #
+#    Constant location  =  code                                              #
+#    Extended stack     =  enabled                                           #
+#    Dptr setup         =  1,16                                              #
+#    Source file        =  I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\task\task_idle. #
+#                          c                                                 #
+#    Command line       =  -I E:\software\8051\INC\ -I                       #
+#                          E:\software\8051\INC\CLIB\ -I                     #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\COMMON\ -I      #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\INC\ -I         #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\config\ -I      #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\api\ -I         #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\fm\ -I          #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\fat\ -I         #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\display\ -I     #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\display\theme_d #
+#                          efault\ -I I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073 #
+#                          A_”ÓÃ©_AX1071_xxxxxxxx_20180629_Merlin_1\app\disp #
+#                          lay\led\ -I I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC07 #
+#                          3A_”ÓÃ©_AX1071_xxxxxxxx_20180629_Merlin_1\app\dis #
+#                          play\lcd\ -I I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC0 #
+#                          73A_”ÓÃ©_AX1071_xxxxxxxx_20180629_Merlin_1\app\ta #
+#                          sk\ -I I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”Ó #
+#                          Ã©_AX1071_xxxxxxxx_20180629_Merlin_1\app\user\    #
+#                          -I I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_A #
+#                          X1071_xxxxxxxx_20180629_Merlin_1\app\mem\ -I      #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\module\ -I      #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\key\ -I         #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\startmusic\ -I  #
+#                          I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\spi\ -D         #
+#                          AX107X_TAG -lC I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18B #
+#                          C073A_”ÓÃ©_AX1071_xxxxxxxx_20180629_Merlin_1\app\ #
+#                          Debug\List\ -o I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18B #
+#                          C073A_”ÓÃ©_AX1071_xxxxxxxx_20180629_Merlin_1\app\ #
+#                          Debug\Obj\ -e -z9 --core=plain --dptr=16,1        #
+#                          --data_model=large --code_model=near              #
+#                          --calling_convention=ext_stack_reentrant          #
+#                          --place_constants=code --nr_virtual_regs 20       #
+#                          --extended_stack I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\1 #
+#                          8BC073A_”ÓÃ©_AX1071_xxxxxxxx_20180629_Merlin_1\ap #
+#                          p\task\task_idle.c                                #
+#    List file          =  I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\Debug\List\task #
+#                          _idle.lst                                         #
+#    Object file        =  I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX10 #
+#                          71_xxxxxxxx_20180629_Merlin_1\app\Debug\Obj\task_ #
+#                          idle.r51                                          #
+#                                                                            #
+#                                                                            #
+##############################################################################
+
+I:\a_wangqun\”ÓÃ©_ÀØ√ﬂ“«_KNP08\18BC073A_”ÓÃ©_AX1071_xxxxxxxx_20180629_Merlin_1\app\task\task_idle.c
+      1          /*****************************************************************************
+      2           * Module    : Task
+      3           * File      : task_idle.c
+      4           * Author    : Hanny
+      5           * Email     : coldney@yahoo.com.cn
+      6           * Function  : ø’œ–»ŒŒÒ
+      7           *****************************************************************************/
+      8          #include "include.h"
+      9          
+
+   \                                 In segment XDATA_Z, align 1, keep-with-next
+   \   000000                REQUIRE __INIT_XDATA_Z
+     10          u8 count_led_off;   //15min led off
+   \                     count_led_off:
+   \   000000                DS 1
+     11          
+     12          
+     13          #if TASK_IDLE_EN
+     14          
+     15          void task_idle_display(void);
+     16          
+     17          //»ŒŒÒ≥ı ºªØ
+     18          #pragma location="TASK_IDLE_SEG"
+     19          static void task_idle_enter(void)
+     20          {
+     21          	count_led_off = 0;
+     22          #if (DISP_TYPE==DISP_LED)
+     23          	ocx.led_sta = LED_STA_ON;
+     24          #endif
+     25          
+     26          #if KEY_VOICE_EN
+     27          	AMUX_AIN_EN();
+     28          	mute_disable();
+     29          #endif
+     30          }
+     31          
+     32          //»ŒŒÒÕÀ≥ˆ
+     33          #pragma location="TASK_IDLE_SEG"
+     34          static void task_idle_exit(void)
+     35          {
+     36          }
+     37          
+     38          //»ŒŒÒœ˚œ¢¥¶¿Ì
+     39          #pragma location="TASK_IDLE_SEG"
+     40          static void task_idle_deal_msg(u8 msg)
+     41          {
+     42          	switch(msg)
+     43          	{
+     44          	/*	
+     45          	case KU_VOL_UP:
+     46          	case KH_VOL_UP:
+     47          	case KU_VOL_DOWN:
+     48          	case KH_VOL_DOWN:
+     49          		break;
+     50          	*/
+     51          
+     52          	case T_KEY_NUM_0:
+     53          	case T_KEY_NUM_1:
+     54          	case T_KEY_NUM_2:
+     55          	case T_KEY_NUM_3:
+     56          	case T_KEY_NUM_4:
+     57          	case T_KEY_NUM_5:
+     58          		printf("Again\n");
+     59          		Timer1_flag = false;
+     60          		task_ctl.work_sta = TASK_FLASH;
+     61          		break;
+     62          
+     63              //πÿª˙
+     64          #if TASK_POWEROFF_EN
+     65          	case KL_POWER:
+     66          	case KLU_POWER:
+     67          		task_ctl.work_sta = TASK_POWEROFF;
+     68          		sys_ctl.user_power_down_flag = 1;
+     69          		break;
+     70          #endif
+     71          
+     72          	default:
+     73          		deal_msg(msg);
+     74          		break;
+     75          	}
+     76          }
+     77          
+     78          //»ŒŒÒ÷˜¡˜≥Ã
+     79          #pragma location="TASK_IDLE_SEG"
+
+   \                                 In segment TASK_IDLE_SEG, align 1, keep-with-next
+     80          void task_idle(void)
+   \                     task_idle:
+     81          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     82          	printf("task_idle\n");
+   \   000000                ; Setup parameters for call to function my_printf
+   \   000000   7A..         MOV     R2,#(`?<Constant "task_idle\\n">` & 0xff)
+   \   000002   7B..         MOV     R3,#((`?<Constant "task_idle\\n">` >> 8) & 0xff)
+   \   000004   12....       LCALL   my_printf
+     83          	task_idle_enter();
+   \   000007   E4           CLR     A
+   \   000008   90....       MOV     DPTR,#count_led_off
+   \   00000B   F0           MOVX    @DPTR,A
+   \   00000C   8006         SJMP    ??task_idle_0
+     84          	while(task_ctl.work_sta == TASK_IDLE)
+     85          	{
+   \                     ??task_idle_1:
+   \   00000E                ; Setup parameters for call to function deal_msg
+   \   00000E   12....       LCALL   deal_msg
+     86          		comm_event(1);
+     87          		task_idle_deal_msg(get_msg());
+     88          		task_idle_display();
+   \                     ??task_idle_2:
+   \   000011                ; Setup parameters for call to function task_idle_display
+   \   000011   12....       LCALL   task_idle_display
+   \                     ??task_idle_0:
+   \   000014   7408         MOV     A,#0x8
+   \   000016   65..         XRL     A,task_ctl
+   \   000018   7036         JNZ     ??task_idle_3
+   \   00001A                ; Setup parameters for call to function comm_event
+   \   00001A   7901         MOV     R1,#0x1
+   \   00001C   12....       LCALL   comm_event
+   \   00001F                ; Setup parameters for call to function get_msg
+   \   00001F   12....       LCALL   get_msg
+   \   000022   E9           MOV     A,R1
+   \   000023   12....       LCALL   ?UC_SWITCH_SPARSE
+   \                     `?<Jumptable for task_idle>_0`:
+   \   000026   01           DB        1
+   \   000027   20           DB        32
+   \   000028   25           DB        37
+   \   000029   ....         DW        ??task_idle_4
+   \   00002B   02           DB        2
+   \   00002C   AF           DB        175
+   \   00002D   ....         DW        ??task_idle_5
+   \   00002F   CF           DB        207
+   \   000030   ....         DW        ??task_idle_5
+   \   000032   ....         DW        ??task_idle_1
+   \                     ??task_idle_4:
+   \   000034                ; Setup parameters for call to function my_printf
+   \   000034   7A..         MOV     R2,#(`?<Constant "Again\\n">` & 0xff)
+   \   000036   7B..         MOV     R3,#((`?<Constant "Again\\n">` >> 8) & 0xff)
+   \   000038   12....       LCALL   my_printf
+   \   00003B   E4           CLR     A
+   \   00003C   90....       MOV     DPTR,#Timer1_flag
+   \   00003F   F0           MOVX    @DPTR,A
+   \   000040   75..06       MOV     task_ctl,#0x6
+   \   000043   80CC         SJMP    ??task_idle_2
+   \                     ??task_idle_5:
+   \   000045   75..09       MOV     task_ctl,#0x9
+   \   000048   7401         MOV     A,#0x1
+   \   00004A   90....       MOV     DPTR,#(sys_ctl + 11)
+   \   00004D   F0           MOVX    @DPTR,A
+   \   00004E   80C1         SJMP    ??task_idle_2
+     89          	}
+     90          	task_idle_exit();
+     91          }
+   \                     ??task_idle_3:
+   \   000050   22           RET
+
+   \                                 In segment CODE_C, align 1
+   \                     `?<Constant "Again\\n">`:
+   \   000000   41676169     DB "Again\012"
+   \            6E0A00  
+
+   \                                 In segment CODE_C, align 1
+   \                     `?<Constant "task_idle\\n">`:
+   \   000000   7461736B     DB "task_idle\012"
+   \            5F69646C
+   \            650A00  
+     92          
+     93          #endif
+
+   Maximum stack usage in bytes:
+
+     Function               EXT_STACK PSTACK XSTACK
+     --------               --------- ------ ------
+     task_idle                     0      0      0
+       -> my_printf                0      0      0
+       -> deal_msg                 0      0      0
+       -> task_idle_display        0      0      0
+       -> comm_event               0      0      0
+       -> get_msg                  0      0      0
+       -> my_printf                0      0      0
+
+
+   Segment part sizes:
+
+     Function/Label            Bytes
+     --------------            -----
+     count_led_off                1
+     task_idle                   81
+     ?<Constant "Again\n">        7
+     ?<Constant "task_idle\n">   11
+
+ 
+ 18 bytes in segment CODE_C
+ 81 bytes in segment TASK_IDLE_SEG
+  1 byte  in segment XDATA_Z
+ 
+ 99 bytes of CODE  memory
+  1 byte  of XDATA memory
+
+Errors: none
+Warnings: none

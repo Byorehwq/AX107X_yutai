@@ -1,0 +1,229 @@
+##############################################################################
+#                                                                            #
+# IAR 8051 C/C++ Compiler V7.20H/W32                   10/Sep/2015  19:03:28 #
+# Copyright 2004-2006 IAR Systems. All rights reserved.                      #
+#                                                                            #
+#    Core               =  plain                                             #
+#    Code model         =  near                                              #
+#    Data model         =  large                                             #
+#    Calling convention =  extended stack reentrant                          #
+#    Constant location  =  code                                              #
+#    Extended stack     =  enabled                                           #
+#    Dptr setup         =  1,16                                              #
+#    Source file        =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\key\kedir_key.c                       #
+#    Command line       =  -I "C:\Program Files\IAR Systems\Embedded         #
+#                          Workbench 4.05 Evaluation version\8051\INC\" -I   #
+#                          "C:\Program Files\IAR Systems\Embedded Workbench  #
+#                          4.05 Evaluation version\8051\INC\CLIB\" -I        #
+#                          "C:\Documents and Settings\Administrator\×ÀÃæ\lil #
+#                          y\15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX1 #
+#                          070_20150908\COMMON\" -I "C:\Documents and        #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\INC\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\config\" -I "C:\Documents and    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\api\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\fm\" -I "C:\Documents and        #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\fat\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\display\" -I "C:\Documents and   #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\displ #
+#                          ay\led\" -I "C:\Documents and                     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\displ #
+#                          ay\lcd\" -I "C:\Documents and                     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\task\ #
+#                          " -I "C:\Documents and Settings\Administrator\×ÀÃ #
+#                          æ\lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lil #
+#                          y_AX1070_20150908\user\" -I "C:\Documents and     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\mem\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\module\" -I "C:\Documents and    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\modul #
+#                          e\kedir\" -I "C:\Documents and                    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\key\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\startmusic\" -D UART_DEBUG -D    #
+#                          AX207X_TAG -lC "C:\Documents and                  #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\UART_ #
+#                          Debug\List\" -o "C:\Documents and                 #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\UART_ #
+#                          Debug\Obj\" -e -z9 --debug --core=plain           #
+#                          --dptr=16,1 --data_model=large --code_model=near  #
+#                          --calling_convention=ext_stack_reentrant          #
+#                          --place_constants=code --nr_virtual_regs 20       #
+#                          --extended_stack "C:\Documents and                #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\key\k #
+#                          edir_key.c"                                       #
+#    List file          =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\UART_Debug\List\kedir_key.lst         #
+#    Object file        =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\UART_Debug\Obj\kedir_key.r51          #
+#                                                                            #
+#                                                                            #
+##############################################################################
+
+C:\Documents and Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX1070_20150908\key\kedir_key.c
+      1          #include "include.h"
+      2          #include "kedir.h"
+      3          
+      4          #if USE_KEDIR
+      5          
+      6          #if(USE_KEDIR_TYPE == KEDIR_KEY)
+      7          
+      8          #pragma constseg="KEDIR_CONST_TABLE"
+      9          
+     10          #ifdef AX207X_TAG
+     11          //ÈýºÏÒ»Ö»ÓÃKEYÊ±×î¶àÖ§³Ö16¸ö°´¼ü
+     12          
+     13          #define TINY_MIN 0xFF
+     14          #define TINY_MAX 0xFF
+     15          #define BIG_MIN  0x00
+     16          #define BIG_MAX  0xF6
+     17          #define TOP_MIN  0x13
+     18          #define TOP_MAX  0xFB
+     19          
+     20          //adc_val±ØÐë´ÓÐ¡µ½´óÅÅÁÐ
+     21          IAR_CONST type_adc_key tbl_key1[] =
+     22          {
+     23          	//TINY,´Ë×é²»¿ÉÓÃ
+     24          	{TINY_MIN, NO_KEY},
+     25          	{TINY_MAX, NO_KEY},
+     26          	{0xFF,     NO_KEY},
+     27          	{0xFF,     NO_KEY},
+     28          	{0xFF,     NO_KEY},
+     29          	{0xFF,     NO_KEY},
+     30          	{0xFF,     NO_KEY},
+     31          	{0xFF,     NO_KEY},
+     32          	{0xFF,     NO_KEY},
+     33          	{0xFF,     NO_KEY},
+     34          	{0xFF,     NO_KEY},
+     35          	//TOP
+     36          	{TOP_MIN,  NO_KEY},
+     37          	{0x33,     T_KEY_PLAY},     //180k
+     38          	{0x5C,     T_KEY_VOL_UP},   //75k
+     39          	{0x89,     T_KEY_VOL_DOWN}, //36k
+     40          	{0xB2,     T_KEY_NEXT},     //18k
+     41          	{0xD4,     T_KEY_PREV},     //9.1k
+     42          	{0xED,     T_KEY_MODE},     //3.9k
+     43          	{TOP_MAX,  T_KEY_EQ},       //1.3k
+     44          	{0xFF,     NO_KEY},
+     45          	{0xFF,     NO_KEY},
+     46          	{0xFF,     NO_KEY},
+     47          	//BIG
+     48          	{BIG_MIN,  NO_KEY},
+     49          	{0x08,     T_KEY_PLAYMODE}, //0k
+     50          	{0x11,     NO_KEY},         //0.68k
+     51          	{0x22,     NO_KEY},         //2k
+     52          	{0x3C,     NO_KEY},         //4.3k
+     53          	{0x62,     NO_KEY},         //9.1k
+     54          	{0x8F,     NO_KEY},         //18k
+     55          	{0xBA,     NO_KEY},         //39k
+     56          	{0xDF,     NO_KEY},         //82k
+     57          	{BIG_MAX,  NO_KEY},         //220k
+     58          	{0xFF,     NO_KEY},
+     59          };
+     60          #endif//AX207X_TAG
+     61          
+     62          #ifdef AX107X_TAG
+     63          //ÈýºÏÒ»Ö»ÓÃKEYÊ±×î¶àÖ§³Ö16¸ö°´¼ü
+     64          
+     65          #define TINY_MIN 0xFF
+     66          #define TINY_MAX 0xFF
+     67          #define BIG_MIN  0x00
+     68          #define BIG_MAX  0xF8
+     69          #define TOP_MIN  0x1A
+     70          #define TOP_MAX  0xF8
+     71          
+     72          //adc_val±ØÐë´ÓÐ¡µ½´óÅÅÁÐ
+     73          IAR_CONST type_adc_key tbl_key1[] =
+     74          {
+     75          	//TINY,´Ë×é²»¿ÉÓÃ
+     76          	{TINY_MIN, NO_KEY},
+     77          	{TINY_MAX, NO_KEY},
+     78          	{0xFF,     NO_KEY},
+     79          	{0xFF,     NO_KEY},
+     80          	{0xFF,     NO_KEY},
+     81          	{0xFF,     NO_KEY},
+     82          	{0xFF,     NO_KEY},
+     83          	{0xFF,     NO_KEY},
+     84          	{0xFF,     NO_KEY},
+     85          	{0xFF,     NO_KEY},
+     86          	{0xFF,     NO_KEY},
+     87          	//TOP
+     88          	{TOP_MIN,  NO_KEY},
+     89          	{0x3A,     T_KEY_PLAY},     //150k
+     90          	{0x5F,     T_KEY_VOL_UP},   //68k
+     91          	{0x85,     T_KEY_VOL_DOWN}, //36k
+     92          	{0xA9,     T_KEY_NEXT},     //20k
+     93          	{0xC8,     T_KEY_PREV},     //11k
+     94          	{0xE2,     T_KEY_MODE},     //5.6k
+     95          	{TOP_MAX,  T_KEY_EQ},       //2k
+     96          	{0xFF,     NO_KEY},
+     97          	{0xFF,     NO_KEY},
+     98          	{0xFF,     NO_KEY},
+     99          	//BIG
+    100          	{0x07,     T_KEY_PLAYMODE}, //0k
+    101          	{0x1B,     NO_KEY},         //1.5k
+    102          	{0x34,     NO_KEY},         //3.9k
+    103          	{0x50,     NO_KEY},         //7.5k
+    104          	{0x70,     NO_KEY},         //13k
+    105          	{0x92,     NO_KEY},         //22k
+    106          	{0xB7,     NO_KEY},         //39k
+    107          	{0xDA,     NO_KEY},         //82k
+    108          	{BIG_MAX,  NO_KEY},         //220k
+    109          	{0xFF,     NO_KEY},
+    110          	{0xFF,     NO_KEY},
+    111          };
+    112          #endif//AX107X_TAG
+    113          
+    114          IAR_CONST u8 kedir_key_range[][2] =
+    115          {
+    116          	{TINY_MIN, TINY_MAX},
+    117          	{TOP_MIN,  TOP_MAX},
+    118          	{BIG_MIN,  BIG_MAX}
+    119          };
+    120          
+    121          #pragma constseg=default
+    122          
+    123          u8 kedir_group_num(void)
+    124          {
+    125          	return sizeof(tbl_key1)/sizeof(type_adc_key)/3;
+    126          }
+    127          
+    128          #endif/*(USE_KEDIR_TYPE == KEDIR_KEY)*/
+    129          
+    130          #endif/*USE_KEDIR*/
+
+
+   Segment part sizes:
+
+     Function/Label Bytes
+     -------------- -----
+
+ 
+ 
+ 0 bytes of memory
+
+Errors: none
+Warnings: none

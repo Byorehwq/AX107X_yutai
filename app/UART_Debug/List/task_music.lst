@@ -1,0 +1,2347 @@
+##############################################################################
+#                                                                            #
+# IAR 8051 C/C++ Compiler V7.20H/W32                   10/Sep/2015  19:03:29 #
+# Copyright 2004-2006 IAR Systems. All rights reserved.                      #
+#                                                                            #
+#    Core               =  plain                                             #
+#    Code model         =  near                                              #
+#    Data model         =  large                                             #
+#    Calling convention =  extended stack reentrant                          #
+#    Constant location  =  code                                              #
+#    Extended stack     =  enabled                                           #
+#    Dptr setup         =  1,16                                              #
+#    Source file        =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\task\task_music.c                     #
+#    Command line       =  -I "C:\Program Files\IAR Systems\Embedded         #
+#                          Workbench 4.05 Evaluation version\8051\INC\" -I   #
+#                          "C:\Program Files\IAR Systems\Embedded Workbench  #
+#                          4.05 Evaluation version\8051\INC\CLIB\" -I        #
+#                          "C:\Documents and Settings\Administrator\×ÀÃæ\lil #
+#                          y\15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX1 #
+#                          070_20150908\COMMON\" -I "C:\Documents and        #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\INC\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\config\" -I "C:\Documents and    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\api\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\fm\" -I "C:\Documents and        #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\fat\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\display\" -I "C:\Documents and   #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\displ #
+#                          ay\led\" -I "C:\Documents and                     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\displ #
+#                          ay\lcd\" -I "C:\Documents and                     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\task\ #
+#                          " -I "C:\Documents and Settings\Administrator\×ÀÃ #
+#                          æ\lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lil #
+#                          y_AX1070_20150908\user\" -I "C:\Documents and     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\mem\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\module\" -I "C:\Documents and    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\modul #
+#                          e\kedir\" -I "C:\Documents and                    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\key\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\startmusic\" -D UART_DEBUG -D    #
+#                          AX207X_TAG -lC "C:\Documents and                  #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\UART_ #
+#                          Debug\List\" -o "C:\Documents and                 #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\UART_ #
+#                          Debug\Obj\" -e -z9 --debug --core=plain           #
+#                          --dptr=16,1 --data_model=large --code_model=near  #
+#                          --calling_convention=ext_stack_reentrant          #
+#                          --place_constants=code --nr_virtual_regs 20       #
+#                          --extended_stack "C:\Documents and                #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\task\ #
+#                          task_music.c"                                     #
+#    List file          =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\UART_Debug\List\task_music.lst        #
+#    Object file        =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\UART_Debug\Obj\task_music.r51         #
+#                                                                            #
+#                                                                            #
+##############################################################################
+
+C:\Documents and Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX1070_20150908\task\task_music.c
+      1          /*****************************************************************************
+      2           * Module    : Task
+      3           * File      : task_music.c
+      4           * Author    : Hanny
+      5           * Email     : coldney@yahoo.com.cn
+      6           * Function  : ÒôÀÖ²¥·ÅÈÎÎñÁ÷³Ì
+      7           *****************************************************************************/
+      8          #include "include.h"
+
+   \                                 In segment SFR_AN, at 0x80
+   \   unsigned char volatile __sfr P0
+   \                     P0:
+   \   000000                DS 1
+      9          
+     10          #define DBG_MUSIC(...)              //printf(__VA_ARGS__)
+     11          #define MUSIC_ENCRYPT_EN            0
+     12          
+
+   \                                 In segment XDATA_Z, align 1, keep-with-next
+   \   000000                REQUIRE __INIT_XDATA_Z
+     13          type_t_msc t_msc;
+   \                     t_msc:
+   \   000000                DS 2
+     14          
+     15          //É¨ÃèÉè±¸ÎÄ¼þ
+     16          #pragma location="TASK_MUSIC_SEG"
+
+   \                                 In segment TASK_MUSIC_SEG, align 1, keep-with-next
+     17          static bool task_music_scan_file(void)
+   \                     ??task_music_scan_file:
+     18          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     19          	if(task_music_scan_music())             //É¨ÃèÒôÀÖÎÄ¼þ¼Ð
+   \   000000                ; Setup parameters for call to function f_scan_set
+   \   000000   7C..         MOV     R4,#(dir_filter_music & 0xff)
+   \   000002   7D..         MOV     R5,#((dir_filter_music >> 8) & 0xff)
+   \   000004   7A..         MOV     R2,#(file_filter_music & 0xff)
+   \   000006   7B..         MOV     R3,#((file_filter_music >> 8) & 0xff)
+   \   000008   7921         MOV     R1,#0x21
+   \   00000A   12....       LCALL   f_scan_set
+   \   00000D                ; Setup parameters for call to function f_gettotal_speed
+   \   00000D   12....       LCALL   f_gettotal_speed
+   \   000010   90....       MOV     DPTR,#(u_msc + 2)
+   \   000013   EA           MOV     A,R2
+   \   000014   F0           MOVX    @DPTR,A
+   \   000015   A3           INC     DPTR
+   \   000016   EB           MOV     A,R3
+   \   000017   F0           MOVX    @DPTR,A
+   \   000018   90....       MOV     DPTR,#(u_msc + 2)
+   \   00001B   E0           MOVX    A,@DPTR
+   \   00001C   7002         JNZ     ??task_music_scan_file_1
+   \   00001E   A3           INC     DPTR
+   \   00001F   E0           MOVX    A,@DPTR
+   \                     ??task_music_scan_file_1:
+   \   000020   6005         JZ      ??task_music_scan_file_2
+     20          	{
+     21          		task_ctl.work_sta = TASK_MUSIC;
+   \   000022   75..00       MOV     task_ctl,#0x0
+     22          		return true;
+   \   000025   D3           SETB    C
+   \   000026   22           RET
+     23          	}
+     24          
+     25          	task_ctl.work_sta = TASK_EXIT;          //Éè±¸ÎÞÐ§£¬·µ»ØÖ÷²Ëµ¥
+   \                     ??task_music_scan_file_2:
+   \   000027   75..0C       MOV     task_ctl,#0xc
+     26          	return false;
+   \   00002A   C3           CLR     C
+   \   00002B   22           RET
+     27          }
+     28          
+     29          //ÖØÐÂ¹ÒÔØÎÄ¼þÏµÍ³
+     30          #pragma location="TASK_MUSIC_SEG"
+
+   \                                 In segment TASK_MUSIC_SEG, align 1, keep-with-next
+     31          static bool task_music_remount_device(void)
+   \                     ??task_music_remount_device:
+     32          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     33          	//music_stop();                           //Í£Ö¹µ±Ç°ÒôÀÖ
+     34          	//printf("[%02x]\n",fs_cur_dev());
+     35          //#ifdef AX207X_TAG
+     36          	printf("remount%d,%d\n",fs_cur_dev(),device_is_actived(DEVICE_SDMMC1));
+   \   000000                ; Setup parameters for call to function device_is_actived
+   \   000000   7901         MOV     R1,#0x1
+   \   000002   12....       LCALL   device_is_actived
+   \   000005                ; Setup parameters for call to function my_printf
+   \   000005   E4           CLR     A
+   \   000006   92E0         MOV     0xE0 /* A   */.0,C
+   \   000008   F582         MOV     DPL,A
+   \   00000A   758300       MOV     DPH,#0x0
+   \   00000D   C082         PUSH    DPL
+   \   00000F   C083         PUSH    DPH
+   \   000011                ; Setup parameters for call to function fs_cur_dev
+   \   000011   12....       LCALL   ?Subroutine2
+   \                     ??CrossCallReturnLabel_5:
+   \   000014   F582         MOV     DPL,A
+   \   000016   758300       MOV     DPH,#0x0
+   \   000019   C082         PUSH    DPL
+   \   00001B   C083         PUSH    DPH
+   \   00001D   7A..         MOV     R2,#(`?<Constant "remount%d,%d\\n">` & 0xff)
+   \   00001F   7B..         MOV     R3,#((`?<Constant "remount%d,%d\\n">` >> 8) & 0xff)
+   \   000021   12....       LCALL   my_printf
+   \   000024   74FC         MOV     A,#-0x4
+   \   000026   12....       LCALL   ?DEALLOC_EXT_STACK8
+     37          	return false;	// Merlin 2015/06/30
+   \   000029   C3           CLR     C
+   \   00002A   22           RET
+     38          	if((fs_cur_dev() == DEVICE_SDMMC) && (device_is_actived(DEVICE_SDMMC1)))
+                 	^
+Warning[Pe111]: statement is unreachable
+     39          	{
+     40          		t_fat.dev_new = DEVICE_SDMMC1;
+     41          	}
+     42          //#endif
+     43          	if(!device_mount() || !task_music_scan_file())
+     44          	{
+     45          		return false;
+     46          	}
+     47          	return true;
+     48          }
+
+   \                                 In segment TASK_MUSIC_SEG, align 1, keep-with-next
+   \                     ?Subroutine2:
+   \   000000   12....       LCALL   fs_cur_dev
+   \   000003   E9           MOV     A,R1
+   \   000004   22           RET
+     49          
+     50          //Ñ¡ÔñÏÂÒ»¸öÉè±¸²¥·Å
+     51          #pragma location="TASK_MUSIC_SEG"
+
+   \                                 In segment TASK_MUSIC_SEG, align 1, keep-with-next
+     52          bool task_music_next_device(void)
+   \                     task_music_next_device:
+     53          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     54          	if(!device_switch() || !task_music_remount_device())
+   \   000000                ; Setup parameters for call to function device_switch
+   \   000000   12....       LCALL   device_switch
+   \   000003   5005         JNC     ??task_music_next_device_0
+   \   000005                ; Setup parameters for call to function task_music_remount_device
+   \   000005   12....       LCALL   ??task_music_remount_device
+   \   000008   4002         JC      ??task_music_next_device_1
+     55          	{
+     56          		return false;
+   \                     ??task_music_next_device_0:
+   \   00000A   C3           CLR     C
+   \   00000B   22           RET
+     57          	}
+     58          #if USE_BREAK_POINT
+     59          	b_msc.break_init = 1;
+   \                     ??task_music_next_device_1:
+   \   00000C   12....       LCALL   ?Subroutine0
+     60          #endif
+     61          
+     62          	mem_ctl.dev = fs_cur_dev();
+     63          	mem_read_music_num();                   //´ò¿ªµÄÎÄ¼þ±àºÅ
+     64          	b_msc.file_change = 1;                  //ÐèÒª´ò¿ªÒ»¸öÐÂÎÄ¼þ
+   \                     ??CrossCallReturnLabel_0:
+   \   00000F   D2..         SETB    b_msc.0
+     65          	return true;
+   \   000011   D3           SETB    C
+   \   000012   22           RET
+     66          }
+
+   \                                 In segment TASK_MUSIC_SEG, align 1, keep-with-next
+   \                     ?Subroutine0:
+   \   000000   D2..         SETB    b_msc.3
+   \   000002                ; Setup parameters for call to function fs_cur_dev
+   \   000002                ; Setup parameters for call to function fs_cur_dev
+   \   000002   12....       LCALL   ?Subroutine2
+   \                     ??CrossCallReturnLabel_10:
+   \   000005   90....       MOV     DPTR,#mem_ctl
+   \   000008   F0           MOVX    @DPTR,A
+   \   000009                ; Setup parameters for call to function mem_read_music_num
+   \   000009                ; Setup parameters for call to function mem_read_music_num
+   \   000009   12....       LCALL   mem_read_music_num
+   \   00000C   22           RET
+     67          
+     68          #if AUTO_CHANGE_DEVICE
+     69          //×Ô¶¯ÏÂÒ»Çúµ½ÏÂÒ»Éè±¸²¥·Å
+     70          #pragma location="TASK_MUSIC_SEG"
+     71          static bool task_music_auto_device(void)
+     72          {
+     73          	u_msc.music_num = 1;
+     74          	mem_write_file_change();
+     75          
+     76          #if USE_BREAK_POINT
+     77          	task_music_break_save(0);
+     78          #endif
+     79          
+     80          	if(device_switch())                     //¼ì²éÊÇ·ñÓÐÏÂÒ»Éè±¸
+     81          	{
+     82          		if(!task_music_remount_device())    //ÏÂÒ»Éè±¸¹ÒÔØÎÄ¼þÏµÍ³
+     83          		{
+     84          			if(!task_music_next_device())   //¹ÒÔØ²»³É¹¦£¬Ñ¡»ØÔ­Éè±¸
+     85          			{
+     86          				return false;
+     87          			}
+     88          		}
+     89          	}
+     90          	return true;
+     91          }
+     92          #endif
+     93          
+     94          //³õÊ¼»¯µÚmusic_numÊ×¸è
+     95          #pragma location="MUSIC_SEG"
+     96          static bool task_music_init(u16 music_num)
+     97          {
+     98          	if(!f_open(music_num))
+     99          	{
+    100          		return false;
+    101          	}
+    102          
+    103          #if DIR_SWITCH_EN
+    104          	u_msc.dir_num = t_fat.dir_count;
+    105          #endif
+    106          
+    107          #if MUSIC_ENCRYPT_EN
+    108          	music_check_encrypt();//ÅÐ¶ÏÊÇ·ñÎª¼ÓÃÜmp3
+    109          	music_head_decrypt();
+    110          #endif
+    111          
+    112          #if WAV_SUPPORT
+    113          	u_msc.music_type = music_init();
+    114          #else
+    115          	u_msc.music_type = music_init_mp3_only();
+    116          #endif
+    117          
+    118          	//printf("mtype:%d\n", u_msc.music_type);
+    119          #if WAV_SUPPORT
+    120          	if(u_msc.music_type == TYPE_WAV)
+    121          	{
+    122          		set_sys_clk(SYS_48M);               //WAVÊ±Ê¹ÓÃ48MÊ±ÖÓ
+    123          	}
+    124          	else
+    125          	{
+    126          		set_sys_clk(SYS_24M);
+    127          	}
+    128          #endif
+    129          	if(TYPE_NONE == u_msc.music_type)
+    130          	{
+    131          		return false;
+    132          	}
+    133          	return true;
+    134          }
+    135          
+    136          #if DIR_SWITCH_EN
+    137          //0:ÏÂÒ»ÎÄ¼þ¼Ð/1:ÉÏÒ»ÎÄ¼þ¼Ð
+    138          #pragma location="TASK_MUSIC_SEG"
+    139          void task_music_dir(bool direct)
+    140          {
+    141          	if(u_msc.dir_total <= 1)
+    142          	{
+    143          		return;
+    144          	}
+    145          
+    146          	u_msc.dir_num = loop_auto(direct, u_msc.dir_num, 1, u_msc.dir_total);
+    147          
+    148          	music_stop();
+    149          	f_open_dir(u_msc.dir_num);
+    150          	b_msc.file_change = 1;
+    151          	u_msc.music_num = t_fat.file_count;
+    152          }
+    153          #endif
+    154          
+    155          //0:ÏÂÒ»Çú/1:ÉÏÒ»Çú
+    156          #pragma location="TASK_MUSIC_SEG"
+
+   \                                 In segment TASK_MUSIC_SEG, align 1, keep-with-next
+    157          static void task_music_direct(bool direct)
+   \                     ??task_music_direct:
+    158          {
+   \   000000   C0..         PUSH    ?V0 + 0
+   \   000002   C0..         PUSH    ?V0 + 1
+   \   000004   C0..         PUSH    ?VB
+   \   000006                ; Saved register size: 3
+   \   000006                ; Auto size: 0
+   \   000006   A2F0         MOV     C,B.0
+   \   000008   92..         MOV     ?VB.0,C
+    159          #if (MUSIC_PLAYMODE && (PLAYMODE_NUM == PLAYMODE_FOUR))
+    160          	u16 dir_start, dir_last;
+    161          #endif
+    162          
+    163          	b_msc.file_change = 1;
+    164          	b_msc.file_prev_next = direct;                       //ÉèÖÃ·½Ïò£¬¹©½âÂë³ö´íÊ±Ê¹ÓÃ
+   \   00000A   92..         MOV     b_msc.2,C
+   \   00000C   D2..         SETB    b_msc.0
+    165          
+    166          	switch(sys_ctl.mode_play)
+   \   00000E   90....       MOV     DPTR,#sys_ctl
+   \   000011   E0           MOVX    A,@DPTR
+   \   000012   12....       LCALL   ?UC_SWITCH_DENSE
+   \                     `?<Jumptable for task_music_direct>_0`:
+   \   000015   00           DB        0
+   \   000016   02           DB        2
+   \   000017   ....         DW        ??task_music_direct_1
+   \   000019   ....         DW        ??task_music_direct_2
+   \   00001B   ....         DW        ??task_music_direct_1
+   \   00001D   ....         DW        ??task_music_direct_2
+    167          	{
+    168          	case ITEM_LOOP_ALL:
+    169          #if MUSIC_PLAYMODE
+    170          	case ITEM_LOOP_SINGLE:
+    171          #endif
+    172          		if(direct)      //ÉÏÒ»Çú
+    173          		{
+    174          #if AUTO_CHANGE_DEVICE
+    175          			if(u_msc.music_num == 1)
+    176          			{
+    177          				if(task_music_auto_device())
+    178          				{
+    179          					u_msc.music_num = u_msc.music_total;//×Ô¶¯ÉÏÒ»Çúµ½ÏÂÒ»Éè±¸²¥·Å
+    180          					b_msc.file_change = 1;              //ÐèÒª´ò¿ªÒ»¸öÐÂÎÄ¼þ
+    181          					return;
+    182          				}
+    183          			}
+    184          #endif
+    185          		}
+    186          		else            //ÏÂÒ»Çú
+    187          		{
+    188          #if AUTO_CHANGE_DEVICE
+    189          			if(u_msc.music_num == u_msc.music_total)
+    190          			{
+    191          				if(task_music_auto_device())
+    192          				{
+    193          					u_msc.music_num = 1;                //×Ô¶¯ÏÂÒ»Çúµ½ÏÂÒ»Éè±¸²¥·Å
+    194          					b_msc.file_change = 1;              //ÐèÒª´ò¿ªÒ»¸öÐÂÎÄ¼þ
+    195          					return;
+    196          				}
+    197          			}
+    198          #endif
+    199          		}
+    200          		//È«²¿Ñ­»·
+    201          		u_msc.music_num = loop_auto(direct, u_msc.music_num, 1, u_msc.music_total);
+   \                     ??task_music_direct_2:
+   \   00001F                ; Setup parameters for call to function loop_auto
+   \   00001F   90....       MOV     DPTR,#(u_msc + 2)
+   \   000022   12....       LCALL   ?PUSH_ISTACK_X_TWO
+   \   000025   7C01         MOV     R4,#0x1
+   \   000027   FD           MOV     R5,A
+   \   000028   90....       MOV     DPTR,#u_msc
+   \   00002B   E0           MOVX    A,@DPTR
+   \   00002C   FA           MOV     R2,A
+   \   00002D   A3           INC     DPTR
+   \   00002E   E0           MOVX    A,@DPTR
+   \   00002F   FB           MOV     R3,A
+   \   000030   A2..         MOV     C,?VB.0
+   \   000032   92F0         MOV     B.0,C
+   \   000034   12....       LCALL   loop_auto
+   \   000037   D0E0         POP     A
+   \   000039   D0E0         POP     A
+   \   00003B   90....       MOV     DPTR,#u_msc
+   \   00003E   EA           MOV     A,R2
+   \   00003F   F0           MOVX    @DPTR,A
+   \   000040   A3           INC     DPTR
+   \   000041   EB           MOV     A,R3
+   \   000042   F0           MOVX    @DPTR,A
+    202          		break;
+    203          #if (MUSIC_PLAYMODE && (PLAYMODE_NUM == PLAYMODE_FOUR))
+    204          	case ITEM_LOOP_FOLDER:
+    205          		//Ä¿Â¼Ñ­»·
+    206          		music_stop();
+    207          		dir_start = f_get_dirstart();           //µ±Ç°Ä¿Â¼µÚÒ»¸öÎÄ¼þµÄ±àºÅ
+    208          		dir_last = dir_start + f_get_dirtotal() - 1;
+    209          		u_msc.music_num = loop_auto(direct, u_msc.music_num, dir_start, dir_last);
+    210          		break;
+    211          	case ITEM_LOOP_RAMDOM:
+    212          #ifdef AX207X_TAG
+    213          		u_msc.music_num = rand(u_msc.music_total) + 1;
+    214          #else
+    215          		u_msc.music_num = rand(u_msc.music_total, u_msc.music_num) + 1;
+    216          #endif
+    217          		break;
+    218          #endif
+    219          	}
+    220          }
+   \                     ??task_music_direct_1:
+   \   000043   D0..         POP     ?VB
+   \   000045   02....       LJMP    ??Subroutine3_0
+
+   \                                 In segment TASK_MUSIC_SEG, align 1, keep-with-next
+   \                     ?Subroutine3:
+   \   000000   D0..         POP     ?V0 + 3
+   \   000002   D0..         POP     ?V0 + 2
+   \                     ??Subroutine3_0:
+   \   000004   D0..         POP     ?V0 + 1
+   \   000006   D0..         POP     ?V0 + 0
+   \   000008   22           RET
+    221          
+    222          #if !REPEAT_AS_ONE
+    223          //×Ô¶¯ÏÂÒ»Çú
+    224          #pragma location="TASK_MUSIC_SEG"
+    225          static void task_music_auto_next(void)
+    226          {
+    227          	if(music_get_mtime() < 5)
+    228          	{
+    229          		//²¥·Å²»×ã500ms£¬ÈÏÎª±¾¸è´íÎó
+    230          		if(b_msc.file_prev_next)                //³õÊ¼»¯Ê§°Ü£¬ÖØÐÂ¶ÁÈ¡ÏÂÒ»¸öÎÄ¼þ
+    231          		{
+    232          			task_music_direct(1);
+    233          		}
+    234          		else
+    235          		{
+    236          			task_music_direct(0);
+    237          		}
+    238          	}
+    239          	else
+    240          	{
+    241          		b_msc.file_prev_next = 0;                       //Çå³ý·½Ïò
+    242          		b_msc.file_change = 1;
+    243          		if(sys_ctl.mode_play != ITEM_LOOP_SINGLE)
+    244          		{
+    245          			task_music_direct(0);
+    246          		}
+    247          	}
+    248          }
+    249          #endif
+    250          
+    251          //¼ÆËãÏÔÊ¾µÄÊ±¼ä
+    252          #pragma location="TASK_MUSIC_SEG"
+
+   \                                 In segment TASK_MUSIC_SEG, align 1, keep-with-next
+    253          void task_music_cal_time(void)
+   \                     task_music_cal_time:
+    254          {
+   \   000000   740C         MOV     A,#0xc
+   \   000002   12....       LCALL   ?FUNC_ENTER_SP
+   \   000005                ; Saved register size: 15
+   \   000005                ; Auto size: 0
+    255          	u32 cur_sec = music_get_mtime() / 10;           //µ±Ç°²¥·ÅÊ±¼ä£¬¾«È·µ½0.1s
+   \   000005                ; Setup parameters for call to function music_get_mtime
+   \   000005   12....       LCALL   music_get_mtime
+   \   000008   8A..         MOV     ?V0 + 4,R2
+   \   00000A   8B..         MOV     ?V0 + 5,R3
+   \   00000C   8C..         MOV     ?V0 + 6,R4
+   \   00000E   8D..         MOV     ?V0 + 7,R5
+   \   000010   90....       MOV     DPTR,#__Constant_a
+   \   000013   78..         MOV     R0,#?V0 + 0
+   \   000015   12....       LCALL   ?L_MOV_C
+   \   000018   78..         MOV     R0,#?V0 + 4
+   \   00001A   79..         MOV     R1,#?V0 + 0
+   \   00001C   12....       LCALL   ?UL_DIV_MOD
+    256          	u_msc.cur_time.min = cur_sec / 60;
+   \   00001F   85....       MOV     ?V0 + 0,?V0 + 4
+   \   000022   85....       MOV     ?V0 + 1,?V0 + 5
+   \   000025   85....       MOV     ?V0 + 2,?V0 + 6
+   \   000028   85....       MOV     ?V0 + 3,?V0 + 7
+   \   00002B   90....       MOV     DPTR,#__Constant_3c
+   \   00002E   78..         MOV     R0,#?V0 + 8
+   \   000030   12....       LCALL   ?L_MOV_C
+   \   000033   78..         MOV     R0,#?V0 + 0
+   \   000035   79..         MOV     R1,#?V0 + 8
+   \   000037   12....       LCALL   ?UL_DIV_MOD
+   \   00003A   E5..         MOV     A,?V0 + 0
+   \   00003C   90....       MOV     DPTR,#(u_msc + 5)
+   \   00003F   F0           MOVX    @DPTR,A
+    257          	u_msc.cur_time.sec = cur_sec % 60;
+   \   000040   90....       MOV     DPTR,#__Constant_3c
+   \   000043   78..         MOV     R0,#?V0 + 0
+   \   000045   12....       LCALL   ?L_MOV_C
+   \   000048   78..         MOV     R0,#?V0 + 4
+   \   00004A   79..         MOV     R1,#?V0 + 0
+   \   00004C   12....       LCALL   ?UL_DIV_MOD
+   \   00004F   E5..         MOV     A,?V0 + 0
+   \   000051   90....       MOV     DPTR,#(u_msc + 6)
+   \   000054   F0           MOVX    @DPTR,A
+    258          }
+   \   000055   7F0C         MOV     R7,#0xc
+   \   000057   02....       LJMP    ?FUNC_LEAVE_SP
+    259          
+    260          //´ò¿ªÒ»Ê×ÐÂµÄÒôÀÖ
+    261          #pragma location="TASK_MUSIC_SEG"
+
+   \                                 In segment TASK_MUSIC_SEG, align 1, keep-with-next
+    262          void task_music_new(void)
+   \                     task_music_new:
+    263          {
+   \   000000   7404         MOV     A,#0x4
+   \   000002   12....       LCALL   ?FUNC_ENTER_SP
+   \   000005                ; Saved register size: 7
+   \   000005                ; Auto size: 0
+    264          	u16 err_cnt = 0;
+   \   000005   F5..         MOV     ?V0 + 2,A
+   \   000007   F5..         MOV     ?V0 + 3,A
+    265          	u16 err_total;
+    266          	if(sys_ctl.mode_play == ITEM_LOOP_RAMDOM)
+   \   000009   90....       MOV     DPTR,#sys_ctl
+   \   00000C   E0           MOVX    A,@DPTR
+   \   00000D   6401         XRL     A,#0x1
+   \   00000F   90....       MOV     DPTR,#(u_msc + 2)
+   \   000012   700E         JNZ     ??task_music_new_0
+    267          	{
+    268          		err_total = u_msc.music_total * 2;          //Ôö´óËæ»ú²¥·ÅÊ±´íÎó¸èÇúµÄÑ­»·´ÎÊý
+   \   000014   E0           MOVX    A,@DPTR
+   \   000015   FE           MOV     R6,A
+   \   000016   A3           INC     DPTR
+   \   000017   E0           MOVX    A,@DPTR
+   \   000018   FF           MOV     R7,A
+   \   000019   EE           MOV     A,R6
+   \   00001A   C3           CLR     C
+   \   00001B   33           RLC     A
+   \   00001C   FE           MOV     R6,A
+   \   00001D   EF           MOV     A,R7
+   \   00001E   33           RLC     A
+   \                     ??task_music_new_1:
+   \   00001F   FF           MOV     R7,A
+   \   000020   8039         SJMP    ??task_music_new_2
+    269          	}
+    270          	else
+    271          	{
+    272          		err_total = u_msc.music_total;
+   \                     ??task_music_new_0:
+   \   000022   E0           MOVX    A,@DPTR
+   \   000023   FE           MOV     R6,A
+   \   000024   A3           INC     DPTR
+   \   000025   E0           MOVX    A,@DPTR
+   \   000026   80F7         SJMP    ??task_music_new_1
+   \                     ??task_music_new_3:
+   \   000028                ; Setup parameters for call to function set_sys_clk
+    273          	}
+    274          	while(device_is_actived(fs_cur_dev()) && b_msc.file_change)
+    275          	{
+    276          #if REPEAT_AS_ONE
+    277          		if(b_msc.repeat_as_one_flag == 0)
+    278          		{
+    279          			music_stop();                               //Í£Ö¹²¥·ÅÆ÷
+    280          		}
+    281          		else
+    282          		{
+    283          			b_msc.repeat_as_one_flag = 0;
+    284          		}
+    285          #else
+    286          		music_stop();//Í£Ö¹²¥·ÅÆ÷
+    287          #endif
+    288          		b_msc.file_change = 0;
+    289          		//²¥·ÅÖ¸¶¨¸èÇú
+    290          
+    291          		sound_ctl_clr();
+    292          		if(task_music_init(u_msc.music_num))
+   \   000028   7900         MOV     R1,#0x0
+   \                     ??task_music_new_4:
+   \   00002A   12....       LCALL   set_sys_clk
+   \   00002D   90....       MOV     DPTR,#(u_msc + 4)
+   \   000030   E0           MOVX    A,@DPTR
+   \   000031   6044         JZ      ??task_music_new_5
+    293          		{
+    294          			//task_music_clear_a();                   //Çå³ýAµã
+    295          			printf("music_play[%d][%d]\n",fs_cur_dev(),u_msc.music_num);
+   \   000033                ; Setup parameters for call to function fs_cur_dev
+   \   000033   12....       LCALL   ?Subroutine2
+   \                     ??CrossCallReturnLabel_6:
+   \   000036   FA           MOV     R2,A
+   \   000037                ; Setup parameters for call to function my_printf
+   \   000037   90....       MOV     DPTR,#u_msc
+   \   00003A   12....       LCALL   ?PUSH_ISTACK_X_TWO
+   \   00003D   8A..         MOV     ?V0 + 0,R2
+   \   00003F   F5..         MOV     ?V0 + 1,A
+   \   000041   C0..         PUSH    ?V0 + 0
+   \   000043   C0..         PUSH    ?V0 + 1
+   \   000045   7A..         MOV     R2,#(`?<Constant "music_play[%d][%d]\\n">` & 0xff)
+   \   000047   7B..         MOV     R3,#((`?<Constant "music_play[%d][%d]\\n">` >> 8) & 0xff)
+   \   000049   12....       LCALL   my_printf
+   \   00004C   74FC         MOV     A,#-0x4
+   \   00004E   12....       LCALL   ?DEALLOC_EXT_STACK8
+    296          			dac_fade_in(0);
+   \   000051                ; Setup parameters for call to function dac_fade_in
+   \   000051   C2F0         CLR     B.0
+   \   000053   12....       LCALL   dac_fade_in
+    297          			music_play();
+   \   000056                ; Setup parameters for call to function music_play
+   \   000056   12....       LCALL   music_play
+    298          
+    299          			b_msc.pause = 0;
+   \   000059   C2..         CLR     b_msc.1
+    300          			//delay_5ms(5);                           //ÑÓÊ±Ò»Ð¡¶ÎÊ±¼ä£¬ÊÔ½â¼¸Ö¡£¬¼ÆËã³öÏàÓ¦ÐÅÏ¢
+    301          		}
+   \                     ??task_music_new_2:
+   \   00005B                ; Setup parameters for call to function device_is_actived
+   \   00005B                ; Setup parameters for call to function fs_cur_dev
+   \   00005B   12....       LCALL   ?Subroutine1
+   \                     ??CrossCallReturnLabel_2:
+   \   00005E   82..         ANL     C,b_msc.0
+   \   000060   5032         JNC     ??task_music_new_6
+   \   000062                ; Setup parameters for call to function music_stop
+   \   000062   12....       LCALL   music_stop
+   \   000065   C2..         CLR     b_msc.0
+   \   000067                ; Setup parameters for call to function sound_ctl_clr
+   \   000067   12....       LCALL   sound_ctl_clr
+   \   00006A                ; Setup parameters for call to function f_open_speed
+   \   00006A   90....       MOV     DPTR,#u_msc
+   \   00006D   E0           MOVX    A,@DPTR
+   \   00006E   FA           MOV     R2,A
+   \   00006F   A3           INC     DPTR
+   \   000070   E0           MOVX    A,@DPTR
+   \   000071   FB           MOV     R3,A
+   \   000072   12....       LCALL   f_open_speed
+   \   000075   4022         JC      ??task_music_new_7
+    302          		else
+    303          		{
+    304          			if(!fs_is_mounted() || ++err_cnt >= err_total)       //ËùÓÐµÄÒôÀÖÎÄ¼þ¶¼ÎÞ·¨²¥·Å
+   \                     ??task_music_new_5:
+   \   000077                ; Setup parameters for call to function fs_is_mounted
+   \   000077   12....       LCALL   fs_is_mounted
+   \   00007A   5015         JNC     ??task_music_new_8
+   \   00007C   E5..         MOV     A,?V0 + 2
+   \   00007E   2401         ADD     A,#0x1
+   \   000080   F5..         MOV     ?V0 + 2,A
+   \   000082   E5..         MOV     A,?V0 + 3
+   \   000084   3400         ADDC    A,#0x0
+   \   000086   F5..         MOV     ?V0 + 3,A
+   \   000088   C3           CLR     C
+   \   000089   E5..         MOV     A,?V0 + 2
+   \   00008B   9E           SUBB    A,R6
+   \   00008C   E5..         MOV     A,?V0 + 3
+   \   00008E   9F           SUBB    A,R7
+   \   00008F   4018         JC      ??task_music_new_9
+    305          			{
+    306          				//msgbox(STR_FILE_ERROR, NULL);
+    307          				task_ctl.work_sta = TASK_EXIT;      //Á¬Ðø´íÎóÎÄ¼þ¹ý¶à£¬ÍË³öÄ¿Â¼²¥·Å
+   \                     ??task_music_new_8:
+   \   000091   75..0C       MOV     task_ctl,#0xc
+    308          				break;
+    309          			}
+    310          
+    311          			if(b_msc.file_prev_next)                //³õÊ¼»¯Ê§°Ü£¬ÖØÐÂ¶ÁÈ¡ÏÂÒ»¸öÎÄ¼þ
+    312          			{
+    313          				task_music_direct(1);
+    314          			}
+    315          			else
+    316          			{
+    317          				task_music_direct(0);
+    318          			}
+    319          		}
+    320          	}
+    321          }
+   \                     ??task_music_new_6:
+   \   000094   7F04         MOV     R7,#0x4
+   \   000096   02....       LJMP    ?FUNC_LEAVE_SP
+   \                     ??task_music_new_7:
+   \   000099                ; Setup parameters for call to function music_init
+   \   000099   12....       LCALL   music_init
+   \   00009C   E9           MOV     A,R1
+   \   00009D   90....       MOV     DPTR,#(u_msc + 4)
+   \   0000A0   F0           MOVX    @DPTR,A
+   \   0000A1   6402         XRL     A,#0x2
+   \   0000A3   7083         JNZ     ??task_music_new_3
+   \   0000A5                ; Setup parameters for call to function set_sys_clk
+   \   0000A5   7901         MOV     R1,#0x1
+   \   0000A7   8081         SJMP    ??task_music_new_4
+   \                     ??task_music_new_9:
+   \   0000A9   A2..         MOV     C,b_msc.2
+   \   0000AB   5007         JNC     ??task_music_new_10
+   \   0000AD                ; Setup parameters for call to function task_music_direct
+   \   0000AD   D2F0         SETB    B.0
+   \                     ??task_music_new_11:
+   \   0000AF   12....       LCALL   ??task_music_direct
+   \   0000B2   80A7         SJMP    ??task_music_new_2
+   \                     ??task_music_new_10:
+   \   0000B4                ; Setup parameters for call to function task_music_direct
+   \   0000B4   C2F0         CLR     B.0
+   \   0000B6   80F7         SJMP    ??task_music_new_11
+
+   \                                 In segment TASK_MUSIC_SEG, align 1, keep-with-next
+   \                     ?Subroutine1:
+   \   000000   12....       LCALL   fs_cur_dev
+   \   000003   12....       LCALL   device_is_actived
+   \   000006   22           RET
+    322          
+    323          //»ñÈ¡ÒôÀÖÎÄ¼þµÄ¸öÊý
+    324          #pragma location="TASK_MUSIC_SEG"
+    325          static bool task_music_scan_music(void)
+    326          {
+    327          	//ÅäÖÃÉ¨Ãè¹ýÂËÆ÷ÎªÒôÀÖÎÄ¼þ¼Ð
+    328          #if FS_SCAN_SPEED_EN
+    329          	f_scan_set(SCAN_SUB_FOLDER|SCAN_SPEED, &file_filter_music, &dir_filter_music);
+    330          #else
+    331          	f_scan_set(SCAN_SUB_FOLDER, &file_filter_music, &dir_filter_music);
+    332          #endif
+    333          	u_msc.music_total = f_gettotal();                   //»ñÈ¡¸èÇúµÄ×ÜÊý
+    334          	//printf("total: %d\n", u_msc.music_total);
+    335          #if DIR_SWITCH_EN
+    336          	u_msc.dir_total = t_fat.dir_count;
+    337          #endif
+    338          	return (u_msc.music_total != 0);
+    339          }
+    340          
+    341          //ÈÎÎñÊÂÎñ´¦Àí
+    342          #pragma location="TASK_MUSIC_SEG"
+
+   \                                 In segment TASK_MUSIC_SEG, align 1, keep-with-next
+    343          static void task_music_event(void)
+   \                     ??task_music_event:
+    344          {
+   \   000000   7408         MOV     A,#0x8
+   \   000002   12....       LCALL   ?FUNC_ENTER_SP
+   \   000005                ; Saved register size: 11
+   \   000005                ; Auto size: 0
+    345          	comm_event(0);                          //µ÷ÓÃ¹«¹²ÊÂ¼þ
+   \   000005                ; Setup parameters for call to function comm_event
+   \   000005   F9           MOV     R1,A
+   \   000006   12....       LCALL   comm_event
+    346          	music_event();                          //½âÂëÐèÒªµÄÊÂ¼þ
+   \   000009                ; Setup parameters for call to function music_event
+   \   000009   12....       LCALL   music_event
+    347          
+    348          #if USE_IR_NUM
+    349          	if(ocx.event == 1)
+    350          	{
+    351          		ocx.event = 0;
+    352          		if(ocx.number == 0 || ocx.number > u_msc.music_total)
+    353          		{
+    354          			//u_msc.music_num = 1;
+    355          			//msgbox(" err");
+    356          		}
+    357          		else
+    358          		{
+    359          			u_msc.music_num = ocx.number;
+    360          			b_msc.file_prev_next = 0;                       //Çå³ý·½Ïò
+    361          			b_msc.file_change = 1;
+    362          		}
+    363          	}
+    364          #endif
+    365          
+    366          	//¼ì²éÉè±¸×´Ì¬
+    367          	if(!device_is_actived(fs_cur_dev()))
+   \   00000C                ; Setup parameters for call to function device_is_actived
+   \   00000C                ; Setup parameters for call to function fs_cur_dev
+   \   00000C   12....       LCALL   ?Subroutine1
+   \                     ??CrossCallReturnLabel_3:
+   \   00000F   4002         JC      ??task_music_event_1
+    368          	{
+    369          		b_sys.dev_change = 1;               //µ±Ç°Éè±¸ÎÞÐ§£¬Éè±¸·¢Éú±ä¶¯
+   \   000011   D2..         SETB    b_sys.0
+    370          	}
+    371          	if(b_sys.dev_change)
+   \                     ??task_music_event_1:
+   \   000013   A2..         MOV     C,b_sys.0
+   \   000015   5012         JNC     ??task_music_event_2
+    372          	{
+    373          		device_chg |= BIT(device_music);
+   \   000017   90....       MOV     DPTR,#device_chg
+   \   00001A   E0           MOVX    A,@DPTR
+   \   00001B   D2E0         SETB    0xE0 /* A   */.0
+   \   00001D   F0           MOVX    @DPTR,A
+    374          		music_stop();                       //Í£Ö¹µ±Ç°ÒôÀÖ
+   \   00001E                ; Setup parameters for call to function music_stop
+   \   00001E   12....       LCALL   music_stop
+    375          		b_msc.file_change = 1;              //ÐèÒª´ò¿ªÒ»¸öÐÂÎÄ¼þ
+    376          #if USE_BREAK_POINT
+    377          		b_msc.break_init =1;
+   \   000021   43..09       ORL     b_msc,#0x9
+    378          		task_music_break_save(1);
+   \   000024                ; Setup parameters for call to function task_music_break_save
+   \   000024   D2F0         SETB    B.0
+   \   000026   12....       LCALL   task_music_break_save
+    379          #endif
+    380          	}
+    381          	if(device_change())
+   \                     ??task_music_event_2:
+   \   000029                ; Setup parameters for call to function device_change
+   \   000029   12....       LCALL   device_change
+   \   00002C   E9           MOV     A,R1
+   \   00002D   6049         JZ      ??task_music_event_3
+    382          	{
+    383          #if (SYS_MEM == MEM_DEVICE)
+    384          		mem_ctl.dev_mem_ready = 0;          //Éè±¸±ä¶¯£¬Éè±¸¼ÇÒäÎÞÐ§
+    385          #endif
+    386          		music_stop();                       //Í£Ö¹µ±Ç°ÒôÀÖ
+   \   00002F                ; Setup parameters for call to function music_stop
+   \   00002F   12....       LCALL   music_stop
+    387          		if((fs_cur_dev() == DEVICE_SDMMC) || ((fs_cur_dev() == DEVICE_SDMMC1) && (u_spi.spi_online == false)))
+   \   000032                ; Setup parameters for call to function fs_cur_dev
+   \   000032   12....       LCALL   ?Subroutine2
+   \                     ??CrossCallReturnLabel_7:
+   \   000035   600D         JZ      ??task_music_event_4
+   \   000037                ; Setup parameters for call to function fs_cur_dev
+   \   000037   12....       LCALL   ?Subroutine2
+   \                     ??CrossCallReturnLabel_8:
+   \   00003A   6401         XRL     A,#0x1
+   \   00003C   700B         JNZ     ??task_music_event_5
+   \   00003E   90....       MOV     DPTR,#(u_spi + 1)
+   \   000041   E0           MOVX    A,@DPTR
+   \   000042   7005         JNZ     ??task_music_event_5
+    388          		{
+    389          			sd_stop(1);
+   \                     ??task_music_event_4:
+   \   000044                ; Setup parameters for call to function sd_stop
+   \   000044   D2F0         SETB    B.0
+   \   000046   12....       LCALL   sd_stop
+    390          		}
+    391          		if(!task_music_remount_device())
+   \                     ??task_music_event_5:
+   \   000049                ; Setup parameters for call to function task_music_remount_device
+   \   000049   12....       LCALL   ??task_music_remount_device
+   \   00004C   400F         JC      ??task_music_event_6
+    392          		{
+    393          			if(!task_music_next_device())
+   \   00004E                ; Setup parameters for call to function task_music_next_device
+   \   00004E   12....       LCALL   task_music_next_device
+   \   000051   400A         JC      ??task_music_event_6
+    394          			{
+    395          				task_ctl.work_sta = TASK_EXIT;      //Éè±¸ÎÞÐ§£¬ÍË³ö
+   \   000053   75..0C       MOV     task_ctl,#0xc
+    396          				//showhello();	// Merlin ÒÆ³ý, ÒòÎª½øÈëÃ¿¸ö TaskÊ±»áÏÔÊ¾¶ÔÓ¦µÄÐÅÏ¢
+    397          				if(fs_cur_dev() == DEVICE_SDMMC)
+   \   000056                ; Setup parameters for call to function fs_cur_dev
+   \   000056   12....       LCALL   ?Subroutine2
+   \                     ??CrossCallReturnLabel_9:
+   \   000059   7002         JNZ     ??task_music_event_6
+    398          				{
+    399          					b_sys.modeswitch_flag = 1;
+   \   00005B   D2..         SETB    b_sys.2
+    400          				}
+    401          			}
+    402          		}
+    403          		b_msc.file_change = 1;                  //ÐèÒª´ò¿ªÒ»¸öÐÂÎÄ¼þ
+   \                     ??task_music_event_6:
+   \   00005D   D2..         SETB    b_msc.0
+    404          		device_chg |= BIT(device_music);
+   \   00005F   90....       MOV     DPTR,#device_chg
+   \   000062   E0           MOVX    A,@DPTR
+   \   000063   D2E0         SETB    0xE0 /* A   */.0
+   \   000065   F0           MOVX    @DPTR,A
+    405          
+    406          		if(b_dac.mute_en)                       //½â³ýMUTE
+   \   000066   A2..         MOV     C,b_dac.1
+   \   000068   5003         JNC     ??task_music_event_7
+    407          		{
+    408          			mute_disable();
+   \   00006A                ; Setup parameters for call to function mute_disable
+   \   00006A   12....       LCALL   mute_disable
+    409          		}
+    410          #if USE_BREAK_POINT
+    411          		b_msc.break_init = 1;
+   \                     ??task_music_event_7:
+   \   00006D   12....       LCALL   ?Subroutine0
+    412          #endif
+    413          		mem_ctl.dev = fs_cur_dev();
+    414          		mem_read_music_num();                   //´ò¿ªµÄÎÄ¼þ±à
+    415          #if MUSIC_SWITCH_DEV
+    416          		t_msc.mode = 0;                             //ÓÃÀ´ÇÐ»»Ä£Ê½
+   \                     ??CrossCallReturnLabel_1:
+   \   000070   E4           CLR     A
+   \   000071   90....       MOV     DPTR,#t_msc
+   \   000074   F0           MOVX    @DPTR,A
+    417          #endif
+    418          		return;
+   \   000075   02....       LJMP    ??task_music_event_8
+    419          	}
+    420          
+    421          	//´ò¿ªÐÂÎÄ¼þ
+    422          	if(b_msc.file_change)
+   \                     ??task_music_event_3:
+   \   000078   A2..         MOV     C,b_msc.0
+   \   00007A   502E         JNC     ??task_music_event_9
+    423          	{
+    424          		b_dac.mute_en = 1; user_set_mute();	// ¿ªÊ¼²¥·Å
+   \   00007C   D2..         SETB    b_dac.1
+   \   00007E                ; Setup parameters for call to function user_set_mute
+   \   00007E   12....       LCALL   user_set_mute
+    425          
+    426          #if REPEAT_AS_ONE
+    427          		if(b_msc.repeat_as_one_flag == 0)
+    428          #endif
+    429          		{
+    430          			// music_stop();
+    431          			dac_fade_in(0);
+   \   000081                ; Setup parameters for call to function dac_fade_in
+   \   000081   C2F0         CLR     B.0
+   \   000083   12....       LCALL   dac_fade_in
+    432          		}
+    433          #if (DISP_TYPE==DISP_LED)
+    434          		ocx.led_sta = LED_STA_SLOW_GLITTER;
+    435          #endif
+    436          #if USE_BREAK_POINT
+    437          		if(b_msc.break_init)
+   \   000086   A2..         MOV     C,b_msc.3
+   \   000088   5003         JNC     ??task_music_event_10
+    438          		{
+    439          			mem_read_music_break();                 //Èç¹ûSD_CMDÓëIIC¸´ÓÃ£¬ÐèÔÚ¶ÁÎÄ¼þÇ°¶Á³ö¶ÏµãÐÅÏ¢
+   \   00008A                ; Setup parameters for call to function read_music_break_rtcram
+   \   00008A   12....       LCALL   read_music_break_rtcram
+    440          		}
+    441          #endif
+    442          		task_music_new();
+   \                     ??task_music_event_10:
+   \   00008D                ; Setup parameters for call to function task_music_new
+   \   00008D   12....       LCALL   task_music_new
+    443          		mem_write_file_change();                    //ÎÄ¼þ³õÊ¼»¯³É¹¦ºóÔÙ±£´æÇúÄ¿
+   \   000090                ; Setup parameters for call to function mem_write_file_change
+   \   000090   12....       LCALL   mem_write_file_change
+    444          		//shownum(u_msc.music_num);
+    445          		if(device_chg)
+   \   000093   90....       MOV     DPTR,#device_chg
+   \   000096   E0           MOVX    A,@DPTR
+   \   000097   6008         JZ      ??task_music_event_11
+    446          		{
+    447          			ocx_show_device();
+   \   000099                ; Setup parameters for call to function ocx_show_device
+   \   000099   12....       LCALL   ocx_show_device
+    448          			device_chg = 0;
+   \   00009C   E4           CLR     A
+   \   00009D   90....       MOV     DPTR,#device_chg
+   \   0000A0   F0           MOVX    @DPTR,A
+    449          		}
+    450          #if AB_REPEAT_EN
+    451          		u_msc.repeat = 0;
+    452          		task_music_set_a();
+    453          #endif
+    454          #if USE_BREAK_POINT
+    455          		if(b_msc.break_init)
+   \                     ??task_music_event_11:
+   \   0000A1   A2..         MOV     C,b_msc.3
+   \   0000A3   5005         JNC     ??task_music_event_9
+    456          		{
+    457          			b_msc.break_init = 0;
+   \   0000A5   C2..         CLR     b_msc.3
+    458          			task_music_break_init();
+   \   0000A7                ; Setup parameters for call to function task_music_break_init
+   \   0000A7   12....       LCALL   task_music_break_init
+    459          		}
+    460          #endif
+    461          	}
+    462          
+    463          	//¼ÆËãµ±Ç°ÏÔÊ¾µÄÊ±¼ä
+    464          	task_music_cal_time();
+   \                     ??task_music_event_9:
+   \   0000AA                ; Setup parameters for call to function task_music_cal_time
+   \   0000AA   12....       LCALL   task_music_cal_time
+    465          
+    466          	//ÅÐ¶ÏÒôÀÖµÄ²¥·Å×´Ì¬
+    467          	if(music_get_status() <= STATUS_PLAY_STOPPING)
+   \   0000AD                ; Setup parameters for call to function music_get_status
+   \   0000AD   12....       LCALL   music_get_status
+   \   0000B0   E9           MOV     A,R1
+   \   0000B1   C3           CLR     C
+   \   0000B2   9402         SUBB    A,#0x2
+   \   0000B4   5047         JNC     ??task_music_event_8
+    468          	{
+    469          		if(device_is_actived(fs_cur_dev()))
+   \   0000B6                ; Setup parameters for call to function device_is_actived
+   \   0000B6                ; Setup parameters for call to function fs_cur_dev
+   \   0000B6   12....       LCALL   ?Subroutine1
+   \                     ??CrossCallReturnLabel_4:
+   \   0000B9   503F         JNC     ??task_music_event_12
+    470          		{
+    471          			DBG_MUSIC("auto_next %d\n", music_get_status());
+    472          #if MUSIC_STOP
+    473          			if(!b_msc.stop)
+    474          #endif
+    475          			{
+    476          #if REPEAT_AS_ONE
+    477          				//b_msc.file_change = 1;
+    478          				//u_msc.break_point.frame = 0;
+    479          				//u_msc.break_point.pos = 0;
+    480          				//music_jump(&u_msc.break_point);
+    481          				b_msc.repeat_as_one_flag = 1;
+    482          				//delay_5ms(6);//´ËÑÓÊ±²»ÄÜÉ¾£¬É¾ÁËUÅÌÓÐ¿ÉÄÜÓÐÅ¾Ò»Éù
+    483          				//delay_5ms(5);
+    484          #else
+    485          				if(sys_ctl.mode_play != ITEM_LOOP_SINGLE)
+   \   0000BB   90....       MOV     DPTR,#sys_ctl
+   \   0000BE   E0           MOVX    A,@DPTR
+   \   0000BF   6402         XRL     A,#0x2
+   \   0000C1   603A         JZ      ??task_music_event_8
+    486          					task_music_auto_next(); 					 //±¾Çú²¥·ÅÍê±Ï£¬²¥·ÅÏÂÒ»Çú
+   \   0000C3                ; Setup parameters for call to function music_get_mtime
+   \   0000C3   12....       LCALL   music_get_mtime
+   \   0000C6   8A..         MOV     ?V0 + 0,R2
+   \   0000C8   8B..         MOV     ?V0 + 1,R3
+   \   0000CA   8C..         MOV     ?V0 + 2,R4
+   \   0000CC   8D..         MOV     ?V0 + 3,R5
+   \   0000CE   90....       MOV     DPTR,#__Constant_5
+   \   0000D1   78..         MOV     R0,#?V0 + 4
+   \   0000D3   12....       LCALL   ?L_MOV_C
+   \   0000D6   78..         MOV     R0,#?V0 + 4
+   \   0000D8   79..         MOV     R1,#?V0 + 0
+   \   0000DA   12....       LCALL   ?UL_GT
+   \   0000DD   500B         JNC     ??task_music_event_13
+   \   0000DF   A2..         MOV     C,b_msc.2
+   \   0000E1   5013         JNC     ??task_music_event_14
+   \   0000E3                ; Setup parameters for call to function task_music_direct
+   \   0000E3   D2F0         SETB    B.0
+   \                     ??task_music_event_15:
+   \   0000E5   12....       LCALL   ??task_music_direct
+   \   0000E8   8013         SJMP    ??task_music_event_8
+   \                     ??task_music_event_13:
+   \   0000EA   C2..         CLR     b_msc.2
+   \   0000EC   D2..         SETB    b_msc.0
+   \   0000EE   90....       MOV     DPTR,#sys_ctl
+   \   0000F1   E0           MOVX    A,@DPTR
+   \   0000F2   6402         XRL     A,#0x2
+   \   0000F4   6007         JZ      ??task_music_event_8
+   \                     ??task_music_event_14:
+   \   0000F6                ; Setup parameters for call to function task_music_direct
+   \   0000F6   C2F0         CLR     B.0
+   \   0000F8   80EB         SJMP    ??task_music_event_15
+    487          #endif
+    488          
+    489          			}
+    490          		}
+    491          		else
+    492          		{
+    493          			music_stop();
+   \                     ??task_music_event_12:
+   \   0000FA                ; Setup parameters for call to function music_stop
+   \   0000FA   12....       LCALL   music_stop
+   \                     ??task_music_event_8:
+   \   0000FD   7F08         MOV     R7,#0x8
+   \   0000FF   02....       LJMP    ?FUNC_LEAVE_SP
+    494          		}
+    495          	}
+    496          }
+    497          
+    498          
+    499          //ÈÎÎñÏûÏ¢´¦Àí
+    500          #pragma location="TASK_MUSIC_SEG"
+
+   \                                 In segment TASK_MUSIC_SEG, align 1, keep-with-next
+    501          static void task_music_deal_msg(u8 msg)
+   \                     ??task_music_deal_msg:
+    502          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    503          //	u8 tmp;
+    504          	switch(msg)
+   \   000000   90....       MOV     DPTR,#(sys_ctl + 2)
+   \   000003   E0           MOVX    A,@DPTR
+   \   000004   FA           MOV     R2,A
+   \   000005   E9           MOV     A,R1
+   \   000006   12....       LCALL   ?UC_SWITCH_SPARSE
+   \                     `?<Jumptable for task_music_deal_msg>_0`:
+   \   000009   00           DB        0
+   \   00000A   0B           DB        11
+   \   00000B   81           DB        129
+   \   00000C   ....         DW        ??task_music_deal_msg_1
+   \   00000E   82           DB        130
+   \   00000F   ....         DW        ??task_music_deal_msg_2
+   \   000011   83           DB        131
+   \   000012   ....         DW        ??task_music_deal_msg_3
+   \   000014   91           DB        145
+   \   000015   ....         DW        ??task_music_deal_msg_2
+   \   000017   A1           DB        161
+   \   000018   ....         DW        ??task_music_deal_msg_4
+   \   00001A   A2           DB        162
+   \   00001B   ....         DW        ??task_music_deal_msg_5
+   \   00001D   A3           DB        163
+   \   00001E   ....         DW        ??task_music_deal_msg_6
+   \   000020   A6           DB        166
+   \   000021   ....         DW        ??task_music_deal_msg_7
+   \   000023   B2           DB        178
+   \   000024   ....         DW        ??task_music_deal_msg_8
+   \   000026   E1           DB        225
+   \   000027   ....         DW        ??task_music_deal_msg_4
+   \   000029   E3           DB        227
+   \   00002A   ....         DW        ??task_music_deal_msg_6
+   \   00002C   ....         DW        ??task_music_deal_msg_9
+    505          	{
+    506          #if MUSIC_PLAYMODE
+    507          		//case KU_PLAYMODE:
+    508          	case KL_PLAY:
+    509          #if (PLAYMODE_NUM == PLAYMODE_FOUR)
+    510          		if(sys_ctl.mode_play < ITEM_LOOP_FOLDER)
+    511          		{
+    512          			sys_ctl.mode_play++;
+    513          		}
+    514          		else
+    515          		{
+    516          			sys_ctl.mode_play = 0;
+    517          		}
+    518          
+    519          #else
+    520          		if(sys_ctl.mode_play == ITEM_LOOP_ALL)
+   \                     ??task_music_deal_msg_5:
+   \   00002E   90....       MOV     DPTR,#sys_ctl
+   \   000031   E0           MOVX    A,@DPTR
+   \   000032   7004         JNZ     ??task_music_deal_msg_10
+    521          		{
+    522          			sys_ctl.mode_play = ITEM_LOOP_SINGLE;
+   \   000034   7402         MOV     A,#0x2
+   \   000036   8001         SJMP    ??task_music_deal_msg_11
+    523          		}
+    524          		else
+    525          		{
+    526          			sys_ctl.mode_play = ITEM_LOOP_ALL;
+   \                     ??task_music_deal_msg_10:
+   \   000038   E4           CLR     A
+   \                     ??task_music_deal_msg_11:
+   \   000039   F0           MOVX    @DPTR,A
+    527          		}
+    528          #endif
+    529          		irtc_write_ram(RTCRAM_PLAY_MODE, (u8 *)&sys_ctl.mode_play, 1);
+   \   00003A                ; Setup parameters for call to function irtc_write_ram
+   \   00003A   7C01         MOV     R4,#0x1
+   \   00003C   7A..         MOV     R2,#(sys_ctl & 0xff)
+   \   00003E   7B..         MOV     R3,#((sys_ctl >> 8) & 0xff)
+   \   000040   7922         MOV     R1,#0x22
+   \   000042   12....       LCALL   irtc_write_ram
+    530          		show_playmode();
+   \   000045                ; Setup parameters for call to function ocx_show_playmode
+   \   000045   12....       LCALL   ocx_show_playmode
+   \   000048   22           RET
+    531          		break;
+    532          #endif
+    533          
+    534          	//Á½¼üÍ¬Ê±°´ÏÂ²¥·ÅµÚÒ»Ê×¸èÇú
+    535          	case KL_PREV_NEXT:
+    536          		task_music_direct(0);
+   \                     ??task_music_deal_msg_8:
+   \   000049                ; Setup parameters for call to function task_music_direct
+   \   000049   C2F0         CLR     B.0
+   \   00004B   12....       LCALL   ??task_music_direct
+    537          		u_msc.music_num = 1;
+   \   00004E   90....       MOV     DPTR,#u_msc
+   \   000051   7401         MOV     A,#0x1
+   \   000053   F0           MOVX    @DPTR,A
+   \   000054   A3           INC     DPTR
+   \   000055   E4           CLR     A
+   \   000056   F0           MOVX    @DPTR,A
+    538          		irtc_write_ram((DEVICE_UDISK * RTCRAM_OFFSET + RTCRAM_MUSIC_NUM_SD), (u8 *)&u_msc.music_num, 2);
+   \   000057                ; Setup parameters for call to function irtc_write_ram
+   \   000057   7C02         MOV     R4,#0x2
+   \   000059   7A..         MOV     R2,#(u_msc & 0xff)
+   \   00005B   7B..         MOV     R3,#((u_msc >> 8) & 0xff)
+   \   00005D   791C         MOV     R1,#0x1c
+   \   00005F   12....       LCALL   irtc_write_ram
+    539          		irtc_write_ram((DEVICE_SDMMC * RTCRAM_OFFSET + RTCRAM_MUSIC_NUM_SD), (u8 *)&u_msc.music_num, 2);
+   \   000062                ; Setup parameters for call to function irtc_write_ram
+   \   000062   7C02         MOV     R4,#0x2
+   \   000064   7A..         MOV     R2,#(u_msc & 0xff)
+   \   000066   7B..         MOV     R3,#((u_msc >> 8) & 0xff)
+   \   000068   7908         MOV     R1,#0x8
+   \   00006A   12....       LCALL   irtc_write_ram
+    540          		if(u_spi.spi_online)
+   \   00006D   90....       MOV     DPTR,#(u_spi + 1)
+   \   000070   E0           MOVX    A,@DPTR
+   \   000071   6007         JZ      ??task_music_deal_msg_12
+    541          			u_msc.music_num = 0;	// µ± SPI-FlashÊ±, ÇúÄ¿ÓÉ0 ¿ªÊ¼¼ÆÊý
+   \   000073   90....       MOV     DPTR,#u_msc
+   \   000076   E4           CLR     A
+   \   000077   F0           MOVX    @DPTR,A
+   \   000078   A3           INC     DPTR
+   \   000079   F0           MOVX    @DPTR,A
+    542          		irtc_write_ram((DEVICE_SDMMC1 * RTCRAM_OFFSET + RTCRAM_MUSIC_NUM_SD), (u8 *)&u_msc.music_num, 2);
+   \                     ??task_music_deal_msg_12:
+   \   00007A                ; Setup parameters for call to function irtc_write_ram
+   \   00007A   7C02         MOV     R4,#0x2
+   \   00007C   7A..         MOV     R2,#(u_msc & 0xff)
+   \   00007E   7B..         MOV     R3,#((u_msc >> 8) & 0xff)
+   \   000080   7912         MOV     R1,#0x12
+   \   000082   12....       LCALL   irtc_write_ram
+    543          		u_msc.music_num = 1;
+   \   000085   90....       MOV     DPTR,#u_msc
+   \   000088   7401         MOV     A,#0x1
+   \   00008A   F0           MOVX    @DPTR,A
+   \   00008B   A3           INC     DPTR
+   \   00008C   E4           CLR     A
+   \   00008D   F0           MOVX    @DPTR,A
+    544          		printf("##hello##");
+   \   00008E                ; Setup parameters for call to function my_printf
+   \   00008E   7A..         MOV     R2,#(`?<Constant "##hello##">` & 0xff)
+   \   000090   7B..         MOV     R3,#((`?<Constant "##hello##">` >> 8) & 0xff)
+   \   000092   12....       LCALL   my_printf
+   \   000095   22           RET
+    545          		break;
+    546          		
+    547          		//ÉÏÒ»Çú£¬ÏÂÒ»Çú
+    548          	case KL_PREV:	// ¸ÄÎªÒôÁ¿¼Óµ÷Õû Merlin 2015/09/08
+    549          	case KH_PREV:	// ¸ÄÎªÒôÁ¿¼Óµ÷Õû Merlin 2015/09/08
+    550          		if(!RP_EN_CHECK)
+   \                     ??task_music_deal_msg_4:
+   \   000096   A283         MOV     C,0x80.3
+   \   000098   4004         JC      ??task_music_deal_msg_1
+    551          		{
+    552          			user_set_volume(sys_ctl.volume - 1);
+   \   00009A                ; Setup parameters for call to function user_set_volume
+   \   00009A   74FF         MOV     A,#-0x1
+   \   00009C   800A         SJMP    ??task_music_deal_msg_13
+    553          			deal_vol_msg();
+    554          			break;
+    555          		}
+    556          	case KU_PREV:
+    557          #if MUSIC_STOP
+    558          		if(b_msc.stop)
+    559          		{
+    560          			break;
+    561          		}
+    562          #endif
+    563          		DBG_MUSIC("Prev\n");
+    564          		task_music_direct(1);
+   \                     ??task_music_deal_msg_1:
+   \   00009E                ; Setup parameters for call to function task_music_direct
+   \   00009E   D2F0         SETB    B.0
+   \   0000A0   8011         SJMP    ??task_music_deal_msg_14
+    565          #if REPEAT_AS_ONE
+    566          		b_msc.repeat_as_one_flag = 0;
+    567          #endif
+    568          		disp.update = 1;
+    569          		ocx.disp_status = OCX_NULL;
+    570          		break;
+    571          
+    572          	case KL_NEXT:	// ¸ÄÎªÒôÁ¿¼õµ÷Õû Merlin 2015/09/08
+    573          	case KH_NEXT:	// ¸ÄÎªÒôÁ¿¼õµ÷Õû Merlin 2015/09/08
+    574          		if(!RP_EN_CHECK)
+   \                     ??task_music_deal_msg_6:
+   \   0000A2   A283         MOV     C,0x80.3
+   \   0000A4   400B         JC      ??task_music_deal_msg_3
+    575          		{
+    576          			user_set_volume(sys_ctl.volume + 1);
+   \   0000A6                ; Setup parameters for call to function user_set_volume
+   \   0000A6   7401         MOV     A,#0x1
+   \                     ??task_music_deal_msg_13:
+   \   0000A8   2A           ADD     A,R2
+   \   0000A9   F9           MOV     R1,A
+   \   0000AA   12....       LCALL   user_set_volume
+    577          			deal_vol_msg();
+   \   0000AD                ; Setup parameters for call to function deal_vol_msg
+   \   0000AD   12....       LCALL   deal_vol_msg
+    578          			break;
+   \   0000B0   22           RET
+    579          		}
+    580          	case KU_NEXT:
+    581          
+    582          #if MUSIC_STOP
+    583          		if(b_msc.stop)
+    584          		{
+    585          			break;
+    586          		}
+    587          #endif
+    588          		DBG_MUSIC("Next\n");
+    589          		task_music_direct(0);
+   \                     ??task_music_deal_msg_3:
+   \   0000B1                ; Setup parameters for call to function task_music_direct
+   \   0000B1   C2F0         CLR     B.0
+   \                     ??task_music_deal_msg_14:
+   \   0000B3   12....       LCALL   ??task_music_direct
+    590          #if REPEAT_AS_ONE
+    591          		b_msc.repeat_as_one_flag = 0;
+    592          #endif
+    593          		disp.update = 1;
+   \   0000B6   D2..         SETB    disp.0
+    594          		ocx.disp_status = OCX_NULL;
+   \   0000B8   78..         MOV     R0,#(ocx + 3)
+   \   0000BA   7600         MOV     @R0,#0x0
+   \   0000BC   22           RET
+    595          		break;
+    596          
+    597          		//²¥·Å¡¢ÔÝÍ£
+    598          	case KU_PLAY:
+    599          	case KU_PLAY_AND_MODE:
+    600          		if(music_start_pause())
+   \                     ??task_music_deal_msg_2:
+   \   0000BD                ; Setup parameters for call to function music_start_pause
+   \   0000BD   12....       LCALL   music_start_pause
+   \   0000C0   5004         JNC     ??task_music_deal_msg_15
+    601          		{
+    602          			b_msc.pause = 0;            //¸üÐÂÏÔÊ¾×´Ì¬
+   \   0000C2   C2..         CLR     b_msc.1
+    603          #if (DISP_TYPE==DISP_LED)
+    604          			ocx.led_sta = LED_STA_SLOW_GLITTER;
+    605          #endif
+    606          			DBG_MUSIC("play\n");
+    607          			user_set_mute();
+   \   0000C4                ; Setup parameters for call to function user_set_mute
+   \   0000C4   8002         SJMP    ??task_music_deal_msg_16
+    608          		}
+    609          		else
+    610          		{
+    611          			b_msc.pause = 1;
+   \                     ??task_music_deal_msg_15:
+   \   0000C6   D2..         SETB    b_msc.1
+    612          #if (DISP_TYPE==DISP_LED)
+    613          			ocx.led_sta = LED_STA_ON;
+    614          #endif
+    615          			DBG_MUSIC("Pause\n");
+    616          			user_set_mute();
+   \   0000C8                ; Setup parameters for call to function user_set_mute
+   \                     ??task_music_deal_msg_16:
+   \   0000C8   12....       LCALL   user_set_mute
+    617          		}
+    618          #if MUSIC_STOP
+    619          		if(b_msc.stop)
+    620          		{
+    621          			b_msc.stop = 0;
+    622          			u_msc.music_num = 1;
+    623          			b_msc.file_change = 1;
+    624          			shownum(u_msc.music_num);
+    625          		}
+    626          #endif
+    627          		disp.update = 1;
+   \   0000CB   D2..         SETB    disp.0
+   \   0000CD   22           RET
+    628          		break;
+    629          
+    630          #if FAST_FORW_BACKW_EN
+    631          #if 0
+    632          		//¿ì½ø¡¢¿ìÍË
+    633          	case KL_PREV:
+    634          	case KH_PREV:
+    635          #if MUSIC_STOP
+    636          		if(b_msc.stop)
+    637          		{
+    638          			break;
+    639          		}
+    640          #endif
+    641          		DBG_MUSIC("P");
+    642          #if PLAUSE_FAST_FORW_BACKW
+    643          		if(b_msc.pause)
+    644          		{
+    645          			b_msc.pause = 0;
+    646          			msc_ctl.status = STATUS_PLAY_PLAYING;
+    647          		}
+    648          #endif
+    649          		music_fast(MUSIC_FAST_BACKWORD, 3);             //¿ìÍË
+    650          		music_fast_end();                               //¿ìÍËÂíÉÏ½áÊø£¬¾Í¿ÉÒÔ³öÉù
+    651          		break;
+    652          #endif
+    653          
+    654          	case KL_NEXT:
+    655          	case KH_NEXT:
+    656          #if MUSIC_STOP
+    657          		if(b_msc.stop)
+    658          		{
+    659          			break;
+    660          		}
+    661          #endif
+    662          		DBG_MUSIC("N");
+    663          #if PLAUSE_FAST_FORW_BACKW
+    664          		if(b_msc.pause)
+    665          		{
+    666          			b_msc.pause = 0;
+    667          			msc_ctl.status = STATUS_PLAY_PLAYING;
+    668          		}
+    669          #endif
+    670          		music_fast(MUSIC_FAST_FORWORD, 3);              //¿ì½ø
+    671          		music_fast_end();                               //¿ì½øÂíÉÏ½áÊø£¬¾Í¿ÉÒÔ³öÉù
+    672          		break;
+    673          
+    674          	//case KLU_PREV:
+    675          	case KLU_NEXT:
+    676          		DBG_MUSIC("E");
+    677          		music_fast_end();                           //¿ì½ø¿ìÍË½áÊø
+    678          #if PLAUSE_FAST_FORW_BACKW
+    679          		if(!b_dac.mute_en)
+    680          		{
+    681          #if DAC_FADE_EN
+    682          			dac_fade_in(1);
+    683          #endif
+    684          		}
+    685          #endif
+    686          		break;
+    687          #endif
+    688          
+    689          #if MUSIC_EQ
+    690          		//EQ
+    691          	case KU_EQ:
+    692          		user_set_eq(sys_ctl.eq_num + 1);
+    693          		DBG_MUSIC("EQ=%02x\n", sys_ctl.eq_num);
+    694          		showeq();
+    695          		break;
+    696          #endif
+    697          
+    698          #if AB_REPEAT_EN
+    699          		//AB¸´¶Á
+    700          	case KL_EQ:
+    701          #if MUSIC_STOP
+    702          		if(b_msc.stop)
+    703          		{
+    704          			break;
+    705          		}
+    706          #endif
+    707          		if(u_msc.repeat == 0)
+    708          		{
+    709          			task_music_set_a();    //¸üÐÂAµã
+    710          			u_msc.repeat = 1;
+    711          		}
+    712          		else if(u_msc.repeat == 1)
+    713          		{
+    714          			task_music_repeat_play();
+    715          			u_msc.repeat = 2;
+    716          		}
+    717          		else if(u_msc.repeat == 2)
+    718          		{
+    719          			music_get_point(&u_msc.point.pb);
+    720          			music_jump(&u_msc.point.pb);
+    721          			u_msc.repeat = 0;
+    722          		}
+    723          		disp.update = 1;
+    724          		break;
+    725          #endif
+    726          
+    727          #if ENERGY_DISP_EN
+    728          	case KL_PLAYMODE:
+    729          #if MUSIC_STOP
+    730          		if(b_msc.stop)
+    731          		{
+    732          			break;
+    733          		}
+    734          #endif
+    735          		if(!ocx.disp_energy)
+    736          		{
+    737          			energy_start();
+    738          		}
+    739          		else
+    740          		{
+    741          			energy_stop();
+    742          		}
+    743          		break;
+    744          #endif
+    745          
+    746          #if MUSIC_STOP
+    747          	case KU_STOP:
+    748          		if(!b_msc.stop)
+    749          		{
+    750          			music_stop();
+    751          			b_msc.stop = 1;
+    752          		}
+    753          		disp.update = 1;
+    754          #if (DISP_TYPE==DISP_LED)
+    755          		ocx.led_sta = LED_STA_ON;
+    756          #endif
+    757          		break;
+    758          #endif
+    759          
+    760          #if USE_IR_NUM
+    761          	case T_KEY_NUM_0:
+    762          	case T_KEY_NUM_1:
+    763          	case T_KEY_NUM_2:
+    764          	case T_KEY_NUM_3:
+    765          	case T_KEY_NUM_4:
+    766          	case T_KEY_NUM_5:
+    767          	case T_KEY_NUM_6:
+    768          	case T_KEY_NUM_7:
+    769          	case T_KEY_NUM_8:
+    770          	case T_KEY_NUM_9:
+    771          #if MUSIC_STOP
+    772          		if(b_msc.stop)
+    773          		{
+    774          			break;
+    775          		}
+    776          #endif
+    777          		shownumsel(msg - T_KEY_NUM_0);
+    778          		break;
+    779          #endif
+    780          	case KL_MODE:
+    781          		task_ctl.work_sta = TASK_EXIT;
+   \                     ??task_music_deal_msg_7:
+   \   0000CE   75..0C       MOV     task_ctl,#0xc
+   \   0000D1   22           RET
+    782          		break;
+    783          
+    784          #if 0 	// 2015-06-29 Í£ÓÃÉè±¸ÇÐ»»
+    785          	case KL_PREV:
+    786          	 
+    787          #if USE_BREAK_POINT
+    788          		task_music_break_save(1);
+    789          #endif
+    790          #if MUSIC_SWITCH_DEV
+    791          		t_msc.mode++;    //²¥·ÅÄ£Ê½£ºUSB0-USB1-SD0-SD1-ÆäËûÄ£Ê½
+    792          		{
+    793          			u8 tmp;
+    794          			tmp = device_get_actived_num();
+    795          			//printf("tmp:%d\n",tmp);
+    796          		}
+    797          		device_chg |= BIT(device_music);
+    798          		if((t_msc.mode == tmp/*device_get_actived_num()*/) ||(fs_cur_dev()==DEVICE_SDMMC1)|| (!task_music_next_device()))
+    799          		{
+    800          			sd_stop(1);
+    801          			if(device_activate(DEVICE_UDISK))
+    802          			{
+    803          				t_fat.dev_new = DEVICE_UDISK;    //Ä£Ê½ÇÐ»»£¬ÏÂ´Î½øÈëMP3Ä£Ê½Ê±ÏÈ²¥·ÅUÅÌ
+    804          			}
+    805          #if UDISK_DOUBLE_EN
+    806          			else  if(device_activate(DEVICE_UDISK1))
+    807          			{
+    808          				t_fat.dev_new = DEVICE_UDISK1;    //Ä£Ê½ÇÐ»»£¬ÏÂ´Î½øÈëMP3Ä£Ê½Ê±ÏÈ²¥·ÅUÅÌ
+    809          			}
+    810          #endif
+    811          			else  if(device_activate(DEVICE_SDMMC))
+    812          			{
+    813          				t_fat.dev_new = DEVICE_SDMMC;    //Ä£Ê½ÇÐ»»£¬ÏÂ´Î½øÈëMP3Ä£Ê½Ê±ÏÈ²¥·ÅUÅÌ
+    814          			}
+    815          			task_ctl.work_sta = TASK_EXIT;
+    816          		}
+    817          		if(b_dac.mute_en)
+    818          		{
+    819          			//½â³ýMUTE
+    820          			mute_disable();
+    821          		}
+    822          #else
+    823          		task_ctl.work_sta = TASK_EXIT;
+    824          #endif
+    825          
+    826          		break;
+    827          #endif
+    828          
+    829          #if DIR_SWITCH_EN
+    830          	case KU_PREVDIR:
+    831          		task_music_dir(1);
+    832          		break;
+    833          
+    834          	case KU_NEXTDIR:
+    835          		task_music_dir(0);
+    836          		break;
+    837          #endif
+    838          
+    839          		//µ÷ÓÃ¹«¹²ÏûÏ¢º¯Êý
+    840          	default:
+    841          		deal_msg(msg);
+   \                     ??task_music_deal_msg_9:
+   \   0000D2                ; Setup parameters for call to function deal_msg
+   \   0000D2   12....       LCALL   deal_msg
+    842          		break;
+    843          	}
+    844          }
+   \   0000D5   22           RET
+    845          
+    846          /*****************************************************************************
+    847           * Module    : ÒôÀÖÈÎÎñ¶Ïµã¼ÇÒä
+    848           *****************************************************************************/
+    849          #if USE_BREAK_POINT
+    850          //±£´æ¶Ïµã
+    851          #pragma location="TASK_MUSIC_SEG"
+
+   \                                 In segment TASK_MUSIC_SEG, align 1, keep-with-next
+    852          void task_music_break_save(bool flag)
+   \                     task_music_break_save:
+    853          {
+   \   000000   C0..         PUSH    ?V0 + 0
+   \   000002   C0..         PUSH    ?V0 + 1
+   \   000004   C0..         PUSH    ?V0 + 2
+   \   000006   C0..         PUSH    ?V0 + 3
+   \   000008                ; Saved register size: 4
+   \   000008                ; Auto size: 0
+   \   000008   A2F0         MOV     C,B.0
+    854          	if(flag)
+   \   00000A   5013         JNC     ??task_music_break_save_0
+    855          	{
+    856          		music_get_point(&u_msc.break_point);
+   \   00000C                ; Setup parameters for call to function music_get_point
+   \   00000C   7A..         MOV     R2,#((u_msc + 7) & 0xff)
+   \   00000E   7B..         MOV     R3,#(((u_msc + 7) >> 8) & 0xff)
+   \   000010   12....       LCALL   music_get_point
+    857          		u_msc.filename_checksum = music_filename_check();
+   \   000013                ; Setup parameters for call to function music_filename_check
+   \   000013   12....       LCALL   music_filename_check
+   \   000016   90....       MOV     DPTR,#(u_msc + 15)
+   \   000019   EA           MOV     A,R2
+   \   00001A   F0           MOVX    @DPTR,A
+   \   00001B   A3           INC     DPTR
+   \   00001C   EB           MOV     A,R3
+   \   00001D   801E         SJMP    ??task_music_break_save_1
+    858          	}
+    859          	else
+    860          	{
+    861          		u_msc.break_point.pos = 0;
+   \                     ??task_music_break_save_0:
+   \   00001F   90....       MOV     DPTR,#__Constant_0
+   \   000022   78..         MOV     R0,#?V0 + 0
+   \   000024   12....       LCALL   ?L_MOV_C
+   \   000027   90....       MOV     DPTR,#(u_msc + 11)
+   \   00002A   78..         MOV     R0,#?V0 + 0
+   \   00002C   12....       LCALL   ?L_MOV_TO_X
+    862          		u_msc.break_point.frame = 0;
+   \   00002F   90....       MOV     DPTR,#(u_msc + 7)
+   \   000032   78..         MOV     R0,#?V0 + 0
+   \   000034   12....       LCALL   ?L_MOV_TO_X
+    863          		u_msc.filename_checksum = 0;
+   \   000037   90....       MOV     DPTR,#(u_msc + 15)
+   \   00003A   E4           CLR     A
+   \   00003B   F0           MOVX    @DPTR,A
+   \   00003C   A3           INC     DPTR
+   \                     ??task_music_break_save_1:
+   \   00003D   F0           MOVX    @DPTR,A
+    864          	}
+    865          	mem_write_music_break();
+   \   00003E                ; Setup parameters for call to function write_music_break_rtcram
+   \   00003E   12....       LCALL   write_music_break_rtcram
+    866          	printf("save:frame=%08lu pos=%08lu\n",u_msc.break_point.frame,u_msc.break_point.pos);
+   \   000041                ; Setup parameters for call to function my_printf
+   \   000041   90....       MOV     DPTR,#(u_msc + 11)
+   \   000044   78..         MOV     R0,#?V0 + 0
+   \   000046   12....       LCALL   ?L_MOV_X
+   \   000049   78..         MOV     R0,#?V0 + 0
+   \   00004B   12....       LCALL   ?PUSH_ISTACK_I_FOUR
+   \   00004E   90....       MOV     DPTR,#(u_msc + 7)
+   \   000051   78..         MOV     R0,#?V0 + 0
+   \   000053   12....       LCALL   ?L_MOV_X
+   \   000056   78..         MOV     R0,#?V0 + 0
+   \   000058   12....       LCALL   ?PUSH_ISTACK_I_FOUR
+   \   00005B   7A..         MOV     R2,#(`?<Constant "save:frame=%08lu pos=...">` & 0xff)
+   \   00005D   7B..         MOV     R3,#((`?<Constant "save:frame=%08lu pos=...">` >> 8) & 0xff)
+   \   00005F   12....       LCALL   my_printf
+   \   000062   74F8         MOV     A,#-0x8
+   \   000064   12....       LCALL   ?DEALLOC_EXT_STACK8
+    867          	printf("num=%02x checksum=%02x\n", u_msc.music_num,u_msc.filename_checksum);
+   \   000067                ; Setup parameters for call to function my_printf
+   \   000067   90....       MOV     DPTR,#(u_msc + 15)
+   \   00006A   12....       LCALL   ?PUSH_ISTACK_X_TWO
+   \   00006D   90....       MOV     DPTR,#u_msc
+   \   000070   12....       LCALL   ?PUSH_ISTACK_X_TWO
+   \   000073   7A..         MOV     R2,#(`?<Constant "num=%02x checksum=%02x\\n">` & 0xff)
+   \   000075   7B..         MOV     R3,#((`?<Constant "num=%02x checksum=%02x\\n">` >> 8) & 0xff)
+   \   000077   12....       LCALL   my_printf
+   \   00007A   74FC         MOV     A,#-0x4
+   \   00007C   12....       LCALL   ?DEALLOC_EXT_STACK8
+    868          }
+   \   00007F   02....       LJMP    ?Subroutine3
+    869          
+    870          //½øÈëÒôÀÖÈÎÎñÌøÖÁ¶Ïµã²¥·Å
+    871          #pragma location="TASK_MUSIC_SEG"
+
+   \                                 In segment TASK_MUSIC_SEG, align 1, keep-with-next
+    872          void task_music_break_init(void)
+   \                     task_music_break_init:
+    873          {
+   \   000000   C0..         PUSH    ?V0 + 0
+   \   000002   C0..         PUSH    ?V0 + 1
+   \   000004   C0..         PUSH    ?V0 + 2
+   \   000006   C0..         PUSH    ?V0 + 3
+   \   000008                ; Saved register size: 4
+   \   000008                ; Auto size: 0
+    874          #if (SYS_MEM == MEM_RTCRAM)
+    875          	printf("read:frame=%08lu pos=%08lu\n",u_msc.break_point.frame,u_msc.break_point.pos);
+   \   000008                ; Setup parameters for call to function my_printf
+   \   000008   90....       MOV     DPTR,#(u_msc + 11)
+   \   00000B   78..         MOV     R0,#?V0 + 0
+   \   00000D   12....       LCALL   ?L_MOV_X
+   \   000010   78..         MOV     R0,#?V0 + 0
+   \   000012   12....       LCALL   ?PUSH_ISTACK_I_FOUR
+   \   000015   90....       MOV     DPTR,#(u_msc + 7)
+   \   000018   78..         MOV     R0,#?V0 + 0
+   \   00001A   12....       LCALL   ?L_MOV_X
+   \   00001D   78..         MOV     R0,#?V0 + 0
+   \   00001F   12....       LCALL   ?PUSH_ISTACK_I_FOUR
+   \   000022   7A..         MOV     R2,#(`?<Constant "read:frame=%08lu pos=...">` & 0xff)
+   \   000024   7B..         MOV     R3,#((`?<Constant "read:frame=%08lu pos=...">` >> 8) & 0xff)
+   \   000026   12....       LCALL   my_printf
+   \   000029   74F8         MOV     A,#-0x8
+   \   00002B   12....       LCALL   ?DEALLOC_EXT_STACK8
+    876          	music_jump(&u_msc.break_point);         //RTCRAM¿Õ¼ä²»¹»£¬²»±£´æÎÄ¼þÃûÐ£Ñé¸÷
+   \   00002E                ; Setup parameters for call to function music_jump
+   \   00002E   7A..         MOV     R2,#((u_msc + 7) & 0xff)
+   \   000030   7B..         MOV     R3,#(((u_msc + 7) >> 8) & 0xff)
+   \   000032   12....       LCALL   music_jump
+    877          #else
+    878          	if(music_filename_check() == u_msc.filename_checksum)
+    879          	{
+    880          		music_jump(&u_msc.break_point);
+    881          	}
+    882          #endif
+    883          }
+   \   000035   02....       LJMP    ?Subroutine3
+    884          #endif
+    885          
+    886          /*****************************************************************************
+    887           * Module    : ÒôÀÖÈÎÎñAB¸´¶Á
+    888           *****************************************************************************/
+    889          #if AB_REPEAT_EN
+    890          //ÉèÖÃAµã
+    891          #pragma location="TASK_MUSIC_SEG"
+    892          static void task_music_set_a(void)
+    893          {
+    894          	music_get_point(&u_msc.point.pa);
+    895          	music_set_a_point(&u_msc.point.pa);
+    896          	//printf("a fra:%08lu\n",u_msc.point.pa.frame);
+    897          	//printf("a pos:%08lu\n",u_msc.point.pa.pos);
+    898          }
+    899          
+    900          //¿ªÊ¼¸´¶Á
+    901          #pragma location="TASK_MUSIC_SEG"
+    902          static void task_music_repeat_start(u8 repeat_cnt)
+    903          {
+    904          	music_get_point(&u_msc.point.pb);
+    905          	music_jump(&u_msc.point.pa);
+    906          	//printf("b fra:%08lu\n",u_msc.point.pb.frame);
+    907          	//printf("b pos:%08lu\n",u_msc.point.pb.pos);
+    908          	music_repeat(repeat_cnt, &u_msc.point);
+    909          }
+    910          
+    911          //¸´¶Á/²¥·Å
+    912          #pragma location="TASK_MUSIC_SEG"
+    913          static void task_music_repeat_play(void)
+    914          {
+    915          	if(b_msc.pause)
+    916          	{
+    917          		return;
+    918          	}
+    919          	task_music_repeat_start(REPEAT_LOOP);
+    920          }
+    921          #endif
+    922          
+    923          
+    924          /*****************************************************************************
+    925           * Module    : ÒôÀÖÈÎÎñÈë¿Ú
+    926           *****************************************************************************/
+    927          //ÈÎÎñ³õÊ¼»¯
+    928          #pragma location="TASK_MUSIC_SEG"
+    929          static void task_music_enter(void)
+    930          {
+    931          #if TASK_FLASH_EN
+    932          	u_spi.spi_music_flag = 0;
+    933          #endif
+    934          	if(!user_music_enter())
+    935          	{
+    936          		ocx_msgbox("---");
+    937          		task_ctl.work_sta = TASK_EXIT;      //Éè±¸ÎÞÐ§£¬·µ»ØÖ÷²Ëµ¥
+    938          		return;
+    939          	}
+    940          #if DAC_FADE_EN
+    941          	b_dac.sound_en = 1;                     //¶¯Ì¬½µÔë
+    942          	msc_ctl.mscfade_en = 1;
+    943              b_dac.digvol_en = 1;  					//JianRong -2015-06-10
+    944          #else
+    945          	msc_ctl.mscfade_en = 0;
+    946          	b_dac.digvol_en = 1;
+    947          	dac_set_volume_direct(sys_ctl.volume);
+    948          #endif
+    949          	memset(&u_msc, 0, sizeof(u_msc));			//Çå³ýÒôÀÖÎÄ¼þÐÅÏ¢
+    950          
+    951          	//²¥·ÅÐÅÏ¢³õÊ¼»¯
+    952          	b_msc.pause = 0;
+    953          #if MUSIC_STOP
+    954          	b_msc.stop = 0;
+    955          #endif
+    956          	b_msc.file_change = 1;                  //ÐèÒª´ò¿ªÒ»¸öÐÂÎÄ¼þ
+    957          #if USE_BREAK_POINT
+    958          	b_msc.break_init = 1;
+    959          #endif
+    960          #if AB_REPEAT_EN
+    961          	u_msc.repeat = 0;                       //²»´ò¿ªAB¸´¶Á
+    962          #endif
+    963          #if MUSIC_SWITCH_DEV
+    964          	t_msc.mode = 0;                         //ÓÃÀ´ÇÐ»»Ä£Ê½
+    965          #endif
+    966          
+    967          #if REPEAT_AS_ONE
+    968          	b_msc.repeat_as_one_flag = 0;
+    969          #endif
+    970          
+    971          #if (DISP_TYPE==DISP_LED)
+    972          	ocx.led_sta = LED_STA_FAST_GLITTER;
+    973          #endif
+    974          	if(!task_music_scan_file())
+    975          	{
+    976          		if(!task_music_next_device())
+    977          		{
+    978          			//showhello();	// Merlin ÒÆ³ý, ÒòÎª½øÈëÃ¿¸ö TaskÊ±»áÏÔÊ¾¶ÔÓ¦µÄÐÅÏ¢
+    979          			task_ctl.work_sta = TASK_EXIT;  //Éè±¸ÎÞÐ§£¬·µ»ØÖ÷²Ëµ¥
+    980          			return;
+    981          		}
+    982          	}
+    983          
+    984          	mem_read_music_num();                //´ò¿ªµÄÎÄ¼þ±àºÅ
+    985          
+    986          #if MUSIC_STOP
+    987          	if(b_msc.stop)
+    988          	{
+    989          		b_msc.stop = 0;
+    990          		u_msc.music_num = 1;
+    991          #if USE_BREAK_POINT
+    992          		b_msc.break_init = 0;               //stopÄ£Ê½ºó£¬´ÓµÚÒ»Ê×¸èÁã·ÖÁãÃë¿ªÊ¼²¥·Å
+    993          #endif
+    994          	}
+    995          #endif
+    996          
+    997          #if (DISP_TYPE==DISP_LED)
+    998          	ocx.led_sta = LED_STA_SLOW_GLITTER;
+    999          #endif
+   1000          	//shownum(u_msc.music_num);               //ÏÔÊ¾µ±Ç°ÇúÄ¿
+   1001          	ocx_show_device();
+   1002          
+   1003          #if DACR_ONLY
+   1004          #ifdef AX207X_TAG
+   1005          	dac_channel_disconnect();
+   1006          #endif
+   1007          #endif
+   1008          
+   1009          #if KARAOKE_EN
+   1010          	b_sys.karaoke_flag = 0;
+   1011          
+   1012          	if(device_is_actived(DEVICE_MIC))
+   1013          	{
+   1014          		mic_enable();
+   1015          		b_sys.karaoke_flag = 1;
+   1016          		b_dac.sound_en = 0;                //ÔÚMIC´ò¿ªÊ±²»¿ª¶¯Ì¬½µÔë
+   1017          		msc_ctl.mscfade_en = 0;            //ÒôÀÖ²¥·ÅÄ£Ê½µÄÇÐ»»²»ÐèÒªµ­Èëµ­³ö
+   1018          	}
+   1019          #endif
+   1020          
+   1021          	mute_disable();
+   1022          	sound_ctl_init(10, 0x20, 100, 0x1a);
+   1023          #if ENERGY_DISP_EN
+   1024          	energy_init();
+   1025          #endif
+   1026          #if (MUSIC_PLAYMODE && (PLAYMODE_NUM == PLAYMODE_FOUR))
+   1027          	rand_init(12345 ^ TMR2CNTL);
+   1028          #endif
+   1029          }
+   1030          
+   1031          //ÈÎÎñÍË³ö
+   1032          #pragma location="TASK_MUSIC_SEG"
+   1033          static void task_music_exit(void)
+   1034          {
+   1035          #if USE_BREAK_POINT
+   1036          	if(task_ctl.work_sta != TASK_EXIT)
+   1037          	{
+   1038          		task_music_break_save(1);
+   1039          	}
+   1040          #endif
+   1041          #if ENERGY_DISP_EN
+   1042          	energy_stop();
+   1043          #endif
+   1044          	msc_ctl.mscfade_en = 1;             //ÍË³öÒôÀÖÄ£Ê½Ê±µ­³ö£¬±ØÐë·ÅÔÚmusic_stopÖ®Ç°
+   1045          	music_stop();
+   1046          	delay_5ms(20);
+   1047          
+   1048          #if (SYS_MEM != MEM_DEVICE)
+   1049          	if(device_is_online(DEVICE_UDISK))
+   1050          	{
+   1051          		usb_host_suspend();
+   1052          	}
+   1053          #endif
+   1054          
+   1055          #if (USE_I2C_SD_MUX || FM_CLK_IO_MUX_SDCLK)
+   1056          	if(device_is_online(DEVICE_SDMMC))
+   1057          	{
+   1058          		set_sd_idle_state();           //ÍË³öMP3ºó¿¨½øÈëIDLEÄ£Ê½£¬·ÀÖ¹SD¿¨ÔÚÏßÓ°ÏìIIC
+   1059          	}
+   1060          #endif
+   1061          
+   1062          	b_dac.sound_en = 0;
+   1063          #if DAC_FADE_EN
+   1064          	dac_fade_out();
+   1065          	dac_fade_wait();
+   1066          #endif
+   1067          	mute_enable();
+   1068          
+   1069          #if WAV_SUPPORT
+   1070          	set_sys_clk(SYS_24M);              //WAV²¥·ÅÊ±ÍË³öMP3Ä£Ê½ÇÐ»Ø24MHz
+   1071          #endif
+   1072          
+   1073          #if KARAOKE_EN
+   1074          	if(device_is_actived(DEVICE_MIC))
+   1075          	{
+   1076          		mic_disable();
+   1077          	}
+   1078          #endif
+   1079          }
+   1080          
+   1081          //ÈÎÎñÖ÷Á÷³Ì
+   1082          #pragma location="TASK_MUSIC_SEG"
+
+   \                                 In segment TASK_MUSIC_SEG, align 1, keep-with-next
+   1083          void task_music(void)
+   \                     task_music:
+   1084          {
+   \   000000   C0..         PUSH    ?V0 + 0
+   \   000002   C0..         PUSH    ?V0 + 1
+   \   000004   C0..         PUSH    ?V0 + 2
+   \   000006   C0..         PUSH    ?V0 + 3
+   \   000008                ; Saved register size: 4
+   \   000008                ; Auto size: 0
+   1085          	printf("task_music\n");
+   \   000008                ; Setup parameters for call to function my_printf
+   \   000008   7A..         MOV     R2,#(`?<Constant "task_music\\n">` & 0xff)
+   \   00000A   7B..         MOV     R3,#((`?<Constant "task_music\\n">` >> 8) & 0xff)
+   \   00000C   12....       LCALL   my_printf
+   1086          	task_music_enter();
+   \   00000F   E4           CLR     A
+   \   000010   90....       MOV     DPTR,#u_spi
+   \   000013   F0           MOVX    @DPTR,A
+   \   000014                ; Setup parameters for call to function user_music_enter
+   \   000014   12....       LCALL   user_music_enter
+   \   000017   4009         JC      ??task_music_0
+   \   000019                ; Setup parameters for call to function ocx_msgbox
+   \   000019   7A..         MOV     R2,#(`?<Constant "---">` & 0xff)
+   \   00001B   7B..         MOV     R3,#((`?<Constant "---">` >> 8) & 0xff)
+   \   00001D   12....       LCALL   ocx_msgbox
+   \   000020   802B         SJMP    ??task_music_1
+   \                     ??task_music_0:
+   \   000022   D2..         SETB    b_dac.4
+   \   000024   7401         MOV     A,#0x1
+   \   000026   90....       MOV     DPTR,#(msc_ctl + 26)
+   \   000029   F0           MOVX    @DPTR,A
+   \   00002A   D2..         SETB    b_dac.3
+   \   00002C                ; Setup parameters for call to function my_memset
+   \   00002C   7C15         MOV     R4,#0x15
+   \   00002E   7D00         MOV     R5,#0x0
+   \   000030   7900         MOV     R1,#0x0
+   \   000032   7A..         MOV     R2,#(u_msc & 0xff)
+   \   000034   7B..         MOV     R3,#((u_msc >> 8) & 0xff)
+   \   000036   12....       LCALL   my_memset
+   \   000039   C2..         CLR     b_msc.1
+   \   00003B   43..09       ORL     b_msc,#0x9
+   \   00003E   E4           CLR     A
+   \   00003F   90....       MOV     DPTR,#t_msc
+   \   000042   F0           MOVX    @DPTR,A
+   \   000043                ; Setup parameters for call to function task_music_scan_file
+   \   000043   12....       LCALL   ??task_music_scan_file
+   \   000046   400A         JC      ??task_music_2
+   \   000048                ; Setup parameters for call to function task_music_next_device
+   \   000048   12....       LCALL   task_music_next_device
+   \   00004B   4005         JC      ??task_music_2
+   \                     ??task_music_1:
+   \   00004D   75..0C       MOV     task_ctl,#0xc
+   \   000050   8051         SJMP    ??task_music_3
+   \                     ??task_music_2:
+   \   000052                ; Setup parameters for call to function mem_read_music_num
+   \   000052   12....       LCALL   mem_read_music_num
+   \   000055                ; Setup parameters for call to function ocx_show_device
+   \   000055   12....       LCALL   ocx_show_device
+   \   000058                ; Setup parameters for call to function mute_disable
+   \   000058   12....       LCALL   mute_disable
+   \   00005B                ; Setup parameters for call to function sound_ctl_init
+   \   00005B   90....       MOV     DPTR,#__Constant_1a
+   \   00005E   78..         MOV     R0,#?V0 + 0
+   \   000060   12....       LCALL   ?L_MOV_C
+   \   000063   78..         MOV     R0,#?V0 + 0
+   \   000065   12....       LCALL   ?PUSH_ISTACK_I_FOUR
+   \   000068   7464         MOV     A,#0x64
+   \   00006A   C0E0         PUSH    A
+   \   00006C   90....       MOV     DPTR,#__Constant_20
+   \   00006F   78..         MOV     R0,#?V0 + 0
+   \   000071   12....       LCALL   ?L_MOV_C
+   \   000074   AA..         MOV     R2,?V0 + 0
+   \   000076   AB..         MOV     R3,?V0 + 1
+   \   000078   AC..         MOV     R4,?V0 + 2
+   \   00007A   AD..         MOV     R5,?V0 + 3
+   \   00007C   790A         MOV     R1,#0xa
+   \   00007E   12....       LCALL   sound_ctl_init
+   \   000081   74FB         MOV     A,#-0x5
+   \   000083   12....       LCALL   ?DEALLOC_EXT_STACK8
+   \   000086   800C         SJMP    ??task_music_4
+   1087          	while(task_ctl.work_sta == TASK_MUSIC)
+   1088          	{
+   1089          		task_music_event();
+   \                     ??task_music_5:
+   \   000088                ; Setup parameters for call to function task_music_event
+   \   000088   12....       LCALL   ??task_music_event
+   1090          		task_music_deal_msg(get_msg());
+   \   00008B                ; Setup parameters for call to function task_music_deal_msg
+   \   00008B                ; Setup parameters for call to function get_msg
+   \   00008B   12....       LCALL   get_msg
+   \   00008E   12....       LCALL   ??task_music_deal_msg
+   1091          		task_music_display();
+   \   000091                ; Setup parameters for call to function task_music_display
+   \   000091   12....       LCALL   task_music_display
+   1092          	}
+   \                     ??task_music_4:
+   \   000094   E5..         MOV     A,task_ctl
+   \   000096   60F0         JZ      ??task_music_5
+   1093          	task_music_exit();
+   \   000098   740C         MOV     A,#0xc
+   \   00009A   65..         XRL     A,task_ctl
+   \   00009C   6005         JZ      ??task_music_3
+   \   00009E                ; Setup parameters for call to function task_music_break_save
+   \   00009E   D2F0         SETB    B.0
+   \   0000A0   12....       LCALL   task_music_break_save
+   \                     ??task_music_3:
+   \   0000A3   7401         MOV     A,#0x1
+   \   0000A5   90....       MOV     DPTR,#(msc_ctl + 26)
+   \   0000A8   F0           MOVX    @DPTR,A
+   \   0000A9                ; Setup parameters for call to function music_stop
+   \   0000A9   12....       LCALL   music_stop
+   \   0000AC                ; Setup parameters for call to function delay_5ms
+   \   0000AC   7914         MOV     R1,#0x14
+   \   0000AE   12....       LCALL   delay_5ms
+   \   0000B1                ; Setup parameters for call to function device_is_online
+   \   0000B1   7902         MOV     R1,#0x2
+   \   0000B3   12....       LCALL   device_is_online
+   \   0000B6   5003         JNC     ??task_music_6
+   \   0000B8                ; Setup parameters for call to function usb_host_suspend
+   \   0000B8   12....       LCALL   usb_host_suspend
+   \                     ??task_music_6:
+   \   0000BB                ; Setup parameters for call to function device_is_online
+   \   0000BB   7900         MOV     R1,#0x0
+   \   0000BD   12....       LCALL   device_is_online
+   \   0000C0   5003         JNC     ??task_music_7
+   \   0000C2                ; Setup parameters for call to function set_sd_idle_state
+   \   0000C2   12....       LCALL   set_sd_idle_state
+   \                     ??task_music_7:
+   \   0000C5   C2..         CLR     b_dac.4
+   \   0000C7                ; Setup parameters for call to function dac_fade_out
+   \   0000C7   12....       LCALL   dac_fade_out
+   \   0000CA                ; Setup parameters for call to function dac_fade_wait
+   \   0000CA   12....       LCALL   dac_fade_wait
+   \   0000CD                ; Setup parameters for call to function mute_enable
+   \   0000CD   12....       LCALL   mute_enable
+   \   0000D0                ; Setup parameters for call to function set_sys_clk
+   \   0000D0   7900         MOV     R1,#0x0
+   \   0000D2   12....       LCALL   set_sys_clk
+   1094          }
+   \   0000D5                REQUIRE ?Subroutine3
+   \   0000D5                ; // Fall through to label ?Subroutine3
+
+   \                                 In segment CODE_C, align 1
+   \                     `?<Constant "remount%d,%d\\n">`:
+   \   000000   72656D6F     DB "remount%d,%d\012"
+   \            756E7425
+   \            642C2564
+   \            0A00    
+
+   \                                 In segment CODE_C, align 1
+   \                     `?<Constant "music_play[%d][%d]\\n">`:
+   \   000000   6D757369     DB "music_play[%d][%d]\012"
+   \            635F706C
+   \            61795B25
+   \            645D5B25
+   \            645D0A00
+
+   \                                 In segment CODE_C, align 1
+   \                     `?<Constant "##hello##">`:
+   \   000000   23236865     DB "##hello##"
+   \            6C6C6F23
+   \            2300    
+
+   \                                 In segment CODE_C, align 1
+   \                     `?<Constant "save:frame=%08lu pos=...">`:
+   \   000000   73617665     DB "save:frame=%08lu pos=%08lu\012"
+   \            3A667261
+   \            6D653D25
+   \            30386C75
+   \            20706F73
+   \            3D253038
+   \            6C750A00
+
+   \                                 In segment CODE_C, align 1
+   \                     `?<Constant "num=%02x checksum=%02x\\n">`:
+   \   000000   6E756D3D     DB "num=%02x checksum=%02x\012"
+   \            25303278
+   \            20636865
+   \            636B7375
+   \            6D3D2530
+   \            32780A00
+
+   \                                 In segment CODE_C, align 1
+   \                     `?<Constant "read:frame=%08lu pos=...">`:
+   \   000000   72656164     DB "read:frame=%08lu pos=%08lu\012"
+   \            3A667261
+   \            6D653D25
+   \            30386C75
+   \            20706F73
+   \            3D253038
+   \            6C750A00
+
+   \                                 In segment CODE_C, align 1
+   \                     `?<Constant "---">`:
+   \   000000   2D2D2D00     DB "---"
+
+   \                                 In segment CODE_C, align 1
+   \                     `?<Constant "task_music\\n">`:
+   \   000000   7461736B     DB "task_music\012"
+   \            5F6D7573
+   \            69630A00
+
+   \                                 In segment CODE_C, align 1
+   \                     __Constant_a:
+   \   000000   0A000000     DD 10
+
+   \                                 In segment CODE_C, align 1
+   \                     __Constant_3c:
+   \   000000   3C000000     DD 60
+
+   \                                 In segment CODE_C, align 1
+   \                     __Constant_5:
+   \   000000   05000000     DD 5
+
+   \                                 In segment CODE_C, align 1
+   \                     __Constant_0:
+   \   000000   00000000     DD 0
+
+   \                                 In segment CODE_C, align 1
+   \                     __Constant_1a:
+   \   000000   1A000000     DD 26
+
+   \                                 In segment CODE_C, align 1
+   \                     __Constant_20:
+   \   000000   20000000     DD 32
+   1095          
+
+   Maximum stack usage in bytes:
+
+     Function                       EXT_STACK PSTACK XSTACK
+     --------                       --------- ------ ------
+     task_music                            9      0      0
+       -> my_printf                        8      0      0
+       -> user_music_enter                 8      0      0
+       -> ocx_msgbox                       8      0      0
+       -> my_memset                        8      0      0
+       -> task_music_scan_file             8      0      0
+       -> task_music_next_device           8      0      0
+       -> mem_read_music_num               8      0      0
+       -> ocx_show_device                  8      0      0
+       -> mute_disable                     8      0      0
+       -> sound_ctl_init                  18      0      0
+       -> task_music_event                 8      0      0
+       -> get_msg                          8      0      0
+       -> task_music_deal_msg              8      0      0
+       -> task_music_display               8      0      0
+       -> task_music_break_save            8      0      0
+       -> music_stop                       8      0      0
+       -> delay_5ms                        8      0      0
+       -> device_is_online                 8      0      0
+       -> usb_host_suspend                 8      0      0
+       -> device_is_online                 8      0      0
+       -> set_sd_idle_state                8      0      0
+       -> dac_fade_out                     8      0      0
+       -> dac_fade_wait                    8      0      0
+       -> mute_enable                      8      0      0
+       -> set_sys_clk                      8      0      0
+     task_music_break_init                23      0      0
+       -> my_printf                       24      0      0
+       -> music_jump                       8      0      0
+     task_music_break_save                23      0      0
+       -> music_get_point                  8      0      0
+       -> music_filename_check             8      0      0
+       -> write_music_break_rtcram         8      0      0
+       -> my_printf                       24      0      0
+       -> my_printf                       16      0      0
+     task_music_cal_time                  26      0      0
+       -> music_get_mtime                 30      0      0
+     task_music_deal_msg                   4      0      0
+       -> irtc_write_ram                   0      0      0
+       -> ocx_show_playmode                0      0      0
+       -> task_music_direct                0      0      0
+       -> irtc_write_ram                   0      0      0
+       -> irtc_write_ram                   0      0      0
+       -> irtc_write_ram                   0      0      0
+       -> my_printf                        0      0      0
+       -> user_set_volume                  0      0      0
+       -> deal_vol_msg                     0      0      0
+       -> task_music_direct                0      0      0
+       -> user_set_volume                  0      0      0
+       -> deal_vol_msg                     0      0      0
+       -> task_music_direct                0      0      0
+       -> music_start_pause                0      0      0
+       -> user_set_mute                    0      0      0
+       -> user_set_mute                    0      0      0
+       -> deal_msg                         0      0      0
+     task_music_direct                    16      0      0
+       -> loop_auto                       10      0      0
+     task_music_event                     15      0      0
+       -> comm_event                      22      0      0
+       -> music_event                     22      0      0
+       -> fs_cur_dev                      22      0      0
+       -> device_is_actived               22      0      0
+       -> music_stop                      22      0      0
+       -> task_music_break_save           22      0      0
+       -> device_change                   22      0      0
+       -> music_stop                      22      0      0
+       -> fs_cur_dev                      22      0      0
+       -> fs_cur_dev                      22      0      0
+       -> sd_stop                         22      0      0
+       -> task_music_remount_device       22      0      0
+       -> task_music_next_device          22      0      0
+       -> fs_cur_dev                      22      0      0
+       -> mute_disable                    22      0      0
+       -> fs_cur_dev                      22      0      0
+       -> mem_read_music_num              22      0      0
+       -> user_set_mute                   22      0      0
+       -> dac_fade_in                     22      0      0
+       -> read_music_break_rtcram         22      0      0
+       -> task_music_new                  22      0      0
+       -> mem_write_file_change           22      0      0
+       -> ocx_show_device                 22      0      0
+       -> task_music_break_init           22      0      0
+       -> task_music_cal_time             22      0      0
+       -> music_get_status                22      0      0
+       -> fs_cur_dev                      22      0      0
+       -> device_is_actived               22      0      0
+       -> music_get_mtime                 22      0      0
+       -> task_music_direct               22      0      0
+       -> task_music_direct               22      0      0
+       -> music_stop                      22      0      0
+     task_music_new                       22      0      0
+       -> set_sys_clk                     14      0      0
+       -> fs_cur_dev                      14      0      0
+       -> my_printf                       22      0      0
+       -> dac_fade_in                     14      0      0
+       -> music_play                      14      0      0
+       -> fs_cur_dev                      14      0      0
+       -> device_is_actived               14      0      0
+       -> music_stop                      14      0      0
+       -> sound_ctl_clr                   14      0      0
+       -> f_open_speed                    14      0      0
+       -> fs_is_mounted                   14      0      0
+       -> music_init                      14      0      0
+       -> set_sys_clk                     14      0      0
+       -> task_music_direct               14      0      0
+       -> task_music_direct               14      0      0
+     task_music_next_device               11      0      0
+       -> device_switch                    0      0      0
+       -> task_music_remount_device        0      0      0
+       -> fs_cur_dev                       0      0      0
+       -> mem_read_music_num               0      0      0
+     task_music_remount_device            15      0      0
+       -> device_is_actived                0      0      0
+       -> fs_cur_dev                       4      0      0
+       -> my_printf                        8      0      0
+     task_music_scan_file                  4      0      0
+       -> f_scan_set                       0      0      0
+       -> f_gettotal_speed                 0      0      0
+
+
+   Segment part sizes:
+
+     Function/Label                 Bytes
+     --------------                 -----
+     P0                                1
+     t_msc                             2
+     task_music_scan_file             44
+     task_music_remount_device        43
+     ?Subroutine2                      5
+     task_music_next_device           19
+     ?Subroutine0                     13
+     task_music_direct                72
+     ?Subroutine3                      9
+     task_music_cal_time              90
+     task_music_new                  184
+     ?Subroutine1                      7
+     task_music_event                258
+     task_music_deal_msg             214
+     task_music_break_save           130
+     task_music_break_init            56
+     task_music                      213
+     ?<Constant "remount%d,%d\n">     14
+     ?<Constant "music_play[%d][%d]\n">
+                                      20
+     ?<Constant "##hello##">          10
+     ?<Constant "save:frame=%08lu pos=...">
+                                      28
+     ?<Constant "num=%02x checksum=%02x\n">
+                                      24
+     ?<Constant "read:frame=%08lu pos=...">
+                                      28
+     ?<Constant "---">                 4
+     ?<Constant "task_music\n">       12
+     __Constant_a                      4
+     __Constant_3c                     4
+     __Constant_5                      4
+     __Constant_0                      4
+     __Constant_1a                     4
+     __Constant_20                     4
+
+ 
+   164 bytes in segment CODE_C
+     1 byte  in segment SFR_AN
+ 1 357 bytes in segment TASK_MUSIC_SEG
+     2 bytes in segment XDATA_Z
+ 
+ 1 497 bytes of CODE  memory (+ 24 bytes shared)
+     0 bytes of DATA  memory (+  1 byte  shared)
+     2 bytes of XDATA memory
+
+Errors: none
+Warnings: 1

@@ -1,0 +1,390 @@
+##############################################################################
+#                                                                            #
+# IAR 8051 C/C++ Compiler V7.20H/W32                   10/Sep/2015  19:03:30 #
+# Copyright 2004-2006 IAR Systems. All rights reserved.                      #
+#                                                                            #
+#    Core               =  plain                                             #
+#    Code model         =  near                                              #
+#    Data model         =  large                                             #
+#    Calling convention =  extended stack reentrant                          #
+#    Constant location  =  code                                              #
+#    Extended stack     =  enabled                                           #
+#    Dptr setup         =  1,16                                              #
+#    Source file        =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\user\user_fat.c                       #
+#    Command line       =  -I "C:\Program Files\IAR Systems\Embedded         #
+#                          Workbench 4.05 Evaluation version\8051\INC\" -I   #
+#                          "C:\Program Files\IAR Systems\Embedded Workbench  #
+#                          4.05 Evaluation version\8051\INC\CLIB\" -I        #
+#                          "C:\Documents and Settings\Administrator\×ÀÃæ\lil #
+#                          y\15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX1 #
+#                          070_20150908\COMMON\" -I "C:\Documents and        #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\INC\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\config\" -I "C:\Documents and    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\api\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\fm\" -I "C:\Documents and        #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\fat\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\display\" -I "C:\Documents and   #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\displ #
+#                          ay\led\" -I "C:\Documents and                     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\displ #
+#                          ay\lcd\" -I "C:\Documents and                     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\task\ #
+#                          " -I "C:\Documents and Settings\Administrator\×ÀÃ #
+#                          æ\lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lil #
+#                          y_AX1070_20150908\user\" -I "C:\Documents and     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\mem\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\module\" -I "C:\Documents and    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\modul #
+#                          e\kedir\" -I "C:\Documents and                    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\key\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\startmusic\" -D UART_DEBUG -D    #
+#                          AX207X_TAG -lC "C:\Documents and                  #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\UART_ #
+#                          Debug\List\" -o "C:\Documents and                 #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\UART_ #
+#                          Debug\Obj\" -e -z9 --debug --core=plain           #
+#                          --dptr=16,1 --data_model=large --code_model=near  #
+#                          --calling_convention=ext_stack_reentrant          #
+#                          --place_constants=code --nr_virtual_regs 20       #
+#                          --extended_stack "C:\Documents and                #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\user\ #
+#                          user_fat.c"                                       #
+#    List file          =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\UART_Debug\List\user_fat.lst          #
+#    Object file        =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\UART_Debug\Obj\user_fat.r51           #
+#                                                                            #
+#                                                                            #
+##############################################################################
+
+C:\Documents and Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX1070_20150908\user\user_fat.c
+      1          /*****************************************************************************
+      2           * Module    : user
+      3           * File      : user_fat.c
+      4           * Author    : Hanny
+      5           * Email     : coldney@yahoo.com.cn
+      6           * Function  : ÎÄ¼þÏµÍ³½Ó¿Ú£¬¿ÉÒÔÔö¼Ó¶Á½Ó¿ÚµÄ¼ÓÃÜËã·¨µÈ
+      7           *****************************************************************************/
+      8          #include "include.h"
+      9          #define XorValue	0x63		// Ê¹ÓÃ´ËÖµ½øÐÐXORÔËËã
+     10          
+     11          //ÒôÀÖÎÄ¼þ¶Á½Ó¿Ú
+
+   \                                 In segment NEAR_CODE, align 1, keep-with-next
+     12          bool music_decoder_read(void *buf)
+   \                     music_decoder_read:
+     13          {
+   \   000000   7404         MOV     A,#0x4
+   \   000002   12....       LCALL   ?FUNC_ENTER_SP
+   \   000005                ; Saved register size: 7
+   \   000005                ; Auto size: 0
+   \   000005   EA           MOV     A,R2
+   \   000006   FE           MOV     R6,A
+   \   000007   EB           MOV     A,R3
+   \   000008   FF           MOV     R7,A
+     14          	u8 fr_sta;
+     15          
+     16          
+     17          	fr_sta = f_read(buf);
+   \   000009                ; Setup parameters for call to function f_read
+   \   000009   12....       LCALL   f_read
+   \   00000C   E9           MOV     A,R1
+   \   00000D   FA           MOV     R2,A
+     18          #if MPX_SUPPORT
+     19          	if(f_Encrypt)
+   \   00000E   90....       MOV     DPTR,#f_Encrypt
+   \   000011   E0           MOVX    A,@DPTR
+   \   000012   601B         JZ      ??music_decoder_read_0
+     20          	{
+     21          		u8 *buffer;
+     22          		register u16 i;
+     23          		i = 0;
+     24          		buffer = (u8 *) buf;
+   \   000014   8E82         MOV     DPL,R6
+   \   000016   8F83         MOV     DPH,R7
+   \   000018   7800         MOV     R0,#0x0
+   \   00001A   7902         MOV     R1,#0x2
+     25          		do
+     26          		{
+     27          			*buffer = *buffer ^ XorValue;
+   \                     ??music_decoder_read_1:
+   \   00001C   E0           MOVX    A,@DPTR
+   \   00001D   6463         XRL     A,#0x63
+   \   00001F   F0           MOVX    @DPTR,A
+     28          			buffer++;
+   \   000020   A3           INC     DPTR
+     29          			i++;
+     30          		} while(i < 512);
+   \   000021   E8           MOV     A,R0
+   \   000022   24FF         ADD     A,#-0x1
+   \   000024   18           DEC     R0
+   \   000025   E9           MOV     A,R1
+   \   000026   34FF         ADDC    A,#-0x1
+   \   000028   F9           MOV     R1,A
+   \   000029   E8           MOV     A,R0
+   \   00002A   7001         JNZ     ??music_decoder_read_2
+   \   00002C   E9           MOV     A,R1
+   \                     ??music_decoder_read_2:
+   \   00002D   70ED         JNZ     ??music_decoder_read_1
+     31          	}
+     32          #endif
+     33          	if(FR_OK != fr_sta)
+   \                     ??music_decoder_read_0:
+   \   00002F   EA           MOV     A,R2
+   \   000030   6032         JZ      ??music_decoder_read_3
+     34          	{
+     35          #if WAV_SUPPORT
+     36          		if((FR_RW_ERROR == fr_sta) && (TYPE_WAV == msc_ctl.type))
+   \   000032   7408         MOV     A,#0x8
+   \   000034   6A           XRL     A,R2
+   \   000035   7010         JNZ     ??music_decoder_read_4
+   \   000037   90....       MOV     DPTR,#msc_ctl
+   \   00003A   E0           MOVX    A,@DPTR
+   \   00003B   6402         XRL     A,#0x2
+   \   00003D   7008         JNZ     ??music_decoder_read_4
+     37          		{
+     38          			IE_SINT = 0;
+   \   00003F   C2A8         CLR     0xa8.0
+     39          			msc_ctl.status = STATUS_PLAY_STOPPING;
+   \   000041   7401         MOV     A,#0x1
+   \   000043   90....       MOV     DPTR,#(msc_ctl + 1)
+   \   000046   F0           MOVX    @DPTR,A
+     40          		}
+     41          #endif
+     42          #if REPEAT_AS_ONE
+     43          		if((FR_END_FILE == fr_sta))
+     44          		{
+     45          			m_f_lseek(F_SEEK_ORG, 2);
+     46          			//f_read(buf);
+     47          			//printf("567");
+     48          			return true;
+     49          		}
+     50          		else
+     51          			return false;
+     52          #else
+     53          		if(sys_ctl.mode_play == ITEM_LOOP_SINGLE)
+   \                     ??music_decoder_read_4:
+   \   000047   90....       MOV     DPTR,#sys_ctl
+   \   00004A   E0           MOVX    A,@DPTR
+   \   00004B   6402         XRL     A,#0x2
+   \   00004D   701B         JNZ     ??music_decoder_read_5
+     54          		{
+     55          			m_f_lseek(F_SEEK_ORG, 2);
+   \   00004F                ; Setup parameters for call to function m_f_lseek
+   \   00004F   90....       MOV     DPTR,#__Constant_2
+   \   000052   78..         MOV     R0,#?V0 + 0
+   \   000054   12....       LCALL   ?L_MOV_C
+   \   000057   AA..         MOV     R2,?V0 + 0
+   \   000059   AB..         MOV     R3,?V0 + 1
+   \   00005B   AC..         MOV     R4,?V0 + 2
+   \   00005D   AD..         MOV     R5,?V0 + 3
+   \   00005F   7900         MOV     R1,#0x0
+   \   000061   12....       LCALL   m_f_lseek
+     56          			//f_read(buf);
+     57          			//printf("567");
+     58          			return true;
+     59          		}
+     60          		else
+     61          			return false;
+     62          #endif
+     63          	}
+     64          	return true;
+   \                     ??music_decoder_read_3:
+   \   000064   D3           SETB    C
+   \                     ??music_decoder_read_6:
+   \   000065   7F04         MOV     R7,#0x4
+   \   000067   02....       LJMP    ?FUNC_LEAVE_SP
+   \                     ??music_decoder_read_5:
+   \   00006A   C3           CLR     C
+   \   00006B   80F8         SJMP    ??music_decoder_read_6
+     65          }
+     66          
+     67          //ÒôÀÖÎÄ¼þ¶Á½Ó¿Ú
+
+   \                                 In segment NEAR_CODE, align 1, keep-with-next
+     68          bool decoder_read(void *buf)
+   \                     decoder_read:
+     69          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     70          //	printf("buf = %04x\n",buf);
+     71          #if PLAY_STARTMUSIC
+     72          	if(startmusic_ctl.flag)
+     73          	{
+     74          		return startmusic_read(buf);
+     75          	}
+     76          	else
+     77          #endif
+     78          
+     79          #if TASK_FLASH_EN
+     80          		if(u_spi.spi_music_flag)
+   \   000000   90....       MOV     DPTR,#u_spi
+   \   000003   E0           MOVX    A,@DPTR
+   \   000004   6004         JZ      ??decoder_read_0
+     81          		{
+     82          			return spi_mp3flash_read(buf);
+   \   000006                ; Setup parameters for call to function spi_mp3flash_read
+   \   000006   12....       LCALL   spi_mp3flash_read
+   \   000009   22           RET
+     83          		}
+     84          		else
+     85          #endif
+     86          		{
+     87          			return music_decoder_read(buf);
+   \                     ??decoder_read_0:
+   \   00000A                ; Setup parameters for call to function music_decoder_read
+   \   00000A   12....       LCALL   music_decoder_read
+   \   00000D   22           RET
+     88          		}
+     89          }
+     90          
+     91          //ÒôÀÖÎÄ¼þSeek½Ó¿Ú
+
+   \                                 In segment NEAR_CODE, align 1, keep-with-next
+     92          bool decoder_seek(u8 mode, u32 offset)
+   \                     decoder_seek:
+     93          {
+   \   000000   C0..         PUSH    ?V0 + 0
+   \   000002   C0..         PUSH    ?V0 + 1
+   \   000004   C0..         PUSH    ?V0 + 2
+   \   000006   C0..         PUSH    ?V0 + 3
+   \   000008                ; Saved register size: 4
+   \   000008                ; Auto size: 0
+     94          #if PLAY_STARTMUSIC
+     95          	if(startmusic_ctl.flag)
+     96          	{
+     97          		return startmusic_seek();
+     98          	}
+     99          	else
+    100          #endif
+    101          
+    102          #if TASK_FLASH_EN
+    103          		if(u_spi.spi_music_flag)
+   \   000008   90....       MOV     DPTR,#u_spi
+   \   00000B   E0           MOVX    A,@DPTR
+   \   00000C   6005         JZ      ??decoder_seek_0
+    104          		{
+    105          			return spi_mp3flash_seek(mode, offset);
+   \   00000E                ; Setup parameters for call to function spi_mp3flash_seek
+   \   00000E   12....       LCALL   spi_mp3flash_seek
+   \   000011   800E         SJMP    ??decoder_seek_1
+    106          		}
+    107          		else
+    108          #endif
+    109          		{
+    110          			return m_f_lseek((SEEK_MODE)mode, offset);
+   \                     ??decoder_seek_0:
+   \   000013                ; Setup parameters for call to function m_f_lseek
+   \   000013   12....       LCALL   m_f_lseek
+   \   000016   E9           MOV     A,R1
+   \   000017   6004         JZ      ??decoder_seek_2
+   \   000019   D2F0         SETB    B.0
+   \   00001B   8002         SJMP    ??decoder_seek_3
+   \                     ??decoder_seek_2:
+   \   00001D   C2F0         CLR     B.0
+   \                     ??decoder_seek_3:
+   \   00001F   A2F0         MOV     C,B.0
+   \                     ??decoder_seek_1:
+   \   000021   D0..         POP     ?V0 + 3
+   \   000023   D0..         POP     ?V0 + 2
+   \   000025   D0..         POP     ?V0 + 1
+   \   000027   D0..         POP     ?V0 + 0
+   \   000029   22           RET
+    111          		}
+    112          }
+    113          
+    114          
+    115          #pragma location="FS_SCAN_SEG"
+
+   \                                 In segment FS_SCAN_SEG, align 1, keep-with-next
+    116          FRESULT fs_scan_files(void)
+   \                     fs_scan_files:
+    117          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    118          #if FS_SCAN_SPEED_EN
+    119          	return fs_scan_files_speed();
+   \   000000                ; Setup parameters for call to function fs_scan_files_speed
+   \   000000   12....       LCALL   fs_scan_files_speed
+   \   000003   22           RET
+    120          #else
+    121          	return fs_scan_files_no_speed();
+    122          #endif
+    123          }
+
+   \                                 In segment CODE_C, align 1
+   \                     __Constant_2:
+   \   000000   02000000     DD 2
+
+   \                                 In segment SFR_AN, at 0xa8
+   \   union <unnamed> volatile __sfr _A_IE0
+   \                     _A_IE0:
+   \   000000                DS 1
+    124          
+    125          
+
+   Maximum stack usage in bytes:
+
+     Function                 EXT_STACK PSTACK XSTACK
+     --------                 --------- ------ ------
+     decoder_read                    0      0      0
+       -> spi_mp3flash_read          0      0      0
+       -> music_decoder_read         0      0      0
+     decoder_seek                    4      0      0
+       -> spi_mp3flash_seek          8      0      0
+       -> m_f_lseek                  8      0      0
+     fs_scan_files                   0      0      0
+       -> fs_scan_files_speed        0      0      0
+     music_decoder_read              7      0      0
+       -> f_read                    14      0      0
+       -> m_f_lseek                 14      0      0
+
+
+   Segment part sizes:
+
+     Function/Label     Bytes
+     --------------     -----
+     music_decoder_read  109
+     decoder_read         14
+     decoder_seek         42
+     fs_scan_files         4
+     __Constant_2          4
+     _A_IE0                1
+
+ 
+   4 bytes in segment CODE_C
+   4 bytes in segment FS_SCAN_SEG
+ 165 bytes in segment NEAR_CODE
+   1 byte  in segment SFR_AN
+ 
+ 169 bytes of CODE memory (+ 4 bytes shared)
+   0 bytes of DATA memory (+ 1 byte  shared)
+
+Errors: none
+Warnings: none

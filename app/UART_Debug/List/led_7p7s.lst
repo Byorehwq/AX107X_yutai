@@ -1,0 +1,580 @@
+##############################################################################
+#                                                                            #
+# IAR 8051 C/C++ Compiler V7.20H/W32                   10/Sep/2015  19:03:28 #
+# Copyright 2004-2006 IAR Systems. All rights reserved.                      #
+#                                                                            #
+#    Core               =  plain                                             #
+#    Code model         =  near                                              #
+#    Data model         =  large                                             #
+#    Calling convention =  extended stack reentrant                          #
+#    Constant location  =  code                                              #
+#    Extended stack     =  enabled                                           #
+#    Dptr setup         =  1,16                                              #
+#    Source file        =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\display\led\led_7p7s.c                #
+#    Command line       =  -I "C:\Program Files\IAR Systems\Embedded         #
+#                          Workbench 4.05 Evaluation version\8051\INC\" -I   #
+#                          "C:\Program Files\IAR Systems\Embedded Workbench  #
+#                          4.05 Evaluation version\8051\INC\CLIB\" -I        #
+#                          "C:\Documents and Settings\Administrator\×ÀÃæ\lil #
+#                          y\15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX1 #
+#                          070_20150908\COMMON\" -I "C:\Documents and        #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\INC\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\config\" -I "C:\Documents and    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\api\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\fm\" -I "C:\Documents and        #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\fat\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\display\" -I "C:\Documents and   #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\displ #
+#                          ay\led\" -I "C:\Documents and                     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\displ #
+#                          ay\lcd\" -I "C:\Documents and                     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\task\ #
+#                          " -I "C:\Documents and Settings\Administrator\×ÀÃ #
+#                          æ\lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lil #
+#                          y_AX1070_20150908\user\" -I "C:\Documents and     #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\mem\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\module\" -I "C:\Documents and    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\modul #
+#                          e\kedir\" -I "C:\Documents and                    #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\key\" #
+#                           -I "C:\Documents and Settings\Administrator\×ÀÃæ #
+#                          \lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily #
+#                          _AX1070_20150908\startmusic\" -D UART_DEBUG -D    #
+#                          AX207X_TAG -lC "C:\Documents and                  #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\UART_ #
+#                          Debug\List\" -o "C:\Documents and                 #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\UART_ #
+#                          Debug\Obj\" -e -z9 --debug --core=plain           #
+#                          --dptr=16,1 --data_model=large --code_model=near  #
+#                          --calling_convention=ext_stack_reentrant          #
+#                          --place_constants=code --nr_virtual_regs 20       #
+#                          --extended_stack "C:\Documents and                #
+#                          Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX #
+#                          1070_20150908\15BC178B_Lily_AX1070_20150908\displ #
+#                          ay\led\led_7p7s.c"                                #
+#    List file          =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\UART_Debug\List\led_7p7s.lst          #
+#    Object file        =  C:\Documents and Settings\Administrator\×ÀÃæ\lily #
+#                          \15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX10 #
+#                          70_20150908\UART_Debug\Obj\led_7p7s.r51           #
+#                                                                            #
+#                                                                            #
+##############################################################################
+
+C:\Documents and Settings\Administrator\×ÀÃæ\lily\15BC178B_Lily_AX1070_20150908\15BC178B_Lily_AX1070_20150908\display\led\led_7p7s.c
+      1          /*****************************************************************************
+      2           * Module    : Led
+      3           * File      : led_7p7s.c
+      4           * Author    : Hanny
+      5           * Email     : coldney@yahoo.com.cn
+      6           * Function  : LED7½ÅÏÔÊ¾ÆÁµÄÇý¶¯
+      7           *****************************************************************************/
+      8          #include "include.h"
+      9          
+     10          #if (DISP_TYPE == DISP_LED_7P7S)
+     11          
+     12          IAR_DATA_A u8 dispbuf[3];
+     13          IAR_DATA_A u8 p_dispbuff[7];
+     14          IAR_XDATA_A u8 COM_T;
+     15          
+     16          #pragma constseg="LED_DISP_TBL"
+     17          IAR_CONST u8 tbl_led_num[10] =
+     18          {
+     19          	LED_7P7S_0, LED_7P7S_1, LED_7P7S_2, LED_7P7S_3, LED_7P7S_4,
+     20          	LED_7P7S_5, LED_7P7S_6, LED_7P7S_7, LED_7P7S_8, LED_7P7S_9,
+     21          };
+     22          
+     23          IAR_CONST u8 tbl_led_alpha[26] =
+     24          {
+     25          	LED_7P7S_A, LED_7P7S_b, LED_7P7S_C, LED_7P7S_d, LED_7P7S_E,
+     26          	LED_7P7S_F, LED_7P7S_g, LED_7P7S_H, LED_7P7S_I, LED_7P7S_J,
+     27          	LED_7P7S_K, LED_7P7S_L, LED_7P7S_m, LED_7P7S_n, LED_7P7S_O,
+     28          	LED_7P7S_P, LED_7P7S_q, LED_7P7S_r, LED_7P7S_S, LED_7P7S_t,
+     29          	LED_7P7S_U, LED_7P7S_V, LED_7P7S_w, LED_7P7S_X, LED_7P7S_y,
+     30          	LED_7P7S_Z
+     31          };
+     32          
+     33          IAR_CONST u8 tbl_led_energy[3] =
+     34          {
+     35          	(BIT_E | BIT_F), LED_7P7S_C, LED_7P7S_0,
+     36          };
+     37          
+     38          #pragma constseg=default
+     39          
+     40          //ÏÔÊ¾ -, 0~9, a~zµÄ×Ö·û´®(³£Á¿)
+     41          #pragma location="LED_DISP_SEG"
+     42          void led_7p7s_disp_str(const char __code *str)
+     43          {
+     44          	u8 i;
+     45          	u8 ch;
+     46          
+     47          	for(i=0; i!=4; i++)
+     48          	{
+     49          		ch = str[i];
+     50          		if(ch >= '0' && ch <= '9')
+     51          		{
+     52          			dispbuf[i] = tbl_led_num[ch - '0'];
+     53          		}
+     54          		else if(ch >= 'A' && ch <= 'Z')
+     55          		{
+     56          			dispbuf[i] = tbl_led_alpha[ch - 'A'];
+     57          		}
+     58          		else if(ch >= 'a' && ch <= 'z')
+     59          		{
+     60          			dispbuf[i] = tbl_led_alpha[ch - 'a'];
+     61          		}
+     62          		else if(ch == ' ')
+     63          		{
+     64          			dispbuf[i] = 0;
+     65          		}
+     66          		else
+     67          		{
+     68          			dispbuf[i] = LED_7P7S__;
+     69          		}
+     70          	}
+     71          	dispbuf[4] = 0;
+     72          }
+     73          
+     74          void led_7p7s_io_init(void) AT(LED_7P7S_INIT);
+     75          void led_7p7s_io_init(void)
+     76          {
+     77          #if ((USER_SEL == USER_AX1071_DEMO) || (USER_SEL == USER_AX1076_DEMO))
+     78          	LED_7C7S_S0_DIR |= BIT(LED_7C7S_S0_PIN);
+     79          	LED_7C7S_S1_DIR |= BIT(LED_7C7S_S1_PIN);
+     80          	LED_7C7S_S2_DIR |= BIT(LED_7C7S_S2_PIN);
+     81          	LED_7C7S_S3_DIR |= BIT(LED_7C7S_S3_PIN);
+     82          	LED_7C7S_S4_DIR |= BIT(LED_7C7S_S4_PIN);
+     83          	LED_7C7S_S5_DIR |= BIT(LED_7C7S_S5_PIN);
+     84          	LED_7C7S_S6_DIR |= BIT(LED_7C7S_S6_PIN);
+     85          
+     86          #else
+     87          	P2 &= ~0x7F;
+     88          	P2DIR |= 0x7F;           //P20-P26
+     89          #endif
+     90          }
+     91          
+     92          //LED³õÊ¼»¯º¯Êý£¬²»ÏÔÊ¾
+     93          void led_7p7s_init(void) AT(LED_7P7S_INIT);
+     94          void led_7p7s_init(void)
+     95          {
+     96          	led_7p7s_io_init();
+     97          	COM_T = 0;
+     98          }
+     99          
+    100          //LED Çå³ýÏÔÊ¾»º´æ
+    101          void led_7p7s_clear(void) AT(LED_7P7S_INIT);
+    102          void led_7p7s_clear(void)
+    103          {
+    104          	smemset_i(dispbuf, 0, 5);
+    105          }
+    106          
+    107          //7p7sÉÁË¸¿ØÖÆ
+    108          void led_7p7s_blink(void) AT(LED_7P7S_INIT);
+    109          void led_7p7s_blink(void)
+    110          {
+    111          	if(ocx.blink_sta)
+    112          	{
+    113          		dispbuf[4] |= ocx.blink_icon;
+    114          		if(ocx.blink_num & 0x0c)
+    115          		{
+    116          			CHAR_HOURH = ocx.blink_numh;
+    117          			CHAR_HOURL = ocx.blink_numl;
+    118          		}
+    119          		else if(ocx.blink_num & 0x03)
+    120          		{
+    121          			CHAR_MINH = ocx.blink_numh;
+    122          			CHAR_MINL = ocx.blink_numl;
+    123          		}
+    124          	}
+    125          	else
+    126          	{
+    127          		dispbuf[4] &= ~ocx.blink_icon;
+    128          		if(ocx.blink_num & 0x0c)
+    129          		{
+    130          			CHAR_HOURH = 0;
+    131          			CHAR_HOURL = 0;
+    132          		}
+    133          		else if(ocx.blink_num & 0x03)
+    134          		{
+    135          			CHAR_MINH = 0;
+    136          			CHAR_MINL = 0;
+    137          		}
+    138          	}
+    139          }
+    140          
+    141          //LEDÉ¨Ãèº¯Êý
+    142          void led_7p7s_scan(void) AT(LED_7P7S_SEG);
+    143          void led_7p7s_scan(void)
+    144          {
+    145          	static u8 count = 0;
+    146          	u8 dis_seg = 0,dir_temp = 0,out_temp = 0;
+    147          
+    148          	if(count > 6)
+    149          	{
+    150          		count = 0;
+    151          		COM_T++;
+    152          	}
+    153          
+    154          #if (AUX_DET_EN && USE_7P7S_LED_AUX_MUX)
+    155          	if(COM_T > 7)
+    156          	{
+    157          		COM_T = 0;
+    158          	}
+    159          	else if(COM_T == 7)
+    160          	{
+    161          		if(count == 0)
+    162          		{
+    163          			AUX_CHECK_DIR |= BIT(AUX_CHECK_PIN);  //ÏÈÉèÖÃÎªÊäÈë0.5msºó½øÐÐ¼ì²â
+    164          			count = 1;
+    165          			return;
+    166          		}
+    167          		aux_detect();                             //lienin¼ì²â
+    168          		count = 7;
+    169          		return;
+    170          	}
+    171          #else
+    172          	if(COM_T > 6)
+    173          	{
+    174          		COM_T = 0;
+    175          	}
+    176          #endif
+    177          
+    178          	led_7p7s_blink();
+    179          
+    180          	led_7p7s_value_set();
+    181          
+    182          	dis_seg = p_dispbuff[COM_T];
+    183          	if((count == COM_T) || ((COM_T == 1) && (count == 4)))        //Ìø¹ý²»´æÔÚ×éºÏÇé¿ö
+    184          	{
+    185          		count += 1;
+    186          	}
+    187          	dis_seg = dis_seg & BIT(count);
+    188          
+    189          #if ((USER_SEL == USER_AX1071_DEMO) || (USER_SEL == USER_AX1076_DEMO))
+    190          	dir_temp = ((1 << COM_T) | dis_seg);
+    191          	out_temp |= BIT(COM_T);
+    192          	led_7p7s_io_init();
+    193          	if(dir_temp & BIT(0))
+    194          	{
+    195          		if(out_temp & BIT(0))
+    196          		{
+    197          			LED_7C7S_S0_PORT |= BIT(LED_7C7S_S0_PIN);
+    198          		}
+    199          		else
+    200          		{
+    201          			LED_7C7S_S0_PORT &= ~BIT(LED_7C7S_S0_PIN);
+    202          		}
+    203          		LED_7C7S_S0_DIR &= ~BIT(LED_7C7S_S0_PIN);
+    204          	}
+    205          	if(dir_temp & BIT(1))
+    206          	{
+    207          		if(out_temp & BIT(1))
+    208          		{
+    209          			LED_7C7S_S1_PORT |= BIT(LED_7C7S_S1_PIN);
+    210          		}
+    211          		else
+    212          		{
+    213          			LED_7C7S_S1_PORT &= ~BIT(LED_7C7S_S1_PIN);
+    214          		}
+    215          		LED_7C7S_S1_DIR &= ~BIT(LED_7C7S_S1_PIN);
+    216          	}
+    217          	if(dir_temp & BIT(2))
+    218          	{
+    219          		if(out_temp & BIT(2))
+    220          		{
+    221          			LED_7C7S_S2_PORT |= BIT(LED_7C7S_S2_PIN);
+    222          		}
+    223          		else
+    224          		{
+    225          			LED_7C7S_S2_PORT &= ~BIT(LED_7C7S_S2_PIN);
+    226          		}
+    227          		LED_7C7S_S2_DIR &= ~BIT(LED_7C7S_S2_PIN);
+    228          	}
+    229          	if(dir_temp & BIT(3))
+    230          	{
+    231          		if(out_temp & BIT(3))
+    232          		{
+    233          			LED_7C7S_S3_PORT |= BIT(LED_7C7S_S3_PIN);
+    234          		}
+    235          		else
+    236          		{
+    237          			LED_7C7S_S3_PORT &= ~BIT(LED_7C7S_S3_PIN);
+    238          		}
+    239          		LED_7C7S_S3_DIR &= ~BIT(LED_7C7S_S3_PIN);
+    240          	}
+    241          	if(dir_temp & BIT(4))
+    242          	{
+    243          		if(out_temp & BIT(4))
+    244          		{
+    245          			LED_7C7S_S4_PORT |= BIT(LED_7C7S_S4_PIN);
+    246          		}
+    247          		else
+    248          		{
+    249          			LED_7C7S_S4_PORT &= ~BIT(LED_7C7S_S4_PIN);
+    250          		}
+    251          		LED_7C7S_S4_DIR &= ~BIT(LED_7C7S_S4_PIN);
+    252          	}
+    253          	if(dir_temp & BIT(5))
+    254          	{
+    255          		if(out_temp & BIT(5))
+    256          		{
+    257          			LED_7C7S_S5_PORT |= BIT(LED_7C7S_S5_PIN);
+    258          		}
+    259          		else
+    260          		{
+    261          			LED_7C7S_S5_PORT &= ~BIT(LED_7C7S_S5_PIN);
+    262          		}
+    263          		LED_7C7S_S5_DIR &= ~BIT(LED_7C7S_S5_PIN);
+    264          	}
+    265          	if(dir_temp & BIT(6))
+    266          	{
+    267          		if(out_temp & BIT(6))
+    268          		{
+    269          			LED_7C7S_S6_PORT |= BIT(LED_7C7S_S6_PIN);
+    270          		}
+    271          		else
+    272          		{
+    273          			LED_7C7S_S6_PORT &= ~BIT(LED_7C7S_S6_PIN);
+    274          		}
+    275          		LED_7C7S_S6_DIR &= ~BIT(LED_7C7S_S6_PIN);
+    276          	}
+    277          
+    278          #else
+    279          	out_temp = LED_7P7S_PORT;
+    280          	dir_temp = LED_7P7S_DIR;
+    281          	dir_temp |= 0x7F;                           //P27±£³Ö²»±ä
+    282          	dir_temp &= ~((1 << COM_T) | dis_seg);
+    283          	out_temp &= 0x80;                           //P27±£³Ö²»±ä
+    284          	out_temp |= (1 << COM_T);
+    285          	LED_7P7S_PORT = out_temp;
+    286          	LED_7P7S_DIR = dir_temp;                     //µãÁÁÒ»¶Î
+    287          #endif
+    288          	count++;
+    289          	if((COM_T >= 4) && (count == 4))        //Ìø¹ý²»´æÔÚ×éºÏÇé¿ö
+    290          	{
+    291          		count = 7;
+    292          	}
+    293          }
+    294          
+    295          //¸ù¾Ý7½ÅLEDµÄÕæÖµ±í½øÐÐÓ³Éä£¨Ã¿¶ÎÊä³ö¸ßµÄIO¼ÇÎªCOM¶Ë 7*7£©COM:0~6  SEG:0~6
+    296          void led_7p7s_value_set(void) AT(LED_7P7S_SEG);
+    297          void led_7p7s_value_set(void)
+    298          {
+    299          	IE_EA = 0;
+    300          	smemset_i(p_dispbuff, 0, 7);
+    301          
+    302          	if(dispbuf[0] & BIT_A)     p_dispbuff[1] |= BIT(0);
+    303          	if(dispbuf[0] & BIT_B)     p_dispbuff[2] |= BIT(0);
+    304          	if(dispbuf[0] & BIT_C)     p_dispbuff[3] |= BIT(0);
+    305          	if(dispbuf[0] & BIT_D)     p_dispbuff[4] |= BIT(0);
+    306          	if(dispbuf[0] & BIT_E)     p_dispbuff[5] |= BIT(0);
+    307          	if(dispbuf[0] & BIT_F)     p_dispbuff[6] |= BIT(0);
+    308          	if(dispbuf[0] & BIT_G)     p_dispbuff[2] |= BIT(1);
+    309          
+    310          	if(dispbuf[1] & BIT_A)     p_dispbuff[0] |= BIT(1);
+    311          	if(dispbuf[1] & BIT_B)     p_dispbuff[0] |= BIT(2);
+    312          	if(dispbuf[1] & BIT_C)     p_dispbuff[0] |= BIT(3);
+    313          	if(dispbuf[1] & BIT_D)     p_dispbuff[0] |= BIT(4);
+    314          	if(dispbuf[1] & BIT_E)     p_dispbuff[0] |= BIT(5);
+    315          	if(dispbuf[1] & BIT_F)     p_dispbuff[0] |= BIT(6);
+    316          	if(dispbuf[1] & BIT_G)     p_dispbuff[1] |= BIT(2);
+    317          
+    318          	if(dispbuf[2] & BIT_A)     p_dispbuff[3] |= BIT(2);
+    319          	if(dispbuf[2] & BIT_B)     p_dispbuff[4] |= BIT(2);
+    320          	if(dispbuf[2] & BIT_C)     p_dispbuff[5] |= BIT(2);
+    321          	if(dispbuf[2] & BIT_D)     p_dispbuff[6] |= BIT(2);
+    322          	if(dispbuf[2] & BIT_E)     p_dispbuff[4] |= BIT(3);
+    323          	if(dispbuf[2] & BIT_F)     p_dispbuff[5] |= BIT(3);
+    324          	if(dispbuf[2] & BIT_G)     p_dispbuff[6] |= BIT(3);
+    325          
+    326          	if(dispbuf[3] & BIT_A)     p_dispbuff[2] |= BIT(3);
+    327          	if(dispbuf[3] & BIT_B)     p_dispbuff[2] |= BIT(4);
+    328          	if(dispbuf[3] & BIT_C)     p_dispbuff[2] |= BIT(5);
+    329          	if(dispbuf[3] & BIT_D)     p_dispbuff[2] |= BIT(6);
+    330          	if(dispbuf[3] & BIT_E)     p_dispbuff[3] |= BIT(4);
+    331          	if(dispbuf[3] & BIT_F)     p_dispbuff[3] |= BIT(5);
+    332          	if(dispbuf[3] & BIT_G)     p_dispbuff[3] |= BIT(6);
+    333          
+    334          	if(dispbuf[4] & LED_7P7S_PLAY)   p_dispbuff[3] |= BIT(1);
+    335          	if(dispbuf[4] & LED_7P7S_PAUSE)  p_dispbuff[4] |= BIT(1);
+    336          	if(dispbuf[4] & LED_7P7S_USB)    p_dispbuff[5] |= BIT(1);
+    337          	if(dispbuf[4] & LED_7P7S_SD)     p_dispbuff[6] |= BIT(1);
+    338          	if(dispbuf[4] & LED_7P7S_DDOT)   p_dispbuff[1] |= BIT(3);
+    339          	if(dispbuf[4] & LED_7P7S_FM)     p_dispbuff[1] |= BIT(5);
+    340          	if(dispbuf[4] & LED_7P7S_MP3)    p_dispbuff[1] |= BIT(6);
+    341          
+    342          	IE_EA = 1;
+    343          }
+    344          
+    345          //ÏÔÊ¾Êý×Ö
+    346          void led_7p7s_dispnum(u16 num) AT(LED_7P7S_SEG);
+    347          void led_7p7s_dispnum(u16 num)
+    348          {
+    349          	u8 i;
+    350          	for(i=3; i!=0xff; i--)
+    351          	{
+    352          		dispbuf[i] = tbl_led_num[num % 10];
+    353          		num /= 10;
+    354          	}
+    355          	dispbuf[4] = 0;
+    356          }
+    357          
+    358          //ÏÔÊ¾ÒôÁ¿
+    359          void led_7p7s_disp_vol(void) AT(LED_7P7S_SEG);
+    360          void led_7p7s_disp_vol(void)
+    361          {
+    362          	disp_numsel(sys_ctl.volume);
+    363          	dispbuf[0] = 0;
+    364          	dispbuf[1] = LED_7P7S_V;
+    365          }
+    366          
+    367          //ÏÔÊ¾Ê±¼ä
+    368          void led_7p7s_disp_time(void) AT(LED_7P7S_SEG);
+    369          void led_7p7s_disp_time(void)
+    370          {
+    371          	bool ie_ea = IE_EA;
+    372          	IE_EA = 0;
+    373          
+    374          	dispbuf[0] = tbl_led_num[ocx.timeh / 10];
+    375          	dispbuf[1] = tbl_led_num[ocx.timeh % 10];
+    376          	dispbuf[2] = tbl_led_num[ocx.timel / 10];
+    377          	dispbuf[3] = tbl_led_num[ocx.timel % 10];
+    378          	dispbuf[4] = LED_5C7S_DDOT;
+    379          
+    380          	if(ocx.blink_num & 0x0c)
+    381          	{
+    382          		ocx.blink_numh = CHAR_HOURH;
+    383          		ocx.blink_numl = CHAR_HOURL;
+    384          	}
+    385          	else if(ocx.blink_num & 0x03)
+    386          	{
+    387          		ocx.blink_numh = CHAR_MINH;
+    388          		ocx.blink_numl = CHAR_MINL;
+    389          	}
+    390          
+    391          	IE_EA = ie_ea;
+    392          }
+    393          
+    394          //ÏÔÊ¾µ±Ç°Éè±¸
+    395          void led_7p7s_disp_device(void) AT(LED_7P7S_SEG);
+    396          void led_7p7s_disp_device(void)
+    397          {
+    398          	if((fs_cur_dev() == DEVICE_SDMMC)
+    399          #if SD_DOUBLE_EN
+    400          	        ||(fs_cur_dev() == DEVICE_SDMMC1)
+    401          #endif
+    402          	  )
+    403          	{
+    404          		dispbuf[4] |= LED_7P7S_SD;
+    405          	}
+    406          	else if((fs_cur_dev() == DEVICE_UDISK)
+    407          #if UDISK_DOUBLE_EN
+    408          	        ||(fs_cur_dev() == DEVICE_UDISK1)
+    409          #endif
+    410          	       )
+    411          	{
+    412          		dispbuf[4] |= LED_7P7S_USB;
+    413          	}
+    414          }
+    415          
+    416          //ÏÔÊ¾²¥·Å½çÃæ
+    417          void led_7p7s_disp_play_pause(void) AT(LED_7P7S_SEG);
+    418          void led_7p7s_disp_play_pause(void)
+    419          {
+    420          	disp_time();
+    421          	dispbuf[4] = LED_7P7S_DDOT | LED_7P7S_MP3 | (b_msc.pause ? LED_7P7S_PAUSE : LED_7P7S_PLAY);
+    422          	disp_device();
+    423          }
+    424          
+    425          //ÏÔÊ¾²¥·Å½çÃæ
+    426          void led_7p7s_disp_numsel_icon(void) AT(LED_7P7S_SEG);
+    427          void led_7p7s_disp_numsel_icon(void)
+    428          {
+    429          	dispbuf[4] = LED_7P7S_MP3;
+    430          	disp_device();
+    431          }
+    432          
+    433          //ÏÔÊ¾FMÆµµÀ
+    434          void led_7p7s_disp_ch(u8 ch) AT(LED_7P7S_SEG);
+    435          void led_7p7s_disp_ch(u8 ch)
+    436          {
+    437          	disp_numsel(ch);
+    438          	dispbuf[0] = LED_7P7S_C;
+    439          	dispbuf[1] = LED_7P7S_H;
+    440          }
+    441          
+    442          //ÏÔÊ¾FMÆµµã
+    443          void led_7p7s_disp_freq(void) AT(LED_7P7S_SEG);
+    444          void led_7p7s_disp_freq(void)
+    445          {
+    446          	disp_numsel(ocx.freq);
+    447          	if(dispbuf[0] == LED_7P7S_0)
+    448          	{
+    449          		dispbuf[0] = 0;
+    450          	}
+    451          	dispbuf[4] = LED_7P7S_FM;
+    452          }
+    453          
+    454          //ÄÜÁ¿ÏÔÊ¾
+    455          #if ENERGY_DISP_EN
+    456          void led_7p7s_disp_energy(void) AT(LED_7P7S_SEG);
+    457          void led_7p7s_disp_energy(void)
+    458          {
+    459          	u8 num1, num2, i;
+    460          
+    461          	num1 = ocx.energy_cnt / 3;
+    462          	num2 = ocx.energy_cnt % 3;
+    463          	//printf("num1=%dx num2=%d\n", num1, num2);
+    464          	for(i=0; i!=5; i++)
+    465          	{
+    466          		if(i < num1)
+    467          		{
+    468          			dispbuf[i] = tbl_led_energy[2];
+    469          		}
+    470          		else if(i == num1)
+    471          		{
+    472          			dispbuf[i] = tbl_led_energy[num2];
+    473          		}
+    474          		else
+    475          		{
+    476          			dispbuf[i] = 0;
+    477          		}
+    478          	}
+    479          }
+    480          #endif
+    481          #endif /*(DISP_TYPE == DISP_LED_7P7S)*/
+
+
+   Segment part sizes:
+
+     Function/Label Bytes
+     -------------- -----
+
+ 
+ 
+ 0 bytes of memory
+
+Errors: none
+Warnings: none
